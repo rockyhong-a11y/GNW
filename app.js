@@ -82,10 +82,15 @@ function renderCard(g) {
   const platforms = g.platforms.map((p) => `<span class="badge platform">${p}</span>`).join("");
   const genres = g.genres.map((gn) => `<span class="badge">${gn}</span>`).join("");
 
+  const trailerBtn = g.trailer
+    ? `<a class="play-btn" href="${g.trailer}" target="_blank" rel="noopener" title="소개 영상 보기" aria-label="${g.title} 소개 영상 보기">▶</a>`
+    : "";
+
   return `
     <article class="card">
       <div class="card-banner" style="background: linear-gradient(135deg, ${g.color}, ${g.color}55);">
         <span class="countdown ${cd.released ? "released" : ""}">${cd.text}</span>
+        ${trailerBtn}
       </div>
       <div class="card-body">
         <div>
@@ -200,21 +205,74 @@ function initFilters() {
   buildToggleFilters("#genreFilters", genres, STATE.genres, null);
 }
 
-/* ---------- Init ---------- */
-async function init() {
+/* ---------- Data loading & refresh ---------- */
+let isLoading = false;
+let lastFetchAt = 0;
+
+function setRefreshStatus(text, busy) {
+  const el = $("#refreshStatus");
+  if (el) el.textContent = text;
+  const btn = $("#refreshBtn");
+  if (btn) {
+    btn.disabled = !!busy;
+    btn.classList.toggle("spinning", !!busy);
+  }
+}
+
+function nowTime() {
+  const d = new Date();
+  return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}:${String(d.getSeconds()).padStart(2, "0")}`;
+}
+
+// Loads the full game list. `firstLoad` wires up controls once; subsequent
+// calls (app entry/return, manual refresh) just refresh data + UI in place,
+// preserving the user's current filters and sort.
+async function loadGames(firstLoad = false) {
+  if (isLoading) return;
+  isLoading = true;
+  setRefreshStatus("갱신 중…", true);
   try {
-    const res = await fetch("data/games.json", { cache: "no-cache" });
+    // cache-busting query so app entry always pulls the latest for ALL games
+    const res = await fetch(`data/games.json?t=${Date.now()}`, { cache: "no-store" });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     STATE.games = data.games;
-    $("#lastUpdated").textContent = `업데이트: ${data.meta.updated}`;
+    lastFetchAt = Date.now();
     document.title = data.meta.title;
+    $("#lastUpdated").textContent = `데이터 기준: ${data.meta.updated}`;
     renderHeaderStats();
-    initFilters();
-    bindControls();
+    initFilters(); // selections persist (read from STATE sets), options refresh
+    if (firstLoad) bindControls();
     render();
+    setRefreshStatus(`최신 갱신 ${nowTime()}`, false);
   } catch (err) {
-    $("#gameGrid").innerHTML = `<p class="empty-state">데이터를 불러오지 못했습니다.<br><small>${err}</small></p>`;
+    setRefreshStatus("갱신 실패 (오프라인?)", false);
+    if (firstLoad && !STATE.games.length) {
+      $("#gameGrid").innerHTML = `<p class="empty-state">데이터를 불러오지 못했습니다.<br><small>${err}</small></p>`;
+    }
+  } finally {
+    isLoading = false;
   }
+}
+
+function bindRefresh() {
+  $("#refreshBtn").addEventListener("click", () => loadGames(false));
+  // Refresh all games whenever the user returns to / re-enters the app,
+  // throttled so quick tab switches don't spam the network.
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && Date.now() - lastFetchAt > 30000) {
+      loadGames(false);
+    }
+  });
+  window.addEventListener("focus", () => {
+    if (Date.now() - lastFetchAt > 30000) loadGames(false);
+  });
+}
+
+/* ---------- Init ---------- */
+async function init() {
+  bindRefresh();
+  await loadGames(true);
 }
 
 if ("serviceWorker" in navigator) {

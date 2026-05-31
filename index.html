@@ -56,7 +56,11 @@
   <main>
     <div class="result-bar">
       <span id="resultCount" class="result-count"></span>
-      <button id="resetBtn" class="reset-btn" type="button">필터 초기화</button>
+      <div class="result-actions">
+        <span id="refreshStatus" class="refresh-status" aria-live="polite"></span>
+        <button id="refreshBtn" class="refresh-btn" type="button" title="최신 정보 갱신" aria-label="최신 정보 갱신">⟳ 갱신</button>
+        <button id="resetBtn" class="reset-btn" type="button">필터 초기화</button>
+      </div>
     </div>
     <section id="gameGrid" class="game-grid" aria-live="polite"></section>
     <p id="emptyState" class="empty-state" hidden>조건에 맞는 게임이 없습니다.</p>

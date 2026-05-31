@@ -84,6 +84,7 @@ function addHeader(stack) {
 function addGameRow(stack, g, compact) {
   const row = stack.addStack();
   row.centerAlignContent();
+  if (g.trailer) row.url = g.trailer; // tap a row → open its trailer (iOS 17+)
 
   // color dot
   const dot = row.addStack();
@@ -155,6 +156,7 @@ async function main() {
   const family = config.widgetFamily || "medium";
   if (family === "small") {
     buildSmall(w, upcoming);
+    if (upcoming[0].trailer) w.url = upcoming[0].trailer; // tap → open trailer
   } else {
     addHeader(w);
     w.addSpacer(10);

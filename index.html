@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d0f1a" />
+  <meta name="description" content="PC · 콘솔 · 모바일 신작 게임 출시(예정) 및 주요 정보를 한눈에" />
+  <title>GNW — Game New Watch</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-mark">GNW</div>
+      <div class="brand-text">
+        <h1>Game New Watch</h1>
+        <p>PC · 콘솔 · 모바일 신작 출시 정보</p>
+      </div>
+    </div>
+    <div class="header-stats" id="headerStats" aria-live="polite"></div>
+  </header>
+
+  <nav class="controls" aria-label="필터 및 정렬">
+    <div class="control-row">
+      <input
+        type="search"
+        id="searchInput"
+        class="search"
+        placeholder="게임 · 개발사 · 태그 검색…"
+        autocomplete="off"
+        aria-label="검색"
+      />
+      <div class="sort-wrap">
+        <label for="sortSelect" class="sr-only">정렬 기준</label>
+        <select id="sortSelect" class="select" aria-label="정렬 기준">
+          <option value="date-asc">출시일 빠른 순</option>
+          <option value="date-desc">출시일 늦은 순</option>
+          <option value="hype-desc">기대지수 높은 순</option>
+          <option value="rating-desc">평점 높은 순</option>
+          <option value="price-asc">가격 낮은 순</option>
+          <option value="price-desc">가격 높은 순</option>
+          <option value="title-asc">제목 (가나다/A-Z)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="filter-group" id="statusFilters" role="group" aria-label="출시 상태 필터"></div>
+    <div class="filter-group" id="platformFilters" role="group" aria-label="플랫폼 필터"></div>
+    <div class="filter-group" id="genreFilters" role="group" aria-label="장르 필터"></div>
+  </nav>
+
+  <main>
+    <div class="result-bar">
+      <span id="resultCount" class="result-count"></span>
+      <button id="resetBtn" class="reset-btn" type="button">필터 초기화</button>
+    </div>
+    <section id="gameGrid" class="game-grid" aria-live="polite"></section>
+    <p id="emptyState" class="empty-state" hidden>조건에 맞는 게임이 없습니다.</p>
+  </main>
+
+  <footer class="app-footer">
+    <span id="lastUpdated"></span>
+    <span class="footer-dot">·</span>
+    <span>웹앱 + iOS 위젯 지원</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

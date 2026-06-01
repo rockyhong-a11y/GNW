@@ -3,7 +3,7 @@
     "title": "GNW — Game New Watch",
     "description": "PC · 콘솔 · 모바일 신작 출시 · 사전예약 · CBT/OBT · 대규모 업데이트 일정",
     "updated": "2026-06-01",
-    "version": 6,
+    "version": 5,
     "sources": [
       {
         "name": "네이버 게임",
@@ -27,7 +27,6 @@
       }
     ],
     "note": "정보 구성은 네이버 게임 / 인벤 / 디스이즈게임 / TapTap / 루리웹 의 일정·뉴스·DB를 참조하여 재구성한 샘플입니다.",
-    "generatedAt": "2026-06-01T03:16:34.217Z",
     "pipeline": [
       {
         "name": "RAWG",

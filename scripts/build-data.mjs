@@ -209,22 +209,39 @@ async function main() {
     .filter((g) => g.releaseDate && !isNaN(new Date(g.releaseDate)))
     .sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate));
 
+  // 결정론적 출력: 매시간 실행돼도 실제 데이터가 바뀌지 않으면 파일이 동일 →
+  // 워크플로의 "변경 시에만 커밋"이 동작해 불필요한 커밋이 쌓이지 않는다.
+  // (시각 의존 필드 generatedAt 등은 의도적으로 제외)
+  const reportStable = report.map((r) => ({ name: r.name, ...(r.skipped ? { skipped: r.skipped } : r.error ? { error: r.error } : { added: r.added }) }));
   const data = {
     meta: {
       ...curated.meta,
-      kind: undefined,
       updated: iso(TODAY),
-      version: (curated.meta.version || 0) + 1,
-      generatedAt: new Date().toISOString(),
-      pipeline: report,
+      version: curated.meta.version || 1,
+      pipeline: reportStable,
       counts: { total: games.length, curated: curated.games.length, collected: collected.length },
     },
     games,
   };
   delete data.meta.kind;
 
-  await writeFile(join(ROOT, "data/games.json"), JSON.stringify(data, null, 2) + "\n");
-  console.log("providers:", report.map((r) => r.skipped ? `${r.name}(skip:${r.skipped})` : r.error ? `${r.name}(err:${r.error})` : `${r.name}(+${r.added})`).join("  "));
+  const outPath = join(ROOT, "data/games.json");
+  const provLine = report.map((r) => r.skipped ? `${r.name}(skip:${r.skipped})` : r.error ? `${r.name}(err:${r.error})` : `${r.name}(+${r.added})`).join("  ");
+
+  // 실제 게임 데이터가 바뀐 경우에만 파일을 갱신한다 → 매시간 실행돼도
+  // 변동 없으면 파일이 그대로라 워크플로가 커밋하지 않는다.
+  let prev = null;
+  try { prev = JSON.parse(await readFile(outPath, "utf8")); } catch { /* 최초 생성 */ }
+  const sameData = prev && JSON.stringify(prev.games) === JSON.stringify(games);
+  if (sameData) {
+    data.meta.updated = prev.meta.updated; // 데이터 무변동 → 기존 메타 유지(불필요한 diff 방지)
+    console.log("providers:", provLine);
+    console.log(`변경 없음 — games.json 유지 (${games.length} games)`);
+    return;
+  }
+
+  await writeFile(outPath, JSON.stringify(data, null, 2) + "\n");
+  console.log("providers:", provLine);
   console.log(`games.json written: ${games.length} games (curated ${curated.games.length} + collected ${collected.length}, deduped)`);
 }
 

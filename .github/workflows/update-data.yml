@@ -5,7 +5,7 @@ name: Update game data
 
 on:
   schedule:
-    - cron: "0 21 * * *"   # 매일 06:00 KST (UTC 21:00)
+    - cron: "0 * * * *"     # 매시간 정각 (UTC) — 데이터 변경 시에만 커밋
   workflow_dispatch: {}     # 수동 실행 허용
 
 permissions:

@@ -43,7 +43,7 @@ GNW/
 ├── scripts/
 │   └── build-data.mjs      # 자동 수집 파이프라인 (소스 + 큐레이션 → games.json)
 ├── .github/workflows/
-│   └── update-data.yml     # 매일 자동 갱신 (GitHub Actions)
+│   └── update-data.yml     # 매시간 자동 갱신 (GitHub Actions)
 ├── icons/                  # 앱 아이콘 (svg + png)
 └── widget/
     └── gnw-widget.js        # iOS Scriptable 위젯 스크립트
@@ -90,7 +90,8 @@ node scripts/build-data.mjs
 
 - `RAWG_API_KEY` — https://rawg.io/apidocs 에서 무료 발급 (수십만 게임의 출시일/플랫폼/평점)
 - GitHub 저장소 **Secrets** 에 `RAWG_API_KEY` 등록하면 `.github/workflows/update-data.yml`
-  이 **매일 06:00(KST) 자동 수집 → 변경 시 커밋**합니다. (`Actions` 탭에서 수동 실행도 가능)
+  이 **매시간(정각) 자동 수집 → 실제 데이터가 바뀐 경우에만 커밋**합니다.
+  (산출물이 결정론적이라 변동이 없으면 커밋이 쌓이지 않음. `Actions` 탭에서 수동 실행도 가능)
 
 ### 더 늘리려면
 - 제공자(provider) 함수를 `build-data.mjs`에 추가: IGDB, 닌텐도/PS 스토어, 에픽, 구글플레이/앱스토어 신작 등

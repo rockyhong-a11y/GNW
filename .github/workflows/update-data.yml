@@ -1,11 +1,17 @@
 name: Update game data
 
-# 데이터 수집 파이프라인. 스케줄(주기) 실행은 사용하지 않는다.
-# 최신화는 (1) 웹앱이 진입 시 data/games.json 을 다시 불러오는 방식과
-# (2) 필요할 때 아래 "Run workflow"(수동) 로 소스에서 재수집하는 방식으로 한다.
+# 데이터 수집 파이프라인 — 인벤 발매 캘린더에서 자동 재수집.
+# 최신화 경로:
+#   (1) 웹앱이 진입/복귀 시 data/games.json 을 다시 불러옴(network-first),
+#   (2) 아래 스케줄로 하루 2회 자동 재수집 → main 커밋 → Pages 자동 배포,
+#   (3) 필요 시 "Run workflow"(수동)로 즉시 재수집.
+# "변경 시에만 커밋"이라 실제 일정이 바뀐 경우에만 커밋/배포가 일어난다.
 
 on:
-  workflow_dispatch: {}     # 수동 실행 전용 (Actions 탭 → Run workflow)
+  schedule:
+    - cron: "0 21 * * *"      # 매일 06:00 KST (전날 밤 갱신분 반영)
+    - cron: "0 9 * * *"       # 매일 18:00 KST
+  workflow_dispatch: {}       # 수동 실행 (Actions 탭 → Run workflow)
 
 permissions:
   contents: write

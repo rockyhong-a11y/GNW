@@ -16,7 +16,7 @@
 
 // 👉 Replace with your hosted raw URL, e.g.
 // "https://rockyhong-a11y.github.io/gnw/data/games.json"
-const DATA_URL = "https://raw.githubusercontent.com/rockyhong-a11y/gnw/claude/game-release-info-app-4yAEm/data/games.json";
+const DATA_URL = "https://raw.githubusercontent.com/rockyhong-a11y/gnw/main/data/games.json";
 
 const COLORS = {
   bg1: new Color("#161a2c"),

@@ -46,7 +46,7 @@ GNW/
 ├── scripts/
 │   └── build-data.mjs      # 자동 수집 파이프라인 (소스 + 큐레이션 → games.json)
 ├── .github/workflows/
-│   └── update-data.yml     # 수동 재수집 워크플로 (GitHub Actions, Run workflow)
+│   └── update-data.yml     # 자동(하루 2회)+수동 재수집 워크플로 (GitHub Actions)
 ├── icons/                  # 앱 아이콘 (svg + png)
 └── widget/
     └── gnw-widget.js        # iOS Scriptable 위젯 스크립트
@@ -105,10 +105,12 @@ git revert <해당 커밋 해시>               # git 으로 되돌리기
 | `data/curated.multisource.backup.json` | 멀티소스(5개 사이트) · 63종 |
 
 - `RAWG_API_KEY` — https://rawg.io/apidocs 에서 무료 발급 (수십만 게임의 출시일/플랫폼/평점)
-- GitHub 저장소 **Secrets** 에 `RAWG_API_KEY` 등록하면 `.github/workflows/update-data.yml`
-  의 **Run workflow(수동)** 로 소스에서 재수집할 수 있습니다. (주기 실행은 사용하지 않음)
-  실행 시 **실제 데이터가 바뀐 경우에만 커밋**됩니다(산출물이 결정론적). 
-  데이터 최신화는 **웹앱이 진입할 때마다 `games.json`을 다시 불러오는 방식**으로 이뤄집니다.
+- `.github/workflows/update-data.yml` 가 **인벤 발매 캘린더에서 하루 2회 자동 재수집**(06:00·18:00 KST)
+  하고, 필요 시 **Run workflow(수동)** 로 즉시 재수집할 수 있습니다. 러너는 환경 네트워크 정책의
+  영향을 받지 않아 인벤에 접근합니다. 실행 시 **실제 데이터가 바뀐 경우에만 커밋**되고(결정론적 산출물),
+  `main` 커밋은 **Pages 배포 워크플로를 자동 트리거**합니다.
+- 데이터 최신화는 위 자동 수집 + **웹앱이 진입/복귀할 때마다 `games.json`을 다시 불러오는 방식**(network-first)으로
+  이뤄져, 들어올 때마다 최신 일정을 봅니다.
 
 ### 더 늘리려면
 - 제공자(provider) 함수를 `build-data.mjs`에 추가: IGDB, 닌텐도/PS 스토어, 에픽, 구글플레이/앱스토어 신작 등

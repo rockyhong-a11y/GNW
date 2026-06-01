@@ -79,7 +79,14 @@ node scripts/build-data.mjs
 
 # 실제 소스까지 수집해 대규모로 확장
 RAWG_API_KEY=<키> STEAM=1 RSS=1 node scripts/build-data.mjs
+
+# 또는 .env 파일로 (권장 — 키를 명령행에 노출하지 않음)
+cp .env.example .env      # .env 는 .gitignore 처리됨
+#  → .env 에 RAWG_API_KEY 입력 후
+node scripts/build-data.mjs
 ```
+
+> ⚠️ API 키는 **커밋하지 마세요.** 항상 `.env`(gitignore됨) 또는 GitHub Secrets로만 다룹니다.
 
 - `RAWG_API_KEY` — https://rawg.io/apidocs 에서 무료 발급 (수십만 게임의 출시일/플랫폼/평점)
 - GitHub 저장소 **Secrets** 에 `RAWG_API_KEY` 등록하면 `.github/workflows/update-data.yml`

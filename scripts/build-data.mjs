@@ -16,10 +16,24 @@
  * 병합 규칙: 같은 게임이면 curated 가 자동 수집본을 덮어쓴다(번역/현지 정보 우선).
  * --------------------------------------------------------------------------- */
 import { readFile, writeFile } from "node:fs/promises";
+import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+// 로컬 편의: 루트의 .env (gitignore 처리됨) 에서 KEY=VALUE 를 읽어 환경변수로 주입.
+// 키를 소스코드/명령행에 노출하지 않고 실행하기 위함. (이미 설정된 env 는 덮어쓰지 않음)
+function loadEnv() {
+  const f = join(ROOT, ".env");
+  if (!existsSync(f)) return;
+  for (const line of readFileSync(f, "utf8").split("\n")) {
+    const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/i);
+    if (m && process.env[m[1]] === undefined) process.env[m[1]] = m[2].replace(/^["']|["']$/g, "");
+  }
+}
+loadEnv();
+
 const TODAY = new Date();
 const iso = (d) => d.toISOString().slice(0, 10);
 const WINDOW_FROM = new Date(TODAY.getTime() - 90 * 864e5);  // 최근 3개월
@@ -76,9 +90,10 @@ function makeGame(p) {
 async function fromRAWG(out) {
   const key = process.env.RAWG_API_KEY;
   if (!key) return { name: "RAWG", skipped: "RAWG_API_KEY 없음" };
+  const maxPages = Number(process.env.RAWG_PAGES || 8); // 페이지당 40개 → 기본 320개
   let url = `https://api.rawg.io/api/games?key=${key}&dates=${iso(WINDOW_FROM)},${iso(WINDOW_TO)}&ordering=-added&page_size=40`;
   let added = 0, pages = 0;
-  while (url && pages < 5) {
+  while (url && pages < maxPages) {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`RAWG HTTP ${res.status}`);
     const data = await res.json();

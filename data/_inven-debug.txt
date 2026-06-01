@@ -1,4 +1,4 @@
-fetched_at=2026-06-01T09:54:27.308Z
+fetched_at=2026-06-01T09:59:43.528Z
 url=https://www.inven.co.kr/webzine/calendar/
 status=200
 error=
@@ -7,168 +7,175 @@ calendar_game_links=32
 news_links=7
 upload_imgs=86
 date_tokens=2004-11-11,2025/12/03,2025/12/03,2026/04/28,2025/12/02,2025/09/12,2025/09/12,2025/09/12,2025/09/12,2025/09/12,2025/09/12,2025/09/12
---- SAMPLE (first 12000 chars) ---
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-<meta name="keywords" content="게임 캘린더,게임 출시일정,신작 게임 출시일,CBT 일정,인벤 캘린더,인벤" />
-<meta name="description" content="PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요." />
-<meta name="naver-site-verification" content="3a508505e9bf09f6b8b7abe782e34f3cc895eb65"/>
-<meta name="inven-site" content="webzine"/>
-<meta name="inven-sitename" content="웹진"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta property="og:title" content="게임 캘린더 - 인벤" />
-<meta name="og:type" content="website" />
-<meta name="og:locale" content="ko_KR" />
-<meta name="og:site_name" content="인벤 게임 캘린더" />
-<meta name="og:image" content="https://static.inven.co.kr/image_2011/webzine/logo/inven_logo_600x340.png" />
-<meta property="og:description" content="PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요." />
-<meta id="inven-verification" name="inven-verification" content="omry27HQtrlwqpqfOU16yg=="/>
-<link rel="image_src" href="https://static.inven.co.kr/image_2011/webzine/logo/inven_logo_600x340.png" />
-<title>게임 캘린더 - 인벤</title>
-<link rel="stylesheet" type="text/css" href="https://www.inven.co.kr/common/lib/style/dist/quicklink.css?v=1dee7d958aa539aea02b3edd4cd1e426a"/>
-<link rel="stylesheet" type="text/css" href="https://www.inven.co.kr/common/lib/style/ad.css?v=05e79b2ba821212a69e3aaa0f06e48b0a"/>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/framework/jquery-1.7.2.min_new.js?v=20130113a"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/common_new.js?v=43755b1e6985e963077d57e1d2dac2ac"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/html_new.js"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/layer.js?v=20220518"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/xml_new.js?v=200117a"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/booster.js"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/browser.js?v=20200615"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/quicklink.js?v=20260529"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/invenFloatAlarm.js?v=15eb81a4e6c6d537ccb6401861d11895"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/zicf.js?v=51c89a7640575eee7329fcc3e5d3ec0f"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/dataninfo/lib/js/tooltip.js?v=20250612a"></script>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PXPMBT3V');</script><link rel="stylesheet" type="text/css" href="https://www.inven.co.kr/sitebuilder/lib/style/dist/commu_style.css?v=1561c7d72abce76b479f55ef7becfe34a"/>
-<link rel="stylesheet" type="text/css" href="https://www.inven.co.kr/ibuilder/lib/style/dist/ibuilder_renew.css?v=96aeaaf7693267d789b656c550ad6412a"/>
-<link rel="stylesheet" type="text/css" href="https://www.inven.co.kr/common/lib/style/event_popup.css?v=20210608aa"/>
-<link rel="stylesheet" type="text/css" href="https://www.inven.co.kr/event/lib/style/dist/commu_style.css"/>
-<link rel="stylesheet" type="text/css" href="https://www.inven.co.kr/common/lib/style/framework/swiper-bundle.8.4.6.min.css"/>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/floatstatic.js?v=20210608a"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/location.js?v=20210608a"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/event/lib/js/common.js"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/framework/swiper-bundle.8.4.6.min.js"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/a1mediation.js?v=46641779d557792c15991671e8503f3c"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/framework/htmx.min.js"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/common/lib/js/framework/_hyperscript.min.js"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/mobile/lib/js/common.js"></script>
-<script type="text/javascript"  src="https://www.inven.co.kr/webzine/lib/js/calendar.js?v=61f21b356a2c052a3cc5a437f5ecfc73"></script>
-<link rel="stylesheet" type="text/css" href="https://www.inven.co.kr/mobile/lib/style/layout_v3.css"/>
-<link rel="stylesheet" type="text/css" href="https://www.inven.co.kr/webzine/lib/style/dist/calendar.css?v=f31b2953f1b0ab227378cb4d158f4f03a"/>
-<link rel="icon" href="https://static.inven.co.kr/image_2011/favicon_48x48.png?v=2" sizes="48x48">
-<link rel="icon" href="https://static.inven.co.kr/image_2011/favicon_192x192.png?v=2" sizes="192x192"><script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": [
-        "Organization",
-        "NewsMediaOrganization"
-    ],
-    "@id": "https://www.inven.co.kr#organization",
-    "url": "https://www.inven.co.kr",
-    "name": "인벤",
-    "legalName": "(주)인벤",
-    "logo": [
-        {
-            "@type": "ImageObject",
-            "width": "500",
-            "height": "500",
-            "url": "https://static.inven.co.kr/image_2011/webzine/logo/inven_logo_500x500.png"
-        },
-        {
-            "@type": "ImageObject",
-            "width": "600",
-            "height": "200",
-            "url": "https://static.inven.co.kr/image_2011/webzine/logo/inven_logo_600x200.png"
-        }
-    ],
-    "image": {
-        "@type": "ImageObject",
-        "width": "600",
-        "height": "200",
-        "url": "https://static.inven.co.kr/image_2011/webzine/logo/inven_logo_600x200.png"
-    },
-    "description": "인벤은 온라인과 모바일, PC, 콘솔 등 모든 플랫폼의 게임 소식을 다루며, 최신 뉴스와 게임 공략, 게임 순위 등 다양한 정보를 게이머들에게 제공합니다.",
-    "email": "help@inven.co.kr",
-    "telephone": "+82263937700",
-    "foundingDate": "2004-11-11",
-    "sameAs": [
-        "https://x.com/inventeam",
-        "https://www.facebook.com/invennews",
-        "https://www.youtube.com/@InvenMovie"
-    ],
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "구미로 9번길 3-4 한국빌딩 3층",
-        "addressLocality": "성남시 분당구",
-        "addressRegion": "경기도",
-        "postalCode": "13637",
-        "addressCountry": "KR"
-    },
-    "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "telephone": "+82263937700",
-        "email": "help@inven.co.kr",
-        "areaServed": "KR",
-        "availableLanguage": [
-            "Korean"
-        ]
-    }
-}
-</script>
-	
-</head>
-<body class="styler-community hide-leftmenu hide-right pt-sub">
-    <aside>
-    <header role="banner" class="headmenu-full community-header">
-        <div class="header-nav">
-    <div id="common-headmenu-full">
-                        <div class="logo-wrap">
-                    <a href="http://www.inven.co.kr" class="logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="92" height="29" viewBox="0 0 92 29" fill="none">
-                            <g clip-path="url(#clip0_3178_3122)">
-                                <path d="M11.8198 27.5978H6.38672V7.44531H11.8198V27.5978Z" fill="#A80000"/>
-                                <path d="M28.8213 7.52807L28.9133 18.6191L18.5361 7.16016L15.0254 8.36867V27.6805H20.1244L20.0324 16.6528L30.4386 28.0168L33.9203 26.7961V7.52807H28.8213Z" fill="#BF0404"/>
-                                <path d="M45.9415 19.7058L40.9055 7.14062L35.4941 8.34426L43.622 27.6927H47.8349L55.9967 8.34426L51.043 7.14062L45.9415 19.7058Z" fill="#BF0404"/>
-                                <path d="M62.8441 23.4412V19.2334H69.5265V15.3008H62.8441V11.6753H70.2892V7.52832H57.5635V27.6783H70.6984L71.6015 23.4412H62.8441Z" fill="#BF0404"/>
-                                <path d="M86.9033 7.52807L86.9953 18.6191L76.6181 7.16016L73.1074 8.36867V27.6805H78.204L78.112 16.6528L88.5206 28.0168L91.9999 26.7961V7.52807H86.9033Z" fill="#BF0404"/>
-                                <path d="M5.45734 0.983398H0V6.47531H5.45734V0.983398Z" fill="#FFB700"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_3178_3122">
-                                    <rect width="92" height="27.0332" fill="white" transform="translate(0 0.983398)"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </a>
+--- SAMPLE (around first calendar/game link, ~16000 chars) ---
+es__final">
+                                                <strong class="inven-games__amount">79,000<span class="inven-games__unit">원</span>
+                        </strong>
+                    </div>
                 </div>
-                    
-        <nav class="menu-wrap">
-            <ul class="main-menu-list">
-                                                <li>
-                                                    <a href="https://www.inven.co.kr/webzine/news/" target="_self" class="main-menu">
-                                                                                                                    <span data-title="뉴스" class="link-title">뉴스</span>
-                            </a>                        
-                                                    <!-- Sub Menu -->
-                            <div class="sub-menu-wrap">
-                                                                <div class="sub-menu-row">
-                                        <ul class="sub-menu-list items-row-3">
-                                                                                                <li>
-                                                                                                                            <a href="https://www.inven.co.kr/" target="_blank" class="sub-menu">
-                                                                                                                                                                                                <span class="commu-img"><img src="https://upload3.inven.co.kr/upload/2025/12/03/bbs/i1505462875.png" alt></span>
-                                                                                                                                <span data-title="웹진메인" class="link-title">웹진메인</span>
-                                                            </a>                                                        </li>
-                                                                                                        <li>
-                                                                                                                            <a href="https://www.inven.co.kr/webzine/news/" target="_blank" class="sub-menu">
-                                                                                                                                                                                                <span class="commu-img"><img src="https://upload3.inven.co.kr/upload/2025/12/03/bbs/i1422873409.png" alt></span>
-                                                                                                                                <span data-title="전체뉴스" class="link-title">전체뉴스</span>
-                                                            </a>                                                        </li>
-                                                                                                        <li>
-                                                                                                                            <a href="https://www.
+            </div>
+        </a>
+    </section>
+    
+    <!-- TOP 게임 순위 -->
+        <section class="game-rank">
+        <h3 class="game-rank__title">주간<span class="game-rank__title--point"> TOP</span> 게임 순위</h3>
+        <div class="game-rank__swiper swiper">
+            <ul class="swiper-wrapper game-rank__list">
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">1</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13391" target="_blank">
+                            <span class="game-rank__txt">디아블로4: 증오의 군주</span>                        </a>
+                    </span>
+                    <span class="game-rank__status intect">&nbsp;&nbsp;</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">2</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/11700" target="_blank">
+                            <span class="game-rank__txt">패스 오브 엑자일2</span>                        </a>
+                    </span>
+                    <span class="game-rank__status rise">2</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">3</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13338" target="_blank">
+                            <span class="game-rank__txt">포르자 호라이즌6</span>                        </a>
+                    </span>
+                    <span class="game-rank__status intect">&nbsp;&nbsp;</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">4</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13244" target="_blank">
+                            <span class="game-rank__txt">임진왜란: 조선의반격</span>                        </a>
+                    </span>
+                    <span class="game-rank__status rise">2</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">5</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/10942" target="_blank">
+                            <span class="game-rank__txt">왕좌의 게임: 킹스로드</span>                        </a>
+                    </span>
+                    <span class="game-rank__status fall">3</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">6</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/12266" target="_blank">
+                            <span class="game-rank__txt">이환</span>                        </a>
+                    </span>
+                    <span class="game-rank__status fall">1</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">7</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13215" target="_blank">
+                            <span class="game-rank__txt">히어로즈 오브 마이트 앤 매직: 올든 에라</span>                        </a>
+                    </span>
+                    <span class="game-rank__status rise">2</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">8</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/12427" target="_blank">
+                            <span class="game-rank__txt">서브노티카2</span>                        </a>
+                    </span>
+                    <span class="game-rank__status new">&nbsp;&nbsp;</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">9</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13375" target="_blank">
+                            <span class="game-rank__txt">007 퍼스트 라이트</span>                        </a>
+                    </span>
+                    <span class="game-rank__status fall">1</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">10</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13261" target="_blank">
+                            <span class="game-rank__txt">솔: 인챈트</span>                        </a>
+                    </span>
+                    <span class="game-rank__status new">&nbsp;&nbsp;</span>
+                </li>
+                        </ul>
+        </div>
+        <button type="button" class="game-rank__guide-btn" aria-label="가이드 버튼">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10.594 13.9273C10.7534 13.7673 10.8332 13.5693 10.8332 13.3332V9.99984C10.8332 9.76373 10.7532 9.56595 10.5932 9.4065C10.4332 9.24706 10.2354 9.16706 9.99984 9.1665C9.76428 9.16595 9.5665 9.24595 9.4065 9.4065C9.2465 9.56706 9.1665 9.76484 9.1665 9.99984V13.3332C9.1665 13.5693 9.2465 13.7673 9.4065 13.9273C9.5665 14.0873 9.76428 14.1671 9.99984 14.1665C10.2354 14.1659 10.4334 14.0868 10.594 13.9273ZM10.594 7.25984C10.7534 7.10039 10.8332 6.90262 10.8332 6.6665C10.8332 6.43039 10.7532 6.23262 10.5932 6.07317C10.4332 5.91373 10.2354 5.83373 9.99984 5.83317C9.76428 5.83262 9.5665 5.91262 9.4065 6.07317C9.2465 6.23373 9.1665 6.4315 9.1665 6.6665C9.1665 6.9015 9.2465 7.09956 9.4065 7.26067C9.5665 7.42178 9.76428 7.5015 9.99984 7.49984C10.2354 7.49817 10.4334 7.41817 10.594 7.25984ZM9.99984 18.3332C8.84706 18.3332 7.76373 18.1143 6.74984 17.6765C5.73595 17.2387 4.854 16.6451 4.10401 15.8957C3.354 15.1462 2.76039 14.2643 2.32317 13.2498C1.88595 12.2354 1.66706 11.1521 1.6665 9.99984C1.66595 8.84762 1.88484 7.76428 2.32317 6.74984C2.76151 5.73539 3.35512 4.85345 4.10401 4.104C4.85289 3.35456 5.73484 2.76095 6.74984 2.32317C7.76484 1.88539 8.84817 1.6665 9.99984 1.6665C11.1515 1.6665 12.2348 1.88539 13.2498 2.32317C14.2648 2.76095 15.1468 3.35456 15.8957 4.104C16.6446 4.85345 17.2384 5.73539 17.6773 6.74984C18.1162 7.76428 18.3348 8.84762 18.3332 9.99984C18.3315 11.1521 18.1126 12.2354 17.6765 13.2498C17.2404 14.2643 16.6468 15.1462 15.8957 15.8957C15.1446 16.6451 14.2626 17.239 13.2498 17.6773C12.2371 18.1157 11.1537 18.3343 9.99984 18.3332ZM9.99984 16.6665C11.8609 16.6665 13.4373 16.0207 14.729 14.729C16.0207 13.4373 16.6665 11.8609 16.6665 9.99984C16.6665 8.13873 16.0207 6.56234 14.729 5.27067C13.4373 3.979 11.8609 3.33317 9.99984 3.33317C8.13873 3.33317 6.56234 3.979 5.27067 5.27067C3.979 6.56234 3.33317 8.13873 3.33317 9.99984C3.33317 11.8609 3.979 13.4373 5.27067 14.729C6.56234 16.0207 8.13873 16.6665 9.99984 16.6665Z" fill="#AEB4BC"/>
+            </svg>
+        </button>
+        <button type="button" class="game-rank__drop-btn" aria-label="드롭다운 버튼">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1.99967 3.50049C1.59655 3.50049 1.23092 3.74424 1.07467 4.11924C0.918424 4.49424 1.00592 4.92236 1.29342 5.20674L6.29342 10.2067C6.68405 10.5974 7.31842 10.5974 7.70905 10.2067L12.709 5.20674C12.9965 4.91924 13.0809 4.49111 12.9247 4.11611C12.7684 3.74111 12.4028 3.50049 11.9997 3.50049H1.99967Z" fill="#6B7280"/>
+            </svg>
+        </button>
+        <p class="game-rank__guide-text">매주 조회수, 반응도, 투표 등 각종 지표 점수를 종합해 결정됩니다. <button type="button" class="btn_close" aria-label="닫기"></button></p>
+    </section>
+    </div>
+        </section>
+
+        <!-- 캘린더 본문 (게임 리스트) -->
+<section class="game-calendar__body">
+    <div class="inner">
+        <div id="calendar-history-root" hx-history-elt>
+            <!-- 검색 -->
+            <div class="toolbar">
+    <div class="toolbar__tabs">
+        <button type="button" class="toolbar__tab toolbar__tab--main toolbar__tab--active">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <g clip-path="url(#clip0_1113_3148)">
+                    <path d="M10.0002 7.4502C11.7251 7.4502 13.2464 7.52994 14.7483 7.62109C16.7058 7.73989 18.3457 9.16737 18.5549 11.0898C18.7236 12.6402 18.8384 14.3201 18.843 15.876C18.8459 16.8663 18.3915 17.7766 17.7209 18.3203C17.0515 18.8633 16.1718 19.0389 15.3069 18.5762C14.2391 18.0047 13.6429 17.1552 13.3801 16.3018L13.2063 15.7373H6.79517L6.62134 16.3018C6.35858 17.1551 5.76228 18.0047 4.69458 18.5762C3.82964 19.0392 2.94917 18.8634 2.27954 18.3203C1.60898 17.7766 1.15454 16.8662 1.15747 15.876C1.16209 14.3201 1.27691 12.6402 1.44556 11.0898C1.6548 9.16738 3.29477 7.7399 5.2522 7.62109C6.75412 7.52994 8.2754 7.4502 10.0002 7.4502Z" fill="#AEB4BC" stroke="black" stroke-width="1.6"/>
+                    <path d="M6.3667 10.7896C6.41786 10.7897 6.45947 10.8311 6.45947 10.8823V11.9634H7.54053C7.59175 11.9634 7.6332 12.0049 7.6333 12.0562C7.6333 12.1074 7.59181 12.1489 7.54053 12.1489H6.45947V13.231C6.45925 13.282 6.41772 13.3236 6.3667 13.3237C6.31555 13.3237 6.27415 13.2821 6.27393 13.231V12.1489H5.19287C5.14159 12.1489 5.09912 12.1074 5.09912 12.0562C5.09922 12.0049 5.14164 11.9634 5.19287 11.9634H6.27393V10.8823C6.27393 10.831 6.31541 10.7896 6.3667 10.7896ZM13.5571 11.2495C14.0029 11.2495 14.3646 11.6104 14.3647 12.0562C14.3647 12.502 14.0029 12.8638 13.5571 12.8638C13.1115 12.8636 12.7505 12.5018 12.7505 12.0562C12.7506 11.6105 13.1115 11.2497 13.5571 11.2495ZM11.8335 2.81494L12.27 3.20264L12.772 2.90479L15.6147 1.22217C15.6031 2.61891 15.4377 4.59004 15.2944 6.14307C15.235 6.78776 14.7217 7.301 14.0747 7.37354H14.0737L13.6802 7.41748C12.4868 7.55313 11.2556 7.69286 10.0005 7.69287C8.74539 7.69287 7.51413 7.55313 6.3208 7.41748H6.31982L5.92627 7.37354H5.92529C5.27844 7.30087 4.76503 6.78769 4.70557 6.14307C4.56232 4.59 4.39595 2.61888 4.38428 1.22217L7.22803 2.90479L7.73096 3.20264L8.1665 2.81494L9.99951 1.18506L11.8335 2.81494Z" fill="#AEB4BC" stroke="black" stroke-width="1.6"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_1113_3148">
+                        <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            주요 일정
+        </button>
+        <button type="button" class="toolbar__tab toolbar__tab--event">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <g clip-path="url(#clip0_1113_2729)">
+                    <path d="M1.4925 14.9724C1.72483 16.9678 3.40957 18.5521 5.49289 18.6487C6.93285 18.7154 8.4038 18.7501 10.0003 18.7501C11.5967 18.7501 13.0677 18.7154 14.5076 18.6487C16.5909 18.5521 18.2756 16.9678 18.5081 14.9724C18.8308 12.2011 18.8308 9.84102 18.5081 7.06965C18.2756 5.07431 16.5909 3.49004 14.5076 3.39345C13.0677 3.32669 11.5967 3.29199 10.0003 3.29199C8.4038 3.29199 6.93285 3.32669 5.49289 3.39345C3.40957 3.49004 1.72483 5.07431 1.4925 7.06965C1.16982 9.84102 1.16982 12.2011 1.4925 14.9724Z" fill="#AEB4BC"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.04548 1.25028C7.04548 0.757168 6.64574 0.357422 6.15262 0.357422C5.65951 0.357422 5.25976 0.757168 5.25976 1.25028V2.51396C2.83388 2.71606 0.881832 4.59254 0.60543 6.96638C0.274752 9.80638 0.274753 12.2357 0.60543 15.0757C0.889072 17.5117 2.93728 19.424 5.45132 19.5406C6.90552 19.608 8.39028 19.643 10.0001 19.643C11.6098 19.643 13.0946 19.608 14.5489 19.5406C17.0628 19.424 19.111 17.5117 19.3947 15.0757C19.7254 12.2357 19.7254 9.80638 19.3947 6.96638C19.1183 4.59268 17.1664 2.71629 14.7409 2.51401V1.25028C14.7409 0.757168 14.341 0.357422 13.8479 0.357422C13.3548 0.357422 12.9551 0.757168 12.9551 1.25028V2.44126C12.0047 2.41339 11.0278 2.39914 10.0001 2.39914C8.97243 2.39914 7.99578 2.41339 7.04548 2.44125V1.25028ZM12.9551 5.10024V4.22776C12.006 4.19939 11.0297 4.18485 10.0001 4.18485C8.97059 4.18485 7.99439 4.19939 7.04548 4.22775V5.10024C7.04548 5.59335 6.64574 5.99309 6.15262 5.99309C5.65951 5.99309 5.25976 5.59335 5.25976 5.10024V4.30915C3.73711 4.50355 2.55005 5.70528 2.37916 7.17291C2.06446 9.87568 2.06446 12.1664 2.37916 14.8691C2.56018 16.4238 3.88145 17.6801 5.53402 17.7567C6.95974 17.8228 8.41691 17.8573 10.0001 17.8573C11.5832 17.8573 13.0404 17.8228 14.4661 17.7567C16.1187 17.6801 17.44 16.4238 17.621 14.8691C17.9357 12.1664 17.9357 9.87568 17.621 7.17291C17.4501 5.70542 16.2633 4.50378 14.7409 4.30921V5.10024C14.7409 5.59335 14.341 5.99309 13.8479 5.99309C13.3548 5.99309 12.9551 5.59335 12.9551 5.10024ZM7.50446 9.69162C7.50446 10.6059 6.99018 11.1202 6.07589 11.1202C5.16161 11.1202 4.64732 10.6059 4.64732 9.69162C4.64732 8.77734 5.16161 8.26305 6.07589 8.26305C6.99018 8.26305 7.50446 8.77734 7.50446 9.69162ZM10.0003 11.1202C10.9146 11.1202 11.4289 10.6059 11.4289 9.69162C11.4289 8.77734 10.9146 8.26305 10.0003 8.26305C9.08599 8.26305 8.57171 8.77734 8.57171 9.69162C8.57171 10.6059 9.08599 11.1202 10.0003 11.1202ZM15.3533 9.69162C15.3533 10.6059 14.839 11.1202 13.9247 11.1202C13.0104 11.1202 12.4961 10.6059 12.4961 9.69162C12.4961 8.77734 13.0104 8.26305 13.9247 8.26305C14.839 8.26305 15.3533 8.77734 15.3533 9.69162ZM6.07589 15.4058C6.99018 15.4058 7.50446 14.8916 7.50446 13.9773C7.50446 13.063 6.99018 12.5488 6.07589 12.5488C5.16161 12.5488 4.64732 13.063 4.64732 13.9773C4.64732 14.8916 5.16161 15.4058 6.07589 15.4058ZM11.4289 13.9773C11.4289 14.8916 10.9146 15.4058 10.0003 15.4058C9.08599 15.4058 8.57171 14.8916 8.57171 13.9773C8.57171 13.063 9.08599 12.5488 10.0003 12.5488C10.9146 12.5488 11.4289 13.063 11.4289 13.9773Z" fill="black"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_1113_2729">
+                        <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            행사 캘린더
+        </button>
+    </div>
+    <form id="calendar-search-form" class="toolbar__search"
+      hx-post="/webzine/calendar/api/search/_/1"
+      hx-trigger="submit"
+      hx-target="#calendar-result-wrap"
+      hx-swap="innerHTML"
+      hx-indicator="#list-loading"
+      _="
+        on submit
+          set sword to #search-input.value.trim()
+          if sword is empty
+            call alert('검색어를 입력해주세요.')
+            halt
+          end
+          call history.pushState(null, '', '/webzine/calendar/search/' + encodeURIComponent(sword))
+          call #search-input.blur()
+
+        on htmx:configRequest
+          set sword to #search-input.value.trim()
+          if sword is empty
+            halt
+          end
+          set event.detail.path to '/webzine/calendar/api/search/' + encodeURIComponent(sword) + '/1'
+
+         on htmx:af

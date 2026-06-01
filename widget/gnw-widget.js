@@ -28,6 +28,16 @@ const COLORS = {
   amber: new Color("#ffb454"),
 };
 
+// eventType → 한글 라벨 / 색상 (웹앱과 동일)
+const EVENT_META = {
+  release: { label: "출시", color: new Color("#3ddc84") },
+  prereg:  { label: "사전예약", color: new Color("#6c7aff") },
+  cbt:     { label: "CBT", color: new Color("#ffb454") },
+  obt:     { label: "OBT", color: new Color("#ff85c0") },
+  update:  { label: "업데이트", color: new Color("#00c2cb") },
+};
+const gameName = (g) => g.titleKr || g.title;
+
 const NOW = new Date();
 
 async function fetchGames() {
@@ -95,12 +105,13 @@ function addGameRow(stack, g, compact) {
 
   const info = row.addStack();
   info.layoutVertically();
-  const title = info.addText(g.title);
+  const title = info.addText(gameName(g));
   title.font = Font.semiboldSystemFont(compact ? 12 : 13);
   title.textColor = COLORS.text;
   title.lineLimit = 1;
+  const evMeta = EVENT_META[g.eventType] || { label: "", color: COLORS.dim };
   if (!compact) {
-    const meta = info.addText(`${g.platforms.slice(0, 3).join(" · ")}`);
+    const meta = info.addText(`${evMeta.label} · ${g.platforms.slice(0, 2).join(" · ")}`);
     meta.font = Font.systemFont(10);
     meta.textColor = COLORS.dim;
     meta.lineLimit = 1;
@@ -119,7 +130,11 @@ function buildSmall(w, games) {
   const big = w.addText(ddayLabel(g));
   big.font = Font.heavySystemFont(30);
   big.textColor = daysUntil(g.releaseDate) <= 14 ? COLORS.amber : COLORS.green;
-  const title = w.addText(g.title);
+  const evMeta = EVENT_META[g.eventType] || { label: "" };
+  const tag = w.addText(evMeta.label);
+  tag.font = Font.boldSystemFont(11);
+  tag.textColor = (evMeta.color || COLORS.accent);
+  const title = w.addText(gameName(g));
   title.font = Font.semiboldSystemFont(13);
   title.textColor = COLORS.text;
   title.lineLimit = 2;

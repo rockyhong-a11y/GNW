@@ -89,6 +89,15 @@ function makeGame(p) {
 }
 
 const INVEN_CAL = { name: "인벤 발매 캘린더", url: "https://www.inven.co.kr/webzine/calendar/" };
+const RULIWEB_NEWS = { name: "루리웹", url: "https://m.ruliweb.com/news" };
+
+// 브라우저 유사 헤더(봇 차단 완화) — 러너에서만 외부 접근 가능
+const HEADERS = {
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+  "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+  "accept-language": "ko-KR,ko;q=0.9",
+  "referer": "https://m.ruliweb.com/",
+};
 
 // 검색용 핵심 게임명 추출: 부제·버전·괄호·콜론 등을 떼어 깔끔한 본 제목만 남긴다.
 // (긴 부제/특수문자가 들어간 인벤 검색 URL 이 404 나는 문제를 방지)
@@ -146,13 +155,6 @@ async function fromRAWG(out) {
 // 실제 페이지 마크업에 맞춰 SEL/정규식 조정이 필요할 수 있다. INVEN=1 일 때만 동작.
 async function fromInven(out) {
   if (process.env.INVEN !== "1") return { name: "Inven", skipped: "INVEN!=1" };
-  // 브라우저 유사 헤더(봇 차단 완화)
-  const HEADERS = {
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "accept-language": "ko-KR,ko;q=0.9",
-    "referer": "https://www.inven.co.kr/",
-  };
   let html = "", status = 0, err = "";
   if (process.env.INVEN_HTML_FILE) {            // 테스트 훅: 로컬 HTML 픽스처로 파서 검증
     try { html = readFileSync(process.env.INVEN_HTML_FILE, "utf8"); status = 200; }
@@ -255,6 +257,37 @@ async function fromInven(out) {
   return { name: "Inven", added };
 }
 
+// 루리웹 게임 뉴스(게시판 형식) 수집. 러너에서만 동작(NEWS=1). best-effort 파서.
+async function fromRuliwebNews(news) {
+  if (process.env.NEWS !== "1") return { name: "RuliwebNews", skipped: "NEWS!=1" };
+  let html = "", status = 0, err = "";
+  try {
+    const res = await fetch(RULIWEB_NEWS.url, { headers: HEADERS });
+    status = res.status;
+    html = await res.text();
+  } catch (e) { err = String(e && e.message || e); }
+  // 구조 확인용 로그(get_job_logs 로 읽음)
+  console.log(`[ruliweb] status=${status} len=${html.length} err=${err}`);
+  console.log(`[ruliweb] read_links=${(html.match(/\/news\/read\/\d+/g) || []).length}`);
+  console.log(`[ruliweb] SAMPLE>>>${html.slice(0, 5000).replace(/\s+/g, " ")}<<<`);
+  if (!html || status >= 400) return { name: "RuliwebNews", error: `status=${status} ${err}`.trim(), added: 0 };
+
+  // best-effort: 기사 링크 + 제목 추출 (실제 구조 확인 후 보정)
+  const seen = new Set();
+  let added = 0;
+  for (const m of html.matchAll(/<a[^>]+href="(https?:\/\/[^"]*ruliweb\.com\/news\/read\/(\d+)[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi)) {
+    const url = m[1].replace(/&amp;/g, "&"), id = m[2];
+    const title = m[3].replace(/<[^>]+>/g, " ").replace(/&[a-z]+;/g, " ").replace(/\s+/g, " ").trim();
+    if (!title || title.length < 6) continue;
+    const key = title.toLowerCase().replace(/\s+/g, "");
+    if (seen.has(key) || seen.has(id)) continue;          // 중복 제거(제목/ID)
+    seen.add(key); seen.add(id);
+    news.push({ id: `ruliweb-${id}`, title, url, source: RULIWEB_NEWS.name, date: null, image: null });
+    if (++added >= 40) break;
+  }
+  return { name: "RuliwebNews", added };
+}
+
 async function fromSteam(out) {
   if (process.env.STEAM !== "1") return { name: "Steam", skipped: "STEAM!=1" };
   const res = await fetch("https://store.steampowered.com/api/featuredcategories?l=koreana&cc=kr");
@@ -323,11 +356,15 @@ async function fromRSS(out) {
 /* ---------- Merge & write ---------- */
 async function main() {
   const curated = JSON.parse(await readFile(join(ROOT, "data/curated.json"), "utf8"));
+  const outPath = join(ROOT, "data/games.json");
+  let prev = null;
+  try { prev = JSON.parse(await readFile(outPath, "utf8")); } catch { /* 최초 생성 */ }
+
   const collected = [];
+  const newsItems = [];
   const report = [];
 
-  // "인벤 주요 일정 정보만 참조" — 현재 활성 provider 는 인벤 캘린더 하나뿐.
-  // (fromRAWG/fromSteam/fromRSS 는 함수로 남겨둠: 필요 시 이 배열에 다시 추가)
+  // 일정: 인벤 발매 캘린더 / 뉴스: 루리웹 (둘 다 러너에서만 외부 접근 가능)
   for (const provider of [fromInven]) {
     try {
       report.push(await provider(collected));
@@ -335,6 +372,8 @@ async function main() {
       report.push({ name: provider.name, error: e.message });
     }
   }
+  try { report.push(await fromRuliwebNews(newsItems)); }
+  catch (e) { report.push({ name: "RuliwebNews", error: e.message }); }
 
   // 병합: curated 우선. 인벤 수집본은 같은 게임이면 큐레이션을 "보강"하고(직접 상세링크·
   // 썸네일·플랫폼·트레일러), 큐레이션에 없는 새 일정만 추가한다. 매칭은 원제/한글제목 모두로.
@@ -362,6 +401,16 @@ async function main() {
     .filter((g) => g.releaseDate && !isNaN(new Date(g.releaseDate)))
     .sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate));
 
+  // 뉴스: 제목 정규화 기준 중복 제거. 수집 실패/스킵 시 기존 뉴스 유지(로컬 빌드가 지우지 않게).
+  const seenNews = new Set();
+  let news = [];
+  for (const n of newsItems) {
+    const k = String(n.title).toLowerCase().replace(/\s+/g, "");
+    if (!k || seenNews.has(k)) continue;
+    seenNews.add(k); news.push(n);
+  }
+  if (!news.length && prev && Array.isArray(prev.news)) news = prev.news;
+
   // 결정론적 출력: 매시간 실행돼도 실제 데이터가 바뀌지 않으면 파일이 동일 →
   // 워크플로의 "변경 시에만 커밋"이 동작해 불필요한 커밋이 쌓이지 않는다.
   // (시각 의존 필드 generatedAt 등은 의도적으로 제외)
@@ -372,19 +421,17 @@ async function main() {
       updated: iso(TODAY),
       version: curated.meta.version || 1,
       pipeline: reportStable,
-      counts: { total: games.length, curated: curated.games.length, collected: collected.length },
+      counts: { total: games.length, curated: curated.games.length, collected: collected.length, news: news.length },
     },
     games,
+    news,
   };
   delete data.meta.kind;
 
-  const outPath = join(ROOT, "data/games.json");
   const provLine = report.map((r) => r.skipped ? `${r.name}(skip:${r.skipped})` : r.error ? `${r.name}(err:${r.error})` : `${r.name}(+${r.added})`).join("  ");
 
   // 실제 내용이 바뀐 경우에만 파일을 갱신한다. 시각성 필드(updated)는 비교에서 제외해
   // 변동이 없으면 파일이 그대로 유지되도록 한다(불필요한 커밋 방지).
-  let prev = null;
-  try { prev = JSON.parse(await readFile(outPath, "utf8")); } catch { /* 최초 생성 */ }
   const stripVolatile = (o) => { const c = JSON.parse(JSON.stringify(o)); if (c.meta) delete c.meta.updated; return c; };
   const unchanged = prev && JSON.stringify(stripVolatile(prev)) === JSON.stringify(stripVolatile(data));
   if (unchanged) {

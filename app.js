@@ -24,11 +24,12 @@ const gameCats = (g) => {
   for (const p of (g.platforms || [])) for (const c of PLATFORM_CATS) if (c.match(p)) cats.add(c.key);
   return cats;
 };
-const TAB_ORDER = ["all", "모바일", "PC", "콘솔"];
+const TAB_ORDER = ["all", "모바일", "PC", "콘솔", "news"];
 
 const STATE = {
   games: [],
-  platform: "all",   // all | 모바일 | PC | 콘솔
+  news: [],
+  platform: "all",   // all | 모바일 | PC | 콘솔 | news
   month: "all",      // all | YYYY-MM
 };
 
@@ -101,7 +102,7 @@ function renderCard(g) {
     : "";
 
   return `
-    <article class="card">
+    <article class="card"${g.detailUrl ? ` data-detail="${esc(g.detailUrl)}"` : ""}>
       <div class="card-banner${g.image ? " has-img" : ""}" style="background: linear-gradient(135deg, ${g.color}, ${g.color}55);">
         ${img}
         <span class="event-badge" style="background:${ev.color}">${ev.label}</span>
@@ -131,7 +132,32 @@ function renderCard(g) {
     </article>`;
 }
 
+function renderNews() {
+  const root = $("#gameRoot");
+  const list = STATE.news || [];
+  if (!list.length) {
+    root.innerHTML = "";
+    $("#emptyState").hidden = false;
+    return;
+  }
+  $("#emptyState").hidden = true;
+  root.innerHTML = `<ul class="newsboard">` + list.map((n) => `
+    <li class="news-item">
+      <a href="${esc(n.url)}" target="_blank" rel="noopener">
+        ${n.image ? `<img class="news-thumb" src="${esc(n.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
+        <span class="news-body">
+          <span class="news-title">${esc(n.title)}</span>
+          <span class="news-meta">${esc(n.source || "")}${n.date ? " · " + esc(n.date) : ""}</span>
+        </span>
+      </a>
+    </li>`).join("") + `</ul>`;
+}
+
 function render() {
+  const newsView = STATE.platform === "news";
+  $("#monthSelect").style.display = newsView ? "none" : "";
+  if (newsView) return renderNews();
+
   const list = applyFilters();
   const root = $("#gameRoot");
 
@@ -217,6 +243,7 @@ async function loadGames(firstLoad = false) {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     STATE.games = data.games;
+    STATE.news = data.news || [];
     lastFetchAt = Date.now();
     document.title = data.meta.title;
     $("#lastUpdated").textContent = `데이터 기준 ${data.meta.updated}`;
@@ -316,10 +343,20 @@ function bindSettings() {
   overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.hidden = true; });
 }
 
+function bindCardClicks() {
+  // 카드 전체 클릭 → 상세보기. 단, 링크(▶영상·출처·상세 등)는 자체 동작 유지.
+  $("#gameRoot").addEventListener("click", (e) => {
+    if (e.target.closest("a, .play-btn")) return;
+    const card = e.target.closest(".card[data-detail]");
+    if (card && card.dataset.detail) window.open(card.dataset.detail, "_blank", "noopener");
+  });
+}
+
 /* ---------- Init ---------- */
 async function init() {
   bindTabs();
   bindSettings();
+  bindCardClicks();
   applyIcon(savedIconKey());
   $("#monthSelect").addEventListener("change", (e) => { STATE.month = e.target.value; render(); });
   bindAutoRefresh();

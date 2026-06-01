@@ -1,11 +1,10 @@
 /* GNW — Game New Watch
- * Vanilla JS, no build step. Reads data/games.json and renders a
- * filterable / sortable timeline of game releases, pre-registrations,
- * CBT/OBT tests and major updates. The catalog is reconstructed from the
- * schedules/DBs of 네이버 게임 · 인벤 · 디스이즈게임 · TapTap.
- * The same JSON is consumed by the iOS Scriptable widget. */
+ * Vanilla JS, no build step. Reads data/games.json and renders a month-grouped
+ * timeline of game releases / updates / events from 인벤 발매 캘린더.
+ * UI is intentionally minimal: only a platform filter (모바일 · PC · 콘솔) and a
+ * month filter. The same JSON is consumed by the iOS Scriptable widget. */
 
-// 인벤 발매 캘린더의 실제 분류와 일치
+// 인벤 발매 캘린더의 실제 분류와 일치 (카드 배지)
 const EVENT_META = {
   release: { label: "출시", color: "#3ddc84" },
   update:  { label: "업데이트", color: "#00c2cb" },
@@ -14,20 +13,26 @@ const EVENT_META = {
   event:   { label: "행사", color: "#ff85c0" },
 };
 
-const STATE = {
-  games: [],
-  search: "",
-  sort: "date-asc",
-  view: "timeline",       // timeline | grid
-  status: "now",          // now(현재 이후·기본) | upcoming | released | all
-  events: new Set(),      // empty = all event types
-  platforms: new Set(),   // empty = all
-  genres: new Set(),      // empty = all
+// 플랫폼을 3개 묶음으로 분류 (모바일 · PC · 콘솔)
+const PLATFORM_CATS = [
+  { key: "모바일", match: (p) => /mobile|android|ios|aos|모바일/i.test(p) },
+  { key: "PC", match: (p) => /^pc$|windows|mac|linux|steam|pc/i.test(p) },
+  { key: "콘솔", match: (p) => /ps5|ps4|playstation|xbox|switch|nintendo|닌텐도|콘솔/i.test(p) },
+];
+const gameCats = (g) => {
+  const cats = new Set();
+  for (const p of (g.platforms || [])) for (const c of PLATFORM_CATS) if (c.match(p)) cats.add(c.key);
+  return cats;
 };
 
-const TODAY = new Date(); // 실제 현재 시각 기준 — 진입 시 "지금"을 기준으로 포커싱
+const STATE = {
+  games: [],
+  platforms: new Set(),   // empty = all (모바일/PC/콘솔)
+  month: "all",           // "all" | "YYYY-MM"
+};
+
+const TODAY = new Date();
 TODAY.setHours(0, 0, 0, 0);
-const CUR_MONTH = `${TODAY.getFullYear()}-${String(TODAY.getMonth() + 1).padStart(2, "0")}`;
 
 const $ = (sel) => document.querySelector(sel);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -51,6 +56,10 @@ function monthLabel(key) {
   const isThis = key === `${TODAY.getFullYear()}-${String(TODAY.getMonth() + 1).padStart(2, "0")}`;
   return `${y}년 ${Number(m)}월${isThis ? " · 이번 달" : ""}`;
 }
+function monthShort(key) {
+  const [y, m] = key.split("-");
+  return `${Number(m)}월`;
+}
 function countdownLabel(game) {
   const days = daysBetween(game.releaseDate);
   if (game.status === "released" || days < 0) return { text: "완료", released: true };
@@ -62,41 +71,18 @@ function formatPrice(price) {
   if (price === 0) return { text: "무료(F2P)", free: true };
   return { text: `₩${price.toLocaleString("ko-KR")}`, free: false };
 }
-function uniqueSorted(items) {
-  return [...new Set(items)].sort((a, b) => a.localeCompare(b, "ko"));
-}
 
-/* ---------- Filtering & Sorting ---------- */
+/* ---------- Filtering ---------- */
 function applyFilters() {
-  const q = STATE.search.trim().toLowerCase();
-  let list = STATE.games.filter((g) => {
-    if (STATE.status === "now") {
-      if (monthKey(g.releaseDate) < CUR_MONTH) return false; // 지난 달 이전은 숨김(현재 이후 포커스)
-    } else if (STATE.status === "upcoming" || STATE.status === "released") {
-      if (g.status !== STATE.status) return false;
-    } // "all" → 전체 표시
-    if (STATE.events.size && !STATE.events.has(g.eventType)) return false;
-    if (STATE.platforms.size && !g.platforms.some((p) => STATE.platforms.has(p))) return false;
-    if (STATE.genres.size && !g.genres.some((gn) => STATE.genres.has(gn))) return false;
-    if (q) {
-      const haystack = [g.title, g.titleKr, g.developer, g.publisher, g.update, ...(g.tags || []), ...g.genres, ...g.platforms]
-        .join(" ").toLowerCase();
-      if (!haystack.includes(q)) return false;
+  const list = STATE.games.filter((g) => {
+    if (STATE.platforms.size) {
+      const cats = gameCats(g);
+      if (![...STATE.platforms].some((c) => cats.has(c))) return false;
     }
+    if (STATE.month !== "all" && monthKey(g.releaseDate) !== STATE.month) return false;
     return true;
   });
-
-  const cmp = {
-    "date-asc": (a, b) => new Date(a.releaseDate) - new Date(b.releaseDate),
-    "date-desc": (a, b) => new Date(b.releaseDate) - new Date(a.releaseDate),
-    "hype-desc": (a, b) => (b.hypeScore || 0) - (a.hypeScore || 0),
-    "rating-desc": (a, b) => (b.rating || -1) - (a.rating || -1),
-    "price-asc": (a, b) => a.price - b.price,
-    "price-desc": (a, b) => b.price - a.price,
-    "title-asc": (a, b) => (a.titleKr || a.title).localeCompare(b.titleKr || b.title, "ko"),
-  }[STATE.sort];
-
-  return list.sort(cmp);
+  return list.sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate));
 }
 
 /* ---------- Rendering ---------- */
@@ -164,131 +150,57 @@ function render() {
   $("#emptyState").hidden = true;
   $("#resultCount").textContent = `${list.length}개`;
 
-  const timelineOK = STATE.view === "timeline" && (STATE.sort === "date-asc" || STATE.sort === "date-desc");
-  if (timelineOK) {
-    // group by month, preserving the (date-)sorted order
-    const groups = [];
-    const idx = new Map();
-    for (const g of list) {
-      const k = monthKey(g.releaseDate);
-      if (!idx.has(k)) { idx.set(k, groups.length); groups.push({ key: k, items: [] }); }
-      groups[idx.get(k)].items.push(g);
-    }
-    root.className = "timeline";
-    root.innerHTML = groups.map((grp) => {
-      const isThis = grp.key === `${TODAY.getFullYear()}-${String(TODAY.getMonth() + 1).padStart(2, "0")}`;
-      return `
-        <section class="month-block">
-          <h2 class="month-head ${isThis ? "current" : ""}">
-            <span>${monthLabel(grp.key)}</span><span class="month-count">${grp.items.length}</span>
-          </h2>
-          <div class="game-grid">${grp.items.map(renderCard).join("")}</div>
-        </section>`;
-    }).join("");
-  } else {
-    root.className = "game-grid flat";
-    root.innerHTML = list.map(renderCard).join("");
+  // 월별로 묶어 타임라인으로 표시
+  const groups = [];
+  const idx = new Map();
+  for (const g of list) {
+    const k = monthKey(g.releaseDate);
+    if (!idx.has(k)) { idx.set(k, groups.length); groups.push({ key: k, items: [] }); }
+    groups[idx.get(k)].items.push(g);
   }
+  root.className = "timeline";
+  root.innerHTML = groups.map((grp) => {
+    const isThis = grp.key === `${TODAY.getFullYear()}-${String(TODAY.getMonth() + 1).padStart(2, "0")}`;
+    return `
+      <section class="month-block">
+        <h2 class="month-head ${isThis ? "current" : ""}">
+          <span>${monthLabel(grp.key)}</span><span class="month-count">${grp.items.length}</span>
+        </h2>
+        <div class="game-grid">${grp.items.map(renderCard).join("")}</div>
+      </section>`;
+  }).join("");
 }
 
 /* ---------- Filter chip builders ---------- */
-function buildStatusFilters() {
-  const opts = [
-    { key: "now", label: "현재 이후" },
-    { key: "upcoming", label: "예정" },
-    { key: "released", label: "완료" },
-    { key: "all", label: "전체 기간" },
-  ];
-  const wrap = $("#statusFilters");
-  wrap.innerHTML = opts
-    .map((o) => `<button class="chip ${o.key === STATE.status ? "active" : ""}" data-status="${o.key}">${o.label}</button>`)
+function buildPlatformFilters() {
+  const wrap = $("#platformFilters");
+  wrap.innerHTML = PLATFORM_CATS
+    .map(({ key }) => `<button class="chip ${STATE.platforms.has(key) ? "active" : ""}" data-cat="${key}">${key}</button>`)
     .join("");
   wrap.querySelectorAll(".chip").forEach((c) =>
-    c.addEventListener("click", () => { STATE.status = c.dataset.status; buildStatusFilters(); render(); })
-  );
-}
-
-function buildEventFilters() {
-  const wrap = $("#eventFilters");
-  wrap.innerHTML = Object.entries(EVENT_META)
-    .map(([key, m]) => {
-      const active = STATE.events.has(key);
-      return `<button class="chip ${active ? "active" : ""}" data-ev="${key}"><span class="dot" style="background:${m.color}"></span>${m.label}</button>`;
-    }).join("");
-  wrap.querySelectorAll(".chip").forEach((c) =>
     c.addEventListener("click", () => {
-      const v = c.dataset.ev;
-      STATE.events.has(v) ? STATE.events.delete(v) : STATE.events.add(v);
+      const v = c.dataset.cat;
+      STATE.platforms.has(v) ? STATE.platforms.delete(v) : STATE.platforms.add(v);
       c.classList.toggle("active");
       render();
     })
   );
 }
 
-function buildToggleFilters(containerId, values, stateSet, colorMap) {
-  const wrap = $(containerId);
-  wrap.hidden = values.length === 0; // 값이 없으면 필터 그룹 숨김
-  wrap.innerHTML = values
-    .map((v) => {
-      const active = stateSet.has(v);
-      const dot = colorMap ? `<span class="dot" style="background:${colorMap[v] || "#6c7aff"}"></span>` : "";
-      return `<button class="chip ${active ? "active" : ""}" data-val="${esc(v)}">${dot}${esc(v)}</button>`;
-    }).join("");
+function buildMonthFilters() {
+  const months = [...new Set(STATE.games.map((g) => monthKey(g.releaseDate)))].sort();
+  const wrap = $("#monthFilters");
+  const chips = [`<button class="chip ${STATE.month === "all" ? "active" : ""}" data-month="all">전체</button>`]
+    .concat(months.map((m) => `<button class="chip ${STATE.month === m ? "active" : ""}" data-month="${m}">${monthShort(m)}</button>`));
+  wrap.innerHTML = chips.join("");
   wrap.querySelectorAll(".chip").forEach((c) =>
-    c.addEventListener("click", () => {
-      const v = c.dataset.val;
-      stateSet.has(v) ? stateSet.delete(v) : stateSet.add(v);
-      c.classList.toggle("active");
-      render();
-    })
+    c.addEventListener("click", () => { STATE.month = c.dataset.month; buildMonthFilters(); render(); })
   );
-}
-
-function renderHeaderStats() {
-  const total = STATE.games.length;
-  const upcoming = STATE.games.filter((g) => g.status === "upcoming").length;
-  $("#headerStats").innerHTML = `
-    <div class="stat"><b>${upcoming}</b><span>예정</span></div>
-    <div class="stat"><b>${total}</b><span>전체</span></div>`;
-}
-
-/* ---------- Controls ---------- */
-function bindControls() {
-  let t;
-  $("#searchInput").addEventListener("input", (e) => {
-    clearTimeout(t);
-    t = setTimeout(() => { STATE.search = e.target.value; render(); }, 120);
-  });
-  $("#sortSelect").addEventListener("change", (e) => { STATE.sort = e.target.value; render(); });
-
-  $("#viewToggle").querySelectorAll("button").forEach((b) =>
-    b.addEventListener("click", () => {
-      STATE.view = b.dataset.view;
-      $("#viewToggle").querySelectorAll("button").forEach((x) => x.classList.toggle("active", x === b));
-      render();
-    })
-  );
-
-  $("#resetBtn").addEventListener("click", () => {
-    STATE.search = ""; STATE.sort = "date-asc"; STATE.status = "now";
-    STATE.events.clear(); STATE.platforms.clear(); STATE.genres.clear();
-    $("#searchInput").value = ""; $("#sortSelect").value = "date-asc";
-    initFilters();
-    render();
-  });
 }
 
 function initFilters() {
-  const platformColors = {
-    Mobile: "#f0c419", PC: "#6c7aff", "PS5": "#5b8def", "Xbox Series": "#3ddc84",
-    Switch: "#e74c3c", "Switch 2": "#e67e22",
-  };
-  const platforms = uniqueSorted(STATE.games.flatMap((g) => g.platforms));
-  const genres = uniqueSorted(STATE.games.flatMap((g) => g.genres));
-  buildStatusFilters();
-  buildEventFilters();
-  buildToggleFilters("#platformFilters", platforms, STATE.platforms, platformColors);
-  buildToggleFilters("#genreFilters", genres, STATE.genres, null);
+  buildPlatformFilters();
+  buildMonthFilters();
 }
 
 /* ---------- Data loading & refresh ---------- */
@@ -318,13 +230,8 @@ async function loadGames(firstLoad = false) {
     lastFetchAt = Date.now();
     document.title = data.meta.title;
     $("#lastUpdated").textContent = `데이터 기준 ${data.meta.updated}`;
-    // 데이터 스냅샷이 과거(현재 시점 이후 일정 없음)면 자동으로 '전체'를 기본값으로
-    // → 라이브러리가 비어 보이지 않도록 함
-    if (STATE.status === "now" && STATE.games.length && !applyFilters().length) STATE.status = "all";
     renderSources(data.meta);
-    renderHeaderStats();
     initFilters();
-    if (firstLoad) bindControls();
     render();
     setRefreshStatus(`갱신 ${nowTime()}`, false);
   } catch (err) {

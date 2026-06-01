@@ -4,59 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0d0f1a" />
-  <meta name="description" content="PC · 콘솔 · 모바일 신작 출시 · 사전예약 · CBT/OBT · 대규모 업데이트 일정을 한눈에" />
+  <meta name="description" content="PC · 콘솔 · 모바일 신작 출시 · 업데이트 · 행사 일정을 한눈에" />
   <title>GNW — Game New Watch</title>
   <link rel="manifest" href="manifest.webmanifest" />
+  <!-- 홈 화면에 추가(웹앱) 시 사용되는 아이콘 · 이름 -->
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png" />
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="GNW" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="app-header">
-    <div class="brand">
-      <div class="brand-mark">GNW</div>
-      <div class="brand-text">
-        <h1>Game New Watch</h1>
-        <p>PC · 콘솔 · 모바일 출시 일정</p>
-      </div>
-    </div>
-    <div class="header-stats" id="headerStats" aria-live="polite"></div>
-  </header>
-
-  <nav class="controls" aria-label="필터 및 정렬">
-    <div class="control-row">
-      <input
-        type="search"
-        id="searchInput"
-        class="search"
-        placeholder="게임 · 개발사 · 태그 검색…"
-        autocomplete="off"
-        aria-label="검색"
-      />
-      <div class="view-toggle" id="viewToggle" role="group" aria-label="보기 방식">
-        <button type="button" data-view="timeline" class="active" title="타임라인">📅</button>
-        <button type="button" data-view="grid" title="그리드">▦</button>
-      </div>
-    </div>
-
-    <div class="control-row">
-      <label for="sortSelect" class="sr-only">정렬 기준</label>
-      <select id="sortSelect" class="select" aria-label="정렬 기준">
-        <option value="date-asc">일정 빠른 순</option>
-        <option value="date-desc">일정 늦은 순</option>
-        <option value="hype-desc">기대지수 높은 순</option>
-        <option value="rating-desc">평점 높은 순</option>
-        <option value="price-asc">가격 낮은 순</option>
-        <option value="price-desc">가격 높은 순</option>
-        <option value="title-asc">제목순</option>
-      </select>
-    </div>
-
-    <div class="filter-group" id="eventFilters" role="group" aria-label="일정 종류 필터"></div>
-    <div class="filter-group" id="statusFilters" role="group" aria-label="기간 필터"></div>
+  <nav class="controls" aria-label="필터">
     <div class="filter-group" id="platformFilters" role="group" aria-label="플랫폼 필터"></div>
-    <div class="filter-group" id="genreFilters" role="group" aria-label="장르 필터"></div>
+    <div class="filter-group" id="monthFilters" role="group" aria-label="월별 필터"></div>
   </nav>
 
   <main>
@@ -65,7 +29,6 @@
       <div class="result-actions">
         <span id="refreshStatus" class="refresh-status" aria-live="polite"></span>
         <button id="refreshBtn" class="refresh-btn" type="button" title="최신 정보 갱신" aria-label="최신 정보 갱신">⟳</button>
-        <button id="resetBtn" class="reset-btn" type="button">초기화</button>
       </div>
     </div>
     <div id="gameRoot" class="timeline" aria-live="polite"></div>

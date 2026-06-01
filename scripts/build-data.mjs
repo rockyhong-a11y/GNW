@@ -146,9 +146,7 @@ async function fromSteam(out) {
 async function fromRSS(out) {
   if (process.env.RSS !== "1") return { name: "RSS", skipped: "RSS!=1" };
   const FEEDS = [
-    { name: "루리웹", url: "https://m.ruliweb.com/news/rss" },
-    { name: "디스이즈게임", url: "https://www.thisisgame.com/rss/news.php" },
-    { name: "인벤", url: "https://feed.inven.co.kr/news/" },
+    { name: "인벤 발매 캘린더", url: "https://feed.inven.co.kr/news/", home: "https://www.inven.co.kr/webzine/calendar/" },
   ];
   const evFromText = (s) =>
     /사전\s*예약|사전예약/.test(s) ? "prereg" :
@@ -177,7 +175,7 @@ async function fromRSS(out) {
           eventType: evFromText(title),
           tags: ["뉴스"],
           description: "게임 매체 뉴스 헤드라인",
-          source: { name: f.name, url: link || f.url },
+          source: { name: f.name, url: link || f.home || f.url },
         }));
         added++;
       }

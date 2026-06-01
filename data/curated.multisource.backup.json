@@ -6,11 +6,31 @@
     "version": 5,
     "sources": [
       {
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
+      },
+      {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      {
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       }
     ],
-    "note": "정보 구성은 인벤 발매 캘린더(https://www.inven.co.kr/webzine/calendar/)를 참조하여 재구성한 샘플입니다.",
+    "note": "정보 구성은 네이버 게임 / 인벤(발매 캘린더 포함) / 디스이즈게임 / TapTap / 루리웹 의 일정·뉴스·DB를 참조하여 재구성한 샘플입니다.",
     "kind": "curated"
   },
   "games": [
@@ -43,8 +63,8 @@
       "update": "정식 출시. 신규 직업 5종과 오픈필드 생활 콘텐츠 공개.",
       "color": "#7b5cff",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Mabinogi%20Mobile%20%EB%84%A5%EC%8A%A8%20official%20trailer"
     },
@@ -77,8 +97,8 @@
       "update": "사전예약 진행 중. 사전예약 보상으로 전용 비행 탈것 및 성장 패키지 지급.",
       "color": "#3aa0ff",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Aion%202%20%EC%97%94%EC%94%A8%EC%86%8C%ED%94%84%ED%8A%B8%20official%20trailer"
     },
@@ -110,8 +130,8 @@
       "update": "사전예약 오픈. 오리지널 영웅 리메이크 일러스트 순차 공개 중.",
       "color": "#ff6b6b",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Seven%20Knights%20Re%3AVERSE%20%EB%84%B7%EB%A7%88%EB%B8%94%20official%20trailer"
     },
@@ -142,8 +162,8 @@
       "update": "시즌2 '잿빛 황혼' 업데이트. 신규 지역·탈것·길드 공성전 시스템 추가.",
       "color": "#c0392b",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=NIGHT%20CROWS%20Season%202%20%EB%A7%88%EB%94%94%ED%95%91%ED%81%AC%20official%20trailer"
     },
@@ -174,8 +194,8 @@
       "update": "신규 직업 '소서러' 및 글래스트 헤임 던전 업데이트 적용.",
       "color": "#f39c12",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Ragnarok%3A%20Origin%20%EA%B7%B8%EB%9D%BC%EB%B9%84%ED%8B%B0%20official%20trailer"
     },
@@ -208,8 +228,8 @@
       "update": "3.5주년 업데이트. 신규 SSR 캐릭터 2종과 메인 스토리 챕터 추가.",
       "color": "#ff4d6d",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
       },
       "trailer": "https://www.youtube.com/results?search_query=NIKKE%3A%20Goddess%20of%20Victory%20%EC%8B%9C%ED%94%84%ED%8A%B8%EC%97%85%20official%20trailer"
     },
@@ -243,8 +263,8 @@
       "update": "글로벌 사전예약 시작. 출시 시 한국어 풀 더빙 지원 예정.",
       "color": "#f0c419",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Honkai%3A%20Nexus%20Anima%20%ED%98%B8%EC%9A%94%EB%B2%84%EC%8A%A4%20official%20trailer"
     },
@@ -278,8 +298,8 @@
       "update": "2.0 '새로운 대륙' 업데이트. 신규 지역·5성 캐릭터 3종·엔드게임 모드 추가.",
       "color": "#16a085",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Wuthering%20Waves%202.0%20%EC%BF%A0%EB%A1%9C%EA%B2%8C%EC%9E%84%EC%A6%88%20official%20trailer"
     },
@@ -312,8 +332,8 @@
       "update": "2.2 버전 업데이트. 신규 지역 '로어사이드'와 한정 에이전트 공개.",
       "color": "#00c2cb",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Zenless%20Zone%20Zero%20%ED%98%B8%EC%9A%94%EB%B2%84%EC%8A%A4%20official%20trailer"
     },
@@ -346,8 +366,8 @@
       "update": "글로벌 사전예약 진행. 신규 PV 및 한국어 지원 확정 발표.",
       "color": "#34495e",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Arknights%3A%20Endfield%20%ED%95%98%EC%9D%B4%ED%8D%BC%EA%B7%B8%EB%A6%AC%ED%94%84%20official%20trailer"
     },
@@ -378,8 +398,8 @@
       "update": "신규 서포트 카드 가챠 및 신규 스토리 이벤트 업데이트.",
       "color": "#ff85c0",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Umamusume%3A%20Pretty%20Derby%20%EC%82%AC%EC%9D%B4%EA%B2%8C%EC%9E%84%EC%A6%88%20official%20trailer"
     },
@@ -411,8 +431,8 @@
       "update": "1차 CBT 모집. 6/10~6/16 PC·모바일 동시 테스트 예정.",
       "color": "#8e44ad",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Project%20Mugunghwa%20(CBT)%20%EC%8A%A4%EB%A7%88%EC%9D%BC%EA%B2%8C%EC%9D%B4%ED%8A%B8%20official%20trailer"
     },
@@ -445,8 +465,8 @@
       "update": "글로벌 OBT 일정 확정. 전 직업 개방 및 엔드 콘텐츠 일부 공개.",
       "color": "#2c3e50",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Chrono%20Odyssey%20(OBT)%20npixel%20official%20trailer"
     },
@@ -478,8 +498,8 @@
       "update": "비공개 베타 테스트(CBT) 사전 모집 시작. 한정 인원 선발.",
       "color": "#9b59b6",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Project%20SPIRA%20(CBT)%20%EB%84%B7%EB%A7%88%EB%B8%94%20official%20trailer"
     },
@@ -510,8 +530,8 @@
       "update": "글로벌 클로즈 베타 진행. 일부 지역 한정 테스트 빌드 배포.",
       "color": "#e74c3c",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
       },
       "trailer": "https://www.youtube.com/results?search_query=THE%20FINALS%20Mobile%20(CBT)%20Embark%20official%20trailer"
     },
@@ -545,8 +565,8 @@
       "update": "정식 발매 예정. 신규 트레일러 및 사전 예약 패키지 공개.",
       "color": "#e84d8a",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Grand%20Theft%20Auto%20VI%20Rockstar%20Games%20official%20trailer"
     },
@@ -578,8 +598,8 @@
       "update": "발매일 확정. 닌텐도 다이렉트에서 신규 게임플레이 공개.",
       "color": "#3aa757",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=The%20Legend%20of%20Zelda%20(New)%20Nintendo%20EPD%20official%20trailer"
     },
@@ -612,8 +632,8 @@
       "update": "무료 대형 업데이트. 신규 몬스터·이벤트 퀘스트·장비 추가.",
       "color": "#d98324",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Monster%20Hunter%20Wilds%20(Title%20Update)%20Capcom%20official%20trailer"
     },
@@ -648,8 +668,8 @@
       "update": "정식 출시 완료. 출시 직후 호평 속 동시접속 신기록 달성.",
       "color": "#b14aed",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Hollow%20Knight%3A%20Silksong%20Team%20Cherry%20official%20trailer"
     },
@@ -681,8 +701,8 @@
       "update": "출시 완료. PC판 동시 발매 및 포토 모드 업데이트 지원.",
       "color": "#4a90d9",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Death%20Stranding%202%3A%20On%20the%20Beach%20Kojima%20Productions%20official%20trailer"
     },
@@ -715,8 +735,8 @@
       "update": "발매 예정. 3부작 완결 트레일러 공개 및 사전 주문 시작.",
       "color": "#5b8def",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Final%20Fantasy%20VII%20Remake%20Part%203%20Square%20Enix%20official%20trailer"
     },
@@ -749,8 +769,8 @@
       "update": "두 번째 DLC 발매 예정. 신규 지역과 보스, 무기군 추가.",
       "color": "#c9a227",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Elden%20Ring%20(New%20Expansion)%20FromSoftware%20official%20trailer"
     },
@@ -781,8 +801,8 @@
       "update": "출시 완료. 협동 모드 '레전드' 무료 업데이트 예고.",
       "color": "#9b59b6",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Ghost%20of%20Y%C5%8Dtei%20Sucker%20Punch%20official%20trailer"
     },
@@ -814,8 +834,8 @@
       "update": "발매 예정. 메가진화 복귀 및 신규 도시 탐험 요소 공개.",
       "color": "#f39c12",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Pok%C3%A9mon%20Legends%3A%20Z-A%20Game%20Freak%20official%20trailer"
     },
@@ -846,8 +866,8 @@
       "update": "글로벌 정식 출시. 모바일 전용 조작·랭크 시스템 도입.",
       "color": "#ff4655",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
       },
       "trailer": "https://www.youtube.com/results?search_query=VALORANT%20Mobile%20Riot%20Games%20official%20trailer"
     },
@@ -880,8 +900,8 @@
       "update": "정식 발매 예정. 얼리액세스 종료 후 풀 스토리 공개.",
       "color": "#e67e22",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Hades%20III%20Supergiant%20Games%20official%20trailer"
     },
@@ -914,8 +934,8 @@
       "update": "발매 예정. 4인 협동 플레이 및 신규 행성 환경 공개.",
       "color": "#00a8cc",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Subnautica%202%20Unknown%20Worlds%20official%20trailer"
     },
@@ -949,8 +969,8 @@
       "update": "발매일 확정. 한국어 자막 지원 및 사전 주문 특전 공개.",
       "color": "#8b1a1a",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=SILENT%20HILL%20f%20NeoBards%20official%20trailer"
     },
@@ -982,8 +1002,8 @@
       "update": "스팀 발매 확정. 4K·고프레임 옵션과 모든 DLC 포함.",
       "color": "#2c5fa8",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=Final%20Fantasy%20XVI%20(PC)%20Square%20Enix%20official%20trailer"
     },
@@ -1016,8 +1036,8 @@
       "update": "TGS에서 정식 발표. 발매일 및 한국어화 확정 공개.",
       "color": "#d4af37",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=Like%20a%20Dragon%20(New)%20RGG%20Studio%20official%20trailer"
     },
@@ -1050,8 +1070,8 @@
       "update": "4.6 신규 지역·5성 캐릭터 추가.",
       "color": "#f0c419",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Genshin%20Impact%204.6%20%ED%98%B8%EC%9A%94%EB%B2%84%EC%8A%A4%20official%20trailer"
     },
@@ -1084,8 +1104,8 @@
       "update": "3.0 신규 행성 개방 및 한정 캐릭터.",
       "color": "#2980b9",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Honkai%3A%20Star%20Rail%203.0%20%ED%98%B8%EC%9A%94%EB%B2%84%EC%8A%A4%20official%20trailer"
     },
@@ -1118,8 +1138,8 @@
       "update": "신규 메인 스토리 및 픽업 모집.",
       "color": "#5b8def",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Blue%20Archive%20%EB%84%A5%EC%8A%A8%EA%B2%8C%EC%9E%84%EC%A6%88%20official%20trailer"
     },
@@ -1151,8 +1171,8 @@
       "update": "신규 인격·E.G.O 및 단테 시즌 업데이트.",
       "color": "#9b59b6",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Limbus%20Company%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AC%B8%20official%20trailer"
     },
@@ -1182,8 +1202,8 @@
       "update": "여름 신규 직업 및 업데이트 'NEXT'.",
       "color": "#e67e22",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=MapleStory%20%EB%84%A5%EC%8A%A8%20official%20trailer"
     },
@@ -1214,8 +1234,8 @@
       "update": "신규 군단장 레이드 및 클래스 추가.",
       "color": "#c9a227",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Lost%20Ark%20%EC%8A%A4%EB%A7%88%EC%9D%BC%EA%B2%8C%EC%9D%B4%ED%8A%B8%20official%20trailer"
     },
@@ -1246,8 +1266,8 @@
       "update": "신규 각성 및 레이드 콘텐츠 업데이트.",
       "color": "#e84d8a",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=DNF%20Mobile%20%EB%84%A5%EC%8A%A8%20official%20trailer"
     },
@@ -1278,8 +1298,8 @@
       "update": "신규 요원 및 배틀패스 액트 시작.",
       "color": "#ff4655",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=VALORANT%20Act%20%EB%9D%BC%EC%9D%B4%EC%97%87%20%EA%B2%8C%EC%9E%84%EC%A6%88%20official%20trailer"
     },
@@ -1310,8 +1330,8 @@
       "update": "신규 챔피언 및 시즌 중반 패치.",
       "color": "#2980b9",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=League%20of%20Legends%20%EB%9D%BC%EC%9D%B4%EC%97%87%20%EA%B2%8C%EC%9E%84%EC%A6%88%20official%20trailer"
     },
@@ -1345,8 +1365,8 @@
       "update": "신규 영웅·맵 및 시즌 패스.",
       "color": "#00a8cc",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=Overwatch%202%20Season%20Blizzard%20official%20trailer"
     },
@@ -1379,8 +1399,8 @@
       "update": "신규 시즌 테마 및 밸런스 개편.",
       "color": "#e84d8a",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=Diablo%20IV%20Season%20Blizzard%20official%20trailer"
     },
@@ -1413,8 +1433,8 @@
       "update": "신규 리그 및 직업 추가.",
       "color": "#8e44ad",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=Path%20of%20Exile%202%20League%20GGG%20official%20trailer"
     },
@@ -1446,8 +1466,8 @@
       "update": "신규 워본드 및 적 세력 추가.",
       "color": "#4a90d9",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=Helldivers%202%20Warbond%20Arrowhead%20official%20trailer"
     },
@@ -1480,8 +1500,8 @@
       "update": "출시 완료. 중세 배경 신규 무기군.",
       "color": "#e84d8a",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=DOOM%3A%20The%20Dark%20Ages%20id%20Software%20official%20trailer"
     },
@@ -1514,8 +1534,8 @@
       "update": "발매 예정. 신규 행성과 볼트 헌터.",
       "color": "#e67e22",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=Borderlands%204%20Gearbox%20official%20trailer"
     },
@@ -1548,8 +1568,8 @@
       "update": "발매 예정. 신규 잠입 시스템 공개.",
       "color": "#9b59b6",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=Assassin's%20Creed%20Hexe%20Ubisoft%20official%20trailer"
     },
@@ -1582,8 +1602,8 @@
       "update": "발매 예정. 캠페인·멀티·좀비 모드.",
       "color": "#4a90d9",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=Call%20of%20Duty%202026%20Activision%20official%20trailer"
     },
@@ -1617,8 +1637,8 @@
       "update": "TGS 공개. 신규 주인공·도시 무대.",
       "color": "#ff4655",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Persona%20(New)%20Atlus%20official%20trailer"
     },
@@ -1652,8 +1672,8 @@
       "update": "발매 예정. 시리 주역 트레일러 공개.",
       "color": "#c9a227",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=The%20Witcher%20IV%20CD%20PROJEKT%20RED%20official%20trailer"
     },
@@ -1685,8 +1705,8 @@
       "update": "발매 예정. 동화풍 오픈월드 RPG.",
       "color": "#3aa757",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=Fable%20Playground%20official%20trailer"
     },
@@ -1716,8 +1736,8 @@
       "update": "발매 예정. 신규 무기와 스테이지.",
       "color": "#00c2cb",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Splatoon%20(New)%20Nintendo%20official%20trailer"
     },
@@ -1750,8 +1770,8 @@
       "update": "발매 예정. 신규 엔진 및 모드.",
       "color": "#27ae60",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=EA%20SPORTS%20FC%2026%20EA%20official%20trailer"
     },
@@ -1783,8 +1803,8 @@
       "update": "발매 예정. 신규 몬스터 라이드.",
       "color": "#d98324",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       },
       "trailer": "https://www.youtube.com/results?search_query=Monster%20Hunter%20Stories%203%20Capcom%20official%20trailer"
     },
@@ -1815,8 +1835,8 @@
       "update": "신규 특이점 스토리 및 픽업.",
       "color": "#b14aed",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Fate%2FGrand%20Order%20Aniplex%20official%20trailer"
     },
@@ -1847,8 +1867,8 @@
       "update": "신규 ★3 우마무스메 픽업.",
       "color": "#e84d8a",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Umamusume%20New%20Banner%20Cygames%20official%20trailer"
     },
@@ -1880,8 +1900,8 @@
       "update": "글로벌 사전예약 진행.",
       "color": "#00a8cc",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Star%20Seekers%20%EB%84%B7%EC%9D%B4%EC%A6%88%20official%20trailer"
     },
@@ -1915,8 +1935,8 @@
       "update": "사전예약 시작. PV 공개.",
       "color": "#2980b9",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Ananta%20NetEase%20official%20trailer"
     },
@@ -1948,8 +1968,8 @@
       "update": "글로벌 CBT 모집.",
       "color": "#16a085",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Azur%20Promilia%20Manjuu%20official%20trailer"
     },
@@ -1980,8 +2000,8 @@
       "update": "신규 지역·레이드 업데이트.",
       "color": "#c9a227",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=ODIN%3A%20Valhalla%20Rising%20%EB%9D%BC%EC%9D%B4%EC%98%A8%ED%95%98%ED%8A%B8%20official%20trailer"
     },
@@ -2012,8 +2032,8 @@
       "update": "신규 시즌 및 변신·마법인형 추가.",
       "color": "#5b8def",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Lineage%20W%20%EC%97%94%EC%94%A8%EC%86%8C%ED%94%84%ED%8A%B8%20official%20trailer"
     },
@@ -2046,8 +2066,8 @@
       "update": "2차 CBT 모집.",
       "color": "#8e44ad",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Project%20DH%20(CBT)%20%EB%84%A5%EC%8A%A8%20official%20trailer"
     },
@@ -2080,8 +2100,8 @@
       "update": "오픈 베타 일정 확정.",
       "color": "#4a90d9",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
       },
       "trailer": "https://www.youtube.com/results?search_query=ARC%20Raiders%20(OBT)%20Embark%20official%20trailer"
     },
@@ -2111,8 +2131,8 @@
       "update": "신규 도시 및 모드 지원 업데이트.",
       "color": "#00c2cb",
       "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=inZOI%20%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4%20official%20trailer"
     }

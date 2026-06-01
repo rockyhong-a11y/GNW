@@ -181,6 +181,9 @@ async function fromInven(out) {
       seen.add(id);
       const title = a[2].replace(/<[^>]+>/g, "").replace(/&[a-z]+;/g, " ").trim();
       if (!title || title.length < 2) continue;
+      // 항목 주변에서 인벤 업로드 썸네일 추출(있으면 카드 이미지로 사용)
+      const win = b.slice(Math.max(0, a.index - 400), a.index + a[0].length + 400);
+      const im = win.match(/<img[^>]+src="(https?:\/\/[^"]*inven\.co\.kr\/upload[^"]+\.(?:jpg|jpeg|png|gif|webp))/i);
       out.push(makeGame({
         id: `inven-${id}`,
         title, titleKr: title,
@@ -189,8 +192,9 @@ async function fromInven(out) {
         eventType: evFromText(b.slice(0, 400) + " " + title),
         tags: ["인벤"],
         description: "",
+        image: im ? im[1] : null,
         source: INVEN_CAL,
-        detailUrl: `https://www.inven.co.kr/webzine/calendar/game/${id}`,
+        detailUrl: `https://www.inven.co.kr/webzine/calendar/game/${id}`,   // 인벤 상세 페이지 직접 링크
       }));
       added++;
     }
@@ -283,8 +287,14 @@ async function main() {
   const byKey = new Map();
   for (const g of collected) byKey.set(normTitle(g.title), g);
   for (const g of curated.games) {
-    if (!g.detailUrl) g.detailUrl = detailFor(g.titleKr || g.title); // 상세링크 자동 생성(본 제목 검색)
-    byKey.set(normTitle(g.title), g); // curated wins
+    const hit = byKey.get(normTitle(g.title)); // 같은 게임의 인벤 수집본(있으면)
+    if (hit && hit.source && hit.source.name === INVEN_CAL.name) {
+      // 번역 등 나머지는 curated 유지하되, 인벤의 "직접 상세 링크"와 "썸네일"로 보강.
+      if (hit.detailUrl && /\/webzine\/(calendar\/game|news)\//.test(hit.detailUrl)) g.detailUrl = hit.detailUrl;
+      if (!g.image && hit.image) g.image = hit.image;
+    }
+    if (!g.detailUrl) g.detailUrl = detailFor(g.titleKr || g.title); // 직접 링크 없으면 본 제목 검색으로 폴백
+    byKey.set(normTitle(g.title), g); // curated(보강본) wins
   }
 
   const games = [...byKey.values()]

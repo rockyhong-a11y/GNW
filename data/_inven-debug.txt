@@ -1,4 +1,4 @@
-fetched_at=2026-06-01T09:59:43.528Z
+fetched_at=2026-06-01T10:02:39.201Z
 url=https://www.inven.co.kr/webzine/calendar/
 status=200
 error=
@@ -7,124 +7,8 @@ calendar_game_links=32
 news_links=7
 upload_imgs=86
 date_tokens=2004-11-11,2025/12/03,2025/12/03,2026/04/28,2025/12/02,2025/09/12,2025/09/12,2025/09/12,2025/09/12,2025/09/12,2025/09/12,2025/09/12
---- SAMPLE (around first calendar/game link, ~16000 chars) ---
-es__final">
-                                                <strong class="inven-games__amount">79,000<span class="inven-games__unit">원</span>
-                        </strong>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </section>
-    
-    <!-- TOP 게임 순위 -->
-        <section class="game-rank">
-        <h3 class="game-rank__title">주간<span class="game-rank__title--point"> TOP</span> 게임 순위</h3>
-        <div class="game-rank__swiper swiper">
-            <ul class="swiper-wrapper game-rank__list">
-                            <li class="swiper-slide game-rank__item">
-                    <span class="game-rank__num">1</span>
-                    <span class="game-rank__name">
-                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13391" target="_blank">
-                            <span class="game-rank__txt">디아블로4: 증오의 군주</span>                        </a>
-                    </span>
-                    <span class="game-rank__status intect">&nbsp;&nbsp;</span>
-                </li>
-                            <li class="swiper-slide game-rank__item">
-                    <span class="game-rank__num">2</span>
-                    <span class="game-rank__name">
-                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/11700" target="_blank">
-                            <span class="game-rank__txt">패스 오브 엑자일2</span>                        </a>
-                    </span>
-                    <span class="game-rank__status rise">2</span>
-                </li>
-                            <li class="swiper-slide game-rank__item">
-                    <span class="game-rank__num">3</span>
-                    <span class="game-rank__name">
-                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13338" target="_blank">
-                            <span class="game-rank__txt">포르자 호라이즌6</span>                        </a>
-                    </span>
-                    <span class="game-rank__status intect">&nbsp;&nbsp;</span>
-                </li>
-                            <li class="swiper-slide game-rank__item">
-                    <span class="game-rank__num">4</span>
-                    <span class="game-rank__name">
-                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13244" target="_blank">
-                            <span class="game-rank__txt">임진왜란: 조선의반격</span>                        </a>
-                    </span>
-                    <span class="game-rank__status rise">2</span>
-                </li>
-                            <li class="swiper-slide game-rank__item">
-                    <span class="game-rank__num">5</span>
-                    <span class="game-rank__name">
-                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/10942" target="_blank">
-                            <span class="game-rank__txt">왕좌의 게임: 킹스로드</span>                        </a>
-                    </span>
-                    <span class="game-rank__status fall">3</span>
-                </li>
-                            <li class="swiper-slide game-rank__item">
-                    <span class="game-rank__num">6</span>
-                    <span class="game-rank__name">
-                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/12266" target="_blank">
-                            <span class="game-rank__txt">이환</span>                        </a>
-                    </span>
-                    <span class="game-rank__status fall">1</span>
-                </li>
-                            <li class="swiper-slide game-rank__item">
-                    <span class="game-rank__num">7</span>
-                    <span class="game-rank__name">
-                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13215" target="_blank">
-                            <span class="game-rank__txt">히어로즈 오브 마이트 앤 매직: 올든 에라</span>                        </a>
-                    </span>
-                    <span class="game-rank__status rise">2</span>
-                </li>
-                            <li class="swiper-slide game-rank__item">
-                    <span class="game-rank__num">8</span>
-                    <span class="game-rank__name">
-                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/12427" target="_blank">
-                            <span class="game-rank__txt">서브노티카2</span>                        </a>
-                    </span>
-                    <span class="game-rank__status new">&nbsp;&nbsp;</span>
-                </li>
-                            <li class="swiper-slide game-rank__item">
-                    <span class="game-rank__num">9</span>
-                    <span class="game-rank__name">
-                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13375" target="_blank">
-                            <span class="game-rank__txt">007 퍼스트 라이트</span>                        </a>
-                    </span>
-                    <span class="game-rank__status fall">1</span>
-                </li>
-                            <li class="swiper-slide game-rank__item">
-                    <span class="game-rank__num">10</span>
-                    <span class="game-rank__name">
-                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13261" target="_blank">
-                            <span class="game-rank__txt">솔: 인챈트</span>                        </a>
-                    </span>
-                    <span class="game-rank__status new">&nbsp;&nbsp;</span>
-                </li>
-                        </ul>
-        </div>
-        <button type="button" class="game-rank__guide-btn" aria-label="가이드 버튼">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M10.594 13.9273C10.7534 13.7673 10.8332 13.5693 10.8332 13.3332V9.99984C10.8332 9.76373 10.7532 9.56595 10.5932 9.4065C10.4332 9.24706 10.2354 9.16706 9.99984 9.1665C9.76428 9.16595 9.5665 9.24595 9.4065 9.4065C9.2465 9.56706 9.1665 9.76484 9.1665 9.99984V13.3332C9.1665 13.5693 9.2465 13.7673 9.4065 13.9273C9.5665 14.0873 9.76428 14.1671 9.99984 14.1665C10.2354 14.1659 10.4334 14.0868 10.594 13.9273ZM10.594 7.25984C10.7534 7.10039 10.8332 6.90262 10.8332 6.6665C10.8332 6.43039 10.7532 6.23262 10.5932 6.07317C10.4332 5.91373 10.2354 5.83373 9.99984 5.83317C9.76428 5.83262 9.5665 5.91262 9.4065 6.07317C9.2465 6.23373 9.1665 6.4315 9.1665 6.6665C9.1665 6.9015 9.2465 7.09956 9.4065 7.26067C9.5665 7.42178 9.76428 7.5015 9.99984 7.49984C10.2354 7.49817 10.4334 7.41817 10.594 7.25984ZM9.99984 18.3332C8.84706 18.3332 7.76373 18.1143 6.74984 17.6765C5.73595 17.2387 4.854 16.6451 4.10401 15.8957C3.354 15.1462 2.76039 14.2643 2.32317 13.2498C1.88595 12.2354 1.66706 11.1521 1.6665 9.99984C1.66595 8.84762 1.88484 7.76428 2.32317 6.74984C2.76151 5.73539 3.35512 4.85345 4.10401 4.104C4.85289 3.35456 5.73484 2.76095 6.74984 2.32317C7.76484 1.88539 8.84817 1.6665 9.99984 1.6665C11.1515 1.6665 12.2348 1.88539 13.2498 2.32317C14.2648 2.76095 15.1468 3.35456 15.8957 4.104C16.6446 4.85345 17.2384 5.73539 17.6773 6.74984C18.1162 7.76428 18.3348 8.84762 18.3332 9.99984C18.3315 11.1521 18.1126 12.2354 17.6765 13.2498C17.2404 14.2643 16.6468 15.1462 15.8957 15.8957C15.1446 16.6451 14.2626 17.239 13.2498 17.6773C12.2371 18.1157 11.1537 18.3343 9.99984 18.3332ZM9.99984 16.6665C11.8609 16.6665 13.4373 16.0207 14.729 14.729C16.0207 13.4373 16.6665 11.8609 16.6665 9.99984C16.6665 8.13873 16.0207 6.56234 14.729 5.27067C13.4373 3.979 11.8609 3.33317 9.99984 3.33317C8.13873 3.33317 6.56234 3.979 5.27067 5.27067C3.979 6.56234 3.33317 8.13873 3.33317 9.99984C3.33317 11.8609 3.979 13.4373 5.27067 14.729C6.56234 16.0207 8.13873 16.6665 9.99984 16.6665Z" fill="#AEB4BC"/>
-            </svg>
-        </button>
-        <button type="button" class="game-rank__drop-btn" aria-label="드롭다운 버튼">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M1.99967 3.50049C1.59655 3.50049 1.23092 3.74424 1.07467 4.11924C0.918424 4.49424 1.00592 4.92236 1.29342 5.20674L6.29342 10.2067C6.68405 10.5974 7.31842 10.5974 7.70905 10.2067L12.709 5.20674C12.9965 4.91924 13.0809 4.49111 12.9247 4.11611C12.7684 3.74111 12.4028 3.50049 11.9997 3.50049H1.99967Z" fill="#6B7280"/>
-            </svg>
-        </button>
-        <p class="game-rank__guide-text">매주 조회수, 반응도, 투표 등 각종 지표 점수를 종합해 결정됩니다. <button type="button" class="btn_close" aria-label="닫기"></button></p>
-    </section>
-    </div>
-        </section>
-
-        <!-- 캘린더 본문 (게임 리스트) -->
-<section class="game-calendar__body">
-    <div class="inner">
-        <div id="calendar-history-root" hx-history-elt>
-            <!-- 검색 -->
-            <div class="toolbar">
+--- SAMPLE (from toolbar onward = 실제 일정 리스트, ~90000 chars) ---
+class="toolbar">
     <div class="toolbar__tabs">
         <button type="button" class="toolbar__tab toolbar__tab--main toolbar__tab--active">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -178,4 +62,1083 @@ es__final">
           end
           set event.detail.path to '/webzine/calendar/api/search/' + encodeURIComponent(sword) + '/1'
 
-         on htmx:af
+         on htmx:afterOnLoad
+            if #calendar-content-wrap
+              call #calendar-content-wrap.classList.add('is-hidden')
+            end
+            if #calendar-result-wrap
+              call #calendar-result-wrap.classList.remove('is-hidden')
+            end
+            if #btn-search-reset
+              call #btn-search-reset.classList.remove('is-hidden')
+            end
+    ">
+        <input type="text"
+           id="search-input"
+           name="sword"
+           class="toolbar__search--input"
+           placeholder="게임, 행사명을 입력해주세요."
+           maxlength="50"
+           value=""
+           _="
+           on input
+              if me.value.trim() is empty
+                  if #btn-search-reset
+                    call #btn-search-reset.classList.add('is-hidden')
+                  end
+              else
+                  if #btn-search-reset
+                    call #btn-search-reset.classList.remove('is-hidden')
+                  end
+              end
+           "
+        >
+        <div class="toolbar__btns">
+            <button type="button"
+                    id="btn-search-reset"
+                    class="toolbar__reset--btn is-hidden"
+                    aria-label="검색 초기화"
+                    _="
+                    on click
+                        set #search-input.value to ''
+                        set #search-input@value to ''
+                        call history.pushState(null, '', '/webzine/calendar')
+
+                        if #calendar-result-wrap
+                          put '' into #calendar-result-wrap.innerHTML
+                          call #calendar-result-wrap.classList.add('is-hidden')
+                        end
+                        if #calendar-content-wrap
+                          call #calendar-content-wrap.classList.remove('is-hidden')
+                        end
+                        if #btn-search-reset
+                          call #btn-search-reset.classList.add('is-hidden')
+                        end
+
+                    ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" fill="#4B5563"/>
+                    <path d="M12 13.0646L8.27376 16.7909C8.13435 16.9303 7.95691 17 7.74144 17C7.52598 17 7.34854 16.9303 7.20913 16.7909C7.06971 16.6515 7 16.474 7 16.2586C7 16.0431 7.06971 15.8657 7.20913 15.7262L10.9354 12L7.20913 8.27376C7.06971 8.13435 7 7.95691 7 7.74144C7 7.52598 7.06971 7.34854 7.20913 7.20913C7.34854 7.06971 7.52598 7 7.74144 7C7.95691 7 8.13435 7.06971 8.27376 7.20913L12 10.9354L15.7262 7.20913C15.8657 7.06971 16.0431 7 16.2586 7C16.474 7 16.6515 7.06971 16.7909 7.20913C16.9303 7.34854 17 7.52598 17 7.74144C17 7.95691 16.9303 8.13435 16.7909 8.27376L13.0646 12L16.7909 15.7262C16.9303 15.8657 17 16.0431 17 16.2586C17 16.474 16.9303 16.6515 16.7909 16.7909C16.6515 16.9303 16.474 17 16.2586 17C16.0431 17 15.8657 16.9303 15.7262 16.7909L12 13.0646Z" fill="#F9FAFB"/>
+                </svg>
+            </button>
+            <button type="submit"
+                    class="toolbar__search--btn"
+                    aria-label="검색 버튼">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M16.643 16.67L19.723 19.75M18.75 11.25C18.75 13.2391 17.9598 15.1468 16.5533 16.5533C15.1468 17.9971 13.2391 18.75 11.25 18.75C9.26088 18.75 7.35322 17.9598 5.9467 16.5533C4.54018 15.1468 3.75 13.2391 3.75 11.25C3.75 9.26088 4.54018 7.35322 5.9467 5.9467C7.35322 4.54018 9.26088 3.75 11.25 3.75C13.2391 3.75 15.1468 4.54018 16.5533 5.9467C17.9598 7.35322 18.75 9.26088 18.75 11.25Z" stroke="#AEB4BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </form>
+</div>
+            <div class="calendar__tab calendar__tab--webzine calendar__tab--active">
+                <div class="calendar">
+                    <div id="calendar-content-wrap" class="calendar-content">
+                        <!-- 필터 -->
+                        <div id="calendar-filter">
+                            <div class="calendar__header" >
+    <div class="calendar-filter-actions"
+         hx-target="#calendar-content-wrap"
+         hx-swap="innerHTML"
+         hx-indicator="#list-loading"
+    >
+        <div class="calendar-year">
+            <div class="calendar-year__controls">
+                <!-- 이전 -->
+                <button type="button" class="calendar-year__btn calendar-year__btn--prev" aria-label="이전"
+                        hx-get="/webzine/calendar/api/list/2025/6"
+                        hx-push-url="/webzine/calendar/2025/6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15.2891 17.9971L15.8359 17.4775C15.9453 17.3408 15.9453 17.1221 15.8359 17.0127L10.8867 12.0361L15.8359 7.08691C15.9453 6.97754 15.9453 6.75879 15.8359 6.62207L15.2891 6.10254C15.1523 5.96582 14.9609 5.96582 14.8242 6.10254L9.08203 11.8174C8.97266 11.9541 8.97266 12.1455 9.08203 12.2822L14.8242 17.9971C14.9609 18.1338 15.1523 18.1338 15.2891 17.9971Z" fill="#1C1C1E"/>
+                    </svg>
+                </button>
+
+                <!-- 년도 -->
+                <span class="calendar-year__current" id="calendar-year-current" data-year="2026">2026년</span>
+
+                <!-- 다음 -->
+                <button type="button" class="calendar-year__btn calendar-year__btn--next" aria-label="다음" disabled                        hx-get="/webzine/calendar/api/list/2027/6"
+                        hx-push-url="/webzine/calendar/2027/6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9.62891 6.10254L9.08203 6.62207C8.97266 6.75879 8.97266 6.97754 9.08203 7.08691L14.0312 12.0361L9.08203 17.0127C8.97266 17.1221 8.97266 17.3408 9.08203 17.4775L9.62891 17.9971C9.76562 18.1338 9.95703 18.1338 10.0938 17.9971L15.8359 12.2822C15.9453 12.1455 15.9453 11.9541 15.8359 11.8174L10.0938 6.10254C9.95703 5.96582 9.76562 5.96582 9.62891 6.10254Z" fill="#1C1C1E"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="calendar-year__actions">
+                <a href="https://forms.gle/muvPgRUYPtpLy9Ba8"  target="_blank" role="button" class="calendar-year__action calendar-year__action--request">일정요청</a>
+                <!-- 최근 -->
+                <button type="button" class="calendar-year__action calendar-year__action--recent"
+                    hx-get="/webzine/calendar/api/list/2026/6"
+                    hx-push-url="/webzine/calendar/2026/6"
+                   >
+                    최근
+                </button>
+            </div>
+        </div>
+        <nav class="calendar-month">
+            <div class="calendar-month__swiper swiper">
+                <ul class="swiper-wrapper calendar-month__list">
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="1월"
+                                    hx-get="/webzine/calendar/api/list/2026/1"
+                                    hx-push-url="/webzine/calendar/2026/1"
+                            >
+                                1월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="2월"
+                                    hx-get="/webzine/calendar/api/list/2026/2"
+                                    hx-push-url="/webzine/calendar/2026/2"
+                            >
+                                2월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="3월"
+                                    hx-get="/webzine/calendar/api/list/2026/3"
+                                    hx-push-url="/webzine/calendar/2026/3"
+                            >
+                                3월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="4월"
+                                    hx-get="/webzine/calendar/api/list/2026/4"
+                                    hx-push-url="/webzine/calendar/2026/4"
+                            >
+                                4월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="5월"
+                                    hx-get="/webzine/calendar/api/list/2026/5"
+                                    hx-push-url="/webzine/calendar/2026/5"
+                            >
+                                5월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn calendar-month__btn--active" title="6월"
+                                    hx-get="/webzine/calendar/api/list/2026/6"
+                                    hx-push-url="/webzine/calendar/2026/6"
+                            >
+                                6월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="7월"
+                                    hx-get="/webzine/calendar/api/list/2026/7"
+                                    hx-push-url="/webzine/calendar/2026/7"
+                            >
+                                7월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="8월"
+                                    hx-get="/webzine/calendar/api/list/2026/8"
+                                    hx-push-url="/webzine/calendar/2026/8"
+                            >
+                                8월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="9월"
+                                    hx-get="/webzine/calendar/api/list/2026/9"
+                                    hx-push-url="/webzine/calendar/2026/9"
+                            >
+                                9월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="10월"
+                                    hx-get="/webzine/calendar/api/list/2026/10"
+                                    hx-push-url="/webzine/calendar/2026/10"
+                            >
+                                10월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="11월"
+                                    hx-get="/webzine/calendar/api/list/2026/11"
+                                    hx-push-url="/webzine/calendar/2026/11"
+                            >
+                                11월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="12월"
+                                    hx-get="/webzine/calendar/api/list/2026/12"
+                                    hx-push-url="/webzine/calendar/2026/12"
+                            >
+                                12월</button>
+                        </li>
+                                                            <li class="swiper-slide calendar-month__item">
+                        <button type="button" class="calendar-month__btn" title="미정"
+                                hx-get="/webzine/calendar/api/list/2026/13"
+                                hx-push-url="/webzine/calendar/2026/13"
+                        >
+                            미정</button>
+                    </li>
+                                    </ul>
+            </div>
+        </nav>
+        <nav class="calendar-platform" >
+            <div class="calendar-platform__swiper swiper">
+                <ul class="swiper-wrapper platform__list">
+
+                    <li class="swiper-slide platform__item">
+                        <button type="button" class="platform__btn platform__btn--all platform__btn--active"
+                        hx-get="/webzine/calendar/api/list/2026/6/"
+                        hx-push-url="/webzine/calendar/2026/6/">
+                        <span class="platform__icon">
+                        </span>
+                            <span class="platform__label">전체</span>
+                        </button>
+                    </li>
+
+                    <li class="swiper-slide platform__item">
+                        <button type="button" class="platform__btn platform__btn--release"
+                                hx-get="/webzine/calendar/api/list/2026/6/release"
+                                hx-push-url="/webzine/calendar/2026/6/release">
+                        <span class="platform__icon">
+                        </span>
+                            <span class="platform__label">출시</span>
+                        </button>
+                    </li>
+                    <li class="swiper-slide platform__item">
+                        <button type="button" class="platform__btn platform__btn--test"
+                                hx-get="/webzine/calendar/api/list/2026/6/test"
+                                hx-push-url="/webzine/calendar/2026/6/test">
+                        <span class="platform__icon">
+                        </span>
+                            <span class="platform__label">테스트</span>
+                        </button>
+                    </li>
+                    <li class="swiper-slide platform__item">
+                        <button type="button" class="platform__btn platform__btn--early-access"
+                                hx-get="/webzine/calendar/api/list/2026/6/early"
+                                hx-push-url="/webzine/calendar/2026/6/early">
+                        <span class="platform__icon">
+                        </span>
+                            <span class="platform__label">얼리액세스</span>
+                        </button>
+                    </li>
+                                            <li class="swiper-slide platform__item">
+                            <button type="button" class="platform__btn platform__btn--pc                                    "
+                            hx-get="/webzine/calendar/api/list/2026/6/pc"
+                            hx-push-url="/webzine/calendar/2026/6/pc"
+                            >
+                            <span class="platform__icon">
+                            </span>
+                                <span class="platform__label">PC</span>
+                            </button>
+                        </li>
+                                            <li class="swiper-slide platform__item">
+                            <button type="button" class="platform__btn platform__btn--mobile                                    "
+                            hx-get="/webzine/calendar/api/list/2026/6/mobile"
+                            hx-push-url="/webzine/calendar/2026/6/mobile"
+                            >
+                            <span class="platform__icon">
+                            </span>
+                                <span class="platform__label">MOBILE</span>
+                            </button>
+                        </li>
+                                            <li class="swiper-slide platform__item">
+                            <button type="button" class="platform__btn platform__btn--ps                                    "
+                            hx-get="/webzine/calendar/api/list/2026/6/ps"
+                            hx-push-url="/webzine/calendar/2026/6/ps"
+                            >
+                            <span class="platform__icon">
+                            </span>
+                                <span class="platform__label">PS</span>
+                            </button>
+                        </li>
+                                            <li class="swiper-slide platform__item">
+                            <button type="button" class="platform__btn platform__btn--xbox                                    "
+                            hx-get="/webzine/calendar/api/list/2026/6/xbox"
+                            hx-push-url="/webzine/calendar/2026/6/xbox"
+                            >
+                            <span class="platform__icon">
+                            </span>
+                                <span class="platform__label">XBOX</span>
+                            </button>
+                        </li>
+                                            <li class="swiper-slide platform__item">
+                            <button type="button" class="platform__btn platform__btn--switch                                    "
+                            hx-get="/webzine/calendar/api/list/2026/6/switch"
+                            hx-push-url="/webzine/calendar/2026/6/switch"
+                            >
+                            <span class="platform__icon">
+                            </span>
+                                <span class="platform__label">SWITCH</span>
+                            </button>
+                        </li>
+                                        <li class="swiper-slide platform__item">
+                        <button type="button" class="platform__btn platform__btn--event"
+                                hx-get="/webzine/calendar/api/list/2026/6/event"
+                                hx-push-url="/webzine/calendar/2026/6/event">
+                        <span class="platform__icon">
+                        </span>
+                            <span class="platform__label">행사</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>                        </div>
+
+                        <!-- 리스트 -->
+                        <div class="calendar__body">
+    <!-- 캘린더 주요 일정 -->
+    <section class="calendar__section calendar__section--main calendar__section--active">
+        <ul class="calendar__list" id="list-item-container">
+                                                    <li class="calendar__item calendar__item--event calendar__item--fixed">
+        <a href="https://youtu.be/6NyLFwPhTFo?si=XgR6SZjQKlLZrSIO" class="calendar__item--group" target="_blank">
+            <div class="calendar__date"><span class='calendar__day-num'>06/13(토)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                                                                <img src="https://static.inven.co.kr/column/webzine/calendar/2026/i1107980326.jpg" alt="메이플스토리 여름 쇼케이스 | 'OVERDRIVE'" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__event-info">
+                        <div class="calendar__event-sort-wrap">
+                            <span class="calendar__event-sort">행사</span>
+                            <span class="calendar__event-country KR">
+                                <span class="blind">KR</span>
+                            </span>
+                        </div>
+                        <div class="calendar__event-title-wrap">
+                            <h3 class="calendar__title">
+                                <span class="title-text">
+                                    메이플스토리 여름 쇼케이스 | 'OVERDRIVE'                                </span>
+                                                                <span class="calendar__event-link-icon" aria-hidden="true">새창</span>
+                                                            </h3>
+                        </div>
+                    </div>
+                    <p class="calendar__company">‘메이플스토리’가 오는 6월 13일 2026 여름 쇼케이스 ‘오버드라이브(OVERDRIVE)’를 진행합니다.</p>
+                    <div class="calendar__event-tags">
+                                                    <span class="calendar__event-tag">메이플스토리</span>
+                                                    <span class="calendar__event-tag"> 오프라인</span>
+                                                    <span class="calendar__event-tag"> 온라인</span>
+                                                    <span class="calendar__event-tag"> 쇼케이스</span>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__social">
+                                                                                                            </div>
+            <div class="calendar__buttons">
+                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EB%A9%94%EC%9D%B4%ED%94%8C%EC%8A%A4%ED%86%A0%EB%A6%AC+%EC%97%AC%EB%A6%84+%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4+%7C+%27OVERDRIVE%27&dates=20260613/20260614&details=%E2%80%98%EB%A9%94%EC%9D%B4%ED%94%8C%EC%8A%A4%ED%86%A0%EB%A6%AC%E2%80%99%EA%B0%80+%EC%98%A4%EB%8A%94+6%EC%9B%94+13%EC%9D%BC+2026+%EC%97%AC%EB%A6%84+%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4+%E2%80%98%EC%98%A4%EB%B2%84%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%28OVERDRIVE%29%E2%80%99%EB%A5%BC+%EC%A7%84%ED%96%89%ED%95%A9%EB%8B%88%EB%8B%A4.+%3A+https%3A%2F%2Fyoutu.be%2F6NyLFwPhTFo%3Fsi%3DXgR6SZjQKlLZrSIO&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                                                    <a href="https://maplestory.nexon.com/promotion/event/2026/20260507/event01" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--event">
+        <a href="https://www.inven.co.kr/webzine/news/?news=316739" class="calendar__item--group" target="_blank">
+            <div class="calendar__date"><span class='calendar__day-num'>06/01(월)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                                                                <img src="https://static.inven.co.kr/column/webzine/calendar/2026/i1564188049.jpg" alt="붕괴: 스타레일 4.3버전 - 「산 자의 망천에 잠겨」" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__event-info">
+                        <div class="calendar__event-sort-wrap">
+                            <span class="calendar__event-sort">업데이트</span>
+                            <span class="calendar__event-country ">
+                                <span class="blind"></span>
+                            </span>
+                        </div>
+                        <div class="calendar__event-title-wrap">
+                            <h3 class="calendar__title">
+                                <span class="title-text">
+                                    붕괴: 스타레일 4.3버전 - 「산 자의 망천에 잠겨」                                </span>
+                                                                <span class="calendar__event-link-icon" aria-hidden="true">새창</span>
+                                                            </h3>
+                        </div>
+                    </div>
+                    <p class="calendar__company">4.3버전에서는 이상낙원 배후의 흑막이자 절멸대군 아삿 프라마드가 본격적으로 등장하며, FATE 2차 콜라보도 예고됐다.</p>
+                    <div class="calendar__event-tags">
+                                                    <span class="calendar__event-tag">업데이트</span>
+                                                    <span class="calendar__event-tag"> 붕괴: 스타레일</span>
+                                                    <span class="calendar__event-tag"> FATE</span>
+                                                    <span class="calendar__event-tag"> 신규 스토리</span>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__social">
+                                                                                                            </div>
+            <div class="calendar__buttons">
+                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EB%B6%95%EA%B4%B4%3A+%EC%8A%A4%ED%83%80%EB%A0%88%EC%9D%BC+4.3%EB%B2%84%EC%A0%84+-+%E3%80%8C%EC%82%B0+%EC%9E%90%EC%9D%98+%EB%A7%9D%EC%B2%9C%EC%97%90+%EC%9E%A0%EA%B2%A8%E3%80%8D&dates=20260601/20260602&details=4.3%EB%B2%84%EC%A0%84%EC%97%90%EC%84%9C%EB%8A%94+%EC%9D%B4%EC%83%81%EB%82%99%EC%9B%90+%EB%B0%B0%ED%9B%84%EC%9D%98+%ED%9D%91%EB%A7%89%EC%9D%B4%EC%9E%90+%EC%A0%88%EB%A9%B8%EB%8C%80%EA%B5%B0+%EC%95%84%EC%82%BF+%ED%94%84%EB%9D%BC%EB%A7%88%EB%93%9C%EA%B0%80+%EB%B3%B8%EA%B2%A9%EC%A0%81%EC%9C%BC%EB%A1%9C+%EB%93%B1%EC%9E%A5%ED%95%98%EB%A9%B0%2C+FATE+2%EC%B0%A8+%EC%BD%9C%EB%9D%BC%EB%B3%B4%EB%8F%84+%EC%98%88%EA%B3%A0%EB%90%90%EB%8B%A4.+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fnews%2F%3Fnews%3D316739&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                                                    <a href="https://hsr.hoyoverse.com/ua/pc-landing?macro=1&ms=google&cid=22583627276&agid=185078763732&crid=753609699050&kwid=%EB%B6%95%EA%B4%B4%EC%8A%A4%ED%83%80%EB%A0%88%EC%9D%BC&nw=g&mt=e&dv=c&dvmd=&pl=&tgid=kwd-1966235147949&gclid=Cj0KCQjwz9_QBhD_ARIsADnSCfDcp_RfMENPc5Oj6KbX9jnF-v46mMFy3NLBBfKDF173Ank-TJSPNkkaAoGPEALw_wcB&gad_source=1&gad_campaignid=22583627276&gbraid=0AAAAAoiRZe0Z2hTaqtfa8KsWih4fMi0au&gclid=Cj0KCQjwz9_QBhD_ARIsADnSCfDcp_RfMENPc5Oj6KbX9jnF-v46mMFy3NLBBfKDF173Ank-TJSPNkkaAoGPEALw_wcB" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--event">
+        <a href="https://algernonproduct.co.jp/nikke_goods/popup_event/2025/seoul_ko.php" class="calendar__item--group" target="_blank">
+            <div class="calendar__date"><span class='calendar__day-num'>06/01(월)</span> ~ <span class='calendar__day-num'>06/14(일)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                                                                <img src="https://static.inven.co.kr/column/webzine/calendar/2026/i1531647414.jpg" alt="승리의 여신: 니케 - ‘에리어 방어전’ 팝업 스토어" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__event-info">
+                        <div class="calendar__event-sort-wrap">
+                            <span class="calendar__event-sort">행사</span>
+                            <span class="calendar__event-country KR">
+                                <span class="blind">KR</span>
+                            </span>
+                        </div>
+                        <div class="calendar__event-title-wrap">
+                            <h3 class="calendar__title">
+                                <span class="title-text">
+                                    승리의 여신: 니케 - ‘에리어 방어전’ 팝업 스토어                                </span>
+                                                                <span class="calendar__event-link-icon" aria-hidden="true">새창</span>
+                                                            </h3>
+                        </div>
+                    </div>
+                    <p class="calendar__company">‘에리어 방어전’은 지역별 특색을 기반으로 유저들과의 접점 확대를 위한 오프라인 이벤트로,  개최 도시의 명소와 캐릭터를 결합한 일러스트 및 지역 한정 굿즈를 선보인다.</p>
+                    <div class="calendar__event-tags">
+                                                    <span class="calendar__event-tag">승리의 여신: 니케</span>
+                                                    <span class="calendar__event-tag"> 오프라인</span>
+                                                    <span class="calendar__event-tag"> 팝업 스토어</span>
+                                                    <span class="calendar__event-tag"> 서울</span>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__social">
+                                                                                                            </div>
+            <div class="calendar__buttons">
+                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EC%8A%B9%EB%A6%AC%EC%9D%98+%EC%97%AC%EC%8B%A0%3A+%EB%8B%88%EC%BC%80+-+%E2%80%98%EC%97%90%EB%A6%AC%EC%96%B4+%EB%B0%A9%EC%96%B4%EC%A0%84%E2%80%99+%ED%8C%9D%EC%97%85+%EC%8A%A4%ED%86%A0%EC%96%B4&dates=20260601/20260615&details=%E2%80%98%EC%97%90%EB%A6%AC%EC%96%B4+%EB%B0%A9%EC%96%B4%EC%A0%84%E2%80%99%EC%9D%80+%EC%A7%80%EC%97%AD%EB%B3%84+%ED%8A%B9%EC%83%89%EC%9D%84+%EA%B8%B0%EB%B0%98%EC%9C%BC%EB%A1%9C+%EC%9C%A0%EC%A0%80%EB%93%A4%EA%B3%BC%EC%9D%98+%EC%A0%91%EC%A0%90+%ED%99%95%EB%8C%80%EB%A5%BC+%EC%9C%84%ED%95%9C+%EC%98%A4%ED%94%84%EB%9D%BC%EC%9D%B8+%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A1%9C%2C++%EA%B0%9C%EC%B5%9C+%EB%8F%84%EC%8B%9C%EC%9D%98+%EB%AA%85%EC%86%8C%EC%99%80+%EC%BA%90%EB%A6%AD%ED%84%B0%EB%A5%BC+%EA%B2%B0%ED%95%A9%ED%95%9C+%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8+%EB%B0%8F+%EC%A7%80%EC%97%AD+%ED%95%9C%EC%A0%95+%EA%B5%BF%EC%A6%88%EB%A5%BC+%EC%84%A0%EB%B3%B4%EC%9D%B8%EB%8B%A4.+%3A+https%3A%2F%2Falgernonproduct.co.jp%2Fnikke_goods%2Fpopup_event%2F2025%2Fseoul_ko.php&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                                                    <a href="https://nikke-kr.com/" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--normal">
+        <a role="button"
+           href="/webzine/calendar/game/13689"
+           class="calendar__item--group"
+           data-game-idx="13689">
+            <div class="calendar__date"><span class='calendar__day-num'>06/02(화)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                    
+                                            <img src="https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1130011887.jpg" alt="배틀쉽 커맨드" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__platform">
+                        <span class="calendar__platform-txt">얼리액세스</span>
+
+                        <div class="calendar__platform-icons">
+                                                                <span class="calendar__platform-icon calendar__platform-icon--pc" aria-label="PC" title="PC"></span>
+                                                        </div>
+                    </div>
+                    <h3 class="calendar__title">배틀쉽 커맨드</h3>
+                    <span class="calendar__company">Battleship Command</span>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__buttons">
+                                    <button type="button" class="calendar__btn calendar__btn--video"
+                            data-youtube="I56c3FdYXqQ"
+                            data-google-calendar="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EB%B0%B0%ED%8B%80%EC%89%BD+%EC%BB%A4%EB%A7%A8%EB%93%9C&dates=20260602/20260603&details=%EB%B0%B0%ED%8B%80%EC%89%BD+%EC%BB%A4%EB%A7%A8%EB%93%9C+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13689&sf=true&output=xml"
+                            _="on click
+                            put `<div class='video-modal__skeleton'><div class='spinner'></div></div>` into .video-modal__video-wrapper
+                            put `<iframe id='video-modal-iframe' src='https://www.youtube.com/embed/` + @data-youtube + `?autoplay=1&mute=1&playsinline=1&rel=0&origin=https://www.inven.co.kr' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>` at end of .video-modal__video-wrapper
+                            if @data-google-calendar is not empty
+                                set .video-modal__btn--calendar@href to @data-google-calendar
+                                remove .hidden from .video-modal__btn--calendar
+                            else
+                                add .hidden to .video-modal__btn--calendar
+                            end
+                            add .is-active to #video-modal
+                            wait for load from #video-modal-iframe
+                            remove the first .video-modal__skeleton"
+                    >
+                        영상
+                    </button>
+                                                    <div class="calendar__buttons">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EB%B0%B0%ED%8B%80%EC%89%BD+%EC%BB%A4%EB%A7%A8%EB%93%9C&dates=20260602/20260603&details=%EB%B0%B0%ED%8B%80%EC%89%BD+%EC%BB%A4%EB%A7%A8%EB%93%9C+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13689&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                    </div>
+                                                    <a href="https://store.steampowered.com/app/3367430/Battleship_Command/" class="calendar__btn calendar__btn--like" target="_blank">찜</a>
+                                                                    <a href="https://www.microprose.com" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--event">
+        <a href="https://www.youtube.com/live/cvh0xXmu0bs?si=43aVfbAq_7o2A2E0" class="calendar__item--group" target="_blank">
+            <div class="calendar__date"><span class='calendar__day-num'>06/03(수)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                                                                <img src="https://static.inven.co.kr/column/webzine/calendar/2026/i1582969264.jpg" alt="스테이트 오브 플레이" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__event-info">
+                        <div class="calendar__event-sort-wrap">
+                            <span class="calendar__event-sort">행사</span>
+                            <span class="calendar__event-country ">
+                                <span class="blind"></span>
+                            </span>
+                        </div>
+                        <div class="calendar__event-title-wrap">
+                            <h3 class="calendar__title">
+                                <span class="title-text">
+                                    스테이트 오브 플레이                                </span>
+                                                                <span class="calendar__event-link-icon" aria-hidden="true">새창</span>
+                                                            </h3>
+                        </div>
+                    </div>
+                    <p class="calendar__company">State of Play가 60분 이상 분량의 업데이트, 발표 및 게임플레이 공개를 6월 3일 수요일(KST)에 진행합니다.</p>
+                    <div class="calendar__event-tags">
+                                                    <span class="calendar__event-tag">쇼케이스</span>
+                                                    <span class="calendar__event-tag"> SIE</span>
+                                                    <span class="calendar__event-tag"> PS5</span>
+                                                    <span class="calendar__event-tag"> 온라인</span>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__social">
+                                                                                                            </div>
+            <div class="calendar__buttons">
+                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%8A%B8+%EC%98%A4%EB%B8%8C+%ED%94%8C%EB%A0%88%EC%9D%B4&dates=20260603/20260604&details=State+of+Play%EA%B0%80+60%EB%B6%84+%EC%9D%B4%EC%83%81+%EB%B6%84%EB%9F%89%EC%9D%98+%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%2C+%EB%B0%9C%ED%91%9C+%EB%B0%8F+%EA%B2%8C%EC%9E%84%ED%94%8C%EB%A0%88%EC%9D%B4+%EA%B3%B5%EA%B0%9C%EB%A5%BC+6%EC%9B%94+3%EC%9D%BC+%EC%88%98%EC%9A%94%EC%9D%BC%28KST%29%EC%97%90+%EC%A7%84%ED%96%89%ED%95%A9%EB%8B%88%EB%8B%A4.+%3A+https%3A%2F%2Fwww.youtube.com%2Flive%2Fcvh0xXmu0bs%3Fsi%3D43aVfbAq_7o2A2E0&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                                                    <a href="https://blog.playstation.com/2026/05/20/state-of-play-returns-tuesday-june-2/" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--event">
+        <a href="https://www.inven.co.kr/webzine/news/?news=316747" class="calendar__item--group" target="_blank">
+            <div class="calendar__date"><span class='calendar__day-num'>06/03(수)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                                                                <img src="https://static.inven.co.kr/column/webzine/calendar/2026/i1230379883.jpg" alt="이환 1.1 업데이트 - '꿈의 회랑'" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__event-info">
+                        <div class="calendar__event-sort-wrap">
+                            <span class="calendar__event-sort">업데이트</span>
+                            <span class="calendar__event-country ">
+                                <span class="blind"></span>
+                            </span>
+                        </div>
+                        <div class="calendar__event-title-wrap">
+                            <h3 class="calendar__title">
+                                <span class="title-text">
+                                    이환 1.1 업데이트 - '꿈의 회랑'                                </span>
+                                                                <span class="calendar__event-link-icon" aria-hidden="true">새창</span>
+                                                            </h3>
+                        </div>
+                    </div>
+                    <p class="calendar__company">이번 1.1버전에서는 신규 지역 '해오름섬'이 추가되며, 신규 캐릭터 2종과 포르쉐 콜라보레이션도 진행된다.</p>
+                    <div class="calendar__event-tags">
+                                                    <span class="calendar__event-tag">업데이트</span>
+                                                    <span class="calendar__event-tag"> 이환</span>
+                                                    <span class="calendar__event-tag"> 포르쉐</span>
+                                                    <span class="calendar__event-tag"> 신규 지역</span>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__social">
+                                                                                                            </div>
+            <div class="calendar__buttons">
+                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EC%9D%B4%ED%99%98+1.1+%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8+-+%27%EA%BF%88%EC%9D%98+%ED%9A%8C%EB%9E%91%27&dates=20260603/20260604&details=%EC%9D%B4%EB%B2%88+1.1%EB%B2%84%EC%A0%84%EC%97%90%EC%84%9C%EB%8A%94+%EC%8B%A0%EA%B7%9C+%EC%A7%80%EC%97%AD+%27%ED%95%B4%EC%98%A4%EB%A6%84%EC%84%AC%27%EC%9D%B4+%EC%B6%94%EA%B0%80%EB%90%98%EB%A9%B0%2C+%EC%8B%A0%EA%B7%9C+%EC%BA%90%EB%A6%AD%ED%84%B0+2%EC%A2%85%EA%B3%BC+%ED%8F%AC%EB%A5%B4%EC%89%90+%EC%BD%9C%EB%9D%BC%EB%B3%B4%EB%A0%88%EC%9D%B4%EC%85%98%EB%8F%84+%EC%A7%84%ED%96%89%EB%90%9C%EB%8B%A4.+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fnews%2F%3Fnews%3D316747&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                                                    <a href="https://nte.perfectworld.com/kr/index.html" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--normal">
+        <a role="button"
+           href="/webzine/calendar/game/13698"
+           class="calendar__item--group"
+           data-game-idx="13698">
+            <div class="calendar__date"><span class='calendar__day-num'>06/03(수)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                    
+                                            <img src="https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1550127867.jpg" alt="페이트키퍼" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__platform">
+                        <span class="calendar__platform-txt">출시</span>
+
+                        <div class="calendar__platform-icons">
+                                                                <span class="calendar__platform-icon calendar__platform-icon--pc" aria-label="PC" title="PC"></span>
+                                                        </div>
+                    </div>
+                    <h3 class="calendar__title">페이트키퍼</h3>
+                    <span class="calendar__company">Fatekeeper</span>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__buttons">
+                                    <button type="button" class="calendar__btn calendar__btn--video"
+                            data-youtube="SQtYGb-IZR0"
+                            data-google-calendar="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%ED%8E%98%EC%9D%B4%ED%8A%B8%ED%82%A4%ED%8D%BC&dates=20260603/20260604&details=%ED%8E%98%EC%9D%B4%ED%8A%B8%ED%82%A4%ED%8D%BC+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13698&sf=true&output=xml"
+                            _="on click
+                            put `<div class='video-modal__skeleton'><div class='spinner'></div></div>` into .video-modal__video-wrapper
+                            put `<iframe id='video-modal-iframe' src='https://www.youtube.com/embed/` + @data-youtube + `?autoplay=1&mute=1&playsinline=1&rel=0&origin=https://www.inven.co.kr' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>` at end of .video-modal__video-wrapper
+                            if @data-google-calendar is not empty
+                                set .video-modal__btn--calendar@href to @data-google-calendar
+                                remove .hidden from .video-modal__btn--calendar
+                            else
+                                add .hidden to .video-modal__btn--calendar
+                            end
+                            add .is-active to #video-modal
+                            wait for load from #video-modal-iframe
+                            remove the first .video-modal__skeleton"
+                    >
+                        영상
+                    </button>
+                                                    <div class="calendar__buttons">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%ED%8E%98%EC%9D%B4%ED%8A%B8%ED%82%A4%ED%8D%BC&dates=20260603/20260604&details=%ED%8E%98%EC%9D%B4%ED%8A%B8%ED%82%A4%ED%8D%BC+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13698&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                    </div>
+                                                    <a href="https://store.steampowered.com/app/2186990/Fatekeeper/?curator_clanid=4777282" class="calendar__btn calendar__btn--like" target="_blank">찜</a>
+                                                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--normal">
+        <a role="button"
+           href="/webzine/calendar/game/13532"
+           class="calendar__item--group"
+           data-game-idx="13532">
+            <div class="calendar__date"><span class='calendar__day-num'>06/04(목)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                    
+                                            <img src="https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1758751166.jpg" alt="칼크스" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__platform">
+                        <span class="calendar__platform-txt">출시</span>
+
+                        <div class="calendar__platform-icons">
+                                                                <span class="calendar__platform-icon calendar__platform-icon--pc" aria-label="PC" title="PC"></span>
+                                                        </div>
+                    </div>
+                    <h3 class="calendar__title">칼크스</h3>
+                    <span class="calendar__company">CALX</span>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__buttons">
+                                    <button type="button" class="calendar__btn calendar__btn--video"
+                            data-youtube="5z2zKZ5S66U"
+                            data-google-calendar="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EC%B9%BC%ED%81%AC%EC%8A%A4&dates=20260604/20260605&details=%EC%B9%BC%ED%81%AC%EC%8A%A4+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13532&sf=true&output=xml"
+                            _="on click
+                            put `<div class='video-modal__skeleton'><div class='spinner'></div></div>` into .video-modal__video-wrapper
+                            put `<iframe id='video-modal-iframe' src='https://www.youtube.com/embed/` + @data-youtube + `?autoplay=1&mute=1&playsinline=1&rel=0&origin=https://www.inven.co.kr' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>` at end of .video-modal__video-wrapper
+                            if @data-google-calendar is not empty
+                                set .video-modal__btn--calendar@href to @data-google-calendar
+                                remove .hidden from .video-modal__btn--calendar
+                            else
+                                add .hidden to .video-modal__btn--calendar
+                            end
+                            add .is-active to #video-modal
+                            wait for load from #video-modal-iframe
+                            remove the first .video-modal__skeleton"
+                    >
+                        영상
+                    </button>
+                                                    <div class="calendar__buttons">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EC%B9%BC%ED%81%AC%EC%8A%A4&dates=20260604/20260605&details=%EC%B9%BC%ED%81%AC%EC%8A%A4+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13532&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                    </div>
+                                                    <a href="https://store.steampowered.com/app/2022640/CALX/" class="calendar__btn calendar__btn--like" target="_blank">찜</a>
+                                                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--normal">
+        <a role="button"
+           href="/webzine/calendar/game/13668"
+           class="calendar__item--group"
+           data-game-idx="13668">
+            <div class="calendar__date"><span class='calendar__day-num'>06/04(목)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                    
+                                            <img src="https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1474934429.jpg" alt="투르 드 프랑스2026" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__platform">
+                        <span class="calendar__platform-txt">출시</span>
+
+                        <div class="calendar__platform-icons">
+                                                                <span class="calendar__platform-icon calendar__platform-icon--pc" aria-label="PC" title="PC"></span>
+                                                                    <span class="calendar__platform-icon calendar__platform-icon--ps" aria-label="PS" title="PS"></span>
+                                                                    <span class="calendar__platform-icon calendar__platform-icon--xbox" aria-label="XBOX" title="XBOX"></span>
+                                                        </div>
+                    </div>
+                    <h3 class="calendar__title">투르 드 프랑스2026</h3>
+                    <span class="calendar__company">Tour de France2026</span>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__buttons">
+                                    <button type="button" class="calendar__btn calendar__btn--video"
+                            data-youtube="IZIaOAFPu-4"
+                            data-google-calendar="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%ED%88%AC%EB%A5%B4+%EB%93%9C+%ED%94%84%EB%9E%91%EC%8A%A42026&dates=20260604/20260605&details=%ED%88%AC%EB%A5%B4+%EB%93%9C+%ED%94%84%EB%9E%91%EC%8A%A42026+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13668&sf=true&output=xml"
+                            _="on click
+                            put `<div class='video-modal__skeleton'><div class='spinner'></div></div>` into .video-modal__video-wrapper
+                            put `<iframe id='video-modal-iframe' src='https://www.youtube.com/embed/` + @data-youtube + `?autoplay=1&mute=1&playsinline=1&rel=0&origin=https://www.inven.co.kr' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>` at end of .video-modal__video-wrapper
+                            if @data-google-calendar is not empty
+                                set .video-modal__btn--calendar@href to @data-google-calendar
+                                remove .hidden from .video-modal__btn--calendar
+                            else
+                                add .hidden to .video-modal__btn--calendar
+                            end
+                            add .is-active to #video-modal
+                            wait for load from #video-modal-iframe
+                            remove the first .video-modal__skeleton"
+                    >
+                        영상
+                    </button>
+                                                    <div class="calendar__buttons">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%ED%88%AC%EB%A5%B4+%EB%93%9C+%ED%94%84%EB%9E%91%EC%8A%A42026&dates=20260604/20260605&details=%ED%88%AC%EB%A5%B4+%EB%93%9C+%ED%94%84%EB%9E%91%EC%8A%A42026+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13668&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                    </div>
+                                                    <a href="https://store.steampowered.com/app/3936520/Tour_de_France_2026/" class="calendar__btn calendar__btn--like" target="_blank">찜</a>
+                                                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--normal">
+        <a role="button"
+           href="/webzine/calendar/game/13690"
+           class="calendar__item--group"
+           data-game-idx="13690">
+            <div class="calendar__date"><span class='calendar__day-num'>06/04(목)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                    
+                                            <img src="https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1692406149.jpg" alt="스완 송" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__platform">
+                        <span class="calendar__platform-txt">출시</span>
+
+                        <div class="calendar__platform-icons">
+                                                                <span class="calendar__platform-icon calendar__platform-icon--pc" aria-label="PC" title="PC"></span>
+                                                        </div>
+                    </div>
+                    <h3 class="calendar__title">스완 송</h3>
+                    <span class="calendar__company">Swan Song</span>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__buttons">
+                                    <button type="button" class="calendar__btn calendar__btn--video"
+                            data-youtube="F_wtzRF3vxc"
+                            data-google-calendar="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EC%8A%A4%EC%99%84+%EC%86%A1&dates=20260604/20260605&details=%EC%8A%A4%EC%99%84+%EC%86%A1+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13690&sf=true&output=xml"
+                            _="on click
+                            put `<div class='video-modal__skeleton'><div class='spinner'></div></div>` into .video-modal__video-wrapper
+                            put `<iframe id='video-modal-iframe' src='https://www.youtube.com/embed/` + @data-youtube + `?autoplay=1&mute=1&playsinline=1&rel=0&origin=https://www.inven.co.kr' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>` at end of .video-modal__video-wrapper
+                            if @data-google-calendar is not empty
+                                set .video-modal__btn--calendar@href to @data-google-calendar
+                                remove .hidden from .video-modal__btn--calendar
+                            else
+                                add .hidden to .video-modal__btn--calendar
+                            end
+                            add .is-active to #video-modal
+                            wait for load from #video-modal-iframe
+                            remove the first .video-modal__skeleton"
+                    >
+                        영상
+                    </button>
+                                                    <div class="calendar__buttons">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EC%8A%A4%EC%99%84+%EC%86%A1&dates=20260604/20260605&details=%EC%8A%A4%EC%99%84+%EC%86%A1+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13690&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                    </div>
+                                                    <a href="https://store.steampowered.com/app/3265290/Swan_Song/" class="calendar__btn calendar__btn--like" target="_blank">찜</a>
+                                                                    <a href="https://www.businessgoose.be/" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--normal">
+        <a role="button"
+           href="/webzine/calendar/game/11278"
+           class="calendar__item--group"
+           data-game-idx="11278">
+            <div class="calendar__date"><span class='calendar__day-num'>06/06(토)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                    
+                                            <img src="https://static.inven.co.kr/column/webzine3/gamelogo/2022/i8218914711.jpg" alt="고딕 리메이크" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__platform">
+                        <span class="calendar__platform-txt">출시</span>
+
+                        <div class="calendar__platform-icons">
+                                                                <span class="calendar__platform-icon calendar__platform-icon--pc" aria-label="PC" title="PC"></span>
+                                                                    <span class="calendar__platform-icon calendar__platform-icon--ps" aria-label="PS" title="PS"></span>
+                                                                    <span class="calendar__platform-icon calendar__platform-icon--xbox" aria-label="XBOX" title="XBOX"></span>
+                                                        </div>
+                    </div>
+                    <h3 class="calendar__title">고딕 리메이크</h3>
+                    <span class="calendar__company">Gothic 1 Remake</span>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__buttons">
+                                    <button type="button" class="calendar__btn calendar__btn--video"
+                            data-youtube="CxrZPIWSGK4"
+                            data-google-calendar="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EA%B3%A0%EB%94%95+%EB%A6%AC%EB%A9%94%EC%9D%B4%ED%81%AC&dates=20260606/20260607&details=%EA%B3%A0%EB%94%95+%EB%A6%AC%EB%A9%94%EC%9D%B4%ED%81%AC+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F11278&sf=true&output=xml"
+                            _="on click
+                            put `<div class='video-modal__skeleton'><div class='spinner'></div></div>` into .video-modal__video-wrapper
+                            put `<iframe id='video-modal-iframe' src='https://www.youtube.com/embed/` + @data-youtube + `?autoplay=1&mute=1&playsinline=1&rel=0&origin=https://www.inven.co.kr' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>` at end of .video-modal__video-wrapper
+                            if @data-google-calendar is not empty
+                                set .video-modal__btn--calendar@href to @data-google-calendar
+                                remove .hidden from .video-modal__btn--calendar
+                            else
+                                add .hidden to .video-modal__btn--calendar
+                            end
+                            add .is-active to #video-modal
+                            wait for load from #video-modal-iframe
+                            remove the first .video-modal__skeleton"
+                    >
+                        영상
+                    </button>
+                                                    <div class="calendar__buttons">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EA%B3%A0%EB%94%95+%EB%A6%AC%EB%A9%94%EC%9D%B4%ED%81%AC&dates=20260606/20260607&details=%EA%B3%A0%EB%94%95+%EB%A6%AC%EB%A9%94%EC%9D%B4%ED%81%AC+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F11278&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                    </div>
+                                                    <a href="https://store.steampowered.com/app/1297900/Gothic_1_Remake/" class="calendar__btn calendar__btn--like" target="_blank">찜</a>
+                                                                    <a href="https://gothic-game.com/" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--event">
+        <a href="https://www.summergamefest.com/" class="calendar__item--group" target="_blank">
+            <div class="calendar__date"><span class='calendar__day-num'>06/06(토)</span> ~ <span class='calendar__day-num'>06/09(화)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                                                                <img src="https://static.inven.co.kr/column/webzine/calendar/2026/i1483707528.jpg" alt="서머 게임 페스트 2026" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__event-info">
+                        <div class="calendar__event-sort-wrap">
+                            <span class="calendar__event-sort">행사</span>
+                            <span class="calendar__event-country US">
+                                <span class="blind">US</span>
+                            </span>
+                        </div>
+                        <div class="calendar__event-title-wrap">
+                            <h3 class="calendar__title">
+                                <span class="title-text">
+                                    서머 게임 페스트 2026                                </span>
+                                                                <span class="calendar__event-link-icon" aria-hidden="true">새창</span>
+                                                            </h3>
+                        </div>
+                    </div>
+                    <p class="calendar__company">본격적인 게임 쇼케이스의 시작, 서머 게임 페스트(SGF)가 한국 시각으로 6월 6일부터 미국 LA에서 2026년 이벤트를 진행한다. 메인 쇼케이스 다음 날부터는 미디어와 인플루언서를 대상으로 한 'SGF 플레이데이'가 사흘간 운영된다. iam8bit이 제작을 맡은 초청 전용 이벤트에서는 라이브 쇼에서 공개된 신작 타이틀을 직접 체험할 수 있는 기회가 마련된다. 언론인과 크리에이터들이 주요 참가 대상이며, 인터랙티브 전시와 핸즈온 데모로 구성될 예정이다.</p>
+                    <div class="calendar__event-tags">
+                                                    <span class="calendar__event-tag">오프라인</span>
+                                                    <span class="calendar__event-tag"> 서머 게임 페스트</span>
+                                                    <span class="calendar__event-tag"> SGF</span>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__social">
+                                                                                    <a href="https://x.com/summergamefest/status/2026058511537373615?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E2026058511537373615%7Ctwgr%5E05675a2d295862a7073d41debf38fcdb2d3900bc%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fbbs.ruliweb.com%2Fps%2Fboard%2F300001%2Fread%2F2348821" target="_blank" aria-label="X" class="calendar__sns calendar__sns--x">
+                    </a>
+                                                            </div>
+            <div class="calendar__buttons">
+                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EC%84%9C%EB%A8%B8+%EA%B2%8C%EC%9E%84+%ED%8E%98%EC%8A%A4%ED%8A%B8+2026&dates=20260606/20260610&details=%EB%B3%B8%EA%B2%A9%EC%A0%81%EC%9D%B8+%EA%B2%8C%EC%9E%84+%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4%EC%9D%98+%EC%8B%9C%EC%9E%91%2C+%EC%84%9C%EB%A8%B8+%EA%B2%8C%EC%9E%84+%ED%8E%98%EC%8A%A4%ED%8A%B8%28SGF%29%EA%B0%80+%ED%95%9C%EA%B5%AD+%EC%8B%9C%EA%B0%81%EC%9C%BC%EB%A1%9C+6%EC%9B%94+6%EC%9D%BC%EB%B6%80%ED%84%B0+%EB%AF%B8%EA%B5%AD+LA%EC%97%90%EC%84%9C+2026%EB%85%84+%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC+%EC%A7%84%ED%96%89%ED%95%9C%EB%8B%A4.+%EB%A9%94%EC%9D%B8+%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4+%EB%8B%A4%EC%9D%8C+%EB%82%A0%EB%B6%80%ED%84%B0%EB%8A%94+%EB%AF%B8%EB%94%94%EC%96%B4%EC%99%80+%EC%9D%B8%ED%94%8C%EB%A3%A8%EC%96%B8%EC%84%9C%EB%A5%BC+%EB%8C%80%EC%83%81%EC%9C%BC%EB%A1%9C+%ED%95%9C+%27SGF+%ED%94%8C%EB%A0%88%EC%9D%B4%EB%8D%B0%EC%9D%B4%27%EA%B0%80+%EC%82%AC%ED%9D%98%EA%B0%84+%EC%9A%B4%EC%98%81%EB%90%9C%EB%8B%A4.+iam8bit%EC%9D%B4+%EC%A0%9C%EC%9E%91%EC%9D%84+%EB%A7%A1%EC%9D%80+%EC%B4%88%EC%B2%AD+%EC%A0%84%EC%9A%A9+%EC%9D%B4%EB%B2%A4%ED%8A%B8%EC%97%90%EC%84%9C%EB%8A%94+%EB%9D%BC%EC%9D%B4%EB%B8%8C+%EC%87%BC%EC%97%90%EC%84%9C+%EA%B3%B5%EA%B0%9C%EB%90%9C+%EC%8B%A0%EC%9E%91+%ED%83%80%EC%9D%B4%ED%8B%80%EC%9D%84+%EC%A7%81%EC%A0%91+%EC%B2%B4%ED%97%98%ED%95%A0+%EC%88%98+%EC%9E%88%EB%8A%94+%EA%B8%B0%ED%9A%8C%EA%B0%80+%EB%A7%88%EB%A0%A8%EB%90%9C%EB%8B%A4.+%EC%96%B8%EB%A1%A0%EC%9D%B8%EA%B3%BC+%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0%EB%93%A4%EC%9D%B4+%EC%A3%BC%EC%9A%94+%EC%B0%B8%EA%B0%80+%EB%8C%80%EC%83%81%EC%9D%B4%EB%A9%B0%2C+%EC%9D%B8%ED%84%B0%EB%9E%99%ED%8B%B0%EB%B8%8C+%EC%A0%84%EC%8B%9C%EC%99%80+%ED%95%B8%EC%A6%88%EC%98%A8+%EB%8D%B0%EB%AA%A8%EB%A1%9C+%EA%B5%AC%EC%84%B1%EB%90%A0+%EC%98%88%EC%A0%95%EC%9D%B4%EB%8B%A4.+%3A+https%3A%2F%2Fwww.summergamefest.com%2F&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                                                    <a href="https://www.summergamefest.com/" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--event">
+        <a href="https://www.youtube.com/user/xbox/hub" class="calendar__item--group" target="_blank">
+            <div class="calendar__date"><span class='calendar__day-num'>06/08(월)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                                                                <img src="https://static.inven.co.kr/column/webzine/calendar/2026/i1365345965.jpg" alt="Xbox 게임 쇼케이스 2026" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__event-info">
+                        <div class="calendar__event-sort-wrap">
+                            <span class="calendar__event-sort">행사</span>
+                            <span class="calendar__event-country ">
+                                <span class="blind"></span>
+                            </span>
+                        </div>
+                        <div class="calendar__event-title-wrap">
+                            <h3 class="calendar__title">
+                                <span class="title-text">
+                                    Xbox 게임 쇼케이스 2026                                </span>
+                                                                <span class="calendar__event-link-icon" aria-hidden="true">새창</span>
+                                                            </h3>
+                        </div>
+                    </div>
+                    <p class="calendar__company">Xbox 신작 게임들의 첫 번째 게임플레이 영상과 주요 소식을 공개하고, Gears of War: E-Day Direct도 이어서 진행됩니다.</p>
+                    <div class="calendar__event-tags">
+                                                    <span class="calendar__event-tag">XBOX</span>
+                                                    <span class="calendar__event-tag"> 쇼케이스</span>
+                                                    <span class="calendar__event-tag"> 온라인</span>
+                                                    <span class="calendar__event-tag"> SGF</span>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__social">
+                                                                                                            </div>
+            <div class="calendar__buttons">
+                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Xbox+%EA%B2%8C%EC%9E%84+%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4+2026&dates=20260608/20260609&details=Xbox+%EC%8B%A0%EC%9E%91+%EA%B2%8C%EC%9E%84%EB%93%A4%EC%9D%98+%EC%B2%AB+%EB%B2%88%EC%A7%B8+%EA%B2%8C%EC%9E%84%ED%94%8C%EB%A0%88%EC%9D%B4+%EC%98%81%EC%83%81%EA%B3%BC+%EC%A3%BC%EC%9A%94+%EC%86%8C%EC%8B%9D%EC%9D%84+%EA%B3%B5%EA%B0%9C%ED%95%98%EA%B3%A0%2C+Gears+of+War%3A+E-Day+Direct%EB%8F%84+%EC%9D%B4%EC%96%B4%EC%84%9C+%EC%A7%84%ED%96%89%EB%90%A9%EB%8B%88%EB%8B%A4.+%3A+https%3A%2F%2Fwww.youtube.com%2Fuser%2Fxbox%2Fhub&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                                                    <a href="https://news.xbox.com/en-us/2026/03/30/xbox-games-showcase-2026-gears-of-war-e-day-direct/" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--normal">
+        <a role="button"
+           href="/webzine/calendar/game/13691"
+           class="calendar__item--group"
+           data-game-idx="13691">
+            <div class="calendar__date"><span class='calendar__day-num'>06/08(월)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                    
+                                            <img src="https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1118504728.jpg" alt="솔라펑크" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__platform">
+                        <span class="calendar__platform-txt">출시</span>
+
+                        <div class="calendar__platform-icons">
+                                                                <span class="calendar__platform-icon calendar__platform-icon--pc" aria-label="PC" title="PC"></span>
+                                                                    <span class="calendar__platform-icon calendar__platform-icon--ps" aria-label="PS" title="PS"></span>
+                                                                    <span class="calendar__platform-icon calendar__platform-icon--xbox" aria-label="XBOX" title="XBOX"></span>
+                                                                    <span class="calendar__platform-icon calendar__platform-icon--switch" aria-label="SWITCH" title="SWITCH"></span>
+                                                        </div>
+                    </div>
+                    <h3 class="calendar__title">솔라펑크</h3>
+                    <span class="calendar__company">Solarpunk</span>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__buttons">
+                                    <button type="button" class="calendar__btn calendar__btn--video"
+                            data-youtube="ZLRwrqtRmKg"
+                            data-google-calendar="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EC%86%94%EB%9D%BC%ED%8E%91%ED%81%AC&dates=20260608/20260609&details=%EC%86%94%EB%9D%BC%ED%8E%91%ED%81%AC+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13691&sf=true&output=xml"
+                            _="on click
+                            put `<div class='video-modal__skeleton'><div class='spinner'></div></div>` into .video-modal__video-wrapper
+                            put `<iframe id='video-modal-iframe' src='https://www.youtube.com/embed/` + @data-youtube + `?autoplay=1&mute=1&playsinline=1&rel=0&origin=https://www.inven.co.kr' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>` at end of .video-modal__video-wrapper
+                            if @data-google-calendar is not empty
+                                set .video-modal__btn--calendar@href to @data-google-calendar
+                                remove .hidden from .video-modal__btn--calendar
+                            else
+                                add .hidden to .video-modal__btn--calendar
+                            end
+                            add .is-active to #video-modal
+                            wait for load from #video-modal-iframe
+                            remove the first .video-modal__skeleton"
+                    >
+                        영상
+                    </button>
+                                                    <div class="calendar__buttons">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EC%86%94%EB%9D%BC%ED%8E%91%ED%81%AC&dates=20260608/20260609&details=%EC%86%94%EB%9D%BC%ED%8E%91%ED%81%AC+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13691&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                    </div>
+                                                    <a href="https://store.steampowered.com/app/1805110/Solarpunk/" class="calendar__btn calendar__btn--like" target="_blank">찜</a>
+                                                                    <a href="https://www.rokaplay.com/solarpunk" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--normal">
+        <a role="button"
+           href="/webzine/calendar/game/13490"
+           class="calendar__item--group"
+           data-game-idx="13490">
+            <div class="calendar__date"><span class='calendar__day-num'>06/09(화)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                    
+                                            <img src="https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1292645784.jpg" alt="레이어 랜드" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__platform">
+                        <span class="calendar__platform-txt">출시</span>
+
+                        <div class="calendar__platform-icons">
+                                                                <span class="calendar__platform-icon calendar__platform-icon--pc" aria-label="PC" title="PC"></span>
+                                                        </div>
+                    </div>
+                    <h3 class="calendar__title">레이어 랜드</h3>
+                    <span class="calendar__company">Layer Land</span>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__buttons">
+                                    <button type="button" class="calendar__btn calendar__btn--video"
+                            data-youtube="_4rEPh7i2xI"
+                            data-google-calendar="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EB%A0%88%EC%9D%B4%EC%96%B4+%EB%9E%9C%EB%93%9C&dates=20260609/20260610&details=%EB%A0%88%EC%9D%B4%EC%96%B4+%EB%9E%9C%EB%93%9C+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13490&sf=true&output=xml"
+                            _="on click
+                            put `<div class='video-modal__skeleton'><div class='spinner'></div></div>` into .video-modal__video-wrapper
+                            put `<iframe id='video-modal-iframe' src='https://www.youtube.com/embed/` + @data-youtube + `?autoplay=1&mute=1&playsinline=1&rel=0&origin=https://www.inven.co.kr' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>` at end of .video-modal__video-wrapper
+                            if @data-google-calendar is not empty
+                                set .video-modal__btn--calendar@href to @data-google-calendar
+                                remove .hidden from .video-modal__btn--calendar
+                            else
+                                add .hidden to .video-modal__btn--calendar
+                            end
+                            add .is-active to #video-modal
+                            wait for load from #video-modal-iframe
+                            remove the first .video-modal__skeleton"
+                    >
+                        영상
+                    </button>
+                                                    <div class="calendar__buttons">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EB%A0%88%EC%9D%B4%EC%96%B4+%EB%9E%9C%EB%93%9C&dates=20260609/20260610&details=%EB%A0%88%EC%9D%B4%EC%96%B4+%EB%9E%9C%EB%93%9C+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F13490&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                    </div>
+                                                    <a href="https://store.steampowered.com/app/3884970/Layer_Land/" class="calendar__btn calendar__btn--like" target="_blank">찜</a>
+                                                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--normal">
+        <a role="button"
+           href="/webzine/calendar/game/12954"
+           class="calendar__item--group"
+           data-game-idx="12954">
+            <div class="calendar__date"><span class='calendar__day-num'>06/10(수)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                    
+                                            <img src="https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1520550398.jpg" alt="위치스파이어" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__platform">
+                        <span class="calendar__platform-txt">출시</span>
+
+                        <div class="calendar__platform-icons">
+                                                                <span class="calendar__platform-icon calendar__platform-icon--pc" aria-label="PC" title="PC"></span>
+                                                        </div>
+                    </div>
+                    <h3 class="calendar__title">위치스파이어</h3>
+                    <span class="calendar__company">Witchspire</span>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__buttons">
+                                    <button type="button" class="calendar__btn calendar__btn--video"
+                            data-youtube="B_UhbUeOtSA"
+                            data-google-calendar="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EC%9C%84%EC%B9%98%EC%8A%A4%ED%8C%8C%EC%9D%B4%EC%96%B4&dates=20260610/20260611&details=%EC%9C%84%EC%B9%98%EC%8A%A4%ED%8C%8C%EC%9D%B4%EC%96%B4+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fcalendar%2Fgame%2F12954&sf=true&output=xml"
+                            _="on click
+                            put `<div class='video-modal__skeleton'><div class='spinner'></div></div>` into .video-modal__video-wrapper
+                            put `<iframe id='video-modal-iframe' src='https://www.youtube.com/embed/` + @data-youtube + `?autoplay=1&mute=1&playsinline=1&rel=0&origin=https://www.inven.co.kr' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>` at end of .video-modal__video-wrapper
+                            if @data-google-calendar is not empty
+                                set .video-modal__btn--calendar@href to @data-google-calendar
+                                remove .hidden from .video-modal__btn--calendar
+                            else
+                                add .hidden to .video-modal__btn--calendar
+                            end
+                            add .is-active to #video-modal
+                            wait for load from #video-modal-iframe
+                            remove the first .video-modal__skeleton"
+                    >
+                        영상
+                    </button>
+                                                    <div class="calendar__but

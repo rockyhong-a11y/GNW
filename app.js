@@ -18,14 +18,15 @@ const STATE = {
   search: "",
   sort: "date-asc",
   view: "timeline",       // timeline | grid
-  status: "all",          // all | upcoming | released
+  status: "now",          // now(현재 이후·기본) | upcoming | released | all
   events: new Set(),      // empty = all event types
   platforms: new Set(),   // empty = all
   genres: new Set(),      // empty = all
 };
 
-const TODAY = new Date("2026-05-31"); // fixed "now" so sample data behaves predictably
+const TODAY = new Date(); // 실제 현재 시각 기준 — 진입 시 "지금"을 기준으로 포커싱
 TODAY.setHours(0, 0, 0, 0);
+const CUR_MONTH = `${TODAY.getFullYear()}-${String(TODAY.getMonth() + 1).padStart(2, "0")}`;
 
 const $ = (sel) => document.querySelector(sel);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -67,7 +68,11 @@ function uniqueSorted(items) {
 function applyFilters() {
   const q = STATE.search.trim().toLowerCase();
   let list = STATE.games.filter((g) => {
-    if (STATE.status !== "all" && g.status !== STATE.status) return false;
+    if (STATE.status === "now") {
+      if (monthKey(g.releaseDate) < CUR_MONTH) return false; // 지난 달 이전은 숨김(현재 이후 포커스)
+    } else if (STATE.status === "upcoming" || STATE.status === "released") {
+      if (g.status !== STATE.status) return false;
+    } // "all" → 전체 표시
     if (STATE.events.size && !STATE.events.has(g.eventType)) return false;
     if (STATE.platforms.size && !g.platforms.some((p) => STATE.platforms.has(p))) return false;
     if (STATE.genres.size && !g.genres.some((gn) => STATE.genres.has(gn))) return false;
@@ -176,9 +181,10 @@ function render() {
 /* ---------- Filter chip builders ---------- */
 function buildStatusFilters() {
   const opts = [
-    { key: "all", label: "전체 기간" },
+    { key: "now", label: "현재 이후" },
     { key: "upcoming", label: "예정" },
     { key: "released", label: "완료" },
+    { key: "all", label: "전체 기간" },
   ];
   const wrap = $("#statusFilters");
   wrap.innerHTML = opts
@@ -250,7 +256,7 @@ function bindControls() {
   );
 
   $("#resetBtn").addEventListener("click", () => {
-    STATE.search = ""; STATE.sort = "date-asc"; STATE.status = "all";
+    STATE.search = ""; STATE.sort = "date-asc"; STATE.status = "now";
     STATE.events.clear(); STATE.platforms.clear(); STATE.genres.clear();
     $("#searchInput").value = ""; $("#sortSelect").value = "date-asc";
     initFilters();

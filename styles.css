@@ -193,6 +193,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 2px 16px calc(40px + var
 .badges { display: flex; flex-wrap: wrap; gap: 6px; }
 .badge { font-size: 11px; padding: 3px 8px; border-radius: 6px; background: var(--bg-elev); color: var(--text-dim); border: 1px solid var(--border); }
 .badge.platform { color: var(--text); }
+.badge.tag { background: transparent; color: var(--text-faint); border-color: transparent; padding: 2px 4px; }
 
 .card-meta { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 9px; font-size: 13px; }
 .meta-date { color: var(--text-dim); }

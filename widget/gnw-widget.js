@@ -28,13 +28,13 @@ const COLORS = {
   amber: new Color("#ffb454"),
 };
 
-// eventType → 한글 라벨 / 색상 (웹앱과 동일)
+// eventType → 한글 라벨 / 색상 (웹앱·인벤 캘린더 분류와 동일)
 const EVENT_META = {
   release: { label: "출시", color: new Color("#3ddc84") },
-  prereg:  { label: "사전예약", color: new Color("#6c7aff") },
-  cbt:     { label: "CBT", color: new Color("#ffb454") },
-  obt:     { label: "OBT", color: new Color("#ff85c0") },
   update:  { label: "업데이트", color: new Color("#00c2cb") },
+  ea:      { label: "얼리액세스", color: new Color("#6c7aff") },
+  test:    { label: "테스트", color: new Color("#ffb454") },
+  event:   { label: "행사", color: new Color("#ff85c0") },
 };
 const gameName = (g) => g.titleKr || g.title;
 

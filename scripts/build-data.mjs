@@ -132,9 +132,12 @@ async function fromInven(out) {
   const html = await res.text();
 
   // 캘린더 셀의 게임 항목: <a href="...상세...">제목</a> + 인접한 날짜(YYYY-MM-DD / MM.DD)
+  // 인벤 캘린더 분류 키워드 → eventType
   const evFromText = (s) =>
-    /사전\s*예약/.test(s) ? "prereg" : /\bOBT\b|오픈\s*베타/i.test(s) ? "obt" :
-    /\bCBT\b|비공개\s*테스트/i.test(s) ? "cbt" : /업데이트|패치|시즌/.test(s) ? "update" : "release";
+    /얼리\s*액세스|early\s*access/i.test(s) ? "ea" :
+    /테스트|CBT|OBT|베타/i.test(s) ? "test" :
+    /업데이트|패치|시즌|버전/i.test(s) ? "update" :
+    /행사|쇼케이스|페스트|페스티벌|컨퍼런스|팝업|대회|기념/.test(s) ? "event" : "release";
 
   let added = 0;
   // 날짜 블록 단위로 끊어 각 블록 내 링크를 그 날짜에 귀속

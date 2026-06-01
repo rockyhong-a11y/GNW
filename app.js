@@ -5,12 +5,13 @@
  * schedules/DBs of 네이버 게임 · 인벤 · 디스이즈게임 · TapTap.
  * The same JSON is consumed by the iOS Scriptable widget. */
 
+// 인벤 발매 캘린더의 실제 분류와 일치
 const EVENT_META = {
   release: { label: "출시", color: "#3ddc84" },
-  prereg:  { label: "사전예약", color: "#6c7aff" },
-  cbt:     { label: "CBT", color: "#ffb454" },
-  obt:     { label: "OBT", color: "#ff85c0" },
   update:  { label: "업데이트", color: "#00c2cb" },
+  ea:      { label: "얼리액세스", color: "#6c7aff" },
+  test:    { label: "테스트", color: "#ffb454" },
+  event:   { label: "행사", color: "#ff85c0" },
 };
 
 const STATE = {
@@ -57,6 +58,7 @@ function countdownLabel(game) {
   return { text: `D-${days}`, released: false };
 }
 function formatPrice(price) {
+  if (price == null) return { text: "", free: false };
   if (price === 0) return { text: "무료(F2P)", free: true };
   return { text: `₩${price.toLocaleString("ko-KR")}`, free: false };
 }
@@ -124,16 +126,19 @@ function renderCard(g) {
       <div class="card-body">
         <div>
           <h3 class="card-title">${esc(g.titleKr || g.title)}</h3>
-          <p class="card-orig">${esc(g.title)}${g.title !== g.developer ? ` · ${esc(g.developer)}` : ""}</p>
+          ${g.title && g.title !== (g.titleKr || g.title) || g.developer
+            ? `<p class="card-orig">${esc([g.title !== g.titleKr ? g.title : "", g.developer].filter(Boolean).join(" · "))}</p>`
+            : ""}
         </div>
         ${g.update ? `<p class="card-update">📌 ${esc(g.update)}</p>` : ""}
-        <p class="card-desc">${esc(g.description)}</p>
-        <div class="badges">${platforms}${genres}</div>
+        ${g.description ? `<p class="card-desc">${esc(g.description)}</p>` : ""}
+        ${(platforms || genres) ? `<div class="badges">${platforms}${genres}</div>` : ""}
+        ${(g.tags && g.tags.length) ? `<div class="badges">${g.tags.map((t) => `<span class="badge tag">#${esc(t)}</span>`).join("")}</div>` : ""}
         <div class="card-meta">
-          <span class="meta-date">${formatDate(g.releaseDate)}</span>
+          <span class="meta-date">${formatDate(g.releaseDate)}${g.endDate ? ` ~ ${formatDate(g.endDate).slice(5)}` : ""}</span>
           <span class="meta-right">
-            ${g.rating ? `<span class="rating">★ ${g.rating.toFixed(1)}</span>` : `<span class="hype">🔥 ${g.hypeScore}</span>`}
-            <span class="price ${price.free ? "free" : ""}">${price.text}</span>
+            ${g.rating ? `<span class="rating">★ ${g.rating.toFixed(1)}</span>` : (g.hypeScore ? `<span class="hype">🔥 ${g.hypeScore}</span>` : "")}
+            ${price.text ? `<span class="price ${price.free ? "free" : ""}">${price.text}</span>` : ""}
           </span>
         </div>
         <div class="card-foot">${source}${detail}</div>
@@ -217,6 +222,7 @@ function buildEventFilters() {
 
 function buildToggleFilters(containerId, values, stateSet, colorMap) {
   const wrap = $(containerId);
+  wrap.hidden = values.length === 0; // 값이 없으면 필터 그룹 숨김
   wrap.innerHTML = values
     .map((v) => {
       const active = stateSet.has(v);

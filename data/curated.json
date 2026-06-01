@@ -2,8 +2,8 @@
   "meta": {
     "title": "GNW — Game New Watch",
     "description": "인벤 발매 캘린더 기반 주요 게임 일정",
-    "updated": "2026-05-31",
-    "version": 6,
+    "updated": "2026-06-01",
+    "version": 7,
     "kind": "curated",
     "sources": [
       {
@@ -11,849 +11,902 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       }
     ],
-    "note": "인벤 발매 캘린더(https://www.inven.co.kr/webzine/calendar/)의 주요 일정을 참조해 구성. 각 항목의 상세정보 링크 포함."
+    "note": "인벤 발매 캘린더(https://www.inven.co.kr/webzine/calendar/)의 실제 일정을 반영. 각 항목의 홈페이지/상세설명 및 영상 링크 포함."
   },
   "games": [
     {
-      "id": "inven-마비노기모바일-2026-06-26",
-      "title": "Mabinogi Mobile",
-      "titleKr": "마비노기 모바일",
-      "developer": "넥슨",
-      "publisher": "넥슨",
-      "platforms": [
-        "Mobile",
-        "PC"
-      ],
-      "genres": [
-        "MMORPG",
-        "RPG"
-      ],
-      "releaseDate": "2026-06-26",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 0,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "국산",
-        "넥슨"
-      ],
-      "description": "원작 감성을 계승한 라이프 MMORPG. 모바일·PC 크로스플레이.",
-      "update": "정식 출시 — 신규 직업 5종·생활 콘텐츠 공개",
-      "color": "#e84d8a",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EB%A7%88%EB%B9%84%EB%85%B8%EA%B8%B0%20%EB%AA%A8%EB%B0%94%EC%9D%BC",
-      "trailer": "https://www.youtube.com/results?search_query=Mabinogi%20Mobile%20%EB%84%A5%EC%8A%A8%20official%20trailer"
-    },
-    {
-      "id": "inven-발로란트모바일-2026-06-05",
-      "title": "VALORANT Mobile",
-      "titleKr": "발로란트 모바일",
-      "developer": "라이엇 게임즈",
-      "publisher": "라이엇 게임즈",
-      "platforms": [
-        "Mobile"
-      ],
-      "genres": [
-        "슈팅",
-        "전술"
-      ],
-      "releaseDate": "2026-06-05",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 0,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "FPS"
-      ],
-      "description": "전술 FPS 발로란트의 모바일 정식 출시.",
-      "update": "글로벌 정식 출시 — 모바일 전용 조작·랭크",
-      "color": "#3aa757",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EB%B0%9C%EB%A1%9C%EB%9E%80%ED%8A%B8%20%EB%AA%A8%EB%B0%94%EC%9D%BC",
-      "trailer": "https://www.youtube.com/results?search_query=VALORANT%20Mobile%20%EB%9D%BC%EC%9D%B4%EC%97%87%20%EA%B2%8C%EC%9E%84%EC%A6%88%20official%20trailer"
-    },
-    {
-      "id": "inven-승리의여신니케-2026-06-05",
-      "title": "NIKKE",
-      "titleKr": "승리의 여신: 니케",
-      "developer": "시프트업",
-      "publisher": "시프트업",
-      "platforms": [
-        "Mobile",
-        "PC"
-      ],
-      "genres": [
-        "슈팅",
-        "수집형"
-      ],
-      "releaseDate": "2026-06-05",
+      "id": "inven-ebb695eab4b43a20-2026-06-01",
+      "title": "Honkai: Star Rail 4.3",
+      "titleKr": "붕괴: 스타레일 4.3버전 - 「산 자의 망천에 잠겨」",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-01",
+      "endDate": null,
       "eventType": "update",
       "status": "upcoming",
-      "price": 0,
+      "price": null,
       "hypeScore": null,
       "rating": null,
       "tags": [
-        "서브컬처",
-        "국산"
+        "붕괴: 스타레일",
+        "FATE",
+        "신규 스토리"
       ],
-      "description": "미소녀 수집형 건슈팅 RPG.",
-      "update": "3.5주년 업데이트 — 신규 SSR 2종·메인 스토리",
-      "color": "#d98324",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EC%8A%B9%EB%A6%AC%EC%9D%98%20%EC%97%AC%EC%8B%A0%3A%20%EB%8B%88%EC%BC%80",
-      "trailer": "https://www.youtube.com/results?search_query=NIKKE%20%EC%8B%9C%ED%94%84%ED%8A%B8%EC%97%85%20official%20trailer"
-    },
-    {
-      "id": "inven-블루아카이브-2026-06-10",
-      "title": "Blue Archive",
-      "titleKr": "블루 아카이브",
-      "developer": "넥슨게임즈",
-      "publisher": "넥슨게임즈",
-      "platforms": [
-        "Mobile",
-        "PC"
-      ],
-      "genres": [
-        "수집형",
-        "RPG"
-      ],
-      "releaseDate": "2026-06-10",
-      "eventType": "update",
-      "status": "upcoming",
-      "price": 0,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "서브컬처",
-        "국산"
-      ],
-      "description": "학원물 수집형 RPG.",
-      "update": "신규 메인 스토리·픽업 모집",
-      "color": "#b14aed",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EB%B8%94%EB%A3%A8%20%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B8%8C",
-      "trailer": "https://www.youtube.com/results?search_query=Blue%20Archive%20%EB%84%A5%EC%8A%A8%EA%B2%8C%EC%9E%84%EC%A6%88%20official%20trailer"
-    },
-    {
-      "id": "inven-나이트크로우시즌2-2026-06-12",
-      "title": "NIGHT CROWS S2",
-      "titleKr": "나이트크로우 시즌2",
-      "developer": "위메이드",
-      "publisher": "위메이드",
-      "platforms": [
-        "Mobile",
-        "PC"
-      ],
-      "genres": [
-        "MMORPG"
-      ],
-      "releaseDate": "2026-06-12",
-      "eventType": "update",
-      "status": "upcoming",
-      "price": 0,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "국산"
-      ],
-      "description": "중세 판타지 MMORPG 대규모 시즌.",
-      "update": "시즌2 '잿빛 황혼' — 신규 지역·공성전",
+      "description": "4.3버전에서는 이상낙원 배후의 흑막이자 절멸대군 아삿 프라마드가 본격적으로 등장하며, FATE 2차 콜라보도 예고됐다.",
+      "update": "",
       "color": "#4a90d9",
       "source": {
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EB%82%98%EC%9D%B4%ED%8A%B8%ED%81%AC%EB%A1%9C%EC%9A%B0%20%EC%8B%9C%EC%A6%8C2",
-      "trailer": "https://www.youtube.com/results?search_query=NIGHT%20CROWS%20S2%20%EC%9C%84%EB%A9%94%EC%9D%B4%EB%93%9C%20official%20trailer"
+      "detailUrl": "https://www.inven.co.kr/search/total/%EB%B6%95%EA%B4%B4%3A%20%EC%8A%A4%ED%83%80%EB%A0%88%EC%9D%BC%204.3%EB%B2%84%EC%A0%84%20-%20%E3%80%8C%EC%82%B0%20%EC%9E%90%EC%9D%98%20%EB%A7%9D%EC%B2%9C%EC%97%90%20%EC%9E%A0%EA%B2%A8%E3%80%8D",
+      "trailer": null
     },
     {
-      "id": "inven-프로젝트무궁화-2026-06-10",
-      "title": "Project Mugunghwa",
-      "titleKr": "프로젝트 무궁화",
-      "developer": "스마일게이트",
-      "publisher": "스마일게이트",
-      "platforms": [
-        "PC",
-        "Mobile"
-      ],
-      "genres": [
-        "액션",
-        "RPG"
-      ],
-      "releaseDate": "2026-06-10",
-      "eventType": "cbt",
+      "id": "inven-ec8ab9eba6acec9d-2026-06-01",
+      "title": "NIKKE Popup Store",
+      "titleKr": "승리의 여신: 니케 - '에리어 방어전' 팝업 스토어",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-01",
+      "endDate": "2026-06-14",
+      "eventType": "event",
       "status": "upcoming",
-      "price": 0,
+      "price": null,
       "hypeScore": null,
       "rating": null,
       "tags": [
-        "국산",
-        "테스트"
+        "KR",
+        "승리의 여신: 니케",
+        "오프라인",
+        "팝업 스토어",
+        "서울"
       ],
-      "description": "한국형 무협 액션 RPG.",
-      "update": "1차 CBT — 6/10~6/16 PC·모바일 동시",
-      "color": "#f0c419",
+      "description": "'에리어 방어전'은 지역별 특색을 기반으로 유저들과의 접점 확대를 위한 오프라인 이벤트로, 개최 도시의 명소와 캐릭터를 결합한 일러스트 및 지역 한정 굿즈를 선보인다.",
+      "update": "",
+      "color": "#ff4d6d",
       "source": {
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "detailUrl": "https://www.inven.co.kr/search/total/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%AC%B4%EA%B6%81%ED%99%94",
-      "trailer": "https://www.youtube.com/results?search_query=Project%20Mugunghwa%20%EC%8A%A4%EB%A7%88%EC%9D%BC%EA%B2%8C%EC%9D%B4%ED%8A%B8%20official%20trailer"
+      "detailUrl": "https://www.inven.co.kr/search/total/%EC%8A%B9%EB%A6%AC%EC%9D%98%20%EC%97%AC%EC%8B%A0%3A%20%EB%8B%88%EC%BC%80%20-%20'%EC%97%90%EB%A6%AC%EC%96%B4%20%EB%B0%A9%EC%96%B4%EC%A0%84'%20%ED%8C%9D%EC%97%85%20%EC%8A%A4%ED%86%A0%EC%96%B4",
+      "trailer": null
     },
     {
-      "id": "inven-몬스터헌터와일즈-2026-06-27",
-      "title": "Monster Hunter Wilds",
-      "titleKr": "몬스터 헌터 와일즈",
-      "developer": "캡콤",
-      "publisher": "캡콤",
-      "platforms": [
-        "PS5",
-        "Xbox Series",
-        "PC"
-      ],
-      "genres": [
-        "액션",
-        "RPG"
-      ],
-      "releaseDate": "2026-06-27",
-      "eventType": "update",
+      "id": "inven-ebb0b0ed8b80ec89-2026-06-02",
+      "title": "Battleship Command",
+      "titleKr": "배틀쉽 커맨드",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-02",
+      "endDate": null,
+      "eventType": "ea",
       "status": "upcoming",
-      "price": 0,
+      "price": null,
       "hypeScore": null,
       "rating": null,
-      "tags": [
-        "협동"
-      ],
-      "description": "거대 신규 지역·몬스터 추가.",
-      "update": "무료 대형 타이틀 업데이트",
-      "color": "#5b8def",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EB%AA%AC%EC%8A%A4%ED%84%B0%20%ED%97%8C%ED%84%B0%20%EC%99%80%EC%9D%BC%EC%A6%88",
-      "trailer": "https://www.youtube.com/results?search_query=Monster%20Hunter%20Wilds%20%EC%BA%A1%EC%BD%A4%20official%20trailer"
-    },
-    {
-      "id": "inven-인조이-2026-06-27",
-      "title": "inZOI",
-      "titleKr": "인조이",
-      "developer": "크래프톤",
-      "publisher": "크래프톤",
-      "platforms": [
-        "PC"
-      ],
-      "genres": [
-        "시뮬레이션"
-      ],
-      "releaseDate": "2026-06-27",
-      "eventType": "update",
-      "status": "upcoming",
-      "price": 0,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "국산"
-      ],
-      "description": "인생 시뮬레이션.",
-      "update": "신규 도시·모드 지원 업데이트",
-      "color": "#c9a227",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EC%9D%B8%EC%A1%B0%EC%9D%B4",
-      "trailer": "https://www.youtube.com/results?search_query=inZOI%20%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4%20official%20trailer"
-    },
-    {
-      "id": "inven-세븐나이츠리버스-2026-07-09",
-      "title": "Seven Knights Re:VERSE",
-      "titleKr": "세븐나이츠 리버스",
-      "developer": "넷마블",
-      "publisher": "넷마블",
-      "platforms": [
-        "Mobile"
-      ],
-      "genres": [
-        "RPG",
-        "수집형"
-      ],
-      "releaseDate": "2026-07-09",
-      "eventType": "prereg",
-      "status": "upcoming",
-      "price": 0,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "국산",
-        "넷마블"
-      ],
-      "description": "세븐나이츠 세계관 턴제 수집형 RPG.",
-      "update": "사전예약 오픈 — 영웅 리메이크 공개",
+      "tags": [],
+      "description": "",
+      "update": "",
       "color": "#16a085",
       "source": {
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EC%84%B8%EB%B8%90%EB%82%98%EC%9D%B4%EC%B8%A0%20%EB%A6%AC%EB%B2%84%EC%8A%A4",
-      "trailer": "https://www.youtube.com/results?search_query=Seven%20Knights%20Re%3AVERSE%20%EB%84%B7%EB%A7%88%EB%B8%94%20official%20trailer"
+      "detailUrl": "https://www.inven.co.kr/search/total/%EB%B0%B0%ED%8B%80%EC%89%BD%20%EC%BB%A4%EB%A7%A8%EB%93%9C",
+      "trailer": "https://www.youtube.com/results?search_query=%EB%B0%B0%ED%8B%80%EC%89%BD%20%EC%BB%A4%EB%A7%A8%EB%93%9C%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
     },
     {
-      "id": "inven-로스트아크-2026-07-08",
-      "title": "Lost Ark",
-      "titleKr": "로스트아크",
-      "developer": "스마일게이트",
-      "publisher": "스마일게이트",
-      "platforms": [
-        "PC"
-      ],
-      "genres": [
-        "MMORPG",
-        "액션"
-      ],
-      "releaseDate": "2026-07-08",
-      "eventType": "update",
+      "id": "inven-ec8aa4ed858cec9d-2026-06-03",
+      "title": "State of Play",
+      "titleKr": "스테이트 오브 플레이",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-03",
+      "endDate": null,
+      "eventType": "event",
       "status": "upcoming",
-      "price": 0,
+      "price": null,
       "hypeScore": null,
       "rating": null,
       "tags": [
-        "국산"
-      ],
-      "description": "핵앤슬래시 MMORPG.",
-      "update": "신규 군단장 레이드·클래스 추가",
-      "color": "#00a8cc",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EB%A1%9C%EC%8A%A4%ED%8A%B8%EC%95%84%ED%81%AC",
-      "trailer": "https://www.youtube.com/results?search_query=Lost%20Ark%20%EC%8A%A4%EB%A7%88%EC%9D%BC%EA%B2%8C%EC%9D%B4%ED%8A%B8%20official%20trailer"
-    },
-    {
-      "id": "inven-포켓몬레전드ZA-2026-07-25",
-      "title": "Pokémon Legends: Z-A",
-      "titleKr": "포켓몬 레전드: Z-A",
-      "developer": "닌텐도",
-      "publisher": "닌텐도",
-      "platforms": [
-        "Switch",
-        "Switch 2"
-      ],
-      "genres": [
-        "RPG",
-        "어드벤처"
-      ],
-      "releaseDate": "2026-07-25",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 64800,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "닌텐도"
-      ],
-      "description": "미아레 시티 무대의 포켓몬 레전드 신작.",
-      "update": "발매 예정 — 메가진화 복귀",
-      "color": "#9b59b6",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%ED%8F%AC%EC%BC%93%EB%AA%AC%20%EB%A0%88%EC%A0%84%EB%93%9C%3A%20Z-A",
-      "trailer": "https://www.youtube.com/results?search_query=Pok%C3%A9mon%20Legends%3A%20Z-A%20%EB%8B%8C%ED%85%90%EB%8F%84%20official%20trailer"
-    },
-    {
-      "id": "inven-스플래툰신작-2026-08-07",
-      "title": "Splatoon (New)",
-      "titleKr": "스플래툰 신작",
-      "developer": "닌텐도",
-      "publisher": "닌텐도",
-      "platforms": [
-        "Switch 2"
-      ],
-      "genres": [
-        "슈팅",
-        "액션"
-      ],
-      "releaseDate": "2026-08-07",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 64800,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "닌텐도"
-      ],
-      "description": "잉크 슈터 신작.",
-      "update": "발매 예정 — 신규 무기·스테이지",
-      "color": "#e67e22",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EC%8A%A4%ED%94%8C%EB%9E%98%ED%88%B0%20%EC%8B%A0%EC%9E%91",
-      "trailer": "https://www.youtube.com/results?search_query=Splatoon%20(New)%20%EB%8B%8C%ED%85%90%EB%8F%84%20official%20trailer"
-    },
-    {
-      "id": "inven-아이온2-2026-08-20",
-      "title": "Aion 2",
-      "titleKr": "아이온2",
-      "developer": "엔씨소프트",
-      "publisher": "엔씨소프트",
-      "platforms": [
-        "Mobile",
-        "PC"
-      ],
-      "genres": [
-        "MMORPG",
-        "RPG"
-      ],
-      "releaseDate": "2026-08-20",
-      "eventType": "prereg",
-      "status": "upcoming",
-      "price": 0,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "국산",
-        "엔씨"
-      ],
-      "description": "아이온 IP 차세대 MMORPG.",
-      "update": "사전예약 — 전용 비행 탈것 보상",
-      "color": "#2980b9",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EC%95%84%EC%9D%B4%EC%98%A82",
-      "trailer": "https://www.youtube.com/results?search_query=Aion%202%20%EC%97%94%EC%94%A8%EC%86%8C%ED%94%84%ED%8A%B8%20official%20trailer"
-    },
-    {
-      "id": "inven-붕괴넥서스아니마-2026-08-15",
-      "title": "Honkai: Nexus Anima",
-      "titleKr": "붕괴: 넥서스 아니마",
-      "developer": "호요버스",
-      "publisher": "호요버스",
-      "platforms": [
-        "Mobile",
-        "PC",
-        "PS5"
-      ],
-      "genres": [
-        "RPG",
-        "수집형"
-      ],
-      "releaseDate": "2026-08-15",
-      "eventType": "prereg",
-      "status": "upcoming",
-      "price": 0,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "서브컬처"
-      ],
-      "description": "신작 오픈월드 수집형 RPG.",
-      "update": "글로벌 사전예약 — 한국어 풀더빙 예정",
-      "color": "#8e44ad",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EB%B6%95%EA%B4%B4%3A%20%EB%84%A5%EC%84%9C%EC%8A%A4%20%EC%95%84%EB%8B%88%EB%A7%88",
-      "trailer": "https://www.youtube.com/results?search_query=Honkai%3A%20Nexus%20Anima%20%ED%98%B8%EC%9A%94%EB%B2%84%EC%8A%A4%20official%20trailer"
-    },
-    {
-      "id": "inven-서브노티카2-2026-08-28",
-      "title": "Subnautica 2",
-      "titleKr": "서브노티카 2",
-      "developer": "크래프톤",
-      "publisher": "크래프톤",
-      "platforms": [
-        "PC",
-        "Xbox Series",
-        "PS5"
-      ],
-      "genres": [
-        "생존",
-        "어드벤처"
-      ],
-      "releaseDate": "2026-08-28",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 38000,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "생존",
-        "협동"
-      ],
-      "description": "외계 해양 서바이벌 후속작.",
-      "update": "발매 예정 — 4인 협동",
-      "color": "#27ae60",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EC%84%9C%EB%B8%8C%EB%85%B8%ED%8B%B0%EC%B9%B4%202",
-      "trailer": "https://www.youtube.com/results?search_query=Subnautica%202%20%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4%20official%20trailer"
-    },
-    {
-      "id": "inven-페이블-2026-09-04",
-      "title": "Fable",
-      "titleKr": "페이블",
-      "developer": "Xbox",
-      "publisher": "Xbox",
-      "platforms": [
-        "PC",
-        "Xbox Series"
-      ],
-      "genres": [
-        "RPG",
-        "오픈월드"
-      ],
-      "releaseDate": "2026-09-04",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 69900,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "AAA"
-      ],
-      "description": "페이블 시리즈 리부트.",
-      "update": "발매 예정 — 동화풍 오픈월드",
-      "color": "#ff4655",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%ED%8E%98%EC%9D%B4%EB%B8%94",
-      "trailer": "https://www.youtube.com/results?search_query=Fable%20Xbox%20official%20trailer"
-    },
-    {
-      "id": "inven-사일런트힐f-2026-09-25",
-      "title": "SILENT HILL f",
-      "titleKr": "사일런트 힐 f",
-      "developer": "코나미",
-      "publisher": "코나미",
-      "platforms": [
+        "쇼케이스",
+        "SIE",
         "PS5",
-        "Xbox Series",
-        "PC"
+        "온라인"
       ],
-      "genres": [
-        "호러",
-        "액션"
-      ],
-      "releaseDate": "2026-09-25",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 69900,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "AAA",
-        "호러"
-      ],
-      "description": "1960년대 일본 배경 서바이벌 호러.",
-      "update": "발매 예정 — 한국어 자막 지원",
-      "color": "#7b5cff",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EC%82%AC%EC%9D%BC%EB%9F%B0%ED%8A%B8%20%ED%9E%90%20f",
-      "trailer": "https://www.youtube.com/results?search_query=SILENT%20HILL%20f%20%EC%BD%94%EB%82%98%EB%AF%B8%20official%20trailer"
-    },
-    {
-      "id": "inven-젤다의전설신작-2026-09-30",
-      "title": "The Legend of Zelda (New)",
-      "titleKr": "젤다의 전설 신작",
-      "developer": "닌텐도",
-      "publisher": "닌텐도",
-      "platforms": [
-        "Switch 2"
-      ],
-      "genres": [
-        "액션",
-        "어드벤처"
-      ],
-      "releaseDate": "2026-09-30",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 79800,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "AAA",
-        "닌텐도"
-      ],
-      "description": "Switch 2 젤다 신작.",
-      "update": "발매일 확정 — 신규 하이랄",
-      "color": "#00c2cb",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EC%A0%A4%EB%8B%A4%EC%9D%98%20%EC%A0%84%EC%84%A4%20%EC%8B%A0%EC%9E%91",
-      "trailer": "https://www.youtube.com/results?search_query=The%20Legend%20of%20Zelda%20(New)%20%EB%8B%8C%ED%85%90%EB%8F%84%20official%20trailer"
-    },
-    {
-      "id": "inven-크로노오디세이-2026-07-30",
-      "title": "Chrono Odyssey",
-      "titleKr": "크로노 오디세이",
-      "developer": "코그",
-      "publisher": "코그",
-      "platforms": [
-        "PC",
-        "PS5",
-        "Xbox Series"
-      ],
-      "genres": [
-        "MMORPG"
-      ],
-      "releaseDate": "2026-07-30",
-      "eventType": "obt",
-      "status": "upcoming",
-      "price": 0,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "국산",
-        "테스트"
-      ],
-      "description": "시간 조작 테마 콘솔·PC MMORPG.",
-      "update": "글로벌 OBT — 전 직업 개방",
-      "color": "#e84d8a",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%ED%81%AC%EB%A1%9C%EB%85%B8%20%EC%98%A4%EB%94%94%EC%84%B8%EC%9D%B4",
-      "trailer": "https://www.youtube.com/results?search_query=Chrono%20Odyssey%20%EC%BD%94%EA%B7%B8%20official%20trailer"
-    },
-    {
-      "id": "inven-엘든링신규확장-2026-10-02",
-      "title": "Elden Ring (Expansion)",
-      "titleKr": "엘든 링 신규 확장",
-      "developer": "반다이남코",
-      "publisher": "반다이남코",
-      "platforms": [
-        "PS5",
-        "Xbox Series",
-        "PC"
-      ],
-      "genres": [
-        "RPG",
-        "소울라이크"
-      ],
-      "releaseDate": "2026-10-02",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 49000,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "확장팩"
-      ],
-      "description": "엘든 링 세계관 확장 DLC.",
-      "update": "두 번째 DLC — 신규 지역·보스",
-      "color": "#3aa757",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EC%97%98%EB%93%A0%20%EB%A7%81%20%EC%8B%A0%EA%B7%9C%20%ED%99%95%EC%9E%A5",
-      "trailer": "https://www.youtube.com/results?search_query=Elden%20Ring%20(Expansion)%20%EB%B0%98%EB%8B%A4%EC%9D%B4%EB%82%A8%EC%BD%94%20official%20trailer"
-    },
-    {
-      "id": "inven-페르소나신작-2026-10-15",
-      "title": "Persona (New)",
-      "titleKr": "페르소나 신작",
-      "developer": "세가",
-      "publisher": "세가",
-      "platforms": [
-        "PC",
-        "PS5",
-        "Switch 2"
-      ],
-      "genres": [
-        "RPG",
-        "JRPG"
-      ],
-      "releaseDate": "2026-10-15",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 74800,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "JRPG",
-        "기대작"
-      ],
-      "description": "페르소나 시리즈 차기작.",
-      "update": "TGS 공개 — 신규 주인공·도시",
-      "color": "#d98324",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98%20%EC%8B%A0%EC%9E%91",
-      "trailer": "https://www.youtube.com/results?search_query=Persona%20(New)%20%EC%84%B8%EA%B0%80%20official%20trailer"
-    },
-    {
-      "id": "inven-콜오브듀티2026-2026-11-06",
-      "title": "Call of Duty 2026",
-      "titleKr": "콜 오브 듀티 2026",
-      "developer": "액티비전",
-      "publisher": "액티비전",
-      "platforms": [
-        "PC",
-        "PS5",
-        "Xbox Series"
-      ],
-      "genres": [
-        "슈팅",
-        "FPS"
-      ],
-      "releaseDate": "2026-11-06",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 79900,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "AAA",
-        "FPS"
-      ],
-      "description": "연례 밀리터리 FPS 신작.",
-      "update": "발매 예정 — 캠페인·멀티·좀비",
-      "color": "#b14aed",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EC%BD%9C%20%EC%98%A4%EB%B8%8C%20%EB%93%80%ED%8B%B0%202026",
-      "trailer": "https://www.youtube.com/results?search_query=Call%20of%20Duty%202026%20%EC%95%A1%ED%8B%B0%EB%B9%84%EC%A0%84%20official%20trailer"
-    },
-    {
-      "id": "inven-그랜드테프트오토6-2026-11-19",
-      "title": "Grand Theft Auto VI",
-      "titleKr": "그랜드 테프트 오토 6",
-      "developer": "Rockstar",
-      "publisher": "Rockstar",
-      "platforms": [
-        "PS5",
-        "Xbox Series",
-        "PC"
-      ],
-      "genres": [
-        "액션",
-        "오픈월드"
-      ],
-      "releaseDate": "2026-11-19",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 69900,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "AAA",
-        "기대작"
-      ],
-      "description": "바이스 시티 무대 오픈월드 대작.",
-      "update": "발매 예정 — 신규 트레일러",
-      "color": "#4a90d9",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EA%B7%B8%EB%9E%9C%EB%93%9C%20%ED%85%8C%ED%94%84%ED%8A%B8%20%EC%98%A4%ED%86%A0%206",
-      "trailer": "https://www.youtube.com/results?search_query=Grand%20Theft%20Auto%20VI%20Rockstar%20official%20trailer"
-    },
-    {
-      "id": "inven-더위쳐4-2026-12-04",
-      "title": "The Witcher IV",
-      "titleKr": "더 위쳐 4",
-      "developer": "CDPR",
-      "publisher": "CDPR",
-      "platforms": [
-        "PC",
-        "PS5",
-        "Xbox Series"
-      ],
-      "genres": [
-        "RPG",
-        "오픈월드"
-      ],
-      "releaseDate": "2026-12-04",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 79900,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "AAA",
-        "기대작"
-      ],
-      "description": "위쳐 신 사가의 시작.",
-      "update": "발매 예정 — 시리 주역",
-      "color": "#f0c419",
-      "source": {
-        "name": "인벤 발매 캘린더",
-        "url": "https://www.inven.co.kr/webzine/calendar/"
-      },
-      "detailUrl": "https://www.inven.co.kr/search/total/%EB%8D%94%20%EC%9C%84%EC%B3%90%204",
-      "trailer": "https://www.youtube.com/results?search_query=The%20Witcher%20IV%20CDPR%20official%20trailer"
-    },
-    {
-      "id": "inven-파이널판타지7리메이크파트3-2026-12-10",
-      "title": "FF VII Remake Part 3",
-      "titleKr": "파이널 판타지 7 리메이크 파트3",
-      "developer": "스퀘어 에닉스",
-      "publisher": "스퀘어 에닉스",
-      "platforms": [
-        "PS5",
-        "PC"
-      ],
-      "genres": [
-        "RPG",
-        "액션"
-      ],
-      "releaseDate": "2026-12-10",
-      "eventType": "release",
-      "status": "upcoming",
-      "price": 79800,
-      "hypeScore": null,
-      "rating": null,
-      "tags": [
-        "AAA",
-        "JRPG"
-      ],
-      "description": "FF7 리메이크 3부작 완결.",
-      "update": "발매 예정 — 사전 주문 시작",
+      "description": "State of Play가 60분 이상 분량의 업데이트, 발표 및 게임플레이 공개를 6월 3일 수요일(KST)에 진행합니다.",
+      "update": "",
       "color": "#5b8def",
       "source": {
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "detailUrl": "https://www.inven.co.kr/search/total/%ED%8C%8C%EC%9D%B4%EB%84%90%20%ED%8C%90%ED%83%80%EC%A7%80%207%20%EB%A6%AC%EB%A9%94%EC%9D%B4%ED%81%AC%20%ED%8C%8C%ED%8A%B83",
-      "trailer": "https://www.youtube.com/results?search_query=FF%20VII%20Remake%20Part%203%20%EC%8A%A4%ED%80%98%EC%96%B4%20%EC%97%90%EB%8B%89%EC%8A%A4%20official%20trailer"
+      "detailUrl": "https://www.inven.co.kr/search/total/%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%8A%B8%20%EC%98%A4%EB%B8%8C%20%ED%94%8C%EB%A0%88%EC%9D%B4",
+      "trailer": null
+    },
+    {
+      "id": "inven-ec9db4ed99982031-2026-06-03",
+      "title": "Ihwan 1.1",
+      "titleKr": "이환 1.1 업데이트 - '꿈의 회랑'",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-03",
+      "endDate": null,
+      "eventType": "update",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "이환",
+        "포르쉐",
+        "신규 지역"
+      ],
+      "description": "이번 1.1버전에서는 신규 지역 '해오름섬'이 추가되며, 신규 캐릭터 2종과 포르쉐 콜라보레이션도 진행된다.",
+      "update": "",
+      "color": "#d98324",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EC%9D%B4%ED%99%98%201.1%20%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%20-%20'%EA%BF%88%EC%9D%98%20%ED%9A%8C%EB%9E%91'",
+      "trailer": null
+    },
+    {
+      "id": "inven-ecb9bced81acec8a-2026-06-04",
+      "title": "CALX",
+      "titleKr": "칼크스",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-04",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#9b59b6",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EC%B9%BC%ED%81%AC%EC%8A%A4",
+      "trailer": "https://www.youtube.com/results?search_query=%EC%B9%BC%ED%81%AC%EC%8A%A4%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-ed88aceba5b420eb-2026-06-04",
+      "title": "Tour de France 2026",
+      "titleKr": "투르 드 프랑스2026",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-04",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#e67e22",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": null,
+      "trailer": "https://www.youtube.com/results?search_query=%ED%88%AC%EB%A5%B4%20%EB%93%9C%20%ED%94%84%EB%9E%91%EC%8A%A42026%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-ec8aa4ec998420ec-2026-06-04",
+      "title": "Swan Song",
+      "titleKr": "스완 송",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-04",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#27ae60",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": null,
+      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%EC%99%84%20%EC%86%A1%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-eab3a0eb949520eb-2026-06-06",
+      "title": "Gothic 1 Remake",
+      "titleKr": "고딕 리메이크",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-06",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#c9a227",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EA%B3%A0%EB%94%95%20%EB%A6%AC%EB%A9%94%EC%9D%B4%ED%81%AC",
+      "trailer": "https://www.youtube.com/results?search_query=%EA%B3%A0%EB%94%95%20%EB%A6%AC%EB%A9%94%EC%9D%B4%ED%81%AC%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-ec849ceba8b820ea-2026-06-06",
+      "title": "Summer Game Fest 2026",
+      "titleKr": "서머 게임 페스트 2026",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-06",
+      "endDate": "2026-06-09",
+      "eventType": "event",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "US",
+        "오프라인",
+        "서머 게임 페스트",
+        "SGF"
+      ],
+      "description": "본격적인 게임 쇼케이스의 시작, 서머 게임 페스트(SGF)가 한국 시각으로 6월 6일부터 미국 LA에서 2026년 이벤트를 진행한다. 메인 쇼케이스 다음 날부터는 'SGF 플레이데이'가 사흘간 운영된다.",
+      "update": "",
+      "color": "#2980b9",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EC%84%9C%EB%A8%B8%20%EA%B2%8C%EC%9E%84%20%ED%8E%98%EC%8A%A4%ED%8A%B8%202026",
+      "trailer": null
+    },
+    {
+      "id": "inven-58626f7820eab28c-2026-06-08",
+      "title": "Xbox Games Showcase 2026",
+      "titleKr": "Xbox 게임 쇼케이스 2026",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-08",
+      "endDate": null,
+      "eventType": "event",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "XBOX",
+        "쇼케이스",
+        "온라인",
+        "SGF"
+      ],
+      "description": "Xbox 신작 게임들의 첫 번째 게임플레이 영상과 주요 소식을 공개하고, Gears of War: E-Day Direct도 이어서 진행됩니다.",
+      "update": "",
+      "color": "#f0c419",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/Xbox%20%EA%B2%8C%EC%9E%84%20%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4%202026",
+      "trailer": null
+    },
+    {
+      "id": "inven-ec8694eb9dbced8e-2026-06-08",
+      "title": "Solarpunk",
+      "titleKr": "솔라펑크",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-08",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#8e44ad",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EC%86%94%EB%9D%BC%ED%8E%91%ED%81%AC",
+      "trailer": "https://www.youtube.com/results?search_query=%EC%86%94%EB%9D%BC%ED%8E%91%ED%81%AC%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-eba088ec9db4ec96-2026-06-09",
+      "title": "Layer Land",
+      "titleKr": "레이어 랜드",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-09",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#00a8cc",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EB%A0%88%EC%9D%B4%EC%96%B4%20%EB%9E%9C%EB%93%9C",
+      "trailer": "https://www.youtube.com/results?search_query=%EB%A0%88%EC%9D%B4%EC%96%B4%20%EB%9E%9C%EB%93%9C%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-ec9c84ecb998ec8a-2026-06-10",
+      "title": "Witchspire",
+      "titleKr": "위치스파이어",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-10",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#e84d8a",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": null,
+      "trailer": "https://www.youtube.com/results?search_query=%EC%9C%84%EC%B9%98%EC%8A%A4%ED%8C%8C%EC%9D%B4%EC%96%B4%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-ec8aa4ed8e98ec9d-2026-06-11",
+      "title": "SpaceCraft",
+      "titleKr": "스페이스크래프트",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-11",
+      "endDate": null,
+      "eventType": "ea",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#3aa757",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8",
+      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-eba6acebb08b20ec-2026-06-11",
+      "title": "LIMIT ZERO BREAKERS",
+      "titleKr": "리밋 제로 브레이커스 프롤로그 테스트",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-11",
+      "endDate": "2026-06-15",
+      "eventType": "test",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#b14aed",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EB%A6%AC%EB%B0%8B%20%EC%A0%9C%EB%A1%9C%20%EB%B8%8C%EB%A0%88%EC%9D%B4%EC%BB%A4%EC%8A%A4%20%ED%94%84%EB%A1%A4%EB%A1%9C%EA%B7%B8%20%ED%85%8C%EC%8A%A4%ED%8A%B8",
+      "trailer": "https://www.youtube.com/results?search_query=%EB%A6%AC%EB%B0%8B%20%EC%A0%9C%EB%A1%9C%20%EB%B8%8C%EB%A0%88%EC%9D%B4%EC%BB%A4%EC%8A%A4%20%ED%94%84%EB%A1%A4%EB%A1%9C%EA%B7%B8%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-ec8aa4ed8c8020eb-2026-06-15",
+      "title": "Steam Next Fest: June",
+      "titleKr": "스팀 넥스트 페스트: 6월",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-15",
+      "endDate": "2026-06-22",
+      "eventType": "event",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "GL",
+        "신작 데모",
+        "인디게임",
+        "페스티벌",
+        "라이브 스트리밍"
+      ],
+      "description": "글로벌 PC 게임 시장의 트렌드 세터, '스팀 넥스트 페스트: 2026년 6월 에디션'이 15일부터 일주일간 열립니다.",
+      "update": "",
+      "color": "#7b5cff",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EC%8A%A4%ED%8C%80%20%EB%84%A5%EC%8A%A4%ED%8A%B8%20%ED%8E%98%EC%8A%A4%ED%8A%B8%3A%206%EC%9B%94",
+      "trailer": null
+    },
+    {
+      "id": "inven-4e444332303236-2026-06-16",
+      "title": "NDC 2026",
+      "titleKr": "NDC2026",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-16",
+      "endDate": "2026-06-18",
+      "eventType": "event",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "KR",
+        "컨퍼런스",
+        "게임기획",
+        "AI",
+        "오프라인"
+      ],
+      "description": "올해 NDC는 오프라인으로 참관 가능하며, AI 활용 및 게임 기획 등 9개 부문의 발표가 마련될 예정입니다.",
+      "update": "",
+      "color": "#00c2cb",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/NDC2026",
+      "trailer": null
+    },
+    {
+      "id": "inven-eb8db4ec83a4ec96-2026-06-17",
+      "title": "Denshattack!",
+      "titleKr": "덴샤어택!",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-17",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#ff85c0",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": null,
+      "trailer": "https://www.youtube.com/results?search_query=%EB%8D%B4%EC%83%A4%EC%96%B4%ED%83%9D!%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-ec96b8eba6acec96-2026-06-17",
+      "title": "Unreal Fest Chicago 2026",
+      "titleKr": "언리얼 페스트 시카고 2026",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-17",
+      "endDate": "2026-06-19",
+      "eventType": "event",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "US",
+        "언리얼엔진",
+        "네트워크",
+        "영화",
+        "개발"
+      ],
+      "description": "에픽게임즈가 주최하는 올해 최대의 플래그십 행사인 언리얼 페스트 시카고가 6월 17일(한국시간)부터 3일간 열립니다.",
+      "update": "",
+      "color": "#6c7aff",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EC%96%B8%EB%A6%AC%EC%96%BC%20%ED%8E%98%EC%8A%A4%ED%8A%B8%20%EC%8B%9C%EC%B9%B4%EA%B3%A0%202026",
+      "trailer": null
+    },
+    {
+      "id": "inven-eb8db0ec9db4ebb8-2026-06-18",
+      "title": "Dave The Diver: In The Jungle",
+      "titleKr": "데이브 더 다이버: 인 더 정글",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-18",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#4a90d9",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EB%8D%B0%EC%9D%B4%EB%B8%8C%20%EB%8D%94%20%EB%8B%A4%EC%9D%B4%EB%B2%84%3A%20%EC%9D%B8%20%EB%8D%94%20%EC%A0%95%EA%B8%80",
+      "trailer": "https://www.youtube.com/results?search_query=%EB%8D%B0%EC%9D%B4%EB%B8%8C%20%EB%8D%94%20%EB%8B%A4%EC%9D%B4%EB%B2%84%3A%20%EC%9D%B8%20%EB%8D%94%20%EC%A0%95%EA%B8%80%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-ebaaa8ed9798eab0-2026-06-18",
+      "title": "The Adventures of Elliot: The Millennium Tales",
+      "titleKr": "모험가 엘리엇의 천 년 이야기",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-18",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#ff4d6d",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EB%AA%A8%ED%97%98%EA%B0%80%20%EC%97%98%EB%A6%AC%EC%97%87%EC%9D%98%20%EC%B2%9C%20%EB%85%84%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
+      "trailer": "https://www.youtube.com/results?search_query=%EB%AA%A8%ED%97%98%EA%B0%80%20%EC%97%98%EB%A6%AC%EC%97%87%EC%9D%98%20%EC%B2%9C%20%EB%85%84%20%EC%9D%B4%EC%95%BC%EA%B8%B0%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-ec86943a20ec9db8-2026-06-18",
+      "title": "SOL: enchant",
+      "titleKr": "솔: 인챈트",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-18",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#16a085",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EC%86%94%3A%20%EC%9D%B8%EC%B1%88%ED%8A%B8",
+      "trailer": "https://www.youtube.com/results?search_query=%EC%86%94%3A%20%EC%9D%B8%EC%B1%88%ED%8A%B8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-ed97ac20eba09b20-2026-06-18",
+      "title": "Hell Let Loose: Vietnam",
+      "titleKr": "헬 렛 루즈: 베트남",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-18",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#5b8def",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%ED%97%AC%20%EB%A0%9B%20%EB%A3%A8%EC%A6%88%3A%20%EB%B2%A0%ED%8A%B8%EB%82%A8",
+      "trailer": "https://www.youtube.com/results?search_query=%ED%97%AC%20%EB%A0%9B%20%EB%A3%A8%EC%A6%88%3A%20%EB%B2%A0%ED%8A%B8%EB%82%A8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-454120ec8aa4ed8f-2026-06-20",
+      "title": "EA SPORTS UFC 6",
+      "titleKr": "EA 스포츠 UFC 6",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-20",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#d98324",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/EA%20%EC%8A%A4%ED%8F%AC%EC%B8%A0%20UFC%206",
+      "trailer": "https://www.youtube.com/results?search_query=EA%20%EC%8A%A4%ED%8F%AC%EC%B8%A0%20UFC%206%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-eb8ba4ed81ac20ec-2026-06-22",
+      "title": "DarkScrolls",
+      "titleKr": "다크 스크롤즈",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-22",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#9b59b6",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EB%8B%A4%ED%81%AC%20%EC%8A%A4%ED%81%AC%EB%A1%A4%EC%A6%88",
+      "trailer": "https://www.youtube.com/results?search_query=%EB%8B%A4%ED%81%AC%20%EC%8A%A4%ED%81%AC%EB%A1%A4%EC%A6%88%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-ec8aa4ed8380ed8f-2026-06-25",
+      "title": "Star Fox",
+      "titleKr": "스타폭스",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-25",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#e67e22",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EC%8A%A4%ED%83%80%ED%8F%AD%EC%8A%A4",
+      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%ED%83%80%ED%8F%AD%EC%8A%A4%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-eb8db0eb939c20ec-2026-06-25",
+      "title": "DEAD OR ALIVE6 Last Round",
+      "titleKr": "데드 오어 얼라이브6 라스트 라운드",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-25",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [],
+      "description": "",
+      "update": "",
+      "color": "#27ae60",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": null,
+      "trailer": "https://www.youtube.com/results?search_query=%EB%8D%B0%EB%93%9C%20%EC%98%A4%EC%96%B4%20%EC%96%BC%EB%9D%BC%EC%9D%B4%EB%B8%8C6%20%EB%9D%BC%EC%8A%A4%ED%8A%B8%20%EB%9D%BC%EC%9A%B4%EB%93%9C%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-eba788ebb984eb85-2026-06-27",
+      "title": "Mabinogi 22th Fantasy Party",
+      "titleKr": "마비노기 22주년 기념, '판타지 파티'",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-27",
+      "endDate": null,
+      "eventType": "event",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "오프라인",
+        "22주년",
+        "마비노기",
+        "판타지파티"
+      ],
+      "description": "'마비노기'의 22주년을 기념하는 '판타지 파티'를 오는 6월 27일 일산 킨텍스에서 개최합니다.",
+      "update": "",
+      "color": "#c9a227",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EB%A7%88%EB%B9%84%EB%85%B8%EA%B8%B0%2022%EC%A3%BC%EB%85%84%20%EA%B8%B0%EB%85%90%2C%20'%ED%8C%90%ED%83%80%EC%A7%80%20%ED%8C%8C%ED%8B%B0'",
+      "trailer": null
+    },
+    {
+      "id": "inven-45564f2032303236-2026-06-27",
+      "title": "EVO 2026",
+      "titleKr": "EVO 2026",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-27",
+      "endDate": "2026-06-29",
+      "eventType": "event",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "US",
+        "격투게임",
+        "미국",
+        "챔피언",
+        "신작 발표"
+      ],
+      "description": "격투 게임 최고의 대회, 세계 챔피언을 가리는 EVO 2026이 오는 26일부터 3일간 개최됩니다.",
+      "update": "",
+      "color": "#2980b9",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/EVO%202026",
+      "trailer": null
+    },
+    {
+      "id": "inven-ebafb8eba5b4ec9d-2026-06-30",
+      "title": "Legend of Mir: Jin",
+      "titleKr": "미르의 전설: 진",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-30",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "출시일 미정"
+      ],
+      "description": "출시일 미정.",
+      "update": "",
+      "color": "#f0c419",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EB%AF%B8%EB%A5%B4%EC%9D%98%20%EC%A0%84%EC%84%A4%3A%20%EC%A7%84",
+      "trailer": "https://www.youtube.com/results?search_query=%EB%AF%B8%EB%A5%B4%EC%9D%98%20%EC%A0%84%EC%84%A4%3A%20%EC%A7%84%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+    },
+    {
+      "id": "inven-ecb59ced9b84ec9d-2026-06-30",
+      "title": "The Last Gas Station",
+      "titleKr": "최후의 주유소",
+      "developer": "",
+      "publisher": "",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-30",
+      "endDate": null,
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "2026 2분기"
+      ],
+      "description": "2026년 2분기 출시 예정.",
+      "update": "",
+      "color": "#8e44ad",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/search/total/%EC%B5%9C%ED%9B%84%EC%9D%98%20%EC%A3%BC%EC%9C%A0%EC%86%8C",
+      "trailer": null
     }
   ]
 }

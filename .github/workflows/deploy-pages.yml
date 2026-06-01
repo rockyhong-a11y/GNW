@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+# Publishes the static site (index.html, app.js, styles.css, data/games.json, …)
+# to GitHub Pages on every push to main. Requires the repo's Pages source to be
+# set to "GitHub Actions" (Settings → Pages → Build and deployment → Source).
+# configure-pages will enable it automatically when it has permission.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; newer pushes supersede in-flight ones.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact (repo root)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

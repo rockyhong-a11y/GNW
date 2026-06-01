@@ -1,8 +1,8 @@
 /* GNW — Game New Watch
  * Vanilla JS, no build step. Reads data/games.json and renders a month-grouped
  * timeline of game releases / updates / events from 인벤 발매 캘린더.
- * UI is intentionally minimal: only a platform filter (모바일 · PC · 콘솔) and a
- * month filter. The same JSON is consumed by the iOS Scriptable widget. */
+ * UI: a bottom platform tab bar (전체 · 모바일 · PC · 콘솔, swipeable) and a
+ * month list box. The same JSON is consumed by the iOS Scriptable widget. */
 
 // 인벤 발매 캘린더의 실제 분류와 일치 (카드 배지)
 const EVENT_META = {
@@ -13,7 +13,7 @@ const EVENT_META = {
   event:   { label: "행사", color: "#ff85c0" },
 };
 
-// 플랫폼을 3개 묶음으로 분류 (모바일 · PC · 콘솔)
+// 플랫폼을 묶음으로 분류 (모바일 · PC · 콘솔)
 const PLATFORM_CATS = [
   { key: "모바일", match: (p) => /mobile|android|ios|aos|모바일/i.test(p) },
   { key: "PC", match: (p) => /^pc$|windows|mac|linux|steam|pc/i.test(p) },
@@ -24,11 +24,12 @@ const gameCats = (g) => {
   for (const p of (g.platforms || [])) for (const c of PLATFORM_CATS) if (c.match(p)) cats.add(c.key);
   return cats;
 };
+const TAB_ORDER = ["all", "모바일", "PC", "콘솔"];
 
 const STATE = {
   games: [],
-  platforms: new Set(),   // empty = all (모바일/PC/콘솔)
-  month: "all",           // "all" | "YYYY-MM"
+  platform: "all",   // all | 모바일 | PC | 콘솔
+  month: "all",      // all | YYYY-MM
 };
 
 const TODAY = new Date();
@@ -56,10 +57,6 @@ function monthLabel(key) {
   const isThis = key === `${TODAY.getFullYear()}-${String(TODAY.getMonth() + 1).padStart(2, "0")}`;
   return `${y}년 ${Number(m)}월${isThis ? " · 이번 달" : ""}`;
 }
-function monthShort(key) {
-  const [y, m] = key.split("-");
-  return `${Number(m)}월`;
-}
 function countdownLabel(game) {
   const days = daysBetween(game.releaseDate);
   if (game.status === "released" || days < 0) return { text: "완료", released: true };
@@ -75,10 +72,7 @@ function formatPrice(price) {
 /* ---------- Filtering ---------- */
 function applyFilters() {
   const list = STATE.games.filter((g) => {
-    if (STATE.platforms.size) {
-      const cats = gameCats(g);
-      if (![...STATE.platforms].some((c) => cats.has(c))) return false;
-    }
+    if (STATE.platform !== "all" && !gameCats(g).has(STATE.platform)) return false;
     if (STATE.month !== "all" && monthKey(g.releaseDate) !== STATE.month) return false;
     return true;
   });
@@ -144,11 +138,9 @@ function render() {
   if (!list.length) {
     root.innerHTML = "";
     $("#emptyState").hidden = false;
-    $("#resultCount").textContent = "0개";
     return;
   }
   $("#emptyState").hidden = true;
-  $("#resultCount").textContent = `${list.length}개`;
 
   // 월별로 묶어 타임라인으로 표시
   const groups = [];
@@ -158,7 +150,6 @@ function render() {
     if (!idx.has(k)) { idx.set(k, groups.length); groups.push({ key: k, items: [] }); }
     groups[idx.get(k)].items.push(g);
   }
-  root.className = "timeline";
   root.innerHTML = groups.map((grp) => {
     const isThis = grp.key === `${TODAY.getFullYear()}-${String(TODAY.getMonth() + 1).padStart(2, "0")}`;
     return `
@@ -171,57 +162,56 @@ function render() {
   }).join("");
 }
 
-/* ---------- Filter chip builders ---------- */
-function buildPlatformFilters() {
-  const wrap = $("#platformFilters");
-  wrap.innerHTML = PLATFORM_CATS
-    .map(({ key }) => `<button class="chip ${STATE.platforms.has(key) ? "active" : ""}" data-cat="${key}">${key}</button>`)
-    .join("");
-  wrap.querySelectorAll(".chip").forEach((c) =>
-    c.addEventListener("click", () => {
-      const v = c.dataset.cat;
-      STATE.platforms.has(v) ? STATE.platforms.delete(v) : STATE.platforms.add(v);
-      c.classList.toggle("active");
-      render();
-    })
-  );
+/* ---------- Platform tabs (bottom bar + swipe) ---------- */
+function setTab(cat) {
+  if (!TAB_ORDER.includes(cat) || cat === STATE.platform) return;
+  STATE.platform = cat;
+  document.querySelectorAll("#platformTabs .tab").forEach((t) => {
+    const on = t.dataset.cat === cat;
+    t.classList.toggle("active", on);
+    t.setAttribute("aria-selected", on ? "true" : "false");
+  });
+  render();
 }
 
-function buildMonthFilters() {
+function bindTabs() {
+  document.querySelectorAll("#platformTabs .tab").forEach((t) =>
+    t.addEventListener("click", () => setTab(t.dataset.cat))
+  );
+  // 콘텐츠 좌우 스와이프로 탭 전환
+  const main = document.querySelector("main");
+  let x0 = null, y0 = null;
+  main.addEventListener("touchstart", (e) => { const t = e.changedTouches[0]; x0 = t.clientX; y0 = t.clientY; }, { passive: true });
+  main.addEventListener("touchend", (e) => {
+    if (x0 == null) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - x0, dy = t.clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.5) return; // 수평 스와이프만
+    const i = TAB_ORDER.indexOf(STATE.platform);
+    const ni = dx < 0 ? Math.min(TAB_ORDER.length - 1, i + 1) : Math.max(0, i - 1);
+    if (ni !== i) setTab(TAB_ORDER[ni]);
+  }, { passive: true });
+}
+
+/* ---------- Month list box ---------- */
+function buildMonthSelect() {
   const months = [...new Set(STATE.games.map((g) => monthKey(g.releaseDate)))].sort();
-  const wrap = $("#monthFilters");
-  const chips = [`<button class="chip ${STATE.month === "all" ? "active" : ""}" data-month="all">전체</button>`]
-    .concat(months.map((m) => `<button class="chip ${STATE.month === m ? "active" : ""}" data-month="${m}">${monthShort(m)}</button>`));
-  wrap.innerHTML = chips.join("");
-  wrap.querySelectorAll(".chip").forEach((c) =>
-    c.addEventListener("click", () => { STATE.month = c.dataset.month; buildMonthFilters(); render(); })
-  );
-}
-
-function initFilters() {
-  buildPlatformFilters();
-  buildMonthFilters();
+  const sel = $("#monthSelect");
+  sel.innerHTML = [`<option value="all">전체 기간</option>`]
+    .concat(months.map((m) => `<option value="${m}">${monthLabel(m)}</option>`))
+    .join("");
+  if (![...sel.options].some((o) => o.value === STATE.month)) STATE.month = "all";
+  sel.value = STATE.month;
 }
 
 /* ---------- Data loading & refresh ---------- */
 let isLoading = false;
 let lastFetchAt = 0;
 
-function setRefreshStatus(text, busy) {
-  const el = $("#refreshStatus");
-  if (el) el.textContent = text;
-  const btn = $("#refreshBtn");
-  if (btn) { btn.disabled = !!busy; btn.classList.toggle("spinning", !!busy); }
-}
-function nowTime() {
-  const d = new Date();
-  return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
-}
-
 async function loadGames(firstLoad = false) {
   if (isLoading) return;
   isLoading = true;
-  setRefreshStatus("갱신 중…", true);
   try {
     const res = await fetch(`data/games.json?t=${Date.now()}`, { cache: "no-store" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -231,11 +221,9 @@ async function loadGames(firstLoad = false) {
     document.title = data.meta.title;
     $("#lastUpdated").textContent = `데이터 기준 ${data.meta.updated}`;
     renderSources(data.meta);
-    initFilters();
+    buildMonthSelect();
     render();
-    setRefreshStatus(`갱신 ${nowTime()}`, false);
   } catch (err) {
-    setRefreshStatus("갱신 실패", false);
     if (firstLoad && !STATE.games.length) {
       $("#gameRoot").innerHTML = `<p class="empty-state">데이터를 불러오지 못했습니다.<br><small>${esc(err.message)}</small></p>`;
     }
@@ -256,8 +244,8 @@ function renderSources(meta) {
   $("#sources").innerHTML = (links ? "참조: " + links : "") + (prov ? `<br>${prov}` : "");
 }
 
-function bindRefresh() {
-  $("#refreshBtn").addEventListener("click", () => loadGames(false));
+function bindAutoRefresh() {
+  // 진입/복귀 시 자동 재요청 (network-first)
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible" && Date.now() - lastFetchAt > 30000) loadGames(false);
   });
@@ -266,7 +254,9 @@ function bindRefresh() {
 
 /* ---------- Init ---------- */
 async function init() {
-  bindRefresh();
+  bindTabs();
+  $("#monthSelect").addEventListener("change", (e) => { STATE.month = e.target.value; render(); });
+  bindAutoRefresh();
   await loadGames(true);
 }
 

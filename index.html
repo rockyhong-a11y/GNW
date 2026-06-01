@@ -18,19 +18,11 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav class="controls" aria-label="필터">
-    <div class="filter-group" id="platformFilters" role="group" aria-label="플랫폼 필터"></div>
-    <div class="filter-group" id="monthFilters" role="group" aria-label="월별 필터"></div>
+  <nav class="controls" aria-label="기간">
+    <select id="monthSelect" class="month-select" aria-label="기간 선택"></select>
   </nav>
 
   <main>
-    <div class="result-bar">
-      <span id="resultCount" class="result-count"></span>
-      <div class="result-actions">
-        <span id="refreshStatus" class="refresh-status" aria-live="polite"></span>
-        <button id="refreshBtn" class="refresh-btn" type="button" title="최신 정보 갱신" aria-label="최신 정보 갱신">⟳</button>
-      </div>
-    </div>
     <div id="gameRoot" class="timeline" aria-live="polite"></div>
     <p id="emptyState" class="empty-state" hidden>조건에 맞는 게임이 없습니다.</p>
   </main>
@@ -43,6 +35,26 @@
       <span>웹앱 + iOS 위젯</span>
     </p>
   </footer>
+
+  <!-- 하단 플랫폼 탭 (전체 · 모바일 · PC · 콘솔) — 콘텐츠 좌우 스와이프로도 전환 -->
+  <nav class="tabbar" id="platformTabs" role="tablist" aria-label="플랫폼">
+    <button class="tab active" type="button" role="tab" data-cat="all" aria-selected="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      <span>전체</span>
+    </button>
+    <button class="tab" type="button" role="tab" data-cat="모바일" aria-selected="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>모바일</span>
+    </button>
+    <button class="tab" type="button" role="tab" data-cat="PC" aria-selected="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="8" y1="20" x2="16" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="16" x2="12" y2="20" stroke="currentColor" stroke-width="2"/></svg>
+      <span>PC</span>
+    </button>
+    <button class="tab" type="button" role="tab" data-cat="콘솔" aria-selected="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h10a4 4 0 0 1 4 4l.6 4.2A2.4 2.4 0 0 1 17 18l-1.5-2h-7L7 18a2.4 2.4 0 0 1-4.6-1.8L3 12a4 4 0 0 1 4-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="6.5" y1="12" x2="9.5" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="10.5" x2="8" y2="13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="15.5" cy="11.5" r="1.1" fill="currentColor"/><circle cx="17.5" cy="13.5" r="1.1" fill="currentColor"/></svg>
+      <span>콘솔</span>
+    </button>
+  </nav>
 
   <script src="app.js"></script>
 </body>

@@ -172,11 +172,12 @@ async function fromInven(out) {
       `news_links=${(html.match(/\/webzine\/news\/\?news=\d+/g) || []).length}`,
       `upload_imgs=${(html.match(/upload\d*\.inven\.co\.kr\/upload/g) || []).length}`,
       `date_tokens=${(html.match(/20\d{2}[-./]\d{1,2}[-./]\d{1,2}/g) || []).slice(0, 12).join(",")}`,
-      `--- SAMPLE (around first calendar/game link, ~16000 chars) ---`,
+      `--- SAMPLE (from toolbar onward = 실제 일정 리스트, ~90000 chars) ---`,
       (() => {
+        const t = html.search(/class="toolbar[ "]/);
         const i = html.search(/\/webzine\/calendar\/game\/\d+/);
-        const start = i > 800 ? i - 800 : 0;
-        return html.slice(start, start + 16000);
+        const start = t >= 0 ? t : (i > 800 ? i - 800 : 0);
+        return html.slice(start, start + 90000);
       })(),
     ].join("\n");
     await writeFile(join(ROOT, "data/_inven-debug.txt"), dbg);

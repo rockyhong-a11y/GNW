@@ -20,6 +20,12 @@
 <body>
   <nav class="controls" aria-label="기간">
     <select id="monthSelect" class="month-select" aria-label="기간 선택"></select>
+    <button id="settingsBtn" class="settings-btn" type="button" aria-label="설정" title="설정">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="3.2"/>
+        <path d="M19.4 12c0-.5 0-.9-.1-1.4l2-1.5-2-3.4-2.3 1a7 7 0 0 0-2.4-1.4L14.2 2H9.8l-.4 2.3a7 7 0 0 0-2.4 1.4l-2.3-1-2 3.4 2 1.5c-.1.5-.1.9-.1 1.4s0 .9.1 1.4l-2 1.5 2 3.4 2.3-1a7 7 0 0 0 2.4 1.4l.4 2.3h4.4l.4-2.3a7 7 0 0 0 2.4-1.4l2.3 1 2-3.4-2-1.5c.1-.5.1-.9.1-1.4z" stroke-linejoin="round"/>
+      </svg>
+    </button>
   </nav>
 
   <main>
@@ -55,6 +61,18 @@
       <span>콘솔</span>
     </button>
   </nav>
+
+  <!-- 설정: 앱 아이콘(테마) 변경 -->
+  <div id="settingsSheet" class="sheet-overlay" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-label="앱 아이콘 변경">
+      <div class="sheet-head">
+        <h2>앱 아이콘</h2>
+        <button id="settingsClose" class="sheet-close" type="button" aria-label="닫기">✕</button>
+      </div>
+      <div class="icon-grid" id="iconGrid"></div>
+      <p class="sheet-note">아이콘을 고른 뒤 사파리 <b>공유 → 홈 화면에 추가</b>(이미 추가했다면 삭제 후 다시 추가)하면 홈 화면에 적용됩니다.</p>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>

@@ -155,7 +155,7 @@ function render() {
     return `
       <section class="month-block">
         <h2 class="month-head ${isThis ? "current" : ""}">
-          <span>${monthLabel(grp.key)}</span><span class="month-count">${grp.items.length}</span>
+          <span>${monthLabel(grp.key)}</span>
         </h2>
         <div class="game-grid">${grp.items.map(renderCard).join("")}</div>
       </section>`;
@@ -252,9 +252,75 @@ function bindAutoRefresh() {
   window.addEventListener("focus", () => { if (Date.now() - lastFetchAt > 30000) loadGames(false); });
 }
 
+/* ---------- App icon themes (설정 → 아이콘 변경) ---------- */
+const ICON_THEMES = [
+  { key: "violet", name: "퍼플", c1: "#6c7aff", c2: "#b14aed" },
+  { key: "blue",   name: "블루", c1: "#3aa7ff", c2: "#1e63ff" },
+  { key: "green",  name: "그린", c1: "#3ddc84", c2: "#15a85f" },
+  { key: "pink",   name: "핑크", c1: "#ff85c0", c2: "#e8458a" },
+  { key: "amber",  name: "앰버", c1: "#ffb454", c2: "#ff7a3d" },
+  { key: "mono",   name: "다크", c1: "#3a4170", c2: "#1b2036" },
+];
+function iconSVG(t, size) {
+  const id = "g_" + t.key;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 512 512"><defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${t.c1}"/><stop offset="1" stop-color="${t.c2}"/></linearGradient></defs><rect width="512" height="512" rx="112" fill="#0d0f1a"/><rect x="36" y="36" width="440" height="440" rx="92" fill="url(#${id})"/><text x="256" y="300" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="150" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="2">GNW</text><circle cx="256" cy="372" r="13" fill="#3ddc84"/></svg>`;
+}
+const svgDataUri = (svg) => "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+function rasterize(svg, size) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      try {
+        const c = document.createElement("canvas");
+        c.width = c.height = size;
+        c.getContext("2d").drawImage(img, 0, 0, size, size);
+        resolve(c.toDataURL("image/png"));
+      } catch { resolve(null); }
+    };
+    img.onerror = () => resolve(null);
+    img.src = svgDataUri(svg);
+  });
+}
+function savedIconKey() {
+  try { return localStorage.getItem("gnw-icon") || "violet"; } catch { return "violet"; }
+}
+async function applyIcon(key) {
+  const t = ICON_THEMES.find((x) => x.key === key) || ICON_THEMES[0];
+  // iOS 홈화면 아이콘은 PNG가 안정적 → canvas로 래스터화한 PNG를 apple-touch-icon 으로
+  const png = await rasterize(iconSVG(t, 180), 180);
+  if (png) document.querySelectorAll('link[rel="apple-touch-icon"]').forEach((l) => { l.href = png; });
+  const fav = document.querySelector('link[rel="icon"]');
+  if (fav) fav.href = svgDataUri(iconSVG(t, 64));
+  try { localStorage.setItem("gnw-icon", key); } catch {}
+}
+function buildIconGrid() {
+  const cur = savedIconKey();
+  const grid = $("#iconGrid");
+  grid.innerHTML = ICON_THEMES.map((t) =>
+    `<button class="icon-option ${t.key === cur ? "sel" : ""}" type="button" data-key="${t.key}">
+       <span class="icon-prev">${iconSVG(t, 60)}</span><span class="icon-name">${t.name}</span>
+     </button>`
+  ).join("");
+  grid.querySelectorAll(".icon-option").forEach((b) =>
+    b.addEventListener("click", () => {
+      grid.querySelectorAll(".icon-option").forEach((x) => x.classList.remove("sel"));
+      b.classList.add("sel");
+      applyIcon(b.dataset.key);
+    })
+  );
+}
+function bindSettings() {
+  const overlay = $("#settingsSheet");
+  $("#settingsBtn").addEventListener("click", () => { buildIconGrid(); overlay.hidden = false; });
+  $("#settingsClose").addEventListener("click", () => { overlay.hidden = true; });
+  overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.hidden = true; });
+}
+
 /* ---------- Init ---------- */
 async function init() {
   bindTabs();
+  bindSettings();
+  applyIcon(savedIconKey());
   $("#monthSelect").addEventListener("change", (e) => { STATE.month = e.target.value; render(); });
   bindAutoRefresh();
   await loadGames(true);

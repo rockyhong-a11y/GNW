@@ -146,9 +146,39 @@ async function fromRAWG(out) {
 // 실제 페이지 마크업에 맞춰 SEL/정규식 조정이 필요할 수 있다. INVEN=1 일 때만 동작.
 async function fromInven(out) {
   if (process.env.INVEN !== "1") return { name: "Inven", skipped: "INVEN!=1" };
-  const res = await fetch(INVEN_CAL.url, { headers: { "user-agent": "GNW/1.0", "accept-language": "ko" } });
-  if (!res.ok) throw new Error(`Inven HTTP ${res.status}`);
-  const html = await res.text();
+  // 브라우저 유사 헤더(봇 차단 완화)
+  const HEADERS = {
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "accept-language": "ko-KR,ko;q=0.9",
+    "referer": "https://www.inven.co.kr/",
+  };
+  let html = "", status = 0, err = "";
+  try {
+    const res = await fetch(INVEN_CAL.url, { headers: HEADERS });
+    status = res.status;
+    html = await res.text();
+  } catch (e) { err = String(e && e.message || e); }
+
+  // 진단 파일: 러너가 인벤으로부터 실제로 받은 것을 저장소에 남겨 구조/도달성 확인.
+  try {
+    const dbg = [
+      `fetched_at=${new Date().toISOString()}`,
+      `url=${INVEN_CAL.url}`,
+      `status=${status}`,
+      `error=${err}`,
+      `html_length=${html.length}`,
+      `calendar_game_links=${(html.match(/\/webzine\/calendar\/game\/\d+/g) || []).length}`,
+      `news_links=${(html.match(/\/webzine\/news\/\?news=\d+/g) || []).length}`,
+      `upload_imgs=${(html.match(/upload\d*\.inven\.co\.kr\/upload/g) || []).length}`,
+      `date_tokens=${(html.match(/20\d{2}[-./]\d{1,2}[-./]\d{1,2}/g) || []).slice(0, 12).join(",")}`,
+      `--- SAMPLE (first 12000 chars) ---`,
+      html.slice(0, 12000),
+    ].join("\n");
+    await writeFile(join(ROOT, "data/_inven-debug.txt"), dbg);
+  } catch { /* 디버그 기록 실패는 무시 */ }
+
+  if (!html || status >= 400) return { name: "Inven", error: `status=${status} ${err}`.trim(), added: 0 };
 
   // 캘린더 셀의 게임 항목: <a href="...상세...">제목</a> + 인접한 날짜(YYYY-MM-DD / MM.DD)
   // 인벤 캘린더 분류 키워드 → eventType

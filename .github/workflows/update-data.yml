@@ -28,12 +28,12 @@ jobs:
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- data/games.json; then
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/games.json data/_inven-debug.txt 2>/dev/null || git add data/games.json
+          if git diff --cached --quiet; then
             echo "변경 없음 — 커밋 생략"
           else
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add data/games.json
-            git commit -m "chore(data): refresh games.json from sources"
+            git commit -m "chore(data): refresh games.json + 인벤 수집 진단"
             git push
           fi

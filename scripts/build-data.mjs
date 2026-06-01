@@ -82,9 +82,13 @@ function makeGame(p) {
     update: p.update || "",
     color: p.color || colorFor(p.title),
     source: p.source,
+    detailUrl: p.detailUrl || null,   // 홈페이지/상세설명 링크
     trailer: p.trailer || trailerFor(p.title, p.developer),
   };
 }
+
+const INVEN_CAL = { name: "인벤 발매 캘린더", url: "https://www.inven.co.kr/webzine/calendar/" };
+const invenSearch = (t) => `https://www.inven.co.kr/search/total/${encodeURIComponent(t)}`;
 
 /* ---------- Providers ---------- */
 async function fromRAWG(out) {
@@ -117,6 +121,49 @@ async function fromRAWG(out) {
     pages++;
   }
   return { name: "RAWG", added };
+}
+
+// 인벤 발매 캘린더(주요 일정) 파서. HTML 구조 의존이라 best-effort 이며,
+// 실제 페이지 마크업에 맞춰 SEL/정규식 조정이 필요할 수 있다. INVEN=1 일 때만 동작.
+async function fromInven(out) {
+  if (process.env.INVEN !== "1") return { name: "Inven", skipped: "INVEN!=1" };
+  const res = await fetch(INVEN_CAL.url, { headers: { "user-agent": "GNW/1.0", "accept-language": "ko" } });
+  if (!res.ok) throw new Error(`Inven HTTP ${res.status}`);
+  const html = await res.text();
+
+  // 캘린더 셀의 게임 항목: <a href="...상세...">제목</a> + 인접한 날짜(YYYY-MM-DD / MM.DD)
+  const evFromText = (s) =>
+    /사전\s*예약/.test(s) ? "prereg" : /\bOBT\b|오픈\s*베타/i.test(s) ? "obt" :
+    /\bCBT\b|비공개\s*테스트/i.test(s) ? "cbt" : /업데이트|패치|시즌/.test(s) ? "update" : "release";
+
+  let added = 0;
+  // 날짜 블록 단위로 끊어 각 블록 내 링크를 그 날짜에 귀속
+  const blocks = html.split(/(?=(?:20\d{2}[-./]\d{1,2}[-./]\d{1,2})|(?:data-date=))/);
+  for (const b of blocks) {
+    const dm = b.match(/(20\d{2})[-./](\d{1,2})[-./](\d{1,2})/);
+    if (!dm) continue;
+    const date = `${dm[1]}-${String(dm[2]).padStart(2, "0")}-${String(dm[3]).padStart(2, "0")}`;
+    for (const a of b.matchAll(/<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)) {
+      const href = a[1];
+      const title = a[2].replace(/<[^>]+>/g, "").replace(/&[a-z]+;/g, " ").trim();
+      if (!title || title.length < 2 || title.length > 60) continue;
+      if (!/inven\.co\.kr/.test(href) && href.startsWith("/")) continue;
+      const detailUrl = href.startsWith("http") ? href : `https://www.inven.co.kr${href}`;
+      out.push(makeGame({
+        id: `inven-${slug(title)}-${date}`,
+        title, titleKr: title,
+        platforms: [], genres: [],
+        releaseDate: date,
+        eventType: evFromText(title),
+        tags: ["인벤"],
+        description: "인벤 발매 캘린더 주요 일정",
+        source: INVEN_CAL,
+        detailUrl,
+      }));
+      added++;
+    }
+  }
+  return { name: "Inven", added };
 }
 
 async function fromSteam(out) {
@@ -190,7 +237,9 @@ async function main() {
   const collected = [];
   const report = [];
 
-  for (const provider of [fromRAWG, fromSteam, fromRSS]) {
+  // "인벤 주요 일정 정보만 참조" — 현재 활성 provider 는 인벤 캘린더 하나뿐.
+  // (fromRAWG/fromSteam/fromRSS 는 함수로 남겨둠: 필요 시 이 배열에 다시 추가)
+  for (const provider of [fromInven]) {
     try {
       report.push(await provider(collected));
     } catch (e) {

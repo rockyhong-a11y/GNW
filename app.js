@@ -110,6 +110,9 @@ function renderCard(g) {
   const source = g.source
     ? `<a class="source" href="${esc(g.source.url)}" target="_blank" rel="noopener">출처 · ${esc(g.source.name)}</a>`
     : "";
+  const detail = g.detailUrl
+    ? `<a class="detail" href="${esc(g.detailUrl)}" target="_blank" rel="noopener">상세정보 ↗</a>`
+    : "";
 
   return `
     <article class="card">
@@ -133,7 +136,7 @@ function renderCard(g) {
             <span class="price ${price.free ? "free" : ""}">${price.text}</span>
           </span>
         </div>
-        ${source}
+        <div class="card-foot">${source}${detail}</div>
       </div>
     </article>`;
 }

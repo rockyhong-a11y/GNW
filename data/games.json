@@ -14,13 +14,13 @@
     "pipeline": [
       {
         "name": "Inven",
-        "skipped": "INVEN!=1"
+        "added": 32
       }
     ],
     "counts": {
-      "total": 32,
+      "total": 34,
       "curated": 32,
-      "collected": 0
+      "collected": 32
     }
   },
   "games": [
@@ -51,9 +51,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null,
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EB%B6%95%EA%B4%B4%20%EC%8A%A4%ED%83%80%EB%A0%88%EC%9D%BC/1?sort=recency"
+      "trailer": "https://www.youtube.com/results?search_query=%EB%B6%95%EA%B4%B4%3A%20%EC%8A%A4%ED%83%80%EB%A0%88%EC%9D%BC%204.3%EB%B2%84%EC%A0%84%20-%20%E3%80%8C%EC%82%B0%20%EC%9E%90%EC%9D%98%20%EB%A7%9D%EC%B2%9C%EC%97%90%20%EC%9E%A0%EA%B2%A8%E3%80%8D%20%20official%20trailer",
+      "image": "https://static.inven.co.kr/column/webzine/calendar/2026/i1564188049.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/news/?news=316739"
     },
     {
       "id": "inven-ec8ab9eba6acec9d-2026-06-01",
@@ -84,9 +84,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null,
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%8A%B9%EB%A6%AC%EC%9D%98%20%EC%97%AC%EC%8B%A0%20%EB%8B%88%EC%BC%80/1?sort=recency"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%B9%EB%A6%AC%EC%9D%98%20%EC%97%AC%EC%8B%A0%3A%20%EB%8B%88%EC%BC%80%20-%20%E2%80%98%EC%97%90%EB%A6%AC%EC%96%B4%20%EB%B0%A9%EC%96%B4%EC%A0%84%E2%80%99%20%ED%8C%9D%EC%97%85%20%EC%8A%A4%ED%86%A0%EC%96%B4%20%20official%20trailer",
+      "image": "https://static.inven.co.kr/column/webzine/calendar/2026/i1531647414.jpg",
+      "detailUrl": "https://algernonproduct.co.jp/nikke_goods/popup_event/2025/seoul_ko.php"
     },
     {
       "id": "inven-ebb0b0ed8b80ec89-2026-06-02",
@@ -94,7 +94,9 @@
       "titleKr": "배틀쉽 커맨드",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC"
+      ],
       "genres": [],
       "releaseDate": "2026-06-02",
       "endDate": null,
@@ -111,9 +113,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%B0%B0%ED%8B%80%EC%89%BD%20%EC%BB%A4%EB%A7%A8%EB%93%9C%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EB%B0%B0%ED%8B%80%EC%89%BD%20%EC%BB%A4%EB%A7%A8%EB%93%9C/1?sort=recency"
+      "trailer": "https://youtu.be/I56c3FdYXqQ",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1130011887.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13689"
     },
     {
       "id": "inven-ec8aa4ed858cec9d-2026-06-03",
@@ -143,9 +145,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null,
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%8A%B8%20%EC%98%A4%EB%B8%8C%20%ED%94%8C%EB%A0%88%EC%9D%B4/1?sort=recency"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%8A%B8%20%EC%98%A4%EB%B8%8C%20%ED%94%8C%EB%A0%88%EC%9D%B4%20%20official%20trailer",
+      "image": "https://static.inven.co.kr/column/webzine/calendar/2026/i1582969264.jpg",
+      "detailUrl": "https://www.youtube.com/live/cvh0xXmu0bs?si=43aVfbAq_7o2A2E0"
     },
     {
       "id": "inven-ec9db4ed99982031-2026-06-03",
@@ -174,9 +176,39 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null,
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%9D%B4%ED%99%98/1?sort=recency"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%9D%B4%ED%99%98%201.1%20%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%20-%20'%EA%BF%88%EC%9D%98%20%ED%9A%8C%EB%9E%91'%20%20official%20trailer",
+      "image": "https://static.inven.co.kr/column/webzine/calendar/2026/i1230379883.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/news/?news=316747"
+    },
+    {
+      "id": "inven-13698",
+      "title": "Fatekeeper",
+      "titleKr": "페이트키퍼",
+      "developer": "미상",
+      "publisher": "미상",
+      "platforms": [
+        "PC"
+      ],
+      "genres": [],
+      "releaseDate": "2026-06-03",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "인벤"
+      ],
+      "description": "",
+      "update": "",
+      "color": "#8e44ad",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1550127867.jpg",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13698",
+      "trailer": "https://youtu.be/SQtYGb-IZR0"
     },
     {
       "id": "inven-ecb9bced81acec8a-2026-06-04",
@@ -184,7 +216,9 @@
       "titleKr": "칼크스",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC"
+      ],
       "genres": [],
       "releaseDate": "2026-06-04",
       "endDate": null,
@@ -201,9 +235,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%B9%BC%ED%81%AC%EC%8A%A4%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%B9%BC%ED%81%AC%EC%8A%A4/1?sort=recency"
+      "trailer": "https://youtu.be/5z2zKZ5S66U",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1758751166.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13532"
     },
     {
       "id": "inven-ed88aceba5b420eb-2026-06-04",
@@ -211,7 +245,10 @@
       "titleKr": "투르 드 프랑스2026",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC",
+        "Xbox Series"
+      ],
       "genres": [],
       "releaseDate": "2026-06-04",
       "endDate": null,
@@ -228,9 +265,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%ED%88%AC%EB%A5%B4%20%EB%93%9C%20%ED%94%84%EB%9E%91%EC%8A%A42026%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%ED%88%AC%EB%A5%B4%20%EB%93%9C%20%ED%94%84%EB%9E%91%EC%8A%A42026/1?sort=recency"
+      "trailer": "https://youtu.be/IZIaOAFPu-4",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1474934429.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13668"
     },
     {
       "id": "inven-ec8aa4ec998420ec-2026-06-04",
@@ -238,7 +275,9 @@
       "titleKr": "스완 송",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC"
+      ],
       "genres": [],
       "releaseDate": "2026-06-04",
       "endDate": null,
@@ -255,9 +294,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%EC%99%84%20%EC%86%A1%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%8A%A4%EC%99%84%20%EC%86%A1/1?sort=recency"
+      "trailer": "https://youtu.be/F_wtzRF3vxc",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1692406149.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13690"
     },
     {
       "id": "inven-eab3a0eb949520eb-2026-06-06",
@@ -265,7 +304,10 @@
       "titleKr": "고딕 리메이크",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC",
+        "Xbox Series"
+      ],
       "genres": [],
       "releaseDate": "2026-06-06",
       "endDate": null,
@@ -282,9 +324,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EA%B3%A0%EB%94%95%20%EB%A6%AC%EB%A9%94%EC%9D%B4%ED%81%AC%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EA%B3%A0%EB%94%95%20%EB%A6%AC%EB%A9%94%EC%9D%B4%ED%81%AC/1?sort=recency"
+      "trailer": "https://youtu.be/CxrZPIWSGK4",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2022/i8218914711.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11278"
     },
     {
       "id": "inven-ec849ceba8b820ea-2026-06-06",
@@ -314,9 +356,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null,
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%84%9C%EB%A8%B8%20%EA%B2%8C%EC%9E%84%20%ED%8E%98%EC%8A%A4%ED%8A%B8%202026/1?sort=recency"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%84%9C%EB%A8%B8%20%EA%B2%8C%EC%9E%84%20%ED%8E%98%EC%8A%A4%ED%8A%B8%202026%20%20official%20trailer",
+      "image": "https://static.inven.co.kr/column/webzine/calendar/2026/i1483707528.jpg",
+      "detailUrl": "https://www.summergamefest.com/"
     },
     {
       "id": "inven-58626f7820eab28c-2026-06-08",
@@ -346,9 +388,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null,
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/Xbox%20%EA%B2%8C%EC%9E%84%20%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4%202026/1?sort=recency"
+      "trailer": "https://www.youtube.com/results?search_query=Xbox%20%EA%B2%8C%EC%9E%84%20%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4%202026%20%20official%20trailer",
+      "image": "https://static.inven.co.kr/column/webzine/calendar/2026/i1365345965.jpg",
+      "detailUrl": "https://www.youtube.com/user/xbox/hub"
     },
     {
       "id": "inven-ec8694eb9dbced8e-2026-06-08",
@@ -356,7 +398,11 @@
       "titleKr": "솔라펑크",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC",
+        "Xbox Series",
+        "Switch"
+      ],
       "genres": [],
       "releaseDate": "2026-06-08",
       "endDate": null,
@@ -373,9 +419,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%86%94%EB%9D%BC%ED%8E%91%ED%81%AC%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%86%94%EB%9D%BC%ED%8E%91%ED%81%AC/1?sort=recency"
+      "trailer": "https://youtu.be/ZLRwrqtRmKg",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1118504728.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13691"
     },
     {
       "id": "inven-eba088ec9db4ec96-2026-06-09",
@@ -383,7 +429,9 @@
       "titleKr": "레이어 랜드",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC"
+      ],
       "genres": [],
       "releaseDate": "2026-06-09",
       "endDate": null,
@@ -400,9 +448,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%A0%88%EC%9D%B4%EC%96%B4%20%EB%9E%9C%EB%93%9C%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EB%A0%88%EC%9D%B4%EC%96%B4%20%EB%9E%9C%EB%93%9C/1?sort=recency"
+      "trailer": "https://youtu.be/_4rEPh7i2xI",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1292645784.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13490"
     },
     {
       "id": "inven-ec9c84ecb998ec8a-2026-06-10",
@@ -410,7 +458,9 @@
       "titleKr": "위치스파이어",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC"
+      ],
       "genres": [],
       "releaseDate": "2026-06-10",
       "endDate": null,
@@ -427,9 +477,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%9C%84%EC%B9%98%EC%8A%A4%ED%8C%8C%EC%9D%B4%EC%96%B4%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%9C%84%EC%B9%98%EC%8A%A4%ED%8C%8C%EC%9D%B4%EC%96%B4/1?sort=recency"
+      "trailer": "https://youtu.be/B_UhbUeOtSA",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1520550398.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12954"
     },
     {
       "id": "inven-ec8aa4ed8e98ec9d-2026-06-11",
@@ -437,7 +487,9 @@
       "titleKr": "스페이스크래프트",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC"
+      ],
       "genres": [],
       "releaseDate": "2026-06-11",
       "endDate": null,
@@ -454,9 +506,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8/1?sort=recency"
+      "trailer": "https://youtu.be/hUxoaJzX9fU",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1337313499.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13648"
     },
     {
       "id": "inven-eba6acebb08b20ec-2026-06-11",
@@ -464,7 +516,10 @@
       "titleKr": "리밋 제로 브레이커스 프롤로그 테스트",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC",
+        "Mobile"
+      ],
       "genres": [],
       "releaseDate": "2026-06-11",
       "endDate": "2026-06-15",
@@ -481,9 +536,40 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%A6%AC%EB%B0%8B%20%EC%A0%9C%EB%A1%9C%20%EB%B8%8C%EB%A0%88%EC%9D%B4%EC%BB%A4%EC%8A%A4%20%ED%94%84%EB%A1%A4%EB%A1%9C%EA%B7%B8%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "trailer": "https://youtu.be/6b3NFpA2gQI",
       "image": "https://upload3.inven.co.kr/upload/2026/05/29/bbs/i1444044475.jpg",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EB%A6%AC%EB%B0%8B%20%EC%A0%9C%EB%A1%9C%20%EB%B8%8C%EB%A0%88%EC%9D%B4%EC%BB%A4%EC%8A%A4%20%ED%94%84%EB%A1%A4%EB%A1%9C%EA%B7%B8%20%ED%85%8C%EC%8A%A4%ED%8A%B8/1?sort=recency"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11835"
+    },
+    {
+      "id": "inven-------------overdrive",
+      "title": "메이플스토리 여름 쇼케이스 | 'OVERDRIVE'",
+      "titleKr": "메이플스토리 여름 쇼케이스 | 'OVERDRIVE'",
+      "developer": "미상",
+      "publisher": "미상",
+      "platforms": [],
+      "genres": [],
+      "releaseDate": "2026-06-13",
+      "eventType": "event",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "메이플스토리",
+        "오프라인",
+        "온라인",
+        "쇼케이스"
+      ],
+      "description": "‘메이플스토리’가 오는 6월 13일 2026 여름 쇼케이스 ‘오버드라이브(OVERDRIVE)’를 진행합니다.",
+      "update": "",
+      "color": "#00c2cb",
+      "image": "https://static.inven.co.kr/column/webzine/calendar/2026/i1107980326.jpg",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://youtu.be/6NyLFwPhTFo?si=XgR6SZjQKlLZrSIO",
+      "trailer": "https://www.youtube.com/results?search_query=%EB%A9%94%EC%9D%B4%ED%94%8C%EC%8A%A4%ED%86%A0%EB%A6%AC%20%EC%97%AC%EB%A6%84%20%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4%20%7C%20'OVERDRIVE'%20%20official%20trailer"
     },
     {
       "id": "inven-ec8aa4ed8c8020eb-2026-06-15",
@@ -514,9 +600,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null,
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%8A%A4%ED%8C%80%20%EB%84%A5%EC%8A%A4%ED%8A%B8%20%ED%8E%98%EC%8A%A4%ED%8A%B8%206%EC%9B%94/1?sort=recency"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%ED%8C%80%20%EB%84%A5%EC%8A%A4%ED%8A%B8%20%ED%8E%98%EC%8A%A4%ED%8A%B8%3A%206%EC%9B%94%20%20official%20trailer",
+      "image": "https://static.inven.co.kr/column/webzine/calendar/2026/i1406531381.jpg",
+      "detailUrl": "https://store.steampowered.com/sale/nextfest"
     },
     {
       "id": "inven-4e444332303236-2026-06-16",
@@ -547,9 +633,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null,
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/NDC2026/1?sort=recency"
+      "trailer": "https://www.youtube.com/results?search_query=NDC2026%20%20official%20trailer",
+      "image": "https://static.inven.co.kr/column/webzine/calendar/2026/i1569841116.jpg",
+      "detailUrl": "https://ndc.nexon.com/#faq-section"
     },
     {
       "id": "inven-eb8db4ec83a4ec96-2026-06-17",
@@ -557,7 +643,11 @@
       "titleKr": "덴샤어택!",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC",
+        "Xbox Series",
+        "Switch"
+      ],
       "genres": [],
       "releaseDate": "2026-06-17",
       "endDate": null,
@@ -574,9 +664,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%8D%B4%EC%83%A4%EC%96%B4%ED%83%9D!%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EB%8D%B4%EC%83%A4%EC%96%B4%ED%83%9D!/1?sort=recency"
+      "trailer": "https://youtu.be/CYLxd2T05UQ",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1396258020.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13479"
     },
     {
       "id": "inven-ec96b8eba6acec96-2026-06-17",
@@ -607,9 +697,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null,
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%96%B8%EB%A6%AC%EC%96%BC%20%ED%8E%98%EC%8A%A4%ED%8A%B8%20%EC%8B%9C%EC%B9%B4%EA%B3%A0%202026/1?sort=recency"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%96%B8%EB%A6%AC%EC%96%BC%20%ED%8E%98%EC%8A%A4%ED%8A%B8%20%EC%8B%9C%EC%B9%B4%EA%B3%A0%202026%20%20official%20trailer",
+      "image": "https://static.inven.co.kr/column/webzine/calendar/2026/i1904118471.jpg",
+      "detailUrl": "https://www.unrealengine.com/en-US/events/unreal-fest-chicago-2026"
     },
     {
       "id": "inven-eb8db0ec9db4ebb8-2026-06-18",
@@ -617,7 +707,10 @@
       "titleKr": "데이브 더 다이버: 인 더 정글",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC",
+        "Switch"
+      ],
       "genres": [],
       "releaseDate": "2026-06-18",
       "endDate": null,
@@ -634,9 +727,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%8D%B0%EC%9D%B4%EB%B8%8C%20%EB%8D%94%20%EB%8B%A4%EC%9D%B4%EB%B2%84%3A%20%EC%9D%B8%20%EB%8D%94%20%EC%A0%95%EA%B8%80%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EB%8D%B0%EC%9D%B4%EB%B8%8C%20%EB%8D%94%20%EB%8B%A4%EC%9D%B4%EB%B2%84%20%EC%9D%B8%20%EB%8D%94%20%EC%A0%95%EA%B8%80/1?sort=recency"
+      "trailer": "https://youtu.be/xXK6Tw1WG4g",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1949999302.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13525"
     },
     {
       "id": "inven-ebaaa8ed9798eab0-2026-06-18",
@@ -644,7 +737,11 @@
       "titleKr": "모험가 엘리엇의 천 년 이야기",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC",
+        "Xbox Series",
+        "Switch"
+      ],
       "genres": [],
       "releaseDate": "2026-06-18",
       "endDate": null,
@@ -661,9 +758,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%AA%A8%ED%97%98%EA%B0%80%20%EC%97%98%EB%A6%AC%EC%97%87%EC%9D%98%20%EC%B2%9C%20%EB%85%84%20%EC%9D%B4%EC%95%BC%EA%B8%B0%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EB%AA%A8%ED%97%98%EA%B0%80%20%EC%97%98%EB%A6%AC%EC%97%87%EC%9D%98%20%EC%B2%9C%20%EB%85%84%20%EC%9D%B4%EC%95%BC%EA%B8%B0/1?sort=recency"
+      "trailer": "https://youtu.be/N9gCPws7lzE",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1818564534.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13388"
     },
     {
       "id": "inven-ec86943a20ec9db8-2026-06-18",
@@ -671,7 +768,10 @@
       "titleKr": "솔: 인챈트",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC",
+        "Mobile"
+      ],
       "genres": [],
       "releaseDate": "2026-06-18",
       "endDate": null,
@@ -688,9 +788,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%86%94%3A%20%EC%9D%B8%EC%B1%88%ED%8A%B8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%86%94%20%EC%9D%B8%EC%B1%88%ED%8A%B8/1?sort=recency"
+      "trailer": "https://youtu.be/jRykO-HJfYM",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1654890301.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13261"
     },
     {
       "id": "inven-ed97ac20eba09b20-2026-06-18",
@@ -698,7 +798,10 @@
       "titleKr": "헬 렛 루즈: 베트남",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC",
+        "Xbox Series"
+      ],
       "genres": [],
       "releaseDate": "2026-06-18",
       "endDate": null,
@@ -715,9 +818,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%ED%97%AC%20%EB%A0%9B%20%EB%A3%A8%EC%A6%88%3A%20%EB%B2%A0%ED%8A%B8%EB%82%A8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%ED%97%AC%20%EB%A0%9B%20%EB%A3%A8%EC%A6%88%20%EB%B2%A0%ED%8A%B8%EB%82%A8/1?sort=recency"
+      "trailer": "https://youtu.be/bjJxmPIj9Zg",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1641526309.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13695"
     },
     {
       "id": "inven-454120ec8aa4ed8f-2026-06-20",
@@ -725,7 +828,10 @@
       "titleKr": "EA 스포츠 UFC 6",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC",
+        "Xbox Series"
+      ],
       "genres": [],
       "releaseDate": "2026-06-20",
       "endDate": null,
@@ -742,9 +848,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=EA%20%EC%8A%A4%ED%8F%AC%EC%B8%A0%20UFC%206%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/EA%20%EC%8A%A4%ED%8F%AC%EC%B8%A0%20UFC%206/1?sort=recency"
+      "trailer": "https://youtu.be/T2MP_T2e-aU",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1795956836.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13696"
     },
     {
       "id": "inven-eb8ba4ed81ac20ec-2026-06-22",
@@ -752,7 +858,10 @@
       "titleKr": "다크 스크롤즈",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC",
+        "Switch"
+      ],
       "genres": [],
       "releaseDate": "2026-06-22",
       "endDate": null,
@@ -769,9 +878,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%8B%A4%ED%81%AC%20%EC%8A%A4%ED%81%AC%EB%A1%A4%EC%A6%88%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EB%8B%A4%ED%81%AC%20%EC%8A%A4%ED%81%AC%EB%A1%A4%EC%A6%88/1?sort=recency"
+      "trailer": "https://youtu.be/aYcAQ9mKtGQ",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1187634834.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13657"
     },
     {
       "id": "inven-ec8aa4ed8380ed8f-2026-06-25",
@@ -779,7 +888,9 @@
       "titleKr": "스타폭스",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "Switch"
+      ],
       "genres": [],
       "releaseDate": "2026-06-25",
       "endDate": null,
@@ -796,9 +907,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%ED%83%80%ED%8F%AD%EC%8A%A4%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%8A%A4%ED%83%80%ED%8F%AD%EC%8A%A4/1?sort=recency"
+      "trailer": "https://youtu.be/ePZeyh5q9R8",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1525737495.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13660"
     },
     {
       "id": "inven-eb8db0eb939c20ec-2026-06-25",
@@ -806,7 +917,10 @@
       "titleKr": "데드 오어 얼라이브6 라스트 라운드",
       "developer": "",
       "publisher": "",
-      "platforms": [],
+      "platforms": [
+        "PC",
+        "Xbox Series"
+      ],
       "genres": [],
       "releaseDate": "2026-06-25",
       "endDate": null,
@@ -823,9 +937,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%8D%B0%EB%93%9C%20%EC%98%A4%EC%96%B4%20%EC%96%BC%EB%9D%BC%EC%9D%B4%EB%B8%8C6%20%EB%9D%BC%EC%8A%A4%ED%8A%B8%20%EB%9D%BC%EC%9A%B4%EB%93%9C%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EB%8D%B0%EB%93%9C%20%EC%98%A4%EC%96%B4%20%EC%96%BC%EB%9D%BC%EC%9D%B4%EB%B8%8C6%20%EB%9D%BC%EC%8A%A4%ED%8A%B8%20%EB%9D%BC%EC%9A%B4%EB%93%9C/1?sort=recency"
+      "trailer": "https://youtu.be/66SM8Usr6oE",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1963360153.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13440"
     },
     {
       "id": "inven-eba788ebb984eb85-2026-06-27",
@@ -855,9 +969,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null,
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EB%A7%88%EB%B9%84%EB%85%B8%EA%B8%B0%20%EA%B8%B0%EB%85%90%2C%20%ED%8C%90%ED%83%80%EC%A7%80%20%ED%8C%8C%ED%8B%B0/1?sort=recency"
+      "trailer": "https://youtu.be/fGLX0PYsXQ8",
+      "image": "https://static.inven.co.kr/column/webzine/calendar/2026/i1508632953.jpg",
+      "detailUrl": "https://www.inven.co.kr/webzine/news/?news=316426"
     },
     {
       "id": "inven-45564f2032303236-2026-06-27",
@@ -888,9 +1002,9 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null,
-      "image": "",
-      "detailUrl": "https://www.inven.co.kr/search/webzine/article/EVO%202026/1?sort=recency"
+      "trailer": "https://www.youtube.com/results?search_query=EVO%202026%20%20official%20trailer",
+      "image": "https://static.inven.co.kr/column/webzine/calendar/2026/i1820526264.jpg",
+      "detailUrl": "https://evo.gg/"
     },
     {
       "id": "inven-ebafb8eba5b4ec9d-2026-06-30",

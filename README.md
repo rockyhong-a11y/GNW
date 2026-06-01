@@ -38,11 +38,56 @@ GNW/
 ├── manifest.webmanifest    # PWA 매니페스트
 ├── sw.js                   # 서비스 워커 (오프라인 캐싱)
 ├── data/
-│   └── games.json          # ⭐ 단일 데이터 소스 (웹앱 + 위젯 공용)
+│   ├── games.json          # ⭐ 최종 산출물 (웹앱 + 위젯 공용) — 파이프라인이 생성
+│   └── curated.json        # 사람이 관리하는 큐레이션 레이어 (한글 제목·CBT/OBT 등)
+├── scripts/
+│   └── build-data.mjs      # 자동 수집 파이프라인 (소스 + 큐레이션 → games.json)
+├── .github/workflows/
+│   └── update-data.yml     # 매일 자동 갱신 (GitHub Actions)
 ├── icons/                  # 앱 아이콘 (svg + png)
 └── widget/
     └── gnw-widget.js        # iOS Scriptable 위젯 스크립트
 ```
+
+---
+
+## 🔄 데이터 아키텍처 — 커버리지를 늘리는 방법
+
+수작업으로 채운 정적 데이터는 실제 출시/업데이트 양(월 수백 건)을 따라갈 수 없습니다.
+GNW는 **자동 수집 + 큐레이션 2계층** 구조로 이를 해결합니다.
+
+```
+[공개 소스]                         [큐레이션]
+ RAWG API  ─┐                  data/curated.json
+ Steam     ─┤  scripts/             (한글 제목·번역,
+ RSS(루리웹/ ┤─ build-data.mjs ◀──────  CBT/OBT/사전예약 등
+ 디스이즈게임/│   (정규화·중복제거·병합)   API에 없는 국내 정보)
+ 인벤)      ─┘        │
+                     ▼
+              data/games.json  ──▶  웹앱 + iOS 위젯
+```
+
+- **병합 규칙**: 같은 게임이면 **큐레이션이 자동 수집본을 덮어씀** → 영문 DB 위에 한글/현지 정보를 입힘
+- **중복 제거**: 원제(title) 정규화 키로 dedupe
+- **graceful fallback**: API 키/네트워크가 없으면 큐레이션만으로도 정상 생성
+
+### 실행
+
+```bash
+# 큐레이션만으로 생성 (키 없이도 동작)
+node scripts/build-data.mjs
+
+# 실제 소스까지 수집해 대규모로 확장
+RAWG_API_KEY=<키> STEAM=1 RSS=1 node scripts/build-data.mjs
+```
+
+- `RAWG_API_KEY` — https://rawg.io/apidocs 에서 무료 발급 (수십만 게임의 출시일/플랫폼/평점)
+- GitHub 저장소 **Secrets** 에 `RAWG_API_KEY` 등록하면 `.github/workflows/update-data.yml`
+  이 **매일 06:00(KST) 자동 수집 → 변경 시 커밋**합니다. (`Actions` 탭에서 수동 실행도 가능)
+
+### 더 늘리려면
+- 제공자(provider) 함수를 `build-data.mjs`에 추가: IGDB, 닌텐도/PS 스토어, 에픽, 구글플레이/앱스토어 신작 등
+- 각 provider는 `makeGame()` 스키마로 변환해 `out` 배열에 push 하면 자동으로 병합·정렬됩니다.
 
 ---
 
@@ -92,7 +137,9 @@ https://<user>.github.io/<repo>/data/games.json
 
 ## 🗂 데이터 추가/수정
 
-`data/games.json` 의 `games` 배열에 항목을 추가하면 웹앱과 위젯에 즉시 반영됩니다.
+수동으로 항목을 추가/수정할 때는 **`data/curated.json`** 의 `games` 배열을 편집한 뒤
+`node scripts/build-data.mjs` 를 실행하면 `data/games.json` 이 다시 생성됩니다.
+(자동 수집 없이도 큐레이션만으로 동작) 항목 스키마는 다음과 같습니다.
 
 ```jsonc
 {

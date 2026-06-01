@@ -298,7 +298,7 @@ async function loadGames(firstLoad = false) {
     lastFetchAt = Date.now();
     document.title = data.meta.title;
     $("#lastUpdated").textContent = `데이터 기준 ${data.meta.updated}`;
-    renderSources(data.meta.sources);
+    renderSources(data.meta);
     renderHeaderStats();
     initFilters();
     if (firstLoad) bindControls();
@@ -314,11 +314,16 @@ async function loadGames(firstLoad = false) {
   }
 }
 
-function renderSources(sources) {
-  if (!sources || !$("#sources")) return;
-  $("#sources").innerHTML = "참조: " + sources
+function renderSources(meta) {
+  if (!$("#sources")) return;
+  const links = (meta.sources || [])
     .map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`)
     .join(" · ");
+  const c = meta.counts;
+  const prov = c
+    ? `<span class="prov">자동 수집 ${c.collected ?? 0} + 큐레이션 ${c.curated ?? 0} → 총 ${c.total ?? STATE.games.length}건</span>`
+    : "";
+  $("#sources").innerHTML = (links ? "참조: " + links : "") + (prov ? `<br>${prov}` : "");
 }
 
 function bindRefresh() {

@@ -1,0 +1,2136 @@
+{
+  "meta": {
+    "title": "GNW — Game New Watch",
+    "description": "PC · 콘솔 · 모바일 신작 출시 · 사전예약 · CBT/OBT · 대규모 업데이트 일정",
+    "updated": "2026-05-31",
+    "version": 5,
+    "sources": [
+      {
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
+      },
+      {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      }
+    ],
+    "note": "정보 구성은 네이버 게임 / 인벤 / 디스이즈게임 / TapTap / 루리웹 의 일정·뉴스·DB를 참조하여 재구성한 샘플입니다.",
+    "kind": "curated"
+  },
+  "games": [
+    {
+      "id": "mabinogi-m",
+      "title": "Mabinogi Mobile",
+      "titleKr": "마비노기 모바일",
+      "developer": "넥슨",
+      "publisher": "넥슨",
+      "platforms": [
+        "Mobile",
+        "PC"
+      ],
+      "genres": [
+        "MMORPG",
+        "RPG"
+      ],
+      "releaseDate": "2026-06-26",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 88,
+      "rating": null,
+      "tags": [
+        "국산",
+        "넥슨",
+        "사전예약"
+      ],
+      "description": "원작 마비노기의 감성을 계승한 라이프 MMORPG. 모바일·PC 크로스플레이 지원.",
+      "update": "정식 출시. 신규 직업 5종과 오픈필드 생활 콘텐츠 공개.",
+      "color": "#7b5cff",
+      "source": {
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Mabinogi%20Mobile%20%EB%84%A5%EC%8A%A8%20official%20trailer"
+    },
+    {
+      "id": "aion2",
+      "title": "Aion 2",
+      "titleKr": "아이온2",
+      "developer": "엔씨소프트",
+      "publisher": "엔씨소프트",
+      "platforms": [
+        "Mobile",
+        "PC"
+      ],
+      "genres": [
+        "MMORPG",
+        "RPG"
+      ],
+      "releaseDate": "2026-08-20",
+      "eventType": "prereg",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 84,
+      "rating": null,
+      "tags": [
+        "국산",
+        "엔씨",
+        "사전예약"
+      ],
+      "description": "천족과 마족의 대립을 그린 아이온 IP의 차세대 모바일·PC MMORPG.",
+      "update": "사전예약 진행 중. 사전예약 보상으로 전용 비행 탈것 및 성장 패키지 지급.",
+      "color": "#3aa0ff",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Aion%202%20%EC%97%94%EC%94%A8%EC%86%8C%ED%94%84%ED%8A%B8%20official%20trailer"
+    },
+    {
+      "id": "sevenknights-reverse",
+      "title": "Seven Knights Re:VERSE",
+      "titleKr": "세븐나이츠 리버스",
+      "developer": "넷마블",
+      "publisher": "넷마블",
+      "platforms": [
+        "Mobile"
+      ],
+      "genres": [
+        "RPG",
+        "수집형"
+      ],
+      "releaseDate": "2026-07-09",
+      "eventType": "prereg",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 72,
+      "rating": null,
+      "tags": [
+        "국산",
+        "넷마블",
+        "수집형"
+      ],
+      "description": "세븐나이츠 세계관을 재해석한 턴제 수집형 RPG.",
+      "update": "사전예약 오픈. 오리지널 영웅 리메이크 일러스트 순차 공개 중.",
+      "color": "#ff6b6b",
+      "source": {
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Seven%20Knights%20Re%3AVERSE%20%EB%84%B7%EB%A7%88%EB%B8%94%20official%20trailer"
+    },
+    {
+      "id": "nightcrows-s2",
+      "title": "NIGHT CROWS Season 2",
+      "titleKr": "나이트크로우 시즌2",
+      "developer": "마디핑크",
+      "publisher": "위메이드",
+      "platforms": [
+        "Mobile",
+        "PC"
+      ],
+      "genres": [
+        "MMORPG"
+      ],
+      "releaseDate": "2026-06-12",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 68,
+      "rating": 8,
+      "tags": [
+        "국산",
+        "대규모업데이트"
+      ],
+      "description": "중세 판타지 MMORPG의 대규모 시즌 업데이트.",
+      "update": "시즌2 '잿빛 황혼' 업데이트. 신규 지역·탈것·길드 공성전 시스템 추가.",
+      "color": "#c0392b",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=NIGHT%20CROWS%20Season%202%20%EB%A7%88%EB%94%94%ED%95%91%ED%81%AC%20official%20trailer"
+    },
+    {
+      "id": "ragnarok-origin-x",
+      "title": "Ragnarok: Origin",
+      "titleKr": "라그나로크 오리진",
+      "developer": "그라비티",
+      "publisher": "그라비티",
+      "platforms": [
+        "Mobile",
+        "PC"
+      ],
+      "genres": [
+        "MMORPG"
+      ],
+      "releaseDate": "2026-05-28",
+      "eventType": "update",
+      "status": "released",
+      "price": 0,
+      "hypeScore": 65,
+      "rating": 8.3,
+      "tags": [
+        "국산",
+        "대규모업데이트"
+      ],
+      "description": "클래식 라그나로크 감성의 오픈필드 MMORPG.",
+      "update": "신규 직업 '소서러' 및 글래스트 헤임 던전 업데이트 적용.",
+      "color": "#f39c12",
+      "source": {
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Ragnarok%3A%20Origin%20%EA%B7%B8%EB%9D%BC%EB%B9%84%ED%8B%B0%20official%20trailer"
+    },
+    {
+      "id": "nikke-anniv",
+      "title": "NIKKE: Goddess of Victory",
+      "titleKr": "승리의 여신: 니케",
+      "developer": "시프트업",
+      "publisher": "레벨인피니트",
+      "platforms": [
+        "Mobile",
+        "PC"
+      ],
+      "genres": [
+        "슈팅",
+        "수집형"
+      ],
+      "releaseDate": "2026-06-05",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 82,
+      "rating": 9,
+      "tags": [
+        "서브컬처",
+        "국산",
+        "대규모업데이트"
+      ],
+      "description": "미소녀 캐릭터 수집형 건슈팅 RPG.",
+      "update": "3.5주년 업데이트. 신규 SSR 캐릭터 2종과 메인 스토리 챕터 추가.",
+      "color": "#ff4d6d",
+      "source": {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=NIKKE%3A%20Goddess%20of%20Victory%20%EC%8B%9C%ED%94%84%ED%8A%B8%EC%97%85%20official%20trailer"
+    },
+    {
+      "id": "honkai-nexus",
+      "title": "Honkai: Nexus Anima",
+      "titleKr": "붕괴: 넥서스 아니마",
+      "developer": "호요버스",
+      "publisher": "호요버스",
+      "platforms": [
+        "Mobile",
+        "PC",
+        "PS5"
+      ],
+      "genres": [
+        "RPG",
+        "수집형"
+      ],
+      "releaseDate": "2026-08-15",
+      "eventType": "prereg",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 90,
+      "rating": null,
+      "tags": [
+        "서브컬처",
+        "사전예약",
+        "크로스플레이"
+      ],
+      "description": "호요버스의 신작 오픈월드 수집형 RPG. 크로스플랫폼 지원.",
+      "update": "글로벌 사전예약 시작. 출시 시 한국어 풀 더빙 지원 예정.",
+      "color": "#f0c419",
+      "source": {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Honkai%3A%20Nexus%20Anima%20%ED%98%B8%EC%9A%94%EB%B2%84%EC%8A%A4%20official%20trailer"
+    },
+    {
+      "id": "wuwa-2",
+      "title": "Wuthering Waves 2.0",
+      "titleKr": "명조: 워더링 웨이브 2.0",
+      "developer": "쿠로게임즈",
+      "publisher": "쿠로게임즈",
+      "platforms": [
+        "Mobile",
+        "PC",
+        "PS5"
+      ],
+      "genres": [
+        "RPG",
+        "액션",
+        "수집형"
+      ],
+      "releaseDate": "2026-05-29",
+      "eventType": "update",
+      "status": "released",
+      "price": 0,
+      "hypeScore": 80,
+      "rating": 8.6,
+      "tags": [
+        "서브컬처",
+        "대규모업데이트"
+      ],
+      "description": "오픈월드 액션 수집형 RPG.",
+      "update": "2.0 '새로운 대륙' 업데이트. 신규 지역·5성 캐릭터 3종·엔드게임 모드 추가.",
+      "color": "#16a085",
+      "source": {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Wuthering%20Waves%202.0%20%EC%BF%A0%EB%A1%9C%EA%B2%8C%EC%9E%84%EC%A6%88%20official%20trailer"
+    },
+    {
+      "id": "zzz-update",
+      "title": "Zenless Zone Zero",
+      "titleKr": "젠레스 존 제로",
+      "developer": "호요버스",
+      "publisher": "호요버스",
+      "platforms": [
+        "Mobile",
+        "PC",
+        "PS5"
+      ],
+      "genres": [
+        "액션",
+        "수집형"
+      ],
+      "releaseDate": "2026-07-02",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 78,
+      "rating": 8.8,
+      "tags": [
+        "서브컬처",
+        "대규모업데이트"
+      ],
+      "description": "도시 판타지 배경의 액션 수집형 RPG.",
+      "update": "2.2 버전 업데이트. 신규 지역 '로어사이드'와 한정 에이전트 공개.",
+      "color": "#00c2cb",
+      "source": {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Zenless%20Zone%20Zero%20%ED%98%B8%EC%9A%94%EB%B2%84%EC%8A%A4%20official%20trailer"
+    },
+    {
+      "id": "arknights-endfield",
+      "title": "Arknights: Endfield",
+      "titleKr": "명일방주: 엔드필드",
+      "developer": "하이퍼그리프",
+      "publisher": "하이퍼그리프",
+      "platforms": [
+        "Mobile",
+        "PC",
+        "PS5"
+      ],
+      "genres": [
+        "RPG",
+        "전략"
+      ],
+      "releaseDate": "2026-09-18",
+      "eventType": "prereg",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 81,
+      "rating": null,
+      "tags": [
+        "서브컬처",
+        "사전예약"
+      ],
+      "description": "명일방주 IP 기반의 3D 오픈월드 전략 RPG.",
+      "update": "글로벌 사전예약 진행. 신규 PV 및 한국어 지원 확정 발표.",
+      "color": "#34495e",
+      "source": {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Arknights%3A%20Endfield%20%ED%95%98%EC%9D%B4%ED%8D%BC%EA%B7%B8%EB%A6%AC%ED%94%84%20official%20trailer"
+    },
+    {
+      "id": "umamusume-kr",
+      "title": "Umamusume: Pretty Derby",
+      "titleKr": "우마무스메: 프리티 더비 (한국 서버)",
+      "developer": "사이게임즈",
+      "publisher": "카카오게임즈",
+      "platforms": [
+        "Mobile"
+      ],
+      "genres": [
+        "육성",
+        "수집형"
+      ],
+      "releaseDate": "2026-06-19",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 74,
+      "rating": 8.5,
+      "tags": [
+        "서브컬처",
+        "대규모업데이트"
+      ],
+      "description": "경주마 의인화 캐릭터 육성 시뮬레이션.",
+      "update": "신규 서포트 카드 가챠 및 신규 스토리 이벤트 업데이트.",
+      "color": "#ff85c0",
+      "source": {
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Umamusume%3A%20Pretty%20Derby%20%EC%82%AC%EC%9D%B4%EA%B2%8C%EC%9E%84%EC%A6%88%20official%20trailer"
+    },
+    {
+      "id": "prj-mugunghwa",
+      "title": "Project Mugunghwa (CBT)",
+      "titleKr": "프로젝트 무궁화 (CBT)",
+      "developer": "스마일게이트",
+      "publisher": "스마일게이트",
+      "platforms": [
+        "PC",
+        "Mobile"
+      ],
+      "genres": [
+        "액션",
+        "RPG"
+      ],
+      "releaseDate": "2026-06-10",
+      "eventType": "cbt",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 70,
+      "rating": null,
+      "tags": [
+        "국산",
+        "테스트"
+      ],
+      "description": "한국형 무협 액션 RPG. 비공개 테스트 진행.",
+      "update": "1차 CBT 모집. 6/10~6/16 PC·모바일 동시 테스트 예정.",
+      "color": "#8e44ad",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Project%20Mugunghwa%20(CBT)%20%EC%8A%A4%EB%A7%88%EC%9D%BC%EA%B2%8C%EC%9D%B4%ED%8A%B8%20official%20trailer"
+    },
+    {
+      "id": "chrono-odyssey-obt",
+      "title": "Chrono Odyssey (OBT)",
+      "titleKr": "크로노 오디세이 (OBT)",
+      "developer": "npixel",
+      "publisher": "코그",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series"
+      ],
+      "genres": [
+        "MMORPG"
+      ],
+      "releaseDate": "2026-07-30",
+      "eventType": "obt",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 83,
+      "rating": null,
+      "tags": [
+        "국산",
+        "테스트",
+        "기대작"
+      ],
+      "description": "시간 조작을 테마로 한 차세대 콘솔·PC MMORPG.",
+      "update": "글로벌 OBT 일정 확정. 전 직업 개방 및 엔드 콘텐츠 일부 공개.",
+      "color": "#2c3e50",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Chrono%20Odyssey%20(OBT)%20npixel%20official%20trailer"
+    },
+    {
+      "id": "prj-spira-cbt",
+      "title": "Project SPIRA (CBT)",
+      "titleKr": "프로젝트 스피라 (CBT)",
+      "developer": "넷마블",
+      "publisher": "넷마블",
+      "platforms": [
+        "Mobile"
+      ],
+      "genres": [
+        "수집형",
+        "RPG"
+      ],
+      "releaseDate": "2026-08-05",
+      "eventType": "cbt",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 62,
+      "rating": null,
+      "tags": [
+        "국산",
+        "서브컬처",
+        "테스트"
+      ],
+      "description": "애니메이션풍 수집형 RPG 신작.",
+      "update": "비공개 베타 테스트(CBT) 사전 모집 시작. 한정 인원 선발.",
+      "color": "#9b59b6",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Project%20SPIRA%20(CBT)%20%EB%84%B7%EB%A7%88%EB%B8%94%20official%20trailer"
+    },
+    {
+      "id": "the-finals-mobile-cbt",
+      "title": "THE FINALS Mobile (CBT)",
+      "titleKr": "더 파이널스 모바일 (CBT)",
+      "developer": "Embark",
+      "publisher": "넥슨",
+      "platforms": [
+        "Mobile"
+      ],
+      "genres": [
+        "슈팅",
+        "FPS"
+      ],
+      "releaseDate": "2026-07-15",
+      "eventType": "cbt",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 69,
+      "rating": null,
+      "tags": [
+        "테스트",
+        "FPS"
+      ],
+      "description": "파괴 기반 팀 대전 슈터의 모바일 버전.",
+      "update": "글로벌 클로즈 베타 진행. 일부 지역 한정 테스트 빌드 배포.",
+      "color": "#e74c3c",
+      "source": {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=THE%20FINALS%20Mobile%20(CBT)%20Embark%20official%20trailer"
+    },
+    {
+      "id": "gta6",
+      "title": "Grand Theft Auto VI",
+      "titleKr": "그랜드 테프트 오토 6",
+      "developer": "Rockstar Games",
+      "publisher": "Rockstar Games",
+      "platforms": [
+        "PS5",
+        "Xbox Series",
+        "PC"
+      ],
+      "genres": [
+        "액션",
+        "오픈월드"
+      ],
+      "releaseDate": "2026-11-19",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 69900,
+      "hypeScore": 99,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "기대작",
+        "오픈월드"
+      ],
+      "description": "범죄 도시 바이스 시티를 무대로 한 록스타의 차세대 오픈월드 액션 대작.",
+      "update": "정식 발매 예정. 신규 트레일러 및 사전 예약 패키지 공개.",
+      "color": "#e84d8a",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Grand%20Theft%20Auto%20VI%20Rockstar%20Games%20official%20trailer"
+    },
+    {
+      "id": "tloz-new",
+      "title": "The Legend of Zelda (New)",
+      "titleKr": "젤다의 전설 신작",
+      "developer": "Nintendo EPD",
+      "publisher": "닌텐도",
+      "platforms": [
+        "Switch 2"
+      ],
+      "genres": [
+        "액션",
+        "어드벤처"
+      ],
+      "releaseDate": "2026-09-30",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 79800,
+      "hypeScore": 92,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "닌텐도",
+        "기대작"
+      ],
+      "description": "Switch 2로 향하는 젤다 시리즈 신작. 새로운 하이랄을 탐험한다.",
+      "update": "발매일 확정. 닌텐도 다이렉트에서 신규 게임플레이 공개.",
+      "color": "#3aa757",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=The%20Legend%20of%20Zelda%20(New)%20Nintendo%20EPD%20official%20trailer"
+    },
+    {
+      "id": "mh-wilds-x",
+      "title": "Monster Hunter Wilds (Title Update)",
+      "titleKr": "몬스터 헌터 와일즈 (대형 업데이트)",
+      "developer": "Capcom",
+      "publisher": "캡콤",
+      "platforms": [
+        "PS5",
+        "Xbox Series",
+        "PC"
+      ],
+      "genres": [
+        "액션",
+        "RPG"
+      ],
+      "releaseDate": "2026-06-27",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 84,
+      "rating": 9,
+      "tags": [
+        "대규모업데이트",
+        "협동"
+      ],
+      "description": "거대한 신규 지역과 몬스터가 추가되는 와일즈의 첫 대형 타이틀 업데이트.",
+      "update": "무료 대형 업데이트. 신규 몬스터·이벤트 퀘스트·장비 추가.",
+      "color": "#d98324",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Monster%20Hunter%20Wilds%20(Title%20Update)%20Capcom%20official%20trailer"
+    },
+    {
+      "id": "silksong",
+      "title": "Hollow Knight: Silksong",
+      "titleKr": "할로우 나이트: 실크송",
+      "developer": "Team Cherry",
+      "publisher": "Team Cherry",
+      "platforms": [
+        "PC",
+        "Switch",
+        "PS5",
+        "Xbox Series"
+      ],
+      "genres": [
+        "메트로배니아",
+        "액션"
+      ],
+      "releaseDate": "2026-03-12",
+      "eventType": "release",
+      "status": "released",
+      "price": 24000,
+      "hypeScore": 95,
+      "rating": 9.3,
+      "tags": [
+        "인디",
+        "메트로배니아",
+        "화제작"
+      ],
+      "description": "수년간 기다려온 할로우 나이트의 후속작이 마침내 출시되었다.",
+      "update": "정식 출시 완료. 출시 직후 호평 속 동시접속 신기록 달성.",
+      "color": "#b14aed",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Hollow%20Knight%3A%20Silksong%20Team%20Cherry%20official%20trailer"
+    },
+    {
+      "id": "ds2",
+      "title": "Death Stranding 2: On the Beach",
+      "titleKr": "데스 스트랜딩 2: 온 더 비치",
+      "developer": "Kojima Productions",
+      "publisher": "소니",
+      "platforms": [
+        "PS5",
+        "PC"
+      ],
+      "genres": [
+        "액션",
+        "어드벤처"
+      ],
+      "releaseDate": "2026-01-23",
+      "eventType": "release",
+      "status": "released",
+      "price": 79800,
+      "hypeScore": 88,
+      "rating": 8.9,
+      "tags": [
+        "AAA",
+        "코지마"
+      ],
+      "description": "샘 포터 브리지스의 새로운 배달 여정. 코지마 히데오의 신작.",
+      "update": "출시 완료. PC판 동시 발매 및 포토 모드 업데이트 지원.",
+      "color": "#4a90d9",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Death%20Stranding%202%3A%20On%20the%20Beach%20Kojima%20Productions%20official%20trailer"
+    },
+    {
+      "id": "ff7-3",
+      "title": "Final Fantasy VII Remake Part 3",
+      "titleKr": "파이널 판타지 7 리메이크 파트3",
+      "developer": "Square Enix",
+      "publisher": "스퀘어 에닉스",
+      "platforms": [
+        "PS5",
+        "PC"
+      ],
+      "genres": [
+        "RPG",
+        "액션"
+      ],
+      "releaseDate": "2026-12-10",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 79800,
+      "hypeScore": 90,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "JRPG",
+        "기대작"
+      ],
+      "description": "FF7 리메이크 3부작의 완결편. 클라우드의 여정이 마무리된다.",
+      "update": "발매 예정. 3부작 완결 트레일러 공개 및 사전 주문 시작.",
+      "color": "#5b8def",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Final%20Fantasy%20VII%20Remake%20Part%203%20Square%20Enix%20official%20trailer"
+    },
+    {
+      "id": "elden-dlc2",
+      "title": "Elden Ring (New Expansion)",
+      "titleKr": "엘든 링 신규 확장",
+      "developer": "FromSoftware",
+      "publisher": "반다이남코",
+      "platforms": [
+        "PS5",
+        "Xbox Series",
+        "PC"
+      ],
+      "genres": [
+        "RPG",
+        "소울라이크"
+      ],
+      "releaseDate": "2026-10-02",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 49000,
+      "hypeScore": 87,
+      "rating": null,
+      "tags": [
+        "확장팩",
+        "소울라이크"
+      ],
+      "description": "엘든 링 세계관을 확장하는 두 번째 대형 DLC.",
+      "update": "두 번째 DLC 발매 예정. 신규 지역과 보스, 무기군 추가.",
+      "color": "#c9a227",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Elden%20Ring%20(New%20Expansion)%20FromSoftware%20official%20trailer"
+    },
+    {
+      "id": "ghost-yotei",
+      "title": "Ghost of Yōtei",
+      "titleKr": "고스트 오브 요테이",
+      "developer": "Sucker Punch",
+      "publisher": "소니",
+      "platforms": [
+        "PS5"
+      ],
+      "genres": [
+        "액션",
+        "오픈월드"
+      ],
+      "releaseDate": "2026-02-27",
+      "eventType": "release",
+      "status": "released",
+      "price": 79800,
+      "hypeScore": 86,
+      "rating": 9,
+      "tags": [
+        "AAA",
+        "사무라이"
+      ],
+      "description": "고스트 오브 쓰시마의 정신적 후속작. 새로운 무사의 이야기.",
+      "update": "출시 완료. 협동 모드 '레전드' 무료 업데이트 예고.",
+      "color": "#9b59b6",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Ghost%20of%20Y%C5%8Dtei%20Sucker%20Punch%20official%20trailer"
+    },
+    {
+      "id": "pokemon-za",
+      "title": "Pokémon Legends: Z-A",
+      "titleKr": "포켓몬 레전드: Z-A",
+      "developer": "Game Freak",
+      "publisher": "닌텐도",
+      "platforms": [
+        "Switch",
+        "Switch 2"
+      ],
+      "genres": [
+        "RPG",
+        "어드벤처"
+      ],
+      "releaseDate": "2026-07-25",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 64800,
+      "hypeScore": 81,
+      "rating": null,
+      "tags": [
+        "닌텐도",
+        "포켓몬"
+      ],
+      "description": "미아레 시티를 무대로 한 포켓몬 레전드 시리즈 신작.",
+      "update": "발매 예정. 메가진화 복귀 및 신규 도시 탐험 요소 공개.",
+      "color": "#f39c12",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Pok%C3%A9mon%20Legends%3A%20Z-A%20Game%20Freak%20official%20trailer"
+    },
+    {
+      "id": "valorant-mobile",
+      "title": "VALORANT Mobile",
+      "titleKr": "발로란트 모바일",
+      "developer": "Riot Games",
+      "publisher": "라이엇 게임즈",
+      "platforms": [
+        "Mobile"
+      ],
+      "genres": [
+        "슈팅",
+        "전술"
+      ],
+      "releaseDate": "2026-06-05",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 76,
+      "rating": null,
+      "tags": [
+        "모바일",
+        "FPS"
+      ],
+      "description": "라이엇의 전술 슈터 발로란트가 모바일로 정식 출시된다.",
+      "update": "글로벌 정식 출시. 모바일 전용 조작·랭크 시스템 도입.",
+      "color": "#ff4655",
+      "source": {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=VALORANT%20Mobile%20Riot%20Games%20official%20trailer"
+    },
+    {
+      "id": "hades3",
+      "title": "Hades III",
+      "titleKr": "하데스 3",
+      "developer": "Supergiant Games",
+      "publisher": "Supergiant Games",
+      "platforms": [
+        "PC",
+        "Switch 2",
+        "PS5"
+      ],
+      "genres": [
+        "로그라이크",
+        "액션"
+      ],
+      "releaseDate": "2026-11-05",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 32000,
+      "hypeScore": 83,
+      "rating": null,
+      "tags": [
+        "인디",
+        "로그라이크"
+      ],
+      "description": "신들의 전쟁을 다룬 슈퍼자이언트의 로그라이크 3편.",
+      "update": "정식 발매 예정. 얼리액세스 종료 후 풀 스토리 공개.",
+      "color": "#e67e22",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Hades%20III%20Supergiant%20Games%20official%20trailer"
+    },
+    {
+      "id": "subnautica2",
+      "title": "Subnautica 2",
+      "titleKr": "서브노티카 2",
+      "developer": "Unknown Worlds",
+      "publisher": "크래프톤",
+      "platforms": [
+        "PC",
+        "Xbox Series",
+        "PS5"
+      ],
+      "genres": [
+        "생존",
+        "어드벤처"
+      ],
+      "releaseDate": "2026-08-28",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 38000,
+      "hypeScore": 77,
+      "rating": null,
+      "tags": [
+        "생존",
+        "협동"
+      ],
+      "description": "외계 해양을 탐험하는 서바이벌 어드벤처의 후속작. 4인 협동 지원.",
+      "update": "발매 예정. 4인 협동 플레이 및 신규 행성 환경 공개.",
+      "color": "#00a8cc",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Subnautica%202%20Unknown%20Worlds%20official%20trailer"
+    },
+    {
+      "id": "silent-hill-f",
+      "title": "SILENT HILL f",
+      "titleKr": "사일런트 힐 f",
+      "developer": "NeoBards",
+      "publisher": "코나미",
+      "platforms": [
+        "PS5",
+        "Xbox Series",
+        "PC"
+      ],
+      "genres": [
+        "호러",
+        "액션"
+      ],
+      "releaseDate": "2026-09-25",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 69900,
+      "hypeScore": 85,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "호러",
+        "기대작"
+      ],
+      "description": "1960년대 일본을 배경으로 한 사일런트 힐 시리즈 신작 서바이벌 호러.",
+      "update": "발매일 확정. 한국어 자막 지원 및 사전 주문 특전 공개.",
+      "color": "#8b1a1a",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=SILENT%20HILL%20f%20NeoBards%20official%20trailer"
+    },
+    {
+      "id": "ff16-pc",
+      "title": "Final Fantasy XVI (PC)",
+      "titleKr": "파이널 판타지 16 (PC)",
+      "developer": "Square Enix",
+      "publisher": "스퀘어 에닉스",
+      "platforms": [
+        "PC"
+      ],
+      "genres": [
+        "RPG",
+        "액션"
+      ],
+      "releaseDate": "2026-06-20",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 69900,
+      "hypeScore": 79,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "JRPG",
+        "PC이식"
+      ],
+      "description": "PS5로 먼저 출시된 파이널 판타지 16의 PC(스팀) 정식 발매.",
+      "update": "스팀 발매 확정. 4K·고프레임 옵션과 모든 DLC 포함.",
+      "color": "#2c5fa8",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Final%20Fantasy%20XVI%20(PC)%20Square%20Enix%20official%20trailer"
+    },
+    {
+      "id": "yakuza-new",
+      "title": "Like a Dragon (New)",
+      "titleKr": "용과 같이 신작",
+      "developer": "RGG Studio",
+      "publisher": "세가",
+      "platforms": [
+        "PS5",
+        "Xbox Series",
+        "PC"
+      ],
+      "genres": [
+        "액션",
+        "RPG"
+      ],
+      "releaseDate": "2026-10-22",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 74800,
+      "hypeScore": 76,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "RGG"
+      ],
+      "description": "용과 같이 시리즈의 차기작. 새로운 무대와 주인공의 이야기.",
+      "update": "TGS에서 정식 발표. 발매일 및 한국어화 확정 공개.",
+      "color": "#d4af37",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Like%20a%20Dragon%20(New)%20RGG%20Studio%20official%20trailer"
+    },
+    {
+      "id": "genshin-46",
+      "title": "Genshin Impact 4.6",
+      "titleKr": "원신 4.6",
+      "developer": "호요버스",
+      "publisher": "호요버스",
+      "platforms": [
+        "Mobile",
+        "PC",
+        "PS5"
+      ],
+      "genres": [
+        "RPG",
+        "수집형"
+      ],
+      "releaseDate": "2026-06-04",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 86,
+      "rating": 9,
+      "tags": [
+        "서브컬처",
+        "대규모업데이트"
+      ],
+      "description": "오픈월드 액션 RPG.",
+      "update": "4.6 신규 지역·5성 캐릭터 추가.",
+      "color": "#f0c419",
+      "source": {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Genshin%20Impact%204.6%20%ED%98%B8%EC%9A%94%EB%B2%84%EC%8A%A4%20official%20trailer"
+    },
+    {
+      "id": "hsr-30",
+      "title": "Honkai: Star Rail 3.0",
+      "titleKr": "붕괴: 스타레일 3.0",
+      "developer": "호요버스",
+      "publisher": "호요버스",
+      "platforms": [
+        "Mobile",
+        "PC",
+        "PS5"
+      ],
+      "genres": [
+        "RPG",
+        "턴제"
+      ],
+      "releaseDate": "2026-06-18",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 84,
+      "rating": 9.1,
+      "tags": [
+        "서브컬처",
+        "대규모업데이트"
+      ],
+      "description": "턴제 수집형 RPG.",
+      "update": "3.0 신규 행성 개방 및 한정 캐릭터.",
+      "color": "#2980b9",
+      "source": {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Honkai%3A%20Star%20Rail%203.0%20%ED%98%B8%EC%9A%94%EB%B2%84%EC%8A%A4%20official%20trailer"
+    },
+    {
+      "id": "bluearchive-up",
+      "title": "Blue Archive",
+      "titleKr": "블루 아카이브",
+      "developer": "넥슨게임즈",
+      "publisher": "넥슨",
+      "platforms": [
+        "Mobile",
+        "PC"
+      ],
+      "genres": [
+        "수집형",
+        "RPG"
+      ],
+      "releaseDate": "2026-06-10",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 78,
+      "rating": 8.8,
+      "tags": [
+        "서브컬처",
+        "국산",
+        "대규모업데이트"
+      ],
+      "description": "학원물 수집형 RPG.",
+      "update": "신규 메인 스토리 및 픽업 모집.",
+      "color": "#5b8def",
+      "source": {
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Blue%20Archive%20%EB%84%A5%EC%8A%A8%EA%B2%8C%EC%9E%84%EC%A6%88%20official%20trailer"
+    },
+    {
+      "id": "limbus-up",
+      "title": "Limbus Company",
+      "titleKr": "림버스 컴퍼니",
+      "developer": "프로젝트문",
+      "publisher": "프로젝트문",
+      "platforms": [
+        "Mobile",
+        "PC"
+      ],
+      "genres": [
+        "수집형",
+        "RPG"
+      ],
+      "releaseDate": "2026-06-13",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 70,
+      "rating": 8.7,
+      "tags": [
+        "서브컬처",
+        "국산"
+      ],
+      "description": "턴제 수집형 RPG.",
+      "update": "신규 인격·E.G.O 및 단테 시즌 업데이트.",
+      "color": "#9b59b6",
+      "source": {
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Limbus%20Company%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AC%B8%20official%20trailer"
+    },
+    {
+      "id": "maplestory-up",
+      "title": "MapleStory",
+      "titleKr": "메이플스토리",
+      "developer": "넥슨",
+      "publisher": "넥슨",
+      "platforms": [
+        "PC"
+      ],
+      "genres": [
+        "MMORPG"
+      ],
+      "releaseDate": "2026-06-25",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 72,
+      "rating": 8.4,
+      "tags": [
+        "국산",
+        "대규모업데이트"
+      ],
+      "description": "2D 횡스크롤 MMORPG.",
+      "update": "여름 신규 직업 및 업데이트 'NEXT'.",
+      "color": "#e67e22",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=MapleStory%20%EB%84%A5%EC%8A%A8%20official%20trailer"
+    },
+    {
+      "id": "lostark-up",
+      "title": "Lost Ark",
+      "titleKr": "로스트아크",
+      "developer": "스마일게이트",
+      "publisher": "스마일게이트",
+      "platforms": [
+        "PC"
+      ],
+      "genres": [
+        "MMORPG",
+        "액션"
+      ],
+      "releaseDate": "2026-07-08",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 80,
+      "rating": 8.9,
+      "tags": [
+        "국산",
+        "대규모업데이트"
+      ],
+      "description": "핵앤슬래시 MMORPG.",
+      "update": "신규 군단장 레이드 및 클래스 추가.",
+      "color": "#c9a227",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Lost%20Ark%20%EC%8A%A4%EB%A7%88%EC%9D%BC%EA%B2%8C%EC%9D%B4%ED%8A%B8%20official%20trailer"
+    },
+    {
+      "id": "dnf-mobile-up",
+      "title": "DNF Mobile",
+      "titleKr": "던전앤파이터 모바일",
+      "developer": "넥슨",
+      "publisher": "넥슨",
+      "platforms": [
+        "Mobile"
+      ],
+      "genres": [
+        "액션",
+        "RPG"
+      ],
+      "releaseDate": "2026-07-16",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 74,
+      "rating": 8.5,
+      "tags": [
+        "국산",
+        "대규모업데이트"
+      ],
+      "description": "횡스크롤 액션 RPG.",
+      "update": "신규 각성 및 레이드 콘텐츠 업데이트.",
+      "color": "#e84d8a",
+      "source": {
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=DNF%20Mobile%20%EB%84%A5%EC%8A%A8%20official%20trailer"
+    },
+    {
+      "id": "valorant-act",
+      "title": "VALORANT Act",
+      "titleKr": "발로란트 신규 액트",
+      "developer": "라이엇 게임즈",
+      "publisher": "라이엇 게임즈",
+      "platforms": [
+        "PC"
+      ],
+      "genres": [
+        "슈팅",
+        "FPS"
+      ],
+      "releaseDate": "2026-06-24",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 75,
+      "rating": 8.6,
+      "tags": [
+        "대규모업데이트",
+        "FPS"
+      ],
+      "description": "전술 FPS.",
+      "update": "신규 요원 및 배틀패스 액트 시작.",
+      "color": "#ff4655",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=VALORANT%20Act%20%EB%9D%BC%EC%9D%B4%EC%97%87%20%EA%B2%8C%EC%9E%84%EC%A6%88%20official%20trailer"
+    },
+    {
+      "id": "lol-season",
+      "title": "League of Legends",
+      "titleKr": "리그 오브 레전드",
+      "developer": "라이엇 게임즈",
+      "publisher": "라이엇 게임즈",
+      "platforms": [
+        "PC"
+      ],
+      "genres": [
+        "AOS",
+        "전략"
+      ],
+      "releaseDate": "2026-07-01",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 77,
+      "rating": 8.3,
+      "tags": [
+        "대규모업데이트",
+        "e스포츠"
+      ],
+      "description": "AOS의 대표작.",
+      "update": "신규 챔피언 및 시즌 중반 패치.",
+      "color": "#2980b9",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=League%20of%20Legends%20%EB%9D%BC%EC%9D%B4%EC%97%87%20%EA%B2%8C%EC%9E%84%EC%A6%88%20official%20trailer"
+    },
+    {
+      "id": "overwatch-season",
+      "title": "Overwatch 2 Season",
+      "titleKr": "오버워치2 신규 시즌",
+      "developer": "Blizzard",
+      "publisher": "블리자드",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series",
+        "Switch"
+      ],
+      "genres": [
+        "슈팅",
+        "히어로"
+      ],
+      "releaseDate": "2026-06-16",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 68,
+      "rating": 7.8,
+      "tags": [
+        "대규모업데이트",
+        "FPS"
+      ],
+      "description": "히어로 슈터.",
+      "update": "신규 영웅·맵 및 시즌 패스.",
+      "color": "#00a8cc",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Overwatch%202%20Season%20Blizzard%20official%20trailer"
+    },
+    {
+      "id": "diablo4-season",
+      "title": "Diablo IV Season",
+      "titleKr": "디아블로 4 신규 시즌",
+      "developer": "Blizzard",
+      "publisher": "블리자드",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series"
+      ],
+      "genres": [
+        "액션",
+        "RPG"
+      ],
+      "releaseDate": "2026-07-22",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 73,
+      "rating": 8.2,
+      "tags": [
+        "대규모업데이트",
+        "핵앤슬래시"
+      ],
+      "description": "핵앤슬래시 액션 RPG.",
+      "update": "신규 시즌 테마 및 밸런스 개편.",
+      "color": "#e84d8a",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Diablo%20IV%20Season%20Blizzard%20official%20trailer"
+    },
+    {
+      "id": "poe2-league",
+      "title": "Path of Exile 2 League",
+      "titleKr": "패스 오브 엑자일 2 리그",
+      "developer": "GGG",
+      "publisher": "카카오게임즈",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series"
+      ],
+      "genres": [
+        "액션",
+        "RPG"
+      ],
+      "releaseDate": "2026-08-07",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 79,
+      "rating": 8.8,
+      "tags": [
+        "대규모업데이트",
+        "핵앤슬래시"
+      ],
+      "description": "다크 핵앤슬래시.",
+      "update": "신규 리그 및 직업 추가.",
+      "color": "#8e44ad",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Path%20of%20Exile%202%20League%20GGG%20official%20trailer"
+    },
+    {
+      "id": "helldivers2-wb",
+      "title": "Helldivers 2 Warbond",
+      "titleKr": "헬다이버즈 2 신규 워본드",
+      "developer": "Arrowhead",
+      "publisher": "소니",
+      "platforms": [
+        "PC",
+        "PS5"
+      ],
+      "genres": [
+        "슈팅",
+        "협동"
+      ],
+      "releaseDate": "2026-06-11",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 76,
+      "rating": 8.7,
+      "tags": [
+        "대규모업데이트",
+        "협동"
+      ],
+      "description": "협동 TPS.",
+      "update": "신규 워본드 및 적 세력 추가.",
+      "color": "#4a90d9",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Helldivers%202%20Warbond%20Arrowhead%20official%20trailer"
+    },
+    {
+      "id": "doom-darkages",
+      "title": "DOOM: The Dark Ages",
+      "titleKr": "둠: 디 다크 에이지스",
+      "developer": "id Software",
+      "publisher": "베데스다",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series"
+      ],
+      "genres": [
+        "슈팅",
+        "FPS"
+      ],
+      "releaseDate": "2026-05-15",
+      "eventType": "release",
+      "status": "released",
+      "price": 69900,
+      "hypeScore": 84,
+      "rating": 8.9,
+      "tags": [
+        "AAA",
+        "FPS"
+      ],
+      "description": "둠 시리즈 프리퀄 FPS.",
+      "update": "출시 완료. 중세 배경 신규 무기군.",
+      "color": "#e84d8a",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=DOOM%3A%20The%20Dark%20Ages%20id%20Software%20official%20trailer"
+    },
+    {
+      "id": "borderlands4",
+      "title": "Borderlands 4",
+      "titleKr": "보더랜드 4",
+      "developer": "Gearbox",
+      "publisher": "2K",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series"
+      ],
+      "genres": [
+        "슈팅",
+        "RPG"
+      ],
+      "releaseDate": "2026-09-12",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 69900,
+      "hypeScore": 80,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "루트슈터"
+      ],
+      "description": "루트슈터 FPS 신작.",
+      "update": "발매 예정. 신규 행성과 볼트 헌터.",
+      "color": "#e67e22",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Borderlands%204%20Gearbox%20official%20trailer"
+    },
+    {
+      "id": "ac-hexe",
+      "title": "Assassin's Creed Hexe",
+      "titleKr": "어쌔신 크리드 헥세",
+      "developer": "Ubisoft",
+      "publisher": "유비소프트",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series"
+      ],
+      "genres": [
+        "액션",
+        "RPG"
+      ],
+      "releaseDate": "2026-11-12",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 74800,
+      "hypeScore": 75,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "오픈월드"
+      ],
+      "description": "중세 마녀사냥 배경 액션 RPG.",
+      "update": "발매 예정. 신규 잠입 시스템 공개.",
+      "color": "#9b59b6",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Assassin's%20Creed%20Hexe%20Ubisoft%20official%20trailer"
+    },
+    {
+      "id": "cod-2026",
+      "title": "Call of Duty 2026",
+      "titleKr": "콜 오브 듀티 2026",
+      "developer": "Activision",
+      "publisher": "액티비전",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series"
+      ],
+      "genres": [
+        "슈팅",
+        "FPS"
+      ],
+      "releaseDate": "2026-11-06",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 79900,
+      "hypeScore": 72,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "FPS"
+      ],
+      "description": "연례 밀리터리 FPS 신작.",
+      "update": "발매 예정. 캠페인·멀티·좀비 모드.",
+      "color": "#4a90d9",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Call%20of%20Duty%202026%20Activision%20official%20trailer"
+    },
+    {
+      "id": "persona-new",
+      "title": "Persona (New)",
+      "titleKr": "페르소나 신작",
+      "developer": "Atlus",
+      "publisher": "세가",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series",
+        "Switch 2"
+      ],
+      "genres": [
+        "RPG",
+        "JRPG"
+      ],
+      "releaseDate": "2026-10-15",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 74800,
+      "hypeScore": 82,
+      "rating": null,
+      "tags": [
+        "JRPG",
+        "기대작"
+      ],
+      "description": "페르소나 시리즈 차기작.",
+      "update": "TGS 공개. 신규 주인공·도시 무대.",
+      "color": "#ff4655",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Persona%20(New)%20Atlus%20official%20trailer"
+    },
+    {
+      "id": "witcher4",
+      "title": "The Witcher IV",
+      "titleKr": "더 위쳐 4",
+      "developer": "CD PROJEKT RED",
+      "publisher": "CDPR",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series"
+      ],
+      "genres": [
+        "RPG",
+        "오픈월드"
+      ],
+      "releaseDate": "2026-12-04",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 79900,
+      "hypeScore": 88,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "기대작",
+        "오픈월드"
+      ],
+      "description": "위쳐 신 사가의 시작.",
+      "update": "발매 예정. 시리 주역 트레일러 공개.",
+      "color": "#c9a227",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=The%20Witcher%20IV%20CD%20PROJEKT%20RED%20official%20trailer"
+    },
+    {
+      "id": "fable",
+      "title": "Fable",
+      "titleKr": "페이블",
+      "developer": "Playground",
+      "publisher": "Xbox",
+      "platforms": [
+        "PC",
+        "Xbox Series"
+      ],
+      "genres": [
+        "RPG",
+        "오픈월드"
+      ],
+      "releaseDate": "2026-09-04",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 69900,
+      "hypeScore": 77,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "오픈월드"
+      ],
+      "description": "페이블 시리즈 리부트.",
+      "update": "발매 예정. 동화풍 오픈월드 RPG.",
+      "color": "#3aa757",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Fable%20Playground%20official%20trailer"
+    },
+    {
+      "id": "splatoon-new",
+      "title": "Splatoon (New)",
+      "titleKr": "스플래툰 신작",
+      "developer": "Nintendo",
+      "publisher": "닌텐도",
+      "platforms": [
+        "Switch 2"
+      ],
+      "genres": [
+        "슈팅",
+        "액션"
+      ],
+      "releaseDate": "2026-08-07",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 64800,
+      "hypeScore": 74,
+      "rating": null,
+      "tags": [
+        "닌텐도"
+      ],
+      "description": "잉크 슈터 신작.",
+      "update": "발매 예정. 신규 무기와 스테이지.",
+      "color": "#00c2cb",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Splatoon%20(New)%20Nintendo%20official%20trailer"
+    },
+    {
+      "id": "fc26",
+      "title": "EA SPORTS FC 26",
+      "titleKr": "EA 스포츠 FC 26",
+      "developer": "EA",
+      "publisher": "EA",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series",
+        "Switch"
+      ],
+      "genres": [
+        "스포츠"
+      ],
+      "releaseDate": "2026-09-26",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 74800,
+      "hypeScore": 70,
+      "rating": null,
+      "tags": [
+        "스포츠",
+        "연례작"
+      ],
+      "description": "축구 시뮬레이션 연례작.",
+      "update": "발매 예정. 신규 엔진 및 모드.",
+      "color": "#27ae60",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=EA%20SPORTS%20FC%2026%20EA%20official%20trailer"
+    },
+    {
+      "id": "mh-stories3",
+      "title": "Monster Hunter Stories 3",
+      "titleKr": "몬스터 헌터 스토리즈 3",
+      "developer": "Capcom",
+      "publisher": "캡콤",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Switch 2"
+      ],
+      "genres": [
+        "RPG",
+        "턴제"
+      ],
+      "releaseDate": "2026-07-17",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 64800,
+      "hypeScore": 71,
+      "rating": null,
+      "tags": [
+        "JRPG"
+      ],
+      "description": "몬헌 스토리즈 턴제 RPG 신작.",
+      "update": "발매 예정. 신규 몬스터 라이드.",
+      "color": "#d98324",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Monster%20Hunter%20Stories%203%20Capcom%20official%20trailer"
+    },
+    {
+      "id": "fgo-up",
+      "title": "Fate/Grand Order",
+      "titleKr": "페이트/그랜드 오더",
+      "developer": "Aniplex",
+      "publisher": "넷마블",
+      "platforms": [
+        "Mobile"
+      ],
+      "genres": [
+        "수집형",
+        "RPG"
+      ],
+      "releaseDate": "2026-06-21",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 69,
+      "rating": 8.4,
+      "tags": [
+        "서브컬처",
+        "대규모업데이트"
+      ],
+      "description": "턴제 수집형 RPG.",
+      "update": "신규 특이점 스토리 및 픽업.",
+      "color": "#b14aed",
+      "source": {
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Fate%2FGrand%20Order%20Aniplex%20official%20trailer"
+    },
+    {
+      "id": "uma-new-banner",
+      "title": "Umamusume New Banner",
+      "titleKr": "우마무스메 신규 픽업",
+      "developer": "Cygames",
+      "publisher": "카카오게임즈",
+      "platforms": [
+        "Mobile"
+      ],
+      "genres": [
+        "육성",
+        "수집형"
+      ],
+      "releaseDate": "2026-07-03",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 72,
+      "rating": 8.5,
+      "tags": [
+        "서브컬처",
+        "대규모업데이트"
+      ],
+      "description": "경주마 육성 시뮬.",
+      "update": "신규 ★3 우마무스메 픽업.",
+      "color": "#e84d8a",
+      "source": {
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Umamusume%20New%20Banner%20Cygames%20official%20trailer"
+    },
+    {
+      "id": "star-seekers",
+      "title": "Star Seekers",
+      "titleKr": "스타 시커즈",
+      "developer": "넷이즈",
+      "publisher": "넷이즈",
+      "platforms": [
+        "Mobile",
+        "PC"
+      ],
+      "genres": [
+        "RPG",
+        "수집형"
+      ],
+      "releaseDate": "2026-08-25",
+      "eventType": "prereg",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 66,
+      "rating": null,
+      "tags": [
+        "서브컬처",
+        "사전예약"
+      ],
+      "description": "우주 배경 수집형 RPG 신작.",
+      "update": "글로벌 사전예약 진행.",
+      "color": "#00a8cc",
+      "source": {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Star%20Seekers%20%EB%84%B7%EC%9D%B4%EC%A6%88%20official%20trailer"
+    },
+    {
+      "id": "ananta",
+      "title": "Ananta",
+      "titleKr": "아난타",
+      "developer": "NetEase",
+      "publisher": "넷이즈",
+      "platforms": [
+        "Mobile",
+        "PC",
+        "PS5"
+      ],
+      "genres": [
+        "오픈월드",
+        "액션"
+      ],
+      "releaseDate": "2026-10-09",
+      "eventType": "prereg",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 78,
+      "rating": null,
+      "tags": [
+        "서브컬처",
+        "사전예약",
+        "오픈월드"
+      ],
+      "description": "도시 오픈월드 액션 RPG.",
+      "update": "사전예약 시작. PV 공개.",
+      "color": "#2980b9",
+      "source": {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Ananta%20NetEase%20official%20trailer"
+    },
+    {
+      "id": "azur-promilia",
+      "title": "Azur Promilia",
+      "titleKr": "아주르 프로밀리아",
+      "developer": "Manjuu",
+      "publisher": "Manjuu",
+      "platforms": [
+        "Mobile",
+        "PC"
+      ],
+      "genres": [
+        "오픈월드",
+        "수집형"
+      ],
+      "releaseDate": "2026-09-30",
+      "eventType": "cbt",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 73,
+      "rating": null,
+      "tags": [
+        "서브컬처",
+        "테스트"
+      ],
+      "description": "몬스터 테이밍 오픈월드.",
+      "update": "글로벌 CBT 모집.",
+      "color": "#16a085",
+      "source": {
+        "name": "TapTap",
+        "url": "https://www.taptap.io/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Azur%20Promilia%20Manjuu%20official%20trailer"
+    },
+    {
+      "id": "odin-up",
+      "title": "ODIN: Valhalla Rising",
+      "titleKr": "오딘: 발할라 라이징",
+      "developer": "라이온하트",
+      "publisher": "카카오게임즈",
+      "platforms": [
+        "Mobile",
+        "PC"
+      ],
+      "genres": [
+        "MMORPG"
+      ],
+      "releaseDate": "2026-06-30",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 67,
+      "rating": 8,
+      "tags": [
+        "국산",
+        "대규모업데이트"
+      ],
+      "description": "북유럽 신화 MMORPG.",
+      "update": "신규 지역·레이드 업데이트.",
+      "color": "#c9a227",
+      "source": {
+        "name": "네이버 게임",
+        "url": "https://game.naver.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=ODIN%3A%20Valhalla%20Rising%20%EB%9D%BC%EC%9D%B4%EC%98%A8%ED%95%98%ED%8A%B8%20official%20trailer"
+    },
+    {
+      "id": "lineage-w-up",
+      "title": "Lineage W",
+      "titleKr": "리니지 W",
+      "developer": "엔씨소프트",
+      "publisher": "엔씨소프트",
+      "platforms": [
+        "Mobile",
+        "PC"
+      ],
+      "genres": [
+        "MMORPG"
+      ],
+      "releaseDate": "2026-07-28",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 60,
+      "rating": 7.5,
+      "tags": [
+        "국산",
+        "대규모업데이트"
+      ],
+      "description": "글로벌 리니지 MMORPG.",
+      "update": "신규 시즌 및 변신·마법인형 추가.",
+      "color": "#5b8def",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Lineage%20W%20%EC%97%94%EC%94%A8%EC%86%8C%ED%94%84%ED%8A%B8%20official%20trailer"
+    },
+    {
+      "id": "prj-dh-cbt",
+      "title": "Project DH (CBT)",
+      "titleKr": "프로젝트 DH (CBT)",
+      "developer": "넥슨",
+      "publisher": "넥슨",
+      "platforms": [
+        "PC",
+        "PS5"
+      ],
+      "genres": [
+        "액션",
+        "RPG"
+      ],
+      "releaseDate": "2026-08-12",
+      "eventType": "cbt",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 71,
+      "rating": null,
+      "tags": [
+        "국산",
+        "테스트",
+        "기대작"
+      ],
+      "description": "하드코어 액션 RPG 신작.",
+      "update": "2차 CBT 모집.",
+      "color": "#8e44ad",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Project%20DH%20(CBT)%20%EB%84%A5%EC%8A%A8%20official%20trailer"
+    },
+    {
+      "id": "arc-raiders-obt",
+      "title": "ARC Raiders (OBT)",
+      "titleKr": "아크 레이더스 (OBT)",
+      "developer": "Embark",
+      "publisher": "넥슨",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series"
+      ],
+      "genres": [
+        "슈팅",
+        "추출"
+      ],
+      "releaseDate": "2026-09-08",
+      "eventType": "obt",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 74,
+      "rating": null,
+      "tags": [
+        "테스트",
+        "추출슈터"
+      ],
+      "description": "PvPvE 추출 슈터.",
+      "update": "오픈 베타 일정 확정.",
+      "color": "#4a90d9",
+      "source": {
+        "name": "디스이즈게임",
+        "url": "https://www.thisisgame.com/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=ARC%20Raiders%20(OBT)%20Embark%20official%20trailer"
+    },
+    {
+      "id": "inzoi-up",
+      "title": "inZOI",
+      "titleKr": "인조이",
+      "developer": "크래프톤",
+      "publisher": "크래프톤",
+      "platforms": [
+        "PC"
+      ],
+      "genres": [
+        "시뮬레이션"
+      ],
+      "releaseDate": "2026-06-27",
+      "eventType": "update",
+      "status": "upcoming",
+      "price": 0,
+      "hypeScore": 76,
+      "rating": 8.1,
+      "tags": [
+        "국산",
+        "대규모업데이트"
+      ],
+      "description": "인생 시뮬레이션.",
+      "update": "신규 도시 및 모드 지원 업데이트.",
+      "color": "#00c2cb",
+      "source": {
+        "name": "인벤",
+        "url": "https://www.inven.co.kr/"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=inZOI%20%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4%20official%20trailer"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+name: Update game data
+
+# 자동 수집 파이프라인을 정기 실행해 data/games.json 을 최신으로 유지한다.
+# (실제 출시/업데이트 양에 맞춰 커버리지를 자동으로 늘리는 핵심 장치)
+
+on:
+  schedule:
+    - cron: "0 21 * * *"   # 매일 06:00 KST (UTC 21:00)
+  workflow_dispatch: {}     # 수동 실행 허용
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build dataset from sources + curated layer
+        env:
+          RAWG_API_KEY: ${{ secrets.RAWG_API_KEY }}   # 저장소 Secrets 에 등록
+          STEAM: "1"
+          RSS: "1"
+        run: node scripts/build-data.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/games.json; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/games.json
+            git commit -m "chore(data): refresh games.json from sources"
+            git push
+          fi

@@ -140,28 +140,38 @@ async function fromInven(out) {
     /행사|쇼케이스|페스트|페스티벌|컨퍼런스|팝업|대회|기념/.test(s) ? "event" : "release";
 
   let added = 0;
-  // 날짜 블록 단위로 끊어 각 블록 내 링크를 그 날짜에 귀속
-  const blocks = html.split(/(?=(?:20\d{2}[-./]\d{1,2}[-./]\d{1,2})|(?:data-date=))/);
+  const seen = new Set();
+  // 상세 페이지 링크 패턴: /webzine/calendar/game/{id}
+  const DETAIL = /\/webzine\/calendar\/game\/(\d+)/;
+  // 날짜 블록 단위로 끊어 각 블록 내 상세 링크를 그 날짜에 귀속
+  const blocks = html.split(/(?=(?:20\d{2}[-./]\d{1,2}[-./]\d{1,2})|(?:\d{1,2}\/\d{1,2}\([월화수목금토일]\)))/);
   for (const b of blocks) {
+    let date;
     const dm = b.match(/(20\d{2})[-./](\d{1,2})[-./](\d{1,2})/);
-    if (!dm) continue;
-    const date = `${dm[1]}-${String(dm[2]).padStart(2, "0")}-${String(dm[3]).padStart(2, "0")}`;
+    const km = b.match(/(\d{1,2})\/(\d{1,2})\([월화수목금토일]\)/); // MM/DD(요일)
+    if (dm) date = `${dm[1]}-${String(dm[2]).padStart(2, "0")}-${String(dm[3]).padStart(2, "0")}`;
+    else if (km) date = `${TODAY.getFullYear()}-${String(km[1]).padStart(2, "0")}-${String(km[2]).padStart(2, "0")}`;
+    else continue;
+
     for (const a of b.matchAll(/<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)) {
       const href = a[1];
+      const dt = href.match(DETAIL);
+      if (!dt) continue; // 상세 페이지 링크가 있는 항목만 채택
+      const id = dt[1];
+      if (seen.has(id)) continue;
+      seen.add(id);
       const title = a[2].replace(/<[^>]+>/g, "").replace(/&[a-z]+;/g, " ").trim();
-      if (!title || title.length < 2 || title.length > 60) continue;
-      if (!/inven\.co\.kr/.test(href) && href.startsWith("/")) continue;
-      const detailUrl = href.startsWith("http") ? href : `https://www.inven.co.kr${href}`;
+      if (!title || title.length < 2) continue;
       out.push(makeGame({
-        id: `inven-${slug(title)}-${date}`,
+        id: `inven-${id}`,
         title, titleKr: title,
         platforms: [], genres: [],
         releaseDate: date,
-        eventType: evFromText(title),
+        eventType: evFromText(b.slice(0, 400) + " " + title),
         tags: ["인벤"],
-        description: "인벤 발매 캘린더 주요 일정",
+        description: "",
         source: INVEN_CAL,
-        detailUrl,
+        detailUrl: `https://www.inven.co.kr/webzine/calendar/game/${id}`,
       }));
       added++;
     }

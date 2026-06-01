@@ -313,6 +313,9 @@ async function loadGames(firstLoad = false) {
     lastFetchAt = Date.now();
     document.title = data.meta.title;
     $("#lastUpdated").textContent = `데이터 기준 ${data.meta.updated}`;
+    // 데이터 스냅샷이 과거(현재 시점 이후 일정 없음)면 자동으로 '전체'를 기본값으로
+    // → 라이브러리가 비어 보이지 않도록 함
+    if (STATE.status === "now" && STATE.games.length && !applyFilters().length) STATE.status = "all";
     renderSources(data.meta);
     renderHeaderStats();
     initFilters();

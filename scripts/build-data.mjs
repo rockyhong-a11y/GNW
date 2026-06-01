@@ -154,11 +154,16 @@ async function fromInven(out) {
     "referer": "https://www.inven.co.kr/",
   };
   let html = "", status = 0, err = "";
-  try {
-    const res = await fetch(INVEN_CAL.url, { headers: HEADERS });
-    status = res.status;
-    html = await res.text();
-  } catch (e) { err = String(e && e.message || e); }
+  if (process.env.INVEN_HTML_FILE) {            // 테스트 훅: 로컬 HTML 픽스처로 파서 검증
+    try { html = readFileSync(process.env.INVEN_HTML_FILE, "utf8"); status = 200; }
+    catch (e) { err = String(e && e.message || e); }
+  } else {
+    try {
+      const res = await fetch(INVEN_CAL.url, { headers: HEADERS });
+      status = res.status;
+      html = await res.text();
+    } catch (e) { err = String(e && e.message || e); }
+  }
 
   // 진단 파일: 러너가 인벤으로부터 실제로 받은 것을 저장소에 남겨 구조/도달성 확인.
   try {
@@ -171,68 +176,81 @@ async function fromInven(out) {
       `calendar_game_links=${(html.match(/\/webzine\/calendar\/game\/\d+/g) || []).length}`,
       `news_links=${(html.match(/\/webzine\/news\/\?news=\d+/g) || []).length}`,
       `upload_imgs=${(html.match(/upload\d*\.inven\.co\.kr\/upload/g) || []).length}`,
-      `date_tokens=${(html.match(/20\d{2}[-./]\d{1,2}[-./]\d{1,2}/g) || []).slice(0, 12).join(",")}`,
-      `--- SAMPLE (from toolbar onward = 실제 일정 리스트, ~90000 chars) ---`,
-      (() => {
-        const t = html.search(/class="toolbar[ "]/);
-        const i = html.search(/\/webzine\/calendar\/game\/\d+/);
-        const start = t >= 0 ? t : (i > 800 ? i - 800 : 0);
-        return html.slice(start, start + 90000);
-      })(),
+      `calendar_items=${(html.match(/<li class="calendar__item/g) || []).length}`,
     ].join("\n");
-    await writeFile(join(ROOT, "data/_inven-debug.txt"), dbg);
+    await writeFile(join(ROOT, "data/_inven-debug.txt"), dbg + "\n");
   } catch { /* 디버그 기록 실패는 무시 */ }
 
   if (!html || status >= 400) return { name: "Inven", error: `status=${status} ${err}`.trim(), added: 0 };
 
-  // 캘린더 셀의 게임 항목: <a href="...상세...">제목</a> + 인접한 날짜(YYYY-MM-DD / MM.DD)
-  // 인벤 캘린더 분류 키워드 → eventType
-  const evFromText = (s) =>
-    /얼리\s*액세스|early\s*access/i.test(s) ? "ea" :
-    /테스트|CBT|OBT|베타/i.test(s) ? "test" :
-    /업데이트|패치|시즌|버전/i.test(s) ? "update" :
-    /행사|쇼케이스|페스트|페스티벌|컨퍼런스|팝업|대회|기념/.test(s) ? "event" : "release";
+  // ── 실제 캘린더 일정 리스트 파싱 (<li class="calendar__item ...">) ────────
+  const abs = (u) => !u ? null : (u.startsWith("/") ? "https://www.inven.co.kr" + u : u);
+  const stripTags = (s) => String(s || "").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
+  // 인벤 분류 텍스트 → GNW eventType
+  const evMap = (s) => {
+    s = String(s || "");
+    if (/얼리\s*액세스/.test(s)) return "ea";
+    if (/테스트|CBT|OBT|베타/i.test(s)) return "test";
+    if (/업데이트|패치|시즌/.test(s)) return "update";
+    if (/행사|쇼케이스|페스트|페스티벌|컨퍼런스|콘퍼런스|팝업|대회|기념|발표/.test(s)) return "event";
+    return "release"; // 출시·사전예약 등
+  };
+  const PLAT = { pc: "PC", ps5: "PS5", ps4: "PS5", xbox: "Xbox Series", xboxseries: "Xbox Series", switch: "Switch", switch2: "Switch 2", ns: "Switch", mobile: "Mobile", ios: "Mobile", aos: "Mobile", android: "Mobile" };
 
   let added = 0;
   const seen = new Set();
-  // 상세 페이지 링크 패턴: /webzine/calendar/game/{id}
-  const DETAIL = /\/webzine\/calendar\/game\/(\d+)/;
-  // 날짜 블록 단위로 끊어 각 블록 내 상세 링크를 그 날짜에 귀속
-  const blocks = html.split(/(?=(?:20\d{2}[-./]\d{1,2}[-./]\d{1,2})|(?:\d{1,2}\/\d{1,2}\([월화수목금토일]\)))/);
-  for (const b of blocks) {
-    let date;
-    const dm = b.match(/(20\d{2})[-./](\d{1,2})[-./](\d{1,2})/);
-    const km = b.match(/(\d{1,2})\/(\d{1,2})\([월화수목금토일]\)/); // MM/DD(요일)
-    if (dm) date = `${dm[1]}-${String(dm[2]).padStart(2, "0")}-${String(dm[3]).padStart(2, "0")}`;
-    else if (km) date = `${TODAY.getFullYear()}-${String(km[1]).padStart(2, "0")}-${String(km[2]).padStart(2, "0")}`;
-    else continue;
+  for (const m of html.matchAll(/<li class="calendar__item[\s\S]*?<\/li>/g)) {
+    const it = m[0];
 
-    for (const a of b.matchAll(/<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)) {
-      const href = a[1];
-      const dt = href.match(DETAIL);
-      if (!dt) continue; // 상세 페이지 링크가 있는 항목만 채택
-      const id = dt[1];
-      if (seen.has(id)) continue;
-      seen.add(id);
-      const title = a[2].replace(/<[^>]+>/g, "").replace(/&[a-z]+;/g, " ").trim();
-      if (!title || title.length < 2) continue;
-      // 항목 주변에서 인벤 업로드 썸네일 추출(있으면 카드 이미지로 사용)
-      const win = b.slice(Math.max(0, a.index - 400), a.index + a[0].length + 400);
-      const im = win.match(/<img[^>]+src="(https?:\/\/[^"]*inven\.co\.kr\/upload[^"]+\.(?:jpg|jpeg|png|gif|webp))/i);
-      out.push(makeGame({
-        id: `inven-${id}`,
-        title, titleKr: title,
-        platforms: [], genres: [],
-        releaseDate: date,
-        eventType: evFromText(b.slice(0, 400) + " " + title),
-        tags: ["인벤"],
-        description: "",
-        image: im ? im[1] : null,
-        source: INVEN_CAL,
-        detailUrl: `https://www.inven.co.kr/webzine/calendar/game/${id}`,   // 인벤 상세 페이지 직접 링크
-      }));
-      added++;
+    // 제목 (행사형은 .title-text, 출시형은 .calendar__title 직접)
+    let title = (it.match(/class="title-text">([\s\S]*?)<\/span>/) || [])[1];
+    if (!title) title = (it.match(/class="calendar__title"[^>]*>([\s\S]*?)<\/h3>/) || [])[1];
+    title = stripTags(title);
+    if (!title || title.length < 2) continue;
+
+    // 날짜: 구글캘린더 dates=YYYYMMDD 우선, 없으면 MM/DD(요일)+연도 추정
+    let date = null;
+    const gd = it.match(/dates=(\d{8})/);
+    if (gd) date = `${gd[1].slice(0, 4)}-${gd[1].slice(4, 6)}-${gd[1].slice(6, 8)}`;
+    else {
+      const md = it.match(/calendar__day-num'?[^>]*>\s*(\d{1,2})\/(\d{1,2})/);
+      if (md) { let y = TODAY.getFullYear(); if (+md[1] < TODAY.getMonth() + 1 - 6) y++; date = `${y}-${md[1].padStart(2, "0")}-${md[2].padStart(2, "0")}`; }
     }
+    if (!date) continue;
+
+    const sort = (it.match(/calendar__event-sort">([^<]+)/) || it.match(/calendar__platform-txt">([^<]+)/) || [])[1];
+    const eventType = evMap(sort);
+    const image = (it.match(/calendar__figure[\s\S]*?<img[^>]+src="([^"]+)"/) || [])[1] || null;
+    // 직접 상세 링크: group 앵커 href (출시작은 /webzine/calendar/game/{id}, 행사는 뉴스/공식/영상)
+    const atag = (it.match(/<a\b[^>]*calendar__item--group[^>]*>/) || [])[0] || "";
+    const detailUrl = abs((atag.match(/href="([^"]+)"/) || [])[1]);
+    const idx = (it.match(/data-game-idx="(\d+)"/) || [])[1] || (detailUrl && (detailUrl.match(/\/game\/(\d+)/) || [])[1]);
+    const yt = (it.match(/data-youtube="([^"]+)"/) || [])[1];
+    const company = stripTags((it.match(/class="calendar__company">([\s\S]*?)<\/(?:p|span)>/) || [])[1]);
+    const platforms = [...new Set([...it.matchAll(/calendar__platform-icon--([a-z0-9]+)/g)].map((x) => PLAT[x[1]]).filter(Boolean))];
+    const tags = [...it.matchAll(/class="calendar__event-tag">\s*([^<]+?)\s*<\/span>/g)].map((x) => x[1].trim()).filter(Boolean);
+
+    const id = idx ? `inven-${idx}` : `inven-${slug(title)}`;
+    if (seen.has(id)) continue;
+    seen.add(id);
+
+    // company: 출시형은 원제(영문), 행사형은 설명문 → 분배
+    const isDesc = /[.!?。…]$|습니다|됩니다|진행|예정|공개|출시|개최|등장/.test(company);
+    out.push(makeGame({
+      id,
+      title: (!isDesc && company && /[A-Za-z]/.test(company)) ? company : title,
+      titleKr: title,
+      platforms, genres: [],
+      releaseDate: date,
+      eventType,
+      tags: tags.length ? tags : ["인벤"],
+      description: isDesc ? company : "",
+      image,
+      source: INVEN_CAL,
+      detailUrl: detailUrl || null,            // 인벤이 가리키는 직접 상세/공식 페이지
+      trailer: yt ? `https://youtu.be/${yt}` : undefined,
+    }));
+    added++;
   }
   return { name: "Inven", added };
 }
@@ -318,19 +336,27 @@ async function main() {
     }
   }
 
-  // 병합: curated 우선. 동일 게임(원제 title 정규화 기준)은 curated 가 덮어씀.
-  const byKey = new Map();
-  for (const g of collected) byKey.set(normTitle(g.title), g);
-  for (const g of curated.games) {
-    const hit = byKey.get(normTitle(g.title)); // 같은 게임의 인벤 수집본(있으면)
-    if (hit && hit.source && hit.source.name === INVEN_CAL.name) {
-      // 번역 등 나머지는 curated 유지하되, 인벤의 "직접 상세 링크"와 "썸네일"로 보강.
-      if (hit.detailUrl && /\/webzine\/(calendar\/game|news)\//.test(hit.detailUrl)) g.detailUrl = hit.detailUrl;
-      if (!g.image && hit.image) g.image = hit.image;
-    }
-    if (!g.detailUrl) g.detailUrl = detailFor(g.titleKr || g.title); // 직접 링크 없으면 본 제목 검색으로 폴백
-    byKey.set(normTitle(g.title), g); // curated(보강본) wins
+  // 병합: curated 우선. 인벤 수집본은 같은 게임이면 큐레이션을 "보강"하고(직접 상세링크·
+  // 썸네일·플랫폼·트레일러), 큐레이션에 없는 새 일정만 추가한다. 매칭은 원제/한글제목 모두로.
+  const keyset = (g) => [...new Set([normTitle(g.title), normTitle(g.titleKr || g.title)].filter(Boolean))];
+  const curatedByKey = new Map();
+  for (const g of curated.games) for (const k of keyset(g)) curatedByKey.set(k, g);
+
+  const usedCollected = new Set();
+  for (const c of collected) {
+    const hit = keyset(c).map((k) => curatedByKey.get(k)).find(Boolean);
+    if (!hit) continue;
+    if (c.detailUrl) hit.detailUrl = c.detailUrl;                 // 인벤 직접 상세링크로 교체
+    if (!hit.image && c.image) hit.image = c.image;               // 썸네일 보강
+    if ((!hit.platforms || !hit.platforms.length) && c.platforms.length) hit.platforms = c.platforms;
+    if (c.trailer && /youtu/.test(c.trailer) && (!hit.trailer || /results\?search_query/.test(hit.trailer))) hit.trailer = c.trailer;
+    usedCollected.add(c);
   }
+
+  const byKey = new Map();
+  for (const g of curated.games) byKey.set("c|" + normTitle(g.titleKr || g.title), g);
+  for (const c of collected) if (!usedCollected.has(c)) byKey.set("i|" + normTitle(c.titleKr || c.title), c); // 새 일정만
+  for (const g of byKey.values()) if (!g.detailUrl) g.detailUrl = detailFor(g.titleKr || g.title); // 폴백: 본 제목 검색
 
   const games = [...byKey.values()]
     .filter((g) => g.releaseDate && !isNaN(new Date(g.releaseDate)))

@@ -115,10 +115,15 @@ function renderCard(g) {
   const detail = g.detailUrl
     ? `<a class="detail" href="${esc(g.detailUrl)}" target="_blank" rel="noopener">상세정보 ↗</a>`
     : "";
+  // 썸네일 이미지(인벤 리스트처럼). 로드 실패 시 onerror 로 제거해 그라데이션으로 폴백.
+  const img = g.image
+    ? `<img class="card-img" src="${esc(g.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove();this.closest('.card-banner').classList.remove('has-img')">`
+    : "";
 
   return `
     <article class="card">
-      <div class="card-banner" style="background: linear-gradient(135deg, ${g.color}, ${g.color}55);">
+      <div class="card-banner${g.image ? " has-img" : ""}" style="background: linear-gradient(135deg, ${g.color}, ${g.color}55);">
+        ${img}
         <span class="event-badge" style="background:${ev.color}">${ev.label}</span>
         <span class="countdown ${cd.released ? "released" : ""}">${cd.text}</span>
         ${trailerBtn}

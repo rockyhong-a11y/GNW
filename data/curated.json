@@ -3,7 +3,7 @@
     "title": "GNW — Game New Watch",
     "description": "인벤 발매 캘린더 기반 주요 게임 일정",
     "updated": "2026-06-01",
-    "version": 8,
+    "version": 9,
     "kind": "curated",
     "sources": [
       {
@@ -41,7 +41,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null
+      "trailer": null,
+      "image": ""
     },
     {
       "id": "inven-ec8ab9eba6acec9d-2026-06-01",
@@ -72,7 +73,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null
+      "trailer": null,
+      "image": ""
     },
     {
       "id": "inven-ebb0b0ed8b80ec89-2026-06-02",
@@ -97,7 +99,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%B0%B0%ED%8B%80%EC%89%BD%20%EC%BB%A4%EB%A7%A8%EB%93%9C%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EB%B0%B0%ED%8B%80%EC%89%BD%20%EC%BB%A4%EB%A7%A8%EB%93%9C%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-ec8aa4ed858cec9d-2026-06-03",
@@ -127,7 +130,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null
+      "trailer": null,
+      "image": ""
     },
     {
       "id": "inven-ec9db4ed99982031-2026-06-03",
@@ -156,7 +160,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null
+      "trailer": null,
+      "image": ""
     },
     {
       "id": "inven-ecb9bced81acec8a-2026-06-04",
@@ -181,7 +186,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%B9%BC%ED%81%AC%EC%8A%A4%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%B9%BC%ED%81%AC%EC%8A%A4%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-ed88aceba5b420eb-2026-06-04",
@@ -206,7 +212,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%ED%88%AC%EB%A5%B4%20%EB%93%9C%20%ED%94%84%EB%9E%91%EC%8A%A42026%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%ED%88%AC%EB%A5%B4%20%EB%93%9C%20%ED%94%84%EB%9E%91%EC%8A%A42026%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-ec8aa4ec998420ec-2026-06-04",
@@ -231,7 +238,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%EC%99%84%20%EC%86%A1%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%EC%99%84%20%EC%86%A1%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-eab3a0eb949520eb-2026-06-06",
@@ -256,7 +264,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EA%B3%A0%EB%94%95%20%EB%A6%AC%EB%A9%94%EC%9D%B4%ED%81%AC%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EA%B3%A0%EB%94%95%20%EB%A6%AC%EB%A9%94%EC%9D%B4%ED%81%AC%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-ec849ceba8b820ea-2026-06-06",
@@ -286,7 +295,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null
+      "trailer": null,
+      "image": ""
     },
     {
       "id": "inven-58626f7820eab28c-2026-06-08",
@@ -316,7 +326,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null
+      "trailer": null,
+      "image": ""
     },
     {
       "id": "inven-ec8694eb9dbced8e-2026-06-08",
@@ -341,7 +352,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%86%94%EB%9D%BC%ED%8E%91%ED%81%AC%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%86%94%EB%9D%BC%ED%8E%91%ED%81%AC%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-eba088ec9db4ec96-2026-06-09",
@@ -366,7 +378,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%A0%88%EC%9D%B4%EC%96%B4%20%EB%9E%9C%EB%93%9C%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EB%A0%88%EC%9D%B4%EC%96%B4%20%EB%9E%9C%EB%93%9C%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-ec9c84ecb998ec8a-2026-06-10",
@@ -391,7 +404,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%9C%84%EC%B9%98%EC%8A%A4%ED%8C%8C%EC%9D%B4%EC%96%B4%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%9C%84%EC%B9%98%EC%8A%A4%ED%8C%8C%EC%9D%B4%EC%96%B4%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-ec8aa4ed8e98ec9d-2026-06-11",
@@ -416,7 +430,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%9E%98%ED%94%84%ED%8A%B8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-eba6acebb08b20ec-2026-06-11",
@@ -441,7 +456,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%A6%AC%EB%B0%8B%20%EC%A0%9C%EB%A1%9C%20%EB%B8%8C%EB%A0%88%EC%9D%B4%EC%BB%A4%EC%8A%A4%20%ED%94%84%EB%A1%A4%EB%A1%9C%EA%B7%B8%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EB%A6%AC%EB%B0%8B%20%EC%A0%9C%EB%A1%9C%20%EB%B8%8C%EB%A0%88%EC%9D%B4%EC%BB%A4%EC%8A%A4%20%ED%94%84%EB%A1%A4%EB%A1%9C%EA%B7%B8%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": "https://upload3.inven.co.kr/upload/2026/05/29/bbs/i1444044475.jpg"
     },
     {
       "id": "inven-ec8aa4ed8c8020eb-2026-06-15",
@@ -472,7 +488,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null
+      "trailer": null,
+      "image": ""
     },
     {
       "id": "inven-4e444332303236-2026-06-16",
@@ -503,7 +520,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null
+      "trailer": null,
+      "image": ""
     },
     {
       "id": "inven-eb8db4ec83a4ec96-2026-06-17",
@@ -528,7 +546,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%8D%B4%EC%83%A4%EC%96%B4%ED%83%9D!%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EB%8D%B4%EC%83%A4%EC%96%B4%ED%83%9D!%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-ec96b8eba6acec96-2026-06-17",
@@ -559,7 +578,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null
+      "trailer": null,
+      "image": ""
     },
     {
       "id": "inven-eb8db0ec9db4ebb8-2026-06-18",
@@ -584,7 +604,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%8D%B0%EC%9D%B4%EB%B8%8C%20%EB%8D%94%20%EB%8B%A4%EC%9D%B4%EB%B2%84%3A%20%EC%9D%B8%20%EB%8D%94%20%EC%A0%95%EA%B8%80%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EB%8D%B0%EC%9D%B4%EB%B8%8C%20%EB%8D%94%20%EB%8B%A4%EC%9D%B4%EB%B2%84%3A%20%EC%9D%B8%20%EB%8D%94%20%EC%A0%95%EA%B8%80%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-ebaaa8ed9798eab0-2026-06-18",
@@ -609,7 +630,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%AA%A8%ED%97%98%EA%B0%80%20%EC%97%98%EB%A6%AC%EC%97%87%EC%9D%98%20%EC%B2%9C%20%EB%85%84%20%EC%9D%B4%EC%95%BC%EA%B8%B0%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EB%AA%A8%ED%97%98%EA%B0%80%20%EC%97%98%EB%A6%AC%EC%97%87%EC%9D%98%20%EC%B2%9C%20%EB%85%84%20%EC%9D%B4%EC%95%BC%EA%B8%B0%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-ec86943a20ec9db8-2026-06-18",
@@ -634,7 +656,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%86%94%3A%20%EC%9D%B8%EC%B1%88%ED%8A%B8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%86%94%3A%20%EC%9D%B8%EC%B1%88%ED%8A%B8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-ed97ac20eba09b20-2026-06-18",
@@ -659,7 +682,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%ED%97%AC%20%EB%A0%9B%20%EB%A3%A8%EC%A6%88%3A%20%EB%B2%A0%ED%8A%B8%EB%82%A8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%ED%97%AC%20%EB%A0%9B%20%EB%A3%A8%EC%A6%88%3A%20%EB%B2%A0%ED%8A%B8%EB%82%A8%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-454120ec8aa4ed8f-2026-06-20",
@@ -684,7 +708,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=EA%20%EC%8A%A4%ED%8F%AC%EC%B8%A0%20UFC%206%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=EA%20%EC%8A%A4%ED%8F%AC%EC%B8%A0%20UFC%206%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-eb8ba4ed81ac20ec-2026-06-22",
@@ -709,7 +734,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%8B%A4%ED%81%AC%20%EC%8A%A4%ED%81%AC%EB%A1%A4%EC%A6%88%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EB%8B%A4%ED%81%AC%20%EC%8A%A4%ED%81%AC%EB%A1%A4%EC%A6%88%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-ec8aa4ed8380ed8f-2026-06-25",
@@ -734,7 +760,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%ED%83%80%ED%8F%AD%EC%8A%A4%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EC%8A%A4%ED%83%80%ED%8F%AD%EC%8A%A4%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-eb8db0eb939c20ec-2026-06-25",
@@ -759,7 +786,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%8D%B0%EB%93%9C%20%EC%98%A4%EC%96%B4%20%EC%96%BC%EB%9D%BC%EC%9D%B4%EB%B8%8C6%20%EB%9D%BC%EC%8A%A4%ED%8A%B8%20%EB%9D%BC%EC%9A%B4%EB%93%9C%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EB%8D%B0%EB%93%9C%20%EC%98%A4%EC%96%B4%20%EC%96%BC%EB%9D%BC%EC%9D%B4%EB%B8%8C6%20%EB%9D%BC%EC%8A%A4%ED%8A%B8%20%EB%9D%BC%EC%9A%B4%EB%93%9C%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-eba788ebb984eb85-2026-06-27",
@@ -789,7 +817,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null
+      "trailer": null,
+      "image": ""
     },
     {
       "id": "inven-45564f2032303236-2026-06-27",
@@ -820,7 +849,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null
+      "trailer": null,
+      "image": ""
     },
     {
       "id": "inven-ebafb8eba5b4ec9d-2026-06-30",
@@ -847,7 +877,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": "https://www.youtube.com/results?search_query=%EB%AF%B8%EB%A5%B4%EC%9D%98%20%EC%A0%84%EC%84%A4%3A%20%EC%A7%84%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC"
+      "trailer": "https://www.youtube.com/results?search_query=%EB%AF%B8%EB%A5%B4%EC%9D%98%20%EC%A0%84%EC%84%A4%3A%20%EC%A7%84%20%EA%B2%8C%EC%9E%84%20%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%9F%AC",
+      "image": ""
     },
     {
       "id": "inven-ecb59ced9b84ec9d-2026-06-30",
@@ -874,7 +905,8 @@
         "name": "인벤 발매 캘린더",
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
-      "trailer": null
+      "trailer": null,
+      "image": ""
     }
   ]
 }

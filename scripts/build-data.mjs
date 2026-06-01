@@ -81,6 +81,7 @@ function makeGame(p) {
     description: p.description || "",
     update: p.update || "",
     color: p.color || colorFor(p.title),
+    image: p.image || null,           // 카드 썸네일(인벤 CDN 이미지 URL 등), 없으면 그라데이션 폴백
     source: p.source,
     detailUrl: p.detailUrl || detailFor(p.titleKr || p.title),   // 상세설명 링크(본 제목 검색)
     trailer: p.trailer || trailerFor(p.title, p.developer),

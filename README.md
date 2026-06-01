@@ -185,9 +185,10 @@ https://<user>.github.io/<repo>/data/games.json
   "tags": ["국산", "사전예약"],             // 검색 대상
   "description": "한 줄 소개",
   "update": "정식 출시. 신규 직업 5종 추가.",// 주요 업데이트/내용 (📌 강조 표기)
-  "color": "#7b5cff",                      // 카드 배너/위젯 점 색상
+  "color": "#7b5cff",                      // 카드 배너/위젯 점 색상 (이미지 없을 때 폴백)
+  "image": "https://upload3.inven.co.kr/.../i.jpg", // 카드 썸네일(인벤 리스트처럼). 비우면 color 그라데이션으로 폴백
   "source": { "name": "인벤 발매 캘린더", "url": "https://www.inven.co.kr/webzine/calendar/" }, // 출처
-  "detailUrl": "https://www.inven.co.kr/search/total/...", // 홈페이지/상세설명 링크 (카드 "상세정보 ↗")
+  "detailUrl": "https://www.inven.co.kr/search/webzine/article/{게임명}/1?sort=recency", // 상세설명 링크 (카드 "상세정보 ↗")
   "trailer": "https://youtu.be/..."        // 소개 영상 링크 (카드 ▶ / 위젯 탭)
 }
 ```

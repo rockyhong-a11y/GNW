@@ -3,7 +3,7 @@
     "title": "GNW — Game New Watch",
     "description": "PC · 콘솔 · 모바일 신작 출시 · 사전예약 · CBT/OBT · 대규모 업데이트 일정",
     "updated": "2026-05-31",
-    "version": 3,
+    "version": 4,
     "sources": [
       {
         "name": "네이버 게임",
@@ -20,9 +20,13 @@
       {
         "name": "TapTap",
         "url": "https://www.taptap.io/"
+      },
+      {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
       }
     ],
-    "note": "정보 구성은 네이버 게임 / 인벤 / 디스이즈게임 / TapTap 의 일정·DB를 참조하여 재구성한 샘플입니다."
+    "note": "정보 구성은 네이버 게임 / 인벤 / 디스이즈게임 / TapTap / 루리웹 의 일정·뉴스·DB를 참조하여 재구성한 샘플입니다."
   },
   "games": [
     {
@@ -929,6 +933,108 @@
         "url": "https://www.inven.co.kr/"
       },
       "trailer": "https://www.youtube.com/results?search_query=Subnautica%202%20Unknown%20Worlds%20official%20trailer"
+    },
+    {
+      "id": "silent-hill-f",
+      "title": "SILENT HILL f",
+      "titleKr": "사일런트 힐 f",
+      "developer": "NeoBards",
+      "publisher": "코나미",
+      "platforms": [
+        "PS5",
+        "Xbox Series",
+        "PC"
+      ],
+      "genres": [
+        "호러",
+        "액션"
+      ],
+      "releaseDate": "2026-09-25",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 69900,
+      "hypeScore": 85,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "호러",
+        "기대작"
+      ],
+      "description": "1960년대 일본을 배경으로 한 사일런트 힐 시리즈 신작 서바이벌 호러.",
+      "update": "발매일 확정. 한국어 자막 지원 및 사전 주문 특전 공개.",
+      "color": "#8b1a1a",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=SILENT%20HILL%20f%20NeoBards%20official%20trailer"
+    },
+    {
+      "id": "ff16-pc",
+      "title": "Final Fantasy XVI (PC)",
+      "titleKr": "파이널 판타지 16 (PC)",
+      "developer": "Square Enix",
+      "publisher": "스퀘어 에닉스",
+      "platforms": [
+        "PC"
+      ],
+      "genres": [
+        "RPG",
+        "액션"
+      ],
+      "releaseDate": "2026-06-20",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 69900,
+      "hypeScore": 79,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "JRPG",
+        "PC이식"
+      ],
+      "description": "PS5로 먼저 출시된 파이널 판타지 16의 PC(스팀) 정식 발매.",
+      "update": "스팀 발매 확정. 4K·고프레임 옵션과 모든 DLC 포함.",
+      "color": "#2c5fa8",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Final%20Fantasy%20XVI%20(PC)%20Square%20Enix%20official%20trailer"
+    },
+    {
+      "id": "yakuza-new",
+      "title": "Like a Dragon (New)",
+      "titleKr": "용과 같이 신작",
+      "developer": "RGG Studio",
+      "publisher": "세가",
+      "platforms": [
+        "PS5",
+        "Xbox Series",
+        "PC"
+      ],
+      "genres": [
+        "액션",
+        "RPG"
+      ],
+      "releaseDate": "2026-10-22",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": 74800,
+      "hypeScore": 76,
+      "rating": null,
+      "tags": [
+        "AAA",
+        "RGG"
+      ],
+      "description": "용과 같이 시리즈의 차기작. 새로운 무대와 주인공의 이야기.",
+      "update": "TGS에서 정식 발표. 발매일 및 한국어화 확정 공개.",
+      "color": "#d4af37",
+      "source": {
+        "name": "루리웹",
+        "url": "https://m.ruliweb.com/news"
+      },
+      "trailer": "https://www.youtube.com/results?search_query=Like%20a%20Dragon%20(New)%20RGG%20Studio%20official%20trailer"
     }
   ]
 }

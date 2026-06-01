@@ -82,13 +82,31 @@ function makeGame(p) {
     update: p.update || "",
     color: p.color || colorFor(p.title),
     source: p.source,
-    detailUrl: p.detailUrl || null,   // 홈페이지/상세설명 링크
+    detailUrl: p.detailUrl || detailFor(p.titleKr || p.title),   // 상세설명 링크(본 제목 검색)
     trailer: p.trailer || trailerFor(p.title, p.developer),
   };
 }
 
 const INVEN_CAL = { name: "인벤 발매 캘린더", url: "https://www.inven.co.kr/webzine/calendar/" };
-const invenSearch = (t) => `https://www.inven.co.kr/search/total/${encodeURIComponent(t)}`;
+
+// 검색용 핵심 게임명 추출: 부제·버전·괄호·콜론 등을 떼어 깔끔한 본 제목만 남긴다.
+// (긴 부제/특수문자가 들어간 인벤 검색 URL 이 404 나는 문제를 방지)
+function baseGameName(t) {
+  let s = String(t);
+  s = s.split(/\s[-–—~]\s/)[0];                          // " - " 이후 부제 제거
+  s = s.replace(/[「」『』《》〈〉【】［］\[\]()<>]/g, " "); // 괄호류 제거
+  s = s.replace(/['"‘’“”]/g, " ");    // 따옴표 제거
+  s = s.replace(/\d+(\.\d+)*\s*(버전|시즌|주년|챕터)/g, " "); // "4.3버전" 등 제거
+  s = s.replace(/시즌\s*\d+/g, " ");                       // "시즌 5" 제거
+  s = s.replace(/\b\d+\.\d+\b/g, " ");                     // 소수 버전(1.1, 4.3) 제거 — 정수("007","8020")는 보존
+  s = s.replace(/업데이트|패치/g, " ");                     // 업데이트/패치 표기 제거
+  s = s.replace(/[:：]/g, " ");                            // 콜론 제거
+  s = s.replace(/\s+/g, " ").trim();
+  return s || String(t);
+}
+// 인벤 웹진 통합검색(기사) — 본 제목으로만 검색해 안정적으로 결과 페이지로 이동.
+const detailFor = (t) =>
+  `https://www.inven.co.kr/search/webzine/article/${encodeURIComponent(baseGameName(t))}/1?sort=recency`;
 
 /* ---------- Providers ---------- */
 async function fromRAWG(out) {
@@ -263,7 +281,10 @@ async function main() {
   // 병합: curated 우선. 동일 게임(원제 title 정규화 기준)은 curated 가 덮어씀.
   const byKey = new Map();
   for (const g of collected) byKey.set(normTitle(g.title), g);
-  for (const g of curated.games) byKey.set(normTitle(g.title), g); // curated wins
+  for (const g of curated.games) {
+    if (!g.detailUrl) g.detailUrl = detailFor(g.titleKr || g.title); // 상세링크 자동 생성(본 제목 검색)
+    byKey.set(normTitle(g.title), g); // curated wins
+  }
 
   const games = [...byKey.values()]
     .filter((g) => g.releaseDate && !isNaN(new Date(g.releaseDate)))

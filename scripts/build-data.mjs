@@ -228,13 +228,13 @@ async function main() {
   const outPath = join(ROOT, "data/games.json");
   const provLine = report.map((r) => r.skipped ? `${r.name}(skip:${r.skipped})` : r.error ? `${r.name}(err:${r.error})` : `${r.name}(+${r.added})`).join("  ");
 
-  // 실제 게임 데이터가 바뀐 경우에만 파일을 갱신한다 → 매시간 실행돼도
-  // 변동 없으면 파일이 그대로라 워크플로가 커밋하지 않는다.
+  // 실제 내용이 바뀐 경우에만 파일을 갱신한다. 시각성 필드(updated)는 비교에서 제외해
+  // 변동이 없으면 파일이 그대로 유지되도록 한다(불필요한 커밋 방지).
   let prev = null;
   try { prev = JSON.parse(await readFile(outPath, "utf8")); } catch { /* 최초 생성 */ }
-  const sameData = prev && JSON.stringify(prev.games) === JSON.stringify(games);
-  if (sameData) {
-    data.meta.updated = prev.meta.updated; // 데이터 무변동 → 기존 메타 유지(불필요한 diff 방지)
+  const stripVolatile = (o) => { const c = JSON.parse(JSON.stringify(o)); if (c.meta) delete c.meta.updated; return c; };
+  const unchanged = prev && JSON.stringify(stripVolatile(prev)) === JSON.stringify(stripVolatile(data));
+  if (unchanged) {
     console.log("providers:", provLine);
     console.log(`변경 없음 — games.json 유지 (${games.length} games)`);
     return;

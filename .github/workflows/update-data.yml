@@ -1,12 +1,11 @@
 name: Update game data
 
-# 자동 수집 파이프라인을 정기 실행해 data/games.json 을 최신으로 유지한다.
-# (실제 출시/업데이트 양에 맞춰 커버리지를 자동으로 늘리는 핵심 장치)
+# 데이터 수집 파이프라인. 스케줄(주기) 실행은 사용하지 않는다.
+# 최신화는 (1) 웹앱이 진입 시 data/games.json 을 다시 불러오는 방식과
+# (2) 필요할 때 아래 "Run workflow"(수동) 로 소스에서 재수집하는 방식으로 한다.
 
 on:
-  schedule:
-    - cron: "0 * * * *"     # 매시간 정각 (UTC) — 데이터 변경 시에만 커밋
-  workflow_dispatch: {}     # 수동 실행 허용
+  workflow_dispatch: {}     # 수동 실행 전용 (Actions 탭 → Run workflow)
 
 permissions:
   contents: write

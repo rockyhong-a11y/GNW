@@ -24,9 +24,13 @@
       {
         "name": "루리웹",
         "url": "https://m.ruliweb.com/news"
+      },
+      {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
       }
     ],
-    "note": "정보 구성은 네이버 게임 / 인벤 / 디스이즈게임 / TapTap / 루리웹 의 일정·뉴스·DB를 참조하여 재구성한 샘플입니다.",
+    "note": "정보 구성은 네이버 게임 / 인벤(발매 캘린더 포함) / 디스이즈게임 / TapTap / 루리웹 의 일정·뉴스·DB를 참조하여 재구성한 샘플입니다.",
     "kind": "curated"
   },
   "games": [

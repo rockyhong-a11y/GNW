@@ -14,7 +14,7 @@
     "pipeline": [
       {
         "name": "Inven",
-        "added": 32
+        "added": 33
       },
       {
         "name": "RuliwebNews",
@@ -22,9 +22,9 @@
       }
     ],
     "counts": {
-      "total": 34,
+      "total": 35,
       "curated": 32,
-      "collected": 32,
+      "collected": 33,
       "news": 80
     }
   },
@@ -302,6 +302,37 @@
       "trailer": "https://youtu.be/F_wtzRF3vxc",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1692406149.jpg",
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13690"
+    },
+    {
+      "id": "inven-13495",
+      "title": "Make Drama: MAD",
+      "titleKr": "메이크 드라마: MAD",
+      "developer": "미상",
+      "publisher": "미상",
+      "platforms": [
+        "PC",
+        "Mobile"
+      ],
+      "genres": [],
+      "releaseDate": "2026-06-04",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "인벤"
+      ],
+      "description": "",
+      "update": "",
+      "color": "#9b59b6",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1331162014.jpg",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13495",
+      "trailer": "https://youtu.be/iapESo60tAk"
     },
     {
       "id": "inven-eab3a0eb949520eb-2026-06-06",
@@ -1136,57 +1167,73 @@
       "image": "https://img.ruliweb.com/news/main/26/05/30/19e7791189d_lbgzce.jpg"
     },
     {
-      "id": "ruliweb-225273",
-      "title": "SIEK, ‘FlexStrike’ 무선 파이팅 스틱 8월 출시",
-      "url": "https://bbs.ruliweb.com/news/read/225273",
+      "id": "ruliweb-225290",
+      "title": "드림에이지 ‘아키텍트: 랜드 오브 엑자일’, TV 애니메이션 ‘진격의 거인’ 컬래버레이션 오늘(2일) 시작",
+      "url": "https://bbs.ruliweb.com/news/read/225290",
       "source": "루리웹",
       "date": null,
       "image": "https://img.ruliweb.com/news/main/26/05/30/19e793758ef_iqmczt.jpg"
     },
     {
-      "id": "ruliweb-225261",
-      "title": "이환, 1.1 버전…‘라크리모사’ 포르쉐 컬래버",
-      "url": "https://bbs.ruliweb.com/news/read/225261",
+      "id": "ruliweb-225267",
+      "title": "㈜엔씨 ‘아스트라에 오라티오’, 티저 PV 오픈 ··· 게...",
+      "url": "https://bbs.ruliweb.com/news/read/225267",
       "source": "루리웹",
       "date": null,
       "image": null
     },
     {
-      "id": "ruliweb-225287",
-      "title": "‘패스 오브 엑자일 2’ 신규 확장팩 ‘고대의 귀환’ 호평 속 인기 상승세",
-      "url": "https://bbs.ruliweb.com/news/read/225287",
+      "id": "ruliweb-225268",
+      "title": "㈜넥슨 '프라시아 전기’ 2026 프라시아 여름 전야...",
+      "url": "https://bbs.ruliweb.com/news/read/225268",
       "source": "루리웹",
       "date": null,
       "image": null
     },
     {
-      "id": "ruliweb-225284",
-      "title": "㈜넥슨 ‘NDC 26’, 개발 철학부터 AI 실전 노하우까지, 업계 화두",
-      "url": "https://bbs.ruliweb.com/news/read/225284",
+      "id": "ruliweb-225288",
+      "title": "라인게임즈, ‘창세기전 모바일: 아수라 프로젝트’ 신규 캐릭터 ‘감마’ 오늘(2일) 추가",
+      "url": "https://bbs.ruliweb.com/news/read/225288",
       "source": "루리웹",
       "date": null,
       "image": null
     },
     {
-      "id": "ruliweb-225247",
-      "title": "레고그룹, ‘피너츠’와 첫 스누피 테마 신제품",
-      "url": "https://bbs.ruliweb.com/news/read/225247",
+      "id": "ruliweb-225251",
+      "title": "넷마블, ‘몬길: STAR DIVE’ 첫 팝업스토어 내일(3...",
+      "url": "https://bbs.ruliweb.com/news/read/225251",
       "source": "루리웹",
       "date": null,
       "image": null
     },
     {
-      "id": "ruliweb-225244",
-      "title": "SIE, 27인치 게이밍 모니터 with 듀얼센스 차징 훅",
-      "url": "https://bbs.ruliweb.com/news/read/225244",
+      "id": "ruliweb-225266",
+      "title": "스마일게이트 ‘에픽세븐’, 글로벌 온라인 e스포츠 ...",
+      "url": "https://bbs.ruliweb.com/news/read/225266",
       "source": "루리웹",
       "date": null,
       "image": null
     },
     {
-      "id": "ruliweb-225190",
-      "title": "워프레임, 17일(수) ‘옥빛의 그림자: 성좌들’",
-      "url": "https://bbs.ruliweb.com/news/read/225190",
+      "id": "ruliweb-225260",
+      "title": "배틀그라운드, ‘캠퍼스 치킨 드랍 VOL.2’ 종료",
+      "url": "https://bbs.ruliweb.com/news/read/225260",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225259",
+      "title": "블로믹스 ‘포트리스3 블루’ 구글플레이 스토어 인...",
+      "url": "https://bbs.ruliweb.com/news/read/225259",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225283",
+      "title": "판 스튜디오 ‘듀엣 나이트 어비스’, 신규 버전 ‘질주하는 별들’ 오픈",
+      "url": "https://bbs.ruliweb.com/news/read/225283",
       "source": "루리웹",
       "date": null,
       "image": null
@@ -1256,73 +1303,57 @@
       "image": "https://img.ruliweb.com/news/main/26/05/27/19e69bc8a48_ztvaoy.jpg"
     },
     {
-      "id": "ruliweb-225290",
-      "title": "드림에이지 ‘아키텍트: 랜드 오브 엑자일’, TV 애니메이션 ‘진격의 거인’ 컬래버레이션 오늘(2일) 시작",
-      "url": "https://bbs.ruliweb.com/news/read/225290",
+      "id": "ruliweb-225273",
+      "title": "SIEK, ‘FlexStrike’ 무선 파이팅 스틱 8월 출시",
+      "url": "https://bbs.ruliweb.com/news/read/225273",
       "source": "루리웹",
       "date": null,
       "image": "https://img.ruliweb.com/news/main/26/05/27/19e69bcadc0_hnclde.jpg"
     },
     {
-      "id": "ruliweb-225267",
-      "title": "㈜엔씨 ‘아스트라에 오라티오’, 티저 PV 오픈 ··· 게...",
-      "url": "https://bbs.ruliweb.com/news/read/225267",
+      "id": "ruliweb-225261",
+      "title": "이환, 1.1 버전…‘라크리모사’ 포르쉐 컬래버",
+      "url": "https://bbs.ruliweb.com/news/read/225261",
       "source": "루리웹",
       "date": null,
       "image": null
     },
     {
-      "id": "ruliweb-225268",
-      "title": "㈜넥슨 '프라시아 전기’ 2026 프라시아 여름 전야...",
-      "url": "https://bbs.ruliweb.com/news/read/225268",
+      "id": "ruliweb-225287",
+      "title": "‘패스 오브 엑자일 2’ 신규 확장팩 ‘고대의 귀환’ 호평 속 인기 상승세",
+      "url": "https://bbs.ruliweb.com/news/read/225287",
       "source": "루리웹",
       "date": null,
       "image": null
     },
     {
-      "id": "ruliweb-225288",
-      "title": "라인게임즈, ‘창세기전 모바일: 아수라 프로젝트’ 신규 캐릭터 ‘감마’ 오늘(2일) 추가",
-      "url": "https://bbs.ruliweb.com/news/read/225288",
+      "id": "ruliweb-225284",
+      "title": "㈜넥슨 ‘NDC 26’, 개발 철학부터 AI 실전 노하우까지, 업계 화두",
+      "url": "https://bbs.ruliweb.com/news/read/225284",
       "source": "루리웹",
       "date": null,
       "image": null
     },
     {
-      "id": "ruliweb-225251",
-      "title": "넷마블, ‘몬길: STAR DIVE’ 첫 팝업스토어 내일(3...",
-      "url": "https://bbs.ruliweb.com/news/read/225251",
+      "id": "ruliweb-225247",
+      "title": "레고그룹, ‘피너츠’와 첫 스누피 테마 신제품",
+      "url": "https://bbs.ruliweb.com/news/read/225247",
       "source": "루리웹",
       "date": null,
       "image": null
     },
     {
-      "id": "ruliweb-225266",
-      "title": "스마일게이트 ‘에픽세븐’, 글로벌 온라인 e스포츠 ...",
-      "url": "https://bbs.ruliweb.com/news/read/225266",
+      "id": "ruliweb-225244",
+      "title": "SIE, 27인치 게이밍 모니터 with 듀얼센스 차징 훅",
+      "url": "https://bbs.ruliweb.com/news/read/225244",
       "source": "루리웹",
       "date": null,
       "image": null
     },
     {
-      "id": "ruliweb-225260",
-      "title": "배틀그라운드, ‘캠퍼스 치킨 드랍 VOL.2’ 종료",
-      "url": "https://bbs.ruliweb.com/news/read/225260",
-      "source": "루리웹",
-      "date": null,
-      "image": null
-    },
-    {
-      "id": "ruliweb-225259",
-      "title": "블로믹스 ‘포트리스3 블루’ 구글플레이 스토어 인...",
-      "url": "https://bbs.ruliweb.com/news/read/225259",
-      "source": "루리웹",
-      "date": null,
-      "image": null
-    },
-    {
-      "id": "ruliweb-225283",
-      "title": "판 스튜디오 ‘듀엣 나이트 어비스’, 신규 버전 ‘질주하는 별들’ 오픈",
-      "url": "https://bbs.ruliweb.com/news/read/225283",
+      "id": "ruliweb-225190",
+      "title": "워프레임, 17일(수) ‘옥빛의 그림자: 성좌들’",
+      "url": "https://bbs.ruliweb.com/news/read/225190",
       "source": "루리웹",
       "date": null,
       "image": null

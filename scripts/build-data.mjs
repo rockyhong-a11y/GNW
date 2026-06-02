@@ -261,8 +261,10 @@ async function fromInven(out) {
 async function fromRuliwebNews(news) {
   if (process.env.NEWS !== "1") return { name: "RuliwebNews", skipped: "NEWS!=1" };
   let html = "", status = 0, err = "";
+  // 모바일 UA로 요청 → m.ruliweb.com 모바일 레이아웃(모든 항목에 썸네일)
+  const MOBILE_UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1";
   try {
-    const res = await fetch(RULIWEB_NEWS.url, { headers: HEADERS });
+    const res = await fetch(RULIWEB_NEWS.url, { headers: { ...HEADERS, "user-agent": MOBILE_UA }, redirect: "follow" });
     status = res.status;
     html = await res.text();
   } catch (e) { err = String(e && e.message || e); }

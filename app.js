@@ -109,7 +109,7 @@ function renderCard(g) {
     : "";
 
   return `
-    <article class="card"${g.detailUrl ? ` data-detail="${esc(g.detailUrl)}"` : ""}>
+    <article class="card" data-gid="${esc(g.id)}">
       <div class="card-banner${g.image ? " has-img" : ""}" style="background: linear-gradient(135deg, ${g.color}, ${g.color}55);">
         ${img}
         <span class="event-badge" style="background:${ev.color}">${ev.label}</span>
@@ -149,15 +149,14 @@ function renderNews() {
     return;
   }
   $("#emptyState").hidden = true;
-  root.innerHTML = `<ul class="newsboard">` + list.map((n) => `
-    <li class="news-item">
-      <a href="${esc(n.url)}" target="_blank" rel="noopener">
-        ${n.image ? `<img class="news-thumb" src="${esc(n.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
-        <span class="news-body">
-          <span class="news-title">${esc(n.title)}</span>
-          ${n.date ? `<span class="news-meta">${esc(n.date)}</span>` : ""}
-        </span>
-      </a>
+  STATE._newsView = list; // 상세 시트에서 인덱스로 참조
+  root.innerHTML = `<ul class="newsboard">` + list.map((n, i) => `
+    <li class="news-item" data-ni="${i}">
+      ${n.image ? `<img class="news-thumb" src="${esc(n.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
+      <span class="news-body">
+        <span class="news-title">${esc(n.title)}</span>
+        ${n.date ? `<span class="news-meta">${esc(n.date)}</span>` : ""}
+      </span>
     </li>`).join("") + `</ul>`;
 }
 
@@ -445,12 +444,62 @@ function bindSettings() {
 }
 
 function bindCardClicks() {
-  // 카드 전체 클릭 → 상세보기. 단, 링크(▶영상·출처·상세 등)는 자체 동작 유지.
+  // 카드/뉴스 클릭 → 앱 내 다크 상세 시트. 단, 카드 안 링크/▶영상은 자체 동작.
   $("#gameRoot").addEventListener("click", (e) => {
     if (e.target.closest("a, .play-btn")) return;
-    const card = e.target.closest(".card[data-detail]");
-    if (card && card.dataset.detail) window.open(card.dataset.detail, "_blank", "noopener");
+    const card = e.target.closest(".card[data-gid]");
+    if (card) { const g = STATE.games.find((x) => String(x.id) === card.dataset.gid); if (g) openGameDetail(g); return; }
+    const ni = e.target.closest(".news-item[data-ni]");
+    if (ni && STATE._newsView) { const n = STATE._newsView[+ni.dataset.ni]; if (n) openNewsDetail(n); }
   });
+}
+
+/* ---------- In-app dark detail sheet ---------- */
+function openGameDetail(g) {
+  const ev = EVENT_META[g.eventType] || { label: g.eventType, color: "#6c7aff" };
+  const cd = countdownLabel(g);
+  const price = formatPrice(g.price);
+  const platforms = g.platforms.map((p) => `<span class="badge platform">${esc(p)}</span>`).join("");
+  const genres = g.genres.map((gn) => `<span class="badge">${esc(gn)}</span>`).join("");
+  const tags = (g.tags || []).map((t) => `<span class="badge tag">#${esc(t)}</span>`).join("");
+  const banner = g.image
+    ? `<div class="detail-banner has-img"><img src="${esc(g.image)}" alt="" referrerpolicy="no-referrer" onerror="this.closest('.detail-banner').classList.remove('has-img');this.remove()" style="background:linear-gradient(135deg, ${g.color}, ${g.color}55)"></div>`
+    : `<div class="detail-banner" style="background:linear-gradient(135deg, ${g.color}, ${g.color}55)"></div>`;
+  $("#detailBody").innerHTML = `
+    ${banner}
+    <div class="detail-content">
+      <div class="detail-badges"><span class="event-badge" style="background:${ev.color}">${ev.label}</span>
+        <span class="countdown ${cd.released ? "released" : ""}">${cd.text}</span></div>
+      <h2 class="detail-title">${esc(g.titleKr || g.title)}</h2>
+      ${(g.title && g.title !== (g.titleKr || g.title)) || g.developer ? `<p class="detail-orig">${esc([g.title !== g.titleKr ? g.title : "", g.developer].filter(Boolean).join(" · "))}</p>` : ""}
+      <p class="detail-date">${formatDate(g.releaseDate)}${g.endDate ? ` ~ ${formatDate(g.endDate)}` : ""}${price.text ? ` · ${price.text}` : ""}</p>
+      ${g.update ? `<p class="card-update">📌 ${esc(g.update)}</p>` : ""}
+      ${g.description ? `<p class="detail-desc">${esc(g.description)}</p>` : ""}
+      ${(platforms || genres || tags) ? `<div class="badges">${platforms}${genres}${tags}</div>` : ""}
+      <div class="detail-actions">
+        ${g.trailer ? `<a class="detail-btn" href="${esc(g.trailer)}" target="_blank" rel="noopener">▶ 영상</a>` : ""}
+        ${g.detailUrl ? `<a class="detail-btn primary" href="${esc(g.detailUrl)}" target="_blank" rel="noopener">상세정보 ↗</a>` : ""}
+        ${g.source ? `<a class="detail-btn" href="${esc(g.source.url)}" target="_blank" rel="noopener">출처 · ${esc(g.source.name)}</a>` : ""}
+      </div>
+    </div>`;
+  $("#detailSheet").hidden = false;
+}
+function openNewsDetail(n) {
+  $("#detailBody").innerHTML = `
+    ${n.image ? `<div class="detail-banner has-img"><img src="${esc(n.image)}" alt="" referrerpolicy="no-referrer" onerror="this.closest('.detail-banner').remove()"></div>` : ""}
+    <div class="detail-content">
+      <h2 class="detail-title">${esc(n.title)}</h2>
+      <p class="detail-date">${esc(n.source || "루리웹")}${n.date ? ` · ${esc(n.date)}` : ""}</p>
+      <div class="detail-actions">
+        <a class="detail-btn primary" href="${esc(n.url)}" target="_blank" rel="noopener">원문 보기 ↗</a>
+      </div>
+    </div>`;
+  $("#detailSheet").hidden = false;
+}
+function bindDetail() {
+  const ov = $("#detailSheet");
+  $("#detailClose").addEventListener("click", () => { ov.hidden = true; });
+  ov.addEventListener("click", (e) => { if (e.target === ov) ov.hidden = true; });
 }
 
 /* ---------- Init ---------- */
@@ -458,6 +507,7 @@ async function init() {
   bindTabs();
   bindSettings();
   bindCardClicks();
+  bindDetail();
   applyIcon(savedIconKey());
   $("#monthSelect").addEventListener("change", (e) => { STATE.month = e.target.value; render(); });
   bindAutoRefresh();

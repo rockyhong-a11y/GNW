@@ -310,20 +310,22 @@ function parseRuliweb(html, news, seen, cap = 40) {
 async function fromRuliwebNews(news) {
   if (process.env.NEWS !== "1") return { name: "RuliwebNews", skipped: "NEWS!=1" };
   const MOBILE_UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1";
+  const DESKTOP_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
   const seen = new Set();
   let added = 0; const errs = [];
   for (const url of RULIWEB_SOURCES) {
     let html = "", status = 0, err = "";
+    const ua = url.includes("m.ruliweb.com") ? MOBILE_UA : DESKTOP_UA; // 데스크톱 뉴스는 요약/조회수/시각 포함
     try {
-      const res = await fetch(url, { headers: { ...HEADERS, "user-agent": MOBILE_UA }, redirect: "follow" });
+      const res = await fetch(url, { headers: { ...HEADERS, "user-agent": ua }, redirect: "follow" });
       status = res.status; html = await res.text();
     } catch (e) { err = String(e && e.message || e); }
     console.log(`[ruliweb] ${url} status=${status} len=${html.length} links=${(html.match(/\/news\/(?:board\/\d+\/)?read\/\d+/g) || []).length} err=${err}`);
     if (!html || status >= 400) { errs.push(`${url}=${status}`); continue; }
     if (process.env.NEWS_DEBUG === "1" && url === "https://bbs.ruliweb.com/news") {
       const m = [...html.matchAll(/\/news\/(?:board\/\d+\/)?read\/\d+/g)];
-      if (m[1]) console.log("[DBG row]\n" + html.slice(Math.max(0, m[1].index - 300), m[1].index + 2000).replace(/\s+/g, " "));
-      console.log("[DBG probe] 조회=" + (html.match(/조회/g) || []).length + " hit=" + (html.match(/class="[^"]*hit/gi) || []).length + " reply=" + (html.match(/reply|num_reply|댓글/gi) || []).length + " summary=" + (html.match(/summary|desc|text_dsc|cont_txt/gi) || []).length + " time=" + (html.match(/\d{4}\.\d\d\.\d\d \(\d\d:\d\d/g) || []).length);
+      if (m[1]) console.log("[DBG row]\n" + html.slice(Math.max(0, m[1].index - 400), m[1].index + 2200).replace(/\s+/g, " "));
+      console.log("[DBG probe] 조회=" + (html.match(/조회/g) || []).length + " hit=" + (html.match(/class="[^"]*hit/gi) || []).length + " reply=" + (html.match(/num_reply|num_cmt|reply/gi) || []).length + " summary=" + (html.match(/summary|text_dsc|cont_txt|desc|sample/gi) || []).length + " time=" + (html.match(/\d{4}\.\d\d\.\d\d ?\(?\d\d:\d\d/g) || []).length + " hitword=" + (html.match(/조회\s*수?\s*[\d,]+/g) || []).slice(0,3).join(" | "));
     }
     added += parseRuliweb(html, news, seen, 40);
   }

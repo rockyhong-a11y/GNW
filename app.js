@@ -526,27 +526,44 @@ function openDetail(n) {
     n.views != null ? `<span>조회 ${Number(n.views).toLocaleString()}</span>` : "",
     n.comments != null ? `<span>댓글 ${n.comments}</span>` : "",
   ].filter(Boolean).join('<span class="dm-dot">·</span>');
-  const banner = n.image
+  const ytEmbed = (id) => `<div class="detail-video"><iframe src="https://www.youtube.com/embed/${esc(id)}" title="YouTube" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
+  const hasVideo = !!(n.content && n.content.some((b) => b.t === "yt"));
+  // 영상 글은 배너(=영상 썸네일)를 생략하고 아래에서 재생 가능한 영상으로 노출
+  const banner = (n.image && !hasVideo)
     ? `<div class="detail-banner"><img src="${esc(n.image)}" alt="" referrerpolicy="no-referrer" onerror="this.closest('.detail-banner').remove()"></div>`
     : "";
   let body;
   if (n.content && n.content.length) {
-    // 영상/이미지만 있고 본문 텍스트가 없는 글(트레일러 등)은 요약을 앞에 노출
     const hasText = n.content.some((b) => b.t === "p");
-    const lead = (!hasText && n.summary) ? `<p>${esc(n.summary)}</p>` : "";
-    body = lead + n.content.map((b) => b.t === "img"
-      ? `<img class="detail-img" src="${esc(b.v)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`
+    const lead = (!hasText && n.summary) ? `<p>${esc(n.summary)}</p>` : ""; // 영상/이미지만 있는 글은 요약을 앞에
+    body = lead + n.content.map((b) =>
+      b.t === "yt" ? ytEmbed(b.v)
+      : b.t === "img" ? `<img class="detail-img" src="${esc(b.v)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`
       : `<p>${esc(b.v)}</p>`).join("");
   } else if (n.summary) {
     body = `<p>${esc(n.summary)}</p>`;
   } else {
     body = `<p class="detail-empty">본문을 불러오지 못했습니다. 아래 ‘원문 보기’에서 확인하세요.</p>`;
   }
+  // 댓글: 상위 댓글이 있으면 인라인 노출, 없으면 댓글 수 + 원문 링크
+  let comments = "";
+  if (n.topComments && n.topComments.length) {
+    comments = `<section class="detail-comments">
+        <h2 class="dc-head">댓글${n.comments != null ? ` ${Number(n.comments).toLocaleString()}` : ""}</h2>
+        ${n.topComments.map((c) => `<div class="dc-item">
+          <div class="dc-top">${c.nick ? `<span class="dc-nick">${esc(c.nick)}</span>` : ""}${c.like ? `<span class="dc-like">👍 ${c.like}</span>` : ""}</div>
+          <div class="dc-text">${esc(c.text)}</div></div>`).join("")}
+        ${n.url ? `<a class="dc-more" href="${esc(n.url)}" target="_blank" rel="noopener">원문에서 댓글 더 보기 ↗</a>` : ""}
+      </section>`;
+  } else if (n.comments != null && n.url) {
+    comments = `<a class="dc-more dc-only" href="${esc(n.url)}" target="_blank" rel="noopener">💬 댓글 ${Number(n.comments).toLocaleString()}개 · 원문에서 보기 ↗</a>`;
+  }
   $("#detailBody").innerHTML = `
     <h1 class="detail-title">${esc(n.title)}</h1>
     <div class="detail-meta">${meta}</div>
     ${banner}
     <div class="detail-article">${body}</div>
+    ${comments}
     ${n.url ? `<a class="detail-orig" href="${esc(n.url)}" target="_blank" rel="noopener">원문 보기 ↗</a>` : ""}`;
   $("#detailScroll").scrollTop = 0;
   sheet.hidden = false;

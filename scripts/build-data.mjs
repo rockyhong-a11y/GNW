@@ -391,13 +391,40 @@ function extractContent(html) {
     if (/^https?:/i.test(src)) blocks.push({ t: "img", v: src.replace(/&amp;/g, "&") });
   }
   pushText(region.slice(last));
-  // 유튜브/동영상 임베드 → 썸네일 이미지 블록(트레일러 글처럼 본문 텍스트·이미지가 없는 경우 대비)
+  // 유튜브 임베드 → 재생 가능한 동영상 블록({t:"yt", v:videoId}). 미리보기에서 그대로 재생.
   for (const fm of region.matchAll(/(?:youtube(?:-nocookie)?\.com\/(?:embed\/|v\/|watch\?v=)|youtu\.be\/)([A-Za-z0-9_-]{8,})/gi)) {
     if (blocks.length >= MAX_BLOCKS) break;
-    const yt = `https://img.youtube.com/vi/${fm[1]}/hqdefault.jpg`;
-    if (!blocks.some((b) => b.t === "img" && b.v === yt)) blocks.push({ t: "img", v: yt });
+    const id = fm[1];
+    if (!blocks.some((b) => b.t === "yt" && b.v === id)) blocks.push({ t: "yt", v: id });
   }
   return blocks.slice(0, MAX_BLOCKS);
+}
+// 기사 페이지에서 댓글 수 추출(목록에 댓글 수가 없는 board/1001 글 보강용)
+function extractCommentCount(html) {
+  const m = html.match(/"comment_?count"\s*:\s*(\d+)/i)
+    || html.match(/comment_count[^>]*>[\s\S]{0,40}?(\d[\d,]*)/i)
+    || html.match(/class="num_reply"[^>]*>\s*\[?\s*(\d[\d,]*)/i)
+    || html.match(/댓글[\s:]*<[^>]*>\s*(\d[\d,]*)/)
+    || html.match(/댓글[\s:(]*(\d[\d,]*)/);
+  return m ? +m[1].replace(/,/g, "") : null;
+}
+// 기사 페이지에서 상위 댓글 추출(작성자·내용). 미리보기에 인라인 노출.
+function extractComments(html, max = 10) {
+  let s = html.search(/class=["'][^"']*comment_(?:view|table|wrapper)|id=["']cmt["']/i);
+  if (s < 0) return [];
+  const region = html.slice(s, s + 240000);
+  const out = [];
+  const parts = region.split(/class="comment_element/);
+  for (let i = 1; i < parts.length && out.length < max; i++) {
+    const blk = parts[i].slice(0, 5000);
+    if (/best_comment_wrapper|comment_best/i.test(parts[i].slice(0, 60))) { /* 헤더성 블록 스킵 안함 */ }
+    const text = rwText((blk.match(/class="text_wrapper"[^>]*>([\s\S]*?)<\/(?:span|div|p)>/i) || [])[1]);
+    if (!text || text.length < 1) continue;
+    const nick = rwText((blk.match(/class="[^"]*\bnick\b[^"]*"[^>]*>([\s\S]*?)<\/(?:strong|span|a)>/i) || [])[1]) || null;
+    const likeM = blk.match(/class="[^"]*\b(?:like|recomd|num)\b[^"]*"[^>]*>\s*(\d+)/i);
+    out.push({ nick: nick ? nick.slice(0, 24) : null, text: text.slice(0, 300), like: likeM ? +likeM[1] : null });
+  }
+  return out;
 }
 // 작성자(닉네임) 추출
 function extractAuthor(html) {
@@ -570,15 +597,22 @@ async function fromRuliwebNews(news) {
       if (!n.date) { const d = extractDateTime(h); if (d) { n.date = d.date; if (d.time) n.time = d.time; } }
       if (!n.author) { const a = extractAuthor(h); if (a) n.author = a; }
       if (!n.content || !n.content.length) { const c = extractContent(h); if (c.length) n.content = c; }
-      if (!n.image && n.content) { const im = n.content.find((b) => b.t === "img"); if (im) n.image = im.v; } // 영상/이미지 글 썸네일 보강
+      if (!n.image && n.content) {                 // 영상/이미지 글 썸네일 보강(목록 노출용)
+        const im = n.content.find((b) => b.t === "img");
+        const yt = n.content.find((b) => b.t === "yt");
+        if (im) n.image = im.v;
+        else if (yt) n.image = `https://img.youtube.com/vi/${yt.v}/hqdefault.jpg`;
+      }
+      if (n.comments == null) { const c = extractCommentCount(h); if (c != null) n.comments = c; } // 댓글 수 보강
+      if (!n.topComments) { const cs = extractComments(h, 10); if (cs.length) n.topComments = cs; } // 상위 댓글
     } catch { /* 개별 실패 무시 */ }
   };
-  let withDate = 0, withBody = 0;
+  let withDate = 0, withBody = 0, withCmt = 0, withCmtList = 0;
   for (let i = 0; i < targets.length; i += 8) {
     await Promise.all(targets.slice(i, i + 8).map((n) => enrichOne(n)));
   }
-  for (const n of news) { if (n.date) withDate++; if (n.content && n.content.length) withBody++; }
-  console.log(`[ruliweb] 보강 대상 ${targets.length} · 날짜 보유 ${withDate}/${news.length} · 본문 ${withBody}/${news.length}`);
+  for (const n of news) { if (n.date) withDate++; if (n.content && n.content.length) withBody++; if (n.comments != null) withCmt++; if (n.topComments && n.topComments.length) withCmtList++; }
+  console.log(`[ruliweb] 보강 대상 ${targets.length} · 날짜 ${withDate}/${news.length} · 본문 ${withBody}/${news.length} · 댓글수 ${withCmt} · 댓글목록 ${withCmtList}`);
   return { name: "RuliwebNews", ...(errs.length ? { error: errs.join(",") } : {}), added };
 }
 

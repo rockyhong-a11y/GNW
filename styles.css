@@ -23,6 +23,10 @@
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
   --maxw: 1100px;
+  /* 게임 뉴스 서체: 제목(헤드라인)과 본문(가독)을 분리 */
+  --font-title: "Black Han Sans", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  --font-body: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Pretendard", "Malgun Gothic", Roboto, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -30,8 +34,7 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  font-family: "GNW2002", -apple-system, BlinkMacSystemFont, "Segoe UI", "Pretendard",
-    "Apple SD Gothic Neo", "Noto Sans KR", Roboto, sans-serif;
+  font-family: var(--font-body);
   background: radial-gradient(1200px 600px at 80% -10%, #1a1f3a 0%, var(--bg) 55%);
   color: var(--text);
   line-height: 1.5;
@@ -40,6 +43,8 @@ body {
   overflow-x: hidden;
 }
 a { color: inherit; }
+/* 제목류는 헤드라인 서체로 (게임 뉴스 느낌) */
+.news-title, .detail-title, .card-title, .month-head, .dc-head { font-family: var(--font-title); letter-spacing: -0.01em; }
 
 .sr-only {
   position: absolute; width: 1px; height: 1px;
@@ -353,8 +358,21 @@ body.sheet-open { overflow: hidden; }
 .detail-article p { margin: 14px 0; white-space: pre-wrap; word-break: break-word; }
 .detail-img { display: block; width: 100%; height: auto; border-radius: 10px; margin: 14px 0; }
 .detail-empty { color: var(--text-dim); }
+/* 재생 가능한 유튜브 임베드 (16:9) */
+.detail-video { position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 14px 0; border-radius: 12px; overflow: hidden; background: #000; }
+.detail-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+/* 댓글 */
+.detail-comments { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--border); }
+.dc-head { font-size: 16px; margin: 0 0 10px; color: var(--text); }
+.dc-item { padding: 10px 0; border-bottom: 1px solid var(--border); }
+.dc-top { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; }
+.dc-nick { font-size: 12.5px; font-weight: 700; color: var(--accent); }
+.dc-like { font-size: 12px; color: var(--text-faint); }
+.dc-text { font-size: 14px; line-height: 1.6; color: var(--text); white-space: pre-wrap; word-break: break-word; }
+.dc-more { display: inline-block; margin-top: 12px; color: var(--accent); font-weight: 700; text-decoration: none; }
+.dc-more.dc-only { margin-top: 18px; padding: 10px 16px; background: var(--accent-soft); border-radius: var(--radius-sm); }
 .detail-orig {
-  display: inline-block; margin-top: 18px; padding: 10px 16px;
+  display: block; margin-top: 18px; padding: 10px 16px; text-align: center;
   background: var(--accent-soft); color: var(--accent);
   border-radius: var(--radius-sm); font-weight: 700; text-decoration: none;
 }

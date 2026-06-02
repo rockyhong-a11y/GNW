@@ -295,6 +295,7 @@ async function fromRuliwebNews(news) {
       const t = a.inner.replace(/<[^>]+>/g, " ").replace(/&[a-z]+;/g, " ").replace(/\s+/g, " ").trim();
       if (t.length > title.length) title = t;
     }
+    title = title.replace(/\s*\[\d+\]\s*$/, "").trim();   // 끝의 댓글수 [N] 제거
     if (!title || title.length < 6) continue;
     const key = title.toLowerCase().replace(/\s+/g, "");
     if (seen.has(key)) continue;                          // 중복 제거(제목 기준)

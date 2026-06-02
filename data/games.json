@@ -2,7 +2,7 @@
   "meta": {
     "title": "GNW — Game New Watch",
     "description": "인벤 발매 캘린더 기반 주요 게임 일정",
-    "updated": "2026-06-01",
+    "updated": "2026-06-02",
     "version": 10,
     "sources": [
       {
@@ -15,12 +15,17 @@
       {
         "name": "Inven",
         "added": 32
+      },
+      {
+        "name": "RuliwebNews",
+        "added": 40
       }
     ],
     "counts": {
       "total": 34,
       "curated": 32,
-      "collected": 32
+      "collected": 32,
+      "news": 40
     }
   },
   "games": [
@@ -1063,6 +1068,328 @@
       "trailer": null,
       "image": "",
       "detailUrl": "https://www.inven.co.kr/search/webzine/article/%EC%B5%9C%ED%9B%84%EC%9D%98%20%EC%A3%BC%EC%9C%A0%EC%86%8C/1?sort=recency"
+    }
+  ],
+  "news": [
+    {
+      "id": "ruliweb-225242",
+      "title": "플렉스스트라이크 무선 파이팅 스틱, 소개",
+      "url": "https://bbs.ruliweb.com/news/read/225242",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225243",
+      "title": "평면 자기 무선 스피커 ‘펄스 엘리베이트’",
+      "url": "https://bbs.ruliweb.com/news/read/225243",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225241",
+      "title": "엔비디아, ‘스파크’로 개인용 AI PC 시대",
+      "url": "https://bbs.ruliweb.com/news/read/225241",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225224",
+      "title": "코모도, ‘스팀 덱 OLED’ 가격 재차 인상",
+      "url": "https://bbs.ruliweb.com/news/read/225224",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225214",
+      "title": "라그나로크 프로젝트, 2027년 상반기 예정",
+      "url": "https://bbs.ruliweb.com/news/read/225214",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225189",
+      "title": "유저가 직접 게임 환경을 제어, 솔: 인챈트",
+      "url": "https://bbs.ruliweb.com/news/read/225189",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225192",
+      "title": "AMD, 게임·AI·프로용에 대한 솔루션 제시",
+      "url": "https://bbs.ruliweb.com/news/read/225192",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225181",
+      "title": "6월에 출시되는 PC·모바일 게임 목록",
+      "url": "https://bbs.ruliweb.com/news/read/225181",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225244",
+      "title": "SIE, 27인치 게이밍 모니터 with 듀얼센스 차징 훅",
+      "url": "https://bbs.ruliweb.com/news/read/225244",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225190",
+      "title": "워프레임, 17일(수) ‘옥빛의 그림자: 성좌들’",
+      "url": "https://bbs.ruliweb.com/news/read/225190",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225185",
+      "title": "유황 큐브와 얼룩덜룩 숲, 마인크래프트 라이브",
+      "url": "https://bbs.ruliweb.com/news/read/225185",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225179",
+      "title": "6월에 출시되는 한국어 콘솔 게임 목록",
+      "url": "https://bbs.ruliweb.com/news/read/225179",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225129",
+      "title": "위쳐 3, 누적 판매량 6500만…지난 1년간 500만",
+      "url": "https://bbs.ruliweb.com/news/read/225129",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225173",
+      "title": "붉은사막, 1.09.00…컨트롤러 조작 커스터마이징",
+      "url": "https://bbs.ruliweb.com/news/read/225173",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225131",
+      "title": "007 퍼스트 라이트, 24시간 만에 150만 장",
+      "url": "https://bbs.ruliweb.com/news/read/225131",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225220",
+      "title": "카카오게임즈, 슈퍼캣 MMORPG ‘도깨비의세계’",
+      "url": "https://bbs.ruliweb.com/news/read/225220",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225191",
+      "title": "소울프레임, 6월 무료 출시 예정 신규 업데이트 공개",
+      "url": "https://bbs.ruliweb.com/news/read/225191",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225200",
+      "title": "약사의 혼잣말 후궁이문록, 사전 등록자 수 20만",
+      "url": "https://bbs.ruliweb.com/news/read/225200",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225204",
+      "title": "퍼즐 세븐틴, 1일 1.7.0 업데이트 및 이벤트 진행",
+      "url": "https://bbs.ruliweb.com/news/read/225204",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225227",
+      "title": "검은사막, ‘오아시스 길드의 밤 in 부산’ 행사 개최",
+      "url": "https://bbs.ruliweb.com/news/read/225227",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225213",
+      "title": "카트라이더 러쉬플러스, 발효유 기업 ‘hy’ 컬래버",
+      "url": "https://bbs.ruliweb.com/news/read/225213",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225177",
+      "title": "입학식 이어 졸업식까지, 띵조 페스티벌",
+      "url": "https://bbs.ruliweb.com/news/read/225177",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225167",
+      "title": "전차전과 히어로 슈터의 만남, WoT: 히트",
+      "url": "https://bbs.ruliweb.com/news/read/225167",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225123",
+      "title": "한국 전쟁과 총체적 개선, 모던 워페어 4",
+      "url": "https://bbs.ruliweb.com/news/read/225123",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225058",
+      "title": "40주년 맞아, DQXII 리뉴얼 및 드퀘몬4",
+      "url": "https://bbs.ruliweb.com/news/read/225058",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225254",
+      "title": "아이템베이(itemBay), 리니지클래식 '혈맹 거래 전쟁' 이벤트 지난...",
+      "url": "https://bbs.ruliweb.com/news/read/225254",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225253",
+      "title": "ALE인터내셔널 알카텔-루슨트, ‘Connex26 South Korea’...",
+      "url": "https://bbs.ruliweb.com/news/read/225253",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225252",
+      "title": "바로(VARO), 플래그십 무선 게이밍 마우스 ‘VARO V1’ 사전 판...",
+      "url": "https://bbs.ruliweb.com/news/read/225252",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225251",
+      "title": "넷마블, ‘몬길: STAR DIVE’ 첫 팝업스토어 내일(3일) 스타필드...",
+      "url": "https://bbs.ruliweb.com/news/read/225251",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225250",
+      "title": "‘하우스 오브 드래곤’ 시즌 3, 6월 23일(화) 저녁 8시 쿠팡플레이...",
+      "url": "https://bbs.ruliweb.com/news/read/225250",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225249",
+      "title": "아카츠키 게임즈 ‘괴수 8호 THE GAME’, 메인 스토리 12장 ‘X...",
+      "url": "https://bbs.ruliweb.com/news/read/225249",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225248",
+      "title": "벨킨(Belkin), 토이 스토리5 신규 캐릭터 ‘릴리패드’를 모티브로 ...",
+      "url": "https://bbs.ruliweb.com/news/read/225248",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225247",
+      "title": "레고그룹, ‘피너츠’와 첫 스누피 테마 신제품 출시",
+      "url": "https://bbs.ruliweb.com/news/read/225247",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225246",
+      "title": "Camel 101, 80년대 슬래셔풍 모텔 호러 게임 ‘Dead Stop...",
+      "url": "https://bbs.ruliweb.com/news/read/225246",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225245",
+      "title": "경기콘텐츠진흥원, 지난달 29일 바다의 날 맞이 시흥 월곶항 정화 활동 ...",
+      "url": "https://bbs.ruliweb.com/news/read/225245",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225240",
+      "title": "엔비디아, 피지컬 AI 위한 대규모 오픈소스 에이전트 도구·스킬 모음 출...",
+      "url": "https://bbs.ruliweb.com/news/read/225240",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-224988",
+      "title": "혼자면 공포, 넷이면 폭소…초자연 작전팀",
+      "url": "https://bbs.ruliweb.com/news/read/224988",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-224950",
+      "title": "색다르고 특별한 경험될 것, ‘초자연 작전팀’ 인터뷰",
+      "url": "https://bbs.ruliweb.com/news/read/224950",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225017",
+      "title": "그라비티 게임 비전(GGV), ‘라그나로크3’ 개발자 인터뷰 오늘(27일) 공개… “원작 감성과 현대성 모두 담았다”",
+      "url": "https://bbs.ruliweb.com/news/read/225017",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225044",
+      "title": "자이언트 게임즈, 100만 돌파한 멀티 협동 파티 호러 게임 ‘초자연 작전팀’, 오늘(27일) 정식 출시",
+      "url": "https://bbs.ruliweb.com/news/read/225044",
+      "source": "루리웹",
+      "date": null,
+      "image": null
     }
   ]
 }

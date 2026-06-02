@@ -323,9 +323,8 @@ async function fromRuliwebNews(news) {
     console.log(`[ruliweb] ${url} status=${status} len=${html.length} links=${(html.match(/\/news\/(?:board\/\d+\/)?read\/\d+/g) || []).length} err=${err}`);
     if (!html || status >= 400) { errs.push(`${url}=${status}`); continue; }
     if (process.env.NEWS_DEBUG === "1" && url === "https://bbs.ruliweb.com/news") {
-      const m = [...html.matchAll(/\/news\/(?:board\/\d+\/)?read\/\d+/g)];
-      if (m[1]) console.log("[DBG row]\n" + html.slice(Math.max(0, m[1].index - 400), m[1].index + 2200).replace(/\s+/g, " "));
-      console.log("[DBG probe] 조회=" + (html.match(/조회/g) || []).length + " hit=" + (html.match(/class="[^"]*hit/gi) || []).length + " reply=" + (html.match(/num_reply|num_cmt|reply/gi) || []).length + " summary=" + (html.match(/summary|text_dsc|cont_txt|desc|sample/gi) || []).length + " time=" + (html.match(/\d{4}\.\d\d\.\d\d ?\(?\d\d:\d\d/g) || []).length + " hitword=" + (html.match(/조회\s*수?\s*[\d,]+/g) || []).slice(0,3).join(" | "));
+      const hi = html.indexOf("조회수");
+      if (hi >= 0) console.log("[DBG listrow]\n" + html.slice(Math.max(0, hi - 1900), hi + 260).replace(/\s+/g, " "));
     }
     added += parseRuliweb(html, news, seen, 40);
   }

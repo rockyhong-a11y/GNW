@@ -153,39 +153,18 @@ async function fromRAWG(out) {
 
 // 인벤 발매 캘린더(주요 일정) 파서. HTML 구조 의존이라 best-effort 이며,
 // 실제 페이지 마크업에 맞춰 SEL/정규식 조정이 필요할 수 있다. INVEN=1 일 때만 동작.
-async function fromInven(out) {
-  if (process.env.INVEN !== "1") return { name: "Inven", skipped: "INVEN!=1" };
-  let html = "", status = 0, err = "";
-  if (process.env.INVEN_HTML_FILE) {            // 테스트 훅: 로컬 HTML 픽스처로 파서 검증
-    try { html = readFileSync(process.env.INVEN_HTML_FILE, "utf8"); status = 200; }
-    catch (e) { err = String(e && e.message || e); }
-  } else {
-    try {
-      const res = await fetch(INVEN_CAL.url, { headers: HEADERS });
-      status = res.status;
-      html = await res.text();
-    } catch (e) { err = String(e && e.message || e); }
-  }
-
-  // 진단 파일: 러너가 인벤으로부터 실제로 받은 것을 저장소에 남겨 구조/도달성 확인.
-  try {
-    const dbg = [
-      `fetched_at=${new Date().toISOString()}`,
-      `url=${INVEN_CAL.url}`,
-      `status=${status}`,
-      `error=${err}`,
-      `html_length=${html.length}`,
-      `calendar_game_links=${(html.match(/\/webzine\/calendar\/game\/\d+/g) || []).length}`,
-      `news_links=${(html.match(/\/webzine\/news\/\?news=\d+/g) || []).length}`,
-      `upload_imgs=${(html.match(/upload\d*\.inven\.co\.kr\/upload/g) || []).length}`,
-      `calendar_items=${(html.match(/<li class="calendar__item/g) || []).length}`,
-    ].join("\n");
-    await writeFile(join(ROOT, "data/_inven-debug.txt"), dbg + "\n");
-  } catch { /* 디버그 기록 실패는 무시 */ }
-
-  if (!html || status >= 400) return { name: "Inven", error: `status=${status} ${err}`.trim(), added: 0 };
-
-  // ── 실제 캘린더 일정 리스트 파싱 (<li class="calendar__item ...">) ────────
+async function invenFetch(url) {
+  try { const res = await fetch(url, { headers: HEADERS }); return { html: await res.text(), status: res.status, err: "" }; }
+  catch (e) { return { html: "", status: 0, err: String(e && e.message || e) }; }
+}
+// HTML 에 들어있는 일정들의 YYYYMM 집합(월 파라미터 탐지용)
+function invenMonths(html) {
+  const s = new Set();
+  for (const m of html.matchAll(/dates=(\d{8})/g)) s.add(m[1].slice(0, 6));
+  return s;
+}
+// 한 달 분량 HTML 에서 일정 항목 파싱 → out 에 추가. seen 으로 월/소스 간 중복 제거.
+function parseInvenCalendar(html, out, seen) {
   const abs = (u) => !u ? null : (u.startsWith("/") ? "https://www.inven.co.kr" + u : u);
   const stripTags = (s) => String(s || "").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
   // 인벤 분류 텍스트 → GNW eventType
@@ -200,7 +179,6 @@ async function fromInven(out) {
   const PLAT = { pc: "PC", ps5: "PS5", ps4: "PS5", xbox: "Xbox Series", xboxseries: "Xbox Series", switch: "Switch", switch2: "Switch 2", ns: "Switch", mobile: "Mobile", ios: "Mobile", aos: "Mobile", android: "Mobile" };
 
   let added = 0;
-  const seen = new Set();
   for (const m of html.matchAll(/<li class="calendar__item[\s\S]*?<\/li>/g)) {
     const it = m[0];
 
@@ -232,9 +210,11 @@ async function fromInven(out) {
     const platforms = [...new Set([...it.matchAll(/calendar__platform-icon--([a-z0-9]+)/g)].map((x) => PLAT[x[1]]).filter(Boolean))];
     const tags = [...it.matchAll(/class="calendar__event-tag">\s*([^<]+?)\s*<\/span>/g)].map((x) => x[1].trim()).filter(Boolean);
 
+    // 같은 일정이 여러 달 HTML 에 겹쳐 나올 수 있으므로 id+날짜로 중복 제거
     const id = idx ? `inven-${idx}` : `inven-${slug(title)}`;
-    if (seen.has(id)) continue;
-    seen.add(id);
+    const dedupKey = `${id}@${date}`;
+    if (seen.has(dedupKey)) continue;
+    seen.add(dedupKey);
 
     // company: 출시형은 원제(영문), 행사형은 설명문 → 분배
     const isDesc = /[.!?。…]$|습니다|됩니다|진행|예정|공개|출시|개최|등장/.test(company);
@@ -254,6 +234,87 @@ async function fromInven(out) {
     }));
     added++;
   }
+  return added;
+}
+
+async function fromInven(out) {
+  if (process.env.INVEN !== "1") return { name: "Inven", skipped: "INVEN!=1" };
+
+  // 기준(현재 월) 페이지: 로컬 픽스처 우선, 없으면 실제 캘린더.
+  let base;
+  if (process.env.INVEN_HTML_FILE) {
+    try { base = { html: readFileSync(process.env.INVEN_HTML_FILE, "utf8"), status: 200, err: "" }; }
+    catch (e) { base = { html: "", status: 0, err: String(e && e.message || e) }; }
+  } else {
+    base = await invenFetch(INVEN_CAL.url);
+  }
+
+  // 진단 파일: 러너가 인벤으로부터 실제로 받은 것을 저장소에 남겨 구조/도달성 확인.
+  try {
+    const dbg = [
+      `fetched_at=${new Date().toISOString()}`,
+      `url=${INVEN_CAL.url}`,
+      `status=${base.status}`,
+      `error=${base.err}`,
+      `html_length=${base.html.length}`,
+      `calendar_game_links=${(base.html.match(/\/webzine\/calendar\/game\/\d+/g) || []).length}`,
+      `news_links=${(base.html.match(/\/webzine\/news\/\?news=\d+/g) || []).length}`,
+      `upload_imgs=${(base.html.match(/upload\d*\.inven\.co\.kr\/upload/g) || []).length}`,
+      `calendar_items=${(base.html.match(/<li class="calendar__item/g) || []).length}`,
+    ].join("\n");
+    await writeFile(join(ROOT, "data/_inven-debug.txt"), dbg + "\n");
+  } catch { /* 디버그 기록 실패는 무시 */ }
+
+  if (!base.html || base.status >= 400) return { name: "Inven", error: `status=${base.status} ${base.err}`.trim(), added: 0 };
+
+  const seen = new Set();
+  let added = parseInvenCalendar(base.html, out, seen);
+
+  // 올해(이번 달 제외) 나머지 월도 수집해 6월 이전/이후 일정까지 채운다.
+  // 인벤이 쓰는 월 파라미터 형식을 모르므로, 후보 형식을 프로브 월로 시험해
+  // "요청한 월을 실제로 돌려주는" 형식을 자가 탐지한 뒤 그 형식으로 1~12월을 순회한다.
+  // (픽스처 테스트 시에는 네트워크 순회를 생략)
+  if (!process.env.INVEN_HTML_FILE) {
+    const pad = (n) => String(n).padStart(2, "0");
+    const B = INVEN_CAL.url;
+    const fmts = [
+      (y, m) => `${B}?y=${y}&m=${m}`,
+      (y, m) => `${B}?year=${y}&month=${m}`,
+      (y, m) => `${B}?date=${y}-${pad(m)}`,
+      (y, m) => `${B}?d=${y}-${pad(m)}`,
+      (y, m) => `${B}?ym=${y}${pad(m)}`,
+      (y, m) => `${B}?sdate=${y}-${pad(m)}-01`,
+      (y, m) => `${B}${y}/${pad(m)}/`,
+    ];
+    const Y = TODAY.getFullYear();
+    const cur = TODAY.getMonth() + 1;
+    const probe = cur >= 4 ? cur - 2 : cur + 2;     // 현재월이 아닌 프로브 월
+    const wantProbe = `${Y}${pad(probe)}`;
+
+    let fmt = null; const log = [];
+    for (const f of fmts) {
+      const url = f(Y, probe);
+      const { html, status } = await invenFetch(url);
+      const ok = status === 200 && invenMonths(html).has(wantProbe);
+      log.push(`${url.slice(B.length) || "/"}=${status}${ok ? "✓" : ""}`);
+      if (ok) { fmt = f; break; }
+    }
+    console.log(`[inven] 월 파라미터 탐지(probe ${wantProbe}): ${log.join(" ")} => ${fmt ? "발견" : "미발견(현재 월만 수집)"}`);
+
+    if (fmt) {
+      let monthsHit = 0;
+      for (let m = 1; m <= 12; m++) {
+        if (m === cur) continue;
+        const { html, status } = await invenFetch(fmt(Y, m));
+        if (status !== 200 || !html) continue;
+        const n = parseInvenCalendar(html, out, seen);
+        if (n) monthsHit++;
+        added += n;
+      }
+      console.log(`[inven] ${Y}년 월별 수집 완료: 추가 월 ${monthsHit} · 누적 일정 ${added}`);
+    }
+  }
+
   return { name: "Inven", added };
 }
 
@@ -271,6 +332,63 @@ const rwText = (s) => (s || "")
   .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
   .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/&nbsp;/g, " ")
   .replace(/\s+/g, " ").trim();
+
+// ── 기사 본문 추출(앱 내 다크 상세뷰용) ───────────────────────────────────
+// 본문 영역만 잘라낸다. itemprop=articleBody(스키마) → .view_content 순으로 시도하고,
+// 출처/추천/관련글/댓글 영역이 시작되면 그 앞에서 컷한다.
+function articleRegion(html) {
+  let i = html.search(/itemprop=["']articleBody["']/i);
+  if (i < 0) i = html.search(/class=["'][^"']*\bview_content\b[^"']*["']/i);
+  if (i < 0) return "";
+  const gt = html.indexOf(">", i);            // 여는 태그를 건너뛰어 본문 시작부터
+  const from = gt >= 0 ? gt + 1 : i;
+  let region = html.slice(from, from + 80000);
+  // 출처/추천/관련글/댓글 영역의 '여는 태그' 앞에서 컷(부분 태그가 남지 않도록 '<' 포함)
+  const cut = region.search(/<[^>]*class=["'][^"']*(source_url|like_wrapper|btn_list|relation_news|board_bottom|view_bottom|reply_count|reply_list|comment_wrapper|board_bottom_layer)/i);
+  if (cut > 0) region = region.slice(0, cut);
+  return region;
+}
+// HTML 조각 → 단락 문자열 배열(<br>/블록 종료를 줄바꿈으로 보존)
+function htmlToParas(frag) {
+  const s = frag
+    .replace(/<\s*br\s*\/?>/gi, "\n")
+    .replace(/<\/(p|div|li|h[1-6]|blockquote|tr)>/gi, "\n\n")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/&nbsp;/g, " ");
+  return s.split(/\n{2,}/).map((p) => p.replace(/[ \t]+/g, " ").replace(/\n{2,}/g, "\n").trim()).filter((p) => p.length > 1);
+}
+// 본문을 읽기용 블록 배열로: [{t:"p",v:"…"} | {t:"img",v:"https://…"}] (문서 순서 유지)
+function extractContent(html) {
+  const region = articleRegion(html);
+  if (!region) return [];
+  const blocks = [];
+  let last = 0, m, textLen = 0;
+  const pushText = (frag) => {
+    for (const p of htmlToParas(frag)) {
+      if (textLen > 4000 || blocks.length >= 60) break;
+      blocks.push({ t: "p", v: p }); textLen += p.length;
+    }
+  };
+  const re = /<img\b[^>]*>/gi;
+  while ((m = re.exec(region)) && blocks.length < 60) {
+    pushText(region.slice(last, m.index));
+    last = m.index + m[0].length;
+    let src = (m[0].match(/(?:data-original|data-src|src)=["']([^"']+)["']/i) || [])[1];
+    if (!src || /blank|emoticon|icon|button|loading|\bs\.gif\b|spacer/i.test(src)) continue;
+    if (src.startsWith("//")) src = "https:" + src;
+    if (/^https?:/i.test(src)) blocks.push({ t: "img", v: src.replace(/&amp;/g, "&") });
+  }
+  pushText(region.slice(last));
+  return blocks.slice(0, 60);
+}
+// 작성자(닉네임) 추출
+function extractAuthor(html) {
+  const el = (html.match(/<(?:strong|span|a)[^>]*class="[^"]*\bnick(?:name)?\b[^"]*"[^>]*>([\s\S]*?)<\/(?:strong|span|a)>/i) || [])[1];
+  if (el) { const t = rwText(el); if (t && t.length <= 30) return t; }
+  const meta = (html.match(/<meta[^>]+name=["']author["'][^>]+content=["']([^"']+)["']/i) || [])[1];
+  return meta ? rwText(meta).slice(0, 30) || null : null;
+}
 
 // 데스크톱 뉴스의 <section class="center_list"> 리치 목록(썸네일·요약·댓글수·시각·조회수)
 function parseRuliwebList(html, news, seen, cap = 60) {
@@ -401,9 +519,13 @@ async function fromRuliwebNews(news) {
     added += n;
   }
 
-  // board/1001 글은 목록에 썸네일이 없어 기사 본문 og에서 썸네일·요약·날짜 보강
+  // 본문 보강 전에 유사 중복부터 제거 → 남는 글만 페이지를 받아 요청을 아낀다.
+  const deduped = dedupNewsByTitle(news, 0.8);
+  news.length = 0; news.push(...deduped);
+
+  // 각 기사 페이지에서 본문(content)·작성자·썸네일·요약·날짜를 보강해 앱 내 상세뷰에 사용.
   // (referer 헤더 필수 — 없으면 루리웹이 응답을 막음)
-  const targets = news.filter((n) => /\/board\/\d+\/read\//.test(n.url) && !n.image).slice(0, 60);
+  const targets = news.slice(0, 60);
   const enrichOne = async (n) => {
     try {
       const res = await fetch(n.url, { headers: { ...HEADERS, "user-agent": DESKTOP_UA, referer: "https://bbs.ruliweb.com/news/board/1001" }, signal: AbortSignal.timeout(10000) });
@@ -411,16 +533,18 @@ async function fromRuliwebNews(news) {
       const h = await res.text();
       const og = (h.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
         || h.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) || [])[1];
-      if (og && !/blank|default|logo|no_?image|bi\.png|icon/i.test(og)) n.image = og.replace(/&amp;/g, "&");
+      if (!n.image && og && !/blank|default|logo|no_?image|bi\.png|icon/i.test(og)) n.image = og.replace(/&amp;/g, "&");
       if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
       if (!n.date) { const t = (h.match(/property=["']article:published_time["'][^>]+content=["']([^"']+)["']/i) || [])[1]; if (t) { const m = t.match(/(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}:\d{2}))?/); if (m) { n.date = `${m[1]}.${m[2]}.${m[3]}`; if (m[4]) n.time = m[4]; } } }
+      if (!n.author) { const a = extractAuthor(h); if (a) n.author = a; }
+      if (!n.content || !n.content.length) { const c = extractContent(h); if (c.length) n.content = c; }
     } catch { /* 개별 실패 무시 */ }
   };
-  let enriched = 0;
+  let enrichedImg = 0, withBody = 0;
   for (let i = 0; i < targets.length; i += 8) {
-    await Promise.all(targets.slice(i, i + 8).map(async (n) => { const before = n.image; await enrichOne(n); if (!before && n.image) enriched++; }));
+    await Promise.all(targets.slice(i, i + 8).map(async (n) => { const before = n.image; await enrichOne(n); if (!before && n.image) enrichedImg++; if (n.content && n.content.length) withBody++; }));
   }
-  console.log(`[ruliweb] board og 보강 ${enriched}/${targets.length}`);
+  console.log(`[ruliweb] og 썸네일 보강 ${enrichedImg}/${targets.length} · 본문 추출 ${withBody}/${targets.length}`);
   return { name: "RuliwebNews", ...(errs.length ? { error: errs.join(",") } : {}), added };
 }
 

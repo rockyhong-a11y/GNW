@@ -302,3 +302,53 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 2px 16px 24px; }
   .header-stats { display: none; }
   .refresh-status { display: none; }
 }
+
+/* ---------- 뉴스 상세 (앱 내 다크 뷰) ---------- */
+body.sheet-open { overflow: hidden; }
+.detail-sheet {
+  position: fixed; inset: 0; z-index: 60;
+  display: flex; flex-direction: column;
+  background: radial-gradient(1200px 600px at 80% -10%, #1a1f3a 0%, var(--bg) 55%);
+}
+.detail-bar {
+  display: flex; align-items: center; gap: 8px;
+  height: 50px; padding: var(--safe-top) 6px 0;
+  border-bottom: 1px solid var(--border);
+  background: rgba(13, 15, 26, 0.92); backdrop-filter: blur(10px);
+  position: sticky; top: 0; z-index: 1;
+}
+.detail-back {
+  display: inline-flex; align-items: center; gap: 2px;
+  background: none; border: 0; color: var(--accent);
+  font: inherit; font-size: 16px; font-weight: 700;
+  padding: 8px 8px; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.detail-back svg { width: 22px; height: 22px; }
+.detail-bar-title { font-weight: 800; letter-spacing: .06em; color: var(--text-dim); }
+.detail-scroll { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.detail-content {
+  max-width: 700px; margin: 0 auto;
+  padding: 18px 18px calc(48px + var(--safe-bottom));
+}
+.detail-title {
+  margin: 2px 0 12px; font-size: 21px; line-height: 1.38;
+  font-weight: 800; color: var(--text); word-break: keep-all;
+}
+.detail-meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  color: var(--text-faint); font-size: 12.5px;
+  padding-bottom: 14px; border-bottom: 1px solid var(--border);
+}
+.detail-meta .dm-author { color: var(--text-dim); font-weight: 700; }
+.detail-meta .dm-dot { opacity: .45; }
+.detail-banner { margin: 16px 0 4px; }
+.detail-banner img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.detail-article { color: var(--text); font-size: 15.5px; line-height: 1.78; }
+.detail-article p { margin: 14px 0; white-space: pre-wrap; word-break: break-word; }
+.detail-img { display: block; width: 100%; height: auto; border-radius: 10px; margin: 14px 0; }
+.detail-empty { color: var(--text-dim); }
+.detail-orig {
+  display: inline-block; margin-top: 18px; padding: 10px 16px;
+  background: var(--accent-soft); color: var(--accent);
+  border-radius: var(--radius-sm); font-weight: 700; text-decoration: none;
+}

@@ -204,16 +204,19 @@ function render() {
 
 /* ---------- Platform tabs (bottom bar + swipe) ---------- */
 function setTab(cat) {
-  if (!TAB_ORDER.includes(cat) || cat === STATE.platform) return;
-  STATE.platform = cat;
-  document.querySelectorAll("#platformTabs .tab").forEach((t) => {
-    const on = t.dataset.cat === cat;
-    t.classList.toggle("active", on);
-    t.setAttribute("aria-selected", on ? "true" : "false");
-  });
-  buildMonthSelect();   // 탭별로 기간 옵션이 다름(뉴스=뉴스 날짜, 그 외=일정 월)
-  render();
-  if (cat === "news" && Date.now() - lastFetchAt > 5000) loadGames(false); // 뉴스 탭 진입 시 최신 갱신
+  if (!TAB_ORDER.includes(cat)) return;
+  if (cat !== STATE.platform) {            // 탭 전환
+    STATE.platform = cat;
+    document.querySelectorAll("#platformTabs .tab").forEach((t) => {
+      const on = t.dataset.cat === cat;
+      t.classList.toggle("active", on);
+      t.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    buildMonthSelect();   // 탭별로 기간 옵션이 다름(뉴스=뉴스 날짜, 그 외=일정 월)
+    render();
+  }
+  // 뉴스 탭은 진입/재탭(이미 활성이어도) 시 최신 뉴스로 갱신
+  if (cat === "news" && Date.now() - lastFetchAt > 2000) loadGames(false);
 }
 
 function bindTabs() {
@@ -431,7 +434,7 @@ function bindSettings() {
 }
 
 function bindCardClicks() {
-  // 카드/뉴스 클릭 → 뎁스 없이 해당 링크로 바로 이동. (카드 안 링크/▶영상은 자체 동작)
+  // 카드 → 외부 상세링크. 뉴스 → 앱 내 다크 상세뷰. (카드 안 링크/▶영상은 자체 동작)
   $("#gameRoot").addEventListener("click", (e) => {
     if (e.target.closest("a, .play-btn")) return;
     const card = e.target.closest(".card[data-gid]");
@@ -444,9 +447,51 @@ function bindCardClicks() {
     const ni = e.target.closest(".news-item[data-ni]");
     if (ni && STATE._newsView) {
       const n = STATE._newsView[+ni.dataset.ni];
-      if (n && n.url) window.open(n.url, "_blank", "noopener");
+      if (n) openDetail(n);
     }
   });
+}
+
+/* ---------- 뉴스 상세 (앱 내 다크 뷰) ---------- */
+function openDetail(n) {
+  const sheet = $("#detailSheet");
+  const dt = [n.date, n.time ? `(${n.time})` : ""].filter(Boolean).join(" ");
+  const meta = [
+    n.author ? `<span class="dm-author">${esc(n.author)}</span>` : "",
+    dt ? `<span>${esc(dt)}</span>` : "",
+    n.views != null ? `<span>조회 ${Number(n.views).toLocaleString()}</span>` : "",
+    n.comments != null ? `<span>댓글 ${n.comments}</span>` : "",
+  ].filter(Boolean).join('<span class="dm-dot">·</span>');
+  const banner = n.image
+    ? `<div class="detail-banner"><img src="${esc(n.image)}" alt="" referrerpolicy="no-referrer" onerror="this.closest('.detail-banner').remove()"></div>`
+    : "";
+  let body;
+  if (n.content && n.content.length) {
+    body = n.content.map((b) => b.t === "img"
+      ? `<img class="detail-img" src="${esc(b.v)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`
+      : `<p>${esc(b.v)}</p>`).join("");
+  } else if (n.summary) {
+    body = `<p>${esc(n.summary)}</p>`;
+  } else {
+    body = `<p class="detail-empty">본문을 불러오지 못했습니다. 아래 ‘원문 보기’에서 확인하세요.</p>`;
+  }
+  $("#detailBody").innerHTML = `
+    <h1 class="detail-title">${esc(n.title)}</h1>
+    <div class="detail-meta">${meta}</div>
+    ${banner}
+    <div class="detail-article">${body}</div>
+    ${n.url ? `<a class="detail-orig" href="${esc(n.url)}" target="_blank" rel="noopener">원문 보기 ↗</a>` : ""}`;
+  $("#detailScroll").scrollTop = 0;
+  sheet.hidden = false;
+  document.body.classList.add("sheet-open");
+}
+function closeDetail() {
+  $("#detailSheet").hidden = true;
+  document.body.classList.remove("sheet-open");
+}
+function bindDetail() {
+  $("#detailClose").addEventListener("click", closeDetail);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#detailSheet").hidden) closeDetail(); });
 }
 
 /* ---------- Init ---------- */
@@ -454,6 +499,7 @@ async function init() {
   bindTabs();
   bindSettings();
   bindCardClicks();
+  bindDetail();
   applyIcon(savedIconKey());
   $("#monthSelect").addEventListener("change", (e) => { STATE.month = e.target.value; render(); });
   bindAutoRefresh();

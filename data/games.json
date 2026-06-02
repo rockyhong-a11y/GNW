@@ -14,7 +14,7 @@
     "pipeline": [
       {
         "name": "Inven",
-        "added": 352
+        "added": 353
       },
       {
         "name": "RuliwebNews",
@@ -22,9 +22,9 @@
       }
     ],
     "counts": {
-      "total": 345,
+      "total": 346,
       "curated": 32,
-      "collected": 352,
+      "collected": 353,
       "news": 105
     }
   },
@@ -10233,6 +10233,36 @@
       "trailer": "https://www.youtube.com/results?search_query=VCT%20%EC%B1%94%ED%94%BC%EC%96%B8%EC%8A%A4%20%EC%83%81%ED%95%98%EC%9D%B4%20%20official%20trailer"
     },
     {
+      "id": "inven-13700",
+      "title": "Rayman Legend Retold",
+      "titleKr": "레이맨 레전드 리톨드",
+      "developer": "미상",
+      "publisher": "미상",
+      "platforms": [
+        "PC"
+      ],
+      "genres": [],
+      "releaseDate": "2026-10-01",
+      "eventType": "release",
+      "status": "upcoming",
+      "price": null,
+      "hypeScore": null,
+      "rating": null,
+      "tags": [
+        "인벤"
+      ],
+      "description": "",
+      "update": "",
+      "color": "#27ae60",
+      "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1961253307.jpg",
+      "source": {
+        "name": "인벤 발매 캘린더",
+        "url": "https://www.inven.co.kr/webzine/calendar/"
+      },
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13700",
+      "trailer": "https://youtu.be/TKfG9hiueak"
+    },
+    {
       "id": "inven-paxaus",
       "title": "PAX AUS",
       "titleKr": "PAX AUS",
@@ -10581,7 +10611,7 @@
       "source": "루리웹",
       "date": "2026.06.03",
       "time": "08:18:27",
-      "views": 34,
+      "views": 144,
       "comments": 0,
       "summary": "민트로켓이 신작 게임 '반쵸 더 셰프'를 공개하며, 인기 게임 '데이브 더 다이버'의 초밥 장인 '반쵸'가 성장하는 과정을 그린 프리퀄 작품을 선보였다. 이 게임...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/03/19e8aa10d5a_pyoqkr.webp",
@@ -10593,11 +10623,15 @@
         },
         {
           "t": "p",
-          "v": "조회수 34 | 루리웹 |\n 입력 2026.06.03 (08:18:27)"
+          "v": "조회수 144 | 루리웹 |\n 입력 2026.06.03 (08:18:27)"
         },
         {
           "t": "p",
           "v": "[기사 본문] \n 3일 진행된 '스테이트 오브 플레이'에서 민트로켓의 신작 '반쵸 더 셰프'가 공개됐다."
+        },
+        {
+          "t": "img",
+          "v": "https://i1.ruliweb.com/img/26/06/03/19e8aa5b80713b2a1.webp"
         },
         {
           "t": "p",
@@ -10617,43 +10651,31 @@
         },
         {
           "t": "img",
-          "v": "https://i1.ruliweb.com/img/26/06/03/19e8a9c9c0413b2a1.webp"
+          "v": "https://i1.ruliweb.com/img/26/06/03/19e8aa5b9e413b2a1.webp"
         },
         {
           "t": "img",
-          "v": "https://i2.ruliweb.com/img/26/06/03/19e8a9c9e0b13b2a1.webp"
+          "v": "https://i1.ruliweb.com/img/26/06/03/19e8aa5bbd213b2a1.webp"
         },
         {
           "t": "img",
-          "v": "https://i3.ruliweb.com/img/26/06/03/19e8a9ca04713b2a1.webp"
+          "v": "https://i3.ruliweb.com/img/26/06/03/19e8aa5bdd513b2a1.webp"
         },
         {
           "t": "img",
-          "v": "https://i3.ruliweb.com/img/26/06/03/19e8a9ca1f213b2a1.webp"
+          "v": "https://i1.ruliweb.com/img/26/06/03/19e8aa5bfcc13b2a1.webp"
         },
         {
           "t": "img",
-          "v": "https://i1.ruliweb.com/img/26/06/03/19e8a9ca37813b2a1.webp"
+          "v": "https://i2.ruliweb.com/img/26/06/03/19e8aa5c1ca13b2a1.webp"
         },
         {
           "t": "img",
-          "v": "https://i3.ruliweb.com/img/26/06/03/19e8a9ca5db13b2a1.webp"
+          "v": "https://i1.ruliweb.com/img/26/06/03/19e8aa5c3b113b2a1.webp"
         },
         {
           "t": "img",
-          "v": "https://i1.ruliweb.com/img/26/06/03/19e8a9ca7e513b2a1.webp"
-        },
-        {
-          "t": "img",
-          "v": "https://i2.ruliweb.com/img/26/06/03/19e8a9ca98813b2a1.webp"
-        },
-        {
-          "t": "img",
-          "v": "https://i2.ruliweb.com/img/26/06/03/19e8a9caba913b2a1.webp"
-        },
-        {
-          "t": "img",
-          "v": "https://i1.ruliweb.com/img/26/06/03/19e8a9cae6113b2a1.webp"
+          "v": "https://i3.ruliweb.com/img/26/06/03/19e8aa5c5b613b2a1.webp"
         },
         {
           "t": "p",
@@ -10726,6 +10748,10 @@
         {
           "t": "p",
           "v": "목록보기"
+        },
+        {
+          "t": "yt",
+          "v": "nJP_ZiDYfxY"
         }
       ]
     },
@@ -10812,11 +10838,64 @@
           "t": "p",
           "v": "Deborah Ann Woll"
         }
+      ],
+      "comments": 4,
+      "topComments": [
+        {
+          "nick": "gulpo",
+          "text": "BEST",
+          "like": 10
+        },
+        {
+          "nick": "루리웹-7890987657",
+          "text": "BEST",
+          "like": 11
+        },
+        {
+          "nick": "댄임",
+          "text": "BEST",
+          "like": 7
+        },
+        {
+          "nick": "뉘휘휘",
+          "text": "BEST",
+          "like": 11
+        },
+        {
+          "nick": "흑퀸시",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "하야야하",
+          "text": "사람같이 생겼네",
+          "like": 3
+        },
+        {
+          "nick": "gulpo",
+          "text": "BEST",
+          "like": 10
+        },
+        {
+          "nick": "MPAX",
+          "text": "크레토스 이 능력자새기",
+          "like": 2
+        },
+        {
+          "nick": "루리웹-1974061434",
+          "text": "MPAX",
+          "like": 0
+        },
+        {
+          "nick": "뉘휘휘",
+          "text": "BEST",
+          "like": 11
+        }
       ]
     },
     {
       "id": "ruliweb-2354726",
-      "title": "귀무자 Way of the Sword 한국어판 트레일러",
+      "title": "귀무자 Way of the Sword 한국어판 5th 트레일러, 체험판 ...",
       "url": "https://bbs.ruliweb.com/news/board/1001/read/2354726?",
       "source": "루리웹",
       "date": "2026.06.03",
@@ -10830,12 +10909,45 @@
           "v": "일본어 더빙/한국어 자막판"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/jU4aP9I8OFg/hqdefault.jpg"
+          "t": "yt",
+          "v": "jU4aP9I8OFg"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/KVOyUBSDrmY/hqdefault.jpg"
+          "t": "yt",
+          "v": "KVOyUBSDrmY"
+        }
+      ],
+      "comments": 6,
+      "topComments": [
+        {
+          "nick": "기모중",
+          "text": "다 좋은데 너무 화면이 뿌염",
+          "like": 0
+        },
+        {
+          "nick": "게임업계는루리인들을채용하라",
+          "text": "다 좋은데 모션이 답답,",
+          "like": 0
+        },
+        {
+          "nick": "엠엪🌝",
+          "text": "다 좋은데 별로임",
+          "like": 0
+        },
+        {
+          "nick": "오공파이터",
+          "text": "부적 고려견 졸귀",
+          "like": 0
+        },
+        {
+          "nick": "루리웹-4795184391",
+          "text": "이거보다 3가 더하고싶은데...1,2는 잘만내주더니 3는 왜 이식안해주지",
+          "like": 0
+        },
+        {
+          "nick": "타카야마",
+          "text": "방금 검극으로 데모 완료했는데 뭔가 아쉽네.. 윗댓 말처럼 뭔가 모션이 느릿느릿",
+          "like": 0
         }
       ]
     },
@@ -10979,8 +11091,61 @@
           "v": "삐걱거리는 소리, 신호, 외침 하나하나가 위험을 끌어들이고, 독창적인 오디오 디자인이 다채롭고도 공포스러운 소리의 풍경을 만들어 냅니다. Pilotpriest가 작곡한 동적 사운드트랙은 플레이어와 적의 행동에 반응하여 음악을 쌓고 뒤틉니다."
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/_RJactPeTg0/hqdefault.jpg"
+          "t": "yt",
+          "v": "_RJactPeTg0"
+        }
+      ],
+      "comments": 3,
+      "topComments": [
+        {
+          "nick": "나는야 멀티유저",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "게임멀티유저",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "Zeber_J",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "나는야 멀티유저",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "게임멀티유저",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "라이센",
+          "text": "게임멀티유저",
+          "like": 2
+        },
+        {
+          "nick": "Zeber_J",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "루리웹-9874026181",
+          "text": "f 보단 싸네 굿",
+          "like": 2
+        },
+        {
+          "nick": "دكتوربيبرلذيذ",
+          "text": "코나미가 정신차려서 유저 친화적으로 가격 내렸을 것 같지는 않고, 그냥 F보다 볼륨이 적은 듯 사힐2 리메이크, 사힐 F, 메기솔 델타 전부 예구한 코나미의 호구의 의견입니다",
+          "like": 0
+        },
+        {
+          "nick": "사이비들때려잡자",
+          "text": "조던필 형이 주인공이여?",
+          "like": 0
         }
       ]
     },
@@ -11003,12 +11168,60 @@
           "t": "p",
           "v": "9월 9일에서 10월 29일로 연기"
         }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "루리웹-1451125040",
+          "text": "BEST",
+          "like": 15
+        },
+        {
+          "nick": "RTX6080",
+          "text": "오우 9월에 몰빵되어 힘들었는데 10월로빼주는군 오히려좋아",
+          "like": 1
+        },
+        {
+          "nick": "ACE1234",
+          "text": "그래 한달이야 뭐 9월에할거많아서",
+          "like": 0
+        },
+        {
+          "nick": "루리웹-1451125040",
+          "text": "BEST",
+          "like": 15
+        },
+        {
+          "nick": "정병판독기",
+          "text": "루리웹-1451125040",
+          "like": 0
+        },
+        {
+          "nick": "낚시탈",
+          "text": "좋은 소식이군 ㅋㅋ",
+          "like": 0
+        },
+        {
+          "nick": "피릉피릉",
+          "text": "두달같은 한달..",
+          "like": 0
+        },
+        {
+          "nick": "쪼옥쪼옥",
+          "text": "저건 좋은 연기 ㅋㅋ 겜 일정 조절 되겠네 굿",
+          "like": 0
+        },
+        {
+          "nick": "루리웹-3537881394",
+          "text": "9달 진짜 게임 너무몰려있음 잘됐어 차라리정말",
+          "like": 0
+        }
       ]
     },
     {
       "id": "ruliweb-2354723",
       "title": "데이브 더 다이버 프리퀄 '반쵸 더 셰프' 트레일러, 스토어 등록",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2354723?",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2354723",
       "source": "루리웹",
       "date": "2026.06.03",
       "image": "https://i1.ruliweb.com/ori/26/06/03/19e8a92fd17137dbd.jpg",
@@ -11149,15 +11362,33 @@
           "v": "이렇게 수집한 재료는 새로운 요리를 만들 수 있는 기회를 제공해줍니다."
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/r9z5iVAEb-o/hqdefault.jpg"
+          "t": "yt",
+          "v": "r9z5iVAEb-o"
+        }
+      ],
+      "comments": 3,
+      "topComments": [
+        {
+          "nick": "레이저zip",
+          "text": "민트에서 하나를 더 만들고 있었네...정보 하나 풀만도 했을텐데 이걸 여태껏 숨기다니!",
+          "like": 0
+        },
+        {
+          "nick": "우주닌자",
+          "text": "찜 했다 언넝 나와라 !",
+          "like": 0
+        },
+        {
+          "nick": "레이쥬",
+          "text": "엇? 이런게 나오네",
+          "like": 0
         }
       ]
     },
     {
       "id": "ruliweb-2354722",
       "title": "위쳐 3 송즈 오브 더 패스트 개발진 코멘트 영상",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2354722?",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2354722",
       "source": "루리웹",
       "date": "2026.06.03",
       "image": "https://i3.ruliweb.com/ori/26/06/03/19e8a8accf7137dbd.jpg",
@@ -11173,7 +11404,8 @@
           "t": "p",
           "v": "더 위쳐 3: 와일드 헌트의 신규 확장팩, 송즈 오브 더 패스트에 대해 궁금하셨던 사항들을 확인해 보세요!"
         }
-      ]
+      ],
+      "comments": 0
     },
     {
       "id": "ruliweb-2354721",
@@ -11238,7 +11470,8 @@
           "t": "img",
           "v": "https://i1.ruliweb.com/img/26/06/03/19e8a94007f361ec1.webp"
         }
-      ]
+      ],
+      "comments": 0
     },
     {
       "id": "ruliweb-225302",
@@ -11247,7 +11480,7 @@
       "source": "루리웹",
       "date": "2026.06.03",
       "time": "07:50:30",
-      "views": 462,
+      "views": 574,
       "comments": 1,
       "summary": "산타 모니카 스튜디오가 '스테이트 오브 플레이'에서 '갓 오브 워 라우페이'를 공개하며, 크레토스의 아내 페이가 죽음 이후 신들의 사후세계 '에브리웬'에서 새로운...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/03/19e8a8ff668_nluqbi.webp",
@@ -11259,7 +11492,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 464 | 루리웹 |\n 입력 2026.06.03 (07:50:30)"
+          "v": "조회수 575 | 루리웹 |\n 입력 2026.06.03 (07:50:30)"
         },
         {
           "t": "p",
@@ -11402,8 +11635,15 @@
           "v": "목록보기"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/HLMX2w3cwuE/hqdefault.jpg"
+          "t": "yt",
+          "v": "HLMX2w3cwuE"
+        }
+      ],
+      "topComments": [
+        {
+          "nick": "치석케어",
+          "text": "과거 얘기가 아니네...? 다시 만날수도 있나?",
+          "like": 0
         }
       ]
     },
@@ -11566,6 +11806,59 @@
           "t": "p",
           "v": "모두 즐겜 하세요!"
         }
+      ],
+      "comments": 3,
+      "topComments": [
+        {
+          "nick": "Shai Hulud",
+          "text": "BEST",
+          "like": 8
+        },
+        {
+          "nick": "라이센",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "hide™",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "라이센",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "라이센",
+          "text": "라이센",
+          "like": 2
+        },
+        {
+          "nick": "ㅂㅣ추",
+          "text": "울버린 왤캐 비싸 ㅅㅂ",
+          "like": 3
+        },
+        {
+          "nick": "라이센",
+          "text": "ㅂㅣ추",
+          "like": 8
+        },
+        {
+          "nick": "Shai Hulud",
+          "text": "BEST",
+          "like": 8
+        },
+        {
+          "nick": "hide™",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "앙증곰탱",
+          "text": "소니...이제 퍼스트 국내 게임 가격도 올리는 모양이군요;",
+          "like": 1
+        }
       ]
     },
     {
@@ -11612,8 +11905,61 @@
           "v": "귀무자: 검의 길 (2026년 9월 25일 발매)"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/cvh0xXmu0bs/hqdefault.jpg"
+          "t": "yt",
+          "v": "cvh0xXmu0bs"
+        }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "곶아라니",
+          "text": "BEST",
+          "like": 13
+        },
+        {
+          "nick": "루리웹-1897084889",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "호롤룰로루",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "루리웹-520293118",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "하야야하",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "루리웹-1897084889",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "곶아라니",
+          "text": "BEST",
+          "like": 13
+        },
+        {
+          "nick": "호롤룰로루",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "루리웹-520293118",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "Quadratum",
+          "text": "9월달은 지갑 거덜 나겠는데...;;;",
+          "like": 1
         }
       ]
     },
@@ -11881,20 +12227,73 @@
           "v": "PlayStation 5로 곧 출시됩니다!"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/HLMX2w3cwuE/hqdefault.jpg"
+          "t": "yt",
+          "v": "HLMX2w3cwuE"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/jm43XdyL9gc/hqdefault.jpg"
+          "t": "yt",
+          "v": "jm43XdyL9gc"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/szwYBVY7FsU/hqdefault.jpg"
+          "t": "yt",
+          "v": "szwYBVY7FsU"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/uKMCqyeBWmU/hqdefault.jpg"
+          "t": "yt",
+          "v": "uKMCqyeBWmU"
+        }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "하이 호",
+          "text": "BEST",
+          "like": 20
+        },
+        {
+          "nick": "Quadratum",
+          "text": "BEST",
+          "like": 9
+        },
+        {
+          "nick": "루리웹-7890987657",
+          "text": "BEST",
+          "like": 9
+        },
+        {
+          "nick": "아기수박",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "오따쿠",
+          "text": "BEST",
+          "like": 7
+        },
+        {
+          "nick": "하이 호",
+          "text": "BEST",
+          "like": 20
+        },
+        {
+          "nick": "《NURI》",
+          "text": "하이 호",
+          "like": 2
+        },
+        {
+          "nick": "심심한 20대",
+          "text": "외전이 아니라 정식 넘버링!!! 세크메트 나오는거 보고 소리 질렀네요 산타모니카, 인섬니악 퍼스트 투탑 ㅠㅠ",
+          "like": 4
+        },
+        {
+          "nick": "유포니",
+          "text": "곧 출시 라는데 언제쯤일까요. 1년씩 기다리게 하고 그러진 않겠지? 빨리 하고 싶어서 현기증 나네요.",
+          "like": 4
+        },
+        {
+          "nick": "루리웹-6317208818",
+          "text": "소니 치고는 이쁘게 만들었는데 페이스 모델에 비하면 별로네.",
+          "like": 11
         }
       ]
     },
@@ -11924,6 +12323,19 @@
         {
           "t": "p",
           "v": "에이스 컴뱃 제로 이식판은 모든 플랫폼 (PS5, Xbox X/S, 스팀)에 동일하게 제공됩니다."
+        }
+      ],
+      "comments": 2,
+      "topComments": [
+        {
+          "nick": "Quadratum",
+          "text": "당연하겠지 쩝...",
+          "like": 2
+        },
+        {
+          "nick": "페피니에르",
+          "text": "이거라도 어디야",
+          "like": 2
         }
       ]
     },
@@ -12142,6 +12554,59 @@
           "t": "p",
           "v": "※이 상품이 포함된 세트 상품도 있습니다. 중복 구매에 주의해 주시기 바랍니다."
         }
+      ],
+      "comments": 4,
+      "topComments": [
+        {
+          "nick": "히로",
+          "text": "BEST",
+          "like": 8
+        },
+        {
+          "nick": "쭈랄라",
+          "text": "BEST",
+          "like": 14
+        },
+        {
+          "nick": "hide™",
+          "text": "BEST",
+          "like": 16
+        },
+        {
+          "nick": "월화수목금토일..",
+          "text": "BEST",
+          "like": 10
+        },
+        {
+          "nick": "히로",
+          "text": "BEST",
+          "like": 8
+        },
+        {
+          "nick": "Quadratum",
+          "text": "그래도 울버린 보다는 덜 비싸군",
+          "like": 7
+        },
+        {
+          "nick": "hide™",
+          "text": "BEST",
+          "like": 16
+        },
+        {
+          "nick": "월화수목금토일..",
+          "text": "BEST",
+          "like": 10
+        },
+        {
+          "nick": "적법사",
+          "text": "hide™",
+          "like": 2
+        },
+        {
+          "nick": "jay",
+          "text": "소니보다 영세한 캡콤은 가격이 그대로구나",
+          "like": 9
+        }
       ]
     },
     {
@@ -12164,12 +12629,65 @@
           "v": "내러티브 디렉터와 수석 작가진이 크라토스와 아트레우스의 북유럽 신화 여정을 통해 밝혀진 페이에 대한 정보를 공유하고, 신들의 사후 세계에서 그녀를 기다리고 있는 운명에 대해 엿볼 수 있게 해줍니다."
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/uKMCqyeBWmU/hqdefault.jpg"
+          "t": "yt",
+          "v": "uKMCqyeBWmU"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/szwYBVY7FsU/hqdefault.jpg"
+          "t": "yt",
+          "v": "szwYBVY7FsU"
+        }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "루리웹-7890987657",
+          "text": "BEST",
+          "like": 22
+        },
+        {
+          "nick": "덩민",
+          "text": "BEST",
+          "like": 14
+        },
+        {
+          "nick": "루리웹-1974061434",
+          "text": "BEST",
+          "like": 14
+        },
+        {
+          "nick": "루리웹-1974061434",
+          "text": "BEST",
+          "like": 10
+        },
+        {
+          "nick": "크로프트",
+          "text": "BEST",
+          "like": 6
+        },
+        {
+          "nick": "게임멀티유저",
+          "text": "이거지 플레이스테이숑",
+          "like": 6
+        },
+        {
+          "nick": "유람이",
+          "text": "오늘 좀 미쳤네",
+          "like": 8
+        },
+        {
+          "nick": "JooRUN",
+          "text": "연출 미쳤다 ㅎㄷㄷ",
+          "like": 5
+        },
+        {
+          "nick": "덩민",
+          "text": "BEST",
+          "like": 14
+        },
+        {
+          "nick": "선녀와아무꿈",
+          "text": "덩민",
+          "like": 2
         }
       ]
     },
@@ -12245,8 +12763,61 @@
           "v": "https://i2.ruliweb.com/img/26/06/03/19e8a598728137dbd.webp"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/HLMX2w3cwuE/hqdefault.jpg"
+          "t": "yt",
+          "v": "HLMX2w3cwuE"
+        }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "슈퍼_베어",
+          "text": "BEST",
+          "like": 68
+        },
+        {
+          "nick": "루리웹-8716489191",
+          "text": "BEST",
+          "like": 46
+        },
+        {
+          "nick": "히히히못가",
+          "text": "BEST",
+          "like": 41
+        },
+        {
+          "nick": "히로",
+          "text": "BEST",
+          "like": 31
+        },
+        {
+          "nick": "레이저zip",
+          "text": "BEST",
+          "like": 28
+        },
+        {
+          "nick": "히로",
+          "text": "BEST",
+          "like": 31
+        },
+        {
+          "nick": "루리웹-8716489191",
+          "text": "걍 ㅅㅂ ㅅㅅ인데? ㅋㅋㅋ 존나 기대되네",
+          "like": 8
+        },
+        {
+          "nick": "A.R.K",
+          "text": "처음 크레토스 나올때 이놈들 PS5 리마스터 내는건가 하고 당황했음",
+          "like": 24
+        },
+        {
+          "nick": "히히히못가",
+          "text": "BEST",
+          "like": 41
+        },
+        {
+          "nick": "적법사",
+          "text": "히히히못가",
+          "like": 0
         }
       ]
     },
@@ -12292,6 +12863,49 @@
         {
           "t": "p",
           "v": "※ Windows용 체험판은 추후 배포될 예정입니다."
+        }
+      ],
+      "comments": 2,
+      "topComments": [
+        {
+          "nick": "햇살속인형",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "용달이",
+          "text": "BEST",
+          "like": 7
+        },
+        {
+          "nick": "햇살속인형",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "투나보이™",
+          "text": "xbox 360 시절부터 독점작 로스트플래닛,데드라이징을 출시하고 데메크4를 멀티플랫폼으로 출시하는 등 ms와 좋은 관계를 유지한게 글로벌 흥행에도 일조",
+          "like": 3
+        },
+        {
+          "nick": "용달이",
+          "text": "BEST",
+          "like": 7
+        },
+        {
+          "nick": "기동전사오소리",
+          "text": "용달이",
+          "like": 3
+        },
+        {
+          "nick": "용달이",
+          "text": "기동전사오소리",
+          "like": 2
+        },
+        {
+          "nick": "기동전사오소리",
+          "text": "용달이",
+          "like": 0
         }
       ]
     },
@@ -12402,6 +13016,59 @@
           "t": "p",
           "v": "2190"
         }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "루리웹-1897084889",
+          "text": "BEST",
+          "like": 44
+        },
+        {
+          "nick": "YJ_GO",
+          "text": "BEST",
+          "like": 40
+        },
+        {
+          "nick": "MPAX",
+          "text": "BEST",
+          "like": 30
+        },
+        {
+          "nick": "라이센",
+          "text": "BEST",
+          "like": 24
+        },
+        {
+          "nick": "김수면",
+          "text": "BEST",
+          "like": 20
+        },
+        {
+          "nick": "Arcade Maniacs",
+          "text": "허...인상 됐네",
+          "like": 13
+        },
+        {
+          "nick": "라이센",
+          "text": "BEST",
+          "like": 24
+        },
+        {
+          "nick": "사과™",
+          "text": "ㅋㅋㅋㅋㅋㅋㅋㅋ",
+          "like": 2
+        },
+        {
+          "nick": "루리웹-6632178466",
+          "text": "지들니 싼 똥 고객들에게 전가시키기 ㅋㅋ",
+          "like": 27
+        },
+        {
+          "nick": "하야야하",
+          "text": "루리웹-6632178466",
+          "like": 35
+        }
       ]
     },
     {
@@ -12431,6 +13098,14 @@
           "t": "p",
           "v": "https://x.com/onimusha_capcom/status/2061926051324846392"
         }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "햇살속인형",
+          "text": "오 정보 감사합니다. 바로 달려야겠네요",
+          "like": 0
+        }
       ]
     },
     {
@@ -12445,8 +13120,21 @@
       "author": "이토 시즈카",
       "content": [
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/rGU4A7TM8Sk/hqdefault.jpg"
+          "t": "yt",
+          "v": "rGU4A7TM8Sk"
+        }
+      ],
+      "comments": 2,
+      "topComments": [
+        {
+          "nick": "크롬메탈",
+          "text": "어허이~가을에 울버린에 에컴에 지갑이 마르겠구나",
+          "like": 0
+        },
+        {
+          "nick": "루리웹-520293118",
+          "text": "염색녀 예쁜데",
+          "like": 0
         }
       ]
     },
@@ -12466,8 +13154,61 @@
           "v": "https://i2.ruliweb.com/img/26/06/03/19e8a521222137dbd.webp"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/QpVZ9OvRLZI/hqdefault.jpg"
+          "t": "yt",
+          "v": "QpVZ9OvRLZI"
+        }
+      ],
+      "comments": 3,
+      "topComments": [
+        {
+          "nick": "그림록",
+          "text": "BEST",
+          "like": 10
+        },
+        {
+          "nick": "호두맛의꼭대기",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "창백한새",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "창백한새",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "그림록",
+          "text": "BEST",
+          "like": 10
+        },
+        {
+          "nick": "루리웹-9202130279",
+          "text": "리마는 이걸 위해서였구나",
+          "like": 1
+        },
+        {
+          "nick": "saruin",
+          "text": "페어게임즈가 언틸던 만들고 있었군요",
+          "like": 2
+        },
+        {
+          "nick": "루리웹-7095299304",
+          "text": "saruin",
+          "like": 2
+        },
+        {
+          "nick": "루리웹-4795184391",
+          "text": "와 이게 2가 나오네",
+          "like": 0
+        },
+        {
+          "nick": "싸움닭아님",
+          "text": "올것이&hellip;왔군",
+          "like": 1
         }
       ]
     },
@@ -12483,8 +13224,21 @@
       "author": "이토 시즈카",
       "content": [
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/-B-EWLPtCUU/hqdefault.jpg"
+          "t": "yt",
+          "v": "-B-EWLPtCUU"
+        }
+      ],
+      "comments": 2,
+      "topComments": [
+        {
+          "nick": "irwin",
+          "text": "0는 예구만하면 전원 증정이군요. 좋네요",
+          "like": 1
+        },
+        {
+          "nick": "metierr",
+          "text": "이번에도 패키지로 산다!!",
+          "like": 0
         }
       ]
     },
@@ -12500,8 +13254,26 @@
       "author": "이토 시즈카",
       "content": [
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/-WVhTcByDyY/hqdefault.jpg"
+          "t": "yt",
+          "v": "-WVhTcByDyY"
+        }
+      ],
+      "comments": 3,
+      "topComments": [
+        {
+          "nick": "ㅂㅣ추",
+          "text": "일주일동안 체험플레이 가능하다니 해보까",
+          "like": 5
+        },
+        {
+          "nick": "레이저zip",
+          "text": "극혐인 얼굴들을 대부분 다 가린 느낌이네...",
+          "like": 3
+        },
+        {
+          "nick": "루리웹-5659905825",
+          "text": "색이 너무 다채로워서 뭔가 몰입이 안되고 산만한 느낌",
+          "like": 0
         }
       ]
     },
@@ -12521,8 +13293,51 @@
           "v": "26년 9월 24일 발매"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/TAzxTMaA6j4/hqdefault.jpg"
+          "t": "yt",
+          "v": "TAzxTMaA6j4"
+        }
+      ],
+      "comments": 2,
+      "topComments": [
+        {
+          "nick": "Lucky7Eric",
+          "text": "BEST",
+          "like": 8
+        },
+        {
+          "nick": "스코즈마",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "Lucky7Eric",
+          "text": "BEST",
+          "like": 8
+        },
+        {
+          "nick": "zerodjune",
+          "text": "컨트롤 잼있게 했었는데 기대된다",
+          "like": 1
+        },
+        {
+          "nick": "스코즈마",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "범블풋",
+          "text": "컨트롤 여주 제시 남동생이 주인공이구나",
+          "like": 1
+        },
+        {
+          "nick": "루리웹-0156701308",
+          "text": "제시가 역시 나오네요 굿",
+          "like": 0
+        },
+        {
+          "nick": "루리웹-68287951653",
+          "text": "제시도 다시 나오네",
+          "like": 0
         }
       ]
     },
@@ -12546,12 +13361,65 @@
           "v": "이 게임은 Mundfish Powerhouse 레이블의 첫 번째 타이틀이자, 호러 장르의 전문가로서 유명 감독들과 협업해 온 Team Clout 스튜디오의 데뷔작입니다. 현재 이 팀은 여러분의 의식 깊숙이 파고들어, 층층이 쌓인 진정한 공포를 드러내는 게임을 만들고자 합니다."
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/TFHcVsPNbsY/hqdefault.jpg"
+          "t": "yt",
+          "v": "TFHcVsPNbsY"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/1AHu1t2Fq_4/hqdefault.jpg"
+          "t": "yt",
+          "v": "1AHu1t2Fq_4"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "아이나♡",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "Lucky7Eric",
+          "text": "ㄷㄷㄷ 무섭네요",
+          "like": 2
+        },
+        {
+          "nick": "싸움닭아님",
+          "text": "이거 완전 신생 게임사제작에 그래픽도 넘좋아서 무슨 인공지능으로 사기치는거 아니나고 했는데 착실히 잘나오네~^^",
+          "like": 2
+        },
+        {
+          "nick": "아이나♡",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "고고고두",
+          "text": "곧인가!",
+          "like": 0
+        },
+        {
+          "nick": "라하루님",
+          "text": "진짜 기대작!",
+          "like": 0
+        },
+        {
+          "nick": "앞으로는부자",
+          "text": "썸네일부터 빡쌔네 ㅋㅋㅋㅋㅋ",
+          "like": 0
+        },
+        {
+          "nick": "루리웹-2974709795",
+          "text": "홀리 몰리 넘 좋아 ㅋㅋㅋ",
+          "like": 0
+        },
+        {
+          "nick": "제주흑돼지",
+          "text": "몇년전 컨샙영상부터 기대했는데 드디어..",
+          "like": 0
+        },
+        {
+          "nick": "동물애호박이",
+          "text": "아토믹 하트랑 같은 개발사였구나",
+          "like": 0
         }
       ]
     },
@@ -12567,8 +13435,16 @@
       "author": "이토 시즈카",
       "content": [
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/A7NZpeAmdxk/hqdefault.jpg"
+          "t": "yt",
+          "v": "A7NZpeAmdxk"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "-대장-",
+          "text": "플3때해보고 오랜만에 신작이네요",
+          "like": 1
         }
       ]
     },
@@ -12604,12 +13480,65 @@
           "v": "PS5판 에이스 컴뱃 제로 벨칸 전쟁"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/KFO56eB83z4/hqdefault.jpg"
+          "t": "yt",
+          "v": "KFO56eB83z4"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/c2bgoQhlzqE/hqdefault.jpg"
+          "t": "yt",
+          "v": "c2bgoQhlzqE"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "Lucky7Eric",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "Lucky7Eric",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "아앙놀아줘",
+          "text": "[삭제된 댓글의 댓글입니다.]",
+          "like": 1
+        },
+        {
+          "nick": "Lucky7Eric",
+          "text": "[삭제된 댓글의 댓글입니다.]",
+          "like": 0
+        },
+        {
+          "nick": "월로비",
+          "text": "믿고 있었다고ㅜㅜㅜㅜ",
+          "like": 0
+        },
+        {
+          "nick": "mitsuhashi",
+          "text": "스틱도 새로 내줘!",
+          "like": 0
+        },
+        {
+          "nick": "쪼옥쪼옥",
+          "text": "뱅기겜 한번도 안해봤는데 이거 좀 끌리넼",
+          "like": 0
+        },
+        {
+          "nick": "페피니에르",
+          "text": "에컴 제로ㅠㅠㅠㅠ",
+          "like": 1
+        },
+        {
+          "nick": "호두맛의꼭대기",
+          "text": "인질이 세군",
+          "like": 0
+        },
+        {
+          "nick": "하얀 악마",
+          "text": "중간에 등장하는 인물, 매즈 미켈슨인줄 ㅎㅎㅎ",
+          "like": 0
         }
       ]
     },
@@ -12629,8 +13558,41 @@
           "v": "https://i2.ruliweb.com/img/26/06/03/19e8a42663a137dbd.webp"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/eXLfSEipn7I/hqdefault.jpg"
+          "t": "yt",
+          "v": "eXLfSEipn7I"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "루리웹-6632178466",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "루리웹-6632178466",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "차주 성깔있음",
+          "text": "잼나겠다",
+          "like": 2
+        },
+        {
+          "nick": "나의성욕은끝이없다",
+          "text": "또 외주냐 믿고 거르는 돈나미",
+          "like": 3
+        },
+        {
+          "nick": "루리웹-6317208818",
+          "text": "나의성욕은끝이없다",
+          "like": 7
+        },
+        {
+          "nick": "집에달려가고싶다",
+          "text": "루리웹-6317208818",
+          "like": 2
         }
       ]
     },
@@ -12654,12 +13616,65 @@
           "v": "https://i2.ruliweb.com/img/26/06/03/19e8a4104a0137dbd.webp"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/LNq35HHUtNc/hqdefault.jpg"
+          "t": "yt",
+          "v": "LNq35HHUtNc"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/dAcB-foyNv0/hqdefault.jpg"
+          "t": "yt",
+          "v": "dAcB-foyNv0"
+        }
+      ],
+      "comments": 2,
+      "topComments": [
+        {
+          "nick": "A.R.K",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "루리웹-9202130279",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "A.R.K",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "루리웹-9202130279",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "스네끄",
+          "text": "개인적으로 올하반기 최대 기대작",
+          "like": 2
+        },
+        {
+          "nick": "폴드7",
+          "text": "역시 갓콤 ㄷㄷ",
+          "like": 2
+        },
+        {
+          "nick": "스네끄",
+          "text": "캡콤은 꾸준히 데모를 내줘서 너무 좋음",
+          "like": 2
+        },
+        {
+          "nick": "루리웹-5254567870",
+          "text": "데모 오~~ 갓콤",
+          "like": 2
+        },
+        {
+          "nick": "-대장-",
+          "text": "데모 덜덜 ㅋㅋㅋ 씹고 뜯고 맛봐주마",
+          "like": 2
+        },
+        {
+          "nick": "작은영웅",
+          "text": "바로 체험판이라니 ㄷㄷ",
+          "like": 2
         }
       ]
     },
@@ -12675,15 +13690,33 @@
       "author": "이토 시즈카",
       "content": [
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/dzOnRaQVoeI/hqdefault.jpg"
+          "t": "yt",
+          "v": "dzOnRaQVoeI"
+        }
+      ],
+      "comments": 3,
+      "topComments": [
+        {
+          "nick": "딸기토미",
+          "text": "이거도 정식출시하나",
+          "like": 0
+        },
+        {
+          "nick": "살아있네~~",
+          "text": "와우!!!!!!! 드디어!!!!!!! 반백년 살면서 이렇게 기다렸던건 이 게임이 처음...ㅠㅠ",
+          "like": 0
+        },
+        {
+          "nick": "봐봐v",
+          "text": "마참내",
+          "like": 1
         }
       ]
     },
     {
       "id": "ruliweb-2354696",
       "title": "진 삼국무쌍 2 with 맹장전 리마스터 트레일러",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2354696",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2354696?page=2",
       "source": "루리웹",
       "date": "2026.06.03",
       "image": "https://img.youtube.com/vi/UTVVw9fsHVA/hqdefault.jpg",
@@ -12692,8 +13725,61 @@
       "author": "이토 시즈카",
       "content": [
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/UTVVw9fsHVA/hqdefault.jpg"
+          "t": "yt",
+          "v": "UTVVw9fsHVA"
+        }
+      ],
+      "comments": 2,
+      "topComments": [
+        {
+          "nick": "루리웹-9202130279",
+          "text": "BEST",
+          "like": 13
+        },
+        {
+          "nick": "문라이트헌터",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "루리웹-9202130279",
+          "text": "BEST",
+          "like": 13
+        },
+        {
+          "nick": "스네끄",
+          "text": "대박! 출시를 늦춘 만큼 첫 공개 때 보다 훨씬 좋아 보이네요",
+          "like": 2
+        },
+        {
+          "nick": "-대장-",
+          "text": "ㅋㅋ 그래픽 아니 조명효과를 죽여버렸네 병사 밀도도 떨어지고 ㅠ",
+          "like": 1
+        },
+        {
+          "nick": "히미니",
+          "text": "-대장-",
+          "like": 0
+        },
+        {
+          "nick": "그림록",
+          "text": "아 진삼3가 아니고 2였구나",
+          "like": 0
+        },
+        {
+          "nick": "검은나비",
+          "text": "개인적으로 3이나 4를 해줬으면... 추가로 더빙까지...",
+          "like": 2
+        },
+        {
+          "nick": "문라이트헌터",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "게임키드.",
+          "text": "발매가 10월 이라... 아직 많이 남았네..",
+          "like": 0
         }
       ]
     },
@@ -12737,15 +13823,23 @@
           "v": "우주 최고로 위험한 행성을 혼자서, 혹은 친구와 함께, 아니면 아라키스에 있는 수백의 플레이어 중 누군가와 함께... 살아남을 수 있겠는가?"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/iCKflvFn4p4/hqdefault.jpg"
+          "t": "yt",
+          "v": "iCKflvFn4p4"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "異邦人",
+          "text": "리산 알 가입!",
+          "like": 0
         }
       ]
     },
     {
       "id": "ruliweb-2354694",
-      "title": "팬텀 블레이드 제로 - 티저 트레일러, 풀 트레일러&예약 여름, 스오플 예정",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2354694",
+      "title": "팬텀 블레이드 제로 - 티저 트레일러, 풀 트레일러&예약 여름, 스오플 ...",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2354694?page=2",
       "source": "루리웹",
       "date": "2026.06.03",
       "image": "https://i2.ruliweb.com/ori/26/06/03/19e8a3a6b15137dbd.webp",
@@ -12770,8 +13864,21 @@
           "v": "팬텀 블레이드 제로 - 스테이트 오브 플레이 게임 플레이 & 스토리 딥다이브 여름 공개"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/ZX8mHo0aSbc/hqdefault.jpg"
+          "t": "yt",
+          "v": "ZX8mHo0aSbc"
+        }
+      ],
+      "comments": 2,
+      "topComments": [
+        {
+          "nick": "스네끄",
+          "text": "조자룡인줄;",
+          "like": 1
+        },
+        {
+          "nick": "피부암 통키",
+          "text": "엄청 기대중 잘나와라",
+          "like": 0
         }
       ]
     },
@@ -12787,8 +13894,26 @@
       "author": "이토 시즈카",
       "content": [
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/nlt4o-mLxyM/hqdefault.jpg"
+          "t": "yt",
+          "v": "nlt4o-mLxyM"
+        }
+      ],
+      "comments": 3,
+      "topComments": [
+        {
+          "nick": "roness",
+          "text": "쥬라기 공원?!!?",
+          "like": 1
+        },
+        {
+          "nick": "사쿠라기 야요이",
+          "text": "쥬라기 공원 생각했더니 전혀 다른게임 같다",
+          "like": 1
+        },
+        {
+          "nick": "루리웹-9202130279",
+          "text": "호러버전 쥬라기공원?",
+          "like": 1
         }
       ]
     },
@@ -12808,8 +13933,16 @@
           "v": "『툼 레이더: 아틀란티스의 유산』이 2027년 2월 12일 PlayStation 5, Xbox Series X|S, Steam 및 Nintendo Switch 2로 출시됩니다."
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/fn1EREGsdFg/hqdefault.jpg"
+          "t": "yt",
+          "v": "fn1EREGsdFg"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "{■■■■■■■}",
+          "text": "스위치2로도 발매하는구나오오",
+          "like": 0
         }
       ]
     },
@@ -12829,8 +13962,46 @@
           "v": "『툼 레이더: 아틀란티스의 유산』이 2027년 2월 12일 PlayStation 5, Xbox Series X|S, Steam 및 Nintendo Switch 2로 출시됩니다."
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/fn1EREGsdFg/hqdefault.jpg"
+          "t": "yt",
+          "v": "fn1EREGsdFg"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "고구린",
+          "text": "BEST",
+          "like": 11
+        },
+        {
+          "nick": "딸기토미",
+          "text": "제작사 쉐도우 워리어의 플라잉 와일드 호그네 그래서 정신이 들었나 봄",
+          "like": 1
+        },
+        {
+          "nick": "고구린",
+          "text": "BEST",
+          "like": 11
+        },
+        {
+          "nick": "ninano21",
+          "text": "기존 3부작 스토리는 폐기?",
+          "like": 2
+        },
+        {
+          "nick": "루리웹-6317208818",
+          "text": "ninano21",
+          "like": 1
+        },
+        {
+          "nick": "ninano21",
+          "text": "루리웹-6317208818",
+          "like": 0
+        },
+        {
+          "nick": "루리웹-6317208818",
+          "text": "ninano21",
+          "like": 1
         }
       ]
     },
@@ -12878,8 +14049,16 @@
           "v": "2027년 PlayStation 5로 출시 예정."
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/yWMwRfJj8So/hqdefault.jpg"
+          "t": "yt",
+          "v": "yWMwRfJj8So"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "RAHARU",
+          "text": "이번 발표에서 이게 제일 낫네.",
+          "like": 0
         }
       ]
     },
@@ -12903,8 +14082,31 @@
           "v": "‘셰프 반초’는 ‘다이브 더 다이버’ 제작진이 선보이는 완전히 새로운 독립형 프리퀄로, 위대한 셰프가 되기 위해 아시아 전역을 누비며 명장들에게 사사하는 젊은 반초의 여정을 그립니다."
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/nJP_ZiDYfxY/hqdefault.jpg"
+          "t": "yt",
+          "v": "nJP_ZiDYfxY"
+        }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "스네끄",
+          "text": "뭔가 쿠킹마마라이크 느낌? ㅋㅋㅋ",
+          "like": 1
+        },
+        {
+          "nick": "슈퍼마린",
+          "text": "천하일품 요리왕이 기억나네요~",
+          "like": 0
+        },
+        {
+          "nick": "MD브루노",
+          "text": "노안인거야 안 늙는거얔ㅋㅋ",
+          "like": 0
+        },
+        {
+          "nick": "우주닌자",
+          "text": "뭐야뭐야 이렇게 다음작이 나온다고!!",
+          "like": 0
         }
       ]
     },
@@ -12940,12 +14142,40 @@
           "v": "비평가들의 찬사를 받은 플랫포머의 대담한 재해석을 경험하세요. 놀라운 3D 비주얼과 신비로운 새 영역으로 이어지는 몰입감 넘치는 새로운 스토리로 더욱 개선되었습니다. 솔로 또는 최대 4인 로컬 협동 플레이로 모험을 즐기고, 완전히 새로운 뮤지컬 스테이지를 즐기며, 웅장한 드래곤 라이딩에 올라타는 등 더욱 다양해진 콘텐츠를 경험하세요!"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/2_7BQ9hLGkk/hqdefault.jpg"
+          "t": "yt",
+          "v": "2_7BQ9hLGkk"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/TKfG9hiueak/hqdefault.jpg"
+          "t": "yt",
+          "v": "TKfG9hiueak"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "흑연마왕",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "타이거앙리",
+          "text": "와 올해 할거 엄청 많네",
+          "like": 0
+        },
+        {
+          "nick": "흑연마왕",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "고구린",
+          "text": "흑연마왕",
+          "like": 1
+        },
+        {
+          "nick": "ACE1234",
+          "text": "후속작이 13년만에 드뎌ㅠㅠ",
+          "like": 0
         }
       ]
     },
@@ -12985,14 +14215,15 @@
           "v": "https://i2.ruliweb.com/img/26/06/03/19e8a2f0fce137dbd.webp"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/cen2Lbmmo_Q/hqdefault.jpg"
+          "t": "yt",
+          "v": "cen2Lbmmo_Q"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/TI4qG-wqhLc/hqdefault.jpg"
+          "t": "yt",
+          "v": "TI4qG-wqhLc"
         }
-      ]
+      ],
+      "comments": 0
     },
     {
       "id": "ruliweb-2354686",
@@ -13018,8 +14249,61 @@
           "v": "https://i1.ruliweb.com/img/26/06/03/19e8a2c84bb137dbd.webp"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/OiBo_NgYI5Q/hqdefault.jpg"
+          "t": "yt",
+          "v": "OiBo_NgYI5Q"
+        }
+      ],
+      "comments": 3,
+      "topComments": [
+        {
+          "nick": "마이동숲-",
+          "text": "BEST",
+          "like": 16
+        },
+        {
+          "nick": "루리웹-6867688604",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "헤르센",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "히히히못가",
+          "text": "인섬니악이 이제 소니 간판인듯 전성기 너티독 보는 것 같네요",
+          "like": 6
+        },
+        {
+          "nick": "스네끄",
+          "text": "피가 무슨 홍수처럼 흐르네요 ㅋㅋㅋㅋㅋ",
+          "like": 1
+        },
+        {
+          "nick": "헤르센",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "Comics-Nerd",
+          "text": "진 그레이 외모가...;;",
+          "like": 9
+        },
+        {
+          "nick": "Lucky7Eric",
+          "text": "Comics-Nerd",
+          "like": 1
+        },
+        {
+          "nick": "루리웹-6867688604",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "다크니스。",
+          "text": "피 낭자하는게 화끈하네",
+          "like": 2
         }
       ]
     },
@@ -13035,8 +14319,36 @@
       "author": "로메오카이",
       "content": [
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/XhJeRnHU0Xg/hqdefault.jpg"
+          "t": "yt",
+          "v": "XhJeRnHU0Xg"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "데비랄",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "루리웹-1451125040",
+          "text": "파키스탄은 누가 나오나요???",
+          "like": 0
+        },
+        {
+          "nick": "데비랄",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "bold bot",
+          "text": "핫하시네",
+          "like": 0
+        },
+        {
+          "nick": "동서울신원기",
+          "text": "와 격하게 응원한닷!!",
+          "like": 0
         }
       ]
     },
@@ -13052,8 +14364,61 @@
       "author": "루리웹-912735355120",
       "content": [
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/_RXz02yDyCc/hqdefault.jpg"
+          "t": "yt",
+          "v": "_RXz02yDyCc"
+        }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "sksjhhsa",
+          "text": "BEST",
+          "like": 37
+        },
+        {
+          "nick": "촤아아앗",
+          "text": "BEST",
+          "like": 20
+        },
+        {
+          "nick": "딸기토미",
+          "text": "BEST",
+          "like": 16
+        },
+        {
+          "nick": "V⚔️for Vendetta",
+          "text": "BEST",
+          "like": 13
+        },
+        {
+          "nick": "10받네",
+          "text": "BEST",
+          "like": 7
+        },
+        {
+          "nick": "촤아아앗",
+          "text": "BEST",
+          "like": 20
+        },
+        {
+          "nick": "딸기토미",
+          "text": "BEST",
+          "like": 16
+        },
+        {
+          "nick": "sksjhhsa",
+          "text": "BEST",
+          "like": 37
+        },
+        {
+          "nick": "루리웹-6484285279",
+          "text": "sksjhhsa",
+          "like": 5
+        },
+        {
+          "nick": "멜론머핀",
+          "text": "블랙 보이스라니 흑인들은 자기들보고 흑인(black)이라 부르는것조차 차별이라지 않았나? 특혜받을때 불리는 블랙이랑 그냥 블랙은 다른거냐고 ㅋ",
+          "like": 4
         }
       ]
     },
@@ -13087,6 +14452,59 @@
         {
           "t": "img",
           "v": "https://i1.ruliweb.com/img/26/06/03/19e89797117242da.webp"
+        }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "강등먹여드림",
+          "text": "BEST",
+          "like": 34
+        },
+        {
+          "nick": "A.R.K",
+          "text": "BEST",
+          "like": 19
+        },
+        {
+          "nick": "노라조제발",
+          "text": "BEST",
+          "like": 18
+        },
+        {
+          "nick": "꼴잘알",
+          "text": "BEST",
+          "like": 9
+        },
+        {
+          "nick": "루리웹-3683577574",
+          "text": "BEST",
+          "like": 6
+        },
+        {
+          "nick": "꼴잘알",
+          "text": "BEST",
+          "like": 9
+        },
+        {
+          "nick": "현지아들 아빠누구?",
+          "text": "설마 공룡 잡으라고 쌍권총만 있는건 아니것지ㄷㄷㄷ",
+          "like": 2
+        },
+        {
+          "nick": "강등먹여드림",
+          "text": "BEST",
+          "like": 34
+        },
+        {
+          "nick": "루리웹-2378418937",
+          "text": "썸네일 3개 중 하나 나왔고 나머지는 올버린과 파판인데",
+          "like": 2
+        },
+        {
+          "nick": "루리웹-6709528615",
+          "text": "1만 두번째 리메이크인데 2도 좀 해주라",
+          "like": 1
         }
       ]
     },
@@ -13133,6 +14551,19 @@
           "t": "p",
           "v": "007 퍼스트 라이트의 제작비가 압도적으로 높은 것으로 확인"
         }
+      ],
+      "comments": 2,
+      "topComments": [
+        {
+          "nick": "늘항상감사합니다",
+          "text": "돈이 아깝지 않았어요 플스5 프로로 DL , 패키지 , 듀얼센스 한정판까지 구입했습니다 응원합니다",
+          "like": 6
+        },
+        {
+          "nick": "사랑손님",
+          "text": "게임 재밌었습니다. 그런데 덴마크에서 제일 비싼 문화상품치고는 한국어 번역 상태가 많이 아쉽더군요.",
+          "like": 2
+        }
       ]
     },
     {
@@ -13167,8 +14598,61 @@
           "v": "https://i3.ruliweb.com/img/26/06/03/19e89528cb853d19c.webp"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/a1i801SDrJA/hqdefault.jpg"
+          "t": "yt",
+          "v": "a1i801SDrJA"
+        }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "현지아들 아빠누구?",
+          "text": "BEST",
+          "like": 26
+        },
+        {
+          "nick": "노코군",
+          "text": "BEST",
+          "like": 14
+        },
+        {
+          "nick": "irwin",
+          "text": "BEST",
+          "like": 11
+        },
+        {
+          "nick": "buzzler",
+          "text": "BEST",
+          "like": 15
+        },
+        {
+          "nick": "I에도가와코난I",
+          "text": "BEST",
+          "like": 13
+        },
+        {
+          "nick": "irwin",
+          "text": "BEST",
+          "like": 11
+        },
+        {
+          "nick": "I에도가와코난I",
+          "text": "BEST",
+          "like": 13
+        },
+        {
+          "nick": "루리웹-6895030147",
+          "text": "이것마져 죽으면 ㄷㄷ",
+          "like": 2
+        },
+        {
+          "nick": "노코군",
+          "text": "BEST",
+          "like": 14
+        },
+        {
+          "nick": "현지아들 아빠누구?",
+          "text": "BEST",
+          "like": 26
         }
       ]
     },
@@ -13188,8 +14672,31 @@
           "v": "2026년 10월 15일 PS5 & PS4 출시 예정"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/Kgp9iOHxrFw/hqdefault.jpg"
+          "t": "yt",
+          "v": "Kgp9iOHxrFw"
+        }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "호민이.",
+          "text": "잼있겠다!!",
+          "like": 0
+        },
+        {
+          "nick": "사씨남바위",
+          "text": "진짜 잘됐네요. 특히 토이스토리 3 PS3버전이 그렇게 갓겜이라는데, 정작 스팀에서 구입할 수 있는 PC판은 똥겜이라(최적화 뭐 그런 게 아니라 아예 게임 구성자체가 다름) PS3판 토이스토리 3 를 해보는 게 꿈이었어요.",
+          "like": 0
+        },
+        {
+          "nick": "RTX5080_4K MFGx6",
+          "text": "와우 토이스토리 찐팬으로써 너무 기쁩니다 ㅜㅜ",
+          "like": 0
+        },
+        {
+          "nick": "LAFC",
+          "text": "이번에는 한글화 될려나",
+          "like": 0
         }
       ]
     },
@@ -13200,7 +14707,7 @@
       "source": "루리웹",
       "date": "2026.06.03",
       "time": "01:20:24",
-      "views": 273,
+      "views": 280,
       "comments": 0,
       "summary": "studio 909는 '블루 프린스', '로드 96'의 영향을 받은 미스터리 어드벤처 신작 '콰이어트 급행 909호실'을 2027년 스팀 출시 예정으로 공개했으며...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/03/19e8927d4d1_txkqzr.webp",
@@ -13212,7 +14719,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 273 | 루리웹 |\n 입력 2026.06.03 (01:20:24)"
+          "v": "조회수 280 | 루리웹 |\n 입력 2026.06.03 (01:20:24)"
         },
         {
           "t": "p",
@@ -13515,8 +15022,8 @@
           "v": "목록보기"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/wWBWGn1Kan4/hqdefault.jpg"
+          "t": "yt",
+          "v": "wWBWGn1Kan4"
         }
       ]
     },
@@ -13532,8 +15039,36 @@
       "author": "畳み込みNN",
       "content": [
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/L40tBfKiyww/hqdefault.jpg"
+          "t": "yt",
+          "v": "L40tBfKiyww"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "A.R.K",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "A.R.K",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "코발렌코",
+          "text": "와 권총으로 해리스 테크닉 구MW3이후 얼마만이야...",
+          "like": 2
+        },
+        {
+          "nick": "역대가를 보면짖는개",
+          "text": "이번작은 진짜 공들인게 너무 느껴지네 필구!!",
+          "like": 2
+        },
+        {
+          "nick": "EIMMIIMM",
+          "text": "k2소총에다가 한국배경 이거 안살수가..",
+          "like": 1
         }
       ]
     },
@@ -13553,8 +15088,61 @@
           "v": "한국 시간으로 06시 시작"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/RvyezhN16IU/hqdefault.jpg"
+          "t": "yt",
+          "v": "RvyezhN16IU"
+        }
+      ],
+      "comments": 4,
+      "topComments": [
+        {
+          "nick": "작은영웅",
+          "text": "BEST",
+          "like": 20
+        },
+        {
+          "nick": "무컁",
+          "text": "BEST",
+          "like": 15
+        },
+        {
+          "nick": "땅끝에서 오다",
+          "text": "BEST",
+          "like": 11
+        },
+        {
+          "nick": "모근할짝주르릅",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "모근할짝주르릅",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "작은영웅",
+          "text": "BEST",
+          "like": 20
+        },
+        {
+          "nick": "무컁",
+          "text": "BEST",
+          "like": 15
+        },
+        {
+          "nick": "똥망겜",
+          "text": "무컁",
+          "like": 0
+        },
+        {
+          "nick": "땅끝에서 오다",
+          "text": "BEST",
+          "like": 11
+        },
+        {
+          "nick": "hide™",
+          "text": "땅끝에서 오다",
+          "like": 1
         }
       ]
     },
@@ -13570,10 +15158,11 @@
       "author": "이토 시즈카",
       "content": [
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/6878YYX1LE8/hqdefault.jpg"
+          "t": "yt",
+          "v": "6878YYX1LE8"
         }
-      ]
+      ],
+      "comments": 0
     },
     {
       "id": "ruliweb-2354674",
@@ -14002,6 +15591,59 @@
           "t": "img",
           "v": "https://i1.ruliweb.com/img/26/06/02/19e888f73a6242da.webp"
         }
+      ],
+      "comments": 2,
+      "topComments": [
+        {
+          "nick": "몽환",
+          "text": "BEST",
+          "like": 13
+        },
+        {
+          "nick": "파인짱",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "몽환",
+          "text": "BEST",
+          "like": 13
+        },
+        {
+          "nick": "뭘잘못했는진알아?",
+          "text": "푸린은 진짜 ㅅㅂ ㅋㅋㅋㅋ 어쩜 좋냐",
+          "like": 0
+        },
+        {
+          "nick": "리코리스 리코일",
+          "text": "팬텀 가지거 싶다",
+          "like": 0
+        },
+        {
+          "nick": "파인짱",
+          "text": "BEST",
+          "like": 5
+        },
+        {
+          "nick": "bearface",
+          "text": "미니피겨가 없긴한데 라이센스 치고는 피스당 가격은 꽤 괜찮게 나왔네요. 그런데 환율때문에 국내 정발가는 좀 쎌지도 모르겠네",
+          "like": 2
+        },
+        {
+          "nick": "파인짱",
+          "text": "파인짱",
+          "like": 2
+        },
+        {
+          "nick": "다이죠부냥",
+          "text": "와....소리가 나오게 하는 블럭도 따로 팔고 무선 충전인거 같은데 저거 방전 되면 교체도 못하겠네 ㅠㅠ",
+          "like": 0
+        },
+        {
+          "nick": "타르쿤",
+          "text": "푸린 개얼탱이 없게 생겼네ㅋㅋㅋㅋㅋㅋㅋㅋㅋ 사야겠다",
+          "like": 1
+        }
       ]
     },
     {
@@ -14035,6 +15677,59 @@
           "t": "img",
           "v": "https://i3.ruliweb.com/img/26/06/02/19e88a33d189c16f.webp"
         }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "VㅇL cㅇm",
+          "text": "BEST",
+          "like": 116
+        },
+        {
+          "nick": "바로쌀뇨나",
+          "text": "BEST",
+          "like": 80
+        },
+        {
+          "nick": "랜서팬더",
+          "text": "BEST",
+          "like": 55
+        },
+        {
+          "nick": "메타는과학",
+          "text": "BEST",
+          "like": 56
+        },
+        {
+          "nick": "히히히못가",
+          "text": "BEST",
+          "like": 49
+        },
+        {
+          "nick": "히히히못가",
+          "text": "BEST",
+          "like": 49
+        },
+        {
+          "nick": "루리웹-765165198",
+          "text": "히히히못가",
+          "like": 5
+        },
+        {
+          "nick": "ㅎㅠㅎ",
+          "text": "히히히못가",
+          "like": 23
+        },
+        {
+          "nick": "바로쌀뇨나",
+          "text": "BEST",
+          "like": 80
+        },
+        {
+          "nick": "VㅇL cㅇm",
+          "text": "BEST",
+          "like": 116
+        }
       ]
     },
     {
@@ -14064,6 +15759,14 @@
           "t": "img",
           "v": "https://i2.ruliweb.com/img/26/06/02/19e889a8d389c16f.webp"
         }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "샤인블링",
+          "text": "인니 축구협회는 왜 잘나가던 신태용 감독을 경질했을까...",
+          "like": 0
+        }
       ]
     },
     {
@@ -14080,6 +15783,39 @@
         {
           "t": "p",
           "v": "스타폭스 체험기: 프랜차이즈에 불어넣은 새로운 희망"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "신요르서브즈",
+          "text": "BEST",
+          "like": 9
+        },
+        {
+          "nick": "0M0)",
+          "text": "리부트도 이제 두번째니까 이걸로 시리즈 제대로 이어나갔음 좋겠군요",
+          "like": 1
+        },
+        {
+          "nick": "신요르서브즈",
+          "text": "BEST",
+          "like": 9
+        },
+        {
+          "nick": "사씨남바위",
+          "text": "신요르서브즈",
+          "like": 0
+        },
+        {
+          "nick": "50억부자",
+          "text": "이거 하려고 스위치2 샀내요",
+          "like": 3
+        },
+        {
+          "nick": "마료마리옹",
+          "text": "리부트만 3번째라 어드벤쳐->어썰트->커맨드의 계보는 사실상 없어졌으니, 완전한 후속작을 보고싶긴 하네요. 이번 작으로 다시 부활하길",
+          "like": 0
         }
       ]
     },
@@ -14099,10 +15835,11 @@
           "v": "https://i1.ruliweb.com/img/26/06/02/19e888c7b7d47745a.webp"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/iaQ7SlJbvpE/hqdefault.jpg"
+          "t": "yt",
+          "v": "iaQ7SlJbvpE"
         }
-      ]
+      ],
+      "comments": 0
     },
     {
       "id": "ruliweb-2354669",
@@ -14131,6 +15868,59 @@
           "t": "img",
           "v": "https://i1.ruliweb.com/img/26/06/02/19e88886be19c16f.webp"
         }
+      ],
+      "comments": 3,
+      "topComments": [
+        {
+          "nick": "오덕살맨",
+          "text": "BEST",
+          "like": 91
+        },
+        {
+          "nick": "오덕살맨",
+          "text": "BEST",
+          "like": 65
+        },
+        {
+          "nick": "내가곶아라니",
+          "text": "BEST",
+          "like": 58
+        },
+        {
+          "nick": "루리웹-454946204",
+          "text": "BEST",
+          "like": 58
+        },
+        {
+          "nick": "Kutna Hora",
+          "text": "BEST",
+          "like": 55
+        },
+        {
+          "nick": "내가곶아라니",
+          "text": "BEST",
+          "like": 58
+        },
+        {
+          "nick": "루리웹-6895030147",
+          "text": "내가곶아라니",
+          "like": 10
+        },
+        {
+          "nick": "gamerGUL",
+          "text": "내가곶아라니",
+          "like": 11
+        },
+        {
+          "nick": "Amorada",
+          "text": "내가곶아라니",
+          "like": 20
+        },
+        {
+          "nick": "제미나이야 부탁해",
+          "text": "플스 퍼스트파티 게임이 과거에 비해서 나오는 갯수가 너무 적어진거 같은데 타이틀 갯수 대비 비례해서 줄었다는건가",
+          "like": 3
+        }
       ]
     },
     {
@@ -14149,8 +15939,16 @@
           "v": "https://i1.ruliweb.com/img/26/06/02/19e888987a747745a.webp"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/azfptYj4GHQ/hqdefault.jpg"
+          "t": "yt",
+          "v": "azfptYj4GHQ"
+        }
+      ],
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "AMiLUMi",
+          "text": "스타폭스 짭이네...PSN도 이런겜 좀 걸러내야 되지 않나...",
+          "like": 0
         }
       ]
     },
@@ -14170,8 +15968,26 @@
           "v": "https://i3.ruliweb.com/img/26/06/02/19e8884cf1047745a.webp"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/KrDwV6ZoNqc/hqdefault.jpg"
+          "t": "yt",
+          "v": "KrDwV6ZoNqc"
+        }
+      ],
+      "comments": 3,
+      "topComments": [
+        {
+          "nick": "EVAGREEN",
+          "text": "어우 유튜브 섬네일 깜짝 놀랬네요......",
+          "like": 1
+        },
+        {
+          "nick": "Cirrus",
+          "text": "트레일러는 진짜 자극적으로 잘뽑았네..",
+          "like": 0
+        },
+        {
+          "nick": "현지아들 아빠누구?",
+          "text": "호러의 계절.여름은 여름이구나",
+          "like": 0
         }
       ]
     },
@@ -14182,7 +15998,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "18:40:22",
-      "views": 288,
+      "views": 289,
       "comments": 0,
       "summary": "엔비디아는 컴퓨텍스 2026에서 개인용 ai 시대 개막을 알리며 rtx 스파크 기반의 신개념 윈도우 pc를 공개했고, dlss 4.5 레이 리컨스트럭션을 통해 게...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e87ad5f46_osfrue.webp",
@@ -14194,7 +16010,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 288 | 루리웹 |\n 입력 2026.06.02 (18:40:22)"
+          "v": "조회수 289 | 루리웹 |\n 입력 2026.06.02 (18:40:22)"
         },
         {
           "t": "p",
@@ -14429,7 +16245,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "17:55:36",
-      "views": 250,
+      "views": 252,
       "comments": 0,
       "summary": "인텔은 컴퓨텍스 2026에서 칩부터 시스템 수준까지 ai 혁신 기술을 발표하며, 제온 6+ 프로세서 기반의 랙 스케일 ai 인프라와 '벡터 코어 컴퓨트'를 통한 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e878b9fd1_fgmdbo.webp",
@@ -14441,7 +16257,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 250 | 루리웹 |\n 입력 2026.06.02 (17:55:36)"
+          "v": "조회수 252 | 루리웹 |\n 입력 2026.06.02 (17:55:36)"
         },
         {
           "t": "p",
@@ -14660,7 +16476,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "16:50:00",
-      "views": 3688,
+      "views": 3706,
       "comments": 15,
       "summary": "브레인 펑크 액션 rpg '스칼렛 스트링스'(스칼렛 넥서스)의 글로벌 판매량이 200만 장을 돌파하며 큰 성공을 거두었다. 반다이남코 엔터테인먼트는 이 같은 성과...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e8746f325_ivbkzg.webp",
@@ -14672,7 +16488,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 3688 | 루리웹 |\n 입력 2026.06.02 (16:50:00)"
+          "v": "조회수 3706 | 루리웹 |\n 입력 2026.06.02 (16:50:00)"
         },
         {
           "t": "p",
@@ -14814,6 +16630,58 @@
           "t": "p",
           "v": "목록보기"
         }
+      ],
+      "topComments": [
+        {
+          "nick": "키르비아",
+          "text": "BEST",
+          "like": 10
+        },
+        {
+          "nick": "이리나청",
+          "text": "BEST",
+          "like": 9
+        },
+        {
+          "nick": "치석케어",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "치석케어",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "月山明博",
+          "text": "할인 자주해서..",
+          "like": 0
+        },
+        {
+          "nick": "키르비아",
+          "text": "BEST",
+          "like": 10
+        },
+        {
+          "nick": "구겨진종이",
+          "text": "오. 많이 팔렸네. 후속작 나오려나?",
+          "like": 0
+        },
+        {
+          "nick": "이리나청",
+          "text": "BEST",
+          "like": 9
+        },
+        {
+          "nick": "치석케어",
+          "text": "이리나청",
+          "like": 0
+        },
+        {
+          "nick": "charka",
+          "text": "매력적인 게임인데 왜 게임을 두번 하게 만드는 구성인진;;; 스토리도 좀 어렵고...",
+          "like": 1
+        }
       ]
     },
     {
@@ -14823,7 +16691,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "16:07:10",
-      "views": 2848,
+      "views": 2868,
       "comments": 25,
       "summary": "펄어비스가 '붉은사막'의 3분기 업데이트 계획을 공개하며, 6월부터 9월까지 신규 콘텐츠와 기존 경험 강화를 예고했다. 주요 변화로는 봉쇄 전후 흐름 개선 및 거...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e8729de0a_lkqatj.webp",
@@ -14835,7 +16703,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 2848 | 루리웹 |\n 입력 2026.06.02 (16:07:10)"
+          "v": "조회수 2868 | 루리웹 |\n 입력 2026.06.02 (16:07:10)"
         },
         {
           "t": "p",
@@ -14983,6 +16851,10 @@
         },
         {
           "t": "p",
+          "v": "이 게임은 어쩔수 없이 맵 곳곳을 탐험하도록 의도적으로 만든거 같네요"
+        },
+        {
+          "t": "p",
           "v": "별빛이 남긴 기록 - 비석을 연구하는 트롤"
         },
         {
@@ -14999,15 +16871,63 @@
         },
         {
           "t": "p",
-          "v": "데미안 신속장전 보고배우기 챕터11에서도 가능합니다"
-        },
-        {
-          "t": "p",
           "v": "댓글"
         },
         {
           "t": "p",
           "v": "목록보기"
+        }
+      ],
+      "topComments": [
+        {
+          "nick": "LllllL",
+          "text": "BEST",
+          "like": 30
+        },
+        {
+          "nick": "루리웹-5385218457",
+          "text": "BEST",
+          "like": 24
+        },
+        {
+          "nick": "로또의문양",
+          "text": "BEST",
+          "like": 20
+        },
+        {
+          "nick": "DarkBerry",
+          "text": "BEST",
+          "like": 11
+        },
+        {
+          "nick": "옹피",
+          "text": "BEST",
+          "like": 8
+        },
+        {
+          "nick": "구름닷컴",
+          "text": "9월에 다시 시작해야하나...쩐다.",
+          "like": 4
+        },
+        {
+          "nick": "적도펭귄",
+          "text": "구름닷컴",
+          "like": 1
+        },
+        {
+          "nick": "버틸수가 없다",
+          "text": "▲클리프의 여정을 더 몰입할 수 있도록 스토리의 개연성을 개선한다. 붉은사막의 주요 장면의 흐름과 개연성을 보강해 더욱 자연스럽고 깊이 있는 이야기를 즐길 수 있다. 아니 진짜 미쳤네..그냥 게임을 새로 만드는 수준인데;;",
+          "like": 7
+        },
+        {
+          "nick": "옹피",
+          "text": "BEST",
+          "like": 8
+        },
+        {
+          "nick": "조이멘맨777",
+          "text": "웅카나 데미안을 처음부터 고를 수 있는 캐릭으로!!!",
+          "like": 1
         }
       ]
     },
@@ -15018,7 +16938,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "15:41:58",
-      "views": 363,
+      "views": 364,
       "comments": 0,
       "summary": "엔비디아는 gtc 타이베이에서 1페타플롭급 성능의 로컬 ai 에이전트 pc 'rtx 스파크'를 공개하며, 개인용 ai 컴퓨팅의 새로운 패러다임을 제시했다. 이와 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e87071e84_jynczp.webp",
@@ -15030,7 +16950,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 363 | 루리웹 |\n 입력 2026.06.02 (15:41:58)"
+          "v": "조회수 364 | 루리웹 |\n 입력 2026.06.02 (15:41:58)"
         },
         {
           "t": "p",
@@ -15353,12 +17273,12 @@
           "v": "목록보기"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/XYvUsBFkJMA/hqdefault.jpg"
+          "t": "yt",
+          "v": "XYvUsBFkJMA"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/E-aMlA7lX94/hqdefault.jpg"
+          "t": "yt",
+          "v": "E-aMlA7lX94"
         }
       ]
     },
@@ -15369,7 +17289,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "15:06:42",
-      "views": 1357,
+      "views": 1373,
       "comments": 7,
       "summary": "imc게임즈의 pc mmorpg '트리 오브 세이비어'가 6월 2일 신규 클래스 '샤드브링어'를 출시하며 업데이트를 진행한다. 샤드브링어는 장비 구애 없이 고유의...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e8721fb54_oljicn.webp",
@@ -15381,7 +17301,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 1357 | 루리웹 |\n 입력 2026.06.02 (15:06:42)"
+          "v": "조회수 1373 | 루리웹 |\n 입력 2026.06.02 (15:06:42)"
         },
         {
           "t": "p",
@@ -15540,8 +17460,50 @@
           "v": "목록보기"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/th_5PbCni6Y/hqdefault.jpg"
+          "t": "yt",
+          "v": "th_5PbCni6Y"
+        }
+      ],
+      "topComments": [
+        {
+          "nick": "DokeⅤ",
+          "text": "BEST",
+          "like": 7
+        },
+        {
+          "nick": "뮤람",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "몰루?",
+          "text": "진짜 초반에 버그좀 좀 고치고 출시했으면 이런 취급을 받을만한 게임은 아닌데",
+          "like": 2
+        },
+        {
+          "nick": "DokeⅤ",
+          "text": "BEST",
+          "like": 7
+        },
+        {
+          "nick": "루리웹-0104169035",
+          "text": "DokeⅤ",
+          "like": 0
+        },
+        {
+          "nick": "뮤람",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "리쪼만조-",
+          "text": "헐.. 머지. 피시버전은 버린거 아니였나..진짜 일러스트 하나는 고트인데 레이드로 바뀌고 성물나오고나서 망...아! 그전에 버그들로 이미..",
+          "like": 0
+        },
+        {
+          "nick": "르아네드",
+          "text": "시스템만보면 참재밋어보이는데... 하",
+          "like": 0
         }
       ]
     },
@@ -15552,7 +17514,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "14:44:48",
-      "views": 167,
+      "views": 168,
       "comments": 0,
       "summary": "삼호북스에서 출간하는 《축구 유니폼 이야기》는 세계 명문 클럽과 국가대표팀의 유니폼 수백 점을 통해 축구 역사의 상징적 순간들을 조명하는 도서다. 이 책은 단순한...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e86dcf17b_vzgfcy.webp",
@@ -15564,7 +17526,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 167 | 루리웹 |\n 입력 2026.06.02 (14:44:48)"
+          "v": "조회수 168 | 루리웹 |\n 입력 2026.06.02 (14:44:48)"
         },
         {
           "t": "p",
@@ -15855,7 +17817,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "14:31:48",
-      "views": 312,
+      "views": 313,
       "comments": 0,
       "summary": "이엠텍아이엔씨가 amd rdna 4 아키텍처 기반의 sapphire 라데온 rx 9070 gre pulse oc d6 12gb 그래픽카드를 출시하며, 게임클럭 2...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e86d107a6_xvwcba.webp",
@@ -15867,7 +17829,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 312 | 루리웹 |\n 입력 2026.06.02 (14:31:48)"
+          "v": "조회수 313 | 루리웹 |\n 입력 2026.06.02 (14:31:48)"
         },
         {
           "t": "p",
@@ -16054,7 +18016,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "14:27:38",
-      "views": 1284,
+      "views": 1294,
       "comments": 1,
       "summary": "mmorpg '아키텍트: 랜드 오브 엑자일'이 6월 2일부터 7월 1일까지 tv 애니메이션 '진격의 거인'과 컬래버레이션을 진행하며, '진격의 범람' 콘셉트로 거...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e86cc6fb6_dizhuk.webp",
@@ -16066,7 +18028,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 1285 | 루리웹 |\n 입력 2026.06.02 (14:27:38)"
+          "v": "조회수 1294 | 루리웹 |\n 입력 2026.06.02 (14:27:38)"
         },
         {
           "t": "p",
@@ -16236,6 +18198,13 @@
           "t": "p",
           "v": "목록보기"
         }
+      ],
+      "topComments": [
+        {
+          "nick": "PIXAR",
+          "text": "드림에이지놈들 돈에 미쳐가지고 겜 퀄리티에 비해 과금수준만 겁나 높음",
+          "like": 2
+        }
       ]
     },
     {
@@ -16245,7 +18214,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "14:20:06",
-      "views": 236,
+      "views": 237,
       "comments": 0,
       "summary": "블로믹스와 블루포션게임즈가 공동 서비스하는 mmorpg '에오스 블랙'이 신규 및 복귀 유저 지원을 위한 부스팅 서버 '루스캠프'와 '마룬캠프' 오픈을 앞두고 사...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e86c641d7_opxdga.webp",
@@ -16257,7 +18226,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 236 | 루리웹 |\n 입력 2026.06.02 (14:20:06)"
+          "v": "조회수 237 | 루리웹 |\n 입력 2026.06.02 (14:20:06)"
         },
         {
           "t": "p",
@@ -16396,8 +18365,8 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "14:16:57",
-      "views": 2352,
-      "comments": 11,
+      "views": 2375,
+      "comments": 12,
       "summary": "라인게임즈는 '창세기전 모바일'에 신규 캐릭터 '감마'를 추가하고 '코스모스 사가' 시즌2를 개막하며 대규모 업데이트를 진행했다. 이번 시즌2에서는 시즈의 시점에...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e86c1b5ee_zrqlfc.webp",
       "author": "김영훈 기자",
@@ -16408,7 +18377,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 2352 | 루리웹 |\n 입력 2026.06.02 (14:16:57)"
+          "v": "조회수 2375 | 루리웹 |\n 입력 2026.06.02 (14:16:57)"
         },
         {
           "t": "p",
@@ -16595,8 +18564,60 @@
           "v": "목록보기"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/5GTqp_Ur3Iw/hqdefault.jpg"
+          "t": "yt",
+          "v": "5GTqp_Ur3Iw"
+        }
+      ],
+      "topComments": [
+        {
+          "nick": "샤오무Mk.2",
+          "text": "BEST",
+          "like": 14
+        },
+        {
+          "nick": "00703",
+          "text": "BEST",
+          "like": 10
+        },
+        {
+          "nick": "루리웹-0702517420",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "샤오무Mk.2",
+          "text": "BEST",
+          "like": 14
+        },
+        {
+          "nick": "미친거같애",
+          "text": "진짜 천박하네;;",
+          "like": 2
+        },
+        {
+          "nick": "00703",
+          "text": "BEST",
+          "like": 10
+        },
+        {
+          "nick": "루리웹-0702517420",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "月山明博",
+          "text": "B급의 수호자 Tony..",
+          "like": 1
+        },
+        {
+          "nick": "als6210",
+          "text": "메리가 본디지 의상이 원본인건 아는데 저건 좀...",
+          "like": 1
+        },
+        {
+          "nick": "돞피오",
+          "text": "아 템페스트 결국 내냐",
+          "like": 0
         }
       ]
     },
@@ -16607,7 +18628,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "14:07:43",
-      "views": 1605,
+      "views": 1624,
       "comments": 7,
       "summary": "카카오게임즈의 '패스 오브 엑자일 2'가 신규 확장팩 '고대의 귀환' 업데이트 이후 pc방 순위 15위로 급등하며 큰 인기를 끌고 있다. 이용자들은 신규 리그 콘...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e86b9e856_afkmol.webp",
@@ -16619,7 +18640,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 1605 | 루리웹 |\n 입력 2026.06.02 (14:07:43)"
+          "v": "조회수 1624 | 루리웹 |\n 입력 2026.06.02 (14:07:43)"
         },
         {
           "t": "p",
@@ -16841,6 +18862,58 @@
           "t": "p",
           "v": "목록보기"
         }
+      ],
+      "topComments": [
+        {
+          "nick": "리쪼만조-",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "와인v",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "콘마요",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "Momentary_Life",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "리쪼만조-",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "Momentary_Life",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "와인v",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "kodakportra",
+          "text": "세팅 갖춰지고 나서는 시원하게 사냥되는건 알겠는데 초반에 스킬도 몇개 없는데 피하고 하면서 키우는거 반복이 너무 힘듬 그냥 레벨이랑 맞춰주고 엔드콘텐츠 할 수 있는 상태로 시작할 수 있는 옵션하나 만들어주면 안되나",
+          "like": 0
+        },
+        {
+          "nick": "콘마요",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "루리웹-2727598494",
+          "text": "내가 이겜 얼마주고 샀더라 ? 이젠 기억도 안난다 ... 돈값은 했다고 봄 , 재밌게 했었음 , 문제는 오랫만에 재접속 해서 뭔가 할려고하니까 .. 너무 많이 바껴서 손이 안가더라 ;;; 얼굴 그려진 그거 존나 많이 모아놓았는데 , 시즌 바뀌면 다 무쓸모 라는거 알고나서 충격 ㅋㅋㅋ",
+          "like": 0
+        }
       ]
     },
     {
@@ -16850,7 +18923,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "13:40:08",
-      "views": 302,
+      "views": 304,
       "comments": 0,
       "summary": "jl studio가 6월 steam next fest에 참가하는 인디 게임 'slots & sword & magic'의 데모를 공개했다. 이 게임은 턴제 슬롯 전...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e86a0459a_oplxfe.webp",
@@ -16862,7 +18935,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 302 | 루리웹 |\n 입력 2026.06.02 (13:40:08)"
+          "v": "조회수 304 | 루리웹 |\n 입력 2026.06.02 (13:40:08)"
         },
         {
           "t": "p",
@@ -17029,8 +19102,8 @@
           "v": "목록보기"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/KVRMQLegdJg/hqdefault.jpg"
+          "t": "yt",
+          "v": "KVRMQLegdJg"
         }
       ]
     },
@@ -17041,7 +19114,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "13:05:46",
-      "views": 735,
+      "views": 737,
       "comments": 0,
       "summary": "오는 6월 16일 개최되는 'ndc 26'은 게임 기획, 프로그래밍부터 ai, 블록체인 등 광범위한 주제를 다루며 업계의 기대를 모으고 있다. 특히 올해는 단일 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e86823f3e_nvgdtm.webp",
@@ -17053,7 +19126,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 735 | 루리웹 |\n 입력 2026.06.02 (13:05:46)"
+          "v": "조회수 737 | 루리웹 |\n 입력 2026.06.02 (13:05:46)"
         },
         {
           "t": "p",
@@ -17200,7 +19273,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "13:00:29",
-      "views": 459,
+      "views": 461,
       "comments": 0,
       "summary": "판 스튜디오는 다차원 액션 rpg '듀엣 나이트 어비스'의 신규 버전 '질주하는 별들'을 대규모 업데이트하며, 빅토리아 시대풍의 신규 지역 '플로렌티아 블룸필드역...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e865ffdf5_vpmfek.webp",
@@ -17212,7 +19285,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 459 | 루리웹 |\n 입력 2026.06.02 (13:00:29)"
+          "v": "조회수 461 | 루리웹 |\n 입력 2026.06.02 (13:00:29)"
         },
         {
           "t": "p",
@@ -17387,7 +19460,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "13:00:26",
-      "views": 231,
+      "views": 232,
       "comments": 0,
       "summary": "홍콩의 1인 개발자 singkeys가 2d 네온 판타지 액션 rpg '번영의 서'의 무료 데모를 2026년 6월 2일 스팀에 배포하고, 글로벌 인디 게임 쇼케이스...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e86542485_jhsymt.webp",
@@ -17399,7 +19472,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 231 | 루리웹 |\n 입력 2026.06.02 (13:00:26)"
+          "v": "조회수 232 | 루리웹 |\n 입력 2026.06.02 (13:00:26)"
         },
         {
           "t": "p",
@@ -17586,8 +19659,8 @@
           "v": "목록보기"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/KqSq4CMT4g8/hqdefault.jpg"
+          "t": "yt",
+          "v": "KqSq4CMT4g8"
         }
       ]
     },
@@ -17598,7 +19671,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "13:00:24",
-      "views": 200,
+      "views": 201,
       "comments": 0,
       "summary": "엔비디아가 대만 주요 기업들과 협력하여 베라 루빈 인프라 생산을 확대하며 전 세계 에이전틱 ai 팩토리 구축을 가속화한다고 발표했다. tsmc, 폭스콘 등은 엔비...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e867d62a4_tihzgo.webp",
@@ -17610,7 +19683,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 200 | 루리웹 |\n 입력 2026.06.02 (13:00:24)"
+          "v": "조회수 201 | 루리웹 |\n 입력 2026.06.02 (13:00:24)"
         },
         {
           "t": "p",
@@ -17833,7 +19906,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "13:00:22",
-      "views": 177,
+      "views": 178,
       "comments": 0,
       "summary": "엔비디아는 컴퓨텍스 2026에서 오픈 월드 파운데이션 모델 '코스모스 3'를 공개하며, 텍스트, 비디오, 이미지, 음향을 통합한 비전 추론 및 멀티모달 생성을 통...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e8662b687_zoihlv.webp",
@@ -17845,7 +19918,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 177 | 루리웹 |\n 입력 2026.06.02 (13:00:22)"
+          "v": "조회수 178 | 루리웹 |\n 입력 2026.06.02 (13:00:22)"
         },
         {
           "t": "p",
@@ -18108,7 +20181,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "13:00:20",
-      "views": 154,
+      "views": 155,
       "comments": 0,
       "summary": "엔비디아는 글로벌 ai 컴퓨팅 수요 증가에 대응하여 ai 클라우드 생태계를 아프리카, 남미 등 6개 대륙으로 확장하며, 코어위브, 네비우스 등 파트너사와 협력해 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e862fc36e_ykdcpb.webp",
@@ -18120,7 +20193,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 154 | 루리웹 |\n 입력 2026.06.02 (13:00:20)"
+          "v": "조회수 155 | 루리웹 |\n 입력 2026.06.02 (13:00:20)"
         },
         {
           "t": "p",
@@ -18371,7 +20444,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "13:00:17",
-      "views": 175,
+      "views": 176,
       "comments": 0,
       "summary": "엔비디아는 마이크로소프트와 협력하여 개인용 ai 시대에 맞춰 1페타플롭급 성능의 rtx 스파크 슈퍼칩을 탑재한 윈도우 pc를 공개하며, ai, 창작, 게이밍 전반...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e8623c3b9_fncvpx.webp",
@@ -18383,7 +20456,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 175 | 루리웹 |\n 입력 2026.06.02 (13:00:17)"
+          "v": "조회수 176 | 루리웹 |\n 입력 2026.06.02 (13:00:17)"
         },
         {
           "t": "p",
@@ -18686,7 +20759,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "13:00:15",
-      "views": 167,
+      "views": 168,
       "comments": 0,
       "summary": "엔비디아의 젠슨 황 ceo는 gtc 타이베이에서 ai가 수익과 gdp의 핵심 동력임을 강조하며, 에이전트 중심의 새로운 컴퓨팅 패러다임을 제시했다. 그는 ai 팩...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e8605dba6_xlsuqo.webp",
@@ -18698,7 +20771,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 167 | 루리웹 |\n 입력 2026.06.02 (13:00:15)"
+          "v": "조회수 168 | 루리웹 |\n 입력 2026.06.02 (13:00:15)"
         },
         {
           "t": "p",
@@ -19141,8 +21214,8 @@
           "v": "목록보기"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/wSp6AiNIrsY/hqdefault.jpg"
+          "t": "yt",
+          "v": "wSp6AiNIrsY"
         }
       ]
     },
@@ -19153,7 +21226,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "13:00:13",
-      "views": 256,
+      "views": 258,
       "comments": 0,
       "summary": "경기게임마이스터고가 지난 1일 프랑스 gaming campus 학생 6명과 교사 2명을 초청해 국제교류 프로그램을 운영하며 글로벌 게임 인재 양성 기반을 다졌다....",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e864871cd_fcrlod.webp",
@@ -19165,7 +21238,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 256 | 루리웹 |\n 입력 2026.06.02 (13:00:13)"
+          "v": "조회수 258 | 루리웹 |\n 입력 2026.06.02 (13:00:13)"
         },
         {
           "t": "p",
@@ -19300,7 +21373,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "13:00:11",
-      "views": 147,
+      "views": 149,
       "comments": 0,
       "summary": "슈퍼조이가 배급하는 힐링 방치형 시뮬레이션 게임 '폴라리아'가 지난 5월 '플레이엑스포 2026'과 'game aicon seoul 2026'에 참가하며 성황리에...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e865b785a_ewdpnc.webp",
@@ -19312,7 +21385,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 147 | 루리웹 |\n 입력 2026.06.02 (13:00:11)"
+          "v": "조회수 149 | 루리웹 |\n 입력 2026.06.02 (13:00:11)"
         },
         {
           "t": "p",
@@ -19435,7 +21508,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "11:57:42",
-      "views": 257,
+      "views": 258,
       "comments": 0,
       "summary": "에이수스는 대만 컴퓨텍스 2026에서 'ubiquitous ai'를 주제로 차세대 ai pc 라인업과 게이밍 비전을 공개했다. 젠북 14는 최대 50 tops n...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e8643f3e7_dyuqpf.webp",
@@ -19447,7 +21520,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 257 | 루리웹 |\n 입력 2026.06.02 (11:57:42)"
+          "v": "조회수 258 | 루리웹 |\n 입력 2026.06.02 (11:57:42)"
         },
         {
           "t": "p",
@@ -19718,7 +21791,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "11:49:44",
-      "views": 2788,
+      "views": 2797,
       "comments": 15,
       "summary": "플레이스테이션이 ps5 및 pc용 최초의 무선 파이팅 스틱인 'flexstrike'를 8월 7일 정식 출시하며, 6월 12일부터 예약 판매를 시작한다. 이 제품은...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e863b0b33_kfaeyj.webp",
@@ -19730,7 +21803,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 2788 | 루리웹 |\n 입력 2026.06.02 (11:49:44)"
+          "v": "조회수 2798 | 루리웹 |\n 입력 2026.06.02 (11:49:44)"
         },
         {
           "t": "p",
@@ -19844,6 +21917,58 @@
           "t": "p",
           "v": "목록보기"
         }
+      ],
+      "topComments": [
+        {
+          "nick": "보송송잉",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "록맨부활",
+          "text": "오우 플스 시스템에 어울리는 컬러와 디자인들이네 스틱이랑 스피커는 사고싶네요~",
+          "like": 1
+        },
+        {
+          "nick": "록맨부활",
+          "text": "버튼은 커스텀하기 쉽지 않아보이네 워낙 깔맞춤 버튼이라 ...;;",
+          "like": 1
+        },
+        {
+          "nick": "후카다쿄코",
+          "text": "가격이 쎄네",
+          "like": 0
+        },
+        {
+          "nick": "보송송잉",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "루리웹-2633646338",
+          "text": "보송송잉",
+          "like": 4
+        },
+        {
+          "nick": "보송송잉",
+          "text": "루리웹-2633646338",
+          "like": 2
+        },
+        {
+          "nick": "록맨부활",
+          "text": "루리웹-2633646338",
+          "like": 0
+        },
+        {
+          "nick": "컹컹서비스",
+          "text": "루리웹-2633646338",
+          "like": 1
+        },
+        {
+          "nick": "HellAndHell",
+          "text": "루리웹-2633646338",
+          "like": 0
+        }
       ]
     },
     {
@@ -19853,7 +21978,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "11:45:38",
-      "views": 105,
+      "views": 106,
       "comments": 0,
       "summary": "글로벌 미디어 플랫폼 soop이 한국배구연맹(kovo) 임시 이사회에서 여자 프로배구단 가입 승인을 받으며 v리그 합류를 공식화했다. 이에 따라 soop은 이민원...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e8638e8ed_ugtpke.webp",
@@ -19865,7 +21990,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 105 | 루리웹 |\n 입력 2026.06.02 (11:45:38)"
+          "v": "조회수 106 | 루리웹 |\n 입력 2026.06.02 (11:45:38)"
         },
         {
           "t": "p",
@@ -19988,7 +22113,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "11:43:32",
-      "views": 142,
+      "views": 143,
       "comments": 0,
       "summary": "한미마이크로닉스가 대만 컴퓨텍스 타이베이 2026에 참가해 글로벌 브랜드 wizmax를 중심으로 ai 및 고성능 컴퓨팅 환경에 대응하는 신제품들을 대거 공개했다....",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e8636fc88_mkuiqe.webp",
@@ -20000,7 +22125,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 142 | 루리웹 |\n 입력 2026.06.02 (11:43:32)"
+          "v": "조회수 143 | 루리웹 |\n 입력 2026.06.02 (11:43:32)"
         },
         {
           "t": "p",
@@ -20143,7 +22268,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "11:26:11",
-      "views": 205,
+      "views": 206,
       "comments": 0,
       "summary": "넥써쓰가 게임 퀘스트 및 리워드 플랫폼 '크로쓰 플레이'를 2.0으로 업데이트하며 텔레그램 미니앱 기반에서 웹 서비스로 확장해 이용자 접근성을 높였다. 이번 업데...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e8626e8ab_mepqhz.webp",
@@ -20155,7 +22280,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 205 | 루리웹 |\n 입력 2026.06.02 (11:26:11)"
+          "v": "조회수 206 | 루리웹 |\n 입력 2026.06.02 (11:26:11)"
         },
         {
           "t": "p",
@@ -20270,7 +22395,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "11:16:07",
-      "views": 146,
+      "views": 147,
       "comments": 0,
       "summary": "기가바이트의 한국 공식 유통사 블루죤이 인기 게이밍 모니터 gs27f2를 6월 10일까지 쿠팡에서 특별 혜택가로 판매합니다. 이 27인치 모니터는 240hz 초고...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e861ddcd2_htovak.webp",
@@ -20282,7 +22407,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 146 | 루리웹 |\n 입력 2026.06.02 (11:16:07)"
+          "v": "조회수 147 | 루리웹 |\n 입력 2026.06.02 (11:16:07)"
         },
         {
           "t": "p",
@@ -20389,7 +22514,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "11:11:51",
-      "views": 773,
+      "views": 778,
       "comments": 1,
       "summary": "넥슨은 mmorpg '프라시아 전기'의 2026 여름 전야제를 시작하며, 6월 24일까지 출석 보상으로 'wp 쿠폰 – 연성 3종' 등을 제공하고, 7월 1일까지...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e861a5886_ujtlgc.webp",
@@ -20401,7 +22526,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 773 | 루리웹 |\n 입력 2026.06.02 (11:11:51)"
+          "v": "조회수 778 | 루리웹 |\n 입력 2026.06.02 (11:11:51)"
         },
         {
           "t": "p",
@@ -20523,6 +22648,13 @@
           "t": "p",
           "v": "목록보기"
         }
+      ],
+      "topComments": [
+        {
+          "nick": "레이네오",
+          "text": "20인치를 누가 쓰냐 줘도 안 쓴다",
+          "like": 1
+        }
       ]
     },
     {
@@ -20532,7 +22664,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "11:07:18",
-      "views": 2094,
+      "views": 2107,
       "comments": 11,
       "summary": "엔씨소프트가 신작 서브컬처 rpg '아스트라에 오라티오'의 티저 pv를 공개하며 게임 플레이를 처음 선보였다. 이번 영상에서는 인게임 전투 장면과 시나리오 연출 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e86abda19_vwcbgy.webp",
@@ -20544,7 +22676,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 2094 | 루리웹 |\n 입력 2026.06.02 (11:07:18)"
+          "v": "조회수 2107 | 루리웹 |\n 입력 2026.06.02 (11:07:18)"
         },
         {
           "t": "p",
@@ -20659,8 +22791,60 @@
           "v": "목록보기"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/rmypYR2VK7M/hqdefault.jpg"
+          "t": "yt",
+          "v": "rmypYR2VK7M"
+        }
+      ],
+      "topComments": [
+        {
+          "nick": "비추살인마",
+          "text": "BEST",
+          "like": 16
+        },
+        {
+          "nick": "아라키 히로히코",
+          "text": "BEST",
+          "like": 10
+        },
+        {
+          "nick": "단신슴규",
+          "text": "BEST",
+          "like": 9
+        },
+        {
+          "nick": "千夜妹",
+          "text": "BEST",
+          "like": 4
+        },
+        {
+          "nick": "극스크류",
+          "text": "BEST",
+          "like": 3
+        },
+        {
+          "nick": "루리웹1055",
+          "text": "블아 하는게...",
+          "like": 7
+        },
+        {
+          "nick": "단신슴규",
+          "text": "BEST",
+          "like": 9
+        },
+        {
+          "nick": "르아네드",
+          "text": "단신슴규",
+          "like": 1
+        },
+        {
+          "nick": "오구리맘",
+          "text": "한 1년된거아닌가? 벌써 인게임 영상이 나온다고?",
+          "like": 1
+        },
+        {
+          "nick": "비추살인마",
+          "text": "BEST",
+          "like": 16
         }
       ]
     },
@@ -20671,7 +22855,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "11:00:48",
-      "views": 527,
+      "views": 530,
       "comments": 0,
       "summary": "스마일게이트는 모바일 rpg '에픽세븐'의 글로벌 온라인 e스포츠 리그 '에픽세븐 마스터스'가 두 달간의 대장정을 성공적으로 마쳤다고 밝혔다. 총 상금 34,00...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e860f9822_gkfmrx.webp",
@@ -20683,7 +22867,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 527 | 루리웹 |\n 입력 2026.06.02 (11:00:48)"
+          "v": "조회수 530 | 루리웹 |\n 입력 2026.06.02 (11:00:48)"
         },
         {
           "t": "p",
@@ -20858,7 +23042,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "10:36:50",
-      "views": 288,
+      "views": 289,
       "comments": 0,
       "summary": "슈퍼패스트가 오는 7월 4일 '슈퍼패스트 넥스트'를 개최하며, 모바일·pc·콘솔 등 플랫폼 제한 없이 참가팀을 모집해 실전형 게임 투자 플랫폼을 운영한다. 이번 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e85f9e702_pwjgua.webp",
@@ -20870,7 +23054,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 288 | 루리웹 |\n 입력 2026.06.02 (10:36:50)"
+          "v": "조회수 289 | 루리웹 |\n 입력 2026.06.02 (10:36:50)"
         },
         {
           "t": "p",
@@ -21021,7 +23205,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "10:33:19",
-      "views": 266,
+      "views": 267,
       "comments": 0,
       "summary": "오는 6월 5일 개봉하는 sf히어로액션 영화 '마스터즈 오브 유니버스'가 언론 시사회를 통해 첫 공개되며 기대를 모은다. 이 영화는 40년 역사의 글로벌 프랜차이...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e85f6b3a1_mxglye.webp",
@@ -21033,7 +23217,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 266 | 루리웹 |\n 입력 2026.06.02 (10:33:19)"
+          "v": "조회수 267 | 루리웹 |\n 입력 2026.06.02 (10:33:19)"
         },
         {
           "t": "p",
@@ -21296,8 +23480,8 @@
           "v": "목록보기"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/Rc_pgLMrYSw/hqdefault.jpg"
+          "t": "yt",
+          "v": "Rc_pgLMrYSw"
         }
       ]
     },
@@ -21308,7 +23492,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "10:22:39",
-      "views": 117,
+      "views": 118,
       "comments": 0,
       "summary": "nhn링크가 티켓링크 회원 대상 프리미엄 전관 행사 '링크스페셜데이'의 10번째 무대로 뮤지컬 '베토벤' 전관 행사를 7월 8일부터 10일까지 세종문화회관 대극장...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e85ecebb3_uaobfd.webp",
@@ -21320,7 +23504,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 117 | 루리웹 |\n 입력 2026.06.02 (10:22:39)"
+          "v": "조회수 118 | 루리웹 |\n 입력 2026.06.02 (10:22:39)"
         },
         {
           "t": "p",
@@ -21443,7 +23627,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "10:18:32",
-      "views": 117,
+      "views": 118,
       "comments": 0,
       "summary": "인포뱅크가 ai 협업 플랫폼 '인세븐'을 국내 환경에 맞게 대폭 업데이트하며 '엔터프라이즈 ai 워크스페이스'를 구현했다. 이번 업데이트는 ms sharepoin...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e85e92966_fhbsup.webp",
@@ -21455,7 +23639,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 117 | 루리웹 |\n 입력 2026.06.02 (10:18:32)"
+          "v": "조회수 118 | 루리웹 |\n 입력 2026.06.02 (10:18:32)"
         },
         {
           "t": "p",
@@ -21582,7 +23766,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "10:15:11",
-      "views": 1825,
+      "views": 1829,
       "comments": 0,
       "summary": "퍼펙트월드 산하 hotta studio의 초자연 어반 오픈월드 rpg가 6월 3일 1.1 버전 '꿈의 회랑'으로 업데이트되며 초인기 캐릭터 '라크리모사'가 등장하...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e85fd9d25_eyoscd.webp",
@@ -21594,7 +23778,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 1825 | 루리웹 |\n 입력 2026.06.02 (10:15:11)"
+          "v": "조회수 1829 | 루리웹 |\n 입력 2026.06.02 (10:15:11)"
         },
         {
           "t": "p",
@@ -21785,8 +23969,8 @@
           "v": "목록보기"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/NHOBpU_X04w/hqdefault.jpg"
+          "t": "yt",
+          "v": "NHOBpU_X04w"
         }
       ]
     },
@@ -21797,7 +23981,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "10:09:38",
-      "views": 320,
+      "views": 321,
       "comments": 0,
       "summary": "카카오게임즈는 'pubg: 배틀그라운드'의 오프라인 행사 '캠퍼스 치킨 드랍 vol.2'를 서울시립대와 연세대학교에서 성공적으로 마쳤다. 이번 행사는 대학 축제 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e85e10443_xjisca.webp",
@@ -21809,7 +23993,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 320 | 루리웹 |\n 입력 2026.06.02 (10:09:38)"
+          "v": "조회수 321 | 루리웹 |\n 입력 2026.06.02 (10:09:38)"
         },
         {
           "t": "p",
@@ -21996,7 +24180,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "10:04:23",
-      "views": 1196,
+      "views": 1207,
       "comments": 1,
       "summary": "블로믹스는 씨씨알의 신작 슈팅 게임 '포트리스3 블루'가 출시 5일 만에 구글플레이 스토어 인기 게임 1위를 달성했다고 2일 밝혔다. 이 게임은 지난달 29일 앱...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e85db3379_dmykih.webp",
@@ -22008,7 +24192,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 1196 | 루리웹 |\n 입력 2026.06.02 (10:04:23)"
+          "v": "조회수 1207 | 루리웹 |\n 입력 2026.06.02 (10:04:23)"
         },
         {
           "t": "p",
@@ -22138,6 +24322,13 @@
           "t": "p",
           "v": "목록보기"
         }
+      ],
+      "topComments": [
+        {
+          "nick": "낭만클럽.",
+          "text": "함 해봐야겟당",
+          "like": 0
+        }
       ]
     },
     {
@@ -22147,7 +24338,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "09:55:23",
-      "views": 142,
+      "views": 143,
       "comments": 0,
       "summary": "소니코리아가 약 6,680만 화소의 적층형 센서를 탑재한 풀프레임 고해상도 카메라 'alpha 7r vi'를 정식 출시하며 시장 리더십을 강화했다. 이 신제품은 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e85ceadff_dugwce.webp",
@@ -22159,7 +24350,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 142 | 루리웹 |\n 입력 2026.06.02 (09:55:23)"
+          "v": "조회수 143 | 루리웹 |\n 입력 2026.06.02 (09:55:23)"
         },
         {
           "t": "p",
@@ -22378,7 +24569,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "09:47:56",
-      "views": 218,
+      "views": 219,
       "comments": 0,
       "summary": "서린씨앤아이가 하이트(hyte)의 y70 시리즈 기반 한정판 콜라보레이션 에디션 2종의 예약 판매 정책을 변경, 6월 1일부터 26일까지 진행하며 번들 외 케이스...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e85cd21b6_mwdgha.webp",
@@ -22390,7 +24581,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 218 | 루리웹 |\n 입력 2026.06.02 (09:47:56)"
+          "v": "조회수 219 | 루리웹 |\n 입력 2026.06.02 (09:47:56)"
         },
         {
           "t": "p",
@@ -22513,7 +24704,7 @@
       "source": "루리웹",
       "date": "2026.06.02",
       "time": "09:43:25",
-      "views": 247,
+      "views": 248,
       "comments": 0,
       "summary": "505게임즈와 인게임 스튜디오가 '크라임 보스: 록케이 시티'의 새로운 스토리 모드 스팀 플레이테스트 참가자를 모집하며, 한국 시간 6월 1일부터 신청을 받는다....",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/02/19e85c902c1_rlanou.webp",
@@ -22525,7 +24716,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 247 | 루리웹 |\n 입력 2026.06.02 (09:43:25)"
+          "v": "조회수 248 | 루리웹 |\n 입력 2026.06.02 (09:43:25)"
         },
         {
           "t": "p",
@@ -23736,6 +25927,59 @@
           "t": "p",
           "v": "작성 및 편집: 안민균 기자 (ahnmg@ruliweb.com)"
         }
+      ],
+      "comments": 4,
+      "topComments": [
+        {
+          "nick": "극스크류",
+          "text": "BEST",
+          "like": 42
+        },
+        {
+          "nick": "못참겠다도도코",
+          "text": "BEST",
+          "like": 34
+        },
+        {
+          "nick": "묻지말아줘요",
+          "text": "BEST",
+          "like": 22
+        },
+        {
+          "nick": "아론다이트",
+          "text": "BEST",
+          "like": 19
+        },
+        {
+          "nick": "케모나",
+          "text": "BEST",
+          "like": 18
+        },
+        {
+          "nick": "新감자",
+          "text": "생각보다 진짜 재밌게하고 있네요.ㅎㅎ",
+          "like": 1
+        },
+        {
+          "nick": "right step",
+          "text": "이사이란 맵이벤트가 상당히 잘만들어다",
+          "like": 1
+        },
+        {
+          "nick": "84태권부이",
+          "text": "가챠게임이라 아쉬운점이 있긴해도 재밌는 부분이 많고 일반 서브컬쳐보다 자유도가 높고 할만함 여기서 질문.. 타기도는 왜 욕먹는지 아시는분?",
+          "like": 1
+        },
+        {
+          "nick": "아론다이트",
+          "text": "BEST",
+          "like": 19
+        },
+        {
+          "nick": "묻지말아줘요",
+          "text": "84태권부이",
+          "like": 6
+        }
       ]
     },
     {
@@ -23978,8 +26222,61 @@
           "v": "작성 및 편집: 김영훈 기자 (grazzy@ruliweb.com)"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/YheMqHoeHVc/hqdefault.jpg"
+          "t": "yt",
+          "v": "YheMqHoeHVc"
+        }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "페트르슈카",
+          "text": "BEST",
+          "like": 35
+        },
+        {
+          "nick": "쥬리크리",
+          "text": "BEST",
+          "like": 19
+        },
+        {
+          "nick": "찌찌가머리보다커야합니다",
+          "text": "BEST",
+          "like": 19
+        },
+        {
+          "nick": "AkiAi",
+          "text": "BEST",
+          "like": 15
+        },
+        {
+          "nick": "no_more",
+          "text": "BEST",
+          "like": 14
+        },
+        {
+          "nick": "AkiAi",
+          "text": "BEST",
+          "like": 15
+        },
+        {
+          "nick": "페트르슈카",
+          "text": "BEST",
+          "like": 35
+        },
+        {
+          "nick": "쥬리크리",
+          "text": "BEST",
+          "like": 19
+        },
+        {
+          "nick": "찌찌가머리보다커야합니다",
+          "text": "BEST",
+          "like": 19
+        },
+        {
+          "nick": "루리웹-0806414817",
+          "text": "대각선 점프 왜 안돼",
+          "like": 3
         }
       ]
     },
@@ -24049,6 +26346,59 @@
         {
           "t": "img",
           "v": "https://i2.ruliweb.com/img/26/05/04/19df2b0197651ad6b.webp"
+        }
+      ],
+      "comments": 4,
+      "topComments": [
+        {
+          "nick": "앙베인띠",
+          "text": "BEST",
+          "like": 110
+        },
+        {
+          "nick": "화난호야",
+          "text": "BEST",
+          "like": 68
+        },
+        {
+          "nick": "Killdakilla",
+          "text": "BEST",
+          "like": 62
+        },
+        {
+          "nick": "빙구론희",
+          "text": "BEST",
+          "like": 32
+        },
+        {
+          "nick": "도라공룡",
+          "text": "BEST",
+          "like": 32
+        },
+        {
+          "nick": "앙베인띠",
+          "text": "BEST",
+          "like": 110
+        },
+        {
+          "nick": "소르보이",
+          "text": "앙베인띠",
+          "like": 9
+        },
+        {
+          "nick": "루리웹-2595463879",
+          "text": "앙베인띠",
+          "like": 5
+        },
+        {
+          "nick": "흙곰2",
+          "text": "앙베인띠",
+          "like": 4
+        },
+        {
+          "nick": "루리웹-1329183038",
+          "text": "앙베인띠",
+          "like": 0
         }
       ]
     },
@@ -24292,12 +26642,65 @@
           "v": "작성 및 편집: 김영훈 기자 (grazzy@ruliweb.com)"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/vwmq_k5Kto0/hqdefault.jpg"
+          "t": "yt",
+          "v": "vwmq_k5Kto0"
         },
         {
-          "t": "img",
-          "v": "https://img.youtube.com/vi/7cqG60pjDS0/hqdefault.jpg"
+          "t": "yt",
+          "v": "7cqG60pjDS0"
+        }
+      ],
+      "comments": 5,
+      "topComments": [
+        {
+          "nick": "دكتوربيبرلذيذ",
+          "text": "BEST",
+          "like": 23
+        },
+        {
+          "nick": "신컨은기본",
+          "text": "BEST",
+          "like": 11
+        },
+        {
+          "nick": "34876264",
+          "text": "BEST",
+          "like": 11
+        },
+        {
+          "nick": "압박마왕",
+          "text": "BEST",
+          "like": 9
+        },
+        {
+          "nick": "좌-빨-웹",
+          "text": "BEST",
+          "like": 9
+        },
+        {
+          "nick": "루리웹-4233959322",
+          "text": "아싸 1빠",
+          "like": 1
+        },
+        {
+          "nick": "دكتوربيبرلذيذ",
+          "text": "BEST",
+          "like": 23
+        },
+        {
+          "nick": "쑤퍼유저_관리-28945492",
+          "text": "دكتوربيبرلذيذ",
+          "like": 1
+        },
+        {
+          "nick": "신컨은기본",
+          "text": "BEST",
+          "like": 11
+        },
+        {
+          "nick": "34876264",
+          "text": "BEST",
+          "like": 11
         }
       ]
     }

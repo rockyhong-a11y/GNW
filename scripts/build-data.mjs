@@ -268,7 +268,7 @@ const rwAbsImg = (u) => u ? (u.startsWith("//") ? "https:" + u : u) : null;
 // 한 페이지 HTML 에서 기사들을 추출(기사ID로 그룹핑). seen 으로 소스 간 중복 제거.
 function parseRuliweb(html, news, seen, cap = 40) {
   const anchors = [];
-  for (const m of html.matchAll(/<a[^>]+href="([^"]*\/news\/read\/(\d+)[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi)) {
+  for (const m of html.matchAll(/<a[^>]+href="([^"]*\/news\/(?:board\/\d+\/)?read\/(\d+)[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi)) {
     anchors.push({ idx: m.index, url: m[1], id: m[2], inner: m[3] });
   }
   const byId = new Map();
@@ -316,7 +316,7 @@ async function fromRuliwebNews(news) {
       const res = await fetch(url, { headers: { ...HEADERS, "user-agent": MOBILE_UA }, redirect: "follow" });
       status = res.status; html = await res.text();
     } catch (e) { err = String(e && e.message || e); }
-    console.log(`[ruliweb] ${url} status=${status} len=${html.length} links=${(html.match(/\/news\/read\/\d+/g) || []).length} err=${err}`);
+    console.log(`[ruliweb] ${url} status=${status} len=${html.length} links=${(html.match(/\/news\/(?:board\/\d+\/)?read\/\d+/g) || []).length} err=${err}`);
     if (!html || status >= 400) { errs.push(`${url}=${status}`); continue; }
     added += parseRuliweb(html, news, seen, 40);
   }

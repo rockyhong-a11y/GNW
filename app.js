@@ -531,7 +531,10 @@ function openDetail(n) {
     : "";
   let body;
   if (n.content && n.content.length) {
-    body = n.content.map((b) => b.t === "img"
+    // 영상/이미지만 있고 본문 텍스트가 없는 글(트레일러 등)은 요약을 앞에 노출
+    const hasText = n.content.some((b) => b.t === "p");
+    const lead = (!hasText && n.summary) ? `<p>${esc(n.summary)}</p>` : "";
+    body = lead + n.content.map((b) => b.t === "img"
       ? `<img class="detail-img" src="${esc(b.v)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`
       : `<p>${esc(b.v)}</p>`).join("");
   } else if (n.summary) {

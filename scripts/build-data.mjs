@@ -391,6 +391,12 @@ function extractContent(html) {
     if (/^https?:/i.test(src)) blocks.push({ t: "img", v: src.replace(/&amp;/g, "&") });
   }
   pushText(region.slice(last));
+  // 유튜브/동영상 임베드 → 썸네일 이미지 블록(트레일러 글처럼 본문 텍스트·이미지가 없는 경우 대비)
+  for (const fm of region.matchAll(/(?:youtube(?:-nocookie)?\.com\/(?:embed\/|v\/|watch\?v=)|youtu\.be\/)([A-Za-z0-9_-]{8,})/gi)) {
+    if (blocks.length >= MAX_BLOCKS) break;
+    const yt = `https://img.youtube.com/vi/${fm[1]}/hqdefault.jpg`;
+    if (!blocks.some((b) => b.t === "img" && b.v === yt)) blocks.push({ t: "img", v: yt });
+  }
   return blocks.slice(0, MAX_BLOCKS);
 }
 // 작성자(닉네임) 추출
@@ -543,8 +549,9 @@ async function fromRuliwebNews(news) {
     added += n;
   }
 
-  // 본문 보강 전에 유사 중복부터 제거 → 남는 글만 페이지를 받아 요청을 아낀다.
-  const deduped = dedupNewsByTitle(news, 0.8);
+  // 본문 보강 전에 유사 중복 제거 + 게시판 공지/안내 글 제외(뉴스 아님).
+  const NOTICE = /공지|필독|이용\s*안내|운영\s*정책|^[▦◆■]|게시판\s*안내/;
+  const deduped = dedupNewsByTitle(news, 0.8).filter((n) => !NOTICE.test(n.title || ""));
   news.length = 0; news.push(...deduped);
 
   // 각 기사 페이지에서 본문(content)·작성자·썸네일·요약·날짜를 보강해 앱 내 상세뷰에 사용.
@@ -563,6 +570,7 @@ async function fromRuliwebNews(news) {
       if (!n.date) { const d = extractDateTime(h); if (d) { n.date = d.date; if (d.time) n.time = d.time; } }
       if (!n.author) { const a = extractAuthor(h); if (a) n.author = a; }
       if (!n.content || !n.content.length) { const c = extractContent(h); if (c.length) n.content = c; }
+      if (!n.image && n.content) { const im = n.content.find((b) => b.t === "img"); if (im) n.image = im.v; } // 영상/이미지 글 썸네일 보강
     } catch { /* 개별 실패 무시 */ }
   };
   let withDate = 0, withBody = 0;

@@ -408,29 +408,35 @@ function extractCommentCount(html) {
     || html.match(/댓글[\s:(]*(\d[\d,]*)/);
   return m ? +m[1].replace(/,/g, "") : null;
 }
-// 기사 페이지에서 상위 댓글 추출(작성자·내용·추천). 미리보기에 인라인 노출.
-function extractComments(html, max = 10) {
+// 기사 페이지에서 상위 댓글 추출(작성자·내용·추천·베스트 여부). 미리보기에 인라인 노출.
+function extractComments(html, max = 12) {
   let s = html.search(/class=["'][^"']*comment_(?:view|table|wrapper)|id=["']cmt["']/i);
   if (s < 0) return [];
-  const region = html.slice(s, s + 240000);
+  const region = html.slice(s, s + 260000);
   const out = [];
   const seenText = new Set();
   const parts = region.split(/class="comment_element/);
   for (let i = 1; i < parts.length && out.length < max; i++) {
     const blk = parts[i].slice(0, 6000);
-    // 블록 내 text_wrapper 중 'BEST/베스트' 라벨이 아닌 첫 실제 댓글 텍스트
-    let text = null;
-    for (const tm of blk.matchAll(/class="text_wrapper"[^>]*>([\s\S]*?)<\/(?:span|div|p)>/gi)) {
+    const head = parts[i].slice(0, 120);
+    const isBest = /\bbest\b/i.test(head) || /icon_best|best_icon|comment_best/i.test(blk.slice(0, 600));
+    const nick = rwText((blk.match(/class="[^"]*\bnick\b[^"]*"[^>]*>([\s\S]*?)<\/(?:strong|span|a)>/i) || [])[1]) || null;
+    // 블록 내 text_wrapper 후보 중 라벨/닉네임/기본닉을 빼고 가장 실질적인(긴) 텍스트 = 실제 댓글
+    let text = "";
+    for (const tm of blk.matchAll(/class="text_wrapper"[^>]*>([\s\S]*?)<\/(?:span|div|p|strong|a)>/gi)) {
       const t = rwText(tm[1]);
-      if (t && t.length > 1 && !/^(BEST|베스트|공지|블라인드|신고)$/i.test(t)) { text = t; break; }
+      if (!t || t.length < 1) continue;
+      if (/^(BEST|베스트|공지|블라인드|신고|답글|신고하기)$/i.test(t)) continue;
+      if (nick && t === nick) continue;            // 닉네임 칸 제외
+      if (/^루리웹-\d+$/.test(t)) continue;          // 기본 닉네임 제외
+      if (t.length > text.length) text = t;          // 가장 긴 것이 실제 댓글 본문
     }
     if (!text) continue;
     const key = text.slice(0, 40);
-    if (seenText.has(key)) continue;          // best+일반 중복 노출 제거
+    if (seenText.has(key)) continue;                 // best+일반 목록 중복 제거
     seenText.add(key);
-    const nick = rwText((blk.match(/class="[^"]*\bnick\b[^"]*"[^>]*>([\s\S]*?)<\/(?:strong|span|a)>/i) || [])[1]) || null;
     const likeM = blk.match(/class="[^"]*\b(?:like|recomd|num)\b[^"]*"[^>]*>\s*(\d+)/i);
-    out.push({ nick: nick ? nick.slice(0, 24) : null, text: text.slice(0, 300), like: likeM ? +likeM[1] : null });
+    out.push({ nick: nick ? nick.slice(0, 24) : null, text: text.slice(0, 400), like: likeM ? +likeM[1] : null, ...(isBest ? { best: true } : {}) });
   }
   return out;
 }

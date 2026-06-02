@@ -498,14 +498,13 @@ function bindSettings() {
 }
 
 function bindCardClicks() {
-  // 카드 → 외부 상세링크. 뉴스 → 앱 내 다크 상세뷰. (카드 안 링크/▶영상은 자체 동작)
+  // 카드(출시·이벤트)·뉴스 모두 앱 내 다크 미리보기로. (카드 안 링크/▶영상은 자체 동작)
   $("#gameRoot").addEventListener("click", (e) => {
     if (e.target.closest("a, .play-btn")) return;
     const card = e.target.closest(".card[data-gid]");
     if (card) {
       const g = STATE.games.find((x) => String(x.id) === card.dataset.gid);
-      const url = g && (g.detailUrl || (g.source && g.source.url));
-      if (url) window.open(url, "_blank", "noopener");
+      if (g) openGameDetail(g);
       return;
     }
     const ni = e.target.closest(".news-item[data-ni]");
@@ -514,6 +513,46 @@ function bindCardClicks() {
       if (n) openDetail(n);
     }
   });
+}
+
+/* ---------- 출시·이벤트 미리보기 (앱 내 다크 뷰) ---------- */
+function openGameDetail(g) {
+  const ev = EVENT_META[g.eventType] || { label: g.eventType, color: "#6c7aff" };
+  const cd = countdownLabel(g);
+  const price = formatPrice(g.price);
+  const dateStr = `${formatDate(g.releaseDate)}${g.endDate ? ` ~ ${formatDate(g.endDate).slice(5)}` : ""}`;
+  const meta = [
+    `<span class="dm-author" style="color:${ev.color}">${esc(ev.label)}</span>`,
+    `<span>${esc(dateStr)}</span>`,
+    `<span class="dm-dday ${cd.released ? "done" : ""}">${esc(cd.text)}</span>`,
+    (g.developer && g.developer !== "미상") ? `<span>${esc(g.developer)}</span>` : "",
+    price.text ? `<span>${esc(price.text)}</span>` : "",
+  ].filter(Boolean).join('<span class="dm-dot">·</span>');
+  const banner = g.image
+    ? `<div class="detail-banner"><img src="${esc(g.image)}" alt="" referrerpolicy="no-referrer" onerror="this.closest('.detail-banner').remove()"></div>`
+    : `<div class="detail-banner detail-banner--ph" style="background:linear-gradient(135deg, ${g.color || "#6c7aff"}, ${(g.color || "#6c7aff")}55)"></div>`;
+  const badge = (arr, cls) => (arr || []).map((x) => `<span class="badge ${cls}">${esc(cls === "tag" ? "#" + x : x)}</span>`).join("");
+  const badges = [badge(g.platforms, "platform"), badge(g.genres, ""), badge(g.tags, "tag")].join("");
+  let body = "";
+  if (g.update) body += `<p>📌 ${esc(g.update)}</p>`;
+  if (g.description) body += `<p>${esc(g.description)}</p>`;
+  if (!body) body = `<p class="detail-empty">자세한 정보는 아래 링크에서 확인하세요.</p>`;
+  const links = [
+    g.detailUrl ? `<a class="detail-orig" href="${esc(g.detailUrl)}" target="_blank" rel="noopener">상세정보 ↗</a>` : "",
+    g.trailer ? `<a class="dc-more" href="${esc(g.trailer)}" target="_blank" rel="noopener">▶ 트레일러 보기</a>` : "",
+    (g.source && g.source.url) ? `<a class="dc-more" href="${esc(g.source.url)}" target="_blank" rel="noopener">출처 · ${esc(g.source.name)} ↗</a>` : "",
+  ].filter(Boolean).join("");
+  $("#detailBody").innerHTML = `
+    <h1 class="detail-title">${esc(g.titleKr || g.title)}</h1>
+    ${(g.title && g.title !== (g.titleKr || g.title)) ? `<p class="detail-subtitle">${esc(g.title)}</p>` : ""}
+    <div class="detail-meta">${meta}</div>
+    ${banner}
+    ${badges ? `<div class="detail-badges">${badges}</div>` : ""}
+    <div class="detail-article">${body}</div>
+    <div class="detail-links">${links}</div>`;
+  $("#detailScroll").scrollTop = 0;
+  $("#detailSheet").hidden = false;
+  document.body.classList.add("sheet-open");
 }
 
 /* ---------- 뉴스 상세 (앱 내 다크 뷰) ---------- */
@@ -548,10 +587,12 @@ function openDetail(n) {
   // 댓글: 상위 댓글이 있으면 인라인 노출, 없으면 댓글 수 + 원문 링크
   let comments = "";
   if (n.topComments && n.topComments.length) {
+    // 베스트 댓글을 위로, 추천수 높은 순
+    const cs = [...n.topComments].sort((a, b) => (b.best ? 1 : 0) - (a.best ? 1 : 0) || (b.like || 0) - (a.like || 0));
     comments = `<section class="detail-comments">
         <h2 class="dc-head">댓글${n.comments != null ? ` ${Number(n.comments).toLocaleString()}` : ""}</h2>
-        ${n.topComments.map((c) => `<div class="dc-item">
-          <div class="dc-top">${c.nick ? `<span class="dc-nick">${esc(c.nick)}</span>` : ""}${c.like ? `<span class="dc-like">👍 ${c.like}</span>` : ""}</div>
+        ${cs.map((c) => `<div class="dc-item${c.best ? " best" : ""}">
+          <div class="dc-top">${c.best ? `<span class="dc-best">BEST</span>` : ""}${c.nick ? `<span class="dc-nick">${esc(c.nick)}</span>` : ""}${c.like ? `<span class="dc-like">👍 ${c.like}</span>` : ""}</div>
           <div class="dc-text">${esc(c.text)}</div></div>`).join("")}
         ${n.url ? `<a class="dc-more" href="${esc(n.url)}" target="_blank" rel="noopener">원문에서 댓글 더 보기 ↗</a>` : ""}
       </section>`;

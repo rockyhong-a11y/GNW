@@ -371,27 +371,25 @@ async function fromRuliwebNews(news) {
   }
 
   // board/1001 글은 목록에 썸네일이 없어 기사 본문 og에서 썸네일·요약·날짜 보강
-  const targets = news.filter((n) => /\/board\/\d+\/read\//.test(n.url) && !n.image).slice(0, 24);
-  const tally = { ok: 0, timeout: 0, err: 0, status: {} };
+  // (referer 헤더 필수 — 없으면 루리웹이 응답을 막음)
+  const targets = news.filter((n) => /\/board\/\d+\/read\//.test(n.url) && !n.image).slice(0, 60);
   const enrichOne = async (n) => {
     try {
-      const res = await fetch(n.url, { headers: { ...HEADERS, "user-agent": DESKTOP_UA, referer: "https://bbs.ruliweb.com/news/board/1001" }, signal: AbortSignal.timeout(12000) });
-      tally.status[res.status] = (tally.status[res.status] || 0) + 1;
+      const res = await fetch(n.url, { headers: { ...HEADERS, "user-agent": DESKTOP_UA, referer: "https://bbs.ruliweb.com/news/board/1001" }, signal: AbortSignal.timeout(10000) });
       if (!res.ok) return;
       const h = await res.text();
-      tally.ok++;
       const og = (h.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
         || h.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) || [])[1];
       if (og && !/blank|default|logo|no_?image|bi\.png|icon/i.test(og)) n.image = og.replace(/&amp;/g, "&");
       if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
       if (!n.date) { const t = (h.match(/property=["']article:published_time["'][^>]+content=["']([^"']+)["']/i) || [])[1]; if (t) { const m = t.match(/(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}:\d{2}))?/); if (m) { n.date = `${m[1]}.${m[2]}.${m[3]}`; if (m[4]) n.time = m[4]; } } }
-    } catch (e) { if (String(e).includes("aborted") || e.name === "TimeoutError") tally.timeout++; else tally.err++; }
+    } catch { /* 개별 실패 무시 */ }
   };
   let enriched = 0;
-  for (let i = 0; i < targets.length; i += 6) {
-    await Promise.all(targets.slice(i, i + 6).map(async (n) => { const before = n.image; await enrichOne(n); if (!before && n.image) enriched++; }));
+  for (let i = 0; i < targets.length; i += 8) {
+    await Promise.all(targets.slice(i, i + 8).map(async (n) => { const before = n.image; await enrichOne(n); if (!before && n.image) enriched++; }));
   }
-  console.log(`[ruliweb] board og 보강 ${enriched}/${targets.length} | ok=${tally.ok} timeout=${tally.timeout} err=${tally.err} status=${JSON.stringify(tally.status)}`);
+  console.log(`[ruliweb] board og 보강 ${enriched}/${targets.length}`);
   return { name: "RuliwebNews", ...(errs.length ? { error: errs.join(",") } : {}), added };
 }
 

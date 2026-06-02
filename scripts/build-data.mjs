@@ -318,11 +318,31 @@ async function fromRuliwebNews(news) {
       status = res.status; html = await res.text();
     } catch (e) { err = String(e && e.message || e); }
     console.log(`[ruliweb] ${url} status=${status} len=${html.length} links=${(html.match(/\/news\/(?:board\/\d+\/)?read\/\d+/g) || []).length} err=${err}`);
-    { const i = html.search(/\/news\/(?:board\/\d+\/)?read\/\d+/); const s0 = i > 700 ? i - 700 : 0;
-      console.log(`[ruliweb] SAMPLE ${url} >>>${html.slice(s0, s0 + 3500).replace(/\s+/g, " ")}<<<`); }
     if (!html || status >= 400) { errs.push(`${url}=${status}`); continue; }
     added += parseRuliweb(html, news, seen, 40);
   }
+
+  // 썸네일/날짜 없는 항목(주로 유저 게시판 글)은 기사 페이지에서 og:image·발행일 보강
+  const targets = news.filter((n) => !n.image).slice(0, 50);
+  const fetchOg = async (n) => {
+    try {
+      const res = await fetch(n.url, { headers: { ...HEADERS, "user-agent": MOBILE_UA } });
+      if (!res.ok) return;
+      const h = await res.text();
+      let og = (h.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
+        || h.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) || [])[1];
+      if (og && /ruliweb\.com/.test(og) && !/logo|bi\.png|icon|default|blank/i.test(og)) n.image = og.replace(/&amp;/g, "&");
+      if (!n.date) {
+        const dt = (h.match(/"datePublished"\s*:\s*"([^"]+)"/) || h.match(/property=["']article:published_time["'][^>]+content=["']([^"']+)["']/i) || [])[1];
+        if (dt) { const m = dt.match(/(\d{4})[-.](\d{2})[-.](\d{2})/); if (m) n.date = `${m[1]}.${m[2]}.${m[3]}`; }
+      }
+    } catch { /* 개별 실패 무시 */ }
+  };
+  let enriched = 0;
+  for (let i = 0; i < targets.length; i += 8) {
+    await Promise.all(targets.slice(i, i + 8).map(async (n) => { const before = n.image; await fetchOg(n); if (!before && n.image) enriched++; }));
+  }
+  console.log(`[ruliweb] og 보강 시도 ${targets.length} → 이미지 ${enriched}`);
   return { name: "RuliwebNews", ...(errs.length ? { error: errs.join(",") } : {}), added };
 }
 

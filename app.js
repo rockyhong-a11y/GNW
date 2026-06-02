@@ -29,7 +29,7 @@ const TAB_ORDER = ["news", "콘솔", "PC", "모바일", "event"];
 const STATE = {
   games: [],
   news: [],
-  platform: "콘솔",   // 콘솔 | PC | 모바일 | event | news
+  platform: "news",   // 콘솔 | PC | 모바일 | event | news (실행 시 기본=뉴스)
   month: "all",      // all | YYYY-MM
 };
 const EVENT_TYPES = ["update", "event", "test"]; // 이벤트 탭에 표시할 종류
@@ -421,62 +421,22 @@ function bindSettings() {
 }
 
 function bindCardClicks() {
-  // 카드/뉴스 클릭 → 앱 내 다크 상세 시트. 단, 카드 안 링크/▶영상은 자체 동작.
+  // 카드/뉴스 클릭 → 뎁스 없이 해당 링크로 바로 이동. (카드 안 링크/▶영상은 자체 동작)
   $("#gameRoot").addEventListener("click", (e) => {
     if (e.target.closest("a, .play-btn")) return;
     const card = e.target.closest(".card[data-gid]");
-    if (card) { const g = STATE.games.find((x) => String(x.id) === card.dataset.gid); if (g) openGameDetail(g); return; }
+    if (card) {
+      const g = STATE.games.find((x) => String(x.id) === card.dataset.gid);
+      const url = g && (g.detailUrl || (g.source && g.source.url));
+      if (url) window.open(url, "_blank", "noopener");
+      return;
+    }
     const ni = e.target.closest(".news-item[data-ni]");
-    if (ni && STATE._newsView) { const n = STATE._newsView[+ni.dataset.ni]; if (n) openNewsDetail(n); }
+    if (ni && STATE._newsView) {
+      const n = STATE._newsView[+ni.dataset.ni];
+      if (n && n.url) window.open(n.url, "_blank", "noopener");
+    }
   });
-}
-
-/* ---------- In-app dark detail sheet ---------- */
-function openGameDetail(g) {
-  const ev = EVENT_META[g.eventType] || { label: g.eventType, color: "#6c7aff" };
-  const cd = countdownLabel(g);
-  const price = formatPrice(g.price);
-  const platforms = g.platforms.map((p) => `<span class="badge platform">${esc(p)}</span>`).join("");
-  const genres = g.genres.map((gn) => `<span class="badge">${esc(gn)}</span>`).join("");
-  const tags = (g.tags || []).map((t) => `<span class="badge tag">#${esc(t)}</span>`).join("");
-  const banner = g.image
-    ? `<div class="detail-banner has-img"><img src="${esc(g.image)}" alt="" referrerpolicy="no-referrer" onerror="this.closest('.detail-banner').classList.remove('has-img');this.remove()" style="background:linear-gradient(135deg, ${g.color}, ${g.color}55)"></div>`
-    : `<div class="detail-banner" style="background:linear-gradient(135deg, ${g.color}, ${g.color}55)"></div>`;
-  $("#detailBody").innerHTML = `
-    ${banner}
-    <div class="detail-content">
-      <div class="detail-badges"><span class="event-badge" style="background:${ev.color}">${ev.label}</span>
-        <span class="countdown ${cd.released ? "released" : ""}">${cd.text}</span></div>
-      <h2 class="detail-title">${esc(g.titleKr || g.title)}</h2>
-      ${(g.title && g.title !== (g.titleKr || g.title)) || g.developer ? `<p class="detail-orig">${esc([g.title !== g.titleKr ? g.title : "", g.developer].filter(Boolean).join(" · "))}</p>` : ""}
-      <p class="detail-date">${formatDate(g.releaseDate)}${g.endDate ? ` ~ ${formatDate(g.endDate)}` : ""}${price.text ? ` · ${price.text}` : ""}</p>
-      ${g.update ? `<p class="card-update">📌 ${esc(g.update)}</p>` : ""}
-      ${g.description ? `<p class="detail-desc">${esc(g.description)}</p>` : ""}
-      ${(platforms || genres || tags) ? `<div class="badges">${platforms}${genres}${tags}</div>` : ""}
-      <div class="detail-actions">
-        ${g.trailer ? `<a class="detail-btn" href="${esc(g.trailer)}" target="_blank" rel="noopener">▶ 영상</a>` : ""}
-        ${g.detailUrl ? `<a class="detail-btn primary" href="${esc(g.detailUrl)}" target="_blank" rel="noopener">상세정보 ↗</a>` : ""}
-        ${g.source ? `<a class="detail-btn" href="${esc(g.source.url)}" target="_blank" rel="noopener">출처 · ${esc(g.source.name)}</a>` : ""}
-      </div>
-    </div>`;
-  $("#detailSheet").hidden = false;
-}
-function openNewsDetail(n) {
-  $("#detailBody").innerHTML = `
-    ${n.image ? `<div class="detail-banner has-img"><img src="${esc(n.image)}" alt="" referrerpolicy="no-referrer" onerror="this.closest('.detail-banner').remove()"></div>` : ""}
-    <div class="detail-content">
-      <h2 class="detail-title">${esc(n.title)}</h2>
-      <p class="detail-date">${esc(n.source || "루리웹")}${n.date ? ` · ${esc(n.date)}` : ""}</p>
-      <div class="detail-actions">
-        <a class="detail-btn primary" href="${esc(n.url)}" target="_blank" rel="noopener">원문 보기 ↗</a>
-      </div>
-    </div>`;
-  $("#detailSheet").hidden = false;
-}
-function bindDetail() {
-  const ov = $("#detailSheet");
-  $("#detailClose").addEventListener("click", () => { ov.hidden = true; });
-  ov.addEventListener("click", (e) => { if (e.target === ov) ov.hidden = true; });
 }
 
 /* ---------- Init ---------- */
@@ -484,7 +444,6 @@ async function init() {
   bindTabs();
   bindSettings();
   bindCardClicks();
-  bindDetail();
   applyIcon(savedIconKey());
   $("#monthSelect").addEventListener("change", (e) => { STATE.month = e.target.value; render(); });
   bindAutoRefresh();

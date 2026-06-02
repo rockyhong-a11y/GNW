@@ -257,28 +257,16 @@ async function fromInven(out) {
   return { name: "Inven", added };
 }
 
-// 루리웹 게임 뉴스(게시판 형식) 수집. 러너에서만 동작(NEWS=1). best-effort 파서.
-async function fromRuliwebNews(news) {
-  if (process.env.NEWS !== "1") return { name: "RuliwebNews", skipped: "NEWS!=1" };
-  let html = "", status = 0, err = "";
-  // 모바일 UA로 요청 → m.ruliweb.com 모바일 레이아웃(모든 항목에 썸네일)
-  const MOBILE_UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1";
-  try {
-    const res = await fetch(RULIWEB_NEWS.url, { headers: { ...HEADERS, "user-agent": MOBILE_UA }, redirect: "follow" });
-    status = res.status;
-    html = await res.text();
-  } catch (e) { err = String(e && e.message || e); }
-  // 구조 확인용 로그(get_job_logs 로 읽음)
-  console.log(`[ruliweb] status=${status} len=${html.length} err=${err}`);
-  console.log(`[ruliweb] read_links=${(html.match(/\/news\/read\/\d+/g) || []).length}`);
-  const _fi = html.search(/\/news\/read\/\d+/);
-  const _s0 = _fi > 600 ? _fi - 600 : 0;
-  console.log(`[ruliweb] SAMPLE>>>${html.slice(_s0, _s0 + 4000).replace(/\s+/g, " ")}<<<`);
-  if (!html || status >= 400) return { name: "RuliwebNews", error: `status=${status} ${err}`.trim(), added: 0 };
+// 루리웹 게임 뉴스 수집. 러너에서만 동작(NEWS=1). 여러 소스를 순회하고 중복 제거.
+const RULIWEB_SOURCES = [
+  "https://m.ruliweb.com/news",            // 메인 뉴스(캐러셀+목록)
+  "https://bbs.ruliweb.com/news/board/1001", // 게임 뉴스 게시판(목록형)
+];
+const RW_IMG = /<(?:img|source)[^>]+(?:data-src|src|srcset)="(https?:\/\/[^"]*ruliweb\.com\/[^"]*news\/[^"]+\.(?:jpe?g|png|gif|webp))/i;
+const rwAbsImg = (u) => u ? (u.startsWith("//") ? "https:" + u : u) : null;
 
-  // ID 기준 그룹핑: 루리웹은 썸네일 앵커와 제목 앵커가 분리돼 있어 같은 기사ID로 묶는다.
-  const IMG = /<(?:img|source)[^>]+(?:data-src|src|srcset)="(https?:\/\/[^"]*ruliweb\.com\/[^"]*news\/[^"]+\.(?:jpe?g|png|gif|webp))/i;
-  const absImg = (u) => u ? (u.startsWith("//") ? "https:" + u : u) : null;
+// 한 페이지 HTML 에서 기사들을 추출(기사ID로 그룹핑). seen 으로 소스 간 중복 제거.
+function parseRuliweb(html, news, seen, cap = 40) {
   const anchors = [];
   for (const m of html.matchAll(/<a[^>]+href="([^"]*\/news\/read\/(\d+)[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi)) {
     anchors.push({ idx: m.index, url: m[1], id: m[2], inner: m[3] });
@@ -286,10 +274,8 @@ async function fromRuliwebNews(news) {
   const byId = new Map();
   for (const a of anchors) { if (!byId.has(a.id)) byId.set(a.id, []); byId.get(a.id).push(a); }
 
-  const seen = new Set();
   let added = 0;
   for (const [id, group] of byId) {
-    // 제목: 그룹 내 가장 긴 텍스트 앵커
     let title = "";
     for (const a of group) {
       const t = a.inner.replace(/<[^>]+>/g, " ").replace(/&[a-z]+;/g, " ").replace(/\s+/g, " ").trim();
@@ -298,28 +284,43 @@ async function fromRuliwebNews(news) {
     title = title.replace(/\s*\[\d+\]\s*$/, "").trim();   // 끝의 댓글수 [N] 제거
     if (!title || title.length < 6) continue;
     const key = title.toLowerCase().replace(/\s+/g, "");
-    if (seen.has(key)) continue;                          // 중복 제거(제목 기준)
-    seen.add(key);
-    // URL 절대화
+    if (seen.has(key) || seen.has("id:" + id)) continue;  // 중복 제거(제목/ID, 소스 간 공통)
+    seen.add(key); seen.add("id:" + id);
     let url = group[0].url.replace(/&amp;/g, "&");
     if (url.startsWith("/")) url = "https://bbs.ruliweb.com" + url;
-    // 썸네일: 앵커 내부 우선 → 없으면 각 앵커 주변 window(루리웹 뉴스 이미지로 한정)
     let image = null;
-    for (const a of group) { const im = a.inner.match(IMG); if (im) { image = absImg(im[1]); break; } }
+    for (const a of group) { const im = a.inner.match(RW_IMG); if (im) { image = rwAbsImg(im[1]); break; } }
     if (!image) {
       for (const a of group) {
         const win = html.slice(Math.max(0, a.idx - 1200), a.idx + a.inner.length + 600);
-        const im = win.match(IMG);
-        if (im) { image = absImg(im[1]); break; }
+        const im = win.match(RW_IMG);
+        if (im) { image = rwAbsImg(im[1]); break; }
       }
     }
-    // 날짜: 첫 앵커 주변(YYYY.MM.DD 또는 MM.DD)
     const a0 = group[0]; const dwin = html.slice(a0.idx, a0.idx + a0.inner.length + 500);
     const date = (dwin.match(/20\d{2}[.\-]\d{1,2}[.\-]\d{1,2}/) || dwin.match(/\b\d{1,2}\.\d{1,2}\b/) || [])[0] || null;
     news.push({ id: `ruliweb-${id}`, title, url, source: RULIWEB_NEWS.name, date, image });
-    if (++added >= 40) break;
+    if (++added >= cap) break;
   }
-  return { name: "RuliwebNews", added };
+  return added;
+}
+
+async function fromRuliwebNews(news) {
+  if (process.env.NEWS !== "1") return { name: "RuliwebNews", skipped: "NEWS!=1" };
+  const MOBILE_UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1";
+  const seen = new Set();
+  let added = 0; const errs = [];
+  for (const url of RULIWEB_SOURCES) {
+    let html = "", status = 0, err = "";
+    try {
+      const res = await fetch(url, { headers: { ...HEADERS, "user-agent": MOBILE_UA }, redirect: "follow" });
+      status = res.status; html = await res.text();
+    } catch (e) { err = String(e && e.message || e); }
+    console.log(`[ruliweb] ${url} status=${status} len=${html.length} links=${(html.match(/\/news\/read\/\d+/g) || []).length} err=${err}`);
+    if (!html || status >= 400) { errs.push(`${url}=${status}`); continue; }
+    added += parseRuliweb(html, news, seen, 40);
+  }
+  return { name: "RuliwebNews", ...(errs.length ? { error: errs.join(",") } : {}), added };
 }
 
 async function fromSteam(out) {

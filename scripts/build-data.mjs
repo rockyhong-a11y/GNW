@@ -622,8 +622,10 @@ async function fromRuliwebNews(news) {
     } catch { /* 개별 실패 무시 */ }
   };
   let withDate = 0, withBody = 0, withCmt = 0, withCmtList = 0;
-  for (let i = 0; i < targets.length; i += 8) {
-    await Promise.all(targets.slice(i, i + 8).map((n) => enrichOne(n)));
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  for (let i = 0; i < targets.length; i += 6) {        // 동시 요청을 낮춰 차단(레이트리밋) 완화
+    await Promise.all(targets.slice(i, i + 6).map((n) => enrichOne(n)));
+    if (i + 6 < targets.length) await sleep(120);        // 배치 간 약간의 간격
   }
   for (const n of news) { if (n.date) withDate++; if (n.content && n.content.length) withBody++; if (n.comments != null) withCmt++; if (n.topComments && n.topComments.length) withCmtList++; }
   console.log(`[ruliweb] 보강 대상 ${targets.length} · 날짜 ${withDate}/${news.length} · 본문 ${withBody}/${news.length} · 댓글수 ${withCmt} · 댓글목록 ${withCmtList}`);
@@ -746,6 +748,24 @@ async function main() {
   // 뉴스: 제목이 80% 이상 유사하면 최신 글만 남기고 중복 제거. 수집 실패/스킵 시 기존 뉴스 유지.
   let news = dedupNewsByTitle(newsItems, 0.8);
   if (!news.length && prev && Array.isArray(prev.news)) news = prev.news;
+
+  // 비파괴 병합: 루리웹이 일시적으로 기사 페이지 요청을 막아 본문/댓글/날짜를 못 받은 경우,
+  // 직전 games.json 의 같은 글(url/id) 값으로 채워 기존에 모은 풍부한 데이터를 잃지 않는다.
+  if (prev && Array.isArray(prev.news)) {
+    const byUrl = new Map(), byId = new Map();
+    for (const p of prev.news) { if (p.url) byUrl.set(p.url, p); if (p.id) byId.set(p.id, p); }
+    for (const n of news) {
+      const p = byUrl.get(n.url) || byId.get(n.id);
+      if (!p) continue;
+      if ((!n.content || !n.content.length) && p.content && p.content.length) n.content = p.content;
+      if ((!n.topComments || !n.topComments.length) && p.topComments && p.topComments.length) n.topComments = p.topComments;
+      if (n.comments == null && p.comments != null) n.comments = p.comments;
+      if (!n.date && p.date) { n.date = p.date; if (p.time) n.time = p.time; }
+      if (!n.author && p.author) n.author = p.author;
+      if (!n.image && p.image) n.image = p.image;
+      if (!n.summary && p.summary) n.summary = p.summary;
+    }
+  }
 
   // 결정론적 출력: 매시간 실행돼도 실제 데이터가 바뀌지 않으면 파일이 동일 →
   // 워크플로의 "변경 시에만 커밋"이 동작해 불필요한 커밋이 쌓이지 않는다.

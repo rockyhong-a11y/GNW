@@ -274,19 +274,39 @@ async function fromRuliwebNews(news) {
   console.log(`[ruliweb] SAMPLE>>>${html.slice(_s0, _s0 + 4000).replace(/\s+/g, " ")}<<<`);
   if (!html || status >= 400) return { name: "RuliwebNews", error: `status=${status} ${err}`.trim(), added: 0 };
 
-  // best-effort: 기사 링크 + 제목 + (있으면)썸네일/날짜 추출
+  // ID 기준 그룹핑: 루리웹은 썸네일 앵커와 제목 앵커가 분리돼 있어 같은 기사ID로 묶는다.
+  const IMG = /<img[^>]+(?:data-original|data-src|src)="([^"]+\.(?:jpe?g|png|gif|webp)[^"]*)"/i;
+  const absImg = (u) => u ? (u.startsWith("//") ? "https:" + u : u) : null;
+  const anchors = [];
+  for (const m of html.matchAll(/<a[^>]+href="([^"]*\/news\/read\/(\d+)[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi)) {
+    anchors.push({ idx: m.index, url: m[1], id: m[2], inner: m[3] });
+  }
+  const byId = new Map();
+  for (const a of anchors) { if (!byId.has(a.id)) byId.set(a.id, []); byId.get(a.id).push(a); }
+
   const seen = new Set();
   let added = 0;
-  for (const m of html.matchAll(/<a[^>]+href="(https?:\/\/[^"]*ruliweb\.com\/news\/read\/(\d+)[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi)) {
-    const url = m[1].replace(/&amp;/g, "&"), id = m[2], inner = m[3];
-    const title = inner.replace(/<[^>]+>/g, " ").replace(/&[a-z]+;/g, " ").replace(/\s+/g, " ").trim();
+  for (const [id, group] of byId) {
+    // 제목: 그룹 내 가장 긴 텍스트 앵커
+    let title = "";
+    for (const a of group) {
+      const t = a.inner.replace(/<[^>]+>/g, " ").replace(/&[a-z]+;/g, " ").replace(/\s+/g, " ").trim();
+      if (t.length > title.length) title = t;
+    }
     if (!title || title.length < 6) continue;
     const key = title.toLowerCase().replace(/\s+/g, "");
-    if (seen.has(key) || seen.has(id)) continue;          // 중복 제거(제목/ID)
-    seen.add(key); seen.add(id);
-    let image = (inner.match(/<img[^>]+(?:data-original|data-src|src)="([^"]+\.(?:jpe?g|png|gif|webp)[^"]*)"/i) || [])[1] || null;
-    if (image && image.startsWith("//")) image = "https:" + image;
-    const date = (inner.match(/(20\d{2}[.\-]\d{1,2}[.\-]\d{1,2})/) || [])[1] || null;
+    if (seen.has(key)) continue;                          // 중복 제거(제목 기준)
+    seen.add(key);
+    // URL 절대화
+    let url = group[0].url.replace(/&amp;/g, "&");
+    if (url.startsWith("/")) url = "https://bbs.ruliweb.com" + url;
+    // 썸네일: 앵커 내부 우선, 없으면 첫 앵커 주변 window 에서
+    let image = null;
+    for (const a of group) { const im = a.inner.match(IMG); if (im) { image = absImg(im[1]); break; } }
+    if (!image) { const a = group[0]; const win = html.slice(Math.max(0, a.idx - 200), a.idx + a.inner.length + 400); const im = win.match(IMG); if (im) image = absImg(im[1]); }
+    // 날짜: 첫 앵커 주변
+    const a0 = group[0]; const dwin = html.slice(a0.idx, a0.idx + a0.inner.length + 400);
+    const date = (dwin.match(/(20\d{2}[.\-]\d{1,2}[.\-]\d{1,2})/) || [])[1] || null;
     news.push({ id: `ruliweb-${id}`, title, url, source: RULIWEB_NEWS.name, date, image });
     if (++added >= 40) break;
   }

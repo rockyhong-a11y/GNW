@@ -318,6 +318,8 @@ async function fromRuliwebNews(news) {
       status = res.status; html = await res.text();
     } catch (e) { err = String(e && e.message || e); }
     console.log(`[ruliweb] ${url} status=${status} len=${html.length} links=${(html.match(/\/news\/(?:board\/\d+\/)?read\/\d+/g) || []).length} err=${err}`);
+    { const i = html.search(/\/news\/(?:board\/\d+\/)?read\/\d+/); const s0 = i > 700 ? i - 700 : 0;
+      console.log(`[ruliweb] SAMPLE ${url} >>>${html.slice(s0, s0 + 3500).replace(/\s+/g, " ")}<<<`); }
     if (!html || status >= 400) { errs.push(`${url}=${status}`); continue; }
     added += parseRuliweb(html, news, seen, 40);
   }

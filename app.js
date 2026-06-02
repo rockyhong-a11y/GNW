@@ -24,14 +24,15 @@ const gameCats = (g) => {
   for (const p of (g.platforms || [])) for (const c of PLATFORM_CATS) if (c.match(p)) cats.add(c.key);
   return cats;
 };
-const TAB_ORDER = ["news", "all", "콘솔", "PC", "모바일"];
+const TAB_ORDER = ["news", "콘솔", "PC", "모바일", "event"];
 
 const STATE = {
   games: [],
   news: [],
-  platform: "all",   // all | 모바일 | PC | 콘솔 | news
+  platform: "콘솔",   // 콘솔 | PC | 모바일 | event | news
   month: "all",      // all | YYYY-MM
 };
+const EVENT_TYPES = ["update", "event", "test"]; // 이벤트 탭에 표시할 종류
 
 const TODAY = new Date();
 TODAY.setHours(0, 0, 0, 0);
@@ -71,9 +72,15 @@ function formatPrice(price) {
 }
 
 /* ---------- Filtering ---------- */
+const newsMonthKey = (d) => String(d || "").replace(/\./g, "-").slice(0, 7); // "2026.06.01" → "2026-06"
+
 function applyFilters() {
   const list = STATE.games.filter((g) => {
-    if (STATE.platform !== "all" && !gameCats(g).has(STATE.platform)) return false;
+    if (STATE.platform === "event") {
+      if (!EVENT_TYPES.includes(g.eventType)) return false;          // 이벤트 탭: 업데이트·행사·테스트만
+    } else if (STATE.platform !== "news") {
+      if (!gameCats(g).has(STATE.platform)) return false;             // 플랫폼 탭
+    }
     if (STATE.month !== "all" && monthKey(g.releaseDate) !== STATE.month) return false;
     return true;
   });
@@ -134,7 +141,8 @@ function renderCard(g) {
 
 function renderNews() {
   const root = $("#gameRoot");
-  const list = STATE.news || [];
+  let list = STATE.news || [];
+  if (STATE.month !== "all") list = list.filter((n) => n.date && newsMonthKey(n.date) === STATE.month);
   if (!list.length) {
     root.innerHTML = "";
     $("#emptyState").hidden = false;
@@ -154,9 +162,7 @@ function renderNews() {
 }
 
 function render() {
-  const newsView = STATE.platform === "news";
-  $("#monthSelect").style.display = newsView ? "none" : "";
-  if (newsView) return renderNews();
+  if (STATE.platform === "news") return renderNews();
 
   const list = applyFilters();
   const root = $("#gameRoot");
@@ -197,6 +203,7 @@ function setTab(cat) {
     t.classList.toggle("active", on);
     t.setAttribute("aria-selected", on ? "true" : "false");
   });
+  buildMonthSelect();   // 탭별로 기간 옵션이 다름(뉴스=뉴스 날짜, 그 외=일정 월)
   render();
 }
 
@@ -220,10 +227,15 @@ function bindTabs() {
   }, { passive: true });
 }
 
-/* ---------- Month list box ---------- */
+/* ---------- 기간 리스트박스 (탭별) ---------- */
 function buildMonthSelect() {
-  const months = [...new Set(STATE.games.map((g) => monthKey(g.releaseDate)))].sort();
   const sel = $("#monthSelect");
+  let months;
+  if (STATE.platform === "news") {
+    months = [...new Set((STATE.news || []).map((n) => n.date).filter(Boolean).map(newsMonthKey))].sort().reverse();
+  } else {
+    months = [...new Set(STATE.games.map((g) => monthKey(g.releaseDate)))].sort();
+  }
   sel.innerHTML = [`<option value="all">전체 기간</option>`]
     .concat(months.map((m) => `<option value="${m}">${monthLabel(m)}</option>`))
     .join("");

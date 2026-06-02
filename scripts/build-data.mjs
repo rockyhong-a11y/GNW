@@ -260,8 +260,10 @@ async function fromInven(out) {
 // 루리웹 게임 뉴스 수집. 러너에서만 동작(NEWS=1). 여러 소스를 순회하고 중복 제거.
 const RULIWEB_SOURCES = [
   "https://bbs.ruliweb.com/news",            // 데스크톱 뉴스 목록(썸네일+요약+조회수+시각+댓글수)
-  "https://bbs.ruliweb.com/news?page=2",     // 추가 페이지(지원 시 더 많은 기사, 미지원이면 ID로 중복 제거)
+  "https://bbs.ruliweb.com/news?page=2",
   "https://bbs.ruliweb.com/news?page=3",
+  "https://bbs.ruliweb.com/news/board/1001",       // 게임 뉴스 게시판
+  "https://bbs.ruliweb.com/news/board/1001?page=2",
 ];
 // HTML 텍스트/엔티티 정리
 const rwText = (s) => (s || "")
@@ -275,7 +277,7 @@ function parseRuliwebList(html, news, seen, cap = 60) {
   const start = html.indexOf('class="center_list"');
   const sec = start >= 0 ? html.slice(start) : html;
   let added = 0;
-  for (const m of sec.matchAll(/<div id="news_(\d+)"[\s\S]*?(?=<div id="news_\d+"|<\/section>)/g)) {
+  for (const m of sec.matchAll(/<div id="news_(\d+)"[\s\S]*?(?=<div id="news_\d+"|<\/section>|$)/g)) {
     const id = m[1], block = m[0];
     if (seen.has("id:" + id)) continue;
     const title = rwText((block.match(/<strong class="title">([\s\S]*?)<\/strong>/) || [])[1]);
@@ -362,9 +364,14 @@ async function fromRuliwebNews(news) {
     } catch (e) { err = String(e && e.message || e); }
     console.log(`[ruliweb] ${url} status=${status} len=${html.length} links=${(html.match(/\/news\/(?:board\/\d+\/)?read\/\d+/g) || []).length} err=${err}`);
     if (!html || status >= 400) { errs.push(`${url}=${status}`); continue; }
+    if (process.env.NEWS_DEBUG === "1" && url.includes("board/1001")) {
+      console.log("[DBG board] center_list=" + html.includes('class="center_list"') + " widget_thumb=" + (html.match(/widget_thumbnail/g) || []).length + " desc=" + (html.match(/class="desc"/g) || []).length + " create_time=" + (html.match(/create_time/g) || []).length + " bgimg=" + (html.match(/background-image:\s*url\(\/\/img\.ruliweb/g) || []).length + " newsid=" + (html.match(/id="news_\d+"/g) || []).length);
+      const a = html.search(/\/news\/(?:board\/\d+\/)?read\/\d+/);
+      if (a >= 0) console.log("[DBG boardrow]\n" + html.slice(Math.max(0, a - 700), a + 900).replace(/\s+/g, " "));
+    }
     let n = parseRuliwebList(html, news, seen, 60);      // 리치 목록 우선
-    if (n < 5) n += parseRuliweb(html, news, seen, 40);  // 구조 변경 시 캐러셀 폴백
-    console.log(`[ruliweb] parsed ${n}`);
+    if (n < 5) n += parseRuliweb(html, news, seen, 40);  // 구조 변경 시 폴백
+    console.log(`[ruliweb] ${url} parsed ${n}`);
     added += n;
   }
   return { name: "RuliwebNews", ...(errs.length ? { error: errs.join(",") } : {}), added };

@@ -213,6 +213,7 @@ function setTab(cat) {
   });
   buildMonthSelect();   // 탭별로 기간 옵션이 다름(뉴스=뉴스 날짜, 그 외=일정 월)
   render();
+  if (cat === "news" && Date.now() - lastFetchAt > 5000) loadGames(false); // 뉴스 탭 진입 시 최신 갱신
 }
 
 function bindTabs() {

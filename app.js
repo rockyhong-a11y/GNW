@@ -290,37 +290,16 @@ function bindAutoRefresh() {
   window.addEventListener("focus", () => { if (Date.now() - lastFetchAt > 30000) loadGames(false); });
 }
 
-/* ---------- App icon themes (설정 → 아이콘 변경) ---------- */
-const ICON_THEMES = [
-  { key: "violet", name: "퍼플", c1: "#6c7aff", c2: "#b14aed" },
-  { key: "blue",   name: "블루", c1: "#3aa7ff", c2: "#1e63ff" },
-  { key: "green",  name: "그린", c1: "#3ddc84", c2: "#15a85f" },
-  { key: "pink",   name: "핑크", c1: "#ff85c0", c2: "#e8458a" },
-  { key: "amber",  name: "앰버", c1: "#ffb454", c2: "#ff7a3d" },
-  { key: "mono",   name: "다크", c1: "#3a4170", c2: "#1b2036" },
+/* ---------- App icon presets (설정 → 아이콘 변경) ---------- */
+const ICON_PRESETS = [
+  { key: "sword",  name: "검사",   src: "icons/preset-sword.png" },
+  { key: "voyage", name: "여행자", src: "icons/preset-voyage.png" },
+  { key: "hunter", name: "헌터",   src: "icons/preset-hunter.png" },
+  { key: "knight", name: "나이트", src: "icons/preset-knight.png" },
+  { key: "ranger", name: "레인저", src: "icons/preset-ranger.png" },
 ];
-function iconSVG(t, size) {
-  const id = "g_" + t.key;
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 512 512"><defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${t.c1}"/><stop offset="1" stop-color="${t.c2}"/></linearGradient></defs><rect width="512" height="512" rx="112" fill="#0d0f1a"/><rect x="36" y="36" width="440" height="440" rx="92" fill="url(#${id})"/><text x="256" y="300" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="150" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="2">GNW</text><circle cx="256" cy="372" r="13" fill="#3ddc84"/></svg>`;
-}
-const svgDataUri = (svg) => "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
-function rasterize(svg, size) {
-  return new Promise((resolve) => {
-    const img = new Image();
-    img.onload = () => {
-      try {
-        const c = document.createElement("canvas");
-        c.width = c.height = size;
-        c.getContext("2d").drawImage(img, 0, 0, size, size);
-        resolve(c.toDataURL("image/png"));
-      } catch { resolve(null); }
-    };
-    img.onerror = () => resolve(null);
-    img.src = svgDataUri(svg);
-  });
-}
 function savedIconKey() {
-  try { return localStorage.getItem("gnw-icon") || "violet"; } catch { return "violet"; }
+  try { return localStorage.getItem("gnw-icon") || "sword"; } catch { return "sword"; }
 }
 function setIconLinks(href) {
   document.querySelectorAll('link[rel="apple-touch-icon"]').forEach((l) => { l.href = href; });
@@ -329,17 +308,15 @@ function setIconLinks(href) {
 }
 function customIconData() { try { return localStorage.getItem("gnw-icon-custom"); } catch { return null; } }
 
-async function applyIcon(key) {
+function applyIcon(key) {
   if (key === "custom") {
     const png = customIconData();
     if (png) { setIconLinks(png); try { localStorage.setItem("gnw-icon", "custom"); } catch {} return; }
-    key = "violet";
+    key = "sword";
   }
-  const t = ICON_THEMES.find((x) => x.key === key) || ICON_THEMES[0];
-  // iOS 홈화면 아이콘은 PNG가 안정적 → canvas로 래스터화한 PNG를 apple-touch-icon 으로
-  const png = await rasterize(iconSVG(t, 180), 180);
-  if (png) setIconLinks(png);
-  try { localStorage.setItem("gnw-icon", key); } catch {}
+  const p = ICON_PRESETS.find((x) => x.key === key) || ICON_PRESETS[0];
+  setIconLinks(p.src); // 캐릭터 PNG를 홈화면/탭 아이콘으로
+  try { localStorage.setItem("gnw-icon", p.key); } catch {}
 }
 
 /* ---------- Custom icon: upload + crop ---------- */
@@ -409,9 +386,9 @@ function bindCropper() {
 function buildIconGrid() {
   const cur = savedIconKey();
   const grid = $("#iconGrid");
-  let html = ICON_THEMES.map((t) =>
+  let html = ICON_PRESETS.map((t) =>
     `<button class="icon-option ${t.key === cur ? "sel" : ""}" type="button" data-key="${t.key}">
-       <span class="icon-prev">${iconSVG(t, 60)}</span><span class="icon-name">${t.name}</span>
+       <span class="icon-prev"><img src="${t.src}" alt="" loading="lazy"></span><span class="icon-name">${t.name}</span>
      </button>`
   ).join("");
   const custom = customIconData();

@@ -24,7 +24,7 @@ const gameCats = (g) => {
   for (const p of (g.platforms || [])) for (const c of PLATFORM_CATS) if (c.match(p)) cats.add(c.key);
   return cats;
 };
-const TAB_ORDER = ["news", "콘솔", "PC", "모바일", "event"];
+const TAB_ORDER = ["news", "release", "event"];
 
 const STATE = {
   games: [],
@@ -77,9 +77,9 @@ const newsMonthKey = (d) => String(d || "").replace(/\./g, "-").slice(0, 7); // 
 function applyFilters() {
   const list = STATE.games.filter((g) => {
     if (STATE.platform === "event") {
-      if (!EVENT_TYPES.includes(g.eventType)) return false;          // 이벤트 탭: 업데이트·행사·테스트만
-    } else if (STATE.platform !== "news") {
-      if (!gameCats(g).has(STATE.platform)) return false;             // 플랫폼 탭
+      if (!EVENT_TYPES.includes(g.eventType)) return false;          // 이벤트 탭: 업데이트·행사·테스트
+    } else {
+      if (EVENT_TYPES.includes(g.eventType)) return false;           // 출시 탭: 콘솔/PC/모바일 통합(게임당 1건), 이벤트 제외
     }
     if (STATE.month !== "all" && monthKey(g.releaseDate) !== STATE.month) return false;
     return true;

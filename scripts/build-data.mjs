@@ -349,6 +349,37 @@ function parseRuliweb(html, news, seen, cap = 40) {
   return added;
 }
 
+// 제목 유사도(문자 bigram Dice) 기반 뉴스 중복 제거 — 유사 글은 최신만 유지
+function newsRecency(n) {
+  if (!n || !n.date) return 0;
+  const p = String(n.date).split(".");
+  if (p.length < 3) return 0;
+  return new Date(`${p[0]}-${p[1]}-${p[2]}T${n.time || "00:00"}`).getTime() || 0;
+}
+function diceCoef(a, b) {
+  if (a === b) return 1;
+  if (a.length < 2 || b.length < 2) return 0;
+  const bg = (s) => { const m = new Map(); for (let i = 0; i < s.length - 1; i++) { const g = s.slice(i, i + 2); m.set(g, (m.get(g) || 0) + 1); } return m; };
+  const A = bg(a), B = bg(b);
+  let inter = 0, total = 0;
+  for (const [g, c] of A) { total += c; inter += Math.min(c, B.get(g) || 0); }
+  for (const [, c] of B) total += c;
+  return total ? (2 * inter) / total : 0;
+}
+function dedupNewsByTitle(items, threshold = 0.8) {
+  const norm = (t) => String(t || "").toLowerCase().replace(/[^\p{L}\p{N}]/gu, ""); // 공백·기호 제거
+  const sorted = [...items].sort((a, b) => newsRecency(b) - newsRecency(a)); // 최신 우선
+  const kept = [];
+  for (const n of sorted) {
+    const key = norm(n.title);
+    if (!key) continue;
+    if (kept.some((k) => diceCoef(key, k.__k) >= threshold)) continue; // 유사 → 더 오래된 중복이므로 스킵
+    n.__k = key; kept.push(n);
+  }
+  for (const k of kept) delete k.__k;
+  return kept;
+}
+
 async function fromRuliwebNews(news) {
   if (process.env.NEWS !== "1") return { name: "RuliwebNews", skipped: "NEWS!=1" };
   const MOBILE_UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1";
@@ -506,14 +537,8 @@ async function main() {
     .filter((g) => g.releaseDate && !isNaN(new Date(g.releaseDate)))
     .sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate));
 
-  // 뉴스: 제목 정규화 기준 중복 제거. 수집 실패/스킵 시 기존 뉴스 유지(로컬 빌드가 지우지 않게).
-  const seenNews = new Set();
-  let news = [];
-  for (const n of newsItems) {
-    const k = String(n.title).toLowerCase().replace(/\s+/g, "");
-    if (!k || seenNews.has(k)) continue;
-    seenNews.add(k); news.push(n);
-  }
+  // 뉴스: 제목이 80% 이상 유사하면 최신 글만 남기고 중복 제거. 수집 실패/스킵 시 기존 뉴스 유지.
+  let news = dedupNewsByTitle(newsItems, 0.8);
   if (!news.length && prev && Array.isArray(prev.news)) news = prev.news;
 
   // 결정론적 출력: 매시간 실행돼도 실제 데이터가 바뀌지 않으면 파일이 동일 →

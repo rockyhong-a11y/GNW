@@ -153,39 +153,18 @@ async function fromRAWG(out) {
 
 // 인벤 발매 캘린더(주요 일정) 파서. HTML 구조 의존이라 best-effort 이며,
 // 실제 페이지 마크업에 맞춰 SEL/정규식 조정이 필요할 수 있다. INVEN=1 일 때만 동작.
-async function fromInven(out) {
-  if (process.env.INVEN !== "1") return { name: "Inven", skipped: "INVEN!=1" };
-  let html = "", status = 0, err = "";
-  if (process.env.INVEN_HTML_FILE) {            // 테스트 훅: 로컬 HTML 픽스처로 파서 검증
-    try { html = readFileSync(process.env.INVEN_HTML_FILE, "utf8"); status = 200; }
-    catch (e) { err = String(e && e.message || e); }
-  } else {
-    try {
-      const res = await fetch(INVEN_CAL.url, { headers: HEADERS });
-      status = res.status;
-      html = await res.text();
-    } catch (e) { err = String(e && e.message || e); }
-  }
-
-  // 진단 파일: 러너가 인벤으로부터 실제로 받은 것을 저장소에 남겨 구조/도달성 확인.
-  try {
-    const dbg = [
-      `fetched_at=${new Date().toISOString()}`,
-      `url=${INVEN_CAL.url}`,
-      `status=${status}`,
-      `error=${err}`,
-      `html_length=${html.length}`,
-      `calendar_game_links=${(html.match(/\/webzine\/calendar\/game\/\d+/g) || []).length}`,
-      `news_links=${(html.match(/\/webzine\/news\/\?news=\d+/g) || []).length}`,
-      `upload_imgs=${(html.match(/upload\d*\.inven\.co\.kr\/upload/g) || []).length}`,
-      `calendar_items=${(html.match(/<li class="calendar__item/g) || []).length}`,
-    ].join("\n");
-    await writeFile(join(ROOT, "data/_inven-debug.txt"), dbg + "\n");
-  } catch { /* 디버그 기록 실패는 무시 */ }
-
-  if (!html || status >= 400) return { name: "Inven", error: `status=${status} ${err}`.trim(), added: 0 };
-
-  // ── 실제 캘린더 일정 리스트 파싱 (<li class="calendar__item ...">) ────────
+async function invenFetch(url) {
+  try { const res = await fetch(url, { headers: HEADERS }); return { html: await res.text(), status: res.status, err: "" }; }
+  catch (e) { return { html: "", status: 0, err: String(e && e.message || e) }; }
+}
+// HTML 에 들어있는 일정들의 YYYYMM 집합(월 파라미터 탐지용)
+function invenMonths(html) {
+  const s = new Set();
+  for (const m of html.matchAll(/dates=(\d{8})/g)) s.add(m[1].slice(0, 6));
+  return s;
+}
+// 한 달 분량 HTML 에서 일정 항목 파싱 → out 에 추가. seen 으로 월/소스 간 중복 제거.
+function parseInvenCalendar(html, out, seen) {
   const abs = (u) => !u ? null : (u.startsWith("/") ? "https://www.inven.co.kr" + u : u);
   const stripTags = (s) => String(s || "").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
   // 인벤 분류 텍스트 → GNW eventType
@@ -200,7 +179,6 @@ async function fromInven(out) {
   const PLAT = { pc: "PC", ps5: "PS5", ps4: "PS5", xbox: "Xbox Series", xboxseries: "Xbox Series", switch: "Switch", switch2: "Switch 2", ns: "Switch", mobile: "Mobile", ios: "Mobile", aos: "Mobile", android: "Mobile" };
 
   let added = 0;
-  const seen = new Set();
   for (const m of html.matchAll(/<li class="calendar__item[\s\S]*?<\/li>/g)) {
     const it = m[0];
 
@@ -232,9 +210,11 @@ async function fromInven(out) {
     const platforms = [...new Set([...it.matchAll(/calendar__platform-icon--([a-z0-9]+)/g)].map((x) => PLAT[x[1]]).filter(Boolean))];
     const tags = [...it.matchAll(/class="calendar__event-tag">\s*([^<]+?)\s*<\/span>/g)].map((x) => x[1].trim()).filter(Boolean);
 
+    // 같은 일정이 여러 달 HTML 에 겹쳐 나올 수 있으므로 id+날짜로 중복 제거
     const id = idx ? `inven-${idx}` : `inven-${slug(title)}`;
-    if (seen.has(id)) continue;
-    seen.add(id);
+    const dedupKey = `${id}@${date}`;
+    if (seen.has(dedupKey)) continue;
+    seen.add(dedupKey);
 
     // company: 출시형은 원제(영문), 행사형은 설명문 → 분배
     const isDesc = /[.!?。…]$|습니다|됩니다|진행|예정|공개|출시|개최|등장/.test(company);
@@ -254,6 +234,87 @@ async function fromInven(out) {
     }));
     added++;
   }
+  return added;
+}
+
+async function fromInven(out) {
+  if (process.env.INVEN !== "1") return { name: "Inven", skipped: "INVEN!=1" };
+
+  // 기준(현재 월) 페이지: 로컬 픽스처 우선, 없으면 실제 캘린더.
+  let base;
+  if (process.env.INVEN_HTML_FILE) {
+    try { base = { html: readFileSync(process.env.INVEN_HTML_FILE, "utf8"), status: 200, err: "" }; }
+    catch (e) { base = { html: "", status: 0, err: String(e && e.message || e) }; }
+  } else {
+    base = await invenFetch(INVEN_CAL.url);
+  }
+
+  // 진단 파일: 러너가 인벤으로부터 실제로 받은 것을 저장소에 남겨 구조/도달성 확인.
+  try {
+    const dbg = [
+      `fetched_at=${new Date().toISOString()}`,
+      `url=${INVEN_CAL.url}`,
+      `status=${base.status}`,
+      `error=${base.err}`,
+      `html_length=${base.html.length}`,
+      `calendar_game_links=${(base.html.match(/\/webzine\/calendar\/game\/\d+/g) || []).length}`,
+      `news_links=${(base.html.match(/\/webzine\/news\/\?news=\d+/g) || []).length}`,
+      `upload_imgs=${(base.html.match(/upload\d*\.inven\.co\.kr\/upload/g) || []).length}`,
+      `calendar_items=${(base.html.match(/<li class="calendar__item/g) || []).length}`,
+    ].join("\n");
+    await writeFile(join(ROOT, "data/_inven-debug.txt"), dbg + "\n");
+  } catch { /* 디버그 기록 실패는 무시 */ }
+
+  if (!base.html || base.status >= 400) return { name: "Inven", error: `status=${base.status} ${base.err}`.trim(), added: 0 };
+
+  const seen = new Set();
+  let added = parseInvenCalendar(base.html, out, seen);
+
+  // 올해(이번 달 제외) 나머지 월도 수집해 6월 이전/이후 일정까지 채운다.
+  // 인벤이 쓰는 월 파라미터 형식을 모르므로, 후보 형식을 프로브 월로 시험해
+  // "요청한 월을 실제로 돌려주는" 형식을 자가 탐지한 뒤 그 형식으로 1~12월을 순회한다.
+  // (픽스처 테스트 시에는 네트워크 순회를 생략)
+  if (!process.env.INVEN_HTML_FILE) {
+    const pad = (n) => String(n).padStart(2, "0");
+    const B = INVEN_CAL.url;
+    const fmts = [
+      (y, m) => `${B}?y=${y}&m=${m}`,
+      (y, m) => `${B}?year=${y}&month=${m}`,
+      (y, m) => `${B}?date=${y}-${pad(m)}`,
+      (y, m) => `${B}?d=${y}-${pad(m)}`,
+      (y, m) => `${B}?ym=${y}${pad(m)}`,
+      (y, m) => `${B}?sdate=${y}-${pad(m)}-01`,
+      (y, m) => `${B}${y}/${pad(m)}/`,
+    ];
+    const Y = TODAY.getFullYear();
+    const cur = TODAY.getMonth() + 1;
+    const probe = cur >= 4 ? cur - 2 : cur + 2;     // 현재월이 아닌 프로브 월
+    const wantProbe = `${Y}${pad(probe)}`;
+
+    let fmt = null; const log = [];
+    for (const f of fmts) {
+      const url = f(Y, probe);
+      const { html, status } = await invenFetch(url);
+      const ok = status === 200 && invenMonths(html).has(wantProbe);
+      log.push(`${url.slice(B.length) || "/"}=${status}${ok ? "✓" : ""}`);
+      if (ok) { fmt = f; break; }
+    }
+    console.log(`[inven] 월 파라미터 탐지(probe ${wantProbe}): ${log.join(" ")} => ${fmt ? "발견" : "미발견(현재 월만 수집)"}`);
+
+    if (fmt) {
+      let monthsHit = 0;
+      for (let m = 1; m <= 12; m++) {
+        if (m === cur) continue;
+        const { html, status } = await invenFetch(fmt(Y, m));
+        if (status !== 200 || !html) continue;
+        const n = parseInvenCalendar(html, out, seen);
+        if (n) monthsHit++;
+        added += n;
+      }
+      console.log(`[inven] ${Y}년 월별 수집 완료: 추가 월 ${monthsHit} · 누적 일정 ${added}`);
+    }
+  }
+
   return { name: "Inven", added };
 }
 

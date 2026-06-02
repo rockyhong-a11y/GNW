@@ -204,16 +204,19 @@ function render() {
 
 /* ---------- Platform tabs (bottom bar + swipe) ---------- */
 function setTab(cat) {
-  if (!TAB_ORDER.includes(cat) || cat === STATE.platform) return;
-  STATE.platform = cat;
-  document.querySelectorAll("#platformTabs .tab").forEach((t) => {
-    const on = t.dataset.cat === cat;
-    t.classList.toggle("active", on);
-    t.setAttribute("aria-selected", on ? "true" : "false");
-  });
-  buildMonthSelect();   // 탭별로 기간 옵션이 다름(뉴스=뉴스 날짜, 그 외=일정 월)
-  render();
-  if (cat === "news" && Date.now() - lastFetchAt > 5000) loadGames(false); // 뉴스 탭 진입 시 최신 갱신
+  if (!TAB_ORDER.includes(cat)) return;
+  if (cat !== STATE.platform) {            // 탭 전환
+    STATE.platform = cat;
+    document.querySelectorAll("#platformTabs .tab").forEach((t) => {
+      const on = t.dataset.cat === cat;
+      t.classList.toggle("active", on);
+      t.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    buildMonthSelect();   // 탭별로 기간 옵션이 다름(뉴스=뉴스 날짜, 그 외=일정 월)
+    render();
+  }
+  // 뉴스 탭은 진입/재탭(이미 활성이어도) 시 최신 뉴스로 갱신
+  if (cat === "news" && Date.now() - lastFetchAt > 2000) loadGames(false);
 }
 
 function bindTabs() {

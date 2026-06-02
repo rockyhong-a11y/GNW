@@ -269,20 +269,25 @@ async function fromRuliwebNews(news) {
   // 구조 확인용 로그(get_job_logs 로 읽음)
   console.log(`[ruliweb] status=${status} len=${html.length} err=${err}`);
   console.log(`[ruliweb] read_links=${(html.match(/\/news\/read\/\d+/g) || []).length}`);
-  console.log(`[ruliweb] SAMPLE>>>${html.slice(0, 5000).replace(/\s+/g, " ")}<<<`);
+  const _fi = html.search(/\/news\/read\/\d+/);
+  const _s0 = _fi > 600 ? _fi - 600 : 0;
+  console.log(`[ruliweb] SAMPLE>>>${html.slice(_s0, _s0 + 4000).replace(/\s+/g, " ")}<<<`);
   if (!html || status >= 400) return { name: "RuliwebNews", error: `status=${status} ${err}`.trim(), added: 0 };
 
-  // best-effort: 기사 링크 + 제목 추출 (실제 구조 확인 후 보정)
+  // best-effort: 기사 링크 + 제목 + (있으면)썸네일/날짜 추출
   const seen = new Set();
   let added = 0;
   for (const m of html.matchAll(/<a[^>]+href="(https?:\/\/[^"]*ruliweb\.com\/news\/read\/(\d+)[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi)) {
-    const url = m[1].replace(/&amp;/g, "&"), id = m[2];
-    const title = m[3].replace(/<[^>]+>/g, " ").replace(/&[a-z]+;/g, " ").replace(/\s+/g, " ").trim();
+    const url = m[1].replace(/&amp;/g, "&"), id = m[2], inner = m[3];
+    const title = inner.replace(/<[^>]+>/g, " ").replace(/&[a-z]+;/g, " ").replace(/\s+/g, " ").trim();
     if (!title || title.length < 6) continue;
     const key = title.toLowerCase().replace(/\s+/g, "");
     if (seen.has(key) || seen.has(id)) continue;          // 중복 제거(제목/ID)
     seen.add(key); seen.add(id);
-    news.push({ id: `ruliweb-${id}`, title, url, source: RULIWEB_NEWS.name, date: null, image: null });
+    let image = (inner.match(/<img[^>]+(?:data-original|data-src|src)="([^"]+\.(?:jpe?g|png|gif|webp)[^"]*)"/i) || [])[1] || null;
+    if (image && image.startsWith("//")) image = "https:" + image;
+    const date = (inner.match(/(20\d{2}[.\-]\d{1,2}[.\-]\d{1,2})/) || [])[1] || null;
+    news.push({ id: `ruliweb-${id}`, title, url, source: RULIWEB_NEWS.name, date, image });
     if (++added >= 40) break;
   }
   return { name: "RuliwebNews", added };

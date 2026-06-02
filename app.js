@@ -152,7 +152,7 @@ function renderNews() {
   STATE._newsView = list; // 상세 시트에서 인덱스로 참조
   root.innerHTML = `<ul class="newsboard">` + list.map((n, i) => `
     <li class="news-item" data-ni="${i}">
-      ${n.image ? `<img class="news-thumb" src="${esc(n.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
+      ${n.image ? `<img class="news-thumb" src="${esc(n.image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
       <span class="news-body">
         <span class="news-title">${esc(n.title)}</span>
         ${n.date ? `<span class="news-meta">${esc(n.date)}</span>` : ""}

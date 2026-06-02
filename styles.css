@@ -256,15 +256,25 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 2px 16px 24px; }
 .empty-state { text-align: center; color: var(--text-faint); padding: 60px 0; }
 
 /* 게임 뉴스 보드 (루리웹 형식) */
-.newsboard { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; }
-.news-item { border-bottom: 1px solid var(--border); }
-.news-item a { display: flex; gap: 12px; align-items: center; padding: 13px 2px; text-decoration: none; }
-.news-item a:active { opacity: .65; }
-.news-thumb { flex: 0 0 auto; width: 84px; height: 56px; object-fit: cover; border-radius: 8px; background: var(--bg-card); }
-.news-body { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
-.news-title { color: var(--text); font-size: 14.5px; font-weight: 600; line-height: 1.4;
-  white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
-.news-meta { color: var(--text-faint); font-size: 12px; }
+.newsboard { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; }
+/* 썸네일(좌) → 제목(우) 가로 행. 모바일 터치 고려해 넉넉한 간격 */
+.news-item {
+  display: flex; gap: 12px; align-items: center;
+  padding: 15px 4px; min-height: 74px;
+  border-bottom: 1px solid var(--border); cursor: pointer;
+}
+.news-item:active { opacity: .6; }
+.news-thumb {
+  flex: 0 0 auto; width: 104px; height: 68px; object-fit: cover;
+  border-radius: 10px; background: var(--bg-card);
+}
+.news-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; flex: 1; }
+.news-title {
+  color: var(--text); font-size: 15px; font-weight: 600; line-height: 1.42;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  overflow-wrap: anywhere; word-break: break-word;
+}
+.news-meta { color: var(--text-faint); font-size: 12.5px; }
 
 /* Footer */
 .app-footer {

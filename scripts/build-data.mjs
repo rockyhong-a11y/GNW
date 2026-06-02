@@ -259,6 +259,7 @@ async function fromInven(out) {
 
 // 루리웹 게임 뉴스 수집. 러너에서만 동작(NEWS=1). 여러 소스를 순회하고 중복 제거.
 const RULIWEB_SOURCES = [
+  "https://bbs.ruliweb.com/news",            // 데스크톱 뉴스 목록(썸네일+요약+조회수+시각+댓글수)
   "https://m.ruliweb.com/news",            // 메인 뉴스(캐러셀+목록)
   "https://bbs.ruliweb.com/news/board/1001", // 게임 뉴스 게시판(목록형)
 ];
@@ -319,6 +320,11 @@ async function fromRuliwebNews(news) {
     } catch (e) { err = String(e && e.message || e); }
     console.log(`[ruliweb] ${url} status=${status} len=${html.length} links=${(html.match(/\/news\/(?:board\/\d+\/)?read\/\d+/g) || []).length} err=${err}`);
     if (!html || status >= 400) { errs.push(`${url}=${status}`); continue; }
+    if (process.env.NEWS_DEBUG === "1" && url === "https://bbs.ruliweb.com/news") {
+      const m = [...html.matchAll(/\/news\/(?:board\/\d+\/)?read\/\d+/g)];
+      if (m[1]) console.log("[DBG row]\n" + html.slice(Math.max(0, m[1].index - 300), m[1].index + 2000).replace(/\s+/g, " "));
+      console.log("[DBG probe] 조회=" + (html.match(/조회/g) || []).length + " hit=" + (html.match(/class="[^"]*hit/gi) || []).length + " reply=" + (html.match(/reply|num_reply|댓글/gi) || []).length + " summary=" + (html.match(/summary|desc|text_dsc|cont_txt/gi) || []).length + " time=" + (html.match(/\d{4}\.\d\d\.\d\d \(\d\d:\d\d/g) || []).length);
+    }
     added += parseRuliweb(html, news, seen, 40);
   }
   return { name: "RuliwebNews", ...(errs.length ? { error: errs.join(",") } : {}), added };

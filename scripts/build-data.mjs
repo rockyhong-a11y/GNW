@@ -288,6 +288,7 @@ function parseRuliweb(html, news, seen, cap = 40) {
     seen.add(key); seen.add("id:" + id);
     let url = group[0].url.replace(/&amp;/g, "&");
     if (url.startsWith("/")) url = "https://bbs.ruliweb.com" + url;
+    url = url.replace(/^https?:\/\/m\.ruliweb\.com/, "https://bbs.ruliweb.com"); // 데스크톱 글페이지(본문 표시 안정)
     let image = null;
     for (const a of group) { const im = a.inner.match(RW_IMG); if (im) { image = rwAbsImg(im[1]); break; } }
     if (!image) {
@@ -298,7 +299,7 @@ function parseRuliweb(html, news, seen, cap = 40) {
       }
     }
     const a0 = group[0]; const dwin = html.slice(a0.idx, a0.idx + a0.inner.length + 500);
-    const date = (dwin.match(/20\d{2}[.\-]\d{1,2}[.\-]\d{1,2}/) || dwin.match(/\b\d{1,2}\.\d{1,2}\b/) || [])[0] || null;
+    const date = (dwin.match(/20\d{2}[.\-]\d{1,2}[.\-]\d{1,2}/) || [])[0] || null; // YYYY.MM.DD 만(가짜 MM.DD 제거)
     news.push({ id: `ruliweb-${id}`, title, url, source: RULIWEB_NEWS.name, date, image });
     if (++added >= cap) break;
   }

@@ -24,7 +24,7 @@ const gameCats = (g) => {
   for (const p of (g.platforms || [])) for (const c of PLATFORM_CATS) if (c.match(p)) cats.add(c.key);
   return cats;
 };
-const TAB_ORDER = ["all", "모바일", "PC", "콘솔", "news"];
+const TAB_ORDER = ["news", "all", "콘솔", "PC", "모바일"];
 
 const STATE = {
   games: [],
@@ -147,7 +147,7 @@ function renderNews() {
         ${n.image ? `<img class="news-thumb" src="${esc(n.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
         <span class="news-body">
           <span class="news-title">${esc(n.title)}</span>
-          <span class="news-meta">${esc(n.source || "")}${n.date ? " · " + esc(n.date) : ""}</span>
+          ${n.date ? `<span class="news-meta">${esc(n.date)}</span>` : ""}
         </span>
       </a>
     </li>`).join("") + `</ul>`;
@@ -311,23 +311,105 @@ function rasterize(svg, size) {
 function savedIconKey() {
   try { return localStorage.getItem("gnw-icon") || "violet"; } catch { return "violet"; }
 }
+function setIconLinks(href) {
+  document.querySelectorAll('link[rel="apple-touch-icon"]').forEach((l) => { l.href = href; });
+  const fav = document.querySelector('link[rel="icon"]');
+  if (fav) fav.href = href;
+}
+function customIconData() { try { return localStorage.getItem("gnw-icon-custom"); } catch { return null; } }
+
 async function applyIcon(key) {
+  if (key === "custom") {
+    const png = customIconData();
+    if (png) { setIconLinks(png); try { localStorage.setItem("gnw-icon", "custom"); } catch {} return; }
+    key = "violet";
+  }
   const t = ICON_THEMES.find((x) => x.key === key) || ICON_THEMES[0];
   // iOS 홈화면 아이콘은 PNG가 안정적 → canvas로 래스터화한 PNG를 apple-touch-icon 으로
   const png = await rasterize(iconSVG(t, 180), 180);
-  if (png) document.querySelectorAll('link[rel="apple-touch-icon"]').forEach((l) => { l.href = png; });
-  const fav = document.querySelector('link[rel="icon"]');
-  if (fav) fav.href = svgDataUri(iconSVG(t, 64));
+  if (png) setIconLinks(png);
   try { localStorage.setItem("gnw-icon", key); } catch {}
+}
+
+/* ---------- Custom icon: upload + crop ---------- */
+let cropState = null;
+function drawCrop() {
+  const c = cropState; if (!c) return;
+  const ctx = c.canvas.getContext("2d");
+  const s = c.baseScale * c.scale;
+  const w = c.img.width * s, h = c.img.height * s;
+  c.x = Math.min(0, Math.max(c.size - w, c.x));   // 이미지가 정사각형을 항상 덮도록 클램프
+  c.y = Math.min(0, Math.max(c.size - h, c.y));
+  ctx.clearRect(0, 0, c.size, c.size);
+  ctx.drawImage(c.img, c.x, c.y, w, h);
+}
+function openCropper(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    const img = new Image();
+    img.onload = () => {
+      const canvas = $("#cropCanvas");
+      const size = canvas.width; // 264
+      const baseScale = Math.max(size / img.width, size / img.height);
+      const w = img.width * baseScale, h = img.height * baseScale;
+      cropState = { img, size, scale: 1, baseScale, canvas, x: (size - w) / 2, y: (size - h) / 2 };
+      $("#cropZoom").value = "1";
+      drawCrop();
+      $("#cropModal").hidden = false;
+    };
+    img.onerror = () => alert("이미지를 불러올 수 없습니다.");
+    img.src = reader.result;
+  };
+  reader.readAsDataURL(file);
+}
+function applyCrop() {
+  const c = cropState; if (!c) return;
+  const out = 180, r = out / c.size, s = c.baseScale * c.scale;
+  const cv = document.createElement("canvas"); cv.width = cv.height = out;
+  cv.getContext("2d").drawImage(c.img, c.x * r, c.y * r, c.img.width * s * r, c.img.height * s * r);
+  let png; try { png = cv.toDataURL("image/png"); } catch { png = null; }
+  if (!png) return;
+  try { localStorage.setItem("gnw-icon-custom", png); localStorage.setItem("gnw-icon", "custom"); } catch {}
+  setIconLinks(png);
+  $("#cropModal").hidden = true;
+  $("#settingsSheet").hidden = true;
+}
+function bindCropper() {
+  const canvas = $("#cropCanvas");
+  let dragging = false, px = 0, py = 0;
+  const down = (e) => { dragging = true; const p = e.touches ? e.touches[0] : e; px = p.clientX; py = p.clientY; };
+  const move = (e) => {
+    if (!dragging || !cropState) return;
+    const p = e.touches ? e.touches[0] : e;
+    cropState.x += p.clientX - px; cropState.y += p.clientY - py;
+    px = p.clientX; py = p.clientY; drawCrop();
+    if (e.cancelable) e.preventDefault();
+  };
+  const up = () => { dragging = false; };
+  canvas.addEventListener("mousedown", down); window.addEventListener("mousemove", move); window.addEventListener("mouseup", up);
+  canvas.addEventListener("touchstart", down, { passive: true });
+  canvas.addEventListener("touchmove", move, { passive: false });
+  canvas.addEventListener("touchend", up);
+  $("#cropZoom").addEventListener("input", (e) => { if (cropState) { cropState.scale = parseFloat(e.target.value); drawCrop(); } });
+  $("#cropApply").addEventListener("click", applyCrop);
+  $("#cropClose").addEventListener("click", () => { $("#cropModal").hidden = true; });
+  $("#cropModal").addEventListener("click", (e) => { if (e.target.id === "cropModal") $("#cropModal").hidden = true; });
 }
 function buildIconGrid() {
   const cur = savedIconKey();
   const grid = $("#iconGrid");
-  grid.innerHTML = ICON_THEMES.map((t) =>
+  let html = ICON_THEMES.map((t) =>
     `<button class="icon-option ${t.key === cur ? "sel" : ""}" type="button" data-key="${t.key}">
        <span class="icon-prev">${iconSVG(t, 60)}</span><span class="icon-name">${t.name}</span>
      </button>`
   ).join("");
+  const custom = customIconData();
+  if (custom) {
+    html += `<button class="icon-option ${cur === "custom" ? "sel" : ""}" type="button" data-key="custom">
+       <span class="icon-prev"><img src="${custom}" alt=""></span><span class="icon-name">내 사진</span>
+     </button>`;
+  }
+  grid.innerHTML = html;
   grid.querySelectorAll(".icon-option").forEach((b) =>
     b.addEventListener("click", () => {
       grid.querySelectorAll(".icon-option").forEach((x) => x.classList.remove("sel"));
@@ -341,6 +423,13 @@ function bindSettings() {
   $("#settingsBtn").addEventListener("click", () => { buildIconGrid(); overlay.hidden = false; });
   $("#settingsClose").addEventListener("click", () => { overlay.hidden = true; });
   overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.hidden = true; });
+  $("#iconUploadBtn").addEventListener("click", () => $("#iconFile").click());
+  $("#iconFile").addEventListener("change", (e) => {
+    const f = e.target.files && e.target.files[0];
+    if (f) openCropper(f);
+    e.target.value = "";
+  });
+  bindCropper();
 }
 
 function bindCardClicks() {

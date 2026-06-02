@@ -337,12 +337,20 @@ const rwText = (s) => (s || "")
 // 본문 영역만 잘라낸다. itemprop=articleBody(스키마) → .view_content 순으로 시도하고,
 // 출처/추천/관련글/댓글 영역이 시작되면 그 앞에서 컷한다.
 function articleRegion(html) {
-  let i = html.search(/itemprop=["']articleBody["']/i);
-  if (i < 0) i = html.search(/class=["'][^"']*\bview_content\b[^"']*["']/i);
+  // 본문 컨테이너 후보(루리웹은 글 유형/게시판에 따라 클래스가 다양함)
+  const PATS = [
+    /itemprop=["']articleBody["']/i,
+    /class=["'][^"']*\bview_content\b[^"']*["']/i,
+    /class=["'][^"']*\bboard_main_view\b[^"']*["']/i,
+    /class=["'][^"']*\barticle_view_wrapper\b[^"']*["']/i,
+    /id=["']memo_\d+["']/i,
+  ];
+  let i = -1;
+  for (const p of PATS) { i = html.search(p); if (i >= 0) break; }
   if (i < 0) return "";
   const gt = html.indexOf(">", i);            // 여는 태그를 건너뛰어 본문 시작부터
   const from = gt >= 0 ? gt + 1 : i;
-  let region = html.slice(from, from + 80000);
+  let region = html.slice(from, from + 200000);  // 전체 본문 확보(긴 글 대비)
   // 출처/추천/관련글/댓글 영역의 '여는 태그' 앞에서 컷(부분 태그가 남지 않도록 '<' 포함)
   const cut = region.search(/<[^>]*class=["'][^"']*(source_url|like_wrapper|btn_list|relation_news|board_bottom|view_bottom|reply_count|reply_list|comment_wrapper|board_bottom_layer)/i);
   if (cut > 0) region = region.slice(0, cut);
@@ -364,23 +372,26 @@ function extractContent(html) {
   if (!region) return [];
   const blocks = [];
   let last = 0, m, textLen = 0;
+  // 전체 본문 표시 — 폭주 방지용 넉넉한 상한만(사실상 전체 기사)
+  const MAX_BLOCKS = 300, MAX_TEXT = 20000;
   const pushText = (frag) => {
     for (const p of htmlToParas(frag)) {
-      if (textLen > 4000 || blocks.length >= 60) break;
+      if (textLen > MAX_TEXT || blocks.length >= MAX_BLOCKS) break;
       blocks.push({ t: "p", v: p }); textLen += p.length;
     }
   };
   const re = /<img\b[^>]*>/gi;
-  while ((m = re.exec(region)) && blocks.length < 60) {
+  while ((m = re.exec(region)) && blocks.length < MAX_BLOCKS) {
     pushText(region.slice(last, m.index));
     last = m.index + m[0].length;
-    let src = (m[0].match(/(?:data-original|data-src|src)=["']([^"']+)["']/i) || [])[1];
-    if (!src || /blank|emoticon|icon|button|loading|\bs\.gif\b|spacer/i.test(src)) continue;
+    // 지연로딩 등 다양한 속성에서 이미지 URL 확보
+    let src = (m[0].match(/(?:data-original|data-src|data-echo|data-lazy(?:-src)?|src)=["']([^"']+)["']/i) || [])[1];
+    if (!src || /blank|emoticon|icon|button|loading|\bs\.gif\b|spacer|1x1|pixel/i.test(src)) continue;
     if (src.startsWith("//")) src = "https:" + src;
     if (/^https?:/i.test(src)) blocks.push({ t: "img", v: src.replace(/&amp;/g, "&") });
   }
   pushText(region.slice(last));
-  return blocks.slice(0, 60);
+  return blocks.slice(0, MAX_BLOCKS);
 }
 // 작성자(닉네임) 추출
 function extractAuthor(html) {

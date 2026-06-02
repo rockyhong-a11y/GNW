@@ -74,6 +74,7 @@ function formatPrice(price) {
 
 /* ---------- Filtering ---------- */
 const newsMonthKey = (d) => String(d || "").replace(/\./g, "-").slice(0, 7); // "2026.06.01" → "2026-06"
+const isBoardNews = (n) => /\/board\/\d+\/read\//.test((n && n.url) || ""); // 루리웹 콘솔 정보 게시판 글
 // 뉴스 정렬용 타임스탬프(날짜+시각). 없으면 0 → 맨 아래로.
 function newsRecency(n) {
   if (!n || !n.date) return 0;
@@ -151,8 +152,12 @@ function renderNews() {
   const root = $("#gameRoot");
   let list = STATE.news || [];
   if (STATE.month !== "all") list = list.filter((n) => n.date && newsMonthKey(n.date) === STATE.month);
-  // 참조 사이트 구분 없이 날짜+시각 기준 최신순(최상단=최신)
-  list = [...list].sort((a, b) => newsRecency(b) - newsRecency(a));
+  // 콘솔 정보 게시판(루리웹 board) 글을 최상단으로, 그 안에서 날짜+시각 최신순
+  list = [...list].sort((a, b) => {
+    const ba = isBoardNews(a) ? 0 : 1, bb = isBoardNews(b) ? 0 : 1;
+    if (ba !== bb) return ba - bb;
+    return newsRecency(b) - newsRecency(a);
+  });
   if (!list.length) {
     root.innerHTML = "";
     $("#emptyState").hidden = false;
@@ -552,7 +557,7 @@ function closeDetail() {
   document.body.classList.remove("sheet-open");
 }
 function bindDetail() {
-  $("#detailClose").addEventListener("click", closeDetail);
+  // 뒤로가기 버튼 없음 — 좌측에서 오른쪽 슬라이드(또는 키보드 Esc)로만 복귀
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#detailSheet").hidden) closeDetail(); });
   bindDetailSwipe();
 }

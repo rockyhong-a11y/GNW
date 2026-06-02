@@ -364,16 +364,31 @@ async function fromRuliwebNews(news) {
     } catch (e) { err = String(e && e.message || e); }
     console.log(`[ruliweb] ${url} status=${status} len=${html.length} links=${(html.match(/\/news\/(?:board\/\d+\/)?read\/\d+/g) || []).length} err=${err}`);
     if (!html || status >= 400) { errs.push(`${url}=${status}`); continue; }
-    if (process.env.NEWS_DEBUG === "1" && url.includes("board/1001")) {
-      console.log("[DBG board] center_list=" + html.includes('class="center_list"') + " widget_thumb=" + (html.match(/widget_thumbnail/g) || []).length + " desc=" + (html.match(/class="desc"/g) || []).length + " create_time=" + (html.match(/create_time/g) || []).length + " bgimg=" + (html.match(/background-image:\s*url\(\/\/img\.ruliweb/g) || []).length + " newsid=" + (html.match(/id="news_\d+"/g) || []).length);
-      const a = html.search(/\/news\/(?:board\/\d+\/)?read\/\d+/);
-      if (a >= 0) console.log("[DBG boardrow]\n" + html.slice(Math.max(0, a - 700), a + 900).replace(/\s+/g, " "));
-    }
-    let n = parseRuliwebList(html, news, seen, 60);      // 리치 목록 우선
-    if (n < 5) n += parseRuliweb(html, news, seen, 40);  // 구조 변경 시 폴백
+    let n = parseRuliwebList(html, news, seen, 60);      // 데스크톱 뉴스 리치 목록 우선
+    if (n < 5) n += parseRuliweb(html, news, seen, 40);  // 게시판/구조 변경 시 폴백(제목·링크)
     console.log(`[ruliweb] ${url} parsed ${n}`);
     added += n;
   }
+
+  // board/1001 글은 목록에 썸네일이 없어 기사 본문 og에서 썸네일·요약·날짜 보강
+  const targets = news.filter((n) => /\/board\/\d+\/read\//.test(n.url) && !n.image).slice(0, 40);
+  const enrichOne = async (n) => {
+    try {
+      const res = await fetch(n.url, { headers: { ...HEADERS, "user-agent": DESKTOP_UA }, signal: AbortSignal.timeout(6000) });
+      if (!res.ok) return;
+      const h = await res.text();
+      const og = (h.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
+        || h.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) || [])[1];
+      if (og && !/blank|default|logo|no_?image|bi\.png|icon/i.test(og)) n.image = og.replace(/&amp;/g, "&");
+      if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
+      if (!n.date) { const t = (h.match(/property=["']article:published_time["'][^>]+content=["']([^"']+)["']/i) || [])[1]; if (t) { const m = t.match(/(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}:\d{2}))?/); if (m) { n.date = `${m[1]}.${m[2]}.${m[3]}`; if (m[4]) n.time = m[4]; } } }
+    } catch { /* 개별 실패 무시 */ }
+  };
+  let enriched = 0;
+  for (let i = 0; i < targets.length; i += 10) {
+    await Promise.all(targets.slice(i, i + 10).map(async (n) => { const before = n.image; await enrichOne(n); if (!before && n.image) enriched++; }));
+  }
+  console.log(`[ruliweb] board og 보강 ${enriched}/${targets.length}`);
   return { name: "RuliwebNews", ...(errs.length ? { error: errs.join(",") } : {}), added };
 }
 

@@ -267,6 +267,11 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 2px 16px 24px; }
   flex: 0 0 auto; width: 108px; height: 76px; object-fit: cover;
   border-radius: 10px; background: var(--bg-card);
 }
+.news-thumb--ph {
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--accent), #1b2036);
+}
+.news-thumb--ph::after { content: "📰"; font-size: 26px; opacity: .9; }
 .news-body { display: flex; flex-direction: column; gap: 5px; min-width: 0; flex: 1; }
 .news-title {
   color: var(--text); font-size: 15px; font-weight: 700; line-height: 1.4;

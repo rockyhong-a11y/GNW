@@ -159,7 +159,7 @@ function renderNews() {
     ].filter(Boolean).join("");
     return `
     <li class="news-item" data-ni="${i}">
-      ${n.image ? `<img class="news-thumb" src="${esc(n.image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
+      ${n.image ? `<img class="news-thumb" src="${esc(n.image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.removeAttribute('src');this.classList.add('news-thumb--ph')">` : `<span class="news-thumb news-thumb--ph" aria-hidden="true"></span>`}
       <span class="news-body">
         <span class="news-title">${esc(n.title)}</span>
         ${n.summary ? `<span class="news-desc">${esc(n.summary)}</span>` : ""}

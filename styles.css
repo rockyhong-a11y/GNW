@@ -310,6 +310,7 @@ body.sheet-open { overflow: hidden; }
   display: flex; flex-direction: column;
   background: radial-gradient(1200px 600px at 80% -10%, #1a1f3a 0%, var(--bg) 55%);
 }
+.detail-sheet[hidden] { display: none; }   /* display:flex 가 [hidden] 기본 동작을 덮어쓰므로 명시 */
 .detail-bar {
   display: flex; align-items: center; gap: 8px;
   height: 50px; padding: var(--safe-top) 6px 0;

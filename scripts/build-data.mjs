@@ -408,18 +408,26 @@ function extractCommentCount(html) {
     || html.match(/댓글[\s:(]*(\d[\d,]*)/);
   return m ? +m[1].replace(/,/g, "") : null;
 }
-// 기사 페이지에서 상위 댓글 추출(작성자·내용). 미리보기에 인라인 노출.
+// 기사 페이지에서 상위 댓글 추출(작성자·내용·추천). 미리보기에 인라인 노출.
 function extractComments(html, max = 10) {
   let s = html.search(/class=["'][^"']*comment_(?:view|table|wrapper)|id=["']cmt["']/i);
   if (s < 0) return [];
   const region = html.slice(s, s + 240000);
   const out = [];
+  const seenText = new Set();
   const parts = region.split(/class="comment_element/);
   for (let i = 1; i < parts.length && out.length < max; i++) {
-    const blk = parts[i].slice(0, 5000);
-    if (/best_comment_wrapper|comment_best/i.test(parts[i].slice(0, 60))) { /* 헤더성 블록 스킵 안함 */ }
-    const text = rwText((blk.match(/class="text_wrapper"[^>]*>([\s\S]*?)<\/(?:span|div|p)>/i) || [])[1]);
-    if (!text || text.length < 1) continue;
+    const blk = parts[i].slice(0, 6000);
+    // 블록 내 text_wrapper 중 'BEST/베스트' 라벨이 아닌 첫 실제 댓글 텍스트
+    let text = null;
+    for (const tm of blk.matchAll(/class="text_wrapper"[^>]*>([\s\S]*?)<\/(?:span|div|p)>/gi)) {
+      const t = rwText(tm[1]);
+      if (t && t.length > 1 && !/^(BEST|베스트|공지|블라인드|신고)$/i.test(t)) { text = t; break; }
+    }
+    if (!text) continue;
+    const key = text.slice(0, 40);
+    if (seenText.has(key)) continue;          // best+일반 중복 노출 제거
+    seenText.add(key);
     const nick = rwText((blk.match(/class="[^"]*\bnick\b[^"]*"[^>]*>([\s\S]*?)<\/(?:strong|span|a)>/i) || [])[1]) || null;
     const likeM = blk.match(/class="[^"]*\b(?:like|recomd|num)\b[^"]*"[^>]*>\s*(\d+)/i);
     out.push({ nick: nick ? nick.slice(0, 24) : null, text: text.slice(0, 300), like: likeM ? +likeM[1] : null });

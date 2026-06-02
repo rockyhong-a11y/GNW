@@ -260,9 +260,47 @@ async function fromInven(out) {
 // 루리웹 게임 뉴스 수집. 러너에서만 동작(NEWS=1). 여러 소스를 순회하고 중복 제거.
 const RULIWEB_SOURCES = [
   "https://bbs.ruliweb.com/news",            // 데스크톱 뉴스 목록(썸네일+요약+조회수+시각+댓글수)
-  "https://m.ruliweb.com/news",            // 메인 뉴스(캐러셀+목록)
-  "https://bbs.ruliweb.com/news/board/1001", // 게임 뉴스 게시판(목록형)
 ];
+// HTML 텍스트/엔티티 정리
+const rwText = (s) => (s || "")
+  .replace(/<[^>]+>/g, " ")
+  .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+  .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/&nbsp;/g, " ")
+  .replace(/\s+/g, " ").trim();
+
+// 데스크톱 뉴스의 <section class="center_list"> 리치 목록(썸네일·요약·댓글수·시각·조회수)
+function parseRuliwebList(html, news, seen, cap = 60) {
+  const start = html.indexOf('class="center_list"');
+  const sec = start >= 0 ? html.slice(start) : html;
+  let added = 0;
+  for (const m of sec.matchAll(/<div id="news_(\d+)"[\s\S]*?(?=<div id="news_\d+"|<\/section>)/g)) {
+    const id = m[1], block = m[0];
+    if (seen.has("id:" + id)) continue;
+    const title = rwText((block.match(/<strong class="title">([\s\S]*?)<\/strong>/) || [])[1]);
+    if (!title || title.length < 4) continue;
+    const summary = rwText((block.match(/<span class="desc">([\s\S]*?)<\/span>/) || [])[1]);
+    const comments = (block.match(/<span class="num_reply">\s*\[(\d+)\]/) || [])[1];
+    const ct = rwText((block.match(/<span class="create_time">([\s\S]*?)<\/span>/) || [])[1]); // "2026.06.02 (16:07:10), 조회수 132"
+    const dm = ct.match(/(\d{4})\.(\d{2})\.(\d{2})\s*\(([\d:]+)\)/);
+    const vm = ct.match(/조회수\s*([\d,]+)/);
+    let image = (block.match(/background-image:\s*url\(([^),]+)/) || [])[1] || null;
+    if (image) { image = image.trim().replace(/^['"]|['"]$/g, ""); if (image.startsWith("//")) image = "https:" + image; }
+    seen.add("id:" + id); seen.add(title.toLowerCase().replace(/\s+/g, ""));
+    const item = {
+      id: `ruliweb-${id}`, title, url: `https://bbs.ruliweb.com/news/read/${id}`,
+      source: RULIWEB_NEWS.name,
+      date: dm ? `${dm[1]}.${dm[2]}.${dm[3]}` : null,
+      time: dm ? dm[4] : null,
+      views: vm ? +vm[1].replace(/,/g, "") : null,
+      comments: comments != null ? +comments : null,
+      summary: summary || null,
+      image,
+    };
+    news.push(item);
+    if (++added >= cap) break;
+  }
+  return added;
+}
 const RW_IMG = /<(?:img|source)[^>]+(?:data-src|src|srcset)="(https?:\/\/[^"]*ruliweb\.com\/[^"]*news\/[^"]+\.(?:jpe?g|png|gif|webp))/i;
 const rwAbsImg = (u) => u ? (u.startsWith("//") ? "https:" + u : u) : null;
 
@@ -322,11 +360,10 @@ async function fromRuliwebNews(news) {
     } catch (e) { err = String(e && e.message || e); }
     console.log(`[ruliweb] ${url} status=${status} len=${html.length} links=${(html.match(/\/news\/(?:board\/\d+\/)?read\/\d+/g) || []).length} err=${err}`);
     if (!html || status >= 400) { errs.push(`${url}=${status}`); continue; }
-    if (process.env.NEWS_DEBUG === "1" && url === "https://bbs.ruliweb.com/news") {
-      const hi = html.indexOf("조회수");
-      if (hi >= 0) console.log("[DBG listrow]\n" + html.slice(Math.max(0, hi - 1900), hi + 260).replace(/\s+/g, " "));
-    }
-    added += parseRuliweb(html, news, seen, 40);
+    let n = parseRuliwebList(html, news, seen, 60);      // 리치 목록 우선
+    if (n < 5) n += parseRuliweb(html, news, seen, 40);  // 구조 변경 시 캐러셀 폴백
+    console.log(`[ruliweb] parsed ${n}`);
+    added += n;
   }
   return { name: "RuliwebNews", ...(errs.length ? { error: errs.join(",") } : {}), added };
 }

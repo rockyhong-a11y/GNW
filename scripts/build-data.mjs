@@ -272,6 +272,63 @@ const rwText = (s) => (s || "")
   .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/&nbsp;/g, " ")
   .replace(/\s+/g, " ").trim();
 
+// ── 기사 본문 추출(앱 내 다크 상세뷰용) ───────────────────────────────────
+// 본문 영역만 잘라낸다. itemprop=articleBody(스키마) → .view_content 순으로 시도하고,
+// 출처/추천/관련글/댓글 영역이 시작되면 그 앞에서 컷한다.
+function articleRegion(html) {
+  let i = html.search(/itemprop=["']articleBody["']/i);
+  if (i < 0) i = html.search(/class=["'][^"']*\bview_content\b[^"']*["']/i);
+  if (i < 0) return "";
+  const gt = html.indexOf(">", i);            // 여는 태그를 건너뛰어 본문 시작부터
+  const from = gt >= 0 ? gt + 1 : i;
+  let region = html.slice(from, from + 80000);
+  // 출처/추천/관련글/댓글 영역의 '여는 태그' 앞에서 컷(부분 태그가 남지 않도록 '<' 포함)
+  const cut = region.search(/<[^>]*class=["'][^"']*(source_url|like_wrapper|btn_list|relation_news|board_bottom|view_bottom|reply_count|reply_list|comment_wrapper|board_bottom_layer)/i);
+  if (cut > 0) region = region.slice(0, cut);
+  return region;
+}
+// HTML 조각 → 단락 문자열 배열(<br>/블록 종료를 줄바꿈으로 보존)
+function htmlToParas(frag) {
+  const s = frag
+    .replace(/<\s*br\s*\/?>/gi, "\n")
+    .replace(/<\/(p|div|li|h[1-6]|blockquote|tr)>/gi, "\n\n")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/&nbsp;/g, " ");
+  return s.split(/\n{2,}/).map((p) => p.replace(/[ \t]+/g, " ").replace(/\n{2,}/g, "\n").trim()).filter((p) => p.length > 1);
+}
+// 본문을 읽기용 블록 배열로: [{t:"p",v:"…"} | {t:"img",v:"https://…"}] (문서 순서 유지)
+function extractContent(html) {
+  const region = articleRegion(html);
+  if (!region) return [];
+  const blocks = [];
+  let last = 0, m, textLen = 0;
+  const pushText = (frag) => {
+    for (const p of htmlToParas(frag)) {
+      if (textLen > 4000 || blocks.length >= 60) break;
+      blocks.push({ t: "p", v: p }); textLen += p.length;
+    }
+  };
+  const re = /<img\b[^>]*>/gi;
+  while ((m = re.exec(region)) && blocks.length < 60) {
+    pushText(region.slice(last, m.index));
+    last = m.index + m[0].length;
+    let src = (m[0].match(/(?:data-original|data-src|src)=["']([^"']+)["']/i) || [])[1];
+    if (!src || /blank|emoticon|icon|button|loading|\bs\.gif\b|spacer/i.test(src)) continue;
+    if (src.startsWith("//")) src = "https:" + src;
+    if (/^https?:/i.test(src)) blocks.push({ t: "img", v: src.replace(/&amp;/g, "&") });
+  }
+  pushText(region.slice(last));
+  return blocks.slice(0, 60);
+}
+// 작성자(닉네임) 추출
+function extractAuthor(html) {
+  const el = (html.match(/<(?:strong|span|a)[^>]*class="[^"]*\bnick(?:name)?\b[^"]*"[^>]*>([\s\S]*?)<\/(?:strong|span|a)>/i) || [])[1];
+  if (el) { const t = rwText(el); if (t && t.length <= 30) return t; }
+  const meta = (html.match(/<meta[^>]+name=["']author["'][^>]+content=["']([^"']+)["']/i) || [])[1];
+  return meta ? rwText(meta).slice(0, 30) || null : null;
+}
+
 // 데스크톱 뉴스의 <section class="center_list"> 리치 목록(썸네일·요약·댓글수·시각·조회수)
 function parseRuliwebList(html, news, seen, cap = 60) {
   const start = html.indexOf('class="center_list"');
@@ -401,9 +458,13 @@ async function fromRuliwebNews(news) {
     added += n;
   }
 
-  // board/1001 글은 목록에 썸네일이 없어 기사 본문 og에서 썸네일·요약·날짜 보강
+  // 본문 보강 전에 유사 중복부터 제거 → 남는 글만 페이지를 받아 요청을 아낀다.
+  const deduped = dedupNewsByTitle(news, 0.8);
+  news.length = 0; news.push(...deduped);
+
+  // 각 기사 페이지에서 본문(content)·작성자·썸네일·요약·날짜를 보강해 앱 내 상세뷰에 사용.
   // (referer 헤더 필수 — 없으면 루리웹이 응답을 막음)
-  const targets = news.filter((n) => /\/board\/\d+\/read\//.test(n.url) && !n.image).slice(0, 60);
+  const targets = news.slice(0, 60);
   const enrichOne = async (n) => {
     try {
       const res = await fetch(n.url, { headers: { ...HEADERS, "user-agent": DESKTOP_UA, referer: "https://bbs.ruliweb.com/news/board/1001" }, signal: AbortSignal.timeout(10000) });
@@ -411,16 +472,18 @@ async function fromRuliwebNews(news) {
       const h = await res.text();
       const og = (h.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
         || h.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) || [])[1];
-      if (og && !/blank|default|logo|no_?image|bi\.png|icon/i.test(og)) n.image = og.replace(/&amp;/g, "&");
+      if (!n.image && og && !/blank|default|logo|no_?image|bi\.png|icon/i.test(og)) n.image = og.replace(/&amp;/g, "&");
       if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
       if (!n.date) { const t = (h.match(/property=["']article:published_time["'][^>]+content=["']([^"']+)["']/i) || [])[1]; if (t) { const m = t.match(/(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}:\d{2}))?/); if (m) { n.date = `${m[1]}.${m[2]}.${m[3]}`; if (m[4]) n.time = m[4]; } } }
+      if (!n.author) { const a = extractAuthor(h); if (a) n.author = a; }
+      if (!n.content || !n.content.length) { const c = extractContent(h); if (c.length) n.content = c; }
     } catch { /* 개별 실패 무시 */ }
   };
-  let enriched = 0;
+  let enrichedImg = 0, withBody = 0;
   for (let i = 0; i < targets.length; i += 8) {
-    await Promise.all(targets.slice(i, i + 8).map(async (n) => { const before = n.image; await enrichOne(n); if (!before && n.image) enriched++; }));
+    await Promise.all(targets.slice(i, i + 8).map(async (n) => { const before = n.image; await enrichOne(n); if (!before && n.image) enrichedImg++; if (n.content && n.content.length) withBody++; }));
   }
-  console.log(`[ruliweb] board og 보강 ${enriched}/${targets.length}`);
+  console.log(`[ruliweb] og 썸네일 보강 ${enrichedImg}/${targets.length} · 본문 추출 ${withBody}/${targets.length}`);
   return { name: "RuliwebNews", ...(errs.length ? { error: errs.join(",") } : {}), added };
 }
 

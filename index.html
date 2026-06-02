@@ -90,15 +90,11 @@
     </div>
   </div>
 
-  <!-- 뉴스 상세 (앱 내 다크 뷰) -->
+  <!-- 뉴스 상세 (앱 내 다크 뷰) · 좌측에서 슬라이드하면 목록으로 복귀 -->
   <div id="detailSheet" class="detail-sheet" hidden>
-    <div class="detail-bar">
-      <button id="detailClose" class="detail-back" type="button" aria-label="뒤로">
-        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 5 8 12 15 19"/></svg>
-        <span>뒤로</span>
-      </button>
-      <span class="detail-bar-title">GNW</span>
-    </div>
+    <button id="detailClose" class="detail-back" type="button" aria-label="뒤로">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 5 8 12 15 19"/></svg>
+    </button>
     <div id="detailScroll" class="detail-scroll">
       <article id="detailBody" class="detail-content"></article>
     </div>

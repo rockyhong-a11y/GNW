@@ -545,12 +545,50 @@ function openDetail(n) {
   document.body.classList.add("sheet-open");
 }
 function closeDetail() {
-  $("#detailSheet").hidden = true;
+  const sheet = $("#detailSheet");
+  sheet.hidden = true;
+  sheet.classList.remove("sliding", "closing");
+  sheet.style.transform = "";
   document.body.classList.remove("sheet-open");
 }
 function bindDetail() {
   $("#detailClose").addEventListener("click", closeDetail);
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#detailSheet").hidden) closeDetail(); });
+  bindDetailSwipe();
+}
+// 좌측 가장자리에서 오른쪽으로 슬라이드 → 목록으로 복귀(iOS 인터랙티브 백 제스처)
+function bindDetailSwipe() {
+  const sheet = $("#detailSheet");
+  const W = () => window.innerWidth || 360;
+  let x0 = null, y0 = null, active = false;
+  sheet.addEventListener("touchstart", (e) => {
+    active = false;
+    if (sheet.hidden || e.touches.length !== 1) return;
+    const t = e.touches[0];
+    if (t.clientX > 44) return;            // 좌측 가장자리에서 시작한 제스처만(본문 스크롤과 분리)
+    x0 = t.clientX; y0 = t.clientY; active = true;
+    sheet.classList.add("sliding"); sheet.classList.remove("closing");
+  }, { passive: true });
+  sheet.addEventListener("touchmove", (e) => {
+    if (!active) return;
+    const t = e.touches[0], dx = t.clientX - x0, dy = t.clientY - y0;
+    if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 12) { // 세로 제스처 → 취소
+      active = false; sheet.classList.remove("sliding"); sheet.style.transform = ""; return;
+    }
+    if (dx > 0) { sheet.style.transform = `translateX(${dx}px)`; if (e.cancelable) e.preventDefault(); }
+  }, { passive: false });
+  sheet.addEventListener("touchend", (e) => {
+    if (!active) return;
+    active = false;
+    const dx = e.changedTouches[0].clientX - x0;
+    sheet.classList.remove("sliding"); sheet.classList.add("closing");
+    if (dx > W() * 0.32 || dx > 110) {     // 충분히 밀면 닫기(밖으로 슬라이드 후 종료)
+      sheet.style.transform = `translateX(${W()}px)`;
+      setTimeout(closeDetail, 180);
+    } else {
+      sheet.style.transform = "";          // 덜 밀면 제자리 복귀
+    }
+  }, { passive: true });
 }
 
 /* ---------- Init ---------- */

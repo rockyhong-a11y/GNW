@@ -389,6 +389,19 @@ function extractAuthor(html) {
   const meta = (html.match(/<meta[^>]+name=["']author["'][^>]+content=["']([^"']+)["']/i) || [])[1];
   return meta ? rwText(meta).slice(0, 30) || null : null;
 }
+// 기사 작성일시 추출(board/1001 등 목록에 날짜가 없는 글용).
+// 구조화 신호(JSON-LD/og/article:published_time)를 먼저, 없으면 헤더의 노출 날짜를 본다.
+// 본문 속 날짜 오탐을 줄이려 본문(articleBody) 시작 이전 영역에서만 탐색.
+function extractDateTime(html) {
+  let end = html.search(/itemprop=["']articleBody["']/i);
+  if (end < 0) end = html.search(/class=["'][^"']*\bview_content\b[^"']*["']/i);
+  const head = html.slice(0, end > 0 ? end : Math.min(html.length, 40000));
+  let m = head.match(/(?:"datePublished"\s*:\s*"|(?:article:published_time|og:regdate)["'][^>]+content=["'])(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}:\d{2}))?/i);
+  if (m) return { date: `${m[1]}.${m[2]}.${m[3]}`, time: m[4] || null };
+  m = head.match(/(20\d{2})[.\-](\d{1,2})[.\-](\d{1,2})[\s(]+(\d{1,2}:\d{2})(?::\d{2})?/);
+  if (m) return { date: `${m[1]}.${String(m[2]).padStart(2, "0")}.${String(m[3]).padStart(2, "0")}`, time: m[4] };
+  return null;
+}
 
 // 데스크톱 뉴스의 <section class="center_list"> 리치 목록(썸네일·요약·댓글수·시각·조회수)
 function parseRuliwebList(html, news, seen, cap = 60) {
@@ -524,8 +537,9 @@ async function fromRuliwebNews(news) {
   news.length = 0; news.push(...deduped);
 
   // 각 기사 페이지에서 본문(content)·작성자·썸네일·요약·날짜를 보강해 앱 내 상세뷰에 사용.
-  // (referer 헤더 필수 — 없으면 루리웹이 응답을 막음)
-  const targets = news.slice(0, 60);
+  // board/1001(콘솔 유저 정보) 글은 목록에 날짜가 없어 정렬 시 바닥으로 가라앉으므로,
+  // 날짜 없는 글을 먼저 보강해 날짜를 반드시 채운다. (referer 헤더 필수)
+  const targets = [...news].sort((a, b) => (a.date ? 1 : 0) - (b.date ? 1 : 0)).slice(0, 110);
   const enrichOne = async (n) => {
     try {
       const res = await fetch(n.url, { headers: { ...HEADERS, "user-agent": DESKTOP_UA, referer: "https://bbs.ruliweb.com/news/board/1001" }, signal: AbortSignal.timeout(10000) });
@@ -535,16 +549,17 @@ async function fromRuliwebNews(news) {
         || h.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) || [])[1];
       if (!n.image && og && !/blank|default|logo|no_?image|bi\.png|icon/i.test(og)) n.image = og.replace(/&amp;/g, "&");
       if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
-      if (!n.date) { const t = (h.match(/property=["']article:published_time["'][^>]+content=["']([^"']+)["']/i) || [])[1]; if (t) { const m = t.match(/(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}:\d{2}))?/); if (m) { n.date = `${m[1]}.${m[2]}.${m[3]}`; if (m[4]) n.time = m[4]; } } }
+      if (!n.date) { const d = extractDateTime(h); if (d) { n.date = d.date; if (d.time) n.time = d.time; } }
       if (!n.author) { const a = extractAuthor(h); if (a) n.author = a; }
       if (!n.content || !n.content.length) { const c = extractContent(h); if (c.length) n.content = c; }
     } catch { /* 개별 실패 무시 */ }
   };
-  let enrichedImg = 0, withBody = 0;
+  let withDate = 0, withBody = 0;
   for (let i = 0; i < targets.length; i += 8) {
-    await Promise.all(targets.slice(i, i + 8).map(async (n) => { const before = n.image; await enrichOne(n); if (!before && n.image) enrichedImg++; if (n.content && n.content.length) withBody++; }));
+    await Promise.all(targets.slice(i, i + 8).map((n) => enrichOne(n)));
   }
-  console.log(`[ruliweb] og 썸네일 보강 ${enrichedImg}/${targets.length} · 본문 추출 ${withBody}/${targets.length}`);
+  for (const n of news) { if (n.date) withDate++; if (n.content && n.content.length) withBody++; }
+  console.log(`[ruliweb] 보강 대상 ${targets.length} · 날짜 보유 ${withDate}/${news.length} · 본문 ${withBody}/${news.length}`);
   return { name: "RuliwebNews", ...(errs.length ? { error: errs.join(",") } : {}), added };
 }
 

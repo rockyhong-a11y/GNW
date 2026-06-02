@@ -1,6 +1,6 @@
 /* GNW service worker — offline-first caching for the static app shell.
  * Game data is fetched network-first so the catalog stays fresh. */
-const CACHE = "gnw-v22";
+const CACHE = "gnw-v23";
 const SHELL = [
   "./",
   "./index.html",

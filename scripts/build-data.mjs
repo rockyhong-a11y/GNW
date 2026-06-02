@@ -260,6 +260,8 @@ async function fromInven(out) {
 // 루리웹 게임 뉴스 수집. 러너에서만 동작(NEWS=1). 여러 소스를 순회하고 중복 제거.
 const RULIWEB_SOURCES = [
   "https://bbs.ruliweb.com/news",            // 데스크톱 뉴스 목록(썸네일+요약+조회수+시각+댓글수)
+  "https://bbs.ruliweb.com/news?page=2",     // 추가 페이지(지원 시 더 많은 기사, 미지원이면 ID로 중복 제거)
+  "https://bbs.ruliweb.com/news?page=3",
 ];
 // HTML 텍스트/엔티티 정리
 const rwText = (s) => (s || "")

@@ -275,7 +275,7 @@ async function fromRuliwebNews(news) {
   if (!html || status >= 400) return { name: "RuliwebNews", error: `status=${status} ${err}`.trim(), added: 0 };
 
   // ID 기준 그룹핑: 루리웹은 썸네일 앵커와 제목 앵커가 분리돼 있어 같은 기사ID로 묶는다.
-  const IMG = /<img[^>]+(?:data-original|data-src|src)="([^"]+\.(?:jpe?g|png|gif|webp)[^"]*)"/i;
+  const IMG = /<(?:img|source)[^>]+(?:data-src|src|srcset)="(https?:\/\/[^"]*ruliweb\.com\/[^"]*news\/[^"]+\.(?:jpe?g|png|gif|webp))/i;
   const absImg = (u) => u ? (u.startsWith("//") ? "https:" + u : u) : null;
   const anchors = [];
   for (const m of html.matchAll(/<a[^>]+href="([^"]*\/news\/read\/(\d+)[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi)) {
@@ -300,13 +300,19 @@ async function fromRuliwebNews(news) {
     // URL 절대화
     let url = group[0].url.replace(/&amp;/g, "&");
     if (url.startsWith("/")) url = "https://bbs.ruliweb.com" + url;
-    // 썸네일: 앵커 내부 우선, 없으면 첫 앵커 주변 window 에서
+    // 썸네일: 앵커 내부 우선 → 없으면 각 앵커 주변 window(루리웹 뉴스 이미지로 한정)
     let image = null;
     for (const a of group) { const im = a.inner.match(IMG); if (im) { image = absImg(im[1]); break; } }
-    if (!image) { const a = group[0]; const win = html.slice(Math.max(0, a.idx - 200), a.idx + a.inner.length + 400); const im = win.match(IMG); if (im) image = absImg(im[1]); }
-    // 날짜: 첫 앵커 주변
-    const a0 = group[0]; const dwin = html.slice(a0.idx, a0.idx + a0.inner.length + 400);
-    const date = (dwin.match(/(20\d{2}[.\-]\d{1,2}[.\-]\d{1,2})/) || [])[1] || null;
+    if (!image) {
+      for (const a of group) {
+        const win = html.slice(Math.max(0, a.idx - 1200), a.idx + a.inner.length + 600);
+        const im = win.match(IMG);
+        if (im) { image = absImg(im[1]); break; }
+      }
+    }
+    // 날짜: 첫 앵커 주변(YYYY.MM.DD 또는 MM.DD)
+    const a0 = group[0]; const dwin = html.slice(a0.idx, a0.idx + a0.inner.length + 500);
+    const date = (dwin.match(/20\d{2}[.\-]\d{1,2}[.\-]\d{1,2}/) || dwin.match(/\b\d{1,2}\.\d{1,2}\b/) || [])[0] || null;
     news.push({ id: `ruliweb-${id}`, title, url, source: RULIWEB_NEWS.name, date, image });
     if (++added >= 40) break;
   }

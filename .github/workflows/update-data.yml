@@ -8,6 +8,10 @@ name: Update game data
 # "변경 시에만 커밋"이라 실제 일정이 바뀐 경우에만 커밋/배포가 일어난다.
 
 on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "data/games.json"   # 봇의 데이터 커밋으로 인한 무한 재실행 방지
   schedule:
     - cron: "0 21 * * *"      # 매일 06:00 KST (전날 밤 갱신분 반영)
     - cron: "0 9 * * *"       # 매일 18:00 KST

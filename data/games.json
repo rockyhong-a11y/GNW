@@ -18,14 +18,14 @@
       },
       {
         "name": "RuliwebNews",
-        "added": 40
+        "added": 80
       }
     ],
     "counts": {
       "total": 34,
       "curated": 32,
       "collected": 32,
-      "news": 40
+      "news": 80
     }
   },
   "games": [
@@ -1192,6 +1192,14 @@
       "image": "https://img.ruliweb.com/news/main/26/05/29/19e70f2b92b_fryulq.jpg"
     },
     {
+      "id": "ruliweb-2460",
+      "title": "이환, 원하는 것은 무엇이든 할 수 있어!",
+      "url": "https://m.ruliweb.com/news/board/11/read/2460",
+      "source": "루리웹",
+      "date": null,
+      "image": "https://img.ruliweb.com/news/main/26/05/26/19e62e42400_ytkdmb.jpg"
+    },
+    {
       "id": "ruliweb-225177",
       "title": "입학식 이어 졸업식까지, 띵조 페스티벌",
       "url": "https://m.ruliweb.com/news/read/225177",
@@ -1240,17 +1248,17 @@
       "image": "https://img.ruliweb.com/news/main/26/05/27/19e69bcadc0_hnclde.jpg"
     },
     {
+      "id": "ruliweb-225266",
+      "title": "스마일게이트 ‘에픽세븐’, 글로벌 온라인 e스포츠 리그 '에픽세븐 마스터스' 지난주 5월 30일 종료",
+      "url": "https://m.ruliweb.com/news/read/225266",
+      "source": "루리웹",
+      "date": null,
+      "image": "https://img.ruliweb.com/news/main/26/05/30/19e774a4e6e_nkfzis.jpg"
+    },
+    {
       "id": "ruliweb-225260",
       "title": "㈜카카오게임즈 ‘PUBG: 배틀그라운드’, 지난달 29일 ‘캠퍼스 치킨 드랍 VOL.2’ 종료",
       "url": "https://m.ruliweb.com/news/read/225260",
-      "source": "루리웹",
-      "date": null,
-      "image": null
-    },
-    {
-      "id": "ruliweb-225220",
-      "title": "㈜카카오게임즈, 슈퍼캣의 신작 MMORPG '도깨...",
-      "url": "https://m.ruliweb.com/news/read/225220",
       "source": "루리웹",
       "date": null,
       "image": null
@@ -1304,14 +1312,6 @@
       "image": "https://img.ruliweb.com/news/main/26/05/27/19e64cf6bd3_lmrnhy.jpg"
     },
     {
-      "id": "ruliweb-225266",
-      "title": "스마일게이트 ‘에픽세븐’, 글로벌 온라인 e스포츠 리그 '에픽세븐 마스터스' 지난주 5월 30일 종료",
-      "url": "https://bbs.ruliweb.com/news/read/225266",
-      "source": "루리웹",
-      "date": null,
-      "image": "https://img.ruliweb.com/news/main/26/05/30/19e774a4e6e_nkfzis.jpg"
-    },
-    {
       "id": "ruliweb-225249",
       "title": "아카츠키 게임즈 ‘괴수 8호 THE GAME’, 메인 스...",
       "url": "https://bbs.ruliweb.com/news/read/225249",
@@ -1323,6 +1323,14 @@
       "id": "ruliweb-225228",
       "title": "넷마블 ‘레이븐2’, 지난달 29일(금) 특화 서버 ‘ZE...",
       "url": "https://bbs.ruliweb.com/news/read/225228",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-225220",
+      "title": "㈜카카오게임즈, 슈퍼캣의 신작 MMORPG '도깨...",
+      "url": "https://bbs.ruliweb.com/news/read/225220",
       "source": "루리웹",
       "date": null,
       "image": null
@@ -1360,35 +1368,347 @@
       "image": null
     },
     {
-      "id": "ruliweb-225182",
-      "title": "마도전기 피아와 이...",
-      "url": "https://bbs.ruliweb.com//bbs.ruliweb.com/news/read/225182",
+      "id": "ruliweb-2458",
+      "title": "007 퍼스트 라이...",
+      "url": "https://m.ruliweb.com/news/board/11/read/2458",
       "source": "루리웹",
       "date": "92.16",
       "image": null
     },
     {
-      "id": "ruliweb-225180",
-      "title": "목장이야기 Lets...",
-      "url": "https://bbs.ruliweb.com//bbs.ruliweb.com/news/read/225180",
-      "source": "루리웹",
-      "date": "92.16",
-      "image": null
-    },
-    {
-      "id": "ruliweb-225119",
-      "title": "롤리팝 체인소 Re...",
-      "url": "https://bbs.ruliweb.com//bbs.ruliweb.com/news/read/225119",
+      "id": "ruliweb-2457",
+      "title": "오푸스: 빛갈래 봉...",
+      "url": "https://m.ruliweb.com/news/board/11/read/2457",
       "source": "루리웹",
       "date": null,
       "image": null
     },
     {
-      "id": "ruliweb-224986",
-      "title": "007 퍼스트 라이...",
-      "url": "https://bbs.ruliweb.com//bbs.ruliweb.com/news/read/224986",
+      "id": "ruliweb-2456",
+      "title": "악역영애 4컷만화",
+      "url": "https://m.ruliweb.com/news/board/11/read/2456",
       "source": "루리웹",
       "date": "92.16",
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354614",
+      "title": "PC 이식을 중단함에 따라, 소니가 'Only on PS5' 문구를 다시 도입하다",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354614",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354612",
+      "title": "2026년 6월 국내 PS Plus 에센셜 혜택 등록",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354612",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354609",
+      "title": "콜오브듀티 모던워페어 4 주인공 아트 공개",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354609",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354606",
+      "title": "「007 퍼스트 라이트」공식 수상 트레일러",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354606",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354604",
+      "title": "'스파6'에 역전당한 '철권8'",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354604",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354602",
+      "title": "모던 워페어4 캠페인은 오프라인 플레이 가능",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354602",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354601",
+      "title": "플레이스테이션 저질 게임 1000개 추가 삭제 예정",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354601",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354600",
+      "title": "바하 레퀴엠 프로듀서가 향후 일본을 배경으로한 바하가 나올수도 있다고 밝히다",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354600",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354599",
+      "title": "슈퍼 마리오 갤럭시, 일본 누적 흥행 70억엔, 500만 관객 돌파",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354599",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354597",
+      "title": "듀얼센스 충전 후크가 장착된 27인치 게이밍 모니터 - 트레일러",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354597",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354596",
+      "title": "소셜 미디어의 왜곡이 낳은 '소니가 너티독에 단단히 화났다'는 가짜 뉴스",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354596",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354595",
+      "title": "콜 오브 듀티: 모던 워페어 4 - 키 아트 비하인드 영상",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354595",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354592",
+      "title": "[루머] 발더스 게이트 2 리메이크가 개발중이며, 공동 수석 디자이너가 복귀한다",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354592",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354591",
+      "title": "PS VR2 시스템 크리티컬 3 런칭 트레일러",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354591",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354590",
+      "title": "XBOX 게임 쇼케이스+기어스 오브 워 E-Day 다이렉트 유튜브 링크 및 공지",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354590",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354589",
+      "title": "NS2판 마인크래프트가 미국 ESRB에서 심의 통과 확인",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354589",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354588",
+      "title": "위저드리 시리즈 45주년 카운트 다운 페이지",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354588",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354587",
+      "title": "70년대풍 로봇 아니메 겟피-X 리마스터 선행플레이 영상",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354587",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354585",
+      "title": "루머: 귀무자: 검의 길 2026년 9월 발매 예정",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354585",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354584",
+      "title": "[명조] 공명자 화면 | 레베카",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354584",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354583",
+      "title": "테라다씨의 슈퍼로봇대전 OG 섀도우 미러의 세계에 관한 이야기",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354583",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354582",
+      "title": "소니는 PS5에 신작을 출시하지 않은 것으로 너티 독에 불만을 품고 있다",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354582",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354580",
+      "title": "NS2 파이널 판타지 7 리버스 론치 트레일러",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354580",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354579",
+      "title": "록맨 시리즈 유일의 축구 게임 「록맨 사커」가 기간한정으로 무료 공개",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354579",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354578",
+      "title": "슈퍼 마리오 갤럭시 무비 곧 10억 달러 돌파",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354578",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354577",
+      "title": "7.4인치 OLED 탑재 ROG XBOX ALLY X20 공개",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354577",
+      "source": "루리웹",
+      "date": "7.4",
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354574",
+      "title": "하라다 이어 이케다도 퇴사, 철권 8 머레이 단독 체제",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354574",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354572",
+      "title": "붉은사막 6월 1일자 알려진 문제점",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354572",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354571",
+      "title": "[루머] 귀무자 웨이 오브 더 소드가 9월에 발매된다",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354571",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354569",
+      "title": "파이널 판타지 10 25주년 기념 비주얼 아트북, 메모리얼 북 표지 및 상세 정보",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354569",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354568",
+      "title": "루머: 젯셋 라디오 트레일러 유출자가 소닉, 역전재판, 페르소나 등의 소식을 전달",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354568",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354564",
+      "title": "이케다 코헤이. 반다이남코 퇴사",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354564",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354563",
+      "title": "마리오 카트 월드 유니클로 콜라보 티셔츠 및 스웨터 셔츠 발매 예정",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354563",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354561",
+      "title": "[젠레스 존 제로] 3.0버전「꿈속을 헤매는 이의 고백」 특별 방송 예고, 캘린더",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354561",
+      "source": "루리웹",
+      "date": "3.0",
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354559",
+      "title": "원신 페이몬 / 아라타키 이토 생일 일러스트",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354559",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354557",
+      "title": "400페이지 분량의 주간 패미통 창간 40주년 기념호 이번주 발매",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354557",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354618",
+      "title": "전 바이오웨어 개발자, 개발 자금을 위해 PPL 넣는걸 제안",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354618?",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354617",
+      "title": "'캡틴 츠바사 2 월드 파이터즈' - 팀 소개 트레일러: 우즈베키스탄 유스 편",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354617?",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354616",
+      "title": "「EA SPORTS UFC 6」공식 게임 모드 심층 분석",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354616?",
+      "source": "루리웹",
+      "date": null,
+      "image": null
+    },
+    {
+      "id": "ruliweb-2354615",
+      "title": "오늘 닌텐도 뮤직 웹 버전 출시 및 마리오 카트 월드 음악과 앱 새로운 기능 추가",
+      "url": "https://m.ruliweb.com/news/board/1001/read/2354615?",
+      "source": "루리웹",
+      "date": null,
       "image": null
     }
   ]

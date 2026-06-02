@@ -303,6 +303,23 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 2px 16px 24px; }
   .refresh-status { display: none; }
 }
 
+/* ---------- 당겨서 새로고침 (iOS 스타일) ---------- */
+.ptr {
+  position: fixed; top: -46px; left: 0; right: 0; height: 46px; z-index: 30;
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none; opacity: 0; transition: opacity .15s ease;
+  will-change: transform;
+}
+.ptr.show { opacity: 1; }
+.ptr-spinner {
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 2.5px solid var(--border); border-top-color: var(--accent);
+  transition: border-color .12s ease;
+}
+.ptr.ready .ptr-spinner { border-top-color: var(--green); }
+.ptr-spinner.spin { animation: ptr-rot .7s linear infinite; }
+@keyframes ptr-rot { to { transform: rotate(360deg); } }
+
 /* ---------- 뉴스 상세 (앱 내 다크 뷰) ---------- */
 body.sheet-open { overflow: hidden; }
 .detail-sheet {

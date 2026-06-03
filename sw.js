@@ -1,6 +1,7 @@
-/* GNW service worker — offline-first caching for the static app shell.
- * Game data is fetched network-first so the catalog stays fresh. */
-const CACHE = "gnw-v28";
+/* GNW service worker
+ * 앱 코드/데이터(html·js·css·json)는 네트워크 우선 → 배포/데이터 갱신이 다음 접속에 바로 반영.
+ * 아이콘·폰트 등 정적 자산은 캐시 우선(속도). 오프라인이면 캐시로 폴백. */
+const CACHE = "gnw-v29";
 const SHELL = [
   "./",
   "./index.html",
@@ -22,20 +23,33 @@ self.addEventListener("activate", (e) => {
   );
 });
 
+// 코드/데이터는 네트워크 우선(업데이트 즉시 반영), 그 외는 캐시 우선
+const NET_FIRST = /(?:\/|\.html|\.js|\.css|\.json)$/;
+
 self.addEventListener("fetch", (e) => {
-  const url = new URL(e.request.url);
-  // Network-first for game data, cache-first for the shell.
-  if (url.pathname.endsWith("games.json")) {
+  const req = e.request;
+  if (req.method !== "GET") return;
+  const url = new URL(req.url);
+  const sameOrigin = url.origin === self.location.origin;
+
+  if (sameOrigin && NET_FIRST.test(url.pathname)) {
+    // 네트워크 우선: 성공 시 캐시 갱신, 실패(오프라인) 시 캐시 → 최후엔 index.html
     e.respondWith(
-      fetch(e.request)
+      fetch(req)
         .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put(e.request, copy));
+          if (res && res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }
           return res;
         })
-        .catch(() => caches.match(e.request))
+        .catch(() => caches.match(req).then((r) => r || caches.match("./index.html")))
     );
     return;
   }
-  e.respondWith(caches.match(e.request).then((r) => r || fetch(e.request)));
+
+  // 캐시 우선(아이콘·이미지 등). 없으면 네트워크에서 받아 캐시.
+  e.respondWith(
+    caches.match(req).then((r) => r || fetch(req).then((res) => {
+      if (res && res.ok && sameOrigin) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }
+      return res;
+    }))
+  );
 });

@@ -1,7 +1,7 @@
 /* GNW service worker
  * 앱 코드/데이터(html·js·css·json)는 네트워크 우선 → 배포/데이터 갱신이 다음 접속에 바로 반영.
  * 아이콘·폰트 등 정적 자산은 캐시 우선(속도). 오프라인이면 캐시로 폴백. */
-const CACHE = "gnw-v29";
+const CACHE = "gnw-v30";
 const SHELL = [
   "./",
   "./index.html",

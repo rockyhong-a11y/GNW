@@ -354,13 +354,6 @@ body.sheet-open { overflow: hidden; }
 .detail-meta .dm-dot { opacity: .45; }
 .detail-banner { margin: 16px 0 4px; }
 .detail-banner img { display: block; width: 100%; height: auto; border-radius: 12px; }
-.detail-banner--ph { height: 150px; border-radius: 12px; }
-.detail-subtitle { margin: -6px 0 12px; color: var(--text-dim); font-size: 14.5px; }
-.detail-meta .dm-dday { color: var(--green); font-weight: 700; }
-.detail-meta .dm-dday.done { color: var(--text-faint); }
-.detail-badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 4px; }
-.detail-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; align-items: center; }
-.detail-links .detail-orig { margin-top: 10px; }
 .detail-article { color: var(--text); font-size: 17.5px; line-height: 1.78; }
 .detail-article p { margin: 14px 0; white-space: pre-wrap; word-break: break-word; }
 .detail-img { display: block; width: 100%; height: auto; border-radius: 10px; margin: 14px 0; }

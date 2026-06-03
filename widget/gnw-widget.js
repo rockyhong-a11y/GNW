@@ -114,6 +114,29 @@ function gradientBg() {
   return g;
 }
 
+// 우측 하단 새로고침 버튼. 탭하면 Scriptable URL 스킴으로 이 스크립트를 다시 실행해
+// 최신 데이터를 받아온다. (Medium/Large는 버튼만 단독 탭으로 동작 / Small은 위젯 전체 탭)
+function addRefreshButton(w, family) {
+  const foot = w.addStack();
+  foot.centerAlignContent();
+  foot.addSpacer();                                   // 우측 정렬
+  const btn = foot.addStack();
+  btn.centerAlignContent();
+  try { btn.url = "scriptable:///run?scriptName=" + encodeURIComponent(Script.name()); } catch (e) {}
+  const sz = family === "small" ? 11 : 13;
+  try {
+    const sym = SFSymbol.named("arrow.clockwise");
+    const icon = btn.addImage(sym.image);
+    icon.imageSize = new Size(sz, sz); icon.tintColor = C.dim; icon.resizable = true;
+  } catch (e) {
+    const g = btn.addText("↻"); g.font = Font.systemFont(sz); g.textColor = C.dim; // 폴백 글리프
+  }
+  if (family !== "small") {
+    btn.addSpacer(4);
+    const t = btn.addText("새로고침"); t.font = Font.mediumSystemFont(10); t.textColor = C.dim;
+  }
+}
+
 // ---- 빌드 ----
 async function buildWidget() {
   const family = config.widgetFamily || "medium";
@@ -129,6 +152,8 @@ async function buildWidget() {
   try { const req = new Request(DATA_URL); req.timeoutInterval = 15; data = await req.loadJSON(); }
   catch (e) {
     const t = w.addText("데이터를 불러오지 못했습니다."); t.font = Font.mediumSystemFont(12); t.textColor = C.dim;
+    w.addSpacer();
+    addRefreshButton(w, family);   // 실패 시 특히 새로고침이 유용
     return w;
   }
 
@@ -152,6 +177,8 @@ async function buildWidget() {
 
   if (!items.length) {
     const t = w.addText("표시할 항목이 없습니다."); t.font = Font.mediumSystemFont(12); t.textColor = C.dim;
+    w.addSpacer();
+    addRefreshButton(w, family);
     return w;
   }
 
@@ -163,6 +190,7 @@ async function buildWidget() {
     }
   }
   w.addSpacer();
+  addRefreshButton(w, family);
   return w;
 }
 

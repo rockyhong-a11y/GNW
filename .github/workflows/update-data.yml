@@ -3,9 +3,12 @@ name: Update game data
 # 데이터 수집 파이프라인 — 인벤 발매 캘린더에서 자동 재수집.
 # 최신화 경로:
 #   (1) 웹앱이 진입/복귀 시 data/games.json 을 다시 불러옴(network-first),
-#   (2) 아래 스케줄로 하루 2회 자동 재수집 → main 커밋 → Pages 자동 배포,
+#   (2) 아래 스케줄로 하루 2회 자동 재수집 → main 커밋 → (이 워크플로 완료를
+#       deploy-pages 가 workflow_run 으로 받아) Pages 재배포,
 #   (3) 필요 시 "Run workflow"(수동)로 즉시 재수집.
 # "변경 시에만 커밋"이라 실제 일정이 바뀐 경우에만 커밋/배포가 일어난다.
+# 주의: 봇의 데이터 커밋은 GITHUB_TOKEN 이라 push 로 다른 워크플로를 트리거하지 못한다.
+#       그래서 Pages 배포는 push 가 아니라 workflow_run 으로 연결한다.
 
 on:
   push:

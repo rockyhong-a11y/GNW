@@ -8,6 +8,12 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # 데이터 워크플로(Update game data) 완료 후 항상 배포.
+  # 봇의 GITHUB_TOKEN 데이터 커밋은 push 이벤트를 트리거하지 못하므로(루프 방지),
+  # workflow_run 으로 받아 스케줄/수동 데이터 갱신이 Pages 에 반드시 반영되게 한다.
+  workflow_run:
+    workflows: ["Update game data"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:

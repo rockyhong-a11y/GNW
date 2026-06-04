@@ -282,7 +282,10 @@ async function loadGames(firstLoad = false) {
   try {
     const res = await fetch(`data/games.json?t=${Date.now()}`, { cache: "no-store" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
+    const text = await res.text();
+    let data;
+    try { data = JSON.parse(text); }
+    catch { throw new Error("응답이 JSON이 아님(네트워크/캐시 문제)"); } // HTML 폴백 등으로 인한 파싱 실패 방지
     STATE.games = data.games;
     STATE.news = data.news || [];
     lastFetchAt = Date.now();

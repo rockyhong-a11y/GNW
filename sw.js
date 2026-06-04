@@ -1,7 +1,8 @@
 /* GNW service worker
- * 앱 코드/데이터(html·js·css·json)는 네트워크 우선 → 배포/데이터 갱신이 다음 접속에 바로 반영.
- * 아이콘·폰트 등 정적 자산은 캐시 우선(속도). 오프라인이면 캐시로 폴백. */
-const CACHE = "gnw-v30";
+ * - games.json(데이터): 네트워크 우선, 실패 시 직전 캐시(JSON) 폴백 — 절대 HTML로 폴백하지 않음.
+ * - 앱 셸(html·js·css): stale-while-revalidate(즉시 캐시 + 백그라운드 갱신) → 빠르면서 자동 최신화.
+ * - 아이콘·폰트 등: 캐시 우선. */
+const CACHE = "gnw-v31";
 const SHELL = [
   "./",
   "./index.html",
@@ -23,29 +24,39 @@ self.addEventListener("activate", (e) => {
   );
 });
 
-// 코드/데이터는 네트워크 우선(업데이트 즉시 반영), 그 외는 캐시 우선
-const NET_FIRST = /(?:\/|\.html|\.js|\.css|\.json)$/;
-
 self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET") return;
   const url = new URL(req.url);
   const sameOrigin = url.origin === self.location.origin;
 
-  if (sameOrigin && NET_FIRST.test(url.pathname)) {
-    // 네트워크 우선: 성공 시 캐시 갱신, 실패(오프라인) 시 캐시 → 최후엔 index.html
+  // 데이터: 네트워크 우선. 쿼리(?t=)는 제거한 단일 키로 캐시하고, 실패 시 그 캐시(JSON)로 폴백.
+  if (sameOrigin && url.pathname.endsWith("games.json")) {
+    const key = url.origin + url.pathname;
     e.respondWith(
-      fetch(req)
-        .then((res) => {
-          if (res && res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }
-          return res;
-        })
-        .catch(() => caches.match(req).then((r) => r || caches.match("./index.html")))
+      fetch(req).then((res) => {
+        if (res && res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(key, copy)); }
+        return res;
+      }).catch(() => caches.match(key))
     );
     return;
   }
 
-  // 캐시 우선(아이콘·이미지 등). 없으면 네트워크에서 받아 캐시.
+  // 앱 셸: stale-while-revalidate — 캐시를 즉시 주고 백그라운드로 갱신(다음 로드에 최신 반영).
+  if (sameOrigin && /(?:\/|\.html|\.js|\.css)$/.test(url.pathname)) {
+    e.respondWith(
+      caches.match(req).then((cached) => {
+        const net = fetch(req).then((res) => {
+          if (res && res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }
+          return res;
+        }).catch(() => cached);
+        return cached || net;
+      })
+    );
+    return;
+  }
+
+  // 그 외(아이콘·폰트 등): 캐시 우선, 없으면 네트워크.
   e.respondWith(
     caches.match(req).then((r) => r || fetch(req).then((res) => {
       if (res && res.ok && sameOrigin) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }

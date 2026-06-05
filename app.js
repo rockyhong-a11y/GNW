@@ -570,9 +570,12 @@ function openDetail(n) {
     <div class="detail-article">${body}</div>
     ${comments}
     ${n.url ? `<a class="detail-orig" href="${esc(n.url)}" target="_blank" rel="noopener">원문 보기 ↗</a>` : ""}`;
-  $("#detailScroll").scrollTop = 0;
   sheet.hidden = false;
   document.body.classList.add("sheet-open");
+  // 항상 글 최상단(제목)부터 보이도록 — 시트를 표시한 뒤 스크롤을 리셋(숨김 상태에선 적용 안 됨).
+  const sc = $("#detailScroll");
+  sc.scrollTop = 0;
+  requestAnimationFrame(() => { sc.scrollTop = 0; });
 }
 function closeDetail() {
   const sheet = $("#detailSheet");

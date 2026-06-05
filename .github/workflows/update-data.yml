@@ -17,6 +17,8 @@ on:
       - "data/games.json"   # 봇의 데이터 커밋으로 인한 무한 재실행 방지
   schedule:
     - cron: "0 21 * * *"      # 매일 06:00 KST (전날 밤 갱신분 반영)
+    - cron: "0 0 * * *"       # 매일 09:00 KST
+    - cron: "0 6 * * *"       # 매일 15:00 KST
     - cron: "0 9 * * *"       # 매일 18:00 KST
   workflow_dispatch: {}       # 수동 실행 (Actions 탭 → Run workflow)
 

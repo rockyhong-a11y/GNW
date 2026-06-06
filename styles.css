@@ -4,6 +4,12 @@
   font-weight: 100 900;
   font-display: swap;
 }
+@font-face {
+  font-family: "Pretendard";
+  src: url("fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 100 900;   /* 가변 폰트 */
+  font-display: swap;
+}
 :root {
   --bg: #0d0f1a;
   --bg-elev: #161a2c;
@@ -25,8 +31,8 @@
   --maxw: 1100px;
   /* 게임 뉴스 서체: 제목(헤드라인, 너무 굵지 않게)과 본문(가독)을 분리 */
   --font-title: "Gothic A1", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-  --font-body: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
-    "Pretendard", "Malgun Gothic", Roboto, sans-serif;
+  --font-body: "Pretendard", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Malgun Gothic", Roboto, sans-serif;
 }
 
 * { box-sizing: border-box; }

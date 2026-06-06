@@ -2,7 +2,7 @@
  * - games.json(데이터): 네트워크 우선, 실패 시 직전 캐시(JSON) 폴백 — 절대 HTML로 폴백하지 않음.
  * - 앱 셸(html·js·css): stale-while-revalidate(즉시 캐시 + 백그라운드 갱신) → 빠르면서 자동 최신화.
  * - 아이콘·폰트 등: 캐시 우선. */
-const CACHE = "gnw-v32";
+const CACHE = "gnw-v33";
 const SHELL = [
   "./",
   "./index.html",

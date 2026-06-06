@@ -362,6 +362,7 @@ body.sheet-open { overflow: hidden; }
 .detail-banner img { display: block; width: 100%; height: auto; border-radius: 12px; }
 .detail-article { color: var(--text); font-size: 17.5px; line-height: 1.78; }
 .detail-article p { margin: 14px 0; white-space: pre-wrap; word-break: break-word; }
+.detail-link { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; word-break: break-all; }
 .detail-img { display: block; width: 100%; height: auto; border-radius: 10px; margin: 14px 0; }
 .detail-empty { color: var(--text-dim); }
 /* 재생 가능한 유튜브 임베드 (16:9) */
@@ -376,6 +377,8 @@ body.sheet-open { overflow: hidden; }
 .dc-like { font-size: 14px; color: var(--text-faint); }
 .dc-best { font-size: 11px; font-weight: 800; color: var(--ink, #0b0d16); background: var(--amber); padding: 1px 6px; border-radius: 5px; letter-spacing: .04em; }
 .dc-text { font-size: 16px; line-height: 1.6; color: var(--text); white-space: pre-wrap; word-break: break-word; }
+.dc-imgs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+.dc-imgs img { max-width: 100%; max-height: 240px; border-radius: 8px; display: block; }
 .dc-item.best { background: rgba(255,180,84,.06); border-radius: 8px; padding: 10px 10px; }
 .dc-more { display: inline-block; margin-top: 12px; color: var(--accent); font-weight: 700; text-decoration: none; }
 .dc-more.dc-only { margin-top: 18px; padding: 10px 16px; background: var(--accent-soft); border-radius: var(--radius-sm); }

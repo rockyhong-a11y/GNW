@@ -530,6 +530,10 @@ function openDetail(n) {
     n.comments != null ? `<span>댓글 ${n.comments}</span>` : "",
   ].filter(Boolean).join('<span class="dm-dot">·</span>');
   const ytEmbed = (id) => `<div class="detail-video"><iframe src="https://www.youtube.com/embed/${esc(id)}" title="YouTube" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
+  // 단락 렌더: 링크 세그먼트(seg)는 클릭 가능한 a 로, 텍스트는 이스케이프
+  const para = (b) => b.seg
+    ? `<p>${b.seg.map((s) => s.t === "a" ? `<a class="detail-link" href="${esc(s.v)}" target="_blank" rel="noopener">${esc(s.l)}</a>` : esc(s.v)).join("")}</p>`
+    : `<p>${esc(b.v || "")}</p>`;
   const hasVideo = !!(n.content && n.content.some((b) => b.t === "yt"));
   // 영상 글은 배너(=영상 썸네일)를 생략하고 아래에서 재생 가능한 영상으로 노출
   const banner = (n.image && !hasVideo)
@@ -542,7 +546,7 @@ function openDetail(n) {
     body = lead + n.content.map((b) =>
       b.t === "yt" ? ytEmbed(b.v)
       : b.t === "img" ? `<img class="detail-img" src="${esc(b.v)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`
-      : `<p>${esc(b.v)}</p>`).join("");
+      : para(b)).join("");
   } else if (n.summary) {
     body = `<p>${esc(n.summary)}</p>`;
   } else {
@@ -557,7 +561,9 @@ function openDetail(n) {
         <h2 class="dc-head">댓글${n.comments != null ? ` ${Number(n.comments).toLocaleString()}` : ""}</h2>
         ${cs.map((c) => `<div class="dc-item${c.best ? " best" : ""}">
           <div class="dc-top">${c.best ? `<span class="dc-best">BEST</span>` : ""}${c.nick ? `<span class="dc-nick">${esc(c.nick)}</span>` : ""}${c.like ? `<span class="dc-like">👍 ${c.like}</span>` : ""}</div>
-          <div class="dc-text">${esc(c.text)}</div></div>`).join("")}
+          ${c.text ? `<div class="dc-text">${esc(c.text)}</div>` : ""}
+          ${(c.imgs && c.imgs.length) ? `<div class="dc-imgs">${c.imgs.map((u) => `<img src="${esc(u)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`).join("")}</div>` : ""}
+        </div>`).join("")}
         ${n.url ? `<a class="dc-more" href="${esc(n.url)}" target="_blank" rel="noopener">원문에서 댓글 더 보기 ↗</a>` : ""}
       </section>`;
   } else if (n.comments != null && n.url) {

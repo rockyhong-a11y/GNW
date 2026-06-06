@@ -356,17 +356,53 @@ function articleRegion(html) {
   if (cut > 0) region = region.slice(0, cut);
   return region;
 }
-// HTML 조각 → 단락 문자열 배열(<br>/블록 종료를 줄바꿈으로 보존)
-function htmlToParas(frag) {
+// HTML 조각 → 단락 배열. 각 단락은 세그먼트 배열: {t:"t",v} 텍스트 | {t:"a",v:url,l:label} 링크.
+// (본문 속 http(s) 하이퍼링크를 보존해 미리보기에서 클릭 가능하게 함)
+function htmlToParaSegs(frag) {
   const s = frag
     .replace(/<\s*br\s*\/?>/gi, "\n")
-    .replace(/<\/(p|div|li|h[1-6]|blockquote|tr)>/gi, "\n\n")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/&nbsp;/g, " ");
-  return s.split(/\n{2,}/).map((p) => p.replace(/[ \t]+/g, " ").replace(/\n{2,}/g, "\n").trim()).filter((p) => p.length > 1);
+    .replace(/<\/(p|div|li|h[1-6]|blockquote|tr)>/gi, "\n\n");
+  const decode = (t) => {
+    let x = String(t || "").replace(/<[^>]+>/g, " ")
+      .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+      .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/&nbsp;/g, " ");
+    const lead = /^\s/.test(x), trail = /\s$/.test(x);
+    x = x.replace(/\s+/g, " ").trim();
+    return x ? (lead ? " " : "") + x + (trail ? " " : "") : "";
+  };
+  const out = [];
+  for (const para of s.split(/\n{2,}/)) {
+    const segs = [];
+    const aRe = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+    let li = 0, am;
+    const pushTxt = (chunk) => { const t = decode(chunk); if (t) segs.push({ t: "t", v: t }); };
+    while ((am = aRe.exec(para))) {
+      pushTxt(para.slice(li, am.index));
+      li = am.index + am[0].length;
+      const href = am[1].replace(/&amp;/g, "&").trim();
+      const label = decode(am[2]).trim();
+      if (/^https?:\/\//i.test(href) && label) segs.push({ t: "a", v: href, l: label.slice(0, 160) });
+      else if (label) segs.push({ t: "t", v: label });
+    }
+    pushTxt(para.slice(li));
+    // 인접 텍스트 병합 후 양끝 공백 정리
+    const merged = [];
+    for (const sg of segs) {
+      if (sg.t === "t" && merged.length && merged[merged.length - 1].t === "t") merged[merged.length - 1].v += sg.v;
+      else merged.push({ ...sg });
+    }
+    if (merged.length) {
+      if (merged[0].t === "t") merged[0].v = merged[0].v.replace(/^\s+/, "");
+      const lastSeg = merged[merged.length - 1];
+      if (lastSeg.t === "t") lastSeg.v = lastSeg.v.replace(/\s+$/, "");
+    }
+    const textLen = merged.reduce((n, sg) => n + (sg.t === "t" ? sg.v.length : 0), 0);
+    const cleaned = merged.filter((sg) => sg.t === "a" || sg.v.length);
+    if (cleaned.length && (cleaned.some((sg) => sg.t === "a") || textLen > 1)) out.push(cleaned);
+  }
+  return out;
 }
-// 본문을 읽기용 블록 배열로: [{t:"p"} | {t:"img"} | {t:"yt"}] (원문 순서 그대로 유지)
+// 본문을 읽기용 블록 배열로: [{t:"p",v|seg} | {t:"img"} | {t:"yt"}] (원문 순서 그대로 유지)
 function extractContent(html) {
   const region = articleRegion(html);
   if (!region) return [];
@@ -376,9 +412,11 @@ function extractContent(html) {
   // 전체 본문 표시 — 폭주 방지용 넉넉한 상한만(사실상 전체 기사)
   const MAX_BLOCKS = 300, MAX_TEXT = 20000;
   const pushText = (frag) => {
-    for (const p of htmlToParas(frag)) {
+    for (const segs of htmlToParaSegs(frag)) {
       if (textLen > MAX_TEXT || blocks.length >= MAX_BLOCKS) break;
-      blocks.push({ t: "p", v: p }); textLen += p.length;
+      textLen += segs.reduce((n, s) => n + (s.v ? s.v.length : 0), 0);
+      if (segs.some((s) => s.t === "a")) blocks.push({ t: "p", seg: segs });        // 링크 포함 단락
+      else { const v = segs.map((s) => s.v).join("").trim(); if (v.length > 1) blocks.push({ t: "p", v }); }
     }
   };
   // 이미지(<img>)와 유튜브 임베드(<iframe>/<a>)를 '문서 순서대로' 함께 스캔 → 원문과 같은 위치.
@@ -436,12 +474,31 @@ function extractComments(html, max = 12) {
       if (/^루리웹-\d+$/.test(t)) continue;          // 기본 닉네임 제외
       if (t.length > text.length) text = t;          // 가장 긴 것이 실제 댓글 본문
     }
-    if (!text) continue;
-    const key = text.slice(0, 40);
-    if (seenText.has(key)) continue;                 // best+일반 목록 중복 제거
-    seenText.add(key);
+    if (text) {
+      const key = text.slice(0, 40);
+      if (seenText.has(key)) continue;               // best+일반 목록 중복 제거
+      seenText.add(key);
+    }
+    // 댓글에 첨부된 이미지(이모티콘·프로필·아이콘 제외)
+    const imgs = [];
+    for (const im of blk.matchAll(/<img\b[^>]*?(?:data-original|data-src|src)=["']([^"']+)["'][^>]*>/gi)) {
+      let u = (im[1] || "").trim();
+      if (!u || /emoticon|dccon|\/icon|\/button|blank|spacer|1x1|pixel|profile|avatar|\/member|nophoto|default[_-]|\/bi[._]/i.test(u)) continue;
+      if (u.startsWith("//")) u = "https:" + u;
+      if (!/^https?:/i.test(u)) continue;
+      u = u.replace(/&amp;/g, "&");
+      if (!imgs.includes(u)) imgs.push(u);
+      if (imgs.length >= 4) break;
+    }
+    if (!text && !imgs.length) continue;             // 내용·이미지 모두 없으면 스킵
     const likeM = blk.match(/class="[^"]*\b(?:like|recomd|num)\b[^"]*"[^>]*>\s*(\d+)/i);
-    out.push({ nick: nick ? nick.slice(0, 24) : null, text: text.slice(0, 400), like: likeM ? +likeM[1] : null, ...(isBest ? { best: true } : {}) });
+    out.push({
+      nick: nick ? nick.slice(0, 24) : null,
+      text: text.slice(0, 400),
+      like: likeM ? +likeM[1] : null,
+      ...(isBest ? { best: true } : {}),
+      ...(imgs.length ? { imgs } : {}),
+    });
   }
   return out;
 }
@@ -626,14 +683,21 @@ async function fromRuliwebNews(news) {
       if (!n.topComments) { const cs = extractComments(h, 10); if (cs.length) n.topComments = cs; } // 상위 댓글
     } catch { /* 개별 실패 무시 */ }
   };
-  let withDate = 0, withBody = 0, withCmt = 0, withCmtList = 0;
+  let withDate = 0, withBody = 0, withCmt = 0, withCmtList = 0, withLink = 0, withCmtImg = 0;
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   for (let i = 0; i < targets.length; i += 6) {        // 동시 요청을 낮춰 차단(레이트리밋) 완화
     await Promise.all(targets.slice(i, i + 6).map((n) => enrichOne(n)));
     if (i + 6 < targets.length) await sleep(120);        // 배치 간 약간의 간격
   }
-  for (const n of news) { if (n.date) withDate++; if (n.content && n.content.length) withBody++; if (n.comments != null) withCmt++; if (n.topComments && n.topComments.length) withCmtList++; }
-  console.log(`[ruliweb] 보강 대상 ${targets.length} · 날짜 ${withDate}/${news.length} · 본문 ${withBody}/${news.length} · 댓글수 ${withCmt} · 댓글목록 ${withCmtList}`);
+  for (const n of news) {
+    if (n.date) withDate++;
+    if (n.content && n.content.length) withBody++;
+    if (n.comments != null) withCmt++;
+    if (n.topComments && n.topComments.length) withCmtList++;
+    if (n.content && n.content.some((b) => b.t === "p" && b.seg)) withLink++;
+    if (n.topComments && n.topComments.some((c) => c.imgs && c.imgs.length)) withCmtImg++;
+  }
+  console.log(`[ruliweb] 보강 대상 ${targets.length} · 날짜 ${withDate}/${news.length} · 본문 ${withBody}/${news.length} · 댓글수 ${withCmt} · 댓글목록 ${withCmtList} · 본문링크 ${withLink} · 댓글이미지 ${withCmtImg}`);
   return { name: "RuliwebNews", ...(errs.length ? { error: errs.join(",") } : {}), added };
 }
 

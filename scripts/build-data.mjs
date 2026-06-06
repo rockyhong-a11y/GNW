@@ -452,7 +452,7 @@ function extractCommentCount(html) {
   return m ? +m[1].replace(/,/g, "") : null;
 }
 // 기사 페이지에서 상위 댓글 추출(작성자·내용·추천·베스트 여부). 미리보기에 인라인 노출.
-function extractComments(html, max = 12) {
+function extractComments(html, max = 30) {
   let s = html.search(/class=["'][^"']*comment_(?:view|table|wrapper)|id=["']cmt["']/i);
   if (s < 0) return [];
   const region = html.slice(s, s + 260000);
@@ -680,7 +680,7 @@ async function fromRuliwebNews(news) {
         else if (yt) n.image = `https://img.youtube.com/vi/${yt.v}/hqdefault.jpg`;
       }
       if (n.comments == null) { const c = extractCommentCount(h); if (c != null) n.comments = c; } // 댓글 수 보강
-      if (!n.topComments) { const cs = extractComments(h, 10); if (cs.length) n.topComments = cs; } // 상위 댓글
+      if (!n.topComments) { const cs = extractComments(h, 30); if (cs.length) n.topComments = cs; } // 상위 댓글
     } catch { /* 개별 실패 무시 */ }
   };
   let withDate = 0, withBody = 0, withCmt = 0, withCmtList = 0, withLink = 0, withCmtImg = 0;

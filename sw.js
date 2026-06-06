@@ -1,8 +1,8 @@
 /* GNW service worker
- * - games.json(데이터): 네트워크 우선, 실패 시 직전 캐시(JSON) 폴백 — 절대 HTML로 폴백하지 않음.
- * - 앱 셸(html·js·css): stale-while-revalidate(즉시 캐시 + 백그라운드 갱신) → 빠르면서 자동 최신화.
- * - 아이콘·폰트 등: 캐시 우선. */
-const CACHE = "gnw-v34";
+ * - games.json(데이터) & 앱 셸(html·js·css): 네트워크 우선 → 항상 최신 코드/데이터.
+ *   실패(오프라인) 시에만 캐시로 폴백(데이터는 캐시된 JSON, 네비게이션은 index.html). 절대 HTML을 JS/JSON에 폴백하지 않음.
+ * - 아이콘·폰트 등 정적 자산: 캐시 우선(속도). */
+const CACHE = "gnw-v35";
 const SHELL = [
   "./",
   "./index.html",
@@ -30,7 +30,7 @@ self.addEventListener("fetch", (e) => {
   const url = new URL(req.url);
   const sameOrigin = url.origin === self.location.origin;
 
-  // 데이터: 네트워크 우선. 쿼리(?t=)는 제거한 단일 키로 캐시하고, 실패 시 그 캐시(JSON)로 폴백.
+  // 데이터: 네트워크 우선. 쿼리(?t=) 제거한 단일 키로 캐시, 실패 시 그 캐시(JSON)로만 폴백.
   if (sameOrigin && url.pathname.endsWith("games.json")) {
     const key = url.origin + url.pathname;
     e.respondWith(
@@ -42,16 +42,13 @@ self.addEventListener("fetch", (e) => {
     return;
   }
 
-  // 앱 셸: stale-while-revalidate — 캐시를 즉시 주고 백그라운드로 갱신(다음 로드에 최신 반영).
+  // 앱 셸(html·js·css): 네트워크 우선 → 온라인이면 항상 최신 코드. 실패 시 캐시(네비게이션은 index.html).
   if (sameOrigin && /(?:\/|\.html|\.js|\.css)$/.test(url.pathname)) {
     e.respondWith(
-      caches.match(req).then((cached) => {
-        const net = fetch(req).then((res) => {
-          if (res && res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }
-          return res;
-        }).catch(() => cached);
-        return cached || net;
-      })
+      fetch(req).then((res) => {
+        if (res && res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }
+        return res;
+      }).catch(() => caches.match(req).then((r) => r || (req.mode === "navigate" ? caches.match("./index.html") : Response.error())))
     );
     return;
   }

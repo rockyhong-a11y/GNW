@@ -366,11 +366,12 @@ function htmlToParas(frag) {
     .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/&nbsp;/g, " ");
   return s.split(/\n{2,}/).map((p) => p.replace(/[ \t]+/g, " ").replace(/\n{2,}/g, "\n").trim()).filter((p) => p.length > 1);
 }
-// 본문을 읽기용 블록 배열로: [{t:"p",v:"…"} | {t:"img",v:"https://…"}] (문서 순서 유지)
+// 본문을 읽기용 블록 배열로: [{t:"p"} | {t:"img"} | {t:"yt"}] (원문 순서 그대로 유지)
 function extractContent(html) {
   const region = articleRegion(html);
   if (!region) return [];
   const blocks = [];
+  const seenYt = new Set();
   let last = 0, m, textLen = 0;
   // 전체 본문 표시 — 폭주 방지용 넉넉한 상한만(사실상 전체 기사)
   const MAX_BLOCKS = 300, MAX_TEXT = 20000;
@@ -380,23 +381,27 @@ function extractContent(html) {
       blocks.push({ t: "p", v: p }); textLen += p.length;
     }
   };
-  const re = /<img\b[^>]*>/gi;
-  while ((m = re.exec(region)) && blocks.length < MAX_BLOCKS) {
+  // 이미지(<img>)와 유튜브 임베드(<iframe>/<a>)를 '문서 순서대로' 함께 스캔 → 원문과 같은 위치.
+  // 태그 '전체'를 토큰으로 잡아야 본문에 태그 파편이 남지 않는다.
+  const TOKEN = /<img\b[^>]*>|<iframe\b[^>]*>|<a\b[^>]*(?:youtube|youtu\.be)[^>]*>/gi;
+  const YT = /(?:youtube(?:-nocookie)?\.com\/(?:embed\/|v\/|watch\?v=)|youtu\.be\/)([A-Za-z0-9_-]{8,})/i;
+  while ((m = TOKEN.exec(region)) && blocks.length < MAX_BLOCKS) {
     pushText(region.slice(last, m.index));
     last = m.index + m[0].length;
-    // 지연로딩 등 다양한 속성에서 이미지 URL 확보
-    let src = (m[0].match(/(?:data-original|data-src|data-echo|data-lazy(?:-src)?|src)=["']([^"']+)["']/i) || [])[1];
-    if (!src || /blank|emoticon|icon|button|loading|\bs\.gif\b|spacer|1x1|pixel/i.test(src)) continue;
-    if (src.startsWith("//")) src = "https:" + src;
-    if (/^https?:/i.test(src)) blocks.push({ t: "img", v: src.replace(/&amp;/g, "&") });
+    const tag = m[0];
+    if (/^<img/i.test(tag)) {
+      // 지연로딩 등 다양한 속성에서 이미지 URL 확보
+      let src = (tag.match(/(?:data-original|data-src|data-echo|data-lazy(?:-src)?|src)=["']([^"']+)["']/i) || [])[1];
+      if (!src || /blank|emoticon|icon|button|loading|\bs\.gif\b|spacer|1x1|pixel/i.test(src)) continue;
+      if (src.startsWith("//")) src = "https:" + src;
+      if (/^https?:/i.test(src)) blocks.push({ t: "img", v: src.replace(/&amp;/g, "&") });
+    } else {
+      // <iframe>/유튜브 링크 → 동영상 블록(같은 영상은 1회만)
+      const id = (tag.match(YT) || [])[1];
+      if (id && !seenYt.has(id)) { seenYt.add(id); blocks.push({ t: "yt", v: id }); }
+    }
   }
   pushText(region.slice(last));
-  // 유튜브 임베드 → 재생 가능한 동영상 블록({t:"yt", v:videoId}). 미리보기에서 그대로 재생.
-  for (const fm of region.matchAll(/(?:youtube(?:-nocookie)?\.com\/(?:embed\/|v\/|watch\?v=)|youtu\.be\/)([A-Za-z0-9_-]{8,})/gi)) {
-    if (blocks.length >= MAX_BLOCKS) break;
-    const id = fm[1];
-    if (!blocks.some((b) => b.t === "yt" && b.v === id)) blocks.push({ t: "yt", v: id });
-  }
   return blocks.slice(0, MAX_BLOCKS);
 }
 // 기사 페이지에서 댓글 수 추출(목록에 댓글 수가 없는 board/1001 글 보강용)

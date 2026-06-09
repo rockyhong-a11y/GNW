@@ -98,17 +98,20 @@ function applyFilters() {
 
 /* ---------- Rendering ---------- */
 function scrollToToday() {
-  // 오늘 이상(오늘·미래)의 첫 카드를 화면 상단으로 → 지난 카드는 위로 스크롤해야 보임
+  // 오늘 이상(오늘·미래)의 첫 카드를 화면 최상단으로 → 지난 카드는 위로 스크롤해야 보임
+  const ctrl = document.querySelector(".controls");
+  const offset = ctrl ? ctrl.getBoundingClientRect().height : 0; // sticky 상단 바 높이만큼 보정
+  const scrollTo = (el) => {
+    const y = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: Math.max(0, y), behavior: "instant" });
+  };
   for (const card of document.querySelectorAll(".card")) {
     const g = STATE.games.find((x) => String(x.id) === card.dataset.gid);
-    if (g && daysBetween(g.releaseDate) >= 0) {
-      card.scrollIntoView({ block: "start", behavior: "instant" });
-      return;
-    }
+    if (g && daysBetween(g.releaseDate) >= 0) { scrollTo(card); return; }
   }
-  // 모두 지난 일정이면 현재 월 헤더로
+  // 모두 지난 일정이면 현재 월 블록으로
   const cur = document.querySelector(".month-head.current");
-  if (cur) (cur.closest(".month-block") || cur).scrollIntoView({ block: "start", behavior: "instant" });
+  if (cur) scrollTo(cur.closest(".month-block") || cur);
 }
 
 function renderCard(g) {

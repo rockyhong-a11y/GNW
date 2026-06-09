@@ -97,6 +97,20 @@ function applyFilters() {
 }
 
 /* ---------- Rendering ---------- */
+function scrollToToday() {
+  // 오늘 이상(오늘·미래)의 첫 카드를 화면 상단으로 → 지난 카드는 위로 스크롤해야 보임
+  for (const card of document.querySelectorAll(".card")) {
+    const g = STATE.games.find((x) => String(x.id) === card.dataset.gid);
+    if (g && daysBetween(g.releaseDate) >= 0) {
+      card.scrollIntoView({ block: "start", behavior: "instant" });
+      return;
+    }
+  }
+  // 모두 지난 일정이면 현재 월 헤더로
+  const cur = document.querySelector(".month-head.current");
+  if (cur) (cur.closest(".month-block") || cur).scrollIntoView({ block: "start", behavior: "instant" });
+}
+
 function renderCard(g) {
   const cd = countdownLabel(g);
   const price = formatPrice(g.price);
@@ -193,6 +207,7 @@ function render() {
   if (!list.length) {
     root.innerHTML = "";
     $("#emptyState").hidden = false;
+    scrollAfterRender = false;
     return;
   }
   $("#emptyState").hidden = true;
@@ -215,6 +230,7 @@ function render() {
         <div class="game-grid">${grp.items.map(renderCard).join("")}</div>
       </section>`;
   }).join("");
+  if (scrollAfterRender) { scrollAfterRender = false; requestAnimationFrame(scrollToToday); }
 }
 
 /* ---------- Platform tabs (bottom bar + swipe) ---------- */
@@ -230,6 +246,7 @@ function setTab(cat) {
     // 뉴스=전체 기간(날짜순), 출시·이벤트=현재 월 기준이 디폴트
     STATE.month = cat === "news" ? "all" : CUR_MONTH;
     buildMonthSelect();   // 탭별로 기간 옵션이 다름(뉴스=뉴스 날짜, 그 외=일정 월)
+    scrollAfterRender = (cat !== "news"); // 출시·이벤트 탭 전환 시 오늘 기준으로 포커싱
     render();
   }
   // 뉴스 탭은 진입/재탭(이미 활성이어도) 시 최신 뉴스로 갱신
@@ -275,6 +292,7 @@ function buildMonthSelect() {
 /* ---------- Data loading & refresh ---------- */
 let isLoading = false;
 let lastFetchAt = 0;
+let scrollAfterRender = false;
 
 async function loadGames(firstLoad = false) {
   if (isLoading) return;
@@ -371,15 +389,16 @@ function bindPullToRefresh() {
 }
 
 /* ---------- App icon presets (설정 → 아이콘 변경) ---------- */
+const _svg = (s) => `data:image/svg+xml,${encodeURIComponent(s)}`;
 const ICON_PRESETS = [
-  { key: "sword",  name: "검사",   src: "icons/preset-sword.png" },
-  { key: "voyage", name: "여행자", src: "icons/preset-voyage.png" },
-  { key: "hunter", name: "헌터",   src: "icons/preset-hunter.png" },
-  { key: "knight", name: "나이트", src: "icons/preset-knight.png" },
-  { key: "ranger", name: "레인저", src: "icons/preset-ranger.png" },
+  { key: "gamepad", name: "컨트롤러", src: _svg(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='#0f1123'/><path d='M17 50c0-12 8-20 20-20h26c12 0 20 8 20 20v4l-5 18c-2 6-8 8-13 4l-4-7H39l-4 7c-5 4-11 2-13-4L17 54z' fill='#6c7aff'/><rect x='27' y='45' width='5' height='14' rx='2.5' fill='#fff'/><rect x='22' y='50' width='14' height='5' rx='2.5' fill='#fff'/><circle cx='64' cy='47' r='4' fill='#ff85c0'/><circle cx='72' cy='55' r='4' fill='#3ddc84'/><circle cx='56' cy='55' r='4' fill='#ffb454'/><circle cx='64' cy='63' r='4' fill='#00c2cb'/></svg>`) },
+  { key: "trophy",  name: "트로피",   src: _svg(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='#0f1123'/><path d='M33 18h34v26c0 15-11 26-17 26s-17-11-17-26V18z' fill='#ffcc00'/><path d='M19 21h14v14c-4 0-14-4-14-14z' fill='#ffcc00'/><path d='M67 21h14c0 10-10 14-14 14V21z' fill='#ffcc00'/><path d='M44 68c0-6 12-6 12 0' fill='none' stroke='#ffcc00' stroke-width='5' stroke-linecap='round'/><rect x='35' y='72' width='30' height='8' rx='4' fill='#ffcc00'/><path d='M42 34c2 4 14 4 16 0' fill='none' stroke='#cc9900' stroke-width='2.5' stroke-linecap='round'/></svg>`) },
+  { key: "gem",     name: "보석",     src: _svg(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='#0f1123'/><polygon points='50,16 72,37 62,82 38,82 28,37' fill='#00bcd4'/><polygon points='50,16 72,37 50,50 28,37' fill='#80deea'/><polygon points='28,37 50,50 38,82' fill='#0097a7'/><polygon points='72,37 62,82 50,50' fill='#0097a7'/><polygon points='38,82 50,50 62,82' fill='#006064'/></svg>`) },
+  { key: "sword",   name: "검",       src: _svg(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='#0f1123'/><g transform='rotate(45 50 50)'><rect x='47' y='12' width='6' height='44' rx='3' fill='#c8ccd8'/><rect x='46' y='11' width='8' height='7' rx='2' fill='#edf0f8'/><rect x='28' y='46' width='44' height='8' rx='4' fill='#ffcc00'/><rect x='47' y='56' width='6' height='14' rx='3' fill='#aa8800'/><circle cx='50' cy='75' r='5.5' fill='#ff85c0'/></g></svg>`) },
+  { key: "dice",    name: "주사위",   src: _svg(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='#0f1123'/><rect x='18' y='18' width='64' height='64' rx='14' fill='#6c7aff'/><circle cx='34' cy='34' r='5.5' fill='#fff'/><circle cx='66' cy='34' r='5.5' fill='#fff'/><circle cx='50' cy='50' r='5.5' fill='#fff'/><circle cx='34' cy='66' r='5.5' fill='#fff'/><circle cx='66' cy='66' r='5.5' fill='#fff'/></svg>`) },
 ];
 function savedIconKey() {
-  try { return localStorage.getItem("gnw-icon") || "sword"; } catch { return "sword"; }
+  try { return localStorage.getItem("gnw-icon") || "gamepad"; } catch { return "gamepad"; }
 }
 function setIconLinks(href) {
   document.querySelectorAll('link[rel="apple-touch-icon"]').forEach((l) => { l.href = href; });

@@ -184,8 +184,8 @@ function parseInvenCalendar(html, out, seen, tbd = false) {
     const it = m[0];
 
     // 제목 (행사형은 .title-text, 출시형은 .calendar__title 직접)
-    let title = (it.match(/class="title-text">([\s\S]*?)<\/span>/) || [])[1];
-    if (!title) title = (it.match(/class="calendar__title"[^>]*>([\s\S]*?)<\/h3>/) || [])[1];
+    let title = (it.match(/class="title-text">[\s\S]*?<\/span>/) || [])[1];
+    if (!title) title = (it.match(/class="calendar__title"[^>]*>[\s\S]*?<\/h3>/) || [])[1];
     title = stripTags(title);
     if (!title || title.length < 2) continue;
 
@@ -210,7 +210,7 @@ function parseInvenCalendar(html, out, seen, tbd = false) {
     const detailUrl = abs((atag.match(/href="([^"]+)"/) || [])[1]);
     const idx = (it.match(/data-game-idx="(\d+)"/) || [])[1] || (detailUrl && (detailUrl.match(/\/game\/(\d+)/) || [])[1]);
     const yt = (it.match(/data-youtube="([^"]+)"/) || [])[1];
-    const company = stripTags((it.match(/class="calendar__company">([\s\S]*?)<\/(?:p|span)>/) || [])[1]);
+    const company = stripTags((it.match(/class="calendar__company">[\s\S]*?<\/(?:p|span)>/) || [])[1]);
     const platforms = [...new Set([...it.matchAll(/calendar__platform-icon--([a-z0-9]+)/g)].map((x) => PLAT[x[1]]).filter(Boolean))];
     const tags = [...it.matchAll(/class="calendar__event-tag">\s*([^<]+?)\s*<\/span>/g)].map((x) => x[1].trim()).filter(Boolean);
 
@@ -400,8 +400,8 @@ async function enrichGameDetails(games, prev) {
       const h = await res.text();
       const c = extractContent(h, INVEN_GAME_BODY_PATS);     // 본문 블록(단락·이미지·영상)
       if (c.length) { g.content = c; bodies++; }
-      const og = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["|']/i)
-        || h.match(/<meta[^>]+content=["']([^"']*)["|'][^>]+property=["']og:description["']/i) || [])[1];
+      const og = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["']/i)
+        || h.match(/<meta[^>]+content=["']([^"']*)["'][^>]+property=["']og:description["']/i) || [])[1];
       const ogTxt = og ? rwText(og) : "";
       if (ogTxt && ogTxt.length > (g.description ? g.description.length : 0)) { g.description = ogTxt.slice(0, 600); descs++; }
       g._dlong = true;                                       // 성공 시 표식(빈 본문이어도 재요청 방지)
@@ -584,7 +584,7 @@ function extractComments(html, max = 100) {
     const imgs = [];
     for (const im of blk.matchAll(/<img\b[^>]*?(?:data-original|data-src|src)=["']([^"']+)["'][^>]*>/gi)) {
       let u = (im[1] || "").trim();
-      if (!u || /emoticon|dccon|\/icon|\/button|blank|spacer|1x1|pixel|profile|avatar|\/member|nophoto|default[_-]|\/bi[._]/i.test(u)) continue;
+      if (!u || /emoticon|dccon\/icon|\/button|blank|spacer|1x1|pixel|profile|avatar|\/member|nophoto|default[_-]|\/bi[._]/i.test(u)) continue;
       if (u.startsWith("//")) u = "https:" + u;
       if (!/^https?:/i.test(u)) continue;
       u = u.replace(/&amp;/g, "&");
@@ -637,10 +637,10 @@ function parseRuliwebList(html, news, seen, cap = 60) {
     const summary = rwText((block.match(/<span class="desc">([\s\S]*?)<\/span>/) || [])[1]);
     const comments = (block.match(/<span class="num_reply">\s*\[(\d+)\]/) || [])[1];
     const ct = rwText((block.match(/<span class="create_time">([\s\S]*?)<\/span>/) || [])[1]); // "2026.06.02 (16:07:10), 조회수 132"
-    const dm = ct.match(/(\d{4})\.(\d{2})\.(\d{2})\s*\([\d:]+\)/);
+    const dm = ct.match(/(\d{4})\.(\d{2})\.(\d{2})\s*\(([\d:]+)\)/);
     const vm = ct.match(/조회수\s*([\d,]+)/);
     let image = (block.match(/background-image:\s*url\(([^),]+)/) || [])[1] || null;
-    if (image) { image = image.trim().replace(/^['"']|['"']$/g, ""); if (image.startsWith("//")) image = "https:" + image; }
+    if (image) { image = image.trim().replace(/^['"]/g, "").replace(/['"]/g, ""); if (image.startsWith("//")) image = "https:" + image; }
     seen.add("id:" + id); seen.add(title.toLowerCase().replace(/\s+/g, ""));
     const item = {
       id: `ruliweb-${id}`, title, url: `https://bbs.ruliweb.com/news/read/${id}`,
@@ -663,7 +663,7 @@ const rwAbsImg = (u) => u ? (u.startsWith("//") ? "https:" + u : u) : null;
 // 한 페이지 HTML 에서 기사들을 추출(기사ID로 그룹핑). seen 으로 소스 간 중복 제거.
 function parseRuliweb(html, news, seen, cap = 40) {
   const anchors = [];
-  for (const m of html.matchAll(/<a[^>]+href="([^"]*\/news\/(?:board\/\d+\/)?read\/(\d+)[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi)) {
+  for (const m of html.matchAll(/<a[^>]+href="([^"]*\/news\/(?:board\/\d+\/)?read\/(\d+)[^"]*)[^>]*>([\s\S]*?)<\/a>/gi)) {
     anchors.push({ idx: m.index, url: m[1], id: m[2], inner: m[3] });
   }
   const byId = new Map();
@@ -770,7 +770,7 @@ async function fromRuliwebNews(news) {
       const og = (h.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
         || h.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) || [])[1];
       if (!n.image && og && !/blank|default|logo|no_?image|bi\.png|icon/i.test(og)) n.image = og.replace(/&amp;/g, "&");
-      if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["|']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
+      if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
       if (!n.date) { const d = extractDateTime(h); if (d) { n.date = d.date; if (d.time) n.time = d.time; } }
       if (!n.author) { const a = extractAuthor(h); if (a) n.author = a; }
       if (!n.content || !n.content.length) { const c = extractContent(h); if (c.length) n.content = c; }

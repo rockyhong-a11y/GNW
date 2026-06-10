@@ -342,10 +342,24 @@ body.sheet-open { overflow: hidden; }
 .detail-sheet[hidden] { display: none; }   /* display:flex 가 [hidden] 기본 동작을 덮어쓰므로 명시 */
 .detail-sheet.sliding { transition: none; }
 .detail-sheet.closing { transition: transform .18s ease; }
+.detail-nav {
+  display: flex; align-items: center;
+  padding: calc(10px + var(--safe-top)) 8px 4px;
+  flex-shrink: 0;
+}
+.detail-back-btn {
+  display: flex; align-items: center; gap: 4px;
+  background: none; border: none;
+  color: var(--text-dim); font-size: 15px;
+  padding: 8px 10px; cursor: pointer;
+  border-radius: 8px; touch-action: manipulation;
+}
+.detail-back-btn:active { background: rgba(255,255,255,.08); }
+.detail-back-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
 .detail-scroll { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 .detail-content {
   max-width: 700px; margin: 0 auto;
-  padding: calc(22px + var(--safe-top)) 18px calc(48px + var(--safe-bottom));
+  padding: 8px 18px calc(48px + var(--safe-bottom));
 }
 .detail-title {
   margin: 2px 0 12px; font-size: 23px; line-height: 1.38;

@@ -129,14 +129,15 @@ function renderCard(g) {
   const detail = g.detailUrl
     ? `<a class="detail" href="${esc(g.detailUrl)}" target="_blank" rel="noopener">상세정보 ↗</a>`
     : "";
-  // 썸네일 이미지(인벤 리스트처럼). 로드 실패 시 onerror 로 제거해 그라데이션으로 폴백.
-  const img = g.image
-    ? `<img class="card-img" src="${esc(g.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove();this.closest('.card-banner').classList.remove('has-img')">`
+  // gamelogo 경로는 인벤 편집자가 잘못 매칭하는 경우가 많아 억제 → 그라디언트로 폴백
+  const cardImgUrl = (g.image && !g.image.includes("/gamelogo/")) ? g.image : null;
+  const img = cardImgUrl
+    ? `<img class="card-img" src="${esc(cardImgUrl)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove();this.closest('.card-banner').classList.remove('has-img')">`
     : "";
 
   return `
     <article class="card" data-gid="${esc(g.id)}">
-      <div class="card-banner${g.image ? " has-img" : ""}" style="background: linear-gradient(135deg, ${g.color}, ${g.color}55);">
+      <div class="card-banner${cardImgUrl ? " has-img" : ""}" style="background: linear-gradient(135deg, ${g.color}, ${g.color}55);">
         ${img}
         <span class="event-badge" style="background:${ev.color}">${ev.label}</span>
         <span class="countdown ${cd.released ? "released" : ""}">${cd.text}</span>
@@ -552,8 +553,9 @@ function openGameDetail(g) {
     (g.developer && g.developer !== "미상") ? `<span>${esc(g.developer)}</span>` : "",
     price.text ? `<span>${esc(price.text)}</span>` : "",
   ].filter(Boolean).join('<span class="dm-dot">·</span>');
-  const banner = g.image
-    ? `<div class="detail-banner"><img src="${esc(g.image)}" alt="" referrerpolicy="no-referrer" onerror="this.closest('.detail-banner').remove()"></div>`
+  const detailImgUrl = (g.image && !g.image.includes("/gamelogo/")) ? g.image : null;
+  const banner = detailImgUrl
+    ? `<div class="detail-banner"><img src="${esc(detailImgUrl)}" alt="" referrerpolicy="no-referrer" onerror="this.closest('.detail-banner').remove()"></div>`
     : `<div class="detail-banner detail-banner--ph" style="background:linear-gradient(135deg, ${g.color || "#6c7aff"}, ${(g.color || "#6c7aff")}55)"></div>`;
   const badge = (arr, cls) => (arr || []).map((x) => `<span class="badge ${cls}">${esc(cls === "tag" ? "#" + x : x)}</span>`).join("");
   const badges = [badge(g.platforms, "platform"), badge(g.genres, ""), badge(g.tags, "tag")].join("");
@@ -653,8 +655,8 @@ function closeDetail() {
   document.body.classList.remove("sheet-open");
 }
 function bindDetail() {
-  // 뒤로가기 버튼 없음 — 좌측에서 오른쪽 슬라이드(또는 키보드 Esc)로만 복귀
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#detailSheet").hidden) closeDetail(); });
+  $("#detailBack").addEventListener("click", closeDetail);
   bindDetailSwipe();
 }
 // 좌측 가장자리에서 오른쪽으로 슬라이드 → 목록으로 복귀(iOS 인터랙티브 백 제스처)

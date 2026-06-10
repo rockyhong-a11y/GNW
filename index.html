@@ -101,8 +101,14 @@
     </div>
   </div>
 
-  <!-- 뉴스 상세 (앱 내 다크 뷰) · 좌측에서 오른쪽으로 슬라이드하면 목록으로 복귀 -->
+  <!-- 뉴스/출시/이벤트 상세 (앱 내 다크 뷰) -->
   <div id="detailSheet" class="detail-sheet" hidden>
+    <div class="detail-nav">
+      <button id="detailBack" class="detail-back-btn" type="button" aria-label="뒤로">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        목록
+      </button>
+    </div>
     <div id="detailScroll" class="detail-scroll">
       <article id="detailBody" class="detail-content"></article>
     </div>

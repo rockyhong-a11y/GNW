@@ -1,4 +1,4 @@
-/* GNW — Game New Watch
+/* GGG — Good Game, Gallantly
  * Vanilla JS, no build step. Reads data/games.json and renders a month-grouped
  * timeline of game releases / updates / events from 인벤 발매 캘린더.
  * UI: a bottom platform tab bar (전체 · 모바일 · PC · 콘솔, swipeable) and a
@@ -310,7 +310,6 @@ async function loadGames(firstLoad = false) {
     STATE.games = data.games;
     STATE.news = data.news || [];
     lastFetchAt = Date.now();
-    document.title = data.meta.title;
     $("#lastUpdated").textContent = `데이터 기준 ${data.meta.updated}`;
     renderSources(data.meta);
     buildMonthSelect();

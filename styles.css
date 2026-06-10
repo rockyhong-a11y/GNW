@@ -190,6 +190,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 2px 16px 24px; }
   padding-bottom: 8px; border-bottom: 1px solid var(--border);
 }
 .month-head.current { color: var(--text); }
+.month-head.tbd { color: var(--text-faint); font-style: italic; }
 .month-head.current span:first-child {
   background: linear-gradient(90deg, var(--accent), #b14aed);
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
@@ -227,6 +228,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 2px 16px 24px; }
   padding: 4px 10px; border-radius: 999px; color: #fff;
 }
 .countdown.released { background: rgba(61,220,132,.22); color: var(--green); }
+.countdown.tbd { background: rgba(107,114,128,.22); color: var(--text-faint); }
 .play-btn {
   position: absolute; z-index: 2; top: 8px; right: 10px;
   width: 32px; height: 32px; display: grid; place-items: center;
@@ -268,7 +270,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 2px 16px 24px; }
 
 /* 게임 뉴스 보드 (루리웹 형식) */
 .newsboard { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; }
-/* 썸네일(좌) → 제목(우) 가로 행. 모바일 터치 고려해 넉넉한 간격 */
+/* 썸네일(좌) → 제목(우) 가로 행. 모바일 터치 고려해 넓너한 간격 */
 .news-item {
   display: flex; gap: 12px; align-items: flex-start;
   padding: 15px 4px; border-bottom: 1px solid var(--border); cursor: pointer;
@@ -282,7 +284,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 2px 16px 24px; }
   display: flex; align-items: center; justify-content: center;
   background: linear-gradient(135deg, var(--accent), #1b2036);
 }
-.news-thumb--ph::after { content: "📰"; font-size: 26px; opacity: .9; }
+.news-thumb--ph::after { content: "\1F4F0"; font-size: 26px; opacity: .9; }
 .news-body { display: flex; flex-direction: column; gap: 5px; min-width: 0; flex: 1; }
 .news-title {
   color: var(--text); font-size: 15px; font-weight: 700; line-height: 1.4;

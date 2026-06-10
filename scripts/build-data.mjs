@@ -451,11 +451,11 @@ function extractCommentCount(html) {
     || html.match(/댓글[\s:(]*(\d[\d,]*)/);
   return m ? +m[1].replace(/,/g, "") : null;
 }
-// 기사 페이지에서 상위 댓글 추출(작성자·내용·추천·베스트 여부). 미리보기에 인라인 노출.
-function extractComments(html, max = 30) {
+// 기사 페이지에서 댓글 추출(작성자·내용·추천·베스트 여부). 미리보기에 전체 인라인 노출.
+function extractComments(html, max = 100) {
   let s = html.search(/class=["'][^"']*comment_(?:view|table|wrapper)|id=["']cmt["']/i);
   if (s < 0) return [];
-  const region = html.slice(s, s + 260000);
+  const region = html.slice(s, s + 500000);
   const out = [];
   const seenText = new Set();
   const parts = region.split(/class="comment_element/);
@@ -464,9 +464,10 @@ function extractComments(html, max = 30) {
     const head = parts[i].slice(0, 120);
     const isBest = /\bbest\b/i.test(head) || /icon_best|best_icon|comment_best/i.test(blk.slice(0, 600));
     const nick = rwText((blk.match(/class="[^"]*\bnick\b[^"]*"[^>]*>([\s\S]*?)<\/(?:strong|span|a)>/i) || [])[1]) || null;
-    // 블록 내 text_wrapper 후보 중 라벨/닉네임/기본닉을 빼고 가장 실질적인(긴) 텍스트 = 실제 댓글
+    // 블록 내 text_wrapper 후보 중 라벨/닉네임/기본닉을 빼고 가장 실질적인(긴) 텍스트 = 실제 댓글.
+    // 닫는 태그는 래퍼 컨테이너(span·div·p)만 인정 → 본문 속 <a>·<strong> 에서 잘리지 않게.
     let text = "";
-    for (const tm of blk.matchAll(/class="text_wrapper"[^>]*>([\s\S]*?)<\/(?:span|div|p|strong|a)>/gi)) {
+    for (const tm of blk.matchAll(/class="text_wrapper"[^>]*>([\s\S]*?)<\/(?:span|div|p)>/gi)) {
       const t = rwText(tm[1]);
       if (!t || t.length < 1) continue;
       if (/^(BEST|베스트|공지|블라인드|신고|답글|신고하기)$/i.test(t)) continue;
@@ -680,7 +681,7 @@ async function fromRuliwebNews(news) {
         else if (yt) n.image = `https://img.youtube.com/vi/${yt.v}/hqdefault.jpg`;
       }
       if (n.comments == null) { const c = extractCommentCount(h); if (c != null) n.comments = c; } // 댓글 수 보강
-      if (!n.topComments) { const cs = extractComments(h, 30); if (cs.length) n.topComments = cs; } // 상위 댓글
+      if (!n.topComments) { const cs = extractComments(h, 100); if (cs.length) n.topComments = cs; } // 전체 댓글
     } catch { /* 개별 실패 무시 */ }
   };
   let withDate = 0, withBody = 0, withCmt = 0, withCmtList = 0, withLink = 0, withCmtImg = 0;

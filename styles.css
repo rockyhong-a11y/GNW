@@ -361,7 +361,7 @@ body.sheet-open { overflow: hidden; }
 .detail-scroll { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 .detail-content {
   max-width: 700px; margin: 0 auto;
-  padding: 8px 18px calc(48px + var(--safe-bottom));
+  padding: 8px 18px calc(88px + var(--safe-bottom));
 }
 .detail-title {
   margin: 2px 0 12px; font-size: 23px; line-height: 1.38;
@@ -410,3 +410,22 @@ body.sheet-open { overflow: hidden; }
   background: var(--accent-soft); color: var(--accent);
   border-radius: var(--radius-sm); font-weight: 700; text-decoration: none;
 }
+/* 우측 하단 원문보기 FAB */
+.detail-orig-fab {
+  position: absolute;
+  bottom: calc(22px + var(--safe-bottom));
+  right: 20px;
+  z-index: 10;
+  padding: 11px 20px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .5);
+  white-space: nowrap;
+  transition: opacity .12s, transform .12s;
+}
+.detail-orig-fab[hidden] { display: none; }
+.detail-orig-fab:active { opacity: .75; transform: scale(.96); }

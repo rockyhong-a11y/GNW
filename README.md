@@ -1,4 +1,4 @@
-# GNW — Game New Watch 🎮
+# GGG — Good Game, Gallantly 🎮
 
 PC · 콘솔 · 모바일 **신작 출시 · 사전예약 · CBT/OBT · 대규모 업데이트 일정**을
 한눈에 보는 웹앱. 하나의 `data/games.json` 데이터를 **웹앱**과 **아이폰 위젯**이

@@ -129,8 +129,8 @@ function renderCard(g) {
   const detail = g.detailUrl
     ? `<a class="detail" href="${esc(g.detailUrl)}" target="_blank" rel="noopener">상세정보 ↗</a>`
     : "";
-  // gamelogo 경로는 인벤 편집자가 잘못 매칭하는 경우가 많아 억제 → 그라디언트로 폴백
-  const cardImgUrl = (g.image && !g.image.includes("/gamelogo/")) ? g.image : null;
+  // 인벤 게임 이미지(대부분 /gamelogo/ 경로). 깨진 이미지는 onerror 로 그라디언트 폴백.
+  const cardImgUrl = g.image || null;
   const img = cardImgUrl
     ? `<img class="card-img" src="${esc(cardImgUrl)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove();this.closest('.card-banner').classList.remove('has-img')">`
     : "";
@@ -252,6 +252,9 @@ function setTab(cat) {
     buildMonthSelect();   // 탭별로 기간 옵션이 다름(뉴스=뉴스 날짜, 그 외=일정 월)
     scrollAfterRender = (cat !== "news"); // 출시·이벤트 탭 전환 시 오늘 기준으로 포커싱
     render();
+    // 탭 전환 시 이전 탭의 스크롤 위치가 남아 어색하게 보이지 않도록 초기화.
+    // 뉴스=최상단, 출시·이벤트=scrollToToday(오늘 기준)로 위치 잡음.
+    if (cat === "news") requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "instant" }));
   }
   // 뉴스 탭은 진입/재탭(이미 활성이어도) 시 최신 뉴스로 갱신
   if (cat === "news" && Date.now() - lastFetchAt > 2000) loadGames(false);
@@ -553,7 +556,7 @@ function openGameDetail(g) {
     (g.developer && g.developer !== "미상") ? `<span>${esc(g.developer)}</span>` : "",
     price.text ? `<span>${esc(price.text)}</span>` : "",
   ].filter(Boolean).join('<span class="dm-dot">·</span>');
-  const detailImgUrl = (g.image && !g.image.includes("/gamelogo/")) ? g.image : null;
+  const detailImgUrl = g.image || null;
   const banner = detailImgUrl
     ? `<div class="detail-banner"><img src="${esc(detailImgUrl)}" alt="" referrerpolicy="no-referrer" onerror="this.closest('.detail-banner').remove()"></div>`
     : `<div class="detail-banner detail-banner--ph" style="background:linear-gradient(135deg, ${g.color || "#6c7aff"}, ${(g.color || "#6c7aff")}55)"></div>`;
@@ -562,7 +565,15 @@ function openGameDetail(g) {
   let body = "";
   if (g.update) body += `<p>📌 ${esc(g.update)}</p>`;
   if (g.description) body += `<p>${esc(g.description)}</p>`;
-  if (!body) body = `<p class="detail-empty">자세한 정보는 아래 링크에서 확인하세요.</p>`;
+  if (!body) {
+    // 인벤 캘린더 항목은 본문 설명이 없는 경우가 많음 → 메타로 한 줄 요약을 구성
+    const dev = (g.developer && g.developer !== "미상") ? g.developer : "";
+    const line = cd.released
+      ? `${dateStr}에 ${ev.label}된 작품입니다.`
+      : `${dateStr} ${ev.label} 예정작입니다.`;
+    body = `<p>${esc(line)}${dev ? esc(` 개발: ${dev}.`) : ""}</p>`
+         + `<p class="detail-empty">자세한 정보는 아래 '상세정보'에서 확인하세요.</p>`;
+  }
   const links = [
     g.detailUrl ? `<a class="detail-orig" href="${esc(g.detailUrl)}" target="_blank" rel="noopener">상세정보 ↗</a>` : "",
     g.trailer ? `<a class="dc-more" href="${esc(g.trailer)}" target="_blank" rel="noopener">▶ 트레일러 보기</a>` : "",
@@ -614,7 +625,7 @@ function openDetail(n) {
   } else if (n.summary) {
     body = `<p>${esc(n.summary)}</p>`;
   } else {
-    body = `<p class="detail-empty">본문을 불러오지 못했습니다. 아래 ‘원문 보기’에서 확인하세요.</p>`;
+    body = `<p class="detail-empty">본문을 불러오지 못했습니다. 아래 '원문 보기'에서 확인하세요.</p>`;
   }
   // 댓글: 상위 댓글이 있으면 인라인 노출, 없으면 댓글 수 + 원문 링크
   let comments = "";
@@ -701,7 +712,10 @@ async function init() {
   bindCardClicks();
   bindDetail();
   applyIcon(savedIconKey());
-  $("#monthSelect").addEventListener("change", (e) => { STATE.month = e.target.value; render(); });
+  $("#monthSelect").addEventListener("change", (e) => {
+    STATE.month = e.target.value; render();
+    requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "instant" })); // 기간 변경 시 최상단부터
+  });
   bindAutoRefresh();
   bindPullToRefresh();
   await loadGames(true);

@@ -353,6 +353,70 @@ async function fromInven(out) {
   return { name: "Inven", added };
 }
 
+// 인벤 게임 상세 페이지 본문 컨테이너 후보(앱 내 미리보기 본문용). 구조 변경에 대비해 여러 후보를 시도.
+const INVEN_GAME_BODY_PATS = [
+  /itemprop=["']description["']/i,
+  /class=["'][^"']*\bgame[_-]?(?:info|desc|detail|intro|story|summary|content)\b[^"']*["']/i,
+  /class=["'][^"']*\bcalendar__(?:detail|desc|info|content|story)\b[^"']*["']/i,
+  /class=["'][^"']*\b(?:view_content|board_main_view|article_view)\b[^"']*["']/i,
+];
+
+// 게임 상세 본문 보강: 인벤 게임 상세 페이지에서 og:description·본문을 받아 description/content[] 로
+// 저장(앱 내 미리보기용). 직전 games.json 에서 캐시해 매 빌드 전체 재요청을 피하고, 회당 일부만
+// 점진적으로 수집한다(가까운 일정 우선). 러너에서만 동작(INVEN=1), 픽스처 모드에서는 생략.
+const DETAIL_MAX = 140; // 회당 신규 상세 페이지 요청 상한
+async function enrichGameDetails(games, prev) {
+  if (process.env.INVEN !== "1") return { name: "GameDetails", skipped: "INVEN!=1" };
+  if (process.env.INVEN_HTML_FILE) return { name: "GameDetails", skipped: "fixture" };
+
+  // 1) 직전 데이터에서 본문/설명 이월 — id 기준. _dlong=상세 본문 수집 완료 표식.
+  const prevById = new Map();
+  for (const p of (prev && prev.games) || []) if (p.id) prevById.set(p.id, p);
+  for (const g of games) {
+    const p = prevById.get(g.id);
+    if (!p) continue;
+    if ((!g.content || !g.content.length) && p.content && p.content.length) g.content = p.content;
+    if (p._dlong) {
+      if (p.description && p.description.length > (g.description ? g.description.length : 0)) g.description = p.description;
+      g._dlong = true;
+    }
+  }
+
+  // 2) 아직 보강하지 않은 게임만 회당 상한까지 수집(예정 → 지난 → 미정 순).
+  const isGamePage = (u) => /inven\.co\.kr\/webzine\/calendar\/game\/\d+/.test(u || "");
+  const today = iso(TODAY);
+  const relevance = (g) => (g.releaseDate === "TBD" || !g.releaseDate) ? 2 : (g.releaseDate >= today ? 0 : 1);
+  const targets = games
+    .filter((g) => isGamePage(g.detailUrl) && !g._dlong)
+    .sort((a, b) => relevance(a) - relevance(b) || String(a.releaseDate).localeCompare(String(b.releaseDate)))
+    .slice(0, DETAIL_MAX);
+
+  let bodies = 0, descs = 0, fetched = 0;
+  const enrichOne = async (g) => {
+    try {
+      const res = await fetch(g.detailUrl, { headers: { ...HEADERS, referer: INVEN_CAL.url }, signal: AbortSignal.timeout(10000) });
+      if (!res.ok) return;                                   // 실패는 다음 빌드에서 재시도(_dlong 미설정)
+      fetched++;
+      const h = await res.text();
+      const c = extractContent(h, INVEN_GAME_BODY_PATS);     // 본문 블록(단락·이미지·영상)
+      if (c.length) { g.content = c; bodies++; }
+      const og = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["|']/i)
+        || h.match(/<meta[^>]+content=["']([^"']*)["|'][^>]+property=["']og:description["']/i) || [])[1];
+      const ogTxt = og ? rwText(og) : "";
+      if (ogTxt && ogTxt.length > (g.description ? g.description.length : 0)) { g.description = ogTxt.slice(0, 600); descs++; }
+      g._dlong = true;                                       // 성공 시 표식(빈 본문이어도 재요청 방지)
+    } catch { /* 개별 실패 무시 — 다음 빌드에서 재시도 */ }
+  };
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  for (let i = 0; i < targets.length; i += 6) {              // 동시 요청을 낮춰 차단(레이트리밋) 완화
+    await Promise.all(targets.slice(i, i + 6).map(enrichOne));
+    if (i + 6 < targets.length) await sleep(120);
+  }
+  const withBody = games.filter((g) => g.content && g.content.length).length;
+  console.log(`[gamedetail] 대상 ${targets.length} · 성공 ${fetched} · 신규본문 ${bodies} · 신규설명 ${descs} · 누적본문 ${withBody}/${games.length}`);
+  return { name: "GameDetails", added: bodies };
+}
+
 // 루리웹 게임 뉴스 수집. 러너에서만 동작(NEWS=1). 여러 소스를 순회하고 중복 제거.
 const RULIWEB_SOURCES = [
   "https://bbs.ruliweb.com/news",            // 데스크톱 뉴스 목록(썸네일+요약+조회수+시각+댓글수)
@@ -371,9 +435,10 @@ const rwText = (s) => (s || "")
 // ── 기사 본문 추출(앱 내 다크 상세뷰용) ───────────────────────────────────
 // 본문 영역만 잘라낸다. itemprop=articleBody(스키마) → .view_content 순으로 시도하고,
 // 출처/추천/관련글/댓글 영역이 시작되면 그 앞에서 컷한다.
-function articleRegion(html) {
-  // 본문 컨테이너 후보(루리웹은 글 유형/게시판에 따라 클래스가 다양함)
-  const PATS = [
+function articleRegion(html, pats) {
+  // 본문 컨테이너 후보(루리웹은 글 유형/게시판에 따라 클래스가 다양함).
+  // pats 를 넘기면 다른 사이트(예: 인벤 게임 상세)의 컨테이너로 교체할 수 있다.
+  const PATS = pats || [
     /itemprop=["']articleBody["']/i,
     /class=["'][^"']*\bview_content\b[^"']*["']/i,
     /class=["'][^"']*\bboard_main_view\b[^"']*["']/i,
@@ -438,8 +503,8 @@ function htmlToParaSegs(frag) {
   return out;
 }
 // 본문을 읽기용 블록 배열로: [{t:"p",v|seg} | {t:"img"} | {t:"yt"}] (원문 순서 그대로 유지)
-function extractContent(html) {
-  const region = articleRegion(html);
+function extractContent(html, regionPats) {
+  const region = articleRegion(html, regionPats);
   if (!region) return [];
   const blocks = [];
   const seenYt = new Set();
@@ -572,10 +637,10 @@ function parseRuliwebList(html, news, seen, cap = 60) {
     const summary = rwText((block.match(/<span class="desc">([\s\S]*?)<\/span>/) || [])[1]);
     const comments = (block.match(/<span class="num_reply">\s*\[(\d+)\]/) || [])[1];
     const ct = rwText((block.match(/<span class="create_time">([\s\S]*?)<\/span>/) || [])[1]); // "2026.06.02 (16:07:10), 조회수 132"
-    const dm = ct.match(/(\d{4})\.(\d{2})\.(\d{2})\s*\(([\d:]+)\)/);
+    const dm = ct.match(/(\d{4})\.(\d{2})\.(\d{2})\s*\([\d:]+\)/);
     const vm = ct.match(/조회수\s*([\d,]+)/);
     let image = (block.match(/background-image:\s*url\(([^),]+)/) || [])[1] || null;
-    if (image) { image = image.trim().replace(/^['"]|['"]$/g, ""); if (image.startsWith("//")) image = "https:" + image; }
+    if (image) { image = image.trim().replace(/^['"']|['"']$/g, ""); if (image.startsWith("//")) image = "https:" + image; }
     seen.add("id:" + id); seen.add(title.toLowerCase().replace(/\s+/g, ""));
     const item = {
       id: `ruliweb-${id}`, title, url: `https://bbs.ruliweb.com/news/read/${id}`,
@@ -705,7 +770,7 @@ async function fromRuliwebNews(news) {
       const og = (h.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
         || h.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) || [])[1];
       if (!n.image && og && !/blank|default|logo|no_?image|bi\.png|icon/i.test(og)) n.image = og.replace(/&amp;/g, "&");
-      if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
+      if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["|']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
       if (!n.date) { const d = extractDateTime(h); if (d) { n.date = d.date; if (d.time) n.time = d.time; } }
       if (!n.author) { const a = extractAuthor(h); if (a) n.author = a; }
       if (!n.content || !n.content.length) { const c = extractContent(h); if (c.length) n.content = c; }
@@ -855,6 +920,10 @@ async function main() {
       if (b.releaseDate === "TBD") return -1;
       return new Date(a.releaseDate) - new Date(b.releaseDate);
     });
+
+  // 게임 상세 본문 보강(앱 내 미리보기용). 직전 games.json 캐시 + 회당 점진 수집.
+  try { report.push(await enrichGameDetails(games, prev)); }
+  catch (e) { report.push({ name: "GameDetails", error: e.message }); }
 
   // 뉴스: 제목이 80% 이상 유사하면 최신 글만 남기고 중복 제거. 수집 실패/스킵 시 기존 뉴스 유지.
   let news = dedupNewsByTitle(newsItems, 0.8);

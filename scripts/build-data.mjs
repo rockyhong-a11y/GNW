@@ -705,7 +705,7 @@ async function fromRuliwebNews(news) {
       const og = (h.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
         || h.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) || [])[1];
       if (!n.image && og && !/blank|default|logo|no_?image|bi\.png|icon/i.test(og)) n.image = og.replace(/&amp;/g, "&");
-      if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)(["']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
+      if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
       if (!n.date) { const d = extractDateTime(h); if (d) { n.date = d.date; if (d.time) n.time = d.time; } }
       if (!n.author) { const a = extractAuthor(h); if (a) n.author = a; }
       if (!n.content || !n.content.length) { const c = extractContent(h); if (c.length) n.content = c; }

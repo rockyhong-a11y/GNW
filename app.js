@@ -43,24 +43,29 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 
 /* ---------- Helpers ---------- */
 function daysBetween(dateStr) {
+  if (!dateStr || dateStr === "TBD") return null;
   const d = new Date(dateStr);
   d.setHours(0, 0, 0, 0);
   return Math.round((d - TODAY) / 86400000);
 }
 function formatDate(dateStr) {
+  if (!dateStr || dateStr === "TBD") return "미정";
   const d = new Date(dateStr);
   return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}`;
 }
 function monthKey(dateStr) {
+  if (!dateStr || dateStr === "TBD") return "TBD";
   const d = new Date(dateStr);
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
 }
 function monthLabel(key) {
+  if (key === "TBD") return "출시 미정";
   const [y, m] = key.split("-");
   const isThis = key === `${TODAY.getFullYear()}-${String(TODAY.getMonth() + 1).padStart(2, "0")}`;
   return `${y}년 ${Number(m)}월${isThis ? " · 이번 달" : ""}`;
 }
 function countdownLabel(game) {
+  if (!game.releaseDate || game.releaseDate === "TBD") return { text: "미정", released: false, tbd: true };
   const days = daysBetween(game.releaseDate);
   if (game.status === "released" || days < 0) return { text: "완료", released: true };
   if (days === 0) return { text: "오늘!", released: false };
@@ -90,10 +95,17 @@ function applyFilters() {
     } else {
       if (EVENT_TYPES.includes(g.eventType)) return false;           // 출시 탭: 콘솔/PC/모바일 통합(게임당 1건), 이벤트 제외
     }
+    if (STATE.month === "TBD") return !g.releaseDate || g.releaseDate === "TBD";  // 미정 필터
     if (STATE.month !== "all" && monthKey(g.releaseDate) !== STATE.month) return false;
     return true;
   });
-  return list.sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate));
+  return list.sort((a, b) => {
+    // TBD 항목은 항상 맨 뒤
+    if ((!a.releaseDate || a.releaseDate === "TBD") && (!b.releaseDate || b.releaseDate === "TBD")) return 0;
+    if (!a.releaseDate || a.releaseDate === "TBD") return 1;
+    if (!b.releaseDate || b.releaseDate === "TBD") return -1;
+    return new Date(a.releaseDate) - new Date(b.releaseDate);
+  });
 }
 
 /* ---------- Rendering ---------- */
@@ -140,7 +152,7 @@ function renderCard(g) {
       <div class="card-banner${cardImgUrl ? " has-img" : ""}" style="background: linear-gradient(135deg, ${g.color}, ${g.color}55);">
         ${img}
         <span class="event-badge" style="background:${ev.color}">${ev.label}</span>
-        <span class="countdown ${cd.released ? "released" : ""}">${cd.text}</span>
+        <span class="countdown ${cd.tbd ? "tbd" : cd.released ? "released" : ""}">${cd.text}</span>
         ${trailerBtn}
       </div>
       <div class="card-body">
@@ -226,9 +238,10 @@ function render() {
   }
   root.innerHTML = groups.map((grp) => {
     const isThis = grp.key === `${TODAY.getFullYear()}-${String(TODAY.getMonth() + 1).padStart(2, "0")}`;
+    const isTbd = grp.key === "TBD";
     return `
       <section class="month-block">
-        <h2 class="month-head ${isThis ? "current" : ""}">
+        <h2 class="month-head ${isThis ? "current" : ""} ${isTbd ? "tbd" : ""}">
           <span>${monthLabel(grp.key)}</span>
         </h2>
         <div class="game-grid">${grp.items.map(renderCard).join("")}</div>
@@ -287,7 +300,10 @@ function buildMonthSelect() {
   if (STATE.platform === "news") {
     months = [...new Set((STATE.news || []).map((n) => n.date).filter(Boolean).map(newsMonthKey))].sort().reverse();
   } else {
-    months = [...new Set(STATE.games.map((g) => monthKey(g.releaseDate)))].sort();
+    const tabGames = STATE.games.filter((g) => STATE.platform === "event" ? EVENT_TYPES.includes(g.eventType) : !EVENT_TYPES.includes(g.eventType));
+    const hasTbd = tabGames.some((g) => !g.releaseDate || g.releaseDate === "TBD");
+    months = [...new Set(tabGames.filter((g) => g.releaseDate && g.releaseDate !== "TBD").map((g) => monthKey(g.releaseDate)))].sort();
+    if (hasTbd) months.push("TBD"); // "출시 미정" 옵션을 맨 뒤에 추가
   }
   sel.innerHTML = [`<option value="all">전체 기간</option>`]
     .concat(months.map((m) => `<option value="${m}">${monthLabel(m)}</option>`))
@@ -570,7 +586,9 @@ function openGameDetail(g) {
     const dev = (g.developer && g.developer !== "미상") ? g.developer : "";
     const line = cd.released
       ? `${dateStr}에 ${ev.label}된 작품입니다.`
-      : `${dateStr} ${ev.label} 예정작입니다.`;
+      : cd.tbd
+        ? `출시일 미정인 ${ev.label} 예정작입니다.`
+        : `${dateStr} ${ev.label} 예정작입니다.`;
     body = `<p>${esc(line)}${dev ? esc(` 개발: ${dev}.`) : ""}</p>`
          + `<p class="detail-empty">자세한 정보는 아래 '상세정보'에서 확인하세요.</p>`;
   }

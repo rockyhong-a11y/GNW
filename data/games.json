@@ -19,6 +19,10 @@
       {
         "name": "RuliwebNews",
         "added": 106
+      },
+      {
+        "name": "GameDetails",
+        "added": 0
       }
     ],
     "counts": {
@@ -48,7 +52,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#4a90d9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1988746358.jpg",
@@ -57,7 +61,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13318",
-      "trailer": "https://youtu.be/OZq4FgcUszc"
+      "trailer": "https://youtu.be/OZq4FgcUszc",
+      "_dlong": true
     },
     {
       "id": "inven-11874",
@@ -79,7 +84,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#8e44ad",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1834235244.jpg",
@@ -88,7 +93,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11874",
-      "trailer": "https://youtu.be/tpzx_6c8Jd8"
+      "trailer": "https://youtu.be/tpzx_6c8Jd8",
+      "_dlong": true
     },
     {
       "id": "inven-12331",
@@ -110,7 +116,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#00a8cc",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1279300326.jpg",
@@ -119,7 +125,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12331",
-      "trailer": "https://youtu.be/DZkyOGggk3A"
+      "trailer": "https://youtu.be/DZkyOGggk3A",
+      "_dlong": true
     },
     {
       "id": "inven-13320",
@@ -142,7 +149,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#7b5cff",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1943079575.jpg",
@@ -151,7 +158,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13320",
-      "trailer": "https://youtu.be/ETCpWo0A0i0"
+      "trailer": "https://youtu.be/ETCpWo0A0i0",
+      "_dlong": true
     },
     {
       "id": "inven-13343",
@@ -174,7 +182,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#ff4655",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1472218506.jpg",
@@ -183,7 +191,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13343",
-      "trailer": "https://www.youtube.com/results?search_query=Dynasty%20Warriors%20Origins%3A%20Visions%20of%20Four%20Heroes%20%20official%20trailer"
+      "trailer": "https://www.youtube.com/results?search_query=Dynasty%20Warriors%20Origins%3A%20Visions%20of%20Four%20Heroes%20%20official%20trailer",
+      "_dlong": true
     },
     {
       "id": "inven-11024",
@@ -205,7 +214,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#00a8cc",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1945867870.jpg",
@@ -214,7 +223,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11024",
-      "trailer": "https://www.youtube.com/results?search_query=%EB%AA%85%EC%9D%BC%EB%B0%A9%EC%A3%BC%3A%20%EC%97%94%EB%93%9C%ED%95%84%EB%93%9C%20%20official%20trailer"
+      "trailer": "https://www.youtube.com/results?search_query=%EB%AA%85%EC%9D%BC%EB%B0%A9%EC%A3%BC%3A%20%EC%97%94%EB%93%9C%ED%95%84%EB%93%9C%20%20official%20trailer",
+      "_dlong": true
     },
     {
       "id": "inven-13313",
@@ -236,7 +246,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#9b59b6",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1164374850.jpg",
@@ -245,7 +255,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13313",
-      "trailer": "https://youtu.be/y_6tjMvckZ0"
+      "trailer": "https://youtu.be/y_6tjMvckZ0",
+      "_dlong": true
     },
     {
       "id": "inven-11980",
@@ -266,7 +277,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#ff4655",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1305562747.jpg",
@@ -275,7 +286,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11980",
-      "trailer": "https://youtu.be/Cq1Km_nI6qk"
+      "trailer": "https://youtu.be/Cq1Km_nI6qk",
+      "_dlong": true
     },
     {
       "id": "inven-12891",
@@ -296,7 +308,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#27ae60",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1121396782.jpg",
@@ -305,7 +317,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12891",
-      "trailer": "https://youtu.be/x6KWhvvk3bM"
+      "trailer": "https://youtu.be/x6KWhvvk3bM",
+      "_dlong": true
     },
     {
       "id": "inven-12816",
@@ -327,7 +340,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#ff4655",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1912923341.jpg",
@@ -336,7 +349,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12816",
-      "trailer": "https://youtu.be/XcUMyXUqRCw"
+      "trailer": "https://youtu.be/XcUMyXUqRCw",
+      "_dlong": true
     },
     {
       "id": "inven-13175",
@@ -357,7 +371,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#4a90d9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1705761965.jpg",
@@ -366,7 +380,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13175",
-      "trailer": "https://youtu.be/zxedE4EEwsU"
+      "trailer": "https://youtu.be/zxedE4EEwsU",
+      "_dlong": true
     },
     {
       "id": "inven-12421",
@@ -387,7 +402,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#16a085",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1680060387.jpg",
@@ -396,7 +411,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12421",
-      "trailer": "https://youtu.be/A5qFiL2pdWc"
+      "trailer": "https://youtu.be/A5qFiL2pdWc",
+      "_dlong": true
     },
     {
       "id": "inven-13134",
@@ -418,7 +434,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#4a90d9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1857650021.jpg",
@@ -427,7 +443,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13134",
-      "trailer": "https://youtu.be/QuIZstydhV4"
+      "trailer": "https://youtu.be/QuIZstydhV4",
+      "_dlong": true
     },
     {
       "id": "inven-13346",
@@ -448,7 +465,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#27ae60",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1876376947.jpg",
@@ -457,7 +474,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13346",
-      "trailer": "https://youtu.be/xC0tctsGquI"
+      "trailer": "https://youtu.be/xC0tctsGquI",
+      "_dlong": true
     },
     {
       "id": "inven-12794",
@@ -478,7 +496,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#7b5cff",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1185124701.jpg",
@@ -487,7 +505,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12794",
-      "trailer": "https://youtu.be/HDMQz-7yMmQ"
+      "trailer": "https://youtu.be/HDMQz-7yMmQ",
+      "_dlong": true
     },
     {
       "id": "inven-13134",
@@ -508,7 +527,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#4a90d9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1857650021.jpg",
@@ -517,7 +536,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13134",
-      "trailer": "https://youtu.be/QuIZstydhV4"
+      "trailer": "https://youtu.be/QuIZstydhV4",
+      "_dlong": true
     },
     {
       "id": "inven-13347",
@@ -538,7 +558,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e84d8a",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1469335591.jpg",
@@ -547,7 +567,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13347",
-      "trailer": "https://youtu.be/nlpqajXDP_Y"
+      "trailer": "https://youtu.be/nlpqajXDP_Y",
+      "_dlong": true
     },
     {
       "id": "inven-----------",
@@ -598,7 +619,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#9b59b6",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1260339139.jpg",
@@ -607,7 +628,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13349",
-      "trailer": "https://youtu.be/Z6NP6Ro5AKg"
+      "trailer": "https://youtu.be/Z6NP6Ro5AKg",
+      "_dlong": true
     },
     {
       "id": "inven-13350",
@@ -628,7 +650,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e67e22",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1802186604.jpg",
@@ -637,7 +659,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13350",
-      "trailer": "https://youtu.be/s8X4X-WeT5w"
+      "trailer": "https://youtu.be/s8X4X-WeT5w",
+      "_dlong": true
     },
     {
       "id": "inven-13353",
@@ -659,7 +682,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#b14aed",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1807064465.jpg",
@@ -668,7 +691,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13353",
-      "trailer": "https://youtu.be/f980AQV168k"
+      "trailer": "https://youtu.be/f980AQV168k",
+      "_dlong": true
     },
     {
       "id": "inven-----30----------",
@@ -721,7 +745,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#5b8def",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1644341005.jpg",
@@ -730,7 +754,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13160",
-      "trailer": "https://youtu.be/34YAwQovBkc"
+      "trailer": "https://youtu.be/34YAwQovBkc",
+      "_dlong": true
     },
     {
       "id": "inven-12883",
@@ -751,7 +776,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e67e22",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1261790276.jpg",
@@ -760,7 +785,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12883",
-      "trailer": "https://youtu.be/KDtHM343udQ"
+      "trailer": "https://youtu.be/KDtHM343udQ",
+      "_dlong": true
     },
     {
       "id": "inven-13354",
@@ -783,7 +809,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#2980b9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1262907860.jpg",
@@ -792,7 +818,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13354",
-      "trailer": "https://youtu.be/Bpi4lx9Lsl4"
+      "trailer": "https://youtu.be/Bpi4lx9Lsl4",
+      "_dlong": true
     },
     {
       "id": "inven-13403",
@@ -811,7 +838,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#00a8cc",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1524861793.jpg",
@@ -820,7 +847,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13403",
-      "trailer": "https://www.youtube.com/results?search_query=God%20of%20War%3A%20Sons%20of%20Sparta%20%20official%20trailer"
+      "trailer": "https://www.youtube.com/results?search_query=God%20of%20War%3A%20Sons%20of%20Sparta%20%20official%20trailer",
+      "_dlong": true
     },
     {
       "id": "inven-13356",
@@ -842,7 +870,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#5b8def",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1261767869.jpg",
@@ -851,7 +879,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13356",
-      "trailer": "https://youtu.be/GtTLjkB0vbo"
+      "trailer": "https://youtu.be/GtTLjkB0vbo",
+      "_dlong": true
     },
     {
       "id": "inven-13369",
@@ -873,7 +902,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#2980b9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1967115176.jpg",
@@ -882,7 +911,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13369",
-      "trailer": "https://youtu.be/D_wn1d0tq8E"
+      "trailer": "https://youtu.be/D_wn1d0tq8E",
+      "_dlong": true
     },
     {
       "id": "inven---------steam-------",
@@ -964,7 +994,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#ff4655",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1437472020.jpg",
@@ -973,7 +1003,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13368",
-      "trailer": "https://youtu.be/cccXdDMsJ8g"
+      "trailer": "https://youtu.be/cccXdDMsJ8g",
+      "_dlong": true
     },
     {
       "id": "inven-12396",
@@ -994,7 +1025,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#f0c419",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1868019501.jpg",
@@ -1003,7 +1034,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12396",
-      "trailer": "https://youtu.be/AzlE-Ef4Q1E"
+      "trailer": "https://youtu.be/AzlE-Ef4Q1E",
+      "_dlong": true
     },
     {
       "id": "inven-13424",
@@ -1024,7 +1056,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#3aa757",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1528798243.jpg",
@@ -1033,7 +1065,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13424",
-      "trailer": "https://youtu.be/2hboGwtza9U"
+      "trailer": "https://youtu.be/2hboGwtza9U",
+      "_dlong": true
     },
     {
       "id": "inven-9120",
@@ -1056,7 +1089,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e67e22",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1204004739.jpg",
@@ -1065,7 +1098,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/9120",
-      "trailer": "https://youtu.be/R4lqjg7MuQU"
+      "trailer": "https://youtu.be/R4lqjg7MuQU",
+      "_dlong": true
     },
     {
       "id": "inven-13407",
@@ -1086,7 +1120,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#2980b9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1621116539.jpg",
@@ -1095,7 +1129,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13407",
-      "trailer": "https://youtu.be/yWoIKkBGHB8"
+      "trailer": "https://youtu.be/yWoIKkBGHB8",
+      "_dlong": true
     },
     {
       "id": "inven-13341",
@@ -1117,7 +1152,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#d98324",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1988418213.jpg",
@@ -1126,7 +1161,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13341",
-      "trailer": "https://youtu.be/xhClV-7ixjU"
+      "trailer": "https://youtu.be/xhClV-7ixjU",
+      "_dlong": true
     },
     {
       "id": "inven-13442",
@@ -1147,7 +1183,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#4a90d9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1928283954.jpg",
@@ -1156,7 +1192,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13442",
-      "trailer": "https://youtu.be/py8qiB5y2x0"
+      "trailer": "https://youtu.be/py8qiB5y2x0",
+      "_dlong": true
     },
     {
       "id": "inven-12798",
@@ -1178,7 +1215,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e67e22",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1746632214.jpg",
@@ -1187,7 +1224,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12798",
-      "trailer": "https://youtu.be/OPyRymrzPfQ"
+      "trailer": "https://youtu.be/OPyRymrzPfQ",
+      "_dlong": true
     },
     {
       "id": "inven-13464",
@@ -1208,7 +1246,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#00c2cb",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1369209936.jpg",
@@ -1217,7 +1255,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13464",
-      "trailer": "https://youtu.be/iV1izGXgJFQ"
+      "trailer": "https://youtu.be/iV1izGXgJFQ",
+      "_dlong": true
     },
     {
       "id": "inven-12945",
@@ -1238,7 +1277,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#9b59b6",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1834253612.jpg",
@@ -1247,7 +1286,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12945",
-      "trailer": "https://youtu.be/cf_vyx-yOZc"
+      "trailer": "https://youtu.be/cf_vyx-yOZc",
+      "_dlong": true
     },
     {
       "id": "inven-13394",
@@ -1268,7 +1308,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#8e44ad",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1663423184.jpg",
@@ -1277,7 +1317,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13394",
-      "trailer": "https://youtu.be/B7fqRNNe-_Y"
+      "trailer": "https://youtu.be/B7fqRNNe-_Y",
+      "_dlong": true
     },
     {
       "id": "inven----------------------",
@@ -1329,7 +1370,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#5b8def",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1856473077.jpg",
@@ -1338,7 +1379,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13488",
-      "trailer": "https://youtu.be/Orb2dTuVb4o"
+      "trailer": "https://youtu.be/Orb2dTuVb4o",
+      "_dlong": true
     },
     {
       "id": "inven-13449",
@@ -1359,7 +1401,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e84d8a",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1964212893.jpg",
@@ -1368,7 +1410,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13449",
-      "trailer": "https://youtu.be/_ifHwNbTBeA"
+      "trailer": "https://youtu.be/_ifHwNbTBeA",
+      "_dlong": true
     },
     {
       "id": "inven-13511",
@@ -1389,7 +1432,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#16a085",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1644006982.jpg",
@@ -1398,7 +1441,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13511",
-      "trailer": "https://youtu.be/AaSXeioxYhg"
+      "trailer": "https://youtu.be/AaSXeioxYhg",
+      "_dlong": true
     },
     {
       "id": "inven-13335",
@@ -1419,7 +1463,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#5b8def",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1342472917.jpg",
@@ -1428,7 +1472,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13335",
-      "trailer": "https://youtu.be/GQlMvu4OGtE"
+      "trailer": "https://youtu.be/GQlMvu4OGtE",
+      "_dlong": true
     },
     {
       "id": "inven-13467",
@@ -1451,7 +1496,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#d98324",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1851991489.jpg",
@@ -1460,7 +1505,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13467",
-      "trailer": "https://youtu.be/OAHijhQs_o8"
+      "trailer": "https://youtu.be/OAHijhQs_o8",
+      "_dlong": true
     },
     {
       "id": "inven-13136",
@@ -1481,7 +1527,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#ff4655",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1964000240.png",
@@ -1490,7 +1536,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13136",
-      "trailer": "https://youtu.be/kOqeFskkGKA"
+      "trailer": "https://youtu.be/kOqeFskkGKA",
+      "_dlong": true
     },
     {
       "id": "inven-----solenchant----",
@@ -1542,7 +1589,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#b14aed",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1112275316.jpg",
@@ -1551,7 +1598,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11678",
-      "trailer": "https://youtu.be/i46lq8NS2JI"
+      "trailer": "https://youtu.be/i46lq8NS2JI",
+      "_dlong": true
     },
     {
       "id": "inven-12089",
@@ -1572,7 +1620,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e84d8a",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1131823750.jpg",
@@ -1581,7 +1629,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12089",
-      "trailer": "https://youtu.be/PW22jwFNxU8"
+      "trailer": "https://youtu.be/PW22jwFNxU8",
+      "_dlong": true
     },
     {
       "id": "inven----on---------",
@@ -1664,7 +1713,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e67e22",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1894845590.jpg",
@@ -1673,7 +1722,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12763",
-      "trailer": "https://youtu.be/ONk86wsiMDA"
+      "trailer": "https://youtu.be/ONk86wsiMDA",
+      "_dlong": true
     },
     {
       "id": "inven-13620",
@@ -1694,7 +1744,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#2980b9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1190866714.jpg",
@@ -1703,7 +1753,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13620",
-      "trailer": "https://youtu.be/MK268LpYWOQ"
+      "trailer": "https://youtu.be/MK268LpYWOQ",
+      "_dlong": true
     },
     {
       "id": "inven-13462",
@@ -1724,7 +1775,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e67e22",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1481445495.jpg",
@@ -1733,7 +1784,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13462",
-      "trailer": "https://youtu.be/rdix1XxaZyU"
+      "trailer": "https://youtu.be/rdix1XxaZyU",
+      "_dlong": true
     },
     {
       "id": "inven-13439",
@@ -1754,7 +1806,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#8e44ad",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1566649818.png",
@@ -1763,7 +1815,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13439",
-      "trailer": "https://youtu.be/FyZcoVusuXo"
+      "trailer": "https://youtu.be/FyZcoVusuXo",
+      "_dlong": true
     },
     {
       "id": "inven-gdc2026",
@@ -1815,7 +1868,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#3aa757",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1677868991.jpg",
@@ -1824,7 +1877,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13457",
-      "trailer": "https://youtu.be/kzEGF1sMaj4"
+      "trailer": "https://youtu.be/kzEGF1sMaj4",
+      "_dlong": true
     },
     {
       "id": "inven-----solenchant----",
@@ -1907,7 +1961,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#27ae60",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1286355838.jpg",
@@ -1916,7 +1970,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13524",
-      "trailer": "https://youtu.be/hlLQaPodAdg"
+      "trailer": "https://youtu.be/hlLQaPodAdg",
+      "_dlong": true
     },
     {
       "id": "inven-13374",
@@ -1938,7 +1993,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#b14aed",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1257458317.jpg",
@@ -1947,7 +2002,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13374",
-      "trailer": "https://youtu.be/I4Ea7bMBNGQ"
+      "trailer": "https://youtu.be/I4Ea7bMBNGQ",
+      "_dlong": true
     },
     {
       "id": "inven-13384",
@@ -1968,7 +2024,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e84d8a",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1126827463.jpg",
@@ -1977,7 +2033,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13384",
-      "trailer": "https://youtu.be/Ft1bjmejUwI"
+      "trailer": "https://youtu.be/Ft1bjmejUwI",
+      "_dlong": true
     },
     {
       "id": "inven-13137",
@@ -2000,7 +2057,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#c9a227",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1253913269.jpg",
@@ -2009,7 +2066,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13137",
-      "trailer": "https://youtu.be/c6-MddjKIG4"
+      "trailer": "https://youtu.be/c6-MddjKIG4",
+      "_dlong": true
     },
     {
       "id": "inven-13420",
@@ -2030,7 +2088,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#00a8cc",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1424023359.jpg",
@@ -2039,7 +2097,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13420",
-      "trailer": "https://youtu.be/-HRY2-Jcg-Q"
+      "trailer": "https://youtu.be/-HRY2-Jcg-Q",
+      "_dlong": true
     },
     {
       "id": "inven---------11----",
@@ -2091,7 +2150,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#b14aed",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1584285909.jpg",
@@ -2100,7 +2159,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/10723",
-      "trailer": "https://youtu.be/uGusQjkmlRg"
+      "trailer": "https://youtu.be/uGusQjkmlRg",
+      "_dlong": true
     },
     {
       "id": "inven-13173",
@@ -2123,7 +2183,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#4a90d9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1318922711.jpg",
@@ -2132,7 +2192,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13173",
-      "trailer": "https://youtu.be/4KtEwT4lvjA"
+      "trailer": "https://youtu.be/4KtEwT4lvjA",
+      "_dlong": true
     },
     {
       "id": "inven-13521",
@@ -2153,7 +2214,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#9b59b6",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1999597572.jpg",
@@ -2162,7 +2223,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13521",
-      "trailer": "https://www.youtube.com/results?search_query=Gensokyo%EF%BC%9APresumption%20of%20Guilt~Pansies%20Before%20Dawn%20%20official%20trailer"
+      "trailer": "https://www.youtube.com/results?search_query=Gensokyo%EF%BC%9APresumption%20of%20Guilt~Pansies%20Before%20Dawn%20%20official%20trailer",
+      "_dlong": true
     },
     {
       "id": "inven-13377",
@@ -2183,7 +2245,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#8e44ad",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1708162124.jpg",
@@ -2192,7 +2254,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13377",
-      "trailer": "https://youtu.be/xqn9zWMtTmc"
+      "trailer": "https://youtu.be/xqn9zWMtTmc",
+      "_dlong": true
     },
     {
       "id": "inven-13372",
@@ -2213,7 +2276,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e84d8a",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1308990743.jpg",
@@ -2222,7 +2285,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13372",
-      "trailer": "https://youtu.be/nxTzvkheFzE"
+      "trailer": "https://youtu.be/nxTzvkheFzE",
+      "_dlong": true
     },
     {
       "id": "inven---------------",
@@ -2306,7 +2370,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#27ae60",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1752917257.jpg",
@@ -2315,7 +2379,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13509",
-      "trailer": "https://youtu.be/xZjLoN-9mt0"
+      "trailer": "https://youtu.be/xZjLoN-9mt0",
+      "_dlong": true
     },
     {
       "id": "inven-13489",
@@ -2336,7 +2401,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#00a8cc",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1206718597.jpg",
@@ -2345,7 +2410,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13489",
-      "trailer": "https://youtu.be/xaNMYG0I_Lw"
+      "trailer": "https://youtu.be/xaNMYG0I_Lw",
+      "_dlong": true
     },
     {
       "id": "inven-13505",
@@ -2367,7 +2433,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#5b8def",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1117440158.jpg",
@@ -2376,7 +2442,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13505",
-      "trailer": "https://youtu.be/5wBQfm6RxLo"
+      "trailer": "https://youtu.be/5wBQfm6RxLo",
+      "_dlong": true
     },
     {
       "id": "inven-13454",
@@ -2397,7 +2464,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#00a8cc",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1784618785.jpg",
@@ -2406,7 +2473,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13454",
-      "trailer": "https://youtu.be/ev92k21E0ko"
+      "trailer": "https://youtu.be/ev92k21E0ko",
+      "_dlong": true
     },
     {
       "id": "inven-12437",
@@ -2427,7 +2495,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#d98324",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1573261597.jpg",
@@ -2436,7 +2504,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12437",
-      "trailer": "https://youtu.be/o0yDU2RoTwc"
+      "trailer": "https://youtu.be/o0yDU2RoTwc",
+      "_dlong": true
     },
     {
       "id": "inven-13536",
@@ -2458,7 +2527,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#2980b9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1739972347.jpg",
@@ -2467,7 +2536,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13536",
-      "trailer": "https://youtu.be/6uxh5at-VWU"
+      "trailer": "https://youtu.be/6uxh5at-VWU",
+      "_dlong": true
     },
     {
       "id": "inven------------",
@@ -2519,7 +2589,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#27ae60",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1166121953.jpg",
@@ -2528,7 +2598,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12956",
-      "trailer": "https://youtu.be/mKEoM5N-Eyg"
+      "trailer": "https://youtu.be/mKEoM5N-Eyg",
+      "_dlong": true
     },
     {
       "id": "inven-djmaxrespectvnewdlc-----",
@@ -2642,7 +2713,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#2980b9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1557803958.jpg",
@@ -2651,7 +2722,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13537",
-      "trailer": "https://www.youtube.com/results?search_query=FairyTale%20Quest%20%20official%20trailer"
+      "trailer": "https://www.youtube.com/results?search_query=FairyTale%20Quest%20%20official%20trailer",
+      "_dlong": true
     },
     {
       "id": "inven------cbt--",
@@ -2704,7 +2776,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#9b59b6",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1101554557.jpg",
@@ -2713,7 +2785,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13496",
-      "trailer": "https://youtu.be/sPBDgjW5NA0"
+      "trailer": "https://youtu.be/sPBDgjW5NA0",
+      "_dlong": true
     },
     {
       "id": "inven-11437",
@@ -2734,7 +2807,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e84d8a",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1180944907.jpg",
@@ -2743,7 +2816,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11437",
-      "trailer": "https://youtu.be/4b6hcN5vZsw"
+      "trailer": "https://youtu.be/4b6hcN5vZsw",
+      "_dlong": true
     },
     {
       "id": "inven-13510",
@@ -8659,7 +8733,7 @@
       "hypeScore": null,
       "rating": null,
       "tags": [],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e84d8a",
       "source": {
@@ -8668,7 +8742,8 @@
       },
       "trailer": "https://youtu.be/B_UhbUeOtSA",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1520550398.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12954"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12954",
+      "_dlong": true
     },
     {
       "id": "inven-ec8aa4ed8e98ec9d-2026-06-11",
@@ -8688,7 +8763,7 @@
       "hypeScore": null,
       "rating": null,
       "tags": [],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#3aa757",
       "source": {
@@ -8697,7 +8772,8 @@
       },
       "trailer": "https://youtu.be/hUxoaJzX9fU",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1337313499.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13648"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13648",
+      "_dlong": true
     },
     {
       "id": "inven-eba6acebb08b20ec-2026-06-11",
@@ -8718,7 +8794,7 @@
       "hypeScore": null,
       "rating": null,
       "tags": [],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#b14aed",
       "source": {
@@ -8727,7 +8803,8 @@
       },
       "trailer": "https://youtu.be/6b3NFpA2gQI",
       "image": "https://upload3.inven.co.kr/upload/2026/05/29/bbs/i1444044475.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11835"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11835",
+      "_dlong": true
     },
     {
       "id": "inven-13762",
@@ -8749,7 +8826,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#c9a227",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1779836997.jpg",
@@ -8758,7 +8835,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13762",
-      "trailer": "https://youtu.be/iOH4jKB4SQg"
+      "trailer": "https://youtu.be/iOH4jKB4SQg",
+      "_dlong": true
     },
     {
       "id": "inven-11931",
@@ -8780,7 +8858,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#27ae60",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2023/i8281956084.jpg",
@@ -8789,7 +8867,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11931",
-      "trailer": "https://youtu.be/xqbvpQNWxFg"
+      "trailer": "https://youtu.be/xqbvpQNWxFg",
+      "_dlong": true
     },
     {
       "id": "inven-------------overdrive",
@@ -8939,7 +9018,7 @@
       "hypeScore": null,
       "rating": null,
       "tags": [],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#ff85c0",
       "source": {
@@ -8948,7 +9027,8 @@
       },
       "trailer": "https://youtu.be/CYLxd2T05UQ",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1396258020.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13479"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13479",
+      "_dlong": true
     },
     {
       "id": "inven-ec96b8eba6acec96-2026-06-17",
@@ -9033,7 +9113,7 @@
       "hypeScore": null,
       "rating": null,
       "tags": [],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#4a90d9",
       "source": {
@@ -9042,7 +9122,8 @@
       },
       "trailer": "https://youtu.be/xXK6Tw1WG4g",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1949999302.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13525"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13525",
+      "_dlong": true
     },
     {
       "id": "inven-ebaaa8ed9798eab0-2026-06-18",
@@ -9064,7 +9145,7 @@
       "hypeScore": null,
       "rating": null,
       "tags": [],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#ff4d6d",
       "source": {
@@ -9073,7 +9154,8 @@
       },
       "trailer": "https://youtu.be/N9gCPws7lzE",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1818564534.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13388"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13388",
+      "_dlong": true
     },
     {
       "id": "inven-ec86943a20ec9db8-2026-06-18",
@@ -9094,7 +9176,7 @@
       "hypeScore": null,
       "rating": null,
       "tags": [],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#16a085",
       "source": {
@@ -9103,7 +9185,8 @@
       },
       "trailer": "https://youtu.be/jRykO-HJfYM",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1654890301.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13261"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13261",
+      "_dlong": true
     },
     {
       "id": "inven-ed97ac20eba09b20-2026-06-18",
@@ -9124,7 +9207,7 @@
       "hypeScore": null,
       "rating": null,
       "tags": [],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#5b8def",
       "source": {
@@ -9133,7 +9216,8 @@
       },
       "trailer": "https://youtu.be/bjJxmPIj9Zg",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1641526309.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13695"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13695",
+      "_dlong": true
     },
     {
       "id": "inven-454120ec8aa4ed8f-2026-06-20",
@@ -9154,7 +9238,7 @@
       "hypeScore": null,
       "rating": null,
       "tags": [],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#d98324",
       "source": {
@@ -9163,7 +9247,8 @@
       },
       "trailer": "https://youtu.be/T2MP_T2e-aU",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1795956836.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13696"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13696",
+      "_dlong": true
     },
     {
       "id": "inven-2026loaonsummer",
@@ -9215,7 +9300,7 @@
       "hypeScore": null,
       "rating": null,
       "tags": [],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#9b59b6",
       "source": {
@@ -9224,7 +9309,8 @@
       },
       "trailer": "https://youtu.be/aYcAQ9mKtGQ",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1187634834.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13657"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13657",
+      "_dlong": true
     },
     {
       "id": "inven-ec8aa4ed8380ed8f-2026-06-25",
@@ -9244,7 +9330,7 @@
       "hypeScore": null,
       "rating": null,
       "tags": [],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e67e22",
       "source": {
@@ -9253,7 +9339,8 @@
       },
       "trailer": "https://youtu.be/ePZeyh5q9R8",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1525737495.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13660"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13660",
+      "_dlong": true
     },
     {
       "id": "inven-eb8db0eb939c20ec-2026-06-25",
@@ -9274,7 +9361,7 @@
       "hypeScore": null,
       "rating": null,
       "tags": [],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#27ae60",
       "source": {
@@ -9283,7 +9370,8 @@
       },
       "trailer": "https://youtu.be/66SM8Usr6oE",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1963360153.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13440"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13440",
+      "_dlong": true
     },
     {
       "id": "inven-13699",
@@ -9304,7 +9392,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#27ae60",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1773480635.jpg",
@@ -9313,7 +9401,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13699",
-      "trailer": "https://www.youtube.com/results?search_query=Korea.%20IL-2%20Series%20%20official%20trailer"
+      "trailer": "https://www.youtube.com/results?search_query=Korea.%20IL-2%20Series%20%20official%20trailer",
+      "_dlong": true
     },
     {
       "id": "inven-eba788ebb984eb85-2026-06-27",
@@ -9400,7 +9489,7 @@
       "tags": [
         "출시일 미정"
       ],
-      "description": "출시일 미정.",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#f0c419",
       "source": {
@@ -9409,7 +9498,8 @@
       },
       "trailer": "https://youtu.be/4fgFAh2Wa5U",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1716110657.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13658"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13658",
+      "_dlong": true
     },
     {
       "id": "inven-ecb59ced9b84ec9d-2026-06-30",
@@ -9431,7 +9521,7 @@
       "tags": [
         "2026 2분기"
       ],
-      "description": "2026년 2분기 출시 예정.",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#8e44ad",
       "source": {
@@ -9440,7 +9530,8 @@
       },
       "trailer": "https://youtu.be/EqpPGcfONtU",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1520383124.jpg",
-      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13426"
+      "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13426",
+      "_dlong": true
     },
     {
       "id": "inven-13590",
@@ -9461,7 +9552,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#4a90d9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1812481386.jpg",
@@ -9470,7 +9561,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13590",
-      "trailer": "https://youtu.be/-fLrOkLc4iI"
+      "trailer": "https://youtu.be/-fLrOkLc4iI",
+      "_dlong": true
     },
     {
       "id": "inven-13636",
@@ -9492,7 +9584,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#5b8def",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1920646062.jpg",
@@ -9501,7 +9593,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13636",
-      "trailer": "https://www.youtube.com/results?search_query=Assassin's%20Creed%20IV%3A%20Black%20Flag%20Resynced%20%20official%20trailer"
+      "trailer": "https://www.youtube.com/results?search_query=Assassin's%20Creed%20IV%3A%20Black%20Flag%20Resynced%20%20official%20trailer",
+      "_dlong": true
     },
     {
       "id": "inven-13514",
@@ -9523,7 +9616,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#27ae60",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1767003592.jpg",
@@ -9532,7 +9625,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13514",
-      "trailer": "https://youtu.be/X4CmgmDA4K4"
+      "trailer": "https://youtu.be/X4CmgmDA4K4",
+      "_dlong": true
     },
     {
       "id": "inven-13518",
@@ -9553,7 +9647,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#00c2cb",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1477495861.jpg",
@@ -9562,7 +9656,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13518",
-      "trailer": "https://youtu.be/jjptcmVRHHw"
+      "trailer": "https://youtu.be/jjptcmVRHHw",
+      "_dlong": true
     },
     {
       "id": "inven-------2026",
@@ -9615,7 +9710,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#9b59b6",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1223140976.jpg",
@@ -9624,7 +9719,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13556",
-      "trailer": "https://youtu.be/_QtVaShYrX4"
+      "trailer": "https://youtu.be/_QtVaShYrX4",
+      "_dlong": true
     },
     {
       "id": "inven-13627",
@@ -9645,7 +9741,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#8e44ad",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1659747155.jpg",
@@ -9654,7 +9750,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13627",
-      "trailer": "https://youtu.be/up28VDHtDgU"
+      "trailer": "https://youtu.be/up28VDHtDgU",
+      "_dlong": true
     },
     {
       "id": "inven-13665",
@@ -9676,7 +9773,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#2980b9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1458298364.jpg",
@@ -9685,7 +9782,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13665",
-      "trailer": "https://youtu.be/2hXCNX34lNg"
+      "trailer": "https://youtu.be/2hXCNX34lNg",
+      "_dlong": true
     },
     {
       "id": "inven-13681",
@@ -9706,7 +9804,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#b14aed",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1204467352.jpg",
@@ -9715,7 +9813,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13681",
-      "trailer": "https://youtu.be/3Z_IUAkzHyA"
+      "trailer": "https://youtu.be/3Z_IUAkzHyA",
+      "_dlong": true
     },
     {
       "id": "inven-13612",
@@ -9736,7 +9835,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#2980b9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1376044869.jpg",
@@ -9745,7 +9844,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13612",
-      "trailer": "https://youtu.be/ePiP8F8PIw0"
+      "trailer": "https://youtu.be/ePiP8F8PIw0",
+      "_dlong": true
     },
     {
       "id": "inven-----2026",
@@ -9859,7 +9959,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#f0c419",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1719387273.jpg",
@@ -9868,7 +9968,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12820",
-      "trailer": "https://youtu.be/SJrEM3Vg22M"
+      "trailer": "https://youtu.be/SJrEM3Vg22M",
+      "_dlong": true
     },
     {
       "id": "inven-13631",
@@ -9921,7 +10022,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#16a085",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1104899583.jpg",
@@ -9930,7 +10031,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13756",
-      "trailer": "https://youtu.be/DPrm70EK2f0"
+      "trailer": "https://youtu.be/DPrm70EK2f0",
+      "_dlong": true
     },
     {
       "id": "inven-13679",
@@ -9952,7 +10054,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#b14aed",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1134373627.jpg",
@@ -9961,7 +10063,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13679",
-      "trailer": "https://youtu.be/HvDVcXwoIjM"
+      "trailer": "https://youtu.be/HvDVcXwoIjM",
+      "_dlong": true
     },
     {
       "id": "inven------2026",
@@ -10013,7 +10116,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e84d8a",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1318992860.jpg",
@@ -10022,7 +10125,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13533",
-      "trailer": "https://youtu.be/ODFHSfYB7F0"
+      "trailer": "https://youtu.be/ODFHSfYB7F0",
+      "_dlong": true
     },
     {
       "id": "inven-12808",
@@ -10043,7 +10147,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#4a90d9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1472413873.jpg",
@@ -10052,7 +10156,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12808",
-      "trailer": "https://youtu.be/zqxdVtJ24ms"
+      "trailer": "https://youtu.be/zqxdVtJ24ms",
+      "_dlong": true
     },
     {
       "id": "inven-13742",
@@ -10073,7 +10178,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#2980b9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1381307059.jpg",
@@ -10082,7 +10187,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13742",
-      "trailer": "https://youtu.be/SlKzf6oKQ4g"
+      "trailer": "https://youtu.be/SlKzf6oKQ4g",
+      "_dlong": true
     },
     {
       "id": "inven-bic2026-------",
@@ -10134,7 +10240,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#f0c419",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1425852396.jpg",
@@ -10143,7 +10249,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13503",
-      "trailer": "https://youtu.be/4zUbZx6dMV8"
+      "trailer": "https://youtu.be/4zUbZx6dMV8",
+      "_dlong": true
     },
     {
       "id": "inven-13744",
@@ -10165,7 +10272,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#8e44ad",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1665347700.jpg",
@@ -10174,7 +10281,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13744",
-      "trailer": "https://youtu.be/V4-OiBu50Ws"
+      "trailer": "https://youtu.be/V4-OiBu50Ws",
+      "_dlong": true
     },
     {
       "id": "inven-13553",
@@ -10197,7 +10305,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#4a90d9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1671117329.jpg",
@@ -10206,7 +10314,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13553",
-      "trailer": "https://youtu.be/0bFyXxSYq_M"
+      "trailer": "https://youtu.be/0bFyXxSYq_M",
+      "_dlong": true
     },
     {
       "id": "inven-bic2026--------",
@@ -10260,7 +10369,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e84d8a",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1513752960.jpg",
@@ -10269,7 +10378,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13671",
-      "trailer": "https://youtu.be/kwvfZIoeUsI"
+      "trailer": "https://youtu.be/kwvfZIoeUsI",
+      "_dlong": true
     },
     {
       "id": "inven-13745",
@@ -10290,7 +10400,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#4a90d9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1679165936.jpg",
@@ -10299,7 +10409,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13745",
-      "trailer": "https://youtu.be/k-Sp7SCtaMs"
+      "trailer": "https://youtu.be/k-Sp7SCtaMs",
+      "_dlong": true
     },
     {
       "id": "inven-------------2026",
@@ -10443,7 +10554,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#9b59b6",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1670660564.jpg",
@@ -10452,7 +10563,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11681",
-      "trailer": "https://youtu.be/ayGk_auu5tk"
+      "trailer": "https://youtu.be/ayGk_auu5tk",
+      "_dlong": true
     },
     {
       "id": "inven-12075",
@@ -10474,7 +10586,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#8e44ad",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1601351964.jpg",
@@ -10483,7 +10595,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12075",
-      "trailer": "https://www.youtube.com/results?search_query=Screenbound%20%20official%20trailer"
+      "trailer": "https://www.youtube.com/results?search_query=Screenbound%20%20official%20trailer",
+      "_dlong": true
     },
     {
       "id": "inven-gxg2026",
@@ -10563,7 +10676,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#00a8cc",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1945204850.jpg",
@@ -10572,7 +10685,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13162",
-      "trailer": "https://youtu.be/oBib2xkYfE4"
+      "trailer": "https://youtu.be/oBib2xkYfE4",
+      "_dlong": true
     },
     {
       "id": "inven------2026",
@@ -10625,7 +10739,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e84d8a",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1726007150.jpg",
@@ -10634,7 +10748,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13363",
-      "trailer": "https://youtu.be/am3QKk59gGg"
+      "trailer": "https://youtu.be/am3QKk59gGg",
+      "_dlong": true
     },
     {
       "id": "inven-13765",
@@ -10657,7 +10772,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#ff4655",
       "image": null,
@@ -10666,7 +10781,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13765",
-      "trailer": "https://youtu.be/8uYUVMo2FOo"
+      "trailer": "https://youtu.be/8uYUVMo2FOo",
+      "_dlong": true
     },
     {
       "id": "inven-13135",
@@ -10687,7 +10803,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#d98324",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1394323409.jpg",
@@ -10696,7 +10812,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13135",
-      "trailer": "https://www.youtube.com/results?search_query=%ED%8C%8C%EC%9D%B4%EC%96%B4%20%EC%97%A0%EB%B8%94%EB%A0%98%20%EB%A7%8C%EC%9E%90%EC%B2%9C%ED%99%8D%20%20official%20trailer"
+      "trailer": "https://www.youtube.com/results?search_query=%ED%8C%8C%EC%9D%B4%EC%96%B4%20%EC%97%A0%EB%B8%94%EB%A0%98%20%EB%A7%8C%EC%9E%90%EC%B2%9C%ED%99%8D%20%20official%20trailer",
+      "_dlong": true
     },
     {
       "id": "inven-11291",
@@ -10715,7 +10832,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#9b59b6",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1706149633.jpg",
@@ -10724,7 +10841,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11291",
-      "trailer": "https://youtu.be/iCKflvFn4p4"
+      "trailer": "https://youtu.be/iCKflvFn4p4",
+      "_dlong": true
     },
     {
       "id": "inven-vct-------",
@@ -10776,7 +10894,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#5b8def",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1292172887.jpg",
@@ -10785,7 +10903,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13416",
-      "trailer": "https://youtu.be/eXLfSEipn7I"
+      "trailer": "https://youtu.be/eXLfSEipn7I",
+      "_dlong": true
     },
     {
       "id": "inven-13305",
@@ -10806,7 +10925,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e84d8a",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1677838689.jpg",
@@ -10815,7 +10934,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13305",
-      "trailer": "https://youtu.be/WhQm-ExRz60"
+      "trailer": "https://youtu.be/WhQm-ExRz60",
+      "_dlong": true
     },
     {
       "id": "inven-12472",
@@ -10836,7 +10956,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#ff4655",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1390838269.jpg",
@@ -10845,7 +10965,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12472",
-      "trailer": "https://youtu.be/LNq35HHUtNc"
+      "trailer": "https://youtu.be/LNq35HHUtNc",
+      "_dlong": true
     },
     {
       "id": "inven-13775",
@@ -10868,7 +10989,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#8e44ad",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1975204726.jpg",
@@ -10877,7 +10998,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13775",
-      "trailer": "https://youtu.be/VyZKYhM0Kv4"
+      "trailer": "https://youtu.be/VyZKYhM0Kv4",
+      "_dlong": true
     },
     {
       "id": "inven-13700",
@@ -10898,7 +11020,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#27ae60",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1961253307.jpg",
@@ -10907,7 +11029,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13700",
-      "trailer": "https://youtu.be/TKfG9hiueak"
+      "trailer": "https://youtu.be/TKfG9hiueak",
+      "_dlong": true
     },
     {
       "id": "inven-13161",
@@ -10928,7 +11051,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#9b59b6",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1262809509.jpg",
@@ -10937,7 +11060,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13161",
-      "trailer": "https://youtu.be/UTVVw9fsHVA"
+      "trailer": "https://youtu.be/UTVVw9fsHVA",
+      "_dlong": true
     },
     {
       "id": "inven-13738",
@@ -10959,7 +11083,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#c9a227",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1497021001.jpg",
@@ -10968,7 +11092,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13738",
-      "trailer": "https://youtu.be/Sytee6i3M9E"
+      "trailer": "https://youtu.be/Sytee6i3M9E",
+      "_dlong": true
     },
     {
       "id": "inven-13302",
@@ -10989,7 +11114,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#3aa757",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1481614133.jpg",
@@ -10998,7 +11123,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13302",
-      "trailer": "https://youtu.be/c2bgoQhlzqE"
+      "trailer": "https://youtu.be/c2bgoQhlzqE",
+      "_dlong": true
     },
     {
       "id": "inven-12194",
@@ -11020,7 +11146,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#16a085",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1226771969.jpg",
@@ -11029,7 +11155,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12194",
-      "trailer": "https://youtu.be/y85lNvF3kVQ"
+      "trailer": "https://youtu.be/y85lNvF3kVQ",
+      "_dlong": true
     },
     {
       "id": "inven-paxaus",
@@ -11081,7 +11208,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#d98324",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1212152530.jpg",
@@ -11090,7 +11217,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13709",
-      "trailer": "https://youtu.be/cKUKQ5tAMzA"
+      "trailer": "https://youtu.be/cKUKQ5tAMzA",
+      "_dlong": true
     },
     {
       "id": "inven-13773",
@@ -11113,7 +11241,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#b14aed",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1866032938.jpg",
@@ -11122,7 +11250,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13773",
-      "trailer": "https://youtu.be/F1eaWhfEBGY"
+      "trailer": "https://youtu.be/F1eaWhfEBGY",
+      "_dlong": true
     },
     {
       "id": "inven-13692",
@@ -11145,7 +11274,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e67e22",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1922434251.jpg",
@@ -11154,7 +11283,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13692",
-      "trailer": "https://youtu.be/qsaVUvIN4OY"
+      "trailer": "https://youtu.be/qsaVUvIN4OY",
+      "_dlong": true
     },
     {
       "id": "inven-13768",
@@ -11177,7 +11307,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#2980b9",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1773947141.jpg",
@@ -11186,7 +11316,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13768",
-      "trailer": "https://youtu.be/gaQqFfKj-SA"
+      "trailer": "https://youtu.be/gaQqFfKj-SA",
+      "_dlong": true
     },
     {
       "id": "inven--------",
@@ -11329,7 +11460,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#5b8def",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1603303563.jpg",
@@ -11338,7 +11469,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/11934",
-      "trailer": "https://youtu.be/ybyMz4ENQ-w"
+      "trailer": "https://youtu.be/ybyMz4ENQ-w",
+      "_dlong": true
     },
     {
       "id": "inven-13708",
@@ -11357,7 +11489,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#5b8def",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1722256118.jpg",
@@ -11366,7 +11498,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13708",
-      "trailer": "https://youtu.be/HLMX2w3cwuE"
+      "trailer": "https://youtu.be/HLMX2w3cwuE",
+      "_dlong": true
     },
     {
       "id": "inven-------2026",
@@ -11418,7 +11551,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#00c2cb",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1673812815.jpg",
@@ -11427,7 +11560,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13656",
-      "trailer": "https://youtu.be/jYijsW5p4F8"
+      "trailer": "https://youtu.be/jYijsW5p4F8",
+      "_dlong": true
     },
     {
       "id": "inven-13595",
@@ -11450,7 +11584,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#e84d8a",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1172227987.jpg",
@@ -11459,7 +11593,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13595",
-      "trailer": "https://youtu.be/KZ6VRXqGEws"
+      "trailer": "https://youtu.be/KZ6VRXqGEws",
+      "_dlong": true
     },
     {
       "id": "inven-13600",
@@ -11482,7 +11617,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#b14aed",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1522382048.jpg",
@@ -11491,7 +11626,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13600",
-      "trailer": "https://youtu.be/eyZIGR9W-r0"
+      "trailer": "https://youtu.be/eyZIGR9W-r0",
+      "_dlong": true
     },
     {
       "id": "inven-13702",
@@ -11510,7 +11646,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#27ae60",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1829407360.jpg",
@@ -11519,7 +11655,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13702",
-      "trailer": "https://youtu.be/yWMwRfJj8So"
+      "trailer": "https://youtu.be/yWMwRfJj8So",
+      "_dlong": true
     },
     {
       "id": "inven-13704",
@@ -11540,7 +11677,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#27ae60",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1468037235.jpg",
@@ -11549,7 +11686,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13704",
-      "trailer": "https://youtu.be/nlt4o-mLxyM"
+      "trailer": "https://youtu.be/nlt4o-mLxyM",
+      "_dlong": true
     },
     {
       "id": "inven-13706",
@@ -11570,7 +11708,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#7b5cff",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1209269843.jpg",
@@ -11579,7 +11717,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13706",
-      "trailer": "https://youtu.be/TFHcVsPNbsY"
+      "trailer": "https://youtu.be/TFHcVsPNbsY",
+      "_dlong": true
     },
     {
       "id": "inven-13707",
@@ -11598,7 +11737,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#8e44ad",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1732048521.jpg",
@@ -11607,7 +11746,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13707",
-      "trailer": "https://youtu.be/QpVZ9OvRLZI"
+      "trailer": "https://youtu.be/QpVZ9OvRLZI",
+      "_dlong": true
     },
     {
       "id": "inven-13703",
@@ -11628,7 +11768,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#16a085",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1481663669.jpg",
@@ -11637,7 +11777,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/13703",
-      "trailer": "https://youtu.be/0wEjbSYNUM8"
+      "trailer": "https://youtu.be/0wEjbSYNUM8",
+      "_dlong": true
     },
     {
       "id": "inven-12809",
@@ -11659,7 +11800,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#9b59b6",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1274436703.jpg",
@@ -11668,7 +11809,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/12809",
-      "trailer": "https://www.youtube.com/results?search_query=Persona4%20Revival%20%20official%20trailer"
+      "trailer": "https://www.youtube.com/results?search_query=Persona4%20Revival%20%20official%20trailer",
+      "_dlong": true
     },
     {
       "id": "inven-9695",
@@ -11690,7 +11832,7 @@
       "tags": [
         "인벤"
       ],
-      "description": "",
+      "description": "PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.",
       "update": "",
       "color": "#c9a227",
       "image": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1831327007.jpg",
@@ -11699,7 +11841,8 @@
         "url": "https://www.inven.co.kr/webzine/calendar/"
       },
       "detailUrl": "https://www.inven.co.kr/webzine/calendar/game/9695",
-      "trailer": "https://youtu.be/C5qWGaqzk98"
+      "trailer": "https://youtu.be/C5qWGaqzk98",
+      "_dlong": true
     },
     {
       "id": "inven-13729",
@@ -18128,7 +18271,7 @@
     {
       "id": "ruliweb-2355711",
       "title": "아샤 샤르마, 전세계 엑스박스 직원에게 헤쳐나가야 할 현실을 공유",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355711?",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355711",
       "source": "루리웹",
       "date": "2026.06.11",
       "image": null,
@@ -18199,9 +18342,71 @@
         {
           "t": "p",
           "v": "아샤와 맷"
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://x.com/asha_shar/status/2064818181315912086?s=46&t=Nojq9PamDdt6CEl8HK7O-A",
+              "l": "https://x.com/asha_shar/status/2064818181315912086?s=46&t=Nojq9PamDdt6CEl8HK7O-A"
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "v": "우리는 방금 XBOX 사업을 재정비하기 위해 우리가 헤쳐나가야 할 현실들을 우리 팀과 공유했습니다. 힘든 진실을 숨김으로써 성공할 수 없으며, 같은 일을 반복하면서 다른 결과를 기대함으로써 성공할 수도 없습니다. 여기 노트를 보세요:"
+        },
+        {
+          "t": "p",
+          "v": "아샤 샤르마가 X에 남긴 코멘트"
         }
       ],
-      "comments": 0
+      "comments": 4,
+      "topComments": [
+        {
+          "nick": "민트진순부먹파인애플피자건포도",
+          "text": "",
+          "like": 9,
+          "best": true,
+          "imgs": [
+            "https://i1.ruliweb.com/cmt/26/06/11/19eb3c43b9d594750.jpeg"
+          ]
+        },
+        {
+          "nick": "동헌캐별멀아오모지리",
+          "text": "걱정과 달리 열심이네 진짜",
+          "like": 6
+        },
+        {
+          "nick": "serqvb",
+          "text": "하는건 없고 대규모 정리해고 라니 ㅋㅋ",
+          "like": 5
+        },
+        {
+          "nick": "민트진순부먹파인애플피자건포도",
+          "text": "",
+          "like": 9,
+          "imgs": [
+            "https://i1.ruliweb.com/cmt/26/06/11/19eb3c43b9d594750.jpeg"
+          ]
+        },
+        {
+          "nick": "근첩-4999474945",
+          "text": "퍼스트파티 게임을 랜덤가챠 수준으로 현지화 해 주고 있는데 잘하니 뭐니 ㅋㅋ..",
+          "like": 4
+        },
+        {
+          "nick": "Nucker",
+          "text": "엑박은 적절한 시기에 강한 리더를 만났네. 아샤 샤르마, 매튜 볼 아주 기대되는 인사들임. 한글화는 이제 ai로 넘겼으면 함. 그게 차라리 나음.",
+          "like": 0
+        },
+        {
+          "nick": "O-techs",
+          "text": "창구를 열었는데 소통은 하실런지 모르겠소. 퍼스트 현지화 하나 제대로 못하는 분들이 과연",
+          "like": 2
+        }
+      ]
     },
     {
       "id": "ruliweb-2355710",
@@ -18259,7 +18464,39 @@
           "v": "오늘 최신 변경 사항이 적용되기 전에는 그 수치가 16,590명으로 줄었다고 보고했습니다."
         }
       ],
-      "comments": 0
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "루리웹-1609852516",
+          "text": "Ghost Signal",
+          "like": 1
+        },
+        {
+          "nick": "악튜러스v",
+          "text": "참 유비보면 제일 큰건 대규모 자본의 AAA게임의 흥행 대실패인데, 문제는 구조조정이라도 제때 했어야 했는데, 프랑스 기업이다 보니, 짜르는것도 마음대로 못짤라서 돈먹는 하마 직원들을 3,4년 데리고 있는거 보면 미국식이 맞는건가 싶기도 하구.... 또 아닌건가 싶기도 하구...",
+          "like": 0
+        },
+        {
+          "nick": "MB_Go prison",
+          "text": "유황숙으로 칭송받던때가 엊그제 같은데 방향성을 한번 잘못 잡더니만 무너지는거 순식간이네 ;;;;;;;;;",
+          "like": 0
+        },
+        {
+          "nick": "Nucker",
+          "text": "해고가 자유로워야 고용도 이뤄짐. 해고가 자유롭지 못하면 스튜디오를 날려버려야 함. 유비도 참 딱하다.",
+          "like": 1
+        },
+        {
+          "nick": "아덴시아",
+          "text": "진짜 이렇게 전세계에 스튜디오와 사람을 그렇게나 많이 뽑아놓고는 정작 나오는 게임들보다 딜레이되는 게임들 천지인 이런 비효율적인 제작사는 본적이 없다.. 정작 내놓고 평가는 좋게 받았지만... 판매량이 성에 안찬다고.. 제작팀 공중분해하고.. 무조건 천만장 이상 팔아야 하는 게임들에는 논란만 가득 만들어내고.. 회사가 이 지경이 되었는데도.. 경영실패를 계속하는 기예르모 가문은 내려올 생각을 안하고.. 답이 없다.. 답이 없어..",
+          "like": 1
+        },
+        {
+          "nick": "O-techs",
+          "text": "애초부터 저렇게 스튜디오를 마구 만들고 인력을 늘린건 그야말로 해가지지 않는 식민지같이 각 지부에서 쉬지않고 공장처럼 게임을 찍어내서 공급할 요량이었을건데 먼나라에 있는 지부끼리의 협업이 쉬운 건 아닌거지 뭐. 게다가 덩치가 커지면 가만 있어도 돈이 빠지는데 이걸 꾸려가려면 필연적으로 안정적인 길을 택해야 하고. 결과적으로 텀 줄이기는 실패하고 사상찐빠와 매너리즘이 발목 잡은거지. 게임이란 게 쉬운 건 아닌가보다",
+          "like": 0
+        }
+      ]
     },
     {
       "id": "ruliweb-2355709",
@@ -18357,16 +18594,31 @@
           "v": "2026년 출시 예정인 이 게임의 제대로 된 모습은 앞으로 공개될 예정입니다."
         }
       ],
-      "comments": 2,
+      "comments": 4,
       "topComments": [
         {
           "nick": "해팡",
           "text": "하이랄인이 원래 귀 길어서 엘프 같은데",
+          "like": 2
+        },
+        {
+          "nick": "참나쁜사람",
+          "text": "스샷 보고 고티 확신한다",
+          "like": 2
+        },
+        {
+          "nick": "오색용",
+          "text": "https://youtu.be/0245VXo-jwQ?si=VxaznELSMQgZ_4Bs 이런 느낌이려나",
           "like": 0
         },
         {
-          "nick": "Gbhan",
-          "text": "누구보다 닌텐도가 이 작품이 얼마나 중요한지 알고있는데 어련히 잘하겠지",
+          "nick": "루2지",
+          "text": "\"시리즈 특유의 시각적 정체성을 전혀 보여주지 못하는\" 바택때도 이런 식의 얘기 있지 않았나",
+          "like": 1
+        },
+        {
+          "nick": "zon",
+          "text": "자는 옆모습 나온게 다라서 뭔가를 판단할 근거조차 현저히 부족한데, 본인들도 알지만 그냥 조회수 늘리기죠 뭐 ㅎㅎ",
           "like": 0
         }
       ]
@@ -18374,7 +18626,7 @@
     {
       "id": "ruliweb-2355708",
       "title": "Re: 베로니카는 3인칭 시점만 지원",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355708?",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355708",
       "source": "루리웹",
       "date": "2026.06.11",
       "image": "https://i2.ruliweb.com/ori/26/06/11/19eb39c37a6a4882.webp",
@@ -18427,7 +18679,7 @@
           "v": "- 원작을 존중하면서도 새로운 경험을 선사하고자 함"
         }
       ],
-      "comments": 2,
+      "comments": 4,
       "topComments": [
         {
           "nick": "안정이필요해",
@@ -18440,9 +18692,9 @@
           "like": 0
         },
         {
-          "nick": "차주 성깔있음",
-          "text": "잘했어. 1인칭 지원한다고 캐릭터 뛰는 걸 느려터지게 하는 건 싫으니까",
-          "like": 2
+          "nick": "I.R.I.S.",
+          "text": "Quadratum",
+          "like": 0
         },
         {
           "nick": "S.U.Y.U.RUCAMΔ",
@@ -18460,8 +18712,28 @@
           "like": 0
         },
         {
-          "nick": "카더라통신",
-          "text": "크리스 1. 5 질 1. 3. 클레어 2. 베로니카. 레빌리언스 레온 2. 4. 9 6편이랑 레빌리언스2 는 다중 주인공 이리 보니 바하만큼 여러 주인공들이 각기 다른 주연으로 나오는 게임이 없는듯 보통 원맨쇼 하던가 아님 아에 다른 세상을 만들던가 하는대 바하는 세계관을 공유하는 수준을 넘어서 서로 상호작용하며 이야기를 이어가니",
+          "nick": "irwin",
+          "text": "그래픽 점프가 있어서 그랬는지 베로니카는 분위기가 지금도 무서웠다고 기억하고 있음. 진짜 기대됨 ㅋ",
+          "like": 0
+        },
+        {
+          "nick": "참나쁜사람",
+          "text": "잘팔리면 해줄지도 모르니까 2장 살게",
+          "like": 0
+        },
+        {
+          "nick": "옹알몽알01",
+          "text": "원판은 여주는 캐서린 제타존스 남주는 레오나르도 디카프리오 닮았다고 생각했는데... 이젠 리메이크작 주인공의 업그레이드된 얼굴로 플레이 하겠네요",
+          "like": 1
+        },
+        {
+          "nick": "irwin",
+          "text": "옹알몽알01",
+          "like": 0
+        },
+        {
+          "nick": "사러가자!!",
+          "text": "잘했어",
           "like": 0
         }
       ]
@@ -18469,7 +18741,7 @@
     {
       "id": "ruliweb-2355707",
       "title": "Xbox 대규모 구조조정 준비 중",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355707?",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355707",
       "source": "루리웹",
       "date": "2026.06.11",
       "image": "https://i2.ruliweb.com/ori/26/06/11/19eb397fa88211e76.webp",
@@ -18498,21 +18770,16 @@
           "v": "또한 Xbox는 마케팅을 비롯한 일부 사업 부문의 예산도 대폭 삭감할 계획인 것으로 전해졌습니다."
         }
       ],
-      "comments": 3,
+      "comments": 5,
       "topComments": [
-        {
-          "nick": "머스크잼",
-          "text": "게임패스 저렴해서 지지하는거 인정 블리자드, 제니맥스 인수해서 흥분하여 지지하는거 인정 MS 콘솔 여러요소들로 인해 긍정적인 영향을 받아 지지하는거 인정 사람마다 취향이 있으니깐 근데 더 양보해서 게임마다 현지화 안되는거? ㅈ같긴하지만 뭐 그것까지 품는거 인정 근데.... 엑스박스 국내에 더 이상 사업을 안 하잖아 아직 게임패스나 뭐 남았다 하지만 솔직히 게임패스도 콘솔이 있어야 제대로 사용할수 있을텐데 정작 국내에 게임기를 안팔잖아;;; 그래도 좋다고 지지한다고? 매번 농담으로 종교종교 하지 진짜 종교아님? 꼭 소니얘기 덧붙이는데 소니 국내 철수 였으면 지지고나발이고 그냥 플게 도배로 삭제수순 밟았음 엑빠보다 소빠들이 더 소니깠을거임",
-          "like": 2
-        },
         {
           "nick": "클램프모코나",
           "text": "팬들 : 우리 마소 돈 많아서 괜찮거든?!헬릭스 나오면 콘솔계 정리 가능하거든?! 현실 : 페이블 한글 안해줌,헬릭스는 커녕 엑시엑도 안팜,정리해고 니들이 네이버 경유해서 ㅎㅎ게임패스 개꿀 이러면서 게임도 안사는데 어느 회사가 좋다고 그 부서를 유지하겠냐... 마소가 뭔 유니세프도 아니고 적자 나면 슬슬 접는거지... 엑박 좋다고 주뎅이 털 시간에 게임 하나라도 안사면 니들이 그렇게 빨아재끼는 엑박이 사라질 수도 있음 ㅋㅋ",
-          "like": 1
+          "like": 3
         },
         {
-          "nick": "루리웹-6514983350",
-          "text": "이래도 엑박을 빨어? 지독하다 진짜",
+          "nick": "Nucker",
+          "text": "사무 마케팅 같은 비개발 부문은 ai 대체 가능하다. 구조 조정은 순리에 맞게 어느 정도 선으로 하면 된다. 다음에 소니도 또 할 거고, 다른 데도 또 하겠지. 뭘 할 때마다 비난 질이야. 걍 시대적 흐름이라고. 또 미국처럼 해고가 유연해야 고용도 이뤄진다.",
           "like": 0
         }
       ]
@@ -18533,7 +18800,14 @@
           "v": "QI0AWjaQUAA"
         }
       ],
-      "comments": 0
+      "comments": 1,
+      "topComments": [
+        {
+          "nick": "MB_Go prison",
+          "text": "독수리슛 멋있긴하네 필구 ㅎㅎㅎ",
+          "like": 0
+        }
+      ]
     },
     {
       "id": "ruliweb-2355705",
@@ -18551,22 +18825,27 @@
           "v": "lwRPyb9oTaE"
         }
       ],
-      "comments": 0,
+      "comments": 1,
       "topComments": [
         {
           "nick": "브루탈",
           "text": "",
-          "like": 2,
+          "like": 3,
           "imgs": [
             "https://i2.ruliweb.com/cmt/26/06/11/19eb39433e54c94b9.jpg"
           ]
+        },
+        {
+          "nick": "빅쇼3717",
+          "text": "브루탈",
+          "like": 1
         }
       ]
     },
     {
       "id": "ruliweb-2355704",
       "title": "파이널 판타지 7 리벨레이션 디렉터 DLC 관련 패미통 인터뷰",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355704?",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355704",
       "source": "루리웹",
       "date": "2026.06.11",
       "image": "https://i1.ruliweb.com/ori/26/06/11/19eb361e9a82af81.webp",
@@ -18624,7 +18903,7 @@
         {
           "nick": "사카구치히로노부",
           "text": "[삭제된 댓글의 댓글입니다.]",
-          "like": 0
+          "like": 1
         },
         {
           "nick": "클램프모코나",
@@ -18634,7 +18913,7 @@
         {
           "nick": "NOT_D",
           "text": "같이 욕하고 조리돌림할 자유는 필요하지만 감히 내 앞에서 이 게임을 기대하는 자유는 허락치 않는 인간들 많네~",
-          "like": 4
+          "like": 7
         },
         {
           "nick": "어으젊다",
@@ -18649,6 +18928,21 @@
         {
           "nick": "premiumheart",
           "text": "저번에도 간보다 욕먹은걸로 기억하는데",
+          "like": 1
+        },
+        {
+          "nick": "오레노피코",
+          "text": "에버 크라이시스에 나온 어린시절 세피로스는 본편에 들어가있으면좋겠는데...그걸 외전으로 남기기엔 너무 아깝다",
+          "like": 1
+        },
+        {
+          "nick": "게임업계는루리인들을채용하라",
+          "text": "그만 쪼개라,",
+          "like": 1
+        },
+        {
+          "nick": "고룡 2nd",
+          "text": "AC, CC설정, DC 중에서 뭐가 들어오려나>",
           "like": 0
         }
       ]
@@ -18703,12 +18997,12 @@
         {
           "nick": "차주 성깔있음",
           "text": "이게 본편 같은 느낌. 요새 파판같지도 않은 것들이 넘버링 달고 나와서",
-          "like": 5
+          "like": 6
         },
         {
           "nick": "NOT_D",
           "text": "16 같은 헛발질 했으면 이제 정신차리고 제대로 만들 때 됐잖아? 혁신이 아니라 퇴화를 하는건 이제 그만해라.",
-          "like": 1
+          "like": 3
         },
         {
           "nick": "엘시스",
@@ -18744,6 +19038,11 @@
           "nick": "스네이크",
           "text": "스파이디2099",
           "like": 1
+        },
+        {
+          "nick": "참나쁜사람",
+          "text": "사펑 데이비드 확장팩 내주면 바로 두장 더 사고 팬티 벗고 오열한다",
+          "like": 0
         }
       ]
     },
@@ -19078,7 +19377,7 @@
     {
       "id": "ruliweb-2355694",
       "title": "GAME Watch)파이널 판타지 레조넌스 개발진 인터뷰",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355694?",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355694",
       "source": "루리웹",
       "date": "2026.06.11",
       "image": null,
@@ -19283,7 +19582,7 @@
           "v": "후루야 씨: 당시 롤플레잉 게임과 비슷한 정도… 그보다 조금 더 길 수도 있겠지만요."
         }
       ],
-      "comments": 2,
+      "comments": 4,
       "topComments": [
         {
           "nick": "JIN_LmW",
@@ -19294,6 +19593,19 @@
           "nick": "클라우드경",
           "text": "진심 기다렸던 2D 파판턴제 역대영웅들 모임 이 모든걸 한번에!!",
           "like": 1
+        },
+        {
+          "nick": "루리웹-6514983350",
+          "text": "과금형 무료폰겜이었던 만큼. 3만원대에 나와야 할듯",
+          "like": 0
+        },
+        {
+          "nick": "작성자",
+          "text": "",
+          "like": 0,
+          "imgs": [
+            "https://i2.ruliweb.com/cmt/26/06/11/19eb3c9c480fd3bc.png"
+          ]
         }
       ]
     },
@@ -19440,7 +19752,7 @@
           "v": "C89d9SsU15o"
         }
       ],
-      "comments": 2,
+      "comments": 3,
       "topComments": [
         {
           "nick": "suny7760",
@@ -19451,6 +19763,11 @@
           "nick": "irwin",
           "text": "suny7760",
           "like": 1
+        },
+        {
+          "nick": "엔카로",
+          "text": "서버나 고쳐라",
+          "like": 0
         }
       ]
     },
@@ -19480,12 +19797,12 @@
         {
           "nick": "이요셉",
           "text": "RPG의 유일한 희망이자 최고명작 시리즈..",
-          "like": 1
+          "like": 2
         },
         {
           "nick": "재랄",
           "text": "이요셉",
-          "like": 4
+          "like": 5
         },
         {
           "nick": "읽을거리",
@@ -19505,7 +19822,7 @@
         {
           "nick": "Nucker",
           "text": "엄청난 혁신적 게임성이 느껴짐. 겜알못들은 등짝 액션 게임만 좋아하지 복잡성이 큰 게임은 싫어함. 버튼 연타 손가락만 쓰는 게임보다 머리를 쓰는 게임이 더 우월하지.",
-          "like": 0
+          "like": 1
         },
         {
           "nick": "Summit80",
@@ -19521,6 +19838,11 @@
           "nick": "쪼옥쪼옥",
           "text": "영상 후반부 전투할 때 적 ai 처참하네 허수아비나 다름 없넼ㅋㅋ 호다다닥 달려와서 멀뚱 멀뚱 가만히 있음ㅋㅋㅋㅋㅋ",
           "like": 1
+        },
+        {
+          "nick": "동헌캐별멀아오모지리",
+          "text": "게임은 까면서 영상은 끝까지 봐주는 모순덩어리들이 꼭 있네요 역겨운 닉네임은 덤이고",
+          "like": 0
         }
       ]
     },
@@ -19731,6 +20053,11 @@
         {
           "nick": "피터팬의 모험",
           "text": "기타루맨이랑 플스1때 나의 요리 같은거는 게임이랑 컨셉도 좋았는데 후속작이 없어서 아쉽네",
+          "like": 0
+        },
+        {
+          "nick": "참나쁜사람",
+          "text": "슬 파판 17 발표 하려나 보네",
           "like": 0
         }
       ]
@@ -20180,7 +20507,7 @@
         {
           "nick": "게임멀티유저",
           "text": "Nucker",
-          "like": 0
+          "like": 1
         },
         {
           "nick": "루리웹-1092802801",
@@ -20245,7 +20572,7 @@
         {
           "nick": "irwin",
           "text": "re 시리즈 웨스커랑 크리스 때문에 진짜 엄청 정성들어간 작품으로 나올 것 같아서 진짜 기대됩니다",
-          "like": 1
+          "like": 2
         },
         {
           "nick": "남도한정식20첩 단체예약환영",
@@ -20255,7 +20582,311 @@
         {
           "nick": "벤거버그의예니퍼",
           "text": "불과 몇달전 바하 신작 기대하며 기다렸다가 물고빨고지지고볶고 다했는데 벌써 또 다른 신작을 기다리게 해주다니 ㄷㄷㄷ",
-          "like": 0
+          "like": 1
+        }
+      ]
+    },
+    {
+      "id": "ruliweb-225664",
+      "title": "숨고, ‘실속형 부분 인테리어 트렌드’ 소개",
+      "url": "https://bbs.ruliweb.com/news/read/225664",
+      "source": "루리웹",
+      "date": "2026.06.11",
+      "views": 2,
+      "comments": 0,
+      "summary": "준공 20년 이상 노후 주택 증가와 경기 불확실성 속에서, 국내 최대 생활 서비스 플랫폼 숨고가 분석한 결과 부분 인테리어 수요가 최근 5년간 88.2% 급증하며...",
+      "image": "https://img.ruliweb.com/data/news/tn/26/06/11/19eb3ccf73b_jhlvxf.webp",
+      "author": "PRESS",
+      "content": [
+        {
+          "t": "p",
+          "v": "[기사 제목] 숨고, ‘실속형 부분 인테리어 트렌드’ 소개"
+        },
+        {
+          "t": "p",
+          "v": "조회수 2 | 루리웹 | 입력 2026.06.11 (08:10:58)"
+        },
+        {
+          "t": "p",
+          "v": "[기사 본문] - 노후 주택 증가·경기 불확실성 속 ‘실속형 부분 인테리어’ 확산"
+        },
+        {
+          "t": "p",
+          "v": "- 비용은 줄이고 효율은 높이고…부분 인테리어 이용자 80% ‘만족’"
+        },
+        {
+          "t": "p",
+          "v": "준공 후 20년 이상 된 노후 주택이 늘어나면서 주거 공간의 일부만 개선하는 '부분 인테리어' 수요가 증가하고 있다."
+        },
+        {
+          "t": "p",
+          "v": "국내 최대 생활 서비스 플랫폼 숨고(대표이사 김강세)가 최근 집수리 서비스 데이터를 분석한 결과, 부분 인테리어 서비스 요청 수가 2021년 93만 4,228건에서 2025년 175만 7,804건으로 최근 5년 간 88.2% 증가한 것으로 집계됐다."
+        },
+        {
+          "t": "p",
+          "v": "특히 싱크대 교체, 욕실/화장실 리모델링 각각 86%, 인테리어 필름 시공 건수는 93%까지 증가하며, 적은 비용으로 공간 분위기를 크게 개선할 수 있는 항목에서 뚜렷한 증가세를 보였다."
+        },
+        {
+          "t": "p",
+          "v": "부분 인테리어를 요청한 숨고의 고객 대상 설문조사 결과, 전체 인테리어 대비 비용과 시간을 절약하는 동시에 꼭 필요한 문제점만 해결하려는 실용주의 소비 성향이 뚜렷하게 나타났다. 응답자의 57.6%는 비용 최소화를 위해, 27.5%는 문제 해결이 필요한 공간만 선택적으로 수리하기 위해 부분 인테리어를 진행했다고 응답했다. 이어 공사 기간 최소화(5.2%), 생활 불편 최소화(4.8%) 등 거주 중 불편함을 최소화하기 위한 이유가 뒤를 이었다."
+        },
+        {
+          "t": "p",
+          "v": "또한 부분 인테리어 이후 필요한 거주 청소, 정리수납 컨설팅 등 생활 편의 서비스에 대한 수요도 함께 증가하는 것으로 나타났다. 이는 인테리어 과정 전반에서 시간과 노력을 줄이고, 효율성을 높이려는 소비자들의 니즈가 확대되고 있음을 보여준다."
+        },
+        {
+          "t": "p",
+          "v": "이러한 부분 인테리어 진행 만족도에 대한 질문에는 응답자의 80%가 만족한다고 답했다. 만족 요인으로는 합리적인 비용, 인테리어 개선 효과, 짧은 수리 기간 순으로 나타났다."
+        },
+        {
+          "t": "p",
+          "v": "업계에서는 이 같은 실속형 부분 인테리어 트렌드의 확산 배경으로 노후 주택 증가와 경기 불확실성을 꼽고 있다."
+        },
+        {
+          "t": "p",
+          "v": "지난해 한 부동산 플랫폼이 발표한 자료에 따르면 2025년 기준 전국 주택의 53.7%가 준공 20년 이상 된 노후 주택이며, 서울은 전체 주택의 절반 이상이 20년 이상된 것으로 나타났다. 실제 이번 숨고 이용자 설문조사에서도 응답자의 46.4%가 20년 이상의 주택에 거주하고 있으며, 10년 이상 주택의 거주자는 78.3%에 달했다."
+        },
+        {
+          "t": "p",
+          "v": "숨고 관계자는 “과거에는 노후 공간을 전체 철거 후 수리하는 것이 일반적이었다면 최근에는 최소한의 시간으로 필요한 부분만 효율적으로 개선하려는 수요가 늘고 있다”며 “특히 아파트 거주자를 중심으로 비용과 시간적 부담을 줄이는 동시에 주거 만족도를 높일 수 있는 실속형 부분 인테리어가 새로운 주거 소비 트렌드로 자리잡고 있다”고 말했다."
+        },
+        {
+          "t": "p",
+          "v": "숨고는 이러한 트렌드에 맞춰 오는 7월 5일까지 ‘부분 인테리어 0원 딜’ 프로모션을 진행한다. 이번 프로모션은 욕실/화장실 리모델링, 인테리어필름 시공, 싱크대 교체, 도배, 도배장판, 조명 인테리어, 페인트 시공, 타일 시공 등 총 14종 인테리어 서비스 중 본인에게 시공이 필요한 부분을 선택해 신청할 수 있으며, 추첨을 통해 선정된 고객에게는 숨고가 시공 비용을 쿠폰 형태로 지원한다. 숨고 회원이라면 누구나 참여할 수 있으며, 자세한 사항은 숨고 앱 및 홈페이지에서 확인 가능하다."
+        },
+        {
+          "t": "img",
+          "v": "https://i1.ruliweb.com/img/26/06/11/19eb3cc0ca8afd4.webp"
+        },
+        {
+          "t": "img",
+          "v": "https://i3.ruliweb.com/img/26/06/11/19eb3cc1894afd4.webp"
+        },
+        {
+          "t": "p",
+          "v": "보도자료 press@ruliweb.com"
+        },
+        {
+          "t": "p",
+          "v": "-->"
+        },
+        {
+          "t": "p",
+          "v": "URL"
+        },
+        {
+          "t": "p",
+          "v": "복사"
+        },
+        {
+          "t": "p",
+          "v": "페북"
+        },
+        {
+          "t": "p",
+          "v": "트위터"
+        },
+        {
+          "t": "p",
+          "v": "네이버"
+        },
+        {
+          "t": "p",
+          "v": "Kakao.init('8496679d80f0c5d13041c128a8343eda'); Kakao.Link.createScrapButton({ container: '#kakao-link-btn', requestUrl: 'https://bbs.ruliweb.com/news/read/225664' });"
+        },
+        {
+          "t": "p",
+          "v": "카톡"
+        },
+        {
+          "t": "p",
+          "v": "관련게임정보 목록"
+        },
+        {
+          "t": "p",
+          "v": "관련 정보"
+        },
+        {
+          "t": "p",
+          "v": "기 종 기타"
+        },
+        {
+          "t": "p",
+          "v": "발 매 일"
+        },
+        {
+          "t": "p",
+          "v": "장 르"
+        },
+        {
+          "t": "p",
+          "v": "가 격"
+        },
+        {
+          "t": "p",
+          "v": "제 작 사 숨고"
+        },
+        {
+          "t": "p",
+          "v": "기 타"
+        },
+        {
+          "t": "p",
+          "v": "댓글"
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/news?",
+              "l": "목록보기"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ruliweb-225663",
+      "title": "경기콘텐츠진흥원, ‘2026년 상반기 경기 레벨업 투자라운드’ 지난 10...",
+      "url": "https://bbs.ruliweb.com/news/read/225663",
+      "source": "루리웹",
+      "date": "2026.06.11",
+      "views": 10,
+      "comments": 0,
+      "summary": "경기콘텐츠진흥원은 지난 10일 '2026년 상반기 경기 레벨업 투자라운드'를 개최하여, 도내 콘텐츠 기업 29개 사가 전문 투자사 연합체 g-vip 소속사와 총 ...",
+      "image": "https://img.ruliweb.com/data/news/tn/26/06/11/19eb3c9f347_qbvxco.webp",
+      "author": "이명규 기자",
+      "content": [
+        {
+          "t": "p",
+          "v": "[기사 제목] 경기콘텐츠진흥원, ‘2026년 상반기 경기 레벨업 투자라운드’ 지난 10일(수) 종료"
+        },
+        {
+          "t": "p",
+          "v": "조회수 12 | 루리웹 | 입력 2026.06.11 (08:07:13)"
+        },
+        {
+          "t": "p",
+          "v": "[기사 본문] - 도내 콘텐츠 기업 및 투자사 각 29개 사 참여… 일대일 밀착 비즈매칭 진행"
+        },
+        {
+          "t": "p",
+          "v": "- 에이티넘 등 신규 파트너십 5개 사 합류… 누적 ‘G-VIP’ 106개 사 달성"
+        },
+        {
+          "t": "p",
+          "v": "경기콘텐츠진흥원(원장 탁용석, 이하 경콘진)이 주최한 ‘2026년 상반기 경기 레벨업 투자라운드’ 행사가 지난 10일 경기콘텐츠코리아랩에서 도민과 업계의 호응 속에 성황리에 열렸다고 밝혔다."
+        },
+        {
+          "t": "p",
+          "v": "‘경기 레벨업 투자라운드’는 도내 콘텐츠 기업의 투자 유치 기회를 확대하고, 민간 투자사와의 직접적인 네트워킹을 통해 실질적인 자금 연계를 도모하는 대표적인 비즈매칭(Biz-matching) 프로그램이다."
+        },
+        {
+          "t": "p",
+          "v": "이번 상반기 행사에는 ‘2026 경기 레벨업 프로그램’에 선정된 우수 기업 29개 사가 참여했다. 이들은 경기도 콘텐츠 기업에 높은 투자의향을 가진 전문 투자사 연합체인 ‘경기 레벨업 인베스트 파트너스(G-VIP)’ 소속 29개 투자사와 만나 총 116건 이상의 일대일 맞춤형 상담을 성사시키며 잠재적 투자 가능성을 확인했다."
+        },
+        {
+          "t": "p",
+          "v": "특히 경콘진은 본 행사에 앞서 콘텐츠 투자 생태계 확장을 위해 ▲(재)고양산업진흥원(고양투자청) ▲(주)에이티넘인베스트먼트 ▲토러스파트너스 ▲(주)페인터즈앤벤처스 ▲뉴키즈인베스트먼트 등 신규 G-VIP 파트너사 5개 사와 전격적으로 업무협약을 체결했다."
+        },
+        {
+          "t": "p",
+          "v": "새롭게 합류한 협력사는 기초지자체 최초로 창업기획자 자격을 획득해 고양형 팁스(TIPS) 등을 운영하는 ▲(재)고양산업진흥원(고양투자청), 원펀드 전략으로 성장 전 주기에 걸쳐 과감히 투자하는 ▲(주)에이티넘인베스트먼트, 20년 이상의 전문 투자 경험을 지닌 ▲토러스파트너스, 스타트업의 보육 및 글로벌 진출을 돕는 팁스(TIPS)·립스(LIPS) 운영사 ▲(주)페인터즈앤벤처스, 데이터 기반 딜소싱을 통해 로컬 브랜드 등 유망 기업에 주목적 투자를 집행하는 ▲뉴키즈인베스트먼트다."
+        },
+        {
+          "t": "p",
+          "v": "이로써 경콘진의 누적 G-VIP 협력사는 총 106개 사를 돌파하며 민간 협력 네트워크가 한층 더 견고해졌다. 지난해 545.8억 원의 투자 유치 성과를 거둔 ‘경기 레벨업 프로그램’은 올해 탄탄해진 106개 사의 투자사 네트워크를 활용해 후속 투자 생태계를 다지는 한편, ‘레벨업 펀드 4·5호’와 ‘기회 펀드 7호’ 조성을 통해 폭넓은 직·간접적 투자 기회를 적기에 제공할 방침이다."
+        },
+        {
+          "t": "p",
+          "v": "탁용석 경콘진 원장은 “위축된 투자 환경 속에서도 경기도 콘텐츠 기업들의 우수한 잠재력은 민간 투자사들의 이목을 집중시키고 있다”라며, “경콘진은 기업과 투자사를 잇는 가장 신뢰받는 가교로서, 단발성 만남에 그치지 않고 실질적인 투자 유치 결실로 이어지도록 끝까지 지원하겠다”라고 강조했다."
+        },
+        {
+          "t": "img",
+          "v": "https://i1.ruliweb.com/img/26/06/11/19eb3c8fc95afd4.webp"
+        },
+        {
+          "t": "img",
+          "v": "https://i3.ruliweb.com/img/26/06/11/19eb3c9096fafd4.webp"
+        },
+        {
+          "t": "p",
+          "v": "이명규 기자 sawual@ruliweb.com"
+        },
+        {
+          "t": "p",
+          "v": "URL"
+        },
+        {
+          "t": "p",
+          "v": "복사"
+        },
+        {
+          "t": "p",
+          "v": "페북"
+        },
+        {
+          "t": "p",
+          "v": "트위터"
+        },
+        {
+          "t": "p",
+          "v": "네이버"
+        },
+        {
+          "t": "p",
+          "v": "Kakao.init('8496679d80f0c5d13041c128a8343eda'); Kakao.Link.createScrapButton({ container: '#kakao-link-btn', requestUrl: 'https://bbs.ruliweb.com/news/read/225663' });"
+        },
+        {
+          "t": "p",
+          "v": "카톡"
+        },
+        {
+          "t": "p",
+          "v": "관련게임정보 목록"
+        },
+        {
+          "t": "p",
+          "v": "관련 정보"
+        },
+        {
+          "t": "p",
+          "v": "기 종 기타"
+        },
+        {
+          "t": "p",
+          "v": "발 매 일"
+        },
+        {
+          "t": "p",
+          "v": "장 르"
+        },
+        {
+          "t": "p",
+          "v": "가 격"
+        },
+        {
+          "t": "p",
+          "v": "제 작 사 경기콘텐츠진흥원"
+        },
+        {
+          "t": "p",
+          "v": "기 타"
+        },
+        {
+          "t": "p",
+          "v": "댓글"
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/news?",
+              "l": "목록보기"
+            }
+          ]
         }
       ]
     },
@@ -20265,8 +20896,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225658",
       "source": "루리웹",
       "date": "2026.06.11",
-      "time": "00:01:00",
-      "views": 402,
+      "views": 420,
       "comments": 0,
       "summary": "'헤일로 캠페인 이볼브드'는 2001년에 발매된 '헤일로: 컴뱃 이볼브드(헤일로: 전쟁의 서막)'을 리메이크한 작품으로, 언리얼 엔진 5를 이용한 고화질 시각 효...",
       "image": "https://img.ruliweb.com/data/news27/06m/11/pc/hl.webp",
@@ -20278,7 +20908,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 402 | 루리웹 | 입력 2026.06.11 (00:01:00)"
+          "v": "조회수 420 | 루리웹 | 입력 2026.06.11 (00:01:00)"
         },
         {
           "t": "p",
@@ -20446,9 +21076,8 @@
       "url": "https://bbs.ruliweb.com/news/read/225662",
       "source": "루리웹",
       "date": "2026.06.11",
-      "time": "00:00:00",
-      "views": 766,
-      "comments": 1,
+      "views": 836,
+      "comments": 2,
       "summary": "'마인크래프트 던전스 II'는 전작의 한계를 극복하고 탐험 요소를 강화한 액션 어드벤처로, 최대 4인 카우치 및 온라인 멀티를 지원하며 상호 연결된 세계 구조를 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eb1deb507_gufcvd.webp",
       "author": "김영훈 기자",
@@ -20459,7 +21088,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 766 | 루리웹 | 입력 2026.06.11 (00:00:00)"
+          "v": "조회수 837 | 루리웹 | 입력 2026.06.11 (00:00:00)"
         },
         {
           "t": "p",
@@ -20725,6 +21354,11 @@
           "nick": "자뷰뷰",
           "text": "와이프가 전작을 엄청 열심히 했어서 이번에도 온가족 다같이 하려고 기대중!",
           "like": 0
+        },
+        {
+          "nick": "불타는 쿠마",
+          "text": "ㅠㅠ 재밌는데.. 랜덤 매칭 같은거라도 좀 넣어주면..",
+          "like": 0
         }
       ]
     },
@@ -20734,9 +21368,8 @@
       "url": "https://bbs.ruliweb.com/news/read/225661",
       "source": "루리웹",
       "date": "2026.06.11",
-      "time": "00:00:00",
-      "views": 1027,
-      "comments": 2,
+      "views": 1120,
+      "comments": 4,
       "summary": "더 코얼리션이 '기어스 오브 워: e-데이'를 통해 로커스트 침공의 시작점인 이머전스 데이를 다루며, 언리얼 5 기반으로 전작보다 향상된 비주얼과 새로운 무브먼트...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eb142fc45_pjbxge.webp",
       "author": "김영훈 기자",
@@ -20747,7 +21380,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 1027 | 루리웹 | 입력 2026.06.11 (00:00:00)"
+          "v": "조회수 1120 | 루리웹 | 입력 2026.06.11 (00:00:00)"
         },
         {
           "t": "p",
@@ -21087,6 +21720,11 @@
           "nick": "동헌캐별멀아오모지리",
           "text": "올해 가장 큰 기대작 패키지 내주길",
           "like": 0
+        },
+        {
+          "nick": "메카트닉",
+          "text": "한국어 의도적 패싱이라던데",
+          "like": 0
         }
       ]
     },
@@ -21096,8 +21734,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225569",
       "source": "루리웹",
       "date": "2026.06.11",
-      "time": "00:00:00",
-      "views": 249,
+      "views": 254,
       "comments": 0,
       "summary": "오픈월드 협동 어드벤처 게임 '위치스파이어'는 플레이어가 동료 마녀들과 함께 세계를 위협하는 부패를 막기 위해 선택된 존재가 되어 활약하며, 강력한 마법들을 이용...",
       "image": "https://img.ruliweb.com/data/news27/06m/11/pc/ws.webp",
@@ -21109,7 +21746,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 249 | 루리웹 | 입력 2026.06.11 (00:00:00)"
+          "v": "조회수 254 | 루리웹 | 입력 2026.06.11 (00:00:00)"
         },
         {
           "t": "p",
@@ -21716,314 +22353,6 @@
       ]
     },
     {
-      "id": "ruliweb-225530",
-      "title": "정착지에 풀려난 교활하고 잔인한 사냥꾼, 에이리언 아이솔레이션 2",
-      "url": "https://bbs.ruliweb.com/news/read/225530",
-      "source": "루리웹",
-      "date": "2026.06.10",
-      "time": "23:00:00",
-      "views": 1055,
-      "comments": 1,
-      "summary": "12년 만에 신작 게임 '에이리언 아이솔레이션 2'가 공개되며 팬들의 기대를 모았으며, 이번 작품은 전작의 1인칭 시점과 에일리언의 지능적인 사냥 메커니즘을 계승...",
-      "image": "https://img.ruliweb.com/data/news/tn/26/06/08/19ea59c8722_btdegr.webp",
-      "author": "김영훈 기자",
-      "content": [
-        {
-          "t": "p",
-          "v": "[기사 제목] 정착지에 풀려난 교활하고 잔인한 사냥꾼, 에이리언 아이솔레이션 2"
-        },
-        {
-          "t": "p",
-          "v": "조회수 1056 | 루리웹 | 입력 2026.06.10 (23:00:00)"
-        },
-        {
-          "t": "p",
-          "v": "[기사 본문] 할리우드 역사상 가장 치명적인 크리처와 다시금 숨바꼭질을 즐길 시간이다. ‘에이리언: 파이어팀 엘리트’와 ‘에이리언: 다크 디센트’의 아쉬움을 뒤로 하고 장장 12년 만에 ‘에이리언 아이솔레이션 2’가 정식 발표됐다. 앞서 SGF 2026 쇼케이스를 통해 약 1분 40초간 짧은 티저를 공개한 데 이어 이튿날부터 진행되는 현장 시연서 20분 가량 게임 도입부를 플레이할 기회가 주어졌다. 아쉽지만 영상 촬영은 허용치 않았다."
-        },
-        {
-          "t": "p",
-          "v": "그래도 대략의 분위기는 전달하기 쉬울 듯한데, 티저 속 폭풍이 몰아치는 스산하고 죽어가는 숲이 바로 도입부 배경이기 때문이다. 게임은 전작과 마찬가지로 1인칭이며 플레이어블 캐릭터는 여성으로, 동료들에게 블레이크라 불린다. 찾아보니 80년대 다크호스 코믹스서 출간된 ‘에이리언 아웃브레이크’란 만화에 동명의 식민지 해병이 등장한다. 나름 최초의 공식 만화라는 상징성을 지닌 작품이라 둘이 동일인물 가능성도 있다."
-        },
-        {
-          "t": "yt",
-          "v": "M_wUIwfs6jY"
-        },
-        {
-          "t": "p",
-          "v": "SGF 쇼케이스서 발표된 '에이리언 아이솔레이션 2', 무려 12년 만이다"
-        },
-        {
-          "t": "p",
-          "v": "필자의 추론이 맞든 틀리든 무관하게 작중 시점에 블레이크는 식민지 해병이 아닌 웨이랜드-유타니 소속 노동자로 내지 기술자로 묘사된다. 그녀는 소규모 크루의 리더로서 동료인 오토, 콜과 함께 트레일러를 몰아 폭풍의 영향권에서 벗어나려던 참이다. 그러나 창졸간 엄청난 섬광과 후폭풍이 그들을 덮치고, 오토와 콜이 트레일러의 상태를 복구하는 사이 블레이크가 육로로 사태 파악에 나선다. 이때부터 직접 조작이 가능하다."
-        },
-        {
-          "t": "p",
-          "v": "여기서 특기할 점은 두 가지다. 첫째로 티저를 통해 엿볼 수 있듯 환경 묘사가 놀라운 수준에 다다랐다. 전작서 이미 ‘에이리언’ 특유의 카세트 퓨처리즘 세계관을 포토리얼리스틱 비주얼로 재현해 진짜 영화 속으로 들어간 느낌을 줬는데, 이제 한 단계 더 나아가 복잡다단한 지형은 물론 폭풍우의 비산하는 물보라와 산란하는 손전등 불빛까지 실감나게 담아낸다. 물론 후술할 우주선이나 전초기지 내 묘사 역시 전작을 훌쩍 뛰어넘는다."
-        },
-        {
-          "t": "img",
-          "v": "https://i2.ruliweb.com/img/26/06/10/19eafe814c74c329e.webp"
-        },
-        {
-          "t": "p",
-          "v": "새로운 무대는 쿠로사키 스테이션이란 전초기지가 있는 외딴 식민지 행성"
-        },
-        {
-          "t": "p",
-          "v": "둘째로 우주정거장을 무대로 삼은 전작과 달리 ‘에이리언 아이솔레이션 2’는 행성에 두 발을 내딛은 채 진행된다는 거다. 세가가 낸 홍보 자료를 보면 본작의 주요 배경이 쿠로사키 스테이션이라는데, 사실 티저에 나오는 장소는 그곳이 아니다. 즉 여기서 야외는 단순히 도입부에 쓸 일회성 구간이 아니라 게임 내내 이 시설과 저 시설 사이를 오가는 더 넓은 지역의 존재를 암시한다. 당연히 숲 속을 활보하는 에이리언도 보게 될 터다."
-        },
-        {
-          "t": "p",
-          "v": "그래서 티저의 장소가 어디냐 하면 다름아닌 세바스토폴 우주정거장과 관련된 무언가다. 세바스토폴 본체는 전작 막바지에 가스 행성인 KG-348로 부딪쳤으니 탈출선이나 일찍 분리된 부속으로 추정된다. 아무튼 이 구조물이 트레일러 주변에 떨어지며 갑작스레 섬광이 발생했던 것. 폭풍이 몰려오니 어서 빨리 자리를 피하자는 콜의 강권에도 불구하고 우리의 주인공 블레이크는 혹시 생존자가 있을지 모른다며 구조물 안으로 들어선다."
-        },
-        {
-          "t": "img",
-          "v": "https://i3.ruliweb.com/img/26/06/08/19ea591ed4d4c329e.webp"
-        },
-        {
-          "t": "p",
-          "v": "정말 누군가 생존하기야 했다. 사람이 아니라 지긋지긋한 그 녀석 말이다"
-        },
-        {
-          "t": "p",
-          "v": "그 다음은 다들 예상할 법한 흐름이다. 탈출선 내부는 심하게 파손됐고 하반신이 통째로 뜯긴 워킹 조가 엉겨 붙는 점프 스케어가 이어진다. 곳곳에 놓인 부품을 모아 전력을 복구하는데 별안간 에이리언이 튀어나와 가까운 책상 아래로 숨는 블레이크. 전작서 지독할 만치 아만다 리플리를 괴롭혔던 에이리언 가운데 적어도 한 마리가 세바스토폴의 추락서 살아남은 모양이다. 녀석을 피해 탈출선 출구로 돌아가기까지가 시연 분량이었다."
-        },
-        {
-          "t": "p",
-          "v": "세이브는 여전히 비상 전화기서 수동으로 가능하며 상호작용 시 오래 누르기 및 연타를 요구하는 점 역시 전작과 동일하다. 부러 상호작용을 지연시켜 손에 땀을 쥐게 만드는 특유의 수법이다. 불길한 BGM이 깔리고 쿵쾅대는 소리가 점차 커지는데 세이브에 버튼 홀드가 세월아 네월아라니, 정말 기분 째지지(…) 않겠나. 메인터넌스 터널로 숨어 은밀히 움직인다든지 벽 옆에 몸을 기울여 엿보는 조작도 전작을 즐겼다면 익숙할 터다."
-        },
-        {
-          "t": "img",
-          "v": "https://i2.ruliweb.com/img/26/06/10/19eafeb01164c329e.webp"
-        },
-        {
-          "t": "p",
-          "v": "비상 전화기도 건재, 호불호가 갈리는 요소지만 개인적으로 퍽 반가웠다"
-        },
-        {
-          "t": "p",
-          "v": "‘에이리언 아이솔레이션’이 원작 팬덤에게 크게 사랑받은 건 무엇보다 에이리언의 지능적인 사냥법을 제대로 구현한 바가 컸다. 주변이 어둡다고 손전등을 키면 에이리언의 주의를 끌게 된다. 시끄럽게 뛰거나 심지어 성큼성큼 걷기만 해도 에이리언에게 나 여기 있소, 광고하는 꼴이다. 스크립트에 따라 일정 구간을 오가며 미리 짜여진 반응을 보여줄 뿐인 여느 게임 속 추적자와 달리 이 녀석은 진짜 살아 숨쉬는 생명체처럼 군다."
-        },
-        {
-          "t": "p",
-          "v": "본래 동작 감지기로 에이리언과 얼마나 가까운지 정도는 알 수 있을 텐데 금번 시연서 블레이크는 그조차 얻기 전이다. 사실 이렇게나 초반부면 게임에 대해 더 알아내려야 알아낼 바가 별로 없다. 하나 분명한 건 갑작스레 에이리언이 쿵 소리를 울리며 내려섰을 때 -당연히 시연 도중에 나올 걸 알았음에도-심장이 마구 뛰기 시작했다는 거다. 12년 만에 사냥이 다시 시작됐고, 이번에도 나는 사냥꾼 아닌 사냥감이라는 전율이 흘렀다."
-        },
-        {
-          "t": "img",
-          "v": "https://i3.ruliweb.com/img/26/06/10/19eafe4738c4c329e.webp"
-        },
-        {
-          "t": "p",
-          "v": "시연 빌드의 블레이크는 동작 감지기조차 없어, 귀를 쫑긋 세우고 다녔다"
-        },
-        {
-          "t": "p",
-          "v": "요컨대 SGF 2026 쇼케이스는 긴 기다림 끝에 ‘에이리언 아이솔레이션 2’가 나온다는 낭보를 전할 축제였으며, 현장 시연의 취지 역시 그와 같은 맥락서 이해해야겠다. 전작의 코어 메커니즘을 충실히 계승한 속편이 여기 실존하니 대략적인 분위기나 느껴보라는 첫 대면식 말이다. 물론 어쩌다 저 외딴 정착지에 에이리언이 풀려나고 마는지 사건의 발단을 보여줄 필요도 있었을 터다. 참 세바스토폴은 두고두고 말썽이구나 싶다."
-        },
-        {
-          "t": "p",
-          "v": "결국 속편에서 에이리언은 또 얼마나 영리해졌을지, 동작 감지기와 이온 용접기 외에 새로운 기믹 장비가 나올지, 화염방사기보다 더 강력한 무기가 주어질지, 전초기지 일대가 어쩌면 오픈필드로 구현될지 등등 수많은 의문의 답을 찾는 건 다음으로 미뤄야겠다. 당장은 스튜디오가 ‘에이리언 아이솔레이션’을 비롯해 ‘에이리언’ IP의 명작들이 공유하는 어떤 아우라를 이해하고 올바른 방향으로 나아가고 있음에 안도하자."
-        },
-        {
-          "t": "img",
-          "v": "https://i1.ruliweb.com/img/26/06/08/19ea5924a9f4c329e.webp"
-        },
-        {
-          "t": "p",
-          "v": "당장은 '에이리언 아이솔레이션 2'가 올바른 방향으로 가고 있음에 안심"
-        },
-        {
-          "t": "p",
-          "v": "김영훈 기자 grazzy@ruliweb.com"
-        },
-        {
-          "t": "p",
-          "v": "URL"
-        },
-        {
-          "t": "p",
-          "v": "복사"
-        },
-        {
-          "t": "p",
-          "v": "페북"
-        },
-        {
-          "t": "p",
-          "v": "트위터"
-        },
-        {
-          "t": "p",
-          "v": "네이버"
-        },
-        {
-          "t": "p",
-          "v": "Kakao.init('8496679d80f0c5d13041c128a8343eda'); Kakao.Link.createScrapButton({ container: '#kakao-link-btn', requestUrl: 'https://bbs.ruliweb.com/news/read/225530' });"
-        },
-        {
-          "t": "p",
-          "v": "카톡"
-        },
-        {
-          "t": "p",
-          "v": "관련게임정보 목록"
-        },
-        {
-          "t": "p",
-          "v": "에이리언 아이솔레이션 2"
-        },
-        {
-          "t": "p",
-          "v": "기 종 PC/PS5/XSX/SWITCH2"
-        },
-        {
-          "t": "p",
-          "v": "발 매 일 미정"
-        },
-        {
-          "t": "p",
-          "v": "장 르 서바이벌 호러, 스텔스 액션"
-        },
-        {
-          "t": "p",
-          "v": "가 격"
-        },
-        {
-          "t": "p",
-          "v": "제 작 사 크리에이티브 어셈블리 / 세가"
-        },
-        {
-          "t": "p",
-          "v": "기 타"
-        },
-        {
-          "t": "p",
-          "v": "관련 기사"
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/news/read/65601",
-              "l": "XBOX ONE용 '에이리언: 아이솔레이션' 플레이 동영상"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/news/read/65312",
-              "l": "에이리언: 아이솔레이션, 예약 판매 실시"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/news/read/64912",
-              "l": "‘에이리언: 아이솔레이션, 10월 7일 국내 발매"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/news/read/62544",
-              "l": "[E3] '에일리언 아이솔레이션' 플레이 캠 동영상"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/game/81632",
-              "l": "에일리언: 아이솔레이션 최신글"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/game/81632/read/9426690",
-              "l": "아이솔레이션) 클리어 소감"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/game/81632/read/9426136",
-              "l": "에일리언 아이솔레이션 엔딩 소감"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/game/81632/read/9425848",
-              "l": "에일리언: 아이솔레이션 리눅스(스팀 덱)에서 한국어 패치 설치하는 법"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/game/81632/read/9425841",
-              "l": "에일리언: 아이솔레이션 10주년 기념 뉴한글패치 공개 (업데이트)"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/game/81632/read/9425828",
-              "l": "에일리언: 아이솔레이션 DLC 100% 번역 완료 및 한글패치 배포 예정"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "v": "댓글"
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/news?",
-              "l": "목록보기"
-            }
-          ]
-        }
-      ],
-      "topComments": [
-        {
-          "nick": "AceSaga",
-          "text": "한글 아님???",
-          "like": 0
-        }
-      ]
-    },
-    {
       "id": "ruliweb-2355676",
       "title": "디지몬 스토리 타임 스트레인저, How to Play 트레일러",
       "url": "https://bbs.ruliweb.com/news/board/1001/read/2355676?page=2",
@@ -22056,7 +22385,7 @@
     {
       "id": "ruliweb-2355674",
       "title": "스텔라 블레이드 블러드레인 IGN 인터뷰",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355674",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355674?page=2",
       "source": "루리웹",
       "date": "2026.06.10",
       "image": "https://i3.ruliweb.com/ori/26/06/10/19eb1cad9535a3925.jpg",
@@ -22182,6 +22511,11 @@
           ]
         },
         {
+          "nick": "헤스미니",
+          "text": "하이 호",
+          "like": 0
+        },
+        {
           "nick": "도시의 자유인",
           "text": "캐릭터 아주 잘 뽑았어.",
           "like": 11
@@ -22234,7 +22568,7 @@
         {
           "nick": "차주 성깔있음",
           "text": "김형태를 문화부 장관으로!!!",
-          "like": 0
+          "like": 1
         },
         {
           "nick": "자연산 송이버섯",
@@ -22259,7 +22593,7 @@
     {
       "id": "ruliweb-2355672",
       "title": "오버워치 52번째 신규 영웅 '시온' 인게임 모습",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355672",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355672?page=2",
       "source": "루리웹",
       "date": "2026.06.10",
       "image": "https://i3.ruliweb.com/ori/26/06/10/19eb1d06d2547f450.webp",
@@ -22360,7 +22694,7 @@
         {
           "nick": "파랑생선",
           "text": "깡!!♡ 깡! ♡깡!! ♡깡!! ♡깡!!!♡",
-          "like": 1
+          "like": 2
         },
         {
           "nick": "루리웹-5680730702",
@@ -22377,7 +22711,7 @@
     {
       "id": "ruliweb-2355671",
       "title": "리듬 천국 미라클 스타즈 최신 정보 소개 및 리듬 게임 영상",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355671",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355671?page=2",
       "source": "루리웹",
       "date": "2026.06.10",
       "image": "https://i3.ruliweb.com/ori/26/06/10/19eb1a5b256242da.jpg",
@@ -22601,8 +22935,8 @@
     },
     {
       "id": "ruliweb-2355670",
-      "title": "XBOX는 일부 독점작이 덜 팔릴 수 있어도 지속적인 독점 게임 공급을 약속한다",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355670",
+      "title": "XBOX는 일부 독점작이 덜 팔릴 수 있어도 지속적인 독점 게임 공급을 ...",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355670?page=2",
       "source": "루리웹",
       "date": "2026.06.10",
       "image": "https://i1.ruliweb.com/ori/26/06/10/19eb1a653b85a262f.webp",
@@ -22684,7 +23018,7 @@
         {
           "nick": "동방제과",
           "text": "Nucker",
-          "like": 6
+          "like": 8
         },
         {
           "nick": "라이센",
@@ -22697,7 +23031,7 @@
         {
           "nick": "리무루 템페스트",
           "text": "라이센",
-          "like": 8
+          "like": 10
         },
         {
           "nick": "라이센",
@@ -22717,7 +23051,7 @@
         {
           "nick": "오덕살맨",
           "text": "",
-          "like": 17,
+          "like": 18,
           "imgs": [
             "https://i1.ruliweb.com/cmt/26/06/10/19eb1acecfe3d7de9.png"
           ]
@@ -22725,47 +23059,47 @@
         {
           "nick": "게임멀티유저",
           "text": "덜 팔리는 수준이 아닌데 ㅋㅋㅋ",
-          "like": 8
+          "like": 9
         },
         {
           "nick": "msmhking",
           "text": "참나 ㅋㅋ 언제는 약속 안해서 안지켰나 ㅋㅋ",
-          "like": 15
+          "like": 16
         },
         {
           "nick": "0M0)",
           "text": "평소에 잘했으면 조금은 믿었겠다",
-          "like": 18
+          "like": 20
         },
         {
           "nick": "Restⅰa",
           "text": "0M0)",
-          "like": 15
+          "like": 17
         },
         {
           "nick": "msmhking",
           "text": "A급 개발사가 넘쳐나서 한달에 하나씩 끝없이 대작 나오고 그거 다 겜패로 나와서 배터진다는 애들 요즘 어디감??",
-          "like": 18
+          "like": 21
         },
         {
           "nick": "옹도니",
           "text": "msmhking",
-          "like": 16
+          "like": 19
         },
         {
           "nick": "루리웹-4578324141",
           "text": "옹도니",
-          "like": 0
+          "like": 2
         },
         {
           "nick": "DoomSlayer",
           "text": "아니 근데 독점작 한다고 영향력을 발휘할 게임이 안 보인다는 게 답답하네 ㅋㅋㅋ 현재 개발 중인 게임 중에 그런 게임들이 꼭 나왔음 좋겠음.",
-          "like": 5
+          "like": 6
         },
         {
           "nick": "루리웹-8716489191",
           "text": "믿으면 ㅂㅅ이지 ㅋㅋ",
-          "like": 12
+          "like": 13
         },
         {
           "nick": "월화수목금토일..",
@@ -22775,17 +23109,17 @@
         {
           "nick": "루리웹-1092802801",
           "text": "그놈의 약속 필스팬서도 처음 4개 플스로 이식하는거 외에는 절때 플스로 안낸다고 약속 한다했다가 반년도 안되서 싹다 플스로 풀었지",
-          "like": 10
+          "like": 12
         },
         {
           "nick": "쪼옥쪼옥",
           "text": "1년후.. 덜 팔려도 괜찮다고 말했지만 엑뽀이들 구매력이 이정도로 처참할줄은 몰랐습니다.... 멀티화 다시 추진하겠습니다.",
-          "like": 8
+          "like": 9
         },
         {
           "nick": "삶은치킨",
           "text": "아니 ㅅㅂ 독점 하나 발표 했다고 뭔 대단한일 한거처럼 기사를 내냐 ㅋㅋ",
-          "like": 8
+          "like": 10
         },
         {
           "nick": "루리웹-7972236768",
@@ -22800,12 +23134,12 @@
         {
           "nick": "뿌움",
           "text": "ㅋㅋㅋㅋㅋ 기어워 판매량 나오는거 보고 바로 꼬리내릴듯",
-          "like": 10
+          "like": 12
         },
         {
           "nick": "루리웹-3708230679",
           "text": "구엑원때 뒤통수쳐맞아놓고 정신못차리고 엑시스 엑시엑 산 나도 공범인거같다",
-          "like": 5
+          "like": 7
         },
         {
           "nick": "짐의강산",
@@ -22815,14 +23149,14 @@
         {
           "nick": "동방제과",
           "text": "믿고 말고간에 이렇게 해서 얻을게 뭔지 모르겠네요. ㅋㅋㅋ 뺄 거면 다 빼던가 네임드 게임은 기어즈 빼고 다 플슿발매 확정인데",
-          "like": 4
+          "like": 6
         }
       ]
     },
     {
       "id": "ruliweb-2355668",
       "title": "그란 투리스모 7 - 6월 업데이트 트레일러 및 업데이트(1.70) 상세",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355668",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355668?page=2",
       "source": "루리웹",
       "date": "2026.06.10",
       "image": "https://i3.ruliweb.com/ori/26/06/10/19eb1a53891137dbd.webp",
@@ -23152,7 +23486,7 @@
         {
           "nick": "루리웹-2378418937",
           "text": "Nucker",
-          "like": 5
+          "like": 6
         },
         {
           "nick": "루리웹-4351693756",
@@ -23601,7 +23935,7 @@
         {
           "nick": "나는야 멀티유저",
           "text": "한량을꿈꾸는자",
-          "like": 2
+          "like": 3
         },
         {
           "nick": "나는야 멀티유저",
@@ -23670,7 +24004,7 @@
         {
           "nick": "폴드7",
           "text": "진짜 ㅁㅊㄴ인가 제정신 아니네",
-          "like": 10
+          "like": 11
         },
         {
           "nick": "사하구미",
@@ -23690,7 +24024,7 @@
         {
           "nick": "동헌캐별멀아오모지리",
           "text": "이딴 잉여짓도 뉴스라고 참 힘들게 찾아서 올리니 정말 대단하군요 이러다가 락스타 직원이 응아한것도 뉴스로 올릴판",
-          "like": 6
+          "like": 7
         },
         {
           "nick": "케르발",
@@ -23770,7 +24104,7 @@
         {
           "nick": "루리웹-9144580688",
           "text": "걍 ㅂㅅ새끼지 저게...",
-          "like": 3
+          "like": 4
         },
         {
           "nick": "S-117",
@@ -24034,7 +24368,7 @@
         {
           "nick": "모랄빵엔E",
           "text": "중성수녀",
-          "like": 12
+          "like": 13
         },
         {
           "nick": "루리웹-9901423096",
@@ -24092,12 +24426,12 @@
         {
           "nick": "YomikoYomiko",
           "text": "아니 덧글 왜이럼 ㄷㄷ 거기서 쓰는 웬만한 초식 다 나오네",
-          "like": 14
+          "like": 15
         },
         {
           "nick": "루리웹-1005059683",
           "text": "YomikoYomiko",
-          "like": 12
+          "like": 13
         },
         {
           "nick": "2132156465421",
@@ -24320,7 +24654,7 @@
           ]
         }
       ],
-      "comments": 4,
+      "comments": 5,
       "topComments": [
         {
           "nick": "MinTe",
@@ -24341,14 +24675,14 @@
           "like": 0
         },
         {
-          "nick": "키카드",
-          "text": "아린&시온",
-          "like": 4
-        },
-        {
           "nick": "아린&시온",
           "text": "키카드",
-          "like": 0
+          "like": 1
+        },
+        {
+          "nick": "쿠샬 태도",
+          "text": "아린&시온",
+          "like": 1
         },
         {
           "nick": "Jacob1203",
@@ -24741,13 +25075,411 @@
       ]
     },
     {
+      "id": "ruliweb-2355650",
+      "title": "네이트더헤이트: NS2용 바이오하자드 RE:2,RE:3,RE:4는 여전히...",
+      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355650?page=2",
+      "source": "루리웹",
+      "date": "2026.06.10",
+      "image": "https://i1.ruliweb.com/ori/26/06/10/19eb0a75bbd242da.webp",
+      "summary": "유명 유출러인 NateTheHate는 바이오하자드 RE 2 바이오하자드 RE 3 바이오하자드 RE 4가 여전히 닌텐도 스위치 2로 출시될 예정이라고 다시 한번 확인해 주었습니다",
+      "time": "17:31",
+      "author": "nokcha",
+      "content": [
+        {
+          "t": "img",
+          "v": "https://i1.ruliweb.com/img/26/06/10/19eb0a75bbd242da.webp"
+        },
+        {
+          "t": "p",
+          "v": "유명 유출러인 NateTheHate는"
+        },
+        {
+          "t": "p",
+          "v": "바이오하자드 RE:2, 바이오하자드 RE:3, 바이오하자드 RE:4가 여전히"
+        },
+        {
+          "t": "p",
+          "v": "닌텐도 스위치 2로 출시될 예정이라고 다시 한번 확인해 주었습니다."
+        }
+      ],
+      "comments": 4,
+      "topComments": [
+        {
+          "nick": "개인과개인이개입된게임",
+          "text": "20121027",
+          "like": 4
+        },
+        {
+          "nick": "BLAZE FIELDING",
+          "text": "늦어서 그렇지 웬만한건 스위치2로 다 나오는구나",
+          "like": 2
+        },
+        {
+          "nick": "새벽러닝",
+          "text": "이번에 트리하우스에서 젤다 시오와 더스크 블러드 플레이할거라는 이 사람의 예상이 완전히 빗나갔던데",
+          "like": 1
+        },
+        {
+          "nick": "가면남작",
+          "text": "9나올 때 78 나오듯이 코브 베로니카 나올 때 쯤 234 나올듯 올해 나오면 경쟁작들 너무 많아짐 ㅋㅋ",
+          "like": 1
+        },
+        {
+          "nick": "동헌캐별멀아오모지리",
+          "text": "스위치2가 성능이 좋나보네요 리메이크를 다 내다니",
+          "like": 3
+        },
+        {
+          "nick": "루리웹-2177028293",
+          "text": "스위치2로 레퀴엠 데모 해봤는데 생각보다 버벅거리던데..",
+          "like": 5
+        },
+        {
+          "nick": "피카소",
+          "text": "스위치2 레퀴엠 데모 버벅여서 구입보류 RE4는 프레임 드랍 없기를 ....",
+          "like": 3
+        },
+        {
+          "nick": "셰리단르파뉴",
+          "text": "솔직히 이건 안 나올수가 없지",
+          "like": 2
+        },
+        {
+          "nick": "시나키",
+          "text": "오 기대된다",
+          "like": 0
+        },
+        {
+          "nick": "잡초tm",
+          "text": "Re9 프레임 드랍이 좀 심하던데 어떻게 안되나",
+          "like": 2
+        },
+        {
+          "nick": "플스소유자",
+          "text": "스위치2에 레퀴엠 데모있어서 해봤는데 기대 안하고 해봤다가 생각보다 그래픽도 좋고 프레임도 좋아서 깜짝 놀람. 너무기대 안한 탓도 있겠지만 4080super로 풀옵수준으로 스팀판 플레이 하고 있음에도 스위치2버전도 충분히 좋아보였음",
+          "like": 2
+        },
+        {
+          "nick": "DearDream",
+          "text": "RE4가 워낙에 최적화가 잘되어있는터라(갓적화) 스위치2 이식도 잘될 것 같습니다!",
+          "like": 2
+        }
+      ]
+    },
+    {
+      "id": "ruliweb-225530",
+      "title": "정착지에 풀려난 교활하고 잔인한 사냥꾼, 에이리언 아이솔레이션 2",
+      "url": "https://bbs.ruliweb.com/news/read/225530",
+      "source": "루리웹",
+      "date": "2026.06.10",
+      "views": 1108,
+      "comments": 1,
+      "summary": "12년 만에 신작 게임 '에이리언 아이솔레이션 2'가 공개되며 팬들의 기대를 모았으며, 이번 작품은 전작의 1인칭 시점과 에일리언의 지능적인 사냥 메커니즘을 계승...",
+      "image": "https://img.ruliweb.com/data/news/tn/26/06/08/19ea59c8722_btdegr.webp",
+      "author": "김영훈 기자",
+      "content": [
+        {
+          "t": "p",
+          "v": "[기사 제목] 정착지에 풀려난 교활하고 잔인한 사냥꾼, 에이리언 아이솔레이션 2"
+        },
+        {
+          "t": "p",
+          "v": "조회수 1108 | 루리웹 | 입력 2026.06.10 (23:00:00)"
+        },
+        {
+          "t": "p",
+          "v": "[기사 본문] 할리우드 역사상 가장 치명적인 크리처와 다시금 숨바꼭질을 즐길 시간이다. ‘에이리언: 파이어팀 엘리트’와 ‘에이리언: 다크 디센트’의 아쉬움을 뒤로 하고 장장 12년 만에 ‘에이리언 아이솔레이션 2’가 정식 발표됐다. 앞서 SGF 2026 쇼케이스를 통해 약 1분 40초간 짧은 티저를 공개한 데 이어 이튿날부터 진행되는 현장 시연서 20분 가량 게임 도입부를 플레이할 기회가 주어졌다. 아쉽지만 영상 촬영은 허용치 않았다."
+        },
+        {
+          "t": "p",
+          "v": "그래도 대략의 분위기는 전달하기 쉬울 듯한데, 티저 속 폭풍이 몰아치는 스산하고 죽어가는 숲이 바로 도입부 배경이기 때문이다. 게임은 전작과 마찬가지로 1인칭이며 플레이어블 캐릭터는 여성으로, 동료들에게 블레이크라 불린다. 찾아보니 80년대 다크호스 코믹스서 출간된 ‘에이리언 아웃브레이크’란 만화에 동명의 식민지 해병이 등장한다. 나름 최초의 공식 만화라는 상징성을 지닌 작품이라 둘이 동일인물 가능성도 있다."
+        },
+        {
+          "t": "yt",
+          "v": "M_wUIwfs6jY"
+        },
+        {
+          "t": "p",
+          "v": "SGF 쇼케이스서 발표된 '에이리언 아이솔레이션 2', 무려 12년 만이다"
+        },
+        {
+          "t": "p",
+          "v": "필자의 추론이 맞든 틀리든 무관하게 작중 시점에 블레이크는 식민지 해병이 아닌 웨이랜드-유타니 소속 노동자로 내지 기술자로 묘사된다. 그녀는 소규모 크루의 리더로서 동료인 오토, 콜과 함께 트레일러를 몰아 폭풍의 영향권에서 벗어나려던 참이다. 그러나 창졸간 엄청난 섬광과 후폭풍이 그들을 덮치고, 오토와 콜이 트레일러의 상태를 복구하는 사이 블레이크가 육로로 사태 파악에 나선다. 이때부터 직접 조작이 가능하다."
+        },
+        {
+          "t": "p",
+          "v": "여기서 특기할 점은 두 가지다. 첫째로 티저를 통해 엿볼 수 있듯 환경 묘사가 놀라운 수준에 다다랐다. 전작서 이미 ‘에이리언’ 특유의 카세트 퓨처리즘 세계관을 포토리얼리스틱 비주얼로 재현해 진짜 영화 속으로 들어간 느낌을 줬는데, 이제 한 단계 더 나아가 복잡다단한 지형은 물론 폭풍우의 비산하는 물보라와 산란하는 손전등 불빛까지 실감나게 담아낸다. 물론 후술할 우주선이나 전초기지 내 묘사 역시 전작을 훌쩍 뛰어넘는다."
+        },
+        {
+          "t": "img",
+          "v": "https://i2.ruliweb.com/img/26/06/10/19eafe814c74c329e.webp"
+        },
+        {
+          "t": "p",
+          "v": "새로운 무대는 쿠로사키 스테이션이란 전초기지가 있는 외딴 식민지 행성"
+        },
+        {
+          "t": "p",
+          "v": "둘째로 우주정거장을 무대로 삼은 전작과 달리 ‘에이리언 아이솔레이션 2’는 행성에 두 발을 내딛은 채 진행된다는 거다. 세가가 낸 홍보 자료를 보면 본작의 주요 배경이 쿠로사키 스테이션이라는데, 사실 티저에 나오는 장소는 그곳이 아니다. 즉 여기서 야외는 단순히 도입부에 쓸 일회성 구간이 아니라 게임 내내 이 시설과 저 시설 사이를 오가는 더 넓은 지역의 존재를 암시한다. 당연히 숲 속을 활보하는 에이리언도 보게 될 터다."
+        },
+        {
+          "t": "p",
+          "v": "그래서 티저의 장소가 어디냐 하면 다름아닌 세바스토폴 우주정거장과 관련된 무언가다. 세바스토폴 본체는 전작 막바지에 가스 행성인 KG-348로 부딪쳤으니 탈출선이나 일찍 분리된 부속으로 추정된다. 아무튼 이 구조물이 트레일러 주변에 떨어지며 갑작스레 섬광이 발생했던 것. 폭풍이 몰려오니 어서 빨리 자리를 피하자는 콜의 강권에도 불구하고 우리의 주인공 블레이크는 혹시 생존자가 있을지 모른다며 구조물 안으로 들어선다."
+        },
+        {
+          "t": "img",
+          "v": "https://i3.ruliweb.com/img/26/06/08/19ea591ed4d4c329e.webp"
+        },
+        {
+          "t": "p",
+          "v": "정말 누군가 생존하기야 했다. 사람이 아니라 지긋지긋한 그 녀석 말이다"
+        },
+        {
+          "t": "p",
+          "v": "그 다음은 다들 예상할 법한 흐름이다. 탈출선 내부는 심하게 파손됐고 하반신이 통째로 뜯긴 워킹 조가 엉겨 붙는 점프 스케어가 이어진다. 곳곳에 놓인 부품을 모아 전력을 복구하는데 별안간 에이리언이 튀어나와 가까운 책상 아래로 숨는 블레이크. 전작서 지독할 만치 아만다 리플리를 괴롭혔던 에이리언 가운데 적어도 한 마리가 세바스토폴의 추락서 살아남은 모양이다. 녀석을 피해 탈출선 출구로 돌아가기까지가 시연 분량이었다."
+        },
+        {
+          "t": "p",
+          "v": "세이브는 여전히 비상 전화기서 수동으로 가능하며 상호작용 시 오래 누르기 및 연타를 요구하는 점 역시 전작과 동일하다. 부러 상호작용을 지연시켜 손에 땀을 쥐게 만드는 특유의 수법이다. 불길한 BGM이 깔리고 쿵쾅대는 소리가 점차 커지는데 세이브에 버튼 홀드가 세월아 네월아라니, 정말 기분 째지지(…) 않겠나. 메인터넌스 터널로 숨어 은밀히 움직인다든지 벽 옆에 몸을 기울여 엿보는 조작도 전작을 즐겼다면 익숙할 터다."
+        },
+        {
+          "t": "img",
+          "v": "https://i2.ruliweb.com/img/26/06/10/19eafeb01164c329e.webp"
+        },
+        {
+          "t": "p",
+          "v": "비상 전화기도 건재, 호불호가 갈리는 요소지만 개인적으로 퍽 반가웠다"
+        },
+        {
+          "t": "p",
+          "v": "‘에이리언 아이솔레이션’이 원작 팬덤에게 크게 사랑받은 건 무엇보다 에이리언의 지능적인 사냥법을 제대로 구현한 바가 컸다. 주변이 어둡다고 손전등을 키면 에이리언의 주의를 끌게 된다. 시끄럽게 뛰거나 심지어 성큼성큼 걷기만 해도 에이리언에게 나 여기 있소, 광고하는 꼴이다. 스크립트에 따라 일정 구간을 오가며 미리 짜여진 반응을 보여줄 뿐인 여느 게임 속 추적자와 달리 이 녀석은 진짜 살아 숨쉬는 생명체처럼 군다."
+        },
+        {
+          "t": "p",
+          "v": "본래 동작 감지기로 에이리언과 얼마나 가까운지 정도는 알 수 있을 텐데 금번 시연서 블레이크는 그조차 얻기 전이다. 사실 이렇게나 초반부면 게임에 대해 더 알아내려야 알아낼 바가 별로 없다. 하나 분명한 건 갑작스레 에이리언이 쿵 소리를 울리며 내려섰을 때 -당연히 시연 도중에 나올 걸 알았음에도-심장이 마구 뛰기 시작했다는 거다. 12년 만에 사냥이 다시 시작됐고, 이번에도 나는 사냥꾼 아닌 사냥감이라는 전율이 흘렀다."
+        },
+        {
+          "t": "img",
+          "v": "https://i3.ruliweb.com/img/26/06/10/19eafe4738c4c329e.webp"
+        },
+        {
+          "t": "p",
+          "v": "시연 빌드의 블레이크는 동작 감지기조차 없어, 귀를 쫑긋 세우고 다녔다"
+        },
+        {
+          "t": "p",
+          "v": "요컨대 SGF 2026 쇼케이스는 긴 기다림 끝에 ‘에이리언 아이솔레이션 2’가 나온다는 낭보를 전할 축제였으며, 현장 시연의 취지 역시 그와 같은 맥락서 이해해야겠다. 전작의 코어 메커니즘을 충실히 계승한 속편이 여기 실존하니 대략적인 분위기나 느껴보라는 첫 대면식 말이다. 물론 어쩌다 저 외딴 정착지에 에이리언이 풀려나고 마는지 사건의 발단을 보여줄 필요도 있었을 터다. 참 세바스토폴은 두고두고 말썽이구나 싶다."
+        },
+        {
+          "t": "p",
+          "v": "결국 속편에서 에이리언은 또 얼마나 영리해졌을지, 동작 감지기와 이온 용접기 외에 새로운 기믹 장비가 나올지, 화염방사기보다 더 강력한 무기가 주어질지, 전초기지 일대가 어쩌면 오픈필드로 구현될지 등등 수많은 의문의 답을 찾는 건 다음으로 미뤄야겠다. 당장은 스튜디오가 ‘에이리언 아이솔레이션’을 비롯해 ‘에이리언’ IP의 명작들이 공유하는 어떤 아우라를 이해하고 올바른 방향으로 나아가고 있음에 안도하자."
+        },
+        {
+          "t": "img",
+          "v": "https://i1.ruliweb.com/img/26/06/08/19ea5924a9f4c329e.webp"
+        },
+        {
+          "t": "p",
+          "v": "당장은 '에이리언 아이솔레이션 2'가 올바른 방향으로 가고 있음에 안심"
+        },
+        {
+          "t": "p",
+          "v": "김영훈 기자 grazzy@ruliweb.com"
+        },
+        {
+          "t": "p",
+          "v": "URL"
+        },
+        {
+          "t": "p",
+          "v": "복사"
+        },
+        {
+          "t": "p",
+          "v": "페북"
+        },
+        {
+          "t": "p",
+          "v": "트위터"
+        },
+        {
+          "t": "p",
+          "v": "네이버"
+        },
+        {
+          "t": "p",
+          "v": "Kakao.init('8496679d80f0c5d13041c128a8343eda'); Kakao.Link.createScrapButton({ container: '#kakao-link-btn', requestUrl: 'https://bbs.ruliweb.com/news/read/225530' });"
+        },
+        {
+          "t": "p",
+          "v": "카톡"
+        },
+        {
+          "t": "p",
+          "v": "관련게임정보 목록"
+        },
+        {
+          "t": "p",
+          "v": "에이리언 아이솔레이션 2"
+        },
+        {
+          "t": "p",
+          "v": "기 종 PC/PS5/XSX/SWITCH2"
+        },
+        {
+          "t": "p",
+          "v": "발 매 일 미정"
+        },
+        {
+          "t": "p",
+          "v": "장 르 서바이벌 호러, 스텔스 액션"
+        },
+        {
+          "t": "p",
+          "v": "가 격"
+        },
+        {
+          "t": "p",
+          "v": "제 작 사 크리에이티브 어셈블리 / 세가"
+        },
+        {
+          "t": "p",
+          "v": "기 타"
+        },
+        {
+          "t": "p",
+          "v": "관련 기사"
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/news/read/65601",
+              "l": "XBOX ONE용 '에이리언: 아이솔레이션' 플레이 동영상"
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/news/read/65312",
+              "l": "에이리언: 아이솔레이션, 예약 판매 실시"
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/news/read/64912",
+              "l": "‘에이리언: 아이솔레이션, 10월 7일 국내 발매"
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/news/read/62544",
+              "l": "[E3] '에일리언 아이솔레이션' 플레이 캠 동영상"
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/game/81632",
+              "l": "에일리언: 아이솔레이션 최신글"
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/game/81632/read/9426690",
+              "l": "아이솔레이션) 클리어 소감"
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/game/81632/read/9426136",
+              "l": "에일리언 아이솔레이션 엔딩 소감"
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/game/81632/read/9425848",
+              "l": "에일리언: 아이솔레이션 리눅스(스팀 덱)에서 한국어 패치 설치하는 법"
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/game/81632/read/9425841",
+              "l": "에일리언: 아이솔레이션 10주년 기념 뉴한글패치 공개 (업데이트)"
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/game/81632/read/9425828",
+              "l": "에일리언: 아이솔레이션 DLC 100% 번역 완료 및 한글패치 배포 예정"
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "v": "댓글"
+        },
+        {
+          "t": "p",
+          "seg": [
+            {
+              "t": "a",
+              "v": "https://bbs.ruliweb.com/news?",
+              "l": "목록보기"
+            }
+          ]
+        }
+      ],
+      "topComments": [
+        {
+          "nick": "AceSaga",
+          "text": "한글 아님???",
+          "like": 0
+        }
+      ]
+    },
+    {
       "id": "ruliweb-225660",
       "title": "세가퍼블리싱코리아 ‘소닉 럼블 파티’, 소닉 35th 애니버서리 이벤트 ...",
       "url": "https://bbs.ruliweb.com/news/read/225660",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "17:40:12",
-      "views": 526,
+      "views": 534,
       "comments": 0,
       "summary": "세가퍼블리싱코리아는 ios/android/pc로 서비스되는 멀티플레이 파티 게임 『소닉 럼블 파티』에서 소닉의 생일을 기념하는 '소닉 35th 애니버서리 이벤트'...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eb0afe410_kxulcg.webp",
@@ -24759,7 +25491,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 526 | 루리웹 | 입력 2026.06.10 (17:40:12)"
+          "v": "조회수 534 | 루리웹 | 입력 2026.06.10 (17:40:12)"
         },
         {
           "t": "p",
@@ -25036,105 +25768,12 @@
       ]
     },
     {
-      "id": "ruliweb-2355650",
-      "title": "네이트더헤이트: NS2용 바이오하자드 RE:2,RE:3,RE:4는 여전히...",
-      "url": "https://bbs.ruliweb.com/news/board/1001/read/2355650?page=2",
-      "source": "루리웹",
-      "date": "2026.06.10",
-      "image": "https://i1.ruliweb.com/ori/26/06/10/19eb0a75bbd242da.webp",
-      "summary": "유명 유출러인 NateTheHate는 바이오하자드 RE 2 바이오하자드 RE 3 바이오하자드 RE 4가 여전히 닌텐도 스위치 2로 출시될 예정이라고 다시 한번 확인해 주었습니다",
-      "time": "17:31",
-      "author": "nokcha",
-      "content": [
-        {
-          "t": "img",
-          "v": "https://i1.ruliweb.com/img/26/06/10/19eb0a75bbd242da.webp"
-        },
-        {
-          "t": "p",
-          "v": "유명 유출러인 NateTheHate는"
-        },
-        {
-          "t": "p",
-          "v": "바이오하자드 RE:2, 바이오하자드 RE:3, 바이오하자드 RE:4가 여전히"
-        },
-        {
-          "t": "p",
-          "v": "닌텐도 스위치 2로 출시될 예정이라고 다시 한번 확인해 주었습니다."
-        }
-      ],
-      "comments": 4,
-      "topComments": [
-        {
-          "nick": "개인과개인이개입된게임",
-          "text": "20121027",
-          "like": 4
-        },
-        {
-          "nick": "BLAZE FIELDING",
-          "text": "늦어서 그렇지 웬만한건 스위치2로 다 나오는구나",
-          "like": 2
-        },
-        {
-          "nick": "새벽러닝",
-          "text": "이번에 트리하우스에서 젤다 시오와 더스크 블러드 플레이할거라는 이 사람의 예상이 완전히 빗나갔던데",
-          "like": 1
-        },
-        {
-          "nick": "가면남작",
-          "text": "9나올 때 78 나오듯이 코브 베로니카 나올 때 쯤 234 나올듯 올해 나오면 경쟁작들 너무 많아짐 ㅋㅋ",
-          "like": 1
-        },
-        {
-          "nick": "동헌캐별멀아오모지리",
-          "text": "스위치2가 성능이 좋나보네요 리메이크를 다 내다니",
-          "like": 3
-        },
-        {
-          "nick": "루리웹-2177028293",
-          "text": "스위치2로 레퀴엠 데모 해봤는데 생각보다 버벅거리던데..",
-          "like": 5
-        },
-        {
-          "nick": "피카소",
-          "text": "스위치2 레퀴엠 데모 버벅여서 구입보류 RE4는 프레임 드랍 없기를 ....",
-          "like": 3
-        },
-        {
-          "nick": "셰리단르파뉴",
-          "text": "솔직히 이건 안 나올수가 없지",
-          "like": 2
-        },
-        {
-          "nick": "시나키",
-          "text": "오 기대된다",
-          "like": 0
-        },
-        {
-          "nick": "잡초tm",
-          "text": "Re9 프레임 드랍이 좀 심하던데 어떻게 안되나",
-          "like": 2
-        },
-        {
-          "nick": "플스소유자",
-          "text": "스위치2에 레퀴엠 데모있어서 해봤는데 기대 안하고 해봤다가 생각보다 그래픽도 좋고 프레임도 좋아서 깜짝 놀람. 너무기대 안한 탓도 있겠지만 4080super로 풀옵수준으로 스팀판 플레이 하고 있음에도 스위치2버전도 충분히 좋아보였음",
-          "like": 2
-        },
-        {
-          "nick": "DearDream",
-          "text": "RE4가 워낙에 최적화가 잘되어있는터라(갓적화) 스위치2 이식도 잘될 것 같습니다!",
-          "like": 2
-        }
-      ]
-    },
-    {
       "id": "ruliweb-225659",
       "title": "인디라 부산, 인디게임 전시회 '빌드 051' 6월 25일(목) 서면에서...",
       "url": "https://bbs.ruliweb.com/news/read/225659",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "17:27:20",
-      "views": 306,
+      "views": 312,
       "comments": 0,
       "summary": "국내 유일의 로컬 기반 인디게임 전시회 '빌드 051'이 오는 6월 25일부터 26일까지 부산 서면 kt&g 상상마당에서 4회 개최된다. 한국연구재단 등이 주최하...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eb0a49cfd_izrchm.webp",
@@ -25146,7 +25785,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 306 | 루리웹 | 입력 2026.06.10 (17:27:20)"
+          "v": "조회수 312 | 루리웹 | 입력 2026.06.10 (17:27:20)"
         },
         {
           "t": "p",
@@ -25284,8 +25923,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225657",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "17:16:03",
-      "views": 841,
+      "views": 847,
       "comments": 0,
       "summary": "스퀘어에닉스는 ps5, xsx, pc로 발매될 예정인 '킹덤 하츠' 시리즈의 최신작 타이틀인 『kingdom hearts iv』의 티저 트레일러를 공개하며 팬들의...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eb099bee6_goanmu.webp",
@@ -25297,7 +25935,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 841 | 루리웹 | 입력 2026.06.10 (17:16:03)"
+          "v": "조회수 847 | 루리웹 | 입력 2026.06.10 (17:16:03)"
         },
         {
           "t": "p",
@@ -25445,8 +26083,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225656",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "16:27:15",
-      "views": 415,
+      "views": 420,
       "comments": 0,
       "summary": "액토즈소프트가 자사 액션 rpg '라테일'의 한국 서비스 20주년을 기념하여 대규모 업데이트 '샤이닝'의 사전예약을 시작했습니다. 이번 업데이트에는 신규 직업 '...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eb06c41aa_rvepyj.webp",
@@ -25458,7 +26095,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 415 | 루리웹 | 입력 2026.06.10 (16:27:15)"
+          "v": "조회수 420 | 루리웹 | 입력 2026.06.10 (16:27:15)"
         },
         {
           "t": "p",
@@ -25722,8 +26359,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225655",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "16:16:31",
-      "views": 369,
+      "views": 372,
       "comments": 0,
       "summary": "넷마블은 신작 오픈월드 액션 rpg에 맞춰 대규모 업데이트를 진행하며, '스타니스 바라테온'의 본거지인 신규 지역 '스톰랜드'를 추가하고 엔드 콘텐츠로 '심연의 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eb063c677_pbexkt.webp",
@@ -25735,7 +26371,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 369 | 루리웹 | 입력 2026.06.10 (16:16:31)"
+          "v": "조회수 372 | 루리웹 | 입력 2026.06.10 (16:16:31)"
         },
         {
           "t": "p",
@@ -25991,8 +26627,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225654",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "15:17:43",
-      "views": 2654,
+      "views": 2697,
       "comments": 6,
       "summary": "반다이남코 엔터테인먼트 코리아는 'final fantasy tactics - the ivalice chronicles'(한국어판)의 특별 사양 컬렉터스 box 예...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eb02c5f0e_ezacgo.webp",
@@ -26004,7 +26639,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 2654 | 루리웹 | 입력 2026.06.10 (15:17:43)"
+          "v": "조회수 2697 | 루리웹 | 입력 2026.06.10 (15:17:43)"
         },
         {
           "t": "p",
@@ -26369,8 +27004,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225653",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "15:09:46",
-      "views": 596,
+      "views": 607,
       "comments": 1,
       "summary": "넥슨은 자회사 엠바크 스튜디오의 pvpve 게임 '아크 레이더스' 다큐멘터리 극장판 '탄생의 여정' 사전예매를 시작했으며, 오는 12일부터 3일간 메가박스 전국 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eb0265eed_gnempi.webp",
@@ -26382,7 +27016,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 596 | 루리웹 | 입력 2026.06.10 (15:09:46)"
+          "v": "조회수 607 | 루리웹 | 입력 2026.06.10 (15:09:46)"
         },
         {
           "t": "p",
@@ -26671,8 +27305,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225652",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "14:52:09",
-      "views": 268,
+      "views": 271,
       "comments": 0,
       "summary": "로지텍이 6월 10일부터 14일까지 코엑스에서 열리는 인벤타리오에 참가해 'logi's play room' 체험 공간을 운영하며 신제품과 특별한 경험을 제공합니다...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eb015a4f9_hbxqcf.webp",
@@ -26684,7 +27317,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 268 | 루리웹 | 입력 2026.06.10 (14:52:09)"
+          "v": "조회수 271 | 루리웹 | 입력 2026.06.10 (14:52:09)"
         },
         {
           "t": "p",
@@ -26856,8 +27489,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225635",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "14:35:00",
-      "views": 237,
+      "views": 239,
       "comments": 0,
       "summary": "엔비디아는 '컨트롤 레조넌트', '딥 락 갤럭틱: 로그 코어' 등 최신 게임 10종에 dlss 기술 적용을 확대하며 게이밍 경험 강화를 예고했다. 특히 '컨트롤 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf42566e_mbfzjs.webp",
@@ -26869,7 +27501,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 237 | 루리웹 | 입력 2026.06.10 (14:35:00)"
+          "v": "조회수 239 | 루리웹 | 입력 2026.06.10 (14:35:00)"
         },
         {
           "t": "p",
@@ -27961,8 +28593,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225651",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "14:14:26",
-      "views": 197,
+      "views": 199,
       "comments": 0,
       "summary": "에이전틱 ai의 실제 운영 환경은 gpu 중심이 아닌 오케스트레이션, db 등 cpu 의존도가 높은 서비스들로 구성되므로 랙 단위 성능 평가가 중요하며, amd ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaff2e9d4_cfhajt.webp",
@@ -27974,7 +28605,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 197 | 루리웹 | 입력 2026.06.10 (14:14:26)"
+          "v": "조회수 199 | 루리웹 | 입력 2026.06.10 (14:14:26)"
         },
         {
           "t": "p",
@@ -28208,8 +28839,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225650",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "14:07:58",
-      "views": 441,
+      "views": 449,
       "comments": 0,
       "summary": "카카오게임즈가 mmorpg '오딘: 발할라 라이징'의 서비스 5주년을 맞아 신규 소서리스 전직 클래스 '알케미스트', 신규 서버 '스카디', '월드 거점 점령전'...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eafed63a4_aifswl.webp",
@@ -28221,7 +28851,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 441 | 루리웹 | 입력 2026.06.10 (14:07:58)"
+          "v": "조회수 449 | 루리웹 | 입력 2026.06.10 (14:07:58)"
         },
         {
           "t": "p",
@@ -28533,8 +29163,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225649",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "14:05:07",
-      "views": 360,
+      "views": 367,
       "comments": 0,
       "summary": "위메이드가 자회사 전기아이피를 통해 서비스하는 pc 온라인게임 '미르의 전설2'에 '빙백신룡 연대기' 제2부 업데이트를 실시하며, 신규 수중 필드인 '수몰된백룡담...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eafeacc66_jrocsz.webp",
@@ -28546,7 +29175,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 360 | 루리웹 | 입력 2026.06.10 (14:05:07)"
+          "v": "조회수 367 | 루리웹 | 입력 2026.06.10 (14:05:07)"
         },
         {
           "t": "p",
@@ -28806,9 +29435,8 @@
       "url": "https://bbs.ruliweb.com/news/read/225645",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "14:00:00",
-      "views": 3527,
-      "comments": 10,
+      "views": 3597,
+      "comments": 11,
       "summary": "'파이널 판타지 레조넌스'가 2026년 10월 22일 다수 플랫폼에 발매되며, 'hd-2d' 그래픽과 진화된 턴제 커맨드 배틀 시스템을 선보인다. 주인공 레인 일...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eafc7ba44_ocijkd.webp",
       "author": "이장원 기자",
@@ -28819,7 +29447,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 3529 | 루리웹 | 입력 2026.06.10 (14:00:00)"
+          "v": "조회수 3597 | 루리웹 | 입력 2026.06.10 (14:00:00)"
         },
         {
           "t": "p",
@@ -29623,6 +30251,11 @@
           "nick": "eFootball™ 킥오프",
           "text": "킹덤하츠 모바일도",
           "like": 0
+        },
+        {
+          "nick": "4do",
+          "text": "브액섭종하고 슬펐는데 브엑이 패키지로 부활하다니 너무좋네요 걱정없이 사야겠어요",
+          "like": 0
         }
       ]
     },
@@ -29632,8 +30265,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225648",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "13:52:53",
-      "views": 179,
+      "views": 180,
       "comments": 0,
       "summary": "글로벌 ai 2d 창작 플랫폼 pixai가 1,500만 사용자 기반의 '커뮤니티 콘테스트' 기능을 출시하며 사용자가 직접 주제와 보상을 설계하는 주도형 챌린지 운...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eafe0424e_sdurtq.webp",
@@ -29645,7 +30277,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 179 | 루리웹 | 입력 2026.06.10 (13:52:53)"
+          "v": "조회수 181 | 루리웹 | 입력 2026.06.10 (13:52:53)"
         },
         {
           "t": "p",
@@ -29889,8 +30521,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225647",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "13:37:17",
-      "views": 1236,
+      "views": 1258,
       "comments": 6,
       "summary": "넷마블이 개발 중인 pc·콘솔 3인칭 협동 액션 신작 '이블베인'이 출시 전부터 이용자와의 적극적인 소통으로 완성도를 높이고 있다. 개발진은 공식 디스코드를 통해...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eafd1f325_zxrisf.webp",
@@ -29902,7 +30533,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 1237 | 루리웹 | 입력 2026.06.10 (13:37:17)"
+          "v": "조회수 1258 | 루리웹 | 입력 2026.06.10 (13:37:17)"
         },
         {
           "t": "p",
@@ -30090,8 +30721,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225646",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "13:11:55",
-      "views": 498,
+      "views": 500,
       "comments": 0,
       "summary": "마블 ip 기반 pvp 슈팅 협동 게임 '마블 라이벌즈'가 시즌 8 후반전 개막과 함께 신규 히어로 사이클롭스를 합류시키고, 18대 18 대규모 전투 모드 '현상...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eafbac741_ihoqgl.webp",
@@ -30103,7 +30733,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 498 | 루리웹 | 입력 2026.06.10 (13:11:55)"
+          "v": "조회수 500 | 루리웹 | 입력 2026.06.10 (13:11:55)"
         },
         {
           "t": "p",
@@ -30419,8 +31049,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225644",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "13:06:16",
-      "views": 436,
+      "views": 437,
       "comments": 0,
       "summary": "아크시스템웍스아시아는 주식회사 마벨러스의 최신작 '목장이야기 let’s! 바람의 그랜드 바자르' 한국어 패키지판을 6월 10일 출시하며, 세계 최고의 바자르를 배...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eafc0243f_blgfqj.webp",
@@ -30432,7 +31061,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 436 | 루리웹 | 입력 2026.06.10 (13:06:16)"
+          "v": "조회수 437 | 루리웹 | 입력 2026.06.10 (13:06:16)"
         },
         {
           "t": "p",
@@ -30926,8 +31555,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225643",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "13:00:13",
-      "views": 329,
+      "views": 333,
       "comments": 0,
       "summary": "넷마블은 모바일 방치형 rpg '스톤에이지'의 정식 출시 100일을 맞아 오는 7월 6일까지 대축제 이벤트를 개최하며 이용자들에게 풍성한 보상을 제공한다. 이번 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf83abee_heuqai.webp",
@@ -30939,7 +31567,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 329 | 루리웹 | 입력 2026.06.10 (13:00:13)"
+          "v": "조회수 333 | 루리웹 | 입력 2026.06.10 (13:00:13)"
         },
         {
           "t": "p",
@@ -31081,8 +31709,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225642",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "11:59:31",
-      "views": 334,
+      "views": 335,
       "comments": 0,
       "summary": "반다이남코 엔터테인먼트 코리아는 산리오 캐릭터즈의 매력이 담긴 파티 게임 '헬로키티 파티 랜드'(한국어판)를 2026년 10월 29일 닌텐도 스위치 및 스위치 2...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf7879ea_vscdam.webp",
@@ -31094,7 +31721,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 334 | 루리웹 | 입력 2026.06.10 (11:59:31)"
+          "v": "조회수 335 | 루리웹 | 입력 2026.06.10 (11:59:31)"
         },
         {
           "t": "p",
@@ -31292,9 +31919,8 @@
       "url": "https://bbs.ruliweb.com/news/read/225641",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "11:54:32",
-      "views": 3514,
-      "comments": 31,
+      "views": 3568,
+      "comments": 33,
       "summary": "반다이남코 엔터테인먼트 코리아는 2005년작 psp 게임 '테일즈 오브 이터니아'의 리마스터 버전인 '테일즈 오브 이터니아 리마스터'(한국어판)를 10월 15일(...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf8dfa4a_ovmenl.webp",
       "author": "이장원 기자",
@@ -31305,7 +31931,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 3514 | 루리웹 | 입력 2026.06.10 (11:54:32)"
+          "v": "조회수 3569 | 루리웹 | 입력 2026.06.10 (11:54:32)"
         },
         {
           "t": "p",
@@ -31833,6 +32459,16 @@
           "nick": "스타킹성애자",
           "text": "극광!",
           "like": 0
+        },
+        {
+          "nick": "동헌캐별멀아오모지리",
+          "text": "어쨋든 리마스터 한글화는 무조건 환영",
+          "like": 0
+        },
+        {
+          "nick": "의지의차이",
+          "text": "데스티니랑 어비스 리메이크좀 ㅠㅠㅠ",
+          "like": 0
         }
       ]
     },
@@ -31842,8 +32478,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225640",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "11:44:50",
-      "views": 1251,
+      "views": 1256,
       "comments": 0,
       "summary": "반다이남코 엔터테인먼트 코리아는 인기 애니메이션 '원피스'의 도트 그래픽 경영 시뮬레이션 게임 '원피스 그랜드 레스토랑'(한국어판)을 닌텐도 스위치 2 및 스위치...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf679593_fzxulp.webp",
@@ -31855,7 +32490,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 1251 | 루리웹 | 입력 2026.06.10 (11:44:50)"
+          "v": "조회수 1256 | 루리웹 | 입력 2026.06.10 (11:44:50)"
         },
         {
           "t": "p",
@@ -32149,8 +32784,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225639",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "11:32:33",
-      "views": 489,
+      "views": 492,
       "comments": 0,
       "summary": "게임트리가 서비스하는 하렘 rpg '그놈은 드래곤'이 축구 시즌 테마 업데이트 '도전! 열정의 드래곤컵!'을 진행하며, 이용자는 이벤트 참여를 통해 신규 전설 환...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf5fcb96_kpjfcu.webp",
@@ -32162,7 +32796,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 489 | 루리웹 | 입력 2026.06.10 (11:32:33)"
+          "v": "조회수 492 | 루리웹 | 입력 2026.06.10 (11:32:33)"
         },
         {
           "t": "p",
@@ -32342,9 +32976,8 @@
       "url": "https://bbs.ruliweb.com/news/read/225638",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "11:24:40",
-      "views": 1486,
-      "comments": 4,
+      "views": 1513,
+      "comments": 5,
       "summary": "스마일게이트가 개발사 엔픽셀의 신작 mmorpg '이클립스: 더 어웨이크닝' 티저 페이지를 개편하고 키 비주얼과 티저 영상을 공개하며 연내 정식 론칭을 본격 예고...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf5892e3_iuzetf.webp",
       "author": "김영훈 기자",
@@ -32355,7 +32988,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 1486 | 루리웹 | 입력 2026.06.10 (11:24:40)"
+          "v": "조회수 1513 | 루리웹 | 입력 2026.06.10 (11:24:40)"
         },
         {
           "t": "p",
@@ -32509,6 +33142,11 @@
           "nick": "범검",
           "text": "잉어킹아저씨",
           "like": 2
+        },
+        {
+          "nick": "치석케어",
+          "text": "카제나가 멀쩡했으면 얘네도 바꼈나? 생각이라도 해볼텐데 카제나 보면 꼬라지가 훤히 보임",
+          "like": 0
         }
       ]
     },
@@ -32518,8 +33156,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225637",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "11:19:15",
-      "views": 216,
+      "views": 219,
       "comments": 0,
       "summary": "컴투스가 '서머너즈 워'의 10회차 글로벌 e스포츠 대회인 swc2026 참가자를 이달 29일까지 모집하며, 오는 8월 예선 시작 후 지역 컵을 거쳐 11월 서울...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf539790_hlfpue.webp",
@@ -32531,7 +33168,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 216 | 루리웹 | 입력 2026.06.10 (11:19:15)"
+          "v": "조회수 219 | 루리웹 | 입력 2026.06.10 (11:19:15)"
         },
         {
           "t": "p",
@@ -32791,8 +33428,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225636",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "11:06:00",
-      "views": 409,
+      "views": 419,
       "comments": 0,
       "summary": "드림에이지의 팀 기반 pvp 신작 '알케론'이 지난 7일 온라인 'pc 게이밍쇼 2026'에 참가해 다큐멘터리를 공개하며 글로벌 주목을 받았다. 이 영상은 탑다운...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf469bf1_fryswt.webp",
@@ -32804,7 +33440,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 409 | 루리웹 | 입력 2026.06.10 (11:06:00)"
+          "v": "조회수 419 | 루리웹 | 입력 2026.06.10 (11:06:00)"
         },
         {
           "t": "p",
@@ -32994,8 +33630,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225614",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "11:00:00",
-      "views": 197,
+      "views": 199,
       "comments": 0,
       "summary": "skt가 일본 ntt 및 대만 중화텔레콤과 손잡고 약 5억 달러 규모의 'iown ai 펀드'를 공동 조성하며 한일 간 ai 생태계 확장에 나선다. 이 펀드는 전...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eafc4d797_egroqy.webp",
@@ -33007,7 +33642,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 197 | 루리웹 | 입력 2026.06.10 (11:00:00)"
+          "v": "조회수 199 | 루리웹 | 입력 2026.06.10 (11:00:00)"
         },
         {
           "t": "p",
@@ -33197,8 +33832,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225634",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "10:45:44",
-      "views": 2062,
+      "views": 2089,
       "comments": 5,
       "summary": "라인게임즈가 자체 개발 서바이버라이크 신작 '엠버 앤 블레이드'의 서비스 플랫폼을 pc를 넘어 플레이스테이션5까지 확대하며 글로벌 발매를 공식 확정했다. 이 게임...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf34a3ce_dnlpqr.webp",
@@ -33210,7 +33844,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 2062 | 루리웹 | 입력 2026.06.10 (10:45:44)"
+          "v": "조회수 2090 | 루리웹 | 입력 2026.06.10 (10:45:44)"
         },
         {
           "t": "p",
@@ -33450,8 +34084,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225633",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "10:39:04",
-      "views": 1021,
+      "views": 1022,
       "comments": 1,
       "summary": "일본 개발사 셰이프팜과 케플러 인터랙티브는 2인 협동 어드벤처 게임 '오비탈스'를 2026년 9월 3일 닌텐도 스위치 2 독점으로 출시한다고 발표했다. 레트로 애...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf2e1631_wqleuh.webp",
@@ -33463,7 +34096,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 1021 | 루리웹 | 입력 2026.06.10 (10:39:04)"
+          "v": "조회수 1022 | 루리웹 | 입력 2026.06.10 (10:39:04)"
         },
         {
           "t": "p",
@@ -33764,8 +34397,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225632",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "10:26:10",
-      "views": 199,
+      "views": 200,
       "comments": 0,
       "summary": "t1 엔터테인먼트 & 스포츠가 sk텔레콤과 협력하여 오는 7월 2일부터 성수동 t 팩토리에서 '암행천문: 별을 헤다' 팝업을 개최한다. 이번 행사는 전시존, 체험...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf2302f7_ykgboh.webp",
@@ -33777,7 +34409,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 199 | 루리웹 | 입력 2026.06.10 (10:26:10)"
+          "v": "조회수 200 | 루리웹 | 입력 2026.06.10 (10:26:10)"
         },
         {
           "t": "p",
@@ -33909,8 +34541,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225631",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "10:23:14",
-      "views": 162,
+      "views": 164,
       "comments": 0,
       "summary": "법무법인 율촌과 글로벌 e스포츠 기업 젠지 이스포츠가 e스포츠 산업 발전 및 선수 권익 보호를 위한 업무협약(mou)을 체결했다. 이번 협약을 통해 양사는 선수들...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf20369c_iwxkzy.webp",
@@ -33922,7 +34553,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 162 | 루리웹 | 입력 2026.06.10 (10:23:14)"
+          "v": "조회수 164 | 루리웹 | 입력 2026.06.10 (10:23:14)"
         },
         {
           "t": "p",
@@ -34050,8 +34681,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225630",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "10:19:29",
-      "views": 832,
+      "views": 848,
       "comments": 4,
       "summary": "라이엇 게임즈가 2026년 리그 오브 레전드에 등장할 신규 암살자 챔피언 '로크'를 공개했으며, 이 캐릭터는 높은 기동력과 광역 스킬을 특징으로 한다. 로크는 적...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf1cb0ad_pgzihr.webp",
@@ -34063,7 +34693,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 832 | 루리웹 | 입력 2026.06.10 (10:19:29)"
+          "v": "조회수 848 | 루리웹 | 입력 2026.06.10 (10:19:29)"
         },
         {
           "t": "p",
@@ -34383,8 +35013,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225629",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "10:11:27",
-      "views": 418,
+      "views": 421,
       "comments": 0,
       "summary": "엔씨소프트의 mmorpg '리니지m'이 6월 24일 'phoenix' 업데이트를 앞두고 사전예약을 시작하며, 이용자는 공식 홈페이지에서 레거시, 리부트, 신규 리...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf1492fc_ysqamu.webp",
@@ -34396,7 +35025,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 418 | 루리웹 | 입력 2026.06.10 (10:11:27)"
+          "v": "조회수 421 | 루리웹 | 입력 2026.06.10 (10:11:27)"
         },
         {
           "t": "p",
@@ -34686,8 +35315,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225628",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "10:05:10",
-      "views": 1392,
+      "views": 1412,
       "comments": 7,
       "summary": "원작자 준(zun)이 설립한 상하이 앨리스 리프라이즈가 동방 프로젝트 대표작 '동방홍마향: 뉴 클래식'을 오는 9월 10일 닌텐도 스위치, ps5, 스팀 등에서 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf0fcf2a_lrpise.webp",
@@ -34699,7 +35327,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 1392 | 루리웹 | 입력 2026.06.10 (10:05:10)"
+          "v": "조회수 1412 | 루리웹 | 입력 2026.06.10 (10:05:10)"
         },
         {
           "t": "p",
@@ -34919,8 +35547,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225627",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "09:57:30",
-      "views": 187,
+      "views": 191,
       "comments": 0,
       "summary": "크로쓰 프로토콜이 네오위즈홀딩스의 에이치랩을 첫 외부 독립 밸리데이터로 합류시키며 메인넷 2.0의 탈중앙화 확대에 나섰다. 이번 참여로 에이치랩은 거래 검증 및 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf08c462_nfzbyx.webp",
@@ -34932,7 +35559,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 187 | 루리웹 | 입력 2026.06.10 (09:57:30)"
+          "v": "조회수 191 | 루리웹 | 입력 2026.06.10 (09:57:30)"
         },
         {
           "t": "p",
@@ -35056,8 +35683,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225626",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "09:55:45",
-      "views": 2302,
+      "views": 2330,
       "comments": 7,
       "summary": "시프트업이 글로벌 흥행작 '스텔라 블레이드'의 닌텐도 스위치 2 버전을 2026년 연내 출시한다고 발표했다. 이는 지난 9일 열린 '닌텐도 다이렉트 2026'을 ...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaf062355_ewdnpv.webp",
@@ -35069,7 +35695,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 2302 | 루리웹 | 입력 2026.06.10 (09:55:45)"
+          "v": "조회수 2330 | 루리웹 | 입력 2026.06.10 (09:55:45)"
         },
         {
           "t": "p",
@@ -35362,8 +35988,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225625",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "09:48:23",
-      "views": 1092,
+      "views": 1095,
       "comments": 2,
       "summary": "디지털터치가 연금술 rpg '카리아의 아틀리에 ~밤의 왕국과 추억의 이정표~'를 2027년 초 ps5, switch 2, xbox 등으로 발매하며 티저 pv를 공...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaeff4328_ropesa.webp",
@@ -35375,7 +36000,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 1092 | 루리웹 | 입력 2026.06.10 (09:48:23)"
+          "v": "조회수 1095 | 루리웹 | 입력 2026.06.10 (09:48:23)"
         },
         {
           "t": "p",
@@ -35665,8 +36290,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225624",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "09:37:08",
-      "views": 173,
+      "views": 174,
       "comments": 0,
       "summary": "서린씨앤아이가 agi의 차세대 m.2 nvme ssd인 ai828 1tb를 출시하며 고성능 스토리지 시장에 진출했다. 이 제품은 pcie 4.0 인터페이스와 3d...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaef622df_erxhga.webp",
@@ -35678,7 +36302,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 173 | 루리웹 | 입력 2026.06.10 (09:37:08)"
+          "v": "조회수 174 | 루리웹 | 입력 2026.06.10 (09:37:08)"
         },
         {
           "t": "p",
@@ -35802,8 +36426,7 @@
       "url": "https://bbs.ruliweb.com/news/read/225623",
       "source": "루리웹",
       "date": "2026.06.10",
-      "time": "09:34:23",
-      "views": 92,
+      "views": 93,
       "comments": 0,
       "summary": "nhn클라우드가 고용노동부 kdt 사업과 구디아카데미와 협력하여 ai 전환 시대에 필요한 mlops 전문 인재 양성에 나선다. 본 과정은 nhn클라우드 공인 강사...",
       "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaef3a20b_roujkv.webp",
@@ -35815,7 +36438,7 @@
         },
         {
           "t": "p",
-          "v": "조회수 92 | 루리웹 | 입력 2026.06.10 (09:34:23)"
+          "v": "조회수 93 | 루리웹 | 입력 2026.06.10 (09:34:23)"
         },
         {
           "t": "p",
@@ -35940,427 +36563,6 @@
         {
           "t": "p",
           "v": "제 작 사 NHN클라우드"
-        },
-        {
-          "t": "p",
-          "v": "기 타"
-        },
-        {
-          "t": "p",
-          "v": "댓글"
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/news?",
-              "l": "목록보기"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ruliweb-225622",
-      "title": "한미마이크로닉스, 브라운더스트2 ‘공포의 꿈 팔레트’ PC 케이스 판매",
-      "url": "https://bbs.ruliweb.com/news/read/225622",
-      "source": "루리웹",
-      "date": "2026.06.10",
-      "time": "09:32:17",
-      "views": 1539,
-      "comments": 1,
-      "summary": "한미마이크로닉스가 모바일 rpg '브라운더스트2'와 협업해 캐릭터 '공포의 꿈 팔레트' 테마의 한정판 pc 케이스를 공개하고 글로벌 판매에 나선다. 이 스페셜 에...",
-      "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaef176fb_xecygz.webp",
-      "author": "유동식 기자",
-      "content": [
-        {
-          "t": "p",
-          "v": "[기사 제목] 한미마이크로닉스, 브라운더스트2 ‘공포의 꿈 팔레트’ PC 케이스 판매"
-        },
-        {
-          "t": "p",
-          "v": "조회수 1539 | 루리웹 | 입력 2026.06.10 (09:32:17)"
-        },
-        {
-          "t": "p",
-          "v": "[기사 본문] AI·서버 및 엔터프라이즈 전원 솔루션 전문기업 한미마이크로닉스(대표: 강현민, 이하 마이크로닉스)는 네오위즈가 서비스하고 겜프스엔이 개발한 모바일 RPG ‘브라운더스트2’와 협업해 제작한 한정판 ‘공포의 꿈 팔레트 PC 케이스’를 공개하고 글로벌 판매를 진행한다고 밝혔다."
-        },
-        {
-          "t": "img",
-          "v": "https://i2.ruliweb.com/img/26/06/10/19eaeefd23dafd4.webp"
-        },
-        {
-          "t": "p",
-          "v": "이번 제품은 브라운더스트2의 인기 캐릭터 ‘공포의 꿈 팔레트’를 테마로 제작한 스페셜 에디션 모델이다. 캐릭터 일러스트와 전용 디자인 요소를 제품 전반에 적용했으며, 브라운더스트2 특유의 분위기를 담은 외관 디자인이 특징이다. 제품은 한정 수량으로 제작되어 판매된다."
-        },
-        {
-          "t": "p",
-          "v": "사전예약 판매는 6월 10일 오전 11시부터 진행되며 판매 가격은 11만8천원이다. 글로벌 동시 판매 방식으로 운영되며, 제품은 6월 22일부터 순차 배송될 예정이다."
-        },
-        {
-          "t": "img",
-          "v": "https://i2.ruliweb.com/img/26/06/10/19eaef01490afd4.webp"
-        },
-        {
-          "t": "p",
-          "v": "해당 제품은 지난 6월 대만 타이베이에서 열린 COMPUTEX 2026 마이크로닉스 부스를 통해 처음 공개됐다. 전시 기간 동안 글로벌 바이어와 관람객들의 관심을 받았으며, 브라운더스트2 IP와 PC 하드웨어를 결합한 협업 제품으로 주목받았다."
-        },
-        {
-          "t": "p",
-          "v": "브라운더스트2는 네오위즈가 서비스하고 겜프스엔이 개발한 모바일 RPG다. 2D 그래픽 기반의 비주얼과 게임팩 형식의 스토리 전개, 전략적인 전투 시스템을 바탕으로 글로벌 이용자층을 확보하고 있다."
-        },
-        {
-          "t": "p",
-          "v": "브라운더스트2 ‘공포의 꿈 팔레트’ PC 케이스에 대한 자세한 정보는 제품 판매 페이지를 통해 확인할 수 있다."
-        },
-        {
-          "t": "p",
-          "v": "유동식 기자 press@ruliweb.com"
-        },
-        {
-          "t": "p",
-          "v": "URL"
-        },
-        {
-          "t": "p",
-          "v": "복사"
-        },
-        {
-          "t": "p",
-          "v": "페북"
-        },
-        {
-          "t": "p",
-          "v": "트위터"
-        },
-        {
-          "t": "p",
-          "v": "네이버"
-        },
-        {
-          "t": "p",
-          "v": "Kakao.init('8496679d80f0c5d13041c128a8343eda'); Kakao.Link.createScrapButton({ container: '#kakao-link-btn', requestUrl: 'https://bbs.ruliweb.com/news/read/225622' });"
-        },
-        {
-          "t": "p",
-          "v": "카톡"
-        },
-        {
-          "t": "p",
-          "v": "관련게임정보 목록"
-        },
-        {
-          "t": "p",
-          "v": "관련 정보"
-        },
-        {
-          "t": "p",
-          "v": "기 종 PC"
-        },
-        {
-          "t": "p",
-          "v": "발 매 일"
-        },
-        {
-          "t": "p",
-          "v": "장 르"
-        },
-        {
-          "t": "p",
-          "v": "가 격"
-        },
-        {
-          "t": "p",
-          "v": "제 작 사 한미마이크로닉스"
-        },
-        {
-          "t": "p",
-          "v": "기 타"
-        },
-        {
-          "t": "p",
-          "v": "관련 기사"
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/news/read/225378",
-              "l": "브라운더스트2, 3주년 역대급 분량 ‘서머 크루즈’ 소개"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/news/read/222151",
-              "l": "㈜네오위즈 ‘브라운더스트2’, 서비스 1,000일 기념 업데이트 오늘(12일) 진행"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/news/read/220093",
-              "l": "브라운더스트2, ‘디자인 검열 수정’ 철회"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/news/read/219756",
-              "l": "㈜네오위즈 ‘브라운더스트2’, 일·중 서브컬쳐 행사에 연이어 참가"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/news/read/219312",
-              "l": "㈜네오위즈 ‘브라운더스트2’, 2.5주년 겨울 이벤트팩 ‘멜트다운 버니즈’ 업데이트"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/game/86356",
-              "l": "브라운더스트 최신글"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/game/86356/read/173013",
-              "l": "브더2 공식 BGM을 찾고 있습니다."
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/game/86356/read/172558",
-              "l": "루웹은 쁘 인기가.."
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/game/86356/read/172177",
-              "l": "[후방] 브더2 역대급 컷씬"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/game/86356/read/171199",
-              "l": "안녕하세요 어제 시작한 뉴비입니다"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/game/86356/read/170803",
-              "l": "브라운더스트2란 무엇인가? - 전투 기초 지식 편 -"
-            }
-          ]
-        },
-        {
-          "t": "p",
-          "v": "댓글"
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "a",
-              "v": "https://bbs.ruliweb.com/news?",
-              "l": "목록보기"
-            }
-          ]
-        }
-      ],
-      "topComments": [
-        {
-          "nick": "행실",
-          "text": "쁘더 케이스 라니 다른 캐릭터도 있을라나",
-          "like": 0
-        }
-      ]
-    },
-    {
-      "id": "ruliweb-225621",
-      "title": "스마일게이트 희망스튜디오, 지역아동센터 창작 멘토 ‘호프 크리에이터’ 7...",
-      "url": "https://bbs.ruliweb.com/news/read/225621",
-      "source": "루리웹",
-      "date": "2026.06.10",
-      "time": "09:27:00",
-      "views": 139,
-      "comments": 0,
-      "summary": "스마일게이트 희망스튜디오가 지역아동센터 아동·청소년과 창작 프로젝트를 진행할 청년 멘토 '호프 크리에이터 7기'를 이달 29일까지 모집하며, 총 33명을 선발한다...",
-      "image": "https://img.ruliweb.com/data/news/tn/26/06/10/19eaeeca4e7_hawloq.webp",
-      "author": "이명규 기자",
-      "content": [
-        {
-          "t": "p",
-          "v": "[기사 제목] 스마일게이트 희망스튜디오, 지역아동센터 창작 멘토 ‘호프 크리에이터’ 7기 모집 중"
-        },
-        {
-          "t": "p",
-          "v": "조회수 139 | 루리웹 | 입력 2026.06.10 (09:27:00)"
-        },
-        {
-          "t": "p",
-          "v": "[기사 본문] - 이달 29일까지 모집. 생성형 AI 기반 창작 활동, 중장기 팀 프로젝트 경험 등 있으면 우대"
-        },
-        {
-          "t": "p",
-          "v": "- 수도권을 비롯해 강릉, 대구, 부산, 전주 등 전국 지역아동센터에서 활동"
-        },
-        {
-          "t": "p",
-          "v": "미래 세대에 희망을 확산하는 스마일게이트 희망스튜디오(이하 ‘희망스튜디오’, 이사장 권혁빈)는 아동 청소년 창의 커뮤니티 ‘팔레트(Palette)’에서 활동할 청년 창작 멘토 ‘호프 크리에이터(Hope Creator) 7기’를 모집한다고 10일 밝혔다."
-        },
-        {
-          "t": "p",
-          "v": "‘팔레트’는 미래 세대가 양육 환경이나 경제적 배경과 관계없이 창작 활동을 통해 스스로 행복한 미래를 그려나갈 수 있도록 돕는 창의 커뮤니티다. ‘호프 크리에이터’는 지역아동센터 아동, 청소년과 함께 관심사를 탐색하고, 창작 프로젝트를 실행하는 청년 멘토다."
-        },
-        {
-          "t": "p",
-          "v": "이번 모집은 아이들에게 자신을 표현하는 창의창작 활동의 즐거움을 전하며, 창의적 리더로 성장하고자 하는 청년을 대상으로 한다. ▲장기간 멘토링을 수행할 수 있는 책임감 ▲생성형 AI 기반 창작 활동 관심 및 경험 ▲중장기 창작 프로젝트, 팀 프로젝트 참여 경험이 있으면 우대한다. 모집 인원은 총 33명이다."
-        },
-        {
-          "t": "p",
-          "v": "7기 호프 크리에이터는 올해 9월부터 내년 2월까지 서울·경기, 강릉, 전주, 대구, 부산 등 전국 지역아동센터에 주 1회(회당 2시간, 총 20주) 방문한다. 활동 기간 동안 아이들의 관심사를 기반으로 게임, 영상, 굿즈 등 다양한 창작 프로젝트를 실행할 예정이다."
-        },
-        {
-          "t": "p",
-          "v": "호프 크리에이터에게는 소정의 활동비가 지급되며 자원봉사 활동 시간을 인정받을 수 있다. 활동이 종료되면 수료증이 제공된다. 자율적인 창작 활동을 위한 공간과 직무적 전문성이 있는 스마일게이트 임직원 멘토링 기회도 제공된다. 수료 후에는 알럼나이(Alumni) 프로그램을 통해 지속적으로 교류하며 팀 프로젝트 지원 혜택도 받을 수 있다."
-        },
-        {
-          "t": "p",
-          "v": "모집 기간은 이달 29일 (월)까지다. 지원자는 희망스튜디오 플랫폼에서 신청서를 기입해 제출하면 된다."
-        },
-        {
-          "t": "p",
-          "v": "호프 크리에이터 6기 수료생 김지오 학생(이화여자대학교 융합전자반도체공학부)은 “처음에는 아이들에게 도움을 주러 갔지만, 함께 창작물을 만들며 오히려 더 큰 영감과 창작의 즐거움을 얻었다”라며 “아이들의 순수한 열정을 이끌어내고 함께 성장하는 기쁨을 누릴 수 있는 만큼, 뜻깊은 도전을 원한다면 참여해 보길 바란다”고 말했다."
-        },
-        {
-          "t": "p",
-          "v": "스마일게이트 희망스튜디오 박재희 팀장은 \"호프 크리에이터는 지역사회 안에서 창작 멘토링 경험을 통해 리더십과 문제해결 능력을 갖춘 창의적 리더로 성장할 수 있는 기회\"라며 \"미래세대에 대한 애정과 AI 기반 창작 활동에 관심 있는 청년들의 많은 관심과 지원 부탁드린다\"고 말했다."
-        },
-        {
-          "t": "p",
-          "v": "한편, 희망스튜디오는 다양한 게임사·IP 등 희망 파트너들과 함께 게이미피케이션 기반 플랫폼을 통해 미래 세대에 희망을 전하며 즐거운 기부 문화를 확산하고 있다."
-        },
-        {
-          "t": "p",
-          "seg": [
-            {
-              "t": "t",
-              "v": "* 모집 페이지 : "
-            },
-            {
-              "t": "a",
-              "v": "https://www.heemangstudio.org/hope/campaignView/0000000928",
-              "l": "바로가기"
-            }
-          ]
-        },
-        {
-          "t": "img",
-          "v": "https://i1.ruliweb.com/img/26/06/10/19eaeebb61fafd4.webp"
-        },
-        {
-          "t": "img",
-          "v": "https://i3.ruliweb.com/img/26/06/10/19eaeeacc3dafd4.webp"
-        },
-        {
-          "t": "p",
-          "v": "이명규 기자 sawual@ruliweb.com"
-        },
-        {
-          "t": "p",
-          "v": "URL"
-        },
-        {
-          "t": "p",
-          "v": "복사"
-        },
-        {
-          "t": "p",
-          "v": "페북"
-        },
-        {
-          "t": "p",
-          "v": "트위터"
-        },
-        {
-          "t": "p",
-          "v": "네이버"
-        },
-        {
-          "t": "p",
-          "v": "Kakao.init('8496679d80f0c5d13041c128a8343eda'); Kakao.Link.createScrapButton({ container: '#kakao-link-btn', requestUrl: 'https://bbs.ruliweb.com/news/read/225621' });"
-        },
-        {
-          "t": "p",
-          "v": "카톡"
-        },
-        {
-          "t": "p",
-          "v": "관련게임정보 목록"
-        },
-        {
-          "t": "p",
-          "v": "관련 정보"
-        },
-        {
-          "t": "p",
-          "v": "기 종 기타"
-        },
-        {
-          "t": "p",
-          "v": "발 매 일"
-        },
-        {
-          "t": "p",
-          "v": "장 르"
-        },
-        {
-          "t": "p",
-          "v": "가 격"
-        },
-        {
-          "t": "p",
-          "v": "제 작 사"
         },
         {
           "t": "p",

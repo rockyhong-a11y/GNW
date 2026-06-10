@@ -310,7 +310,6 @@ async function loadGames(firstLoad = false) {
     STATE.games = data.games;
     STATE.news = data.news || [];
     lastFetchAt = Date.now();
-    document.title = data.meta.title;
     $("#lastUpdated").textContent = `데이터 기준 ${data.meta.updated}`;
     renderSources(data.meta);
     buildMonthSelect();

@@ -560,6 +560,18 @@ function bindCardClicks() {
 }
 
 /* ---------- 출시·이벤트 미리보기 (앱 내 다크 뷰) ---------- */
+function ytIdFrom(url) {
+  if (!url) return null;
+  const m = String(url).match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=))([A-Za-z0-9_-]{8,})/i);
+  return m ? m[1] : null;
+}
+function setDetailOrigBtn(url) {
+  const btn = $("#detailOrigBtn");
+  if (!btn) return;
+  if (url) { btn.href = url; btn.hidden = false; }
+  else btn.hidden = true;
+}
+
 function openGameDetail(g) {
   const ev = EVENT_META[g.eventType] || { label: g.eventType, color: "#6c7aff" };
   const cd = countdownLabel(g);
@@ -572,39 +584,48 @@ function openGameDetail(g) {
     (g.developer && g.developer !== "미상") ? `<span>${esc(g.developer)}</span>` : "",
     price.text ? `<span>${esc(price.text)}</span>` : "",
   ].filter(Boolean).join('<span class="dm-dot">·</span>');
-  const detailImgUrl = g.image || null;
-  const banner = detailImgUrl
-    ? `<div class="detail-banner"><img src="${esc(detailImgUrl)}" alt="" referrerpolicy="no-referrer" onerror="this.closest('.detail-banner').remove()"></div>`
-    : `<div class="detail-banner detail-banner--ph" style="background:linear-gradient(135deg, ${g.color || "#6c7aff"}, ${(g.color || "#6c7aff")}55)"></div>`;
+
+  const ytId = ytIdFrom(g.trailer);
+  const ytEmbed = (id) =>
+    `<div class="detail-video"><iframe src="https://www.youtube.com/embed/${esc(id)}" title="YouTube" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
+
+  // 이미지: 게임 로고/스크린샷. 영상만 있을 때는 플레이스홀더 생략.
+  const banner = g.image
+    ? `<div class="detail-banner"><img src="${esc(g.image)}" alt="" referrerpolicy="no-referrer" onerror="this.closest('.detail-banner').remove()"></div>`
+    : (!ytId ? `<div class="detail-banner detail-banner--ph" style="background:linear-gradient(135deg, ${g.color || "#6c7aff"}, ${(g.color || "#6c7aff")}55)"></div>` : "");
+
   const badge = (arr, cls) => (arr || []).map((x) => `<span class="badge ${cls}">${esc(cls === "tag" ? "#" + x : x)}</span>`).join("");
   const badges = [badge(g.platforms, "platform"), badge(g.genres, ""), badge(g.tags, "tag")].join("");
-  let body = "";
-  if (g.update) body += `<p>📌 ${esc(g.update)}</p>`;
-  if (g.description) body += `<p>${esc(g.description)}</p>`;
-  if (!body) {
-    // 인벤 캘린더 항목은 본문 설명이 없는 경우가 많음 → 메타로 한 줄 요약을 구성
+
+  const bodyParts = [];
+  if (g.update) bodyParts.push(`<p>📌 ${esc(g.update)}</p>`);
+  if (g.description) bodyParts.push(`<p>${esc(g.description)}</p>`);
+  if (!bodyParts.length) {
     const dev = (g.developer && g.developer !== "미상") ? g.developer : "";
     const line = cd.released
       ? `${dateStr}에 ${ev.label}된 작품입니다.`
-      : cd.tbd
-        ? `출시일 미정인 ${ev.label} 예정작입니다.`
-        : `${dateStr} ${ev.label} 예정작입니다.`;
-    body = `<p>${esc(line)}${dev ? esc(` 개발: ${dev}.`) : ""}</p>`
-         + `<p class="detail-empty">자세한 정보는 아래 '상세정보'에서 확인하세요.</p>`;
+      : cd.tbd ? `출시일 미정인 ${ev.label} 예정작입니다.`
+      : `${dateStr} ${ev.label} 예정작입니다.`;
+    bodyParts.push(`<p>${esc(line)}${dev ? esc(` 개발: ${dev}.`) : ""}</p>`);
   }
-  const links = [
-    g.detailUrl ? `<a class="detail-orig" href="${esc(g.detailUrl)}" target="_blank" rel="noopener">상세정보 ↗</a>` : "",
-    g.trailer ? `<a class="dc-more" href="${esc(g.trailer)}" target="_blank" rel="noopener">▶ 트레일러 보기</a>` : "",
+  if (ytId) bodyParts.push(ytEmbed(ytId));
+
+  // 유튜브가 아닌 트레일러 링크, 출처
+  const extraLinks = [
+    (!ytId && g.trailer) ? `<a class="dc-more" href="${esc(g.trailer)}" target="_blank" rel="noopener">▶ 트레일러 보기</a>` : "",
     (g.source && g.source.url) ? `<a class="dc-more" href="${esc(g.source.url)}" target="_blank" rel="noopener">출처 · ${esc(g.source.name)} ↗</a>` : "",
   ].filter(Boolean).join("");
+
   $("#detailBody").innerHTML = `
     <h1 class="detail-title">${esc(g.titleKr || g.title)}</h1>
     ${(g.title && g.title !== (g.titleKr || g.title)) ? `<p class="detail-subtitle">${esc(g.title)}</p>` : ""}
     <div class="detail-meta">${meta}</div>
     ${banner}
     ${badges ? `<div class="detail-badges">${badges}</div>` : ""}
-    <div class="detail-article">${body}</div>
-    <div class="detail-links">${links}</div>`;
+    <div class="detail-article">${bodyParts.join("")}</div>
+    ${extraLinks ? `<div class="detail-links">${extraLinks}</div>` : ""}`;
+
+  setDetailOrigBtn(g.detailUrl || (g.source && g.source.url) || null);
   $("#detailSheet").hidden = false;
   document.body.classList.add("sheet-open");
   const sc = $("#detailScroll");
@@ -667,8 +688,8 @@ function openDetail(n) {
     <div class="detail-meta">${meta}</div>
     ${banner}
     <div class="detail-article">${body}</div>
-    ${comments}
-    ${n.url ? `<a class="detail-orig" href="${esc(n.url)}" target="_blank" rel="noopener">원문 보기 ↗</a>` : ""}`;
+    ${comments}`;
+  setDetailOrigBtn(n.url || null);
   sheet.hidden = false;
   document.body.classList.add("sheet-open");
   // 항상 글 최상단(제목)부터 보이도록 — 시트를 표시한 뒤 스크롤을 리셋(숨김 상태에선 적용 안 됨).
@@ -682,6 +703,7 @@ function closeDetail() {
   sheet.classList.remove("sliding", "closing");
   sheet.style.transform = "";
   document.body.classList.remove("sheet-open");
+  setDetailOrigBtn(null);
 }
 function bindDetail() {
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#detailSheet").hidden) closeDetail(); });

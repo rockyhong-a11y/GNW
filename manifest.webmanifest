@@ -1,6 +1,6 @@
 {
-  "name": "GNW — Game New Watch",
-  "short_name": "GNW",
+  "name": "GGG — Good Game, Gallantly",
+  "short_name": "GGG",
   "description": "PC · 콘솔 · 모바일 신작 게임 출시(예정) 및 주요 정보",
   "start_url": "./index.html",
   "display": "standalone",

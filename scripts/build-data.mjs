@@ -73,7 +73,7 @@ function makeGame(p) {
     genres: [...new Set((p.genres || []).filter(Boolean))],
     releaseDate: date,
     eventType: p.eventType || "release",
-    status: new Date(date) < TODAY ? "released" : "upcoming",
+    status: (date && date !== "TBD" && new Date(date) < TODAY) ? "released" : "upcoming",
     price: p.price ?? null,
     hypeScore: p.hypeScore ?? null,
     rating: p.rating ?? null,
@@ -105,7 +105,7 @@ function baseGameName(t) {
   let s = String(t);
   s = s.split(/\s[-–—~]\s/)[0];                          // " - " 이후 부제 제거
   s = s.replace(/[「」『』《》〈〉【】［］\[\]()<>]/g, " "); // 괄호류 제거
-  s = s.replace(/['"‘’“”]/g, " ");    // 따옴표 제거
+  s = s.replace(/['"''""]/g, " ");    // 따옴표 제거
   s = s.replace(/\d+(\.\d+)*\s*(버전|시즌|주년|챕터)/g, " "); // "4.3버전" 등 제거
   s = s.replace(/시즌\s*\d+/g, " ");                       // "시즌 5" 제거
   s = s.replace(/\b\d+\.\d+\b/g, " ");                     // 소수 버전(1.1, 4.3) 제거 — 정수("007","8020")는 보존
@@ -164,7 +164,8 @@ function invenMonths(html) {
   return s;
 }
 // 한 달 분량 HTML 에서 일정 항목 파싱 → out 에 추가. seen 으로 월/소스 간 중복 제거.
-function parseInvenCalendar(html, out, seen) {
+// tbd=true: 날짜 없는 항목도 releaseDate="TBD" 로 수집 (미정 페이지용).
+function parseInvenCalendar(html, out, seen, tbd = false) {
   const abs = (u) => !u ? null : (u.startsWith("/") ? "https://www.inven.co.kr" + u : u);
   const stripTags = (s) => String(s || "").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
   // 인벤 분류 텍스트 → GNW eventType
@@ -196,7 +197,10 @@ function parseInvenCalendar(html, out, seen) {
       const md = it.match(/calendar__day-num'?[^>]*>\s*(\d{1,2})\/(\d{1,2})/);
       if (md) { let y = TODAY.getFullYear(); if (+md[1] < TODAY.getMonth() + 1 - 6) y++; date = `${y}-${md[1].padStart(2, "0")}-${md[2].padStart(2, "0")}`; }
     }
-    if (!date) continue;
+    if (!date) {
+      if (!tbd) continue;
+      date = "TBD";
+    }
 
     const sort = (it.match(/calendar__event-sort">([^<]+)/) || it.match(/calendar__platform-txt">([^<]+)/) || [])[1];
     const eventType = evMap(sort);
@@ -210,11 +214,14 @@ function parseInvenCalendar(html, out, seen) {
     const platforms = [...new Set([...it.matchAll(/calendar__platform-icon--([a-z0-9]+)/g)].map((x) => PLAT[x[1]]).filter(Boolean))];
     const tags = [...it.matchAll(/class="calendar__event-tag">\s*([^<]+?)\s*<\/span>/g)].map((x) => x[1].trim()).filter(Boolean);
 
-    // 같은 일정이 여러 달 HTML 에 겹쳐 나올 수 있으므로 id+날짜로 중복 제거
+    // 같은 일정이 여러 달 HTML 에 겹쳐 나올 수 있으므로 id+날짜로 중복 제거.
+    // TBD 항목은 날짜 확정 버전이 이미 있으면 스킵(날짜 확정 시 월별 스케줄로 자동 이동).
     const id = idx ? `inven-${idx}` : `inven-${slug(title)}`;
     const dedupKey = `${id}@${date}`;
     if (seen.has(dedupKey)) continue;
+    if (date === "TBD" && seen.has(`${id}@dated`)) continue;
     seen.add(dedupKey);
+    if (date !== "TBD") seen.add(`${id}@dated`);
 
     // company: 출시형은 원제(영문), 행사형은 설명문 → 분배
     const isDesc = /[.!?。…]$|습니다|됩니다|진행|예정|공개|출시|개최|등장/.test(company);
@@ -285,6 +292,7 @@ async function fromInven(out) {
       (y, m) => `${B}?ym=${y}${pad(m)}`,
       (y, m) => `${B}?sdate=${y}-${pad(m)}-01`,
       (y, m) => `${B}${y}/${pad(m)}/`,
+      (y, m) => `${B}${y}/${pad(m)}`,    // 인벤 실제 경로(/2026/13 등, trailing slash 없음)
     ];
     const Y = TODAY.getFullYear();
     const cur = TODAY.getMonth() + 1;
@@ -303,6 +311,7 @@ async function fromInven(out) {
 
     if (fmt) {
       let monthsHit = 0;
+      // 현재 연도 나머지 월
       for (let m = 1; m <= 12; m++) {
         if (m === cur) continue;
         const { html, status } = await invenFetch(fmt(Y, m));
@@ -311,8 +320,34 @@ async function fromInven(out) {
         if (n) monthsHit++;
         added += n;
       }
-      console.log(`[inven] ${Y}년 월별 수집 완료: 추가 월 ${monthsHit} · 누적 일정 ${added}`);
+      // 내년(Y+1) 전체 월 — 2027+ 일정이 인벤에 등록되면 자동 수집
+      for (let m = 1; m <= 12; m++) {
+        const { html, status } = await invenFetch(fmt(Y + 1, m));
+        if (status !== 200 || !html) continue;
+        const n = parseInvenCalendar(html, out, seen);
+        if (n) monthsHit++;
+        added += n;
+      }
+      console.log(`[inven] ${Y}~${Y + 1}년 월별 수집 완료: 추가 월 ${monthsHit} · 누적 일정 ${added}`);
     }
+
+    // 미정(TBD) 페이지 수집: 인벤 월=13이 "출시일 미정" 목록.
+    // 날짜 확정 항목이 TBD 목록에서 사라지면 자동으로 월별 스케줄로 이동됨.
+    const fetchTbd = async (year) => {
+      const urls = new Set([`${B}${year}/13`, `${B}${year}/13/`]);
+      if (fmt) urls.add(fmt(year, 13));
+      for (const u of urls) {
+        const { html, status } = await invenFetch(u);
+        if (status === 200 && html && html.includes("calendar__item")) {
+          const n = parseInvenCalendar(html, out, seen, true);
+          console.log(`[inven] TBD ${year}: ${u} status=${status} added=${n}`);
+          added += n;
+          return;
+        }
+      }
+    };
+    await fetchTbd(Y);
+    await fetchTbd(Y + 1);
   }
 
   return { name: "Inven", added };
@@ -670,7 +705,7 @@ async function fromRuliwebNews(news) {
       const og = (h.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
         || h.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) || [])[1];
       if (!n.image && og && !/blank|default|logo|no_?image|bi\.png|icon/i.test(og)) n.image = og.replace(/&amp;/g, "&");
-      if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
+      if (!n.summary) { const d = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)(["']/i) || [])[1]; if (d) n.summary = rwText(d).slice(0, 160) || null; }
       if (!n.date) { const d = extractDateTime(h); if (d) { n.date = d.date; if (d.time) n.time = d.time; } }
       if (!n.author) { const a = extractAuthor(h); if (a) n.author = a; }
       if (!n.content || !n.content.length) { const c = extractContent(h); if (c.length) n.content = c; }
@@ -812,8 +847,14 @@ async function main() {
   for (const g of byKey.values()) if (!g.detailUrl) g.detailUrl = detailFor(g.titleKr || g.title); // 폴백: 본 제목 검색
 
   const games = [...byKey.values()]
-    .filter((g) => g.releaseDate && !isNaN(new Date(g.releaseDate)))
-    .sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate));
+    .filter((g) => g.releaseDate === "TBD" || (g.releaseDate && !isNaN(new Date(g.releaseDate))))
+    .sort((a, b) => {
+      // TBD 항목은 항상 맨 뒤
+      if (a.releaseDate === "TBD" && b.releaseDate === "TBD") return 0;
+      if (a.releaseDate === "TBD") return 1;
+      if (b.releaseDate === "TBD") return -1;
+      return new Date(a.releaseDate) - new Date(b.releaseDate);
+    });
 
   // 뉴스: 제목이 80% 이상 유사하면 최신 글만 남기고 중복 제거. 수집 실패/스킵 시 기존 뉴스 유지.
   let news = dedupNewsByTitle(newsItems, 0.8);

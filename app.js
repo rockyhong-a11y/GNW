@@ -572,6 +572,18 @@ function setDetailOrigBtn(url) {
   else btn.hidden = true;
 }
 
+// 상세 본문 블록 렌더(뉴스·게임 미리보기 공용): 단락/이미지/유튜브를 원문 순서대로.
+const detailYtEmbed = (id) => `<div class="detail-video"><iframe src="https://www.youtube.com/embed/${esc(id)}" title="YouTube" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
+const detailPara = (b) => b.seg
+  ? `<p>${b.seg.map((s) => s.t === "a" ? `<a class="detail-link" href="${esc(s.v)}" target="_blank" rel="noopener">${esc(s.l)}</a>` : esc(s.v)).join("")}</p>`
+  : `<p>${esc(b.v || "")}</p>`;
+function renderContentBlocks(content) {
+  return (content || []).map((b) =>
+    b.t === "yt" ? detailYtEmbed(b.v)
+    : b.t === "img" ? `<img class="detail-img" src="${esc(b.v)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`
+    : detailPara(b)).join("");
+}
+
 function openGameDetail(g) {
   const ev = EVENT_META[g.eventType] || { label: g.eventType, color: "#6c7aff" };
   const cd = countdownLabel(g);
@@ -586,8 +598,6 @@ function openGameDetail(g) {
   ].filter(Boolean).join('<span class="dm-dot">·</span>');
 
   const ytId = ytIdFrom(g.trailer);
-  const ytEmbed = (id) =>
-    `<div class="detail-video"><iframe src="https://www.youtube.com/embed/${esc(id)}" title="YouTube" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
 
   // 이미지: 게임 로고/스크린샷. 영상만 있을 때는 플레이스홀더 생략.
   const banner = g.image
@@ -597,10 +607,17 @@ function openGameDetail(g) {
   const badge = (arr, cls) => (arr || []).map((x) => `<span class="badge ${cls}">${esc(cls === "tag" ? "#" + x : x)}</span>`).join("");
   const badges = [badge(g.platforms, "platform"), badge(g.genres, ""), badge(g.tags, "tag")].join("");
 
+  // 본문: 상세 페이지에서 수집한 content[](단락·스샷·영상)가 있으면 뉴스처럼 그대로,
+  // 없으면 설명/안내 문구로 폴백. 트레일러는 본문에 영상이 없을 때만 끝에 임베드.
+  const hasContent = !!(g.content && g.content.length);
+  const hasYtBlock = hasContent && g.content.some((b) => b.t === "yt");
   const bodyParts = [];
   if (g.update) bodyParts.push(`<p>📌 ${esc(g.update)}</p>`);
-  if (g.description) bodyParts.push(`<p>${esc(g.description)}</p>`);
-  if (!bodyParts.length) {
+  if (hasContent) {
+    bodyParts.push(renderContentBlocks(g.content));
+  } else if (g.description) {
+    bodyParts.push(`<p>${esc(g.description)}</p>`);
+  } else {
     const dev = (g.developer && g.developer !== "미상") ? g.developer : "";
     const line = cd.released
       ? `${dateStr}에 ${ev.label}된 작품입니다.`
@@ -608,7 +625,7 @@ function openGameDetail(g) {
       : `${dateStr} ${ev.label} 예정작입니다.`;
     bodyParts.push(`<p>${esc(line)}${dev ? esc(` 개발: ${dev}.`) : ""}</p>`);
   }
-  if (ytId) bodyParts.push(ytEmbed(ytId));
+  if (ytId && !hasYtBlock) bodyParts.push(detailYtEmbed(ytId));
 
   // 유튜브가 아닌 트레일러 링크, 출처
   const extraLinks = [
@@ -643,11 +660,6 @@ function openDetail(n) {
     n.views != null ? `<span>조회 ${Number(n.views).toLocaleString()}</span>` : "",
     n.comments != null ? `<span>댓글 ${n.comments}</span>` : "",
   ].filter(Boolean).join('<span class="dm-dot">·</span>');
-  const ytEmbed = (id) => `<div class="detail-video"><iframe src="https://www.youtube.com/embed/${esc(id)}" title="YouTube" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
-  // 단락 렌더: 링크 세그먼트(seg)는 클릭 가능한 a 로, 텍스트는 이스케이프
-  const para = (b) => b.seg
-    ? `<p>${b.seg.map((s) => s.t === "a" ? `<a class="detail-link" href="${esc(s.v)}" target="_blank" rel="noopener">${esc(s.l)}</a>` : esc(s.v)).join("")}</p>`
-    : `<p>${esc(b.v || "")}</p>`;
   const hasVideo = !!(n.content && n.content.some((b) => b.t === "yt"));
   // 영상 글은 배너(=영상 썸네일)를 생략하고 아래에서 재생 가능한 영상으로 노출
   const banner = (n.image && !hasVideo)
@@ -657,10 +669,7 @@ function openDetail(n) {
   if (n.content && n.content.length) {
     const hasText = n.content.some((b) => b.t === "p");
     const lead = (!hasText && n.summary) ? `<p>${esc(n.summary)}</p>` : ""; // 영상/이미지만 있는 글은 요약을 앞에
-    body = lead + n.content.map((b) =>
-      b.t === "yt" ? ytEmbed(b.v)
-      : b.t === "img" ? `<img class="detail-img" src="${esc(b.v)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`
-      : para(b)).join("");
+    body = lead + renderContentBlocks(n.content);
   } else if (n.summary) {
     body = `<p>${esc(n.summary)}</p>`;
   } else {

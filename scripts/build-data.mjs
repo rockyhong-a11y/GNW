@@ -184,8 +184,8 @@ function parseInvenCalendar(html, out, seen, tbd = false) {
     const it = m[0];
 
     // 제목 (행사형은 .title-text, 출시형은 .calendar__title 직접)
-    let title = (it.match(/class="title-text">[\s\S]*?<\/span>/) || [])[1];
-    if (!title) title = (it.match(/class="calendar__title"[^>]*>[\s\S]*?<\/h3>/) || [])[1];
+    let title = (it.match(/class="title-text">([\s\S]*?)<\/span>/) || [])[1];
+    if (!title) title = (it.match(/class="calendar__title"[^>]*>([\s\S]*?)<\/h3>/) || [])[1];
     title = stripTags(title);
     if (!title || title.length < 2) continue;
 
@@ -210,7 +210,7 @@ function parseInvenCalendar(html, out, seen, tbd = false) {
     const detailUrl = abs((atag.match(/href="([^"]+)"/) || [])[1]);
     const idx = (it.match(/data-game-idx="(\d+)"/) || [])[1] || (detailUrl && (detailUrl.match(/\/game\/(\d+)/) || [])[1]);
     const yt = (it.match(/data-youtube="([^"]+)"/) || [])[1];
-    const company = stripTags((it.match(/class="calendar__company">[\s\S]*?<\/(?:p|span)>/) || [])[1]);
+    const company = stripTags((it.match(/class="calendar__company">([\s\S]*?)<\/(?:p|span)>/) || [])[1]);
     const platforms = [...new Set([...it.matchAll(/calendar__platform-icon--([a-z0-9]+)/g)].map((x) => PLAT[x[1]]).filter(Boolean))];
     const tags = [...it.matchAll(/class="calendar__event-tag">\s*([^<]+?)\s*<\/span>/g)].map((x) => x[1].trim()).filter(Boolean);
 

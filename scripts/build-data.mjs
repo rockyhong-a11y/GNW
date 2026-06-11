@@ -59,7 +59,7 @@ const GENRE_MAP = {
 const normTitle = (t) => t.toLowerCase().replace(/[^a-z0-9가-힣]/g, "");
 const slug = (t) => normTitle(t).replace(/[^a-z0-9]/g, "-").slice(0, 40) || "game";
 const trailerFor = (t, dev) =>
-  `https://www.youtube.com/results?search_query=${encodeURIComponent(`${t} ${dev || ""} official trailer`})`;
+  `https://www.youtube.com/results?search_query=${encodeURIComponent(`${t} ${dev || ""} official trailer`)}`;
 
 function makeGame(p) {
   const date = p.releaseDate;
@@ -589,7 +589,7 @@ function extractCommentCount(html) {
   const m = html.match(/"comment_?count"\s*:\s*(\d+)/i)
     || html.match(/comment_count[^>]*>[\s\S]{0,40}?(\d[\d,]*)/i)
     || html.match(/class="num_reply"[^>]*>\s*\[?\s*(\d[\d,]*)/i)
-    || html.match(/댓글[\s:]*<[^>]*>\s*(\d[\d,]*)$/)
+    || html.match(/댓글[\s:]*<[^>]*>\s*(\d[\d,]*)/)
     || html.match(/댓글[\s:(]*(\d[\d,]*)/);
   return m ? +m[1].replace(/,/g, "") : null;
 }
@@ -659,17 +659,7 @@ function extractDateTime(html) {
   let end = html.search(/itemprop=["']articleBody["']/i);
   if (end < 0) end = html.search(/class=["'][^"']*\bview_content\b[^"']*["']/i);
   const head = html.slice(0, end > 0 ? end : Math.min(html.length, 40000));
-  let m = head.match(/(?:"datePublished"\s*:\s"|(?:article:published_time|og:regdate)["'][^>]+content=["'])(
-
-4})-(
-
-2})-(
-
-2})(?:T(
-
-2}:
-
-2}))?/i);
+  let m = head.match(/(?:"datePublished"\s*:\s*"|(?:article:published_time|og:regdate)["'][^>]+content=["'])(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}:\d{2}))?/i);
   if (m) return { date: `${m[1]}.${m[2]}.${m[3]}`, time: m[4] || null };
   m = head.match(/(20\d{2})[.\-](\d{1,2})[.\-](\d{1,2})[\s(]+(\d{1,2}:\d{2})(?::\d{2})?/);
   if (m) return { date: `${m[1]}.${String(m[2]).padStart(2, "0")}.${String(m[3]).padStart(2, "0")}`, time: m[4] };

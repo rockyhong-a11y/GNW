@@ -1,4 +1,4 @@
-diag_at=2026-06-11T04:04:05.155Z
+diag_at=2026-06-11T04:07:58.907Z
 game_targets=140
 game inven-ec8aa4ed8e98ec9d-2026-06-11 https://www.inven.co.kr/webzine/calendar/game/13648 status=200 len=113587
   title=스페이스크래프트 - 게임 캘린더 - 인벤

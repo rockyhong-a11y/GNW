@@ -257,7 +257,9 @@ async function fromInven(out) {
   }
 
   // 진단 파일: 러너가 인벤으로부터 실제로 받은 것을 저장소에 남겨 구조/도달성 확인.
+  // (diagInvenGamePages 가 _inven-debug.txt 를 덮어쓰므로 캘린더 진단은 별도 파일로 분리)
   try {
+    const items = base.html.match(/<li[^>]*class="[^"]*calendar__item[^"]*"[\s\S]*?<\/li>/g) || [];
     const dbg = [
       `fetched_at=${new Date().toISOString()}`,
       `url=${INVEN_CAL.url}`,
@@ -267,9 +269,18 @@ async function fromInven(out) {
       `calendar_game_links=${(base.html.match(/\/webzine\/calendar\/game\/\d+/g) || []).length}`,
       `news_links=${(base.html.match(/\/webzine\/news\/\?news=\d+/g) || []).length}`,
       `upload_imgs=${(base.html.match(/upload\d*\.inven\.co\.kr\/upload/g) || []).length}`,
-      `calendar_items=${(base.html.match(/<li class="calendar__item/g) || []).length}`,
+      `calendar_items(strict)=${(base.html.match(/<li class="calendar__item/g) || []).length}`,
+      `calendar_items(loose)=${items.length}`,
+      // 구조 신호: 어떤 클래스/마크업을 쓰는지(파서 셀렉터 갱신용)
+      `has_calendar__=${/calendar__/.test(base.html)}`,
+      `class_calendar_samples=${[...new Set((base.html.match(/class="(calendar[^"]*)"/g) || []).slice(0, 30))].join(" | ")}`,
+      `is_spa_signals=${["__NEXT_DATA__","__NUXT__","window.__","application/json"].filter((s) => base.html.includes(s)).join("|")}`,
     ].join("\n");
-    await writeFile(join(ROOT, "data/_inven-debug.txt"), dbg + "\n");
+    await writeFile(join(ROOT, "data/_inven-cal-debug.txt"), dbg + "\n");
+    // 캘린더 본문 영역 HTML 덤프(셀렉터 정확 갱신용). calendar 키워드 첫 등장부터 넉넉히.
+    const ci = base.html.search(/calendar__|calendar_list|calendarList|class="calendar/i);
+    const slice = ci >= 0 ? base.html.slice(ci, ci + 60000) : base.html.slice(0, 60000);
+    await writeFile(join(ROOT, "data/_inven-cal-debug.html"), slice);
   } catch { /* 디버그 기록 실패는 무시 */ }
 
   if (!base.html || base.status >= 400) return { name: "Inven", error: `status=${base.status} ${base.err}`.trim(), added: 0 };

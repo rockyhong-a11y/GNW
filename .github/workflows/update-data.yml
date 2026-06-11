@@ -46,7 +46,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          for f in data/games.json data/_inven-debug.txt data/_inven-game-debug.html; do
+          for f in data/games.json data/_inven-debug.txt data/_inven-game-debug.html data/_inven-cal-debug.txt data/_inven-cal-debug.html; do
             [ -f "$f" ] && git add "$f"
           done
           if git diff --cached --quiet; then

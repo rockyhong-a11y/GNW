@@ -1,0 +1,784 @@
+calendar__header">
+        <div class="inner">
+    <!-- game-calendar__title 제외하고 모바일 및 태블릿 해상도에서 노출 -->
+<!--    <button type="button" class="menu-btn menu-btn__home" aria-label="홈메뉴" onclick="showResponsiveLeftMenu();">-->
+    <button type="button" class="menu-btn menu-btn__home" aria-label="홈메뉴">
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+            <path d="M2.286 16.3101C2.0633 16.3101 1.87663 16.2348 1.72598 16.084C1.57533 15.9333 1.5 15.7466 1.5 15.5238C1.5 15.301 1.57533 15.1143 1.72598 14.9639C1.87663 14.8134 2.0633 14.7381 2.286 14.7381H18.5299C18.7526 14.7381 18.9393 14.8135 19.09 14.9642C19.2406 15.1149 19.316 15.3017 19.316 15.5245C19.316 15.7473 19.2406 15.9339 19.09 16.0844C18.9393 16.2349 18.7526 16.3101 18.5299 16.3101H2.286ZM2.286 11.191C2.0633 11.191 1.87663 11.1157 1.72598 10.965C1.57533 10.8143 1.5 10.6275 1.5 10.4047C1.5 10.1819 1.57533 9.99528 1.72598 9.8448C1.87663 9.69432 2.0633 9.61909 2.286 9.61909H18.5299C18.7526 9.61909 18.9393 9.69444 19.09 9.84514C19.2406 9.99586 19.316 10.1826 19.316 10.4054C19.316 10.6282 19.2406 10.8148 19.09 10.9653C18.9393 11.1158 18.7526 11.191 18.5299 11.191H2.286ZM2.286 6.07197C2.0633 6.07197 1.87663 5.99661 1.72598 5.84589C1.57533 5.69519 1.5 5.50844 1.5 5.28563C1.5 5.06284 1.57533 4.87621 1.72598 4.72574C1.87663 4.57525 2.0633 4.5 2.286 4.5H18.5299C18.7526 4.5 18.9393 4.57536 19.09 4.72608C19.2406 4.8768 19.316 5.06355 19.316 5.28634C19.316 5.50915 19.2406 5.69578 19.09 5.84626C18.9393 5.99674 18.7526 6.07197 18.5299 6.07197H2.286Z" fill="white"/>
+        </svg>
+    </button>
+    <h1 class="game-calendar__title">
+        <a href="https://www.inven.co.kr/webzine/calendar/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M20.0003 38.8233C30.3962 38.8233 38.8238 30.3957 38.8238 19.9998C38.8238 9.60385 30.3962 1.17627 20.0003 1.17627C9.60434 1.17627 1.17676 9.60385 1.17676 19.9998C1.17676 30.3957 9.60434 38.8233 20.0003 38.8233Z" fill="#6366F1"/>
+                <path d="M35.9646 10.0233C32.6352 15.3351 26.7293 18.8645 19.9999 18.8645C13.2705 18.8645 7.36459 15.3351 4.03516 10.0233C7.3587 4.71157 13.2705 1.17627 19.9999 1.17627C26.7293 1.17627 32.641 4.71157 35.9646 10.0233Z" fill="#787BEF"/>
+                <path d="M30.9535 15.3589V29.3628C30.9535 29.7067 30.6748 29.9855 30.3309 29.9855H9.67053C9.32663 29.9855 9.04785 29.7067 9.04785 29.3628V15.3589H30.9535Z" fill="white"/>
+                <path d="M30.9535 10.8883V15.3591H9.04785V10.8883C9.04785 10.5444 9.32663 10.2656 9.67053 10.2656H30.3309C30.6748 10.2656 30.9535 10.5444 30.9535 10.8883Z" fill="#E64545"/>
+                <path d="M14.5111 12.6566C14.5111 13.0053 14.3305 13.3104 14.0503 13.4847C13.9009 13.5844 13.7203 13.6404 13.5273 13.6404C13.3342 13.6404 13.1599 13.5844 13.0105 13.4909C12.7303 13.3166 12.5435 13.0053 12.5435 12.6566C12.5435 12.3079 12.7303 11.9965 13.0105 11.8159C13.1599 11.7226 13.3342 11.6665 13.5273 11.6665C13.7203 11.6665 13.9009 11.7226 14.0503 11.8222C14.3305 11.9965 14.5111 12.3079 14.5111 12.6566Z" fill="white"/>
+                <path d="M14.0506 9.64281V13.4847C13.9012 13.5843 13.7206 13.6404 13.5275 13.6404C13.3345 13.6404 13.1602 13.5843 13.0107 13.4909V9.64281C13.0107 9.35636 13.2411 9.12598 13.5275 9.12598H13.5338C13.8202 9.12598 14.0506 9.35636 14.0506 9.64281Z" fill="#20273A"/>
+                <path d="M27.4584 12.6566C27.4584 13.0053 27.2778 13.3104 26.9976 13.4847C26.8481 13.5844 26.6675 13.6404 26.4745 13.6404C26.2815 13.6404 26.1072 13.5844 25.9577 13.4909C25.6775 13.3166 25.4907 13.0053 25.4907 12.6566C25.4907 12.3079 25.6775 11.9965 25.9577 11.8159C26.1072 11.7226 26.2815 11.6665 26.4745 11.6665C26.6675 11.6665 26.8481 11.7226 26.9976 11.8222C27.2778 11.9965 27.4584 12.3079 27.4584 12.6566Z" fill="white"/>
+                <path d="M26.9974 9.64281V13.4847C26.8479 13.5843 26.6673 13.6404 26.4743 13.6404C26.2813 13.6404 26.107 13.5843 25.9575 13.4909V9.64281C25.9575 9.35636 26.1879 9.12598 26.4743 9.12598H26.4805C26.767 9.12598 26.9974 9.35636 26.9974 9.64281Z" fill="#20273A"/>
+                <g opacity="0.15">
+                    <path d="M31.2675 32.109C31.2675 32.5092 26.2223 32.8338 20.0007 32.8338C13.7791 32.8338 8.73389 32.5092 8.73389 32.109C8.73389 31.7088 13.7791 31.3887 20.0007 31.3887C26.2223 31.3887 31.2675 31.7088 31.2675 32.109Z" fill="black"/>
+                </g>
+                <path d="M26.0512 20.5114C25.6127 18.9246 23.9819 17.9751 22.3795 18.3711L22.3525 18.3852C22.0544 18.4562 21.8131 18.6265 21.6002 18.8536C21.2738 19.2084 20.6791 19.4483 20.0134 19.4483C19.3464 19.4483 18.7375 19.2084 18.4252 18.8536C18.2265 18.6265 17.971 18.4562 17.673 18.3852L17.646 18.3711C16.0436 17.9751 14.4128 18.9246 13.9742 20.5114C13.4774 22.3267 13.222 23.6438 13.2929 25.2889C13.3071 25.743 13.4916 26.139 13.7897 26.4513C14.0736 26.7635 14.4837 26.9622 14.9237 27.019C15.5326 27.09 16.1287 26.8487 16.5247 26.3945L16.9363 25.9275C17.5325 25.1753 18.6949 24.6657 20.0262 24.6657C21.359 24.6657 22.5072 25.1753 23.1175 25.9275L23.5291 26.3945C23.9251 26.8487 24.5212 27.09 25.1301 27.019C25.5701 26.9764 25.9803 26.7635 26.2641 26.4513C26.5622 26.139 26.7467 25.743 26.7609 25.2889C26.8035 23.6438 26.548 22.3267 26.0512 20.5114ZM18.0846 22.4544H17.3763V23.1627C17.3763 23.4182 17.1634 23.6311 16.908 23.6311C16.6525 23.6311 16.441 23.4182 16.441 23.1627V22.4544H15.7313C15.4759 22.4544 15.2644 22.2415 15.2644 21.9861C15.2644 21.8583 15.3197 21.7306 15.4049 21.6469C15.49 21.5617 15.6036 21.5049 15.7455 21.5049H16.4552V20.7811C16.4552 20.5256 16.6667 20.3141 16.9222 20.3141C17.0499 20.3141 17.1776 20.3709 17.2628 20.456C17.3479 20.5398 17.4047 20.6533 17.4047 20.7953V21.5191H18.113C18.3684 21.5191 18.5813 21.7306 18.5813 21.9861C18.5671 22.2415 18.3542 22.4544 18.0846 22.4544ZM23.3162 20.2857C23.627 20.2857 23.8825 20.5398 23.8825 20.8662C23.8825 21.1785 23.627 21.434 23.3162 21.434C23.004 21.434 22.7343 21.1785 22.7343 20.8662C22.7343 20.5398 22.9898 20.2857 23.3162 20.2857ZM22.1822 22.568C21.8699 22.568 21.6144 22.3125 21.6144 21.9861C21.6144 21.6738 21.8699 21.4198 22.1822 21.4198C22.493 21.4198 22.7485 21.6738 22.7485 21.9861C22.7627 22.2983 22.5072 22.568 22.1822 22.568ZM23.3162 23.6878C23.004 23.6878 22.7343 23.4324 22.7343 23.1059C22.7343 22.7951 22.9898 22.5396 23.3162 22.5396C23.627 22.5396 23.8825 22.7951 23.8825 23.1059C23.8825 23.4324 23.627 23.6878 23.3162 23.6878ZM24.4361 22.568C24.1238 22.568 23.8541 22.3125 23.8541 21.9861C23.8541 21.6738 24.1096 21.4198 24.4361 21.4198C24.7469 21.4198 25.0024 21.6738 25.0024 21.9861C25.0024 22.2983 24.7469 22.568 24.4361 22.568Z" fill="url(#paint0_linear_793_6729)"/>
+                <defs>
+                    <linearGradient id="paint0_linear_793_6729" x1="12.5734" y1="15.1863" x2="25.6342" y2="29.4994" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FFFD97"/>
+                        <stop offset="1" stop-color="#FF3010"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            인벤 게임 캘린더
+        </a>
+    </h1>
+    <button class="menu-btn menu-btn__login btn-logincheck logout" onclick="MOBILE.login();;">
+        로그인    </button>
+    <button class="menu-btn menu-btn__site" title="인벤 전체 사이트맵" aria-label="사이트 메뉴" id="header-sitemap-btn" data-heatmap-group="module" data-heatmap-group-target="self">
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+            <rect x="2.10059" y="2.25" width="7.5" height="7.5" rx="1.125" fill="white"/>
+            <rect x="2.09961" y="11.4336" width="7.5" height="7.5" rx="1.125" fill="white"/>
+            <rect x="11.4336" y="2.25" width="7.5" height="7.5" rx="1.125" fill="white"/>
+            <rect x="11.4336" y="11.4336" width="7.5" height="7.5" rx="1.125" fill="white"/>
+        </svg>
+    </button>
+</div>
+<div id="loading-spinner" class="loading-spinner">
+    <div class="spinner"></div>
+</div>    </header>
+
+            <!-- 캘린더 대시보드 (핫이슈, 카운트다운, 랭킹 등) -->
+        <section class="game-calendar__dashboard">
+            <div class="inner">
+    <!-- 핫이슈 -->
+    <section class="hot-issue hotissueSwiper" style="position:relative;">
+        <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                <a href="https://lineagem.plaync.com/conts/260610_update?ip=lm&cn=phoenix&cc=kr&pi=pre_order&tp=srn&src=google&med=saai&val=perfect&gad_source=1&gad_campaignid=23913795048&gbraid=0AAAAACm__EHixKlA4ER87aU3EgnPLeH0K&gclid=CjwKCAjw857RBhAgEiwAI-1yKDEK9LKrkVuFEtH_XzfAlBXff830L0kClgjox47nu8EBMd-Jf8F3ThoCgC4QAvD_BwE" target="_blank">
+                    <figure class="hot-issue__figure">
+                                                <img src="https://upload3.inven.co.kr/upload/2026/06/10/bbs/i1219361968.jpg" alt="핫이슈 이미지 설명">
+                                            </figure>
+                    <div class="hot-issue__txt">
+                        <p class="hot-issue__subtitle">리니지M</p>
+                        <h3 class="hot-issue__title">'PHOENIX: 업화의 불새' 사전예약 시작!</h3>
+                    </div>
+                </a>
+            </li>
+                        <li class="swiper-slide">
+                <a href="https://www.inven.co.kr/webzine/news/?news=316917" target="_self">
+                    <figure class="hot-issue__figure">
+                                                <img src="https://upload3.inven.co.kr/upload/2026/05/28/bbs/i1229520700.jpg" alt="핫이슈 이미지 설명">
+                                            </figure>
+                    <div class="hot-issue__txt">
+                        <p class="hot-issue__subtitle">Review</p>
+                        <h3 class="hot-issue__title">한계를 넘어선 클래식 오마주, '미나 더 할로워'</h3>
+                    </div>
+                </a>
+            </li>
+                        <li class="swiper-slide">
+                <a href="https://www.inven.co.kr/webzine/news/?news=316852" target="_self">
+                    <figure class="hot-issue__figure">
+                                                <img src="https://upload3.inven.co.kr/upload/2026/05/27/bbs/i1151804968.jpg" alt="핫이슈 이미지 설명">
+                                            </figure>
+                    <div class="hot-issue__txt">
+                        <p class="hot-issue__subtitle">Review</p>
+                        <h3 class="hot-issue__title">우주로 간 11년 전통의 원조 공포 맛집 '디렉티브 8020'</h3>
+                    </div>
+                </a>
+            </li>
+                    </ul>
+        <!-- Pagination (Bullets) -->
+        <div class="swiper-pagination"></div>
+        <!-- Progress Bar -->
+        <div class="swiper-progressbar"><div class="swiper-progressbar-fill"></div></div>
+    </section>
+
+    <!-- 카운트 다운 -->
+    <section class="countdown">
+        <a href="https://lineagem.plaync.com/conts/260610_update?ip=lm&amp;cn=phoenix&amp;cc=kr&amp;pi=pre_order&amp;tp=srn&amp;src=google&amp;med=saai&amp;val=perfect&amp;gad_source=1&amp;gad_campaignid=23913795048&amp;gbraid=0AAAAACm__EHixKlA4ER87aU3EgnPLeH0K&amp;gclid=CjwKCAjw857RBhAgEiwAI-1yKDEK9LKrkVuFEtH_XzfAlBXff830L0kClgjox47nu8EBMd-Jf8F3ThoCgC4QAvD_BwE" target="_blank" class="game-countdown__panel">
+    <div class="game-countdown__game">
+                <img class="game-countdown__icon" src="https://upload3.inven.co.kr/upload/2026/06/10/bbs/i1547753344.jpg" alt="PHOENIX 사전예약">
+                <div class="game-countdown__meta">
+            <p class="game-countdown__period">
+                <span class="game-countdown__status game-countdown__status--lg game-countdown__status--5">예약</span>
+                <span>06.10~06.23</span>
+            </p>
+            <strong class="game-countdown__gname">PHOENIX 사전예약</strong>
+        </div>
+    </div>
+    <p class="game-countdown__timer-label">사전예약 종료까지 남은 시간</p>
+        <div class="game-countdown__timer" data-end="2026-06-23T23:59:59">
+                <div class="game-countdown__timer-item">
+            <strong class="game-countdown__timer-num" data-unit="days">00</strong>
+            <span class="game-countdown__timer-unit">Days</span>
+        </div>
+        <span class="game-countdown__timer-sep" aria-hidden="true"></span>
+        <div class="game-countdown__timer-item">
+            <strong class="game-countdown__timer-num" data-unit="hours">00</strong>
+            <span class="game-countdown__timer-unit">Hours</span>
+        </div>
+        <span class="game-countdown__timer-sep" aria-hidden="true"></span>
+        <div class="game-countdown__timer-item">
+            <strong class="game-countdown__timer-num" data-unit="min">00</strong>
+            <span class="game-countdown__timer-unit">Min</span>
+        </div>
+        <span class="game-countdown__timer-sep" aria-hidden="true"></span>
+        <div class="game-countdown__timer-item">
+            <strong class="game-countdown__timer-num" data-unit="sec">00</strong>
+            <span class="game-countdown__timer-unit">Sec</span>
+        </div>
+            </div>
+    </a>
+
+<script>
+(function() {
+    var el = document.querySelector('.game-countdown__timer[data-end]:not([data-cnt-ready])');
+    if (!el) return;
+    el.dataset.cntReady = '1';
+    var end = new Date(el.dataset.end).getTime();
+    var nums = {
+        days: el.querySelector('[data-unit="days"]'),
+        hours: el.querySelector('[data-unit="hours"]'),
+        min: el.querySelector('[data-unit="min"]'),
+        sec: el.querySelector('[data-unit="sec"]')
+    };
+    var tid = null;
+    function showAvailable() {
+        el.innerHTML = '<strong class="game-countdown__timer-available">AVAILABLE TODAY</strong>';
+    }
+    if (!nums.days) {
+        return;
+    }
+    function tick() {
+        var diff = end - Date.now();
+        if (diff <= 0) {
+            clearInterval(tid);
+            showAvailable();
+            return;
+        }
+        nums.days.textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
+        nums.hours.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+        nums.min.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+        nums.sec.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+    }
+    tick();
+    tid = setInterval(tick, 1000);
+})();
+</script>
+    </section>
+
+    <!-- 인벤 게임즈 -->
+        <section class="inven-games">
+        <figure class="inven-games__figure">
+                            <img src="https://upload3.inven.co.kr/upload/2026/06/05/bbs/i1967601277.jpg" alt="바이오하자드 레퀴엠">
+                        <span class="inven-games__logo" aria-hidden="true"></span>
+        </figure>
+        <a href="https://mkt.shopping.naver.com/link/6a2221930255da44e9cd1d36" target="_blank" class="inven-games__info">
+            <div class="inven-games__txt">
+                <div class="inven-games__title">
+                                        <p class="inven-games__name">바이오하자드 레퀴엠</p>
+                </div>
+                <div class="inven-games__price">
+                                            <span class="inven-games__original">79,800</span>
+                                                            <div class="inven-games__final">
+                        <span class="inven-games__percent">30%</span>
+                                                <strong class="inven-games__amount">55,800<span class="inven-games__unit">원</span>
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+    
+    <!-- TOP 게임 순위 -->
+        <section class="game-rank">
+        <h3 class="game-rank__title">주간<span class="game-rank__title--point"> TOP</span> 게임 순위</h3>
+        <div class="game-rank__swiper swiper">
+            <ul class="swiper-wrapper game-rank__list">
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">1</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/11700" target="_blank">
+                            <span class="game-rank__txt">패스 오브 엑자일2</span>                        </a>
+                    </span>
+                    <span class="game-rank__status rise">1</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">2</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13338" target="_blank">
+                            <span class="game-rank__txt">포르자 호라이즌6</span>                        </a>
+                    </span>
+                    <span class="game-rank__status rise">1</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">3</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13375" target="_blank">
+                            <span class="game-rank__txt">007 퍼스트 라이트</span>                        </a>
+                    </span>
+                    <span class="game-rank__status rise">6</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">4</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/12427" target="_blank">
+                            <span class="game-rank__txt">서브노티카2</span>                        </a>
+                    </span>
+                    <span class="game-rank__status rise">4</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">5</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13261" target="_blank">
+                            <span class="game-rank__txt">솔: 인챈트</span>                        </a>
+                    </span>
+                    <span class="game-rank__status rise">5</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">6</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/10942" target="_blank">
+                            <span class="game-rank__txt">왕좌의 게임: 킹스로드</span>                        </a>
+                    </span>
+                    <span class="game-rank__status fall">1</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">7</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13440" target="_blank">
+                            <span class="game-rank__txt">데드 오어 얼라이브6 라스트 라운드</span>                        </a>
+                    </span>
+                    <span class="game-rank__status new">&nbsp;&nbsp;</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">8</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13525" target="_blank">
+                            <span class="game-rank__txt">데이브 더 다이버: 인 더 정글</span>                        </a>
+                    </span>
+                    <span class="game-rank__status new">&nbsp;&nbsp;</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">9</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13506" target="_blank">
+                            <span class="game-rank__txt">요시와 신기한 도감</span>                        </a>
+                    </span>
+                    <span class="game-rank__status new">&nbsp;&nbsp;</span>
+                </li>
+                            <li class="swiper-slide game-rank__item">
+                    <span class="game-rank__num">10</span>
+                    <span class="game-rank__name">
+                        <a class="game-rank__link" href="https://www.inven.co.kr/webzine/calendar/game/13661" target="_blank">
+                            <span class="game-rank__txt">아스트라에 오라티오</span>                        </a>
+                    </span>
+                    <span class="game-rank__status new">&nbsp;&nbsp;</span>
+                </li>
+                        </ul>
+        </div>
+        <button type="button" class="game-rank__guide-btn" aria-label="가이드 버튼">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10.594 13.9273C10.7534 13.7673 10.8332 13.5693 10.8332 13.3332V9.99984C10.8332 9.76373 10.7532 9.56595 10.5932 9.4065C10.4332 9.24706 10.2354 9.16706 9.99984 9.1665C9.76428 9.16595 9.5665 9.24595 9.4065 9.4065C9.2465 9.56706 9.1665 9.76484 9.1665 9.99984V13.3332C9.1665 13.5693 9.2465 13.7673 9.4065 13.9273C9.5665 14.0873 9.76428 14.1671 9.99984 14.1665C10.2354 14.1659 10.4334 14.0868 10.594 13.9273ZM10.594 7.25984C10.7534 7.10039 10.8332 6.90262 10.8332 6.6665C10.8332 6.43039 10.7532 6.23262 10.5932 6.07317C10.4332 5.91373 10.2354 5.83373 9.99984 5.83317C9.76428 5.83262 9.5665 5.91262 9.4065 6.07317C9.2465 6.23373 9.1665 6.4315 9.1665 6.6665C9.1665 6.9015 9.2465 7.09956 9.4065 7.26067C9.5665 7.42178 9.76428 7.5015 9.99984 7.49984C10.2354 7.49817 10.4334 7.41817 10.594 7.25984ZM9.99984 18.3332C8.84706 18.3332 7.76373 18.1143 6.74984 17.6765C5.73595 17.2387 4.854 16.6451 4.10401 15.8957C3.354 15.1462 2.76039 14.2643 2.32317 13.2498C1.88595 12.2354 1.66706 11.1521 1.6665 9.99984C1.66595 8.84762 1.88484 7.76428 2.32317 6.74984C2.76151 5.73539 3.35512 4.85345 4.10401 4.104C4.85289 3.35456 5.73484 2.76095 6.74984 2.32317C7.76484 1.88539 8.84817 1.6665 9.99984 1.6665C11.1515 1.6665 12.2348 1.88539 13.2498 2.32317C14.2648 2.76095 15.1468 3.35456 15.8957 4.104C16.6446 4.85345 17.2384 5.73539 17.6773 6.74984C18.1162 7.76428 18.3348 8.84762 18.3332 9.99984C18.3315 11.1521 18.1126 12.2354 17.6765 13.2498C17.2404 14.2643 16.6468 15.1462 15.8957 15.8957C15.1446 16.6451 14.2626 17.239 13.2498 17.6773C12.2371 18.1157 11.1537 18.3343 9.99984 18.3332ZM9.99984 16.6665C11.8609 16.6665 13.4373 16.0207 14.729 14.729C16.0207 13.4373 16.6665 11.8609 16.6665 9.99984C16.6665 8.13873 16.0207 6.56234 14.729 5.27067C13.4373 3.979 11.8609 3.33317 9.99984 3.33317C8.13873 3.33317 6.56234 3.979 5.27067 5.27067C3.979 6.56234 3.33317 8.13873 3.33317 9.99984C3.33317 11.8609 3.979 13.4373 5.27067 14.729C6.56234 16.0207 8.13873 16.6665 9.99984 16.6665Z" fill="#AEB4BC"/>
+            </svg>
+        </button>
+        <button type="button" class="game-rank__drop-btn" aria-label="드롭다운 버튼">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1.99967 3.50049C1.59655 3.50049 1.23092 3.74424 1.07467 4.11924C0.918424 4.49424 1.00592 4.92236 1.29342 5.20674L6.29342 10.2067C6.68405 10.5974 7.31842 10.5974 7.70905 10.2067L12.709 5.20674C12.9965 4.91924 13.0809 4.49111 12.9247 4.11611C12.7684 3.74111 12.4028 3.50049 11.9997 3.50049H1.99967Z" fill="#6B7280"/>
+            </svg>
+        </button>
+        <p class="game-rank__guide-text">매주 조회수, 반응도, 투표 등 각종 지표 점수를 종합해 결정됩니다. <button type="button" class="btn_close" aria-label="닫기"></button></p>
+    </section>
+    </div>
+        </section>
+
+        <!-- 캘린더 본문 (게임 리스트) -->
+<section class="game-calendar__body">
+    <div class="inner">
+        <div id="calendar-history-root" hx-history-elt>
+            <!-- 검색 -->
+            <div class="toolbar">
+    <div class="toolbar__tabs">
+        <button type="button" class="toolbar__tab toolbar__tab--main toolbar__tab--active">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <g clip-path="url(#clip0_1113_3148)">
+                    <path d="M10.0002 7.4502C11.7251 7.4502 13.2464 7.52994 14.7483 7.62109C16.7058 7.73989 18.3457 9.16737 18.5549 11.0898C18.7236 12.6402 18.8384 14.3201 18.843 15.876C18.8459 16.8663 18.3915 17.7766 17.7209 18.3203C17.0515 18.8633 16.1718 19.0389 15.3069 18.5762C14.2391 18.0047 13.6429 17.1552 13.3801 16.3018L13.2063 15.7373H6.79517L6.62134 16.3018C6.35858 17.1551 5.76228 18.0047 4.69458 18.5762C3.82964 19.0392 2.94917 18.8634 2.27954 18.3203C1.60898 17.7766 1.15454 16.8662 1.15747 15.876C1.16209 14.3201 1.27691 12.6402 1.44556 11.0898C1.6548 9.16738 3.29477 7.7399 5.2522 7.62109C6.75412 7.52994 8.2754 7.4502 10.0002 7.4502Z" fill="#AEB4BC" stroke="black" stroke-width="1.6"/>
+                    <path d="M6.3667 10.7896C6.41786 10.7897 6.45947 10.8311 6.45947 10.8823V11.9634H7.54053C7.59175 11.9634 7.6332 12.0049 7.6333 12.0562C7.6333 12.1074 7.59181 12.1489 7.54053 12.1489H6.45947V13.231C6.45925 13.282 6.41772 13.3236 6.3667 13.3237C6.31555 13.3237 6.27415 13.2821 6.27393 13.231V12.1489H5.19287C5.14159 12.1489 5.09912 12.1074 5.09912 12.0562C5.09922 12.0049 5.14164 11.9634 5.19287 11.9634H6.27393V10.8823C6.27393 10.831 6.31541 10.7896 6.3667 10.7896ZM13.5571 11.2495C14.0029 11.2495 14.3646 11.6104 14.3647 12.0562C14.3647 12.502 14.0029 12.8638 13.5571 12.8638C13.1115 12.8636 12.7505 12.5018 12.7505 12.0562C12.7506 11.6105 13.1115 11.2497 13.5571 11.2495ZM11.8335 2.81494L12.27 3.20264L12.772 2.90479L15.6147 1.22217C15.6031 2.61891 15.4377 4.59004 15.2944 6.14307C15.235 6.78776 14.7217 7.301 14.0747 7.37354H14.0737L13.6802 7.41748C12.4868 7.55313 11.2556 7.69286 10.0005 7.69287C8.74539 7.69287 7.51413 7.55313 6.3208 7.41748H6.31982L5.92627 7.37354H5.92529C5.27844 7.30087 4.76503 6.78769 4.70557 6.14307C4.56232 4.59 4.39595 2.61888 4.38428 1.22217L7.22803 2.90479L7.73096 3.20264L8.1665 2.81494L9.99951 1.18506L11.8335 2.81494Z" fill="#AEB4BC" stroke="black" stroke-width="1.6"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_1113_3148">
+                        <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            주요 일정
+        </button>
+        <button type="button" class="toolbar__tab toolbar__tab--event">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <g clip-path="url(#clip0_1113_2729)">
+                    <path d="M1.4925 14.9724C1.72483 16.9678 3.40957 18.5521 5.49289 18.6487C6.93285 18.7154 8.4038 18.7501 10.0003 18.7501C11.5967 18.7501 13.0677 18.7154 14.5076 18.6487C16.5909 18.5521 18.2756 16.9678 18.5081 14.9724C18.8308 12.2011 18.8308 9.84102 18.5081 7.06965C18.2756 5.07431 16.5909 3.49004 14.5076 3.39345C13.0677 3.32669 11.5967 3.29199 10.0003 3.29199C8.4038 3.29199 6.93285 3.32669 5.49289 3.39345C3.40957 3.49004 1.72483 5.07431 1.4925 7.06965C1.16982 9.84102 1.16982 12.2011 1.4925 14.9724Z" fill="#AEB4BC"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.04548 1.25028C7.04548 0.757168 6.64574 0.357422 6.15262 0.357422C5.65951 0.357422 5.25976 0.757168 5.25976 1.25028V2.51396C2.83388 2.71606 0.881832 4.59254 0.60543 6.96638C0.274752 9.80638 0.274753 12.2357 0.60543 15.0757C0.889072 17.5117 2.93728 19.424 5.45132 19.5406C6.90552 19.608 8.39028 19.643 10.0001 19.643C11.6098 19.643 13.0946 19.608 14.5489 19.5406C17.0628 19.424 19.111 17.5117 19.3947 15.0757C19.7254 12.2357 19.7254 9.80638 19.3947 6.96638C19.1183 4.59268 17.1664 2.71629 14.7409 2.51401V1.25028C14.7409 0.757168 14.341 0.357422 13.8479 0.357422C13.3548 0.357422 12.9551 0.757168 12.9551 1.25028V2.44126C12.0047 2.41339 11.0278 2.39914 10.0001 2.39914C8.97243 2.39914 7.99578 2.41339 7.04548 2.44125V1.25028ZM12.9551 5.10024V4.22776C12.006 4.19939 11.0297 4.18485 10.0001 4.18485C8.97059 4.18485 7.99439 4.19939 7.04548 4.22775V5.10024C7.04548 5.59335 6.64574 5.99309 6.15262 5.99309C5.65951 5.99309 5.25976 5.59335 5.25976 5.10024V4.30915C3.73711 4.50355 2.55005 5.70528 2.37916 7.17291C2.06446 9.87568 2.06446 12.1664 2.37916 14.8691C2.56018 16.4238 3.88145 17.6801 5.53402 17.7567C6.95974 17.8228 8.41691 17.8573 10.0001 17.8573C11.5832 17.8573 13.0404 17.8228 14.4661 17.7567C16.1187 17.6801 17.44 16.4238 17.621 14.8691C17.9357 12.1664 17.9357 9.87568 17.621 7.17291C17.4501 5.70542 16.2633 4.50378 14.7409 4.30921V5.10024C14.7409 5.59335 14.341 5.99309 13.8479 5.99309C13.3548 5.99309 12.9551 5.59335 12.9551 5.10024ZM7.50446 9.69162C7.50446 10.6059 6.99018 11.1202 6.07589 11.1202C5.16161 11.1202 4.64732 10.6059 4.64732 9.69162C4.64732 8.77734 5.16161 8.26305 6.07589 8.26305C6.99018 8.26305 7.50446 8.77734 7.50446 9.69162ZM10.0003 11.1202C10.9146 11.1202 11.4289 10.6059 11.4289 9.69162C11.4289 8.77734 10.9146 8.26305 10.0003 8.26305C9.08599 8.26305 8.57171 8.77734 8.57171 9.69162C8.57171 10.6059 9.08599 11.1202 10.0003 11.1202ZM15.3533 9.69162C15.3533 10.6059 14.839 11.1202 13.9247 11.1202C13.0104 11.1202 12.4961 10.6059 12.4961 9.69162C12.4961 8.77734 13.0104 8.26305 13.9247 8.26305C14.839 8.26305 15.3533 8.77734 15.3533 9.69162ZM6.07589 15.4058C6.99018 15.4058 7.50446 14.8916 7.50446 13.9773C7.50446 13.063 6.99018 12.5488 6.07589 12.5488C5.16161 12.5488 4.64732 13.063 4.64732 13.9773C4.64732 14.8916 5.16161 15.4058 6.07589 15.4058ZM11.4289 13.9773C11.4289 14.8916 10.9146 15.4058 10.0003 15.4058C9.08599 15.4058 8.57171 14.8916 8.57171 13.9773C8.57171 13.063 9.08599 12.5488 10.0003 12.5488C10.9146 12.5488 11.4289 13.063 11.4289 13.9773Z" fill="black"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_1113_2729">
+                        <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            행사 캘린더
+        </button>
+    </div>
+    <form id="calendar-search-form" class="toolbar__search"
+      hx-post="/webzine/calendar/api/search/_/1"
+      hx-trigger="submit"
+      hx-target="#calendar-result-wrap"
+      hx-swap="innerHTML"
+      hx-indicator="#list-loading"
+      _="
+        on submit
+          set sword to #search-input.value.trim()
+          if sword is empty
+            call alert('검색어를 입력해주세요.')
+            halt
+          end
+          call history.pushState(null, '', '/webzine/calendar/search/' + encodeURIComponent(sword))
+          call #search-input.blur()
+
+        on htmx:configRequest
+          set sword to #search-input.value.trim()
+          if sword is empty
+            halt
+          end
+          set event.detail.path to '/webzine/calendar/api/search/' + encodeURIComponent(sword) + '/1'
+
+         on htmx:afterOnLoad
+            if #calendar-content-wrap
+              call #calendar-content-wrap.classList.add('is-hidden')
+            end
+            if #calendar-result-wrap
+              call #calendar-result-wrap.classList.remove('is-hidden')
+            end
+            if #btn-search-reset
+              call #btn-search-reset.classList.remove('is-hidden')
+            end
+    ">
+        <input type="text"
+           id="search-input"
+           name="sword"
+           class="toolbar__search--input"
+           placeholder="게임, 행사명을 입력해주세요."
+           maxlength="50"
+           value=""
+           _="
+           on input
+              if me.value.trim() is empty
+                  if #btn-search-reset
+                    call #btn-search-reset.classList.add('is-hidden')
+                  end
+              else
+                  if #btn-search-reset
+                    call #btn-search-reset.classList.remove('is-hidden')
+                  end
+              end
+           "
+        >
+        <div class="toolbar__btns">
+            <button type="button"
+                    id="btn-search-reset"
+                    class="toolbar__reset--btn is-hidden"
+                    aria-label="검색 초기화"
+                    _="
+                    on click
+                        set #search-input.value to ''
+                        set #search-input@value to ''
+                        call history.pushState(null, '', '/webzine/calendar')
+
+                        if #calendar-result-wrap
+                          put '' into #calendar-result-wrap.innerHTML
+                          call #calendar-result-wrap.classList.add('is-hidden')
+                        end
+                        if #calendar-content-wrap
+                          call #calendar-content-wrap.classList.remove('is-hidden')
+                        end
+                        if #btn-search-reset
+                          call #btn-search-reset.classList.add('is-hidden')
+                        end
+
+                    ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" fill="#4B5563"/>
+                    <path d="M12 13.0646L8.27376 16.7909C8.13435 16.9303 7.95691 17 7.74144 17C7.52598 17 7.34854 16.9303 7.20913 16.7909C7.06971 16.6515 7 16.474 7 16.2586C7 16.0431 7.06971 15.8657 7.20913 15.7262L10.9354 12L7.20913 8.27376C7.06971 8.13435 7 7.95691 7 7.74144C7 7.52598 7.06971 7.34854 7.20913 7.20913C7.34854 7.06971 7.52598 7 7.74144 7C7.95691 7 8.13435 7.06971 8.27376 7.20913L12 10.9354L15.7262 7.20913C15.8657 7.06971 16.0431 7 16.2586 7C16.474 7 16.6515 7.06971 16.7909 7.20913C16.9303 7.34854 17 7.52598 17 7.74144C17 7.95691 16.9303 8.13435 16.7909 8.27376L13.0646 12L16.7909 15.7262C16.9303 15.8657 17 16.0431 17 16.2586C17 16.474 16.9303 16.6515 16.7909 16.7909C16.6515 16.9303 16.474 17 16.2586 17C16.0431 17 15.8657 16.9303 15.7262 16.7909L12 13.0646Z" fill="#F9FAFB"/>
+                </svg>
+            </button>
+            <button type="submit"
+                    class="toolbar__search--btn"
+                    aria-label="검색 버튼">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M16.643 16.67L19.723 19.75M18.75 11.25C18.75 13.2391 17.9598 15.1468 16.5533 16.5533C15.1468 17.9971 13.2391 18.75 11.25 18.75C9.26088 18.75 7.35322 17.9598 5.9467 16.5533C4.54018 15.1468 3.75 13.2391 3.75 11.25C3.75 9.26088 4.54018 7.35322 5.9467 5.9467C7.35322 4.54018 9.26088 3.75 11.25 3.75C13.2391 3.75 15.1468 4.54018 16.5533 5.9467C17.9598 7.35322 18.75 9.26088 18.75 11.25Z" stroke="#AEB4BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </form>
+</div>
+            <div class="calendar__tab calendar__tab--webzine calendar__tab--active">
+                <div class="calendar">
+                    <div id="calendar-content-wrap" class="calendar-content">
+                        <!-- 필터 -->
+                        <div id="calendar-filter">
+                            <div class="calendar__header" >
+    <div class="calendar-filter-actions"
+         hx-target="#calendar-content-wrap"
+         hx-swap="innerHTML"
+         hx-indicator="#list-loading"
+    >
+        <div class="calendar-year">
+            <div class="calendar-year__controls">
+                <!-- 이전 -->
+                <button type="button" class="calendar-year__btn calendar-year__btn--prev" aria-label="이전"
+                        hx-get="/webzine/calendar/api/list/2025/6"
+                        hx-push-url="/webzine/calendar/2025/6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15.2891 17.9971L15.8359 17.4775C15.9453 17.3408 15.9453 17.1221 15.8359 17.0127L10.8867 12.0361L15.8359 7.08691C15.9453 6.97754 15.9453 6.75879 15.8359 6.62207L15.2891 6.10254C15.1523 5.96582 14.9609 5.96582 14.8242 6.10254L9.08203 11.8174C8.97266 11.9541 8.97266 12.1455 9.08203 12.2822L14.8242 17.9971C14.9609 18.1338 15.1523 18.1338 15.2891 17.9971Z" fill="#1C1C1E"/>
+                    </svg>
+                </button>
+
+                <!-- 년도 -->
+                <span class="calendar-year__current" id="calendar-year-current" data-year="2026">2026년</span>
+
+                <!-- 다음 -->
+                <button type="button" class="calendar-year__btn calendar-year__btn--next" aria-label="다음" disabled                        hx-get="/webzine/calendar/api/list/2027/6"
+                        hx-push-url="/webzine/calendar/2027/6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9.62891 6.10254L9.08203 6.62207C8.97266 6.75879 8.97266 6.97754 9.08203 7.08691L14.0312 12.0361L9.08203 17.0127C8.97266 17.1221 8.97266 17.3408 9.08203 17.4775L9.62891 17.9971C9.76562 18.1338 9.95703 18.1338 10.0938 17.9971L15.8359 12.2822C15.9453 12.1455 15.9453 11.9541 15.8359 11.8174L10.0938 6.10254C9.95703 5.96582 9.76562 5.96582 9.62891 6.10254Z" fill="#1C1C1E"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="calendar-year__actions">
+                <a href="https://forms.gle/muvPgRUYPtpLy9Ba8"  target="_blank" role="button" class="calendar-year__action calendar-year__action--request">일정요청</a>
+                <!-- 최근 -->
+                <button type="button" class="calendar-year__action calendar-year__action--recent"
+                    hx-get="/webzine/calendar/api/list/2026/6"
+                    hx-push-url="/webzine/calendar/2026/6"
+                   >
+                    최근
+                </button>
+            </div>
+        </div>
+        <nav class="calendar-month">
+            <div class="calendar-month__swiper swiper">
+                <ul class="swiper-wrapper calendar-month__list">
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="1월"
+                                    hx-get="/webzine/calendar/api/list/2026/1"
+                                    hx-push-url="/webzine/calendar/2026/1"
+                            >
+                                1월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="2월"
+                                    hx-get="/webzine/calendar/api/list/2026/2"
+                                    hx-push-url="/webzine/calendar/2026/2"
+                            >
+                                2월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="3월"
+                                    hx-get="/webzine/calendar/api/list/2026/3"
+                                    hx-push-url="/webzine/calendar/2026/3"
+                            >
+                                3월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="4월"
+                                    hx-get="/webzine/calendar/api/list/2026/4"
+                                    hx-push-url="/webzine/calendar/2026/4"
+                            >
+                                4월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="5월"
+                                    hx-get="/webzine/calendar/api/list/2026/5"
+                                    hx-push-url="/webzine/calendar/2026/5"
+                            >
+                                5월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn calendar-month__btn--active" title="6월"
+                                    hx-get="/webzine/calendar/api/list/2026/6"
+                                    hx-push-url="/webzine/calendar/2026/6"
+                            >
+                                6월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="7월"
+                                    hx-get="/webzine/calendar/api/list/2026/7"
+                                    hx-push-url="/webzine/calendar/2026/7"
+                            >
+                                7월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="8월"
+                                    hx-get="/webzine/calendar/api/list/2026/8"
+                                    hx-push-url="/webzine/calendar/2026/8"
+                            >
+                                8월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="9월"
+                                    hx-get="/webzine/calendar/api/list/2026/9"
+                                    hx-push-url="/webzine/calendar/2026/9"
+                            >
+                                9월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="10월"
+                                    hx-get="/webzine/calendar/api/list/2026/10"
+                                    hx-push-url="/webzine/calendar/2026/10"
+                            >
+                                10월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="11월"
+                                    hx-get="/webzine/calendar/api/list/2026/11"
+                                    hx-push-url="/webzine/calendar/2026/11"
+                            >
+                                11월</button>
+                        </li>
+                                            <li class="swiper-slide calendar-month__item">
+                            <button type="button" class="calendar-month__btn" title="12월"
+                                    hx-get="/webzine/calendar/api/list/2026/12"
+                                    hx-push-url="/webzine/calendar/2026/12"
+                            >
+                                12월</button>
+                        </li>
+                                                            <li class="swiper-slide calendar-month__item">
+                        <button type="button" class="calendar-month__btn" title="미정"
+                                hx-get="/webzine/calendar/api/list/2026/13"
+                                hx-push-url="/webzine/calendar/2026/13"
+                        >
+                            미정</button>
+                    </li>
+                                    </ul>
+            </div>
+        </nav>
+        <nav class="calendar-platform" >
+            <div class="calendar-platform__swiper swiper">
+                <ul class="swiper-wrapper platform__list">
+
+                    <li class="swiper-slide platform__item">
+                        <button type="button" class="platform__btn platform__btn--all platform__btn--active"
+                        hx-get="/webzine/calendar/api/list/2026/6/"
+                        hx-push-url="/webzine/calendar/2026/6/">
+                        <span class="platform__icon">
+                        </span>
+                            <span class="platform__label">전체</span>
+                        </button>
+                    </li>
+
+                    <li class="swiper-slide platform__item">
+                        <button type="button" class="platform__btn platform__btn--release"
+                                hx-get="/webzine/calendar/api/list/2026/6/release"
+                                hx-push-url="/webzine/calendar/2026/6/release">
+                        <span class="platform__icon">
+                        </span>
+                            <span class="platform__label">출시</span>
+                        </button>
+                    </li>
+                    <li class="swiper-slide platform__item">
+                        <button type="button" class="platform__btn platform__btn--test"
+                                hx-get="/webzine/calendar/api/list/2026/6/test"
+                                hx-push-url="/webzine/calendar/2026/6/test">
+                        <span class="platform__icon">
+                        </span>
+                            <span class="platform__label">테스트</span>
+                        </button>
+                    </li>
+                    <li class="swiper-slide platform__item">
+                        <button type="button" class="platform__btn platform__btn--early-access"
+                                hx-get="/webzine/calendar/api/list/2026/6/early"
+                                hx-push-url="/webzine/calendar/2026/6/early">
+                        <span class="platform__icon">
+                        </span>
+                            <span class="platform__label">얼리액세스</span>
+                        </button>
+                    </li>
+                                            <li class="swiper-slide platform__item">
+                            <button type="button" class="platform__btn platform__btn--pc                                    "
+                            hx-get="/webzine/calendar/api/list/2026/6/pc"
+                            hx-push-url="/webzine/calendar/2026/6/pc"
+                            >
+                            <span class="platform__icon">
+                            </span>
+                                <span class="platform__label">PC</span>
+                            </button>
+                        </li>
+                                            <li class="swiper-slide platform__item">
+                            <button type="button" class="platform__btn platform__btn--mobile                                    "
+                            hx-get="/webzine/calendar/api/list/2026/6/mobile"
+                            hx-push-url="/webzine/calendar/2026/6/mobile"
+                            >
+                            <span class="platform__icon">
+                            </span>
+                                <span class="platform__label">MOBILE</span>
+                            </button>
+                        </li>
+                                            <li class="swiper-slide platform__item">
+                            <button type="button" class="platform__btn platform__btn--ps                                    "
+                            hx-get="/webzine/calendar/api/list/2026/6/ps"
+                            hx-push-url="/webzine/calendar/2026/6/ps"
+                            >
+                            <span class="platform__icon">
+                            </span>
+                                <span class="platform__label">PS</span>
+                            </button>
+                        </li>
+                                            <li class="swiper-slide platform__item">
+                            <button type="button" class="platform__btn platform__btn--xbox                                    "
+                            hx-get="/webzine/calendar/api/list/2026/6/xbox"
+                            hx-push-url="/webzine/calendar/2026/6/xbox"
+                            >
+                            <span class="platform__icon">
+                            </span>
+                                <span class="platform__label">XBOX</span>
+                            </button>
+                        </li>
+                                            <li class="swiper-slide platform__item">
+                            <button type="button" class="platform__btn platform__btn--switch                                    "
+                            hx-get="/webzine/calendar/api/list/2026/6/switch"
+                            hx-push-url="/webzine/calendar/2026/6/switch"
+                            >
+                            <span class="platform__icon">
+                            </span>
+                                <span class="platform__label">SWITCH</span>
+                            </button>
+                        </li>
+                                        <li class="swiper-slide platform__item">
+                        <button type="button" class="platform__btn platform__btn--event"
+                                hx-get="/webzine/calendar/api/list/2026/6/event"
+                                hx-push-url="/webzine/calendar/2026/6/event">
+                        <span class="platform__icon">
+                        </span>
+                            <span class="platform__label">행사</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>                        </div>
+
+                        <!-- 리스트 -->
+                        <div class="calendar__body">
+    <!-- 캘린더 주요 일정 -->
+    <section class="calendar__section calendar__section--main calendar__section--active">
+        <ul class="calendar__list" id="list-item-container">
+                                                    <li class="calendar__item calendar__item--event calendar__item--fixed">
+        <a href="https://youtu.be/6NyLFwPhTFo?si=XgR6SZjQKlLZrSIO" class="calendar__item--group" target="_blank">
+            <div class="calendar__date"><span class='calendar__day-num'>06/13(토)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                                                                <img src="https://static.inven.co.kr/column/webzine/calendar/2026/i1107980326.jpg" alt="메이플스토리 여름 쇼케이스 | 'OVERDRIVE'" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__event-info">
+                        <div class="calendar__event-sort-wrap">
+                            <span class="calendar__event-sort">행사</span>
+                            <span class="calendar__event-country KR">
+                                <span class="blind">KR</span>
+                            </span>
+                        </div>
+                        <div class="calendar__event-title-wrap">
+                            <h3 class="calendar__title">
+                                <span class="title-text">
+                                    메이플스토리 여름 쇼케이스 | 'OVERDRIVE'                                </span>
+                                                                <span class="calendar__event-link-icon" aria-hidden="true">새창</span>
+                                                            </h3>
+                        </div>
+                    </div>
+                    <p class="calendar__company">‘메이플스토리’가 오는 6월 13일 2026 여름 쇼케이스 ‘오버드라이브(OVERDRIVE)’를 진행합니다.</p>
+                    <div class="calendar__event-tags">
+                                                    <span class="calendar__event-tag">메이플스토리</span>
+                                                    <span class="calendar__event-tag"> 오프라인</span>
+                                                    <span class="calendar__event-tag"> 온라인</span>
+                                                    <span class="calendar__event-tag"> 쇼케이스</span>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__social">
+                                                                                                            </div>
+            <div class="calendar__buttons">
+                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EB%A9%94%EC%9D%B4%ED%94%8C%EC%8A%A4%ED%86%A0%EB%A6%AC+%EC%97%AC%EB%A6%84+%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4+%7C+%27OVERDRIVE%27&dates=20260613/20260614&details=%E2%80%98%EB%A9%94%EC%9D%B4%ED%94%8C%EC%8A%A4%ED%86%A0%EB%A6%AC%E2%80%99%EA%B0%80+%EC%98%A4%EB%8A%94+6%EC%9B%94+13%EC%9D%BC+2026+%EC%97%AC%EB%A6%84+%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4+%E2%80%98%EC%98%A4%EB%B2%84%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%28OVERDRIVE%29%E2%80%99%EB%A5%BC+%EC%A7%84%ED%96%89%ED%95%A9%EB%8B%88%EB%8B%A4.+%3A+https%3A%2F%2Fyoutu.be%2F6NyLFwPhTFo%3Fsi%3DXgR6SZjQKlLZrSIO&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                                                    <a href="https://maplestory.nexon.com/promotion/event/2026/20260507/event01" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--event">
+        <a href="https://www.inven.co.kr/webzine/news/?news=316739" class="calendar__item--group" target="_blank">
+            <div class="calendar__date"><span class='calendar__day-num'>06/01(월)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                                                                <img src="https://static.inven.co.kr/column/webzine/calendar/2026/i1564188049.jpg" alt="붕괴: 스타레일 4.3버전 - 「산 자의 망천에 잠겨」" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__event-info">
+                        <div class="calendar__event-sort-wrap">
+                            <span class="calendar__event-sort">업데이트</span>
+                            <span class="calendar__event-country ">
+                                <span class="blind"></span>
+                            </span>
+                        </div>
+                        <div class="calendar__event-title-wrap">
+                            <h3 class="calendar__title">
+                                <span class="title-text">
+                                    붕괴: 스타레일 4.3버전 - 「산 자의 망천에 잠겨」                                </span>
+                                                                <span class="calendar__event-link-icon" aria-hidden="true">새창</span>
+                                                            </h3>
+                        </div>
+                    </div>
+                    <p class="calendar__company">4.3버전에서는 이상낙원 배후의 흑막이자 절멸대군 아삿 프라마드가 본격적으로 등장하며, FATE 2차 콜라보도 예고됐다.</p>
+                    <div class="calendar__event-tags">
+                                                    <span class="calendar__event-tag">업데이트</span>
+                                                    <span class="calendar__event-tag"> 붕괴: 스타레일</span>
+                                                    <span class="calendar__event-tag"> FATE</span>
+                                                    <span class="calendar__event-tag"> 신규 스토리</span>
+                                            </div>
+                </div>
+            </div>
+        </a>
+        <div class="calendar__actions">
+            <div class="calendar__social">
+                                                                                                            </div>
+            <div class="calendar__buttons">
+                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%EB%B6%95%EA%B4%B4%3A+%EC%8A%A4%ED%83%80%EB%A0%88%EC%9D%BC+4.3%EB%B2%84%EC%A0%84+-+%E3%80%8C%EC%82%B0+%EC%9E%90%EC%9D%98+%EB%A7%9D%EC%B2%9C%EC%97%90+%EC%9E%A0%EA%B2%A8%E3%80%8D&dates=20260601/20260602&details=4.3%EB%B2%84%EC%A0%84%EC%97%90%EC%84%9C%EB%8A%94+%EC%9D%B4%EC%83%81%EB%82%99%EC%9B%90+%EB%B0%B0%ED%9B%84%EC%9D%98+%ED%9D%91%EB%A7%89%EC%9D%B4%EC%9E%90+%EC%A0%88%EB%A9%B8%EB%8C%80%EA%B5%B0+%EC%95%84%EC%82%BF+%ED%94%84%EB%9D%BC%EB%A7%88%EB%93%9C%EA%B0%80+%EB%B3%B8%EA%B2%A9%EC%A0%81%EC%9C%BC%EB%A1%9C+%EB%93%B1%EC%9E%A5%ED%95%98%EB%A9%B0%2C+FATE+2%EC%B0%A8+%EC%BD%9C%EB%9D%BC%EB%B3%B4%EB%8F%84+%EC%98%88%EA%B3%A0%EB%90%90%EB%8B%A4.+%3A+https%3A%2F%2Fwww.inven.co.kr%2Fwebzine%2Fnews%2F%3Fnews%3D316739&sf=true&output=xml" class="calendar__btn calendar__btn--schedule" target="_blank">일정</a>
+                                                    <a href="https://hsr.hoyoverse.com/ua/pc-landing?macro=1&ms=google&cid=22583627276&agid=185078763732&crid=753609699050&kwid=%EB%B6%95%EA%B4%B4%EC%8A%A4%ED%83%80%EB%A0%88%EC%9D%BC&nw=g&mt=e&dv=c&dvmd=&pl=&tgid=kwd-1966235147949&gclid=Cj0KCQjwz9_QBhD_ARIsADnSCfDcp_RfMENPc5Oj6KbX9jnF-v46mMFy3NLBBfKDF173Ank-TJSPNkkaAoGPEALw_wcB&gad_source=1&gad_campaignid=22583627276&gbraid=0AAAAAoiRZe0Z2hTaqtfa8KsWih4fMi0au&gclid=Cj0KCQjwz9_QBhD_ARIsADnSCfDcp_RfMENPc5Oj6KbX9jnF-v46mMFy3NLBBfKDF173Ank-TJSPNkkaAoGPEALw_wcB" class="calendar__btn calendar__btn--homepage" target="_blank">홈페이지</a>
+                            </div>
+        </div>
+    </li>
+                                        <li class="calendar__item calendar__item--event">
+        <a href="https://algernonproduct.co.jp/nikke_goods/popup_event/2025/seoul_ko.php" class="calendar__item--group" target="_blank">
+            <div class="calendar__date"><span class='calendar__day-num'>06/01(월)</span> ~ <span class='calendar__day-num'>06/14(일)</span></div>
+            <div class="calendar__info">
+                <figure class="calendar__figure">
+                                                                <img src="https://static.inven.co.kr/column/webzine/calendar/2026/i1531647414.jpg" alt="승리의 여신: 니케 - ‘에리어 방어전’ 팝업 스토어" loading="lazy">
+                                    </figure>
+                <div class="calendar__details">
+                    <div class="calendar__event-info">
+                        <div class="calendar__event-sort-wrap">
+                            <span class="calendar__event-sort">행사</span>
+                            <span class="calendar__event-country KR">
+                                <span class="blind">KR</span>
+                            </span>
+                        </div>
+                        <div class="calendar__event-title-wrap">
+                            <h3 class="calendar__title">
+                                <span class="title-text">
+                                    승리의 여신: 니케 - ‘에리어 방어전’ 팝업 스토어                                </span>
+                                                                <span class="calendar__event-link-icon" aria-hidden="true">새창</span>
+                                                            </h3>
+                        </div>
+                    </div>
+                    <p class="calendar__company">‘에리어 방어전’은 지역별 특색을 기반으로 유저들과의 접점 확대를 위한 오프라인 이벤트로,  개최 도시의 명소와 캐릭터를 결합한 일러스트 및 지역 한정 굿즈를 선보인다.</p>
+                    <div class="calendar__event-tags">
+        

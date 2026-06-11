@@ -364,12 +364,13 @@ async function fromInven(out) {
   return { name: "Inven", added };
 }
 
-// 인벤 게임 상세 페이지 본문 컨테이너 후보(앱 내 미리보기 본문용). 구조 변경에 대비해 여러 후보를 시도.
+// 인벤 게임 상세 페이지 본문 컨테이너 후보(앱 내 미리보기 본문용).
+// 실제 구조: <div class="game__description">본문…<br/>…</p><div class="game__video"><iframe…>.
+// 본문 다음 <section class="emoji"> 가 시작점(컷). 이중 언더스코어(game__)·전체 단어(description) 사용.
 const INVEN_GAME_BODY_PATS = [
+  /class=["'][^"']*\bgame__description\b[^"']*["']/i,
+  /class=["'][^"']*\bgame__detail\b[^"']*["']/i,
   /itemprop=["']description["']/i,
-  /class=["'][^"']*\bgame[_-]?(?:info|desc|detail|intro|story|summary|content)\b[^"']*["']/i,
-  /class=["'][^"']*\bcalendar__(?:detail|desc|info|content|story)\b[^"']*["']/i,
-  /class=["'][^"']*\b(?:view_content|board_main_view|article_view)\b[^"']*["']/i,
 ];
 
 // 인벤 캘린더 공통 og 태그라인(게임별 설명이 아니라 사이트 전체 문구). 이 문구로 description 을 채우면 안 됨.
@@ -505,7 +506,8 @@ function articleRegion(html, pats) {
   const from = gt >= 0 ? gt + 1 : i;
   let region = html.slice(from, from + 200000);  // 전체 본문 확보(긴 글 대비)
   // 출처/추천/관련글/댓글 영역의 '여는 태그' 앞에서 컷(부분 태그가 남지 않도록 '<' 포함)
-  const cut = region.search(/<[^>]*class=["'][^"']*(source_url|like_wrapper|btn_list|relation_news|board_bottom|view_bottom|reply_count|reply_list|comment_wrapper|board_bottom_layer)/i);
+  // 인벤 게임 상세: 본문(game__video 포함) 다음의 <section class="emoji">(PICK 반응) 등에서 컷.
+  const cut = region.search(/<[^>]*class=["'][^"']*(source_url|like_wrapper|btn_list|relation_news|board_bottom|view_bottom|reply_count|reply_list|comment_wrapper|board_bottom_layer|\bemoji\b|game__related|game-relation|game__rank)/i);
   if (cut > 0) region = region.slice(0, cut);
   return region;
 }

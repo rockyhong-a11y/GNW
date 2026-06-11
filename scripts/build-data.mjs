@@ -419,7 +419,7 @@ async function diagInvenGamePages(games, targets) {
 // 미리보기용). 캐시는 '직전 games.json 에 content 가 있으면 이월'로 단순화 — content 가 채워진 게임은
 // 재요청하지 않고, 비어 있는 게임만 회당 상한까지 점진 수집한다(가까운 일정 우선).
 // 러너에서만 동작(INVEN=1), 픽스처 모드에서는 생략.
-const DETAIL_MAX = 140; // 회당 신규 상세 페이지 요청 상한
+const DETAIL_MAX = Number(process.env.INVEN_DETAIL_MAX || 140); // 회당 신규 상세 페이지 요청 상한(백필 시 env로 상향)
 async function enrichGameDetails(games, prev) {
   if (process.env.INVEN !== "1") return { name: "GameDetails", skipped: "INVEN!=1" };
   if (process.env.INVEN_HTML_FILE) return { name: "GameDetails", skipped: "fixture" };

@@ -604,10 +604,16 @@ const detailPara = (b) => b.seg
   ? `<p>${b.seg.map((s) => s.t === "a" ? `<a class="detail-link" href="${esc(s.v)}" target="_blank" rel="noopener">${esc(s.l)}</a>` : esc(s.v)).join("")}</p>`
   : `<p>${esc(b.v || "")}</p>`;
 function renderContentBlocks(content) {
-  return (content || []).map((b) =>
-    b.t === "yt" ? detailYtEmbed(b.v)
-    : b.t === "img" ? `<img class="detail-img" src="${esc(b.v)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`
-    : detailPara(b)).join("");
+  const seen = new Set();
+  return (content || []).map((b) => {
+    if (b.t === "yt") return detailYtEmbed(b.v);
+    if (b.t === "img") {
+      if (seen.has(b.v)) return "";
+      seen.add(b.v);
+      return `<img class="detail-img" src="${esc(b.v)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`;
+    }
+    return detailPara(b);
+  }).join("");
 }
 
 function openGameDetail(g) {

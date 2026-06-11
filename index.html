@@ -6,13 +6,18 @@
   <meta name="theme-color" content="#0d0f1a" />
   <meta name="description" content="PC · 콘솔 · 모바일 신작 출시 · 업데이트 · 행사 일정을 한눈에" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GGG" />
+  <meta property="og:url" content="https://rockyhong-a11y.github.io/GGG/" />
   <meta property="og:title" content="GGG — Good Game, Gallantly" />
   <meta property="og:description" content="PC · 콘솔 · 모바일 신작 출시 · 업데이트 · 행사 일정을 한눈에" />
-  <meta property="og:image" content="icons/icon-512.png" />
+  <meta property="og:image" content="https://rockyhong-a11y.github.io/GGG/icons/icon-512.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="GGG — Good Game, Gallantly" />
   <meta name="twitter:description" content="PC · 콘솔 · 모바일 신작 출시 · 업데이트 · 행사 일정을 한눈에" />
+  <meta name="twitter:image" content="https://rockyhong-a11y.github.io/GGG/icons/icon-512.png" />
   <title>GGG — Good Game, Gallantly</title>
+  <!-- 라이트/다크 테마: 첫 페인트 전에 저장된 선택을 적용(깜빡임 방지) -->
+  <script>try{if(localStorage.getItem("gnw-theme")==="light"){document.documentElement.dataset.theme="light";var m=document.querySelector('meta[name="theme-color"]');if(m)m.content="#eef1f8";}}catch(e){}</script>
   <link rel="manifest" href="manifest.webmanifest" />
   <!-- 홈 화면에 추가(웹앱) 시 사용되는 아이콘 · 이름 -->
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
@@ -71,11 +76,26 @@
 
   <!-- 설정: 앱 아이콘(테마) 변경 -->
   <div id="settingsSheet" class="sheet-overlay" hidden>
-    <div class="sheet" role="dialog" aria-modal="true" aria-label="앱 아이콘 변경">
+    <div class="sheet" role="dialog" aria-modal="true" aria-label="설정">
       <div class="sheet-head">
-        <h2>앱 아이콘</h2>
+        <h2>설정</h2>
         <button id="settingsClose" class="sheet-close" type="button" aria-label="닫기">✕</button>
       </div>
+      <p class="sheet-subhead">테마</p>
+      <div class="setting-row">
+        <span style="font-size:14px;color:var(--text-dim);font-weight:600">화면 색상</span>
+        <div class="theme-toggle" role="group" aria-label="테마 선택">
+          <button class="theme-opt" type="button" data-theme="dark" aria-pressed="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            다크
+          </button>
+          <button class="theme-opt" type="button" data-theme="light" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+            화이트
+          </button>
+        </div>
+      </div>
+      <p class="sheet-subhead">앱 아이콘</p>
       <div class="icon-grid" id="iconGrid"></div>
       <button id="iconUploadBtn" class="icon-upload-btn" type="button">사진에서 선택…</button>
       <input id="iconFile" type="file" accept="image/*" hidden />

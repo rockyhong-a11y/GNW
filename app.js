@@ -527,6 +527,32 @@ function buildIconGrid() {
     })
   );
 }
+/* ---------- Theme (다크/라이트 토글) ---------- */
+const THEME_COLOR = { dark: "#0d0f1a", light: "#eef1f8" };
+function savedTheme() {
+  try { return localStorage.getItem("gnw-theme") === "light" ? "light" : "dark"; } catch { return "dark"; }
+}
+function applyTheme(theme) {
+  const t = theme === "light" ? "light" : "dark";
+  if (t === "light") document.documentElement.dataset.theme = "light";
+  else delete document.documentElement.dataset.theme;
+  try { localStorage.setItem("gnw-theme", t); } catch {}
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = THEME_COLOR[t];
+  // 토글 버튼 선택 상태 동기화
+  document.querySelectorAll(".theme-opt").forEach((b) => {
+    const on = b.dataset.theme === t;
+    b.classList.toggle("sel", on);
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+}
+function bindTheme() {
+  document.querySelectorAll(".theme-opt").forEach((b) =>
+    b.addEventListener("click", () => applyTheme(b.dataset.theme))
+  );
+  applyTheme(savedTheme());
+}
+
 function bindSettings() {
   const overlay = $("#settingsSheet");
   $("#settingsBtn").addEventListener("click", () => { buildIconGrid(); overlay.hidden = false; });
@@ -758,6 +784,7 @@ function bindDetailSwipe() {
 async function init() {
   bindTabs();
   bindSettings();
+  bindTheme();
   bindCardClicks();
   bindDetail();
   applyIcon(savedIconKey());

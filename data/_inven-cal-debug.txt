@@ -1,4 +1,4 @@
-fetched_at=2026-06-11T04:16:17.648Z
+fetched_at=2026-06-11T04:54:31.318Z
 url=https://www.inven.co.kr/webzine/calendar/
 status=200
 error=

@@ -59,7 +59,7 @@ const GENRE_MAP = {
 const normTitle = (t) => t.toLowerCase().replace(/[^a-z0-9가-힣]/g, "");
 const slug = (t) => normTitle(t).replace(/[^a-z0-9]/g, "-").slice(0, 40) || "game";
 const trailerFor = (t, dev) =>
-  `https://www.youtube.com/results?search_query=${encodeURIComponent(`${t} ${dev || ""} official trailer`)}`;
+  `https://www.youtube.com/results?search_query=${encodeURIComponent(`${t} ${dev || ""} official trailer`})`;
 
 function makeGame(p) {
   const date = p.releaseDate;
@@ -105,7 +105,7 @@ function baseGameName(t) {
   let s = String(t);
   s = s.split(/\s[-–—~]\s/)[0];                          // " - " 이후 부제 제거
   s = s.replace(/[「」『』《》〈〉【】［］\[\]()<>]/g, " "); // 괄호류 제거
-  s = s.replace(/['"''""]/g, " ");    // 따옴표 제거
+  s = s.replace(/['\'''""]/g, " ");    // 따옴표 제거
   s = s.replace(/\d+(\.\d+)*\s*(버전|시즌|주년|챕터)/g, " "); // "4.3버전" 등 제거
   s = s.replace(/시즌\s*\d+/g, " ");                       // "시즌 5" 제거
   s = s.replace(/\b\d+\.\d+\b/g, " ");                     // 소수 버전(1.1, 4.3) 제거 — 정수("007","8020")는 보존
@@ -361,41 +361,83 @@ const INVEN_GAME_BODY_PATS = [
   /class=["'][^"']*\b(?:view_content|board_main_view|article_view)\b[^"']*["']/i,
 ];
 
-// 게임 상세 본문 보강: 인벤 게임 상세 페이지에서 og:description·본문을 받아 description/content[] 로
-// 저장(앱 내 미리보기용). 직전 games.json 에서 캐시해 매 빌드 전체 재요청을 피하고, 회당 일부만
-// 점진적으로 수집한다(가까운 일정 우선). 러너에서만 동작(INVEN=1), 픽스처 모드에서는 생략.
+// 인벤 캘린더 공통 og 태그라인(게임별 설명이 아니라 사이트 전체 문구). 이 문구로 description 을 채우면 안 됨.
+const GENERIC_DESC = /신작 게임 출시 일정을 한눈에|인벤 게임 캘린더로 다가올/;
+const isGamePage = (u) => /inven\.co\.kr\/webzine\/calendar\/game\/\d+/.test(u || "");
+
+// 진단(러너 전용): 인벤 게임 상세 페이지가 정적 HTML 에 본문을 담는지(SPA 셸 여부)와
+// 이미지가 핫링크(referer)로 차단되는지 확인하기 위해 샘플 HTML/상태를 data/ 에 덤프한다.
+// INVEN_DIAG=0 이면 생략. 구조 파악 후 제거 예정.
+async function diagInvenGamePages(games, targets) {
+  if (process.env.INVEN_DIAG === "0") return;
+  const lines = [`diag_at=${new Date().toISOString()}`, `game_targets=${targets.length}`];
+  let firstHtml = "";
+  for (const g of targets.slice(0, 3)) {
+    try {
+      const res = await fetch(g.detailUrl, { headers: { ...HEADERS, referer: INVEN_CAL.url }, signal: AbortSignal.timeout(12000) });
+      const h = await res.text();
+      if (!firstHtml) firstHtml = h;
+      const og = rwText((h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["']/i) || [])[1] || "");
+      const title = rwText((h.match(/<title>([\s\S]*?)<\/title>/i) || [])[1] || "");
+      const signals = ["__NEXT_DATA__", "__NUXT__", "application/ld+json", "window.__", "ajax", "/calendar/ajax", "data-game-idx", "calendar__detail", "game_info", "gameInfo", 'class="description"', "summary"];
+      lines.push(`game ${g.id} ${g.detailUrl} status=${res.status} len=${h.length}`);
+      lines.push(`  title=${title.slice(0, 80)}`);
+      lines.push(`  og=${og.slice(0, 100)}`);
+      lines.push(`  signals=${signals.filter((s) => h.includes(s)).join("|")}`)
+    } catch (e) { lines.push(`game ${g.id} ERR ${e && e.message || e}`); }
+  }
+  // 이미지 핫링크 보호: referer 없음 vs 인벤 referer 상태코드 비교
+  const imgs = [...new Set(games.map((g) => g.image).filter(Boolean))].slice(0, 3);
+  for (const u of imgs) {
+    for (const probe of [{ t: "noref", h: {} }, { t: "invenref", h: { referer: "https://www.inven.co.kr/webzine/calendar/" } }]) {
+      try {
+        const r = await fetch(u, { headers: probe.h, signal: AbortSignal.timeout(8000) });
+        lines.push(`img ${probe.t} status=${r.status} type=${r.headers.get("content-type")} ...${u.slice(-46)}`);
+      } catch (e) { lines.push(`img ${probe.t} ERR ${e && e.message || e}`); }
+    }
+  }
+  try {
+    await writeFile(join(ROOT, "data/_inven-debug.txt"), lines.join("\n") + "\n");
+    if (firstHtml) await writeFile(join(ROOT, "data/_inven-game-debug.html"), firstHtml.slice(0, 200000));
+  } catch (e) { /* 덤프 실패 무시 */ }
+  console.log("[diag]\n" + lines.join("\n"));
+}
+
+// 게임 상세 본문 보강: 인벤 게임 상세 페이지에서 본문/설명을 받아 description/content[] 로 저장(앱 내
+// 미리보기용). 캐시는 '직전 games.json 에 content 가 있으면 이월'로 단순화 — content 가 채워진 게임은
+// 재요청하지 않고, 비어 있는 게임만 회당 상한까지 점진 수집한다(가까운 일정 우선).
+// 러너에서만 동작(INVEN=1), 픽스처 모드에서는 생략.
 const DETAIL_MAX = 140; // 회당 신규 상세 페이지 요청 상한
 async function enrichGameDetails(games, prev) {
   if (process.env.INVEN !== "1") return { name: "GameDetails", skipped: "INVEN!=1" };
   if (process.env.INVEN_HTML_FILE) return { name: "GameDetails", skipped: "fixture" };
 
-  // 1) 직전 데이터에서 본문/설명 이월 — id 기준. _dlong=상세 본문 수집 완료 표식.
+  // 1) 캘린더 공통 태그라인 오염 제거 + 직전 데이터에서 본문/설명 이월(id 기준).
   const prevById = new Map();
   for (const p of (prev && prev.games) || []) if (p.id) prevById.set(p.id, p);
   for (const g of games) {
+    if (g.description && GENERIC_DESC.test(g.description)) g.description = "";  // 오염된 설명 비움
     const p = prevById.get(g.id);
     if (!p) continue;
-    if ((!g.content || !g.content.length) && p.content && p.content.length) g.content = p.content;
-    if (p._dlong) {
-      if (p.description && p.description.length > (g.description ? g.description.length : 0)) g.description = p.description;
-      g._dlong = true;
-    }
+    if ((!g.content || !g.content.length) && p.content && p.content.length) g.content = p.content; // 본문 캐시 이월
+    if (!g.description && p.description && !GENERIC_DESC.test(p.description)) g.description = p.description; // 설명 이월(태그라인 제외)
   }
 
-  // 2) 아직 보강하지 않은 게임만 회당 상한까지 수집(예정 → 지난 → 미정 순).
-  const isGamePage = (u) => /inven\.co\.kr\/webzine\/calendar\/game\/\d+/.test(u || "");
+  // 2) 아직 본문이 없는 게임만 회당 상한까지 수집(예정 → 지난 → 미정 순).
   const today = iso(TODAY);
   const relevance = (g) => (g.releaseDate === "TBD" || !g.releaseDate) ? 2 : (g.releaseDate >= today ? 0 : 1);
   const targets = games
-    .filter((g) => isGamePage(g.detailUrl) && !g._dlong)
+    .filter((g) => isGamePage(g.detailUrl) && !(g.content && g.content.length))
     .sort((a, b) => relevance(a) - relevance(b) || String(a.releaseDate).localeCompare(String(b.releaseDate)))
     .slice(0, DETAIL_MAX);
+
+  await diagInvenGamePages(games, targets);  // 구조/핫링크 진단(러너)
 
   let bodies = 0, descs = 0, fetched = 0;
   const enrichOne = async (g) => {
     try {
       const res = await fetch(g.detailUrl, { headers: { ...HEADERS, referer: INVEN_CAL.url }, signal: AbortSignal.timeout(10000) });
-      if (!res.ok) return;                                   // 실패는 다음 빌드에서 재시도(_dlong 미설정)
+      if (!res.ok) return;
       fetched++;
       const h = await res.text();
       const c = extractContent(h, INVEN_GAME_BODY_PATS);     // 본문 블록(단락·이미지·영상)
@@ -403,8 +445,8 @@ async function enrichGameDetails(games, prev) {
       const og = (h.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']*)["']/i)
         || h.match(/<meta[^>]+content=["']([^"']*)["'][^>]+property=["']og:description["']/i) || [])[1];
       const ogTxt = og ? rwText(og) : "";
-      if (ogTxt && ogTxt.length > (g.description ? g.description.length : 0)) { g.description = ogTxt.slice(0, 600); descs++; }
-      g._dlong = true;                                       // 성공 시 표식(빈 본문이어도 재요청 방지)
+      // 게임별 설명만 채택(캘린더 공통 태그라인은 거부).
+      if (ogTxt && !GENERIC_DESC.test(ogTxt) && ogTxt.length > (g.description ? g.description.length : 0)) { g.description = ogTxt.slice(0, 600); descs++; }
     } catch { /* 개별 실패 무시 — 다음 빌드에서 재시도 */ }
   };
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -502,7 +544,7 @@ function htmlToParaSegs(frag) {
   }
   return out;
 }
-// 본문을 읽기용 블록 배열로: [{t:"p",v|seg} | {t:"img"} | {t:"yt"}] (원문 순서 그대로 유지)
+// 본문을 읽기용 블록 배열로: [{t:"p",v|seg} | {t:"img"} | {t:"yt"}] (원문 순서대로 유지)
 function extractContent(html, regionPats) {
   const region = articleRegion(html, regionPats);
   if (!region) return [];
@@ -547,7 +589,7 @@ function extractCommentCount(html) {
   const m = html.match(/"comment_?count"\s*:\s*(\d+)/i)
     || html.match(/comment_count[^>]*>[\s\S]{0,40}?(\d[\d,]*)/i)
     || html.match(/class="num_reply"[^>]*>\s*\[?\s*(\d[\d,]*)/i)
-    || html.match(/댓글[\s:]*<[^>]*>\s*(\d[\d,]*)/)
+    || html.match(/댓글[\s:]*<[^>]*>\s*(\d[\d,]*)$/)
     || html.match(/댓글[\s:(]*(\d[\d,]*)/);
   return m ? +m[1].replace(/,/g, "") : null;
 }
@@ -617,7 +659,17 @@ function extractDateTime(html) {
   let end = html.search(/itemprop=["']articleBody["']/i);
   if (end < 0) end = html.search(/class=["'][^"']*\bview_content\b[^"']*["']/i);
   const head = html.slice(0, end > 0 ? end : Math.min(html.length, 40000));
-  let m = head.match(/(?:"datePublished"\s*:\s*"|(?:article:published_time|og:regdate)["'][^>]+content=["'])(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}:\d{2}))?/i);
+  let m = head.match(/(?:"datePublished"\s*:\s"|(?:article:published_time|og:regdate)["'][^>]+content=["'])(
+
+4})-(
+
+2})-(
+
+2})(?:T(
+
+2}:
+
+2}))?/i);
   if (m) return { date: `${m[1]}.${m[2]}.${m[3]}`, time: m[4] || null };
   m = head.match(/(20\d{2})[.\-](\d{1,2})[.\-](\d{1,2})[\s(]+(\d{1,2}:\d{2})(?::\d{2})?/);
   if (m) return { date: `${m[1]}.${String(m[2]).padStart(2, "0")}.${String(m[3]).padStart(2, "0")}`, time: m[4] };
@@ -640,7 +692,7 @@ function parseRuliwebList(html, news, seen, cap = 60) {
     const dm = ct.match(/(\d{4})\.(\d{2})\.(\d{2})\s*\(([\d:]+)\)/);
     const vm = ct.match(/조회수\s*([\d,]+)/);
     let image = (block.match(/background-image:\s*url\(([^),]+)/) || [])[1] || null;
-    if (image) { image = image.trim().replace(/^['"]/g, "").replace(/['"]/g, ""); if (image.startsWith("//")) image = "https:" + image; }
+    if (image) { image = image.trim().replace(/^["']/g, "").replace(/["']/g, ""); if (image.startsWith("//")) image = "https:" + image; }
     seen.add("id:" + id); seen.add(title.toLowerCase().replace(/\s+/g, ""));
     const item = {
       id: `ruliweb-${id}`, title, url: `https://bbs.ruliweb.com/news/read/${id}`,

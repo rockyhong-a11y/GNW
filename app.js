@@ -603,8 +603,10 @@ const detailYtEmbed = (id) => `<div class="detail-video"><iframe src="https://ww
 const detailPara = (b) => b.seg
   ? `<p>${b.seg.map((s) => s.t === "a" ? `<a class="detail-link" href="${esc(s.v)}" target="_blank" rel="noopener">${esc(s.l)}</a>` : esc(s.v)).join("")}</p>`
   : `<p>${esc(b.v || "")}</p>`;
-function renderContentBlocks(content) {
+function renderContentBlocks(content, skipSrc) {
+  // 상단 배너로 이미 보여준 이미지(skipSrc)와 본문 내 동일 이미지는 한 번만 표시
   const seen = new Set();
+  if (skipSrc) seen.add(skipSrc);
   return (content || []).map((b) => {
     if (b.t === "yt") return detailYtEmbed(b.v);
     if (b.t === "img") {
@@ -646,7 +648,7 @@ function openGameDetail(g) {
   const bodyParts = [];
   if (g.update) bodyParts.push(`<p>📌 ${esc(g.update)}</p>`);
   if (hasContent) {
-    bodyParts.push(renderContentBlocks(g.content));
+    bodyParts.push(renderContentBlocks(g.content, g.image || null));
   } else if (g.description) {
     bodyParts.push(`<p>${esc(g.description)}</p>`);
   } else {
@@ -701,7 +703,7 @@ function openDetail(n) {
   if (n.content && n.content.length) {
     const hasText = n.content.some((b) => b.t === "p");
     const lead = (!hasText && n.summary) ? `<p>${esc(n.summary)}</p>` : ""; // 영상/이미지만 있는 글은 요약을 앞에
-    body = lead + renderContentBlocks(n.content);
+    body = lead + renderContentBlocks(n.content, (n.image && !hasVideo) ? n.image : null);
   } else if (n.summary) {
     body = `<p>${esc(n.summary)}</p>`;
   } else {

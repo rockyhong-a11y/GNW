@@ -1,9 +1,5 @@
-diag_at=2026-06-12T10:22:41.064Z
-game_targets=10
-game inven-13778 https://www.inven.co.kr/webzine/calendar/game/13778 status=200 len=119014
-  title=문라이트 피크스 - 게임 캘린더 - 인벤
-  og=PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.
-  signals=application/ld+json
+diag_at=2026-06-12T12:21:30.842Z
+game_targets=8
 game inven-13631 https://www.inven.co.kr/webzine/calendar/game/13631 status=404 len=7638
   title=인벤 | 종합 게임 커뮤니티 INVEN
   og=
@@ -12,6 +8,10 @@ game inven-13618 https://www.inven.co.kr/webzine/calendar/game/13618 status=404 
   title=인벤 | 종합 게임 커뮤니티 INVEN
   og=
   signals=
+game inven-13780 https://www.inven.co.kr/webzine/calendar/game/13780 status=200 len=113882
+  title=카아아르 - 게임 캘린더 - 인벤
+  og=PC·콘솔·모바일 신작 게임 출시 일정을 한눈에. CBT, OBT, DLC, 업데이트 일정까지 빠짐없이 정리한 인벤 게임 캘린더로 다가올 게임을 미리 확인하세요.
+  signals=application/ld+json
 img noref status=200 type=image/jpeg .../column/webzine3/gamelogo/2025/i1988746358.jpg
 img invenref status=200 type=image/jpeg .../column/webzine3/gamelogo/2025/i1988746358.jpg
 img noref status=200 type=image/jpeg .../column/webzine3/gamelogo/2026/i1834235244.jpg

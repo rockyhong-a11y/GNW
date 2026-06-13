@@ -603,15 +603,22 @@ const detailYtEmbed = (id) => `<div class="detail-video"><iframe src="https://ww
 const detailPara = (b) => b.seg
   ? `<p>${b.seg.map((s) => s.t === "a" ? `<a class="detail-link" href="${esc(s.v)}" target="_blank" rel="noopener">${esc(s.l)}</a>` : esc(s.v)).join("")}</p>`
   : `<p>${esc(b.v || "")}</p>`;
+// 중복 비교용 이미지 키: 루리웹 등은 같은 파일을 /ori/(원본)·/img/(리사이즈)로,
+// 때로는 i1/i2/i3 미러 서브도메인으로 제공 → 호스트·ori|img 경로·쿼리를 무시해 동일 이미지로 인식.
+const imgKey = (u) => (u || "")
+  .replace(/^https?:\/\/[^/]+/, "")
+  .replace(/\/(?:ori|img)\//, "/")
+  .replace(/[?#].*$/, "");
 function renderContentBlocks(content, skipSrc) {
   // 상단 배너로 이미 보여준 이미지(skipSrc)와 본문 내 동일 이미지는 한 번만 표시
   const seen = new Set();
-  if (skipSrc) seen.add(skipSrc);
+  if (skipSrc) seen.add(imgKey(skipSrc));
   return (content || []).map((b) => {
     if (b.t === "yt") return detailYtEmbed(b.v);
     if (b.t === "img") {
-      if (seen.has(b.v)) return "";
-      seen.add(b.v);
+      const k = imgKey(b.v);
+      if (seen.has(k)) return "";
+      seen.add(k);
       return `<img class="detail-img" src="${esc(b.v)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`;
     }
     return detailPara(b);
